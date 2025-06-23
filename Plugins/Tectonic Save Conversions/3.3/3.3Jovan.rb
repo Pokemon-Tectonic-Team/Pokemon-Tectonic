@@ -8,7 +8,14 @@ SaveData.register_conversion(:jovan_quest_3_3_0) do
         itemBag = save_data[:bag]
     
         globalVariables[44] += 1 if selfSwitches[[138,18,'A']] # Jovan in Scenic Trail
-        globalVariables[44] += 1 if selfSwitches[[136,2,'C']] # Jovan on Bluepoint Beach/Tamarind on docks (TODO: handle player missing X-Ray)
+        if selfSwitches[[136,2,'C']]
+            # Player has seen the Tamarind dock event and got the Poke X-ray
+            globalVariables[44] += 1
+        elsif selfSwitches[[26,4,'A']]  
+            # Player has not seen the Tamarind dock event, but has defeated the Avatar of Vigoroth (which is after getting the X-ray in the new update)
+            globalVariables[44] += 1
+            itemBag.pbStoreItem(:POKEXRAY, 1, false)
+        end
         globalVariables[44] += 1 if selfSwitches[[60,45,'A']] # Jovan in Shipping Lane
         # Optional LuxTech event is already handled by checking Gym flag
         globalVariables[44] += 1 if selfSwitches[[155,73,'A']] # Jovan in Prizca West
