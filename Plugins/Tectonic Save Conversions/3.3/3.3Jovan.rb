@@ -18,6 +18,6 @@ SaveData.register_conversion(:jovan_quest_3_3_0) do
         (4..11).each do |switch|
             badgeCount += 1 if globalSwitches[switch]
         end
-        $PokemonGlobal.shouldProcJovanCall = true if globalVariables[44] == 4 && badgeCount == 7
+        save_data[:global_metadata].shouldProcJovanCall = true if globalVariables[44] == 4 && badgeCount == 7
     end
 end
