@@ -12,5 +12,13 @@ SaveData.register_conversion(:jovan_quest_3_3_0) do
         globalVariables[44] += 1 if selfSwitches[[60,45,'A']] # Jovan in Shipping Lane
         # Optional LuxTech event is already handled by checking Gym flag
         globalVariables[44] += 1 if selfSwitches[[155,73,'A']] # Jovan in Prizca West
+
+        # Prepare phone call if appropriate
+        badgeCount = 0
+        $Trainer.badges.each_with_index do |hasBadge,index|
+            break if index >= TOTAL_BADGES
+            badgeCount += 1 if hasBadge
+        end
+        $PokemonGlobal.shouldProcJovanCall = true if badgeCount == 7
     end
 end
