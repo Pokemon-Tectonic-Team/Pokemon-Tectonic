@@ -19,6 +19,6 @@ SaveData.register_conversion(:jovan_quest_3_3_0) do
             break if index >= TOTAL_BADGES
             badgeCount += 1 if hasBadge
         end
-        $PokemonGlobal.shouldProcJovanCall = true if badgeCount == 7
+        $PokemonGlobal.shouldProcJovanCall = true if globalVariables[44] == 4 && badgeCount == 7
     end
 end
