@@ -1,55 +1,55 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
 [002] # Windborn Island
-Land,21
+Land,21,60
     1,CRAMORANT,56,58
     1,JUMPLUFF,56,58
     1,PIDGEOT,56,58
     1,SWELLOW,56,58
     1,WORNET,56,58
-FloweryGrass,21
+FloweryGrass,21,60
     1,CHATOT,56,58
     1,FEAROW,56,58
     1,PAPELLUMEN,56,58
     1,TROPIUS,56,58
 #-------------------------------
 [003] # Kilna Turf
-Land,20
+Land,20,20
     20,DODUO,17,19
     20,MANKEY,17,19
     20,RHYHORN,17,19
     20,SANDSHREW,17,19
     20,YAMPER,17,19
-LandTall,20
+LandTall,20,20
     20,BLITZLE,17,19
     20,NIDORANfE,17,19
     20,NIDORANmA,17,19
     20,PONYTA,17,19
     20,POOCHYENA,17,19
-Special
+Special,60
     1,NUMEL,10
 #-------------------------------
 [004] # Scientist's House
-Special
+Special,20
     1,AGEODUDE,15
 #-------------------------------
 [006] # LuxTech Campus
-FloweryGrass2,20
+FloweryGrass2,20,20
     28,MIMEJR,19,21
     28,PORYGON,19,21
     14,JOLTIK,19,21
     14,PURRLOIN,19,21
     14,SHINX,19,21
-Special
+Special,20
     1,GSLOWPOKE,15
 #-------------------------------
 [007] # Repora Forest
-Land,20
+Land,20,20
     40,MEOWTH,23,25
     20,NICKIT,23,25
     20,SHROOMISH,23,25
     20,SIZZLIPEDE,23,25
-LandSparse,20
+LandSparse,20,20
     20,GROWLITHE,23,25
     20,LARVESTA,23,25
     20,MURKROW,23,25
@@ -57,19 +57,19 @@ LandSparse,20
     20,VENONAT,23,25
 #-------------------------------
 [008] # Velenz
-LandTall,20
+LandTall,20,20
     25,GLAMEOW,24,26
     25,LOTAD,24,26
     25,NATU,24,26
     25,PUMPKABOO,24,26
 #-------------------------------
 [011] # Eleig River Crossing
-Land,20
+Land,20,20
     25,AXEW,20,22
     25,CHEWTLE,20,22
     25,DROWZEE,20,22
     25,GOSSIFLEUR,20,22
-Puddle,20
+Puddle,20,20
     20,BIDOOF,20,22
     20,BUIZEL,20,22
     20,GOLDEEN,20,22
@@ -77,15 +77,15 @@ Puddle,20
     20,SKRELP,20,22
 #-------------------------------
 [013] # Frost Station 1032
-Special
+Special,20
     1,SKITTY,15
 #-------------------------------
 [019] # Reading Ribombee Café
-Special
+Special,20
     1,MILCERY,15
 #-------------------------------
 [020] # Alloyed Thicket
-LandSparse,20
+LandSparse,20,60
     20,AMOONGUSS,53,55
     20,ARIADOS,53,55
     20,DITTO,53,55
@@ -93,51 +93,51 @@ LandSparse,20
     20,FERROTHORN,53,55
 #-------------------------------
 [025] # Grouz
-Land,20
+Land,20,20
     33,RUFFLET,18,20
     33,TYROGUE,18,20
     16,GOTHITA,18,20
     16,PAWNIARD,18,20
-Special
+Special,20
     1,TENTACOOL,10
 #-------------------------------
 [026] # Bluepoint Grotto
-DarkCave,20
+DarkCave,20,15
     25,GEODUDE,9,11
     25,NOIBAT,9,11
     25,SALANDIT,9,11
     25,WHISMUR,9,11
-LandSparse,20
+LandSparse,20,15
     25,DITTO,9,11
     25,FERROSEED,9,11
     25,PARAS,9,11
     25,SHELLDER,9,11
 #-------------------------------
 [029] # Full Blast Records F2
-Special
+Special,40
     1,GMEOWTH,40
 #-------------------------------
 [030] # Windy Way
-Land,20
+Land,20,15
     33,RALTS,8,10
     33,ROCKRUFF,8,10
     16,HOPPIP,8,10
     16,MAREEP,8,10
-LandTall,20
+LandTall,20,15
     40,MWURMPLE,8,10
     20,STARLY,8,10
     20,STUNKY,8,10
     20,WOOLOO,8,10
-Special
+Special,15
     1,EEVEE,15
     1,PIDOVE,15
 #-------------------------------
 [032] # Novo Apartments F1
-Special
+Special,20
     1,MVULPIX,15
 #-------------------------------
 [034] # Battle Plaza
-FloweryGrass,20
+FloweryGrass,20,40
     20,HAPPINY,31,33
     20,LILLIPUP,31,33
     20,SAWK,34,36
@@ -145,7 +145,7 @@ FloweryGrass,20
     20,THROH,34,36
 #-------------------------------
 [035] # Impromptu Lab
-Special
+Special,15
     1,BOUNSWEET,10
     1,KRABBY,10
     1,NUMEL,10
@@ -154,27 +154,27 @@ Special
     1,ZIGZAGOON,10
 #-------------------------------
 [036] # Grouz Mine
-DarkCave,20
+DarkCave,20,20
     25,BELDUM,15,18
     25,KLINK,15,18
     25,MAGNEMITE,15,18
     25,SPINARAK,15,18
 #-------------------------------
 [037] # Svait
-Land,20
+Land,20,20
     25,MHOOTHOOT,23,25
     25,MIENFOO,23,25
     25,MISDREAVUS,23,25
     25,TEDDIURSA,23,25
 #-------------------------------
 [038] # Bluepoint Beach
-Land,20
+Land,20,15
     33,EXEGGCUTE,9,11
     16,GRUBBIN,9,11
     16,HOUNDOUR,9,11
     16,SANDYGAST,9,11
     16,WINGULL,9,11
-Puddle,20
+Puddle,20,15
     33,CLAMPERL,9,11
     17,HORSEA,9,11
     17,INKAY,9,11
@@ -182,124 +182,124 @@ Puddle,20
     16,CLOBBOPUS,9,11
 #-------------------------------
 [039] # Casaba Center
-Special
+Special,15
     1,ASANDSHREW,10
 #-------------------------------
 [040] # Gigalith's Guts
-DarkCave,20
+DarkCave,20,20
     25,ARON,18,20
     25,MROGGENROLA,18,20
     25,NOSEPASS,18,20
     25,ZUBAT,18,20
 #-------------------------------
 [047] # Grand Hotel
-Special
+Special,40
     1,HEATMOR,40
 #-------------------------------
 [049] # Tourist's House
-Special
+Special,15
     1,BONSLY,10
 #-------------------------------
 [051] # Foreclosed Tunnel
-DarkCave,20
+DarkCave,20,15
     25,GASTLY,9,11
     25,LITWICK,9,11
     25,ROLYCOLY,9,11
     25,TRAPINCH,9,11
-Mud,40
+Mud,40,15
     25,MACHOP,9,11
     25,MUDBRAY,9,11
     25,ONIX,9,11
     25,PHANPY,9,11
 #-------------------------------
 [053] # The Shelf
-Land,20
+Land,20,20
     40,SCYTHER,22,24
     20,MORELULL,22,24
     20,PANSEAR,22,24
     20,ZORUA,22,24
-Mud,40
+Mud,40,20
     33,SLOWPOKE,22,24
     16,EKANS,22,24
     16,PANPOUR,22,24
     16,STUFFUL,22,24
     16,WOOPER,22,24
-LandTall,20
+LandTall,20,20
     40,ODDISH,22,24
     20,PANSAGE,22,24
     20,ROOKIDEE,22,24
     20,SKIDDO,22,24
 #-------------------------------
 [055] # Lingering Delta
-Land,20
+Land,20,20
     25,BUNEARY,19,21
     25,CROAGUNK,19,21
     25,CUTIEFLY,19,21
     25,MVULLABY,19,21
-LandTall,20
+LandTall,20,20
     50,DEERLING_1,19,21
     25,ESPURR,19,21
     25,PSYDUCK,19,21
     25,YANMA,19,21
-Puddle,20
+Puddle,20,20
     40,POLIWAG,19,21
     20,BARBOACH,19,21
     20,SURSKIT,19,21
     20,TYMPOLE,19,21
-Special
+Special,20
     1,REMORAID,15
 #-------------------------------
 [056] # Novo Town
-FloweryGrass,20
+FloweryGrass,20,20
     25,CHERUBI,14,16
     25,DUCKLETT,14,16
     25,SMOOCHUM,14,16
     25,SWIRLIX,14,16
-Special
+Special,20
     1,EEVEE,15
 #-------------------------------
 [057] # Novo Center
-Special
+Special,20
     1,AMEOWTH,15
 #-------------------------------
 [059] # Feebas' Fin
-Land,20
+Land,20,20
     40,GULPIN,13,15
     20,CHINGLING,13,15
     20,TAILLOW,13,15
     20,TIMBURR,13,15
-Puddle,20
+Puddle,20,20
     20,BINACLE,13,15
     20,FEEBAS,13,15
     20,MAGIKARP,13,15
     20,MSKRELP,13,15
     10,SHELLOS,13,15
     10,SHELLOS_1,13,15
-Special
+Special,20
     1,CARVANHA,15
 #-------------------------------
 [060] # Shipping Lane
-Land,20
+Land,20,20
     25,IGGLYBUFF,14,16
     25,MSENTRET,14,16
     25,SLAKOTH,14,16
     25,VENIPEDE,14,16
-LandTall,20
+LandTall,20,20
     25,DIGLETT,14,16
     25,PIKIPEK,14,16
     25,PINECO,14,16
     25,SCATTERBUG,14,16
 #-------------------------------
 [064] # M. Munna Den
-Special
+Special,20
     1,MMUNNA,23
 #-------------------------------
 [066] # Apartment Attic
-Special
+Special,20
     1,ABSOL,15
 #-------------------------------
 [067] # Old Ice Cream Shop
-LandSparse,20
+LandSparse,20,15
     33,SNORUNT,9,11
     17,AZURILL,9,11
     17,HONEDGE,9,11
@@ -307,48 +307,48 @@ LandSparse,20
     16,VANILLITE,9,11
 #-------------------------------
 [071] # Room 103
-Special
+Special,20
     1,MAREANIE,15
 #-------------------------------
 [085] # Worried Man's House
-Special
+Special,20
     1,FRILLISH,15
 #-------------------------------
 [086] # Zigzagoon Nest
-Special
+Special,20
     1,GZIGZAGOON,15
 #-------------------------------
 [087] # LuxTech Rec Center
-Special
+Special,20
     1,APPLIN,15
 #-------------------------------
 [090] # Employees' House
-Special
+Special,20
     1,SNUBBULL,15
 #-------------------------------
 [092] # Svait Lodge Room 2
-Special
+Special,20
     1,AGRIMER,15
 #-------------------------------
 [095] # Snowbird's House F2
-Special
+Special,20
     1,ARATTATA,15
 #-------------------------------
 [096] # LuxTech Cold Storage
-Special
+Special,20
     1,SEWADDLE,15
 #-------------------------------
 [098] # LuxTech Cold Storage Basement
-Special
+Special,20
     1,SEEL,15
 #-------------------------------
 [103] # Velenz Mart
-Special
+Special,20
     1,MAGBY,15
     1,SINISTEA,20
 #-------------------------------
 [117] # Ice Cave
-Land,20
+Land,20,20
     33,BERGMITE,23,25
     17,MMANTYKE,23,25
     17,PANCHAM,23,25
@@ -356,7 +356,7 @@ Land,20
     16,SNEASEL,23,25
 #-------------------------------
 [120] # Hollowed Layer
-DarkCave,20
+DarkCave,20,20
     20,BALTOY,18,20
     20,BRONZOR,18,20
     20,DUNSPARCE,18,20
@@ -364,19 +364,19 @@ DarkCave,20
     20,TYNAMO,18,20
 #-------------------------------
 [121] # Kilna Ascent
-Land,20
+Land,20,20
     20,CUBCHOO,22,24
     20,MPETILIL,22,24
     20,SNOM,22,24
     20,SNOVER,22,24
     20,SPEAROW,22,24
-Special
+Special,20
     1,HAPPINY,15
 #-------------------------------
 [122] # LuxTech Sewers
-Special
+Special,20
     1,VOLTORB,21,23
-SewerFloor,20
+SewerFloor,20,20
     22,GRIMER,21,23
     22,MUNCHLAX,21,23
     22,SOLOSIS,21,23
@@ -384,7 +384,7 @@ SewerFloor,20
     12,VOLTORB,21,23
 #-------------------------------
 [123] # Novo College
-Special
+Special,20
     1,AERODACTYL,15
     1,AMAURA,15
     1,ANORITH,15
@@ -399,32 +399,32 @@ Special
     1,TYRUNT,15
 #-------------------------------
 [129] # Barren Crater
-Land,20
+Land,20,20
     33,NINCADA,24,26
     16,BONSLY,24,26
     16,MTANGELA,24,26
     16,SPOINK,24,26
     16,VULLABY,24,26
-Special
+Special,20
     1,LILLIPUP,15
 #-------------------------------
 [130] # Canal Desert
-LandSparse,20
+LandSparse,20,20
     20,CACNEA,44,46
     20,HELIOPTILE,44,46
     20,HIPPOPOTAS,44,46
     20,SANDILE,44,46
     20,SILICOBRA,44,46
-FloweryGrass,20
+FloweryGrass,20,25
     25,GLIGAR,44,46
     25,MARACTUS,44,46
     25,PACHIRISU,44,46
     25,SKORUPI,44,46
-Special
+Special,20
     1,DARUMAKA,10
 #-------------------------------
 [135] # Nebula Ruins
-Cloud,20
+Cloud,20,25
     20,BLIPBUG,22,24
     20,CLEFFA,22,24
     20,MINIOR,22,24
@@ -432,32 +432,32 @@ Cloud,20
     20,WOOBAT,22,24
 #-------------------------------
 [136] # Casaba Villa
-Land,20
+Land,20,10
     40,PIDGEY,7,9
     40,SPRITZEE,7,9
     20,ELECTRIKE,7,9
     20,MSINISTEA,7,9
-FloweryGrass,20
+FloweryGrass,20,10
     25,ABRA,7,9
     25,BUDEW,7,9
     25,RATTATA,7,9
     25,TOGEPI,7,9
 #-------------------------------
 [138] # Scenic Trail
-Land,20
+Land,20,10
     20,CATERPIE,7,9
     20,IMPIDIMP,7,9
     20,LITLEO,7,9
     20,SEEDOT,7,9
     20,WEEDLE,7,9
-LandTall,20
+LandTall,20,10
     40,PICHU,7,9
     20,MEDITITE,7,9
     20,RIOLU,7,9
     20,SHUPPET,7,9
 #-------------------------------
 [140] # Starters Store - Grass
-Special
+Special,20
     1,BULBASAUR,10
     1,CHESPIN,10
     1,CHIKORITA,10
@@ -468,7 +468,7 @@ Special
     1,TURTWIG,10
 #-------------------------------
 [141] # Starters Store - Fire
-Special
+Special,20
     1,CHARMANDER,10
     1,CHIMCHAR,10
     1,CYNDAQUIL,10
@@ -479,7 +479,7 @@ Special
     1,TORCHIC,10
 #-------------------------------
 [142] # Starters Store - Water
-Special
+Special,20
     1,FROAKIE,10
     1,MUDKIP,10
     1,OSHAWOTT,10
@@ -490,24 +490,24 @@ Special
     1,TOTODILE,10
 #-------------------------------
 [155] # Prizca West
-Land,20
+Land,20,40
     40,KOFFING,34,36
     20,AIPOM,34,36
     20,MVULPIX,34,36
     20,PIDOVE,34,36
-Special
+Special,40
     1,ROTOM,40
 #-------------------------------
 [158] # Prizca West Center
-Special
+Special,40
     1,GFARFETCHD,40
 #-------------------------------
 [159] # Travel Agency
-Special
+Special,40
     1,ORICORIO,10
 #-------------------------------
 [180] # Blustery Bosk
-FloweryGrass2,20
+FloweryGrass2,20,60
     20,CORVIKNIGHT,55,57
     20,FEAROW,55,57
     20,LEDIAN,55,57
@@ -515,70 +515,70 @@ FloweryGrass2,20
     20,TOUCANNON,55,57
 #-------------------------------
 [182] # Spirit Atoll
-FloweryGrass,20
+FloweryGrass,20,60
     25,CHERRIM,56,58
     25,SNORLAX,56,58
     25,STARAPTOR,56,58
     25,VESPIQUEN,56,58
-FloweryGrass2,20
+FloweryGrass2,20,60
     25,CHIMECHO,56,58
     25,GOLDUCK,56,58
     25,LICKILICKY,56,58
     25,ROSERADE,56,58
 #-------------------------------
 [183] # Circuit Cave
-DarkCave,20
+DarkCave,20,60
     25,ELEKID,44,46
     25,MINUN,44,46
     25,MORPEKO,44,46
     25,PLUSLE,44,46
 #-------------------------------
 [185] # Eleig Stretch
-Land,20
+Land,20,40
     25,EMOLGA,32,34
     25,MSEVIPER,32,34
     25,MZANGOOSE,32,34
     25,STANTLER,32,34
-LandTall,25
+LandTall,25,40
     20,DEWPIDER,32,34
     20,DHELMISE,32,34
     20,HERACROSS,32,34
     20,LICKITUNG,32,34
     20,SEWADDLE,32,34
-Puddle,20
+Puddle,20,25
     40,CORPHISH,32,34
     20,CUFANT,32,34
     20,ILLUMISE,32,34
     20,VOLBEAT,32,34
 #-------------------------------
 [186] # Frostflow Farms
-LandTall,20
+LandTall,20,40
     20,AUDINO,31,33
     20,COTTONEE,32,34
     20,DEDENNE,32,34
     20,MILTANK,32,34
     20,TAUROS,32,34
-FloweryGrass2,20
+FloweryGrass2,20,40
     20,BOUFFALANT,32,34
     20,COMBEE,32,34
     20,SPHEAL,32,34
     20,TOGEDEMARU,32,34
     20,TROPIUS,32,34
-Special
+Special,40
     1,DURANT,40
 #-------------------------------
 [187] # Prizca East
-FloweryGrass2,20
+FloweryGrass2,20,40
     20,FURFROU,39,41
     20,INDEEDEE,39,41
     20,MINCCINO,39,41
     20,SMEARGLE,39,41
     20,SNUBBULL,31,33
-Special
+Special,40
     1,SEVIPER,40
 #-------------------------------
 [192] # Field of Spires
-Land,20
+Land,20,60
     20,AMBIPOM,55,57
     20,CLAYDOL,55,57
     20,DUGTRIO,55,57
@@ -586,52 +586,52 @@ Land,20
     20,UNFEZANT,55,57
 #-------------------------------
 [193] # Volcanic Shore
-Land,20
+Land,20,40
     25,COMFEY,49,51
     25,CRABRAWLER,49,51
     25,LAPRAS,49,51
     25,PINCURCHIN,49,51
-LandSparse,20
+LandSparse,20,40
     34,MAGBY,49,51
     33,KECLEON,49,51
     33,SLUGMA,49,51
 #-------------------------------
 [196] # Boiling Cave
-DarkCave,20
+DarkCave,20,40
     25,DWEBBLE,49,51
     25,SOLROCK,49,51
     25,TORKOAL,49,51
     25,TURTONATOR,49,51
-Mud,40
+Mud,40,40
     25,SHUCKLE,49,51
     25,STUNFISK,49,51
     13,SHELLOS_1,49,51
     12,SHELLOS,49,51
 #-------------------------------
 [202] # Mountaineer's House
-Special
+Special,40
     1,ORICORIO,10
 #-------------------------------
 [203] # Skeevy Eevee Pub
-Special
+Special,40
     1,EEVEE,20
 #-------------------------------
 [211] # Split Peaks
-Land,20
+Land,20,60
     25,ABSOL,49,51
     25,KOMALA,49,51
     25,PINSIR,49,51
     25,SPINDA,49,51
-LandSparse,20
+LandSparse,20,60
     25,DELIBIRD,49,51
     25,DRILBUR,49,51
     25,HAWLUCHA,49,51
     25,SKARMORY,49,51
-Special
+Special,60
     1,BOUNSWEET,10
 #-------------------------------
 [212] # Ruins Digsite
-DarkCave,20
+DarkCave,20,20
     6,UNOWN_22,20,22
     3,UNOWN,20,22
     3,UNOWN_1,20,22
@@ -662,43 +662,43 @@ DarkCave,20
     3,UNOWN_9,20,22
 #-------------------------------
 [213] # Velenz Menagerie
-Land,20
+Land,20,20
     20,AMEOWTH,25,27
     20,ASANDSHREW,25,27
     20,AVULPIX,25,27
     20,GDARUMAKA,25,27
     20,YUNGOOS,25,27
-LandTall,20
+LandTall,20,20
     33,WURMPLE,25,27
     16,ARATTATA,25,27
     16,PATRAT,25,27
     16,SKWOVET,25,27
     16,ZIGZAGOON,25,27
-LandSparse,20
+LandSparse,20,20
     20,GPONYTA,25,27
     20,GYAMASK,25,27
     20,KARRABLAST,25,27
     20,SHELMET,25,27
     20,VULPIX,25,27
-Puddle,20
+Puddle,20,20
     33,GSLOWPOKE,25,27
     16,AGRIMER,25,27
     16,BELLSPROUT,25,27
     16,HOOTHOOT,25,27
     16,TANGELA,25,27
-FloweryGrass,20
+FloweryGrass,20,20
     33,PETILIL,25,27
     16,FARFETCHD,25,27
     16,FOMANTIS,25,27
     16,GFARFETCHD,25,27
     16,SENTRET,25,27
-DarkCave,20
+DarkCave,20,20
     33,BURMY,25,27
     16,ADIGLETT,25,27
     16,AGEODUDE,25,27
     16,GMEOWTH,25,27
     16,ROGGENROLA,25,27
-Mud,40
+Mud,40,40
     20,CARNIVINE,34,36
     20,CRAMORANT,34,36
     20,GSTUNFISK,34,36
@@ -707,7 +707,7 @@ Mud,40
     20,ZANGOOSE,34,36
 #-------------------------------
 [214] # Team Chasm HQ
-DarkCave,20
+DarkCave,20,20
     20,CARBINK,18,20
     20,DURALUDON,18,20
     20,ELGYEM,18,20
@@ -715,7 +715,7 @@ DarkCave,20
     20,MUNNA,18,20
 #-------------------------------
 [215] # Tempest Realm
-Cloud,20
+Cloud,20,60
     20,CASTFORM,64,66
     20,CRYOGONAL,64,66
     20,DRIFLOON,64,66
@@ -723,39 +723,39 @@ Cloud,20
     20,WAILMER,64,66
 #-------------------------------
 [216] # Highland Lake
-Land,20
+Land,20,40
     25,CHATOT,41,43
     25,FOONGUS,41,43
     25,ORANGURU,41,43
     25,PASSIMIAN,41,43
-LandTall,20
+LandTall,20,40
     25,DRAMPA,41,43
     25,FALINKS,41,43
     25,GIRAFARIG,41,43
     25,KANGASKHAN,41,43
-Special
+Special,60
     1,KRABBY,10
 #-------------------------------
 [217] # Sweetrock Harbor
-Land,20
+Land,20,60
     40,APPLIN,49,51
     20,COMFEY,49,51
     20,FALINKS,49,51
     20,MILCERY,49,51
 #-------------------------------
 [218] # Abyssal Cavern
-ActiveWater,20
+ActiveWater,20,40
     25,CHINCHOU,48,50
     25,MFRILLISH,48,50
     25,RELICANTH,48,50
     25,WIMPOD,48,50
-DarkCave,20
+DarkCave,20,40
     34,LUNATONE,48,50
     33,MAREANIE,48,50
     33,WYNAUT,48,50
 #-------------------------------
 [219] # Stone Nest
-DarkCave,20
+DarkCave,20,20
     20,AXEW,25,27
     20,DRILBUR,25,27
     20,EKANS,25,27
@@ -763,14 +763,14 @@ DarkCave,20
     20,YAMASK,25,27
 #-------------------------------
 [220] # Ancient Sewers
-LandSparse,20
+LandSparse,20,20
     25,DRUDDIGON,41,43
     25,MIMIKYU,41,43
     25,SPIRITOMB,41,43
     25,YAMASK,41,43
 #-------------------------------
 [223] # Battle Plaza Underground
-LandSparse,20
+LandSparse,20,40
     20,ELGYEM,35,37
     20,GOLETT,35,37
     20,KLEFKI,35,37
@@ -778,23 +778,23 @@ LandSparse,20
     20,SIGILYPH,35,37
 #-------------------------------
 [228] # Hidden Laboratory
-Special
+Special,40
     1,TYPENULL,35
 #-------------------------------
 [230] # Galarian Fan's House
-Special
+Special,40
     1,CRYOGONAL,40
 #-------------------------------
 [232] # Biologist's House
-Special
+Special,40
     1,GOLDEEN,40
 #-------------------------------
 [234] # Ranger Recruitment
-Special
+Special,40
     1,KECLEON,40
 #-------------------------------
 [239] # Ocean Fishing Contest
-Puddle,10
+Puddle,10,40
     5,BINACLE,30,40
     5,CLAMPERL,30,40
     5,CLAUNCHER,30,40
@@ -818,7 +818,7 @@ Puddle,10
     1,OCTILLERY,30,40
     1,SEADRA,30,40
     1,TENTACRUEL,30,40
-ActiveWater,10
+ActiveWater,10,40
     5,ARROKUDA,30,40
     5,BASCULIN,30,40
     5,BRUXISH,30,40
@@ -844,22 +844,22 @@ ActiveWater,10
     1,MILOTIC,36,46
     1,SHARPEDO,30,40
     1,WAILORD,36,46
-Special
+Special,40
     1,WINGULL,10
 #-------------------------------
 [243] # Chasm Base Mess Hall
-Special
+Special,20
     1,DEWPIDER,15
 #-------------------------------
 [250] # Chasm Base Lab
-Special
+Special,20
     1,ARCTOVISH,40
     1,ARCTOZOLT,40
     1,DRACOVISH,40
     1,DRACOZOLT,40
 #-------------------------------
 [251] # Samorn's House
-Special
+Special,20
     1,BAGON,5
     1,DEINO,5
     1,DRATINI,5
@@ -869,7 +869,7 @@ Special
     1,JANGMOO,5
 #-------------------------------
 [257] # Cave of Hatching
-LandSparse,20
+LandSparse,20,60
     25,CUBONE,59,61
     25,LARVITAR,59,61
     25,MAGNEMITE,59,61
@@ -877,14 +877,14 @@ LandSparse,20
     20,KECLEON,59,61
 #-------------------------------
 [258] # Whitebloom Town
-Land,20
+Land,20,60
     25,BUNEARY,59,61
     25,KRICKETOT,59,61
     25,PICHU,59,61
     25,ROOKIDEE,59,61
 #-------------------------------
 [264] # Thunder Point
-Land,20
+Land,20,60
     20,BLASFEMMIE,55,57
     20,DEDENNE,55,57
     20,EMOLGA,55,57
@@ -892,7 +892,7 @@ Land,20
     20,SEISMAW,55,57
 #-------------------------------
 [282] # The Catacombs B1
-LandSparse,20
+LandSparse,20,60
     20,AEGISLASH,49,51
     20,DRUDDIGON,49,51
     20,DUSKNOIR,49,51
@@ -900,29 +900,29 @@ LandSparse,20
     20,NOIVERN,49,51
 #-------------------------------
 [288] # Underground River
-Puddle,20
+Puddle,20,40
     25,LUVDISC,48,50
     25,MANTYKE,48,50
     25,STARYU,48,50
     25,TENTACOOL,48,50
-LandSparse,20
+LandSparse,20,40
     25,CLAUNCHER,48,50
     25,DURANT,48,50
     25,HEATMOR,48,50
     25,PYUKUMUKU,48,50
 #-------------------------------
 [299] # Fin Center
-Special
+Special,20
     1,COTTONEE,20
 #-------------------------------
 [301] # County Park
-Land,20
+Land,20,20
     20,BUNNELBY,21,23
     20,FLETCHLING,21,23
     20,HATENNA,21,23
     20,KRICKETOT,21,23
     20,MAKUHITA,21,23
-FloweryGrass,20
+FloweryGrass,20,20
     25,LEDYBA,21,23
     25,SUNKERN,21,23
     25,SWABLU,21,23
@@ -931,11 +931,11 @@ FloweryGrass,20
     5,FLABEBE_2,21,23
     5,FLABEBE_3,21,23
     5,FLABEBE_4,21,23
-Special
+Special,20
     1,DRIFLOON,15
 #-------------------------------
 [304] # Ruined Tower F1
-LandSparse,20
+LandSparse,20,40
     20,ABSOL,43,45
     20,CARKOL,43,45
     20,GOLETT,43,45
@@ -943,17 +943,17 @@ LandSparse,20
     20,WEEPINBELL,43,45
 #-------------------------------
 [305] # Dock Warehouse
-Special
+Special,20
     1,GPONYTA,15
 #-------------------------------
 [316] # Sandstone Estuary
-ActiveWater,20
+ActiveWater,20,40
     20,CARVANHA,49,51
     20,MANTYKE,49,51
     20,MFRILLISH,49,51
     20,REMORAID,49,51
     20,WAILMER,49,51
-LandSparse,20
+LandSparse,20,40
     20,CRABRAWLER,49,51
     20,EISCUE,49,51
     20,LAPRAS,49,51
@@ -961,26 +961,26 @@ LandSparse,20
     20,SEEL,49,51
 #-------------------------------
 [321] # Crater Station Backroom
-Special
+Special,20
     1,MCARNIVINE,15
 #-------------------------------
 [323] # HQ Station Backroom
-Special
+Special,20
     1,WIMPOD,15
 #-------------------------------
 [326] # Carnation Graves
-DarkCave,20
+DarkCave,20,20
     40,CUBONE,20,22
     20,DUSKULL,20,22
     20,MAWILE,20,22
     20,SABLEYE,20,22
 #-------------------------------
 [331] # Frostflow Farms Center
-Special
+Special,40
     1,CASTFORM,40
 #-------------------------------
 [333] # Floral Maze
-FloweryGrass2,20
+FloweryGrass2,20,70
     20,APPLETUN,62,64
     20,GRIMMSNARL,62,64
     20,INDEEDEE,62,64
@@ -1006,7 +1006,7 @@ FloweryGrass2,20
     1,VIVILLON_9,62,64
 #-------------------------------
 [335] # Svait Sauna Underground
-Land,20
+Land,20,25
     20,DARUMAKA,23,25
     20,DWEBBLE,23,25
     20,SLUGMA,23,25
@@ -1014,7 +1014,7 @@ Land,20
     20,TURTONATOR,23,25
 #-------------------------------
 [342] # Carnation Tower F1
-LandSparse,20
+LandSparse,20,25
     20,ABSOL,32,34
     20,FALINKS,32,34
     20,FLABEBE_4,32,34
@@ -1022,11 +1022,11 @@ LandSparse,20
     20,SHELMET,32,34
 #-------------------------------
 [346] # Executive's House
-Special,1
+Special,40
     1,SHEDINJA,10
 #-------------------------------
 [349] # UB Portal
-DarkCave,20
+DarkCave,20,60
     13,BUZZWOLE,56,58
     13,NIHILEGO,56,58
     13,PHEROMOSA,56,58
@@ -1039,7 +1039,7 @@ DarkCave,20
     12,STAKATAKA,56,58
 #-------------------------------
 [353] # Crumbling Canyon B4
-DarkCave,20
+DarkCave,20,60
     20,LUNATONE,54,56
     20,RHYPERIOR,54,56
     20,SOLROCK,54,56
@@ -1047,7 +1047,7 @@ DarkCave,20
     20,TYRANITAR,54,56
 #-------------------------------
 [356] # Isle of Dragons
-LandSparse,20
+LandSparse,20,60
     22,GOOMY,13,15
     11,BAGON,13,15
     11,DEINO,13,15
@@ -1058,7 +1058,7 @@ LandSparse,20
     11,MMUNNA,13,15
 #-------------------------------
 [358] # Dr. Hekata's House
-Special
+Special,20
     20,BASCULIN_2,10
     20,HGROWLITHE,10
     20,HQWILFISH,10
@@ -1067,7 +1067,7 @@ Special
     20,HZORUA,10
 #-------------------------------
 [377] # Guardian Island
-Land,20
+Land,20,60
     20,COMFEY,60,62
     20,GUMSHOOS,60,62
     20,RIBOMBEE,60,62
@@ -1078,7 +1078,7 @@ Land,20
     6,ORICORIO_3,60,62
 #-------------------------------
 [383] # Mirror Tundra
-LandTall,20
+LandTall,20,60
     20,CARBINK,54,56
     20,CRYOGONAL,54,56
     20,HATTERENE,54,56
@@ -1086,19 +1086,19 @@ LandTall,20
     20,MNOCTOWL,54,56
 #-------------------------------
 [384] # Casaba-Bluepoint Gatehouse
-Special
+Special,15
     1,SPHEAL,15
 #-------------------------------
 [392] # Turf-Grouz Gatehouse
-Special
+Special,20
     1,ELEKID,15
 #-------------------------------
 [396] # Crater-Shelf Gatehouse
-Special
+Special,20
     1,MINCCINO,15
 #-------------------------------
 [403] # Frozen Lake
-LandTall,20
+LandTall,20,60
     20,CARBINK,54,56
     20,CRYOGONAL,54,56
     20,HATTERENE,54,56
@@ -1106,7 +1106,7 @@ LandTall,20
     20,MNOCTOWL,54,56
 #-------------------------------
 [406] # Oasis System
-DarkCave,20
+DarkCave,20,60
     20,EELEKTROSS,53,55
     20,KROOKODILE,53,55
     20,MASQUERAIN,53,55
@@ -1114,14 +1114,14 @@ DarkCave,20
     20,ROTOM,53,55
 #-------------------------------
 [411] # Tri Island
-Land,20
+Land,20,70
     25,BOUNSWEET,13,15
     25,CASTFORM,13,15
     25,KRABBY,13,15
     25,NUMEL,13,15
 #-------------------------------
 [413] # Eventide Isle
-LandSparse,20
+LandSparse,20,60
     20,CLEFABLE,60,62
     20,GENGAR,60,62
     20,MUSHARNA,60,62
@@ -1129,7 +1129,7 @@ LandSparse,20
     20,URSALUNA,60,62
 #-------------------------------
 [414] # Eventide Peak
-LandSparse,20
+LandSparse,20,60
     20,CLEFABLE,60,62
     20,GENGAR,60,62
     20,MUSHARNA,60,62
@@ -1137,7 +1137,7 @@ LandSparse,20
     20,URSALUNA,60,62
 #-------------------------------
 [415] # Frigid Overlook
-Land,20
+Land,20,60
     20,CRYOGONAL,62,64
     20,EISCUE,62,64
     20,FROSMOTH,62,64
@@ -1145,7 +1145,7 @@ Land,20
     20,WEAVILE,62,64
 #-------------------------------
 [416] # Vernal Clearing
-Land,20
+Land,20,70
     20,ARCANINE,62,64
     20,CHERRIM,62,64
     20,PYROAR,62,64
@@ -1153,7 +1153,7 @@ Land,20
     20,TALONFLAME,62,64
 #-------------------------------
 [417] # Crackling Cave
-Cloud,20
+Cloud,20,70
     20,EELEKTROSS,62,64
     20,ELECTIVIRE,62,64
     20,EMOLGA,62,64
@@ -1161,7 +1161,7 @@ Cloud,20
     20,MANERGETIC,62,64
 #-------------------------------
 [425] # Shimmer Haven
-LandTall,20
+LandTall,20,70
     20,ACCELGOR,55,57
     20,ESCAVALIER,55,57
     20,FLORGES,55,57
@@ -1169,7 +1169,7 @@ LandTall,20
     20,PURUGLY,55,57
 #-------------------------------
 [428] # Steamy Valley
-FloweryGrass,20
+FloweryGrass,20,60
     20,GOLDUCK,60,62
     20,HYMNUS,60,62
     20,MISMAGIUS,60,62
@@ -1177,7 +1177,7 @@ FloweryGrass,20
     20,TORKOAL,60,62
 #-------------------------------
 [430] # Amber Hills
-LandSparse,20
+LandSparse,20,70
     20,DUBWOOL,62,64
     20,FLAPPLE,62,64
     20,GOGOAT,62,64
@@ -1185,7 +1185,7 @@ LandSparse,20
     20,SAHARICANE,62,64
 #-------------------------------
 [431] # Ship Graveyard
-Puddle,15
+Puddle,15,70
     20,DEWGONG,62,64
     20,JELLICENT,62,64
     20,KINGDRA,62,64
@@ -1193,6 +1193,6 @@ Puddle,15
     20,PELIPPER,62,64
 #-------------------------------
 [438] # Bogdan Cement Plant
-Special
+Special,40
     1,CORSOLA,10
     1,SHUCKLE,10
