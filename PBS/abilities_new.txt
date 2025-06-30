@@ -296,7 +296,7 @@ Description = Boosts move damage by 50% while it has a non-volatile status condi
 #-------------------------------
 [CLINGY]
 Name = Clingy
-Description = Prevents foes with non-volatile status conditions from fleeing.
+Description = Traps foes with non-volatile status conditions.
 #-------------------------------
 [CLOAKING]
 Name = Cloaking
@@ -1152,7 +1152,7 @@ Description = Negates enemy status moves that target the Pokémon or create haza
 #-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
-Description = Prevents foes whose Sp. Atk is less than its from fleeing.
+Description = Traps foes whose Sp. Atk is less than its.
 #-------------------------------
 [MALICE]
 Name = Malice
@@ -1300,7 +1300,7 @@ Description = Deals no damage to a target while they are using a status move.
 #-------------------------------
 [NOHOPE]
 Name = No Hope
-Description = Prevents foes whose Attack is less than its from fleeing.
+Description = Traps foes whose Attack is less than its.
 #-------------------------------
 [NOXIOUS]
 Name = Noxious
