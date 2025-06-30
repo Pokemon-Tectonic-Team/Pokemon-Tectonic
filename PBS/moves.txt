@@ -1512,7 +1512,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = TrapTargeLowerTargetDefSpDef2EachTurn
 Flags = CanProtect
-Description = Locks the target in and prevents fleeing. Lowers target's Defense and Sp. Def by two steps every turn.
+Description = Locks the target in and traps it. Lowers target's Defense and Sp. Def by two steps every turn.
 #-------------------------------
 [POWERUPPUNCH]
 Name = Power-Up Punch
@@ -2347,7 +2347,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = Spikes
 Flags = CanMagicCoat
-Description = The user lays Spikes at the foe's feet. Foes that switch into battle are hurt a bit for each layer.
+Description = The user lays a hazard layer of Spikes at the foe's feet. Foes that switch into battle are hurt a bit for each layer.
 #-------------------------------
 [STOMPINGTANTRUM]
 Name = Stomping Tantrum
@@ -2383,7 +2383,7 @@ TotalPP = 10
 Target = AllNearFoes
 FunctionCode = TrapTarget
 Flags = CanProtect
-Description = The user attacks with a wave that crawls along the ground. Those it hits can't flee from battle.
+Description = The user attacks with a wave that crawls along the ground. Those it hits are trapped.
 #-------------------------------
 #		ROCK MOVES
 #-------------------------------
@@ -2554,7 +2554,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = StealthRock
 Flags = CanMagicCoat
-Description = The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.
+Description = The user lays a hazard of levitating stones around the foe. The hazard hurts foes that switch into battle.
 #-------------------------------
 [STONEAXE]
 Name = Stone Axe
@@ -2566,7 +2566,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = StealthRock
 Flags = CanProtect,Blade
-Description = The user swings its stone axes. This leaves levitating stones floating around the target.
+Description = The user swings its stone axes. This leaves a levitating stone hazard floating around the target.
 Animation = STONEEDGE
 #-------------------------------
 [STONEEDGE]
@@ -2824,7 +2824,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = StickyWeb
 Flags = CanMagicCoat
-Description = Weaves a sticky net around the opposing team, which lowers their Speed by two steps upon switching in.
+Description = Weaves a sticky net around the opposing team, a hazard which lowers their Speed by two steps upon switching in.
 #-------------------------------
 [STRINGSHOT]
 Name = String Shot
@@ -3147,7 +3147,7 @@ Target = NearOther
 FunctionCode = TrapTarget
 Flags = CanProtect
 EffectChance = 100
-Description = The user attacks while also stitching the target's shadow to the ground to prevent it fleeing.
+Description = The user attacks while also stitching the target's shadow to the ground to trap it.
 #-------------------------------
 [TRICKORTREAT]
 Name = Trick-or-Treat
@@ -4554,6 +4554,18 @@ Target = AllNearFoes
 FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit
 Description = Sharp-edged leaves are launched to slash at the opposing team. Can random critical hit.
+#-------------------------------
+[SEEDBOMB]
+Name = Seed Bomb
+Type = GRASS
+Category = Physical
+Power = 70
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user slams a barrage of hard-shelled seeds down on the target from above.
 #-------------------------------
 [SEEDFLARE]
 Name = Seed Flare
@@ -5988,7 +6000,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = SpikesFirstLayerOnly
 Flags = CanProtect,Blade
-Description = The user slashes its shell blade, leaving Spikes under the target if none have already been placed.
+Description = The user slashes its shell blade, leaving a hazard layer of Spikes under the target if none have already been placed.
 Animation = NIGHTSLASH
 #-------------------------------
 [CONFIDE]
@@ -6189,7 +6201,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = TrapTarget
 Flags = CanMagicCoat
-Description = The user pins the target with a dark, arresting look. The target becomes unable to flee.
+Description = The user pins the target with a dark, arresting look. The target becomes trapped.
 #-------------------------------
 [MEMENTO]
 Name = Memento
@@ -6505,7 +6517,7 @@ Accuracy = 0
 TotalPP = 10
 Target = BothSides
 FunctionCode = TrapAllBattlersForOneTurn
-Description = By locking down the battlefield, the user keeps all Pokémon from fleeing during the next turn.
+Description = By locking down the battlefield, the user traps all Pokémon during the next turn.
 #-------------------------------
 [FAIRYWIND]
 Name = Fairy Wind

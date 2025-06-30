@@ -36,7 +36,7 @@ Description = Protects the Pokémon from recoil damage. The Pokémon doesn't tri
 #-------------------------------
 [AFTERIMAGE]
 Name = Afterimage
-Description = Slips past all types of Spikes. Deals 50% more damage to targets that switched in this turn.
+Description = Slips past all types of Spikes hazards. Deals 50% more damage to targets that switched in this turn.
 #-------------------------------
 [AGGRAVATE]
 Name = Aggravate
@@ -210,7 +210,7 @@ Description = Heals from trapping damage it deals. Takes 25% less damage from Po
 #-------------------------------
 [BOULDERNEST]
 Name = Boulder Nest
-Description = Lays a trap of levitating stones around the opponent when its HP is lowered below half.
+Description = Lays a hazard of levitating stones around the opponent when its HP is lowered below half.
 #-------------------------------
 [BRAINSCRAMBLE]
 Name = Brain Scramble
@@ -1486,7 +1486,7 @@ Description = Both deals and takes double damage on its first full turn out in b
 #-------------------------------
 [QUILLERINSTINCT]
 Name = Quiller Instinct
-Description = Releases a layer of Spikes when hit by an attack.
+Description = Releases a hazard layer of Spikes when hit by an attack.
 #-------------------------------
 [RADIATE]
 Name = Radiate
@@ -1803,7 +1803,7 @@ Description = The Pokémon and its allies' moves are twice as likely to be criti
 #-------------------------------
 [SPINESPLODE]
 Name = Spinesplode
-Description = Leaves two layers of Spikes after it self-destructs.
+Description = Leaves two hazard layers of Spikes after it self-destructs.
 #-------------------------------
 [SPINTENSITY]
 Name = Spintensity

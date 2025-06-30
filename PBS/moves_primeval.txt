@@ -256,7 +256,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredPoisonSpikes
 Flags = Empowered
-Description = The user lays 2 layers of poisonous spike traps at the foe's feet, and becomes Poison-type.
+Description = The user lays 2 hazard layers of poisonous spike traps at the foe's feet, and becomes Poison-type.
 Animation = TOXICSPIKES
 #-------------------------------
 #		GROUND MOVES
@@ -306,7 +306,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredSpikes
 Flags = Empowered
-Description = The user lays 3 layers of spike traps at the foe's feet, and becomes Ground-type.
+Description = The user lays 3 hazard layers of spike traps at the foe's feet, and becomes Ground-type.
 Animation = SPIKES
 #-------------------------------
 [WARPINGCORE]
