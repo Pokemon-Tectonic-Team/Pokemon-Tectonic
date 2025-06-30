@@ -1430,7 +1430,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = PoisonSpikes
 Flags = CanMagicCoat
-Description = The user lays a hazard layer of poison spikes on the foe's side. One layer hurts switched in foes, two layers poisons.
+Description = The user lays poison spikes on the foe's side. One layer hurts switched in foes, two layers poisons.
 Animation = TOXICSPIKES
 #-------------------------------
 [SLIMEBALL]
@@ -2746,7 +2746,7 @@ TotalPP = 1
 Target = NearOther
 FunctionCode = TrapTargetTargetTakes50PercentMoreDamage
 Flags = CanMagicCoat
-Description = The target becomes trapped, and takes 50% more damage from all attacks.
+Description = The target becomes unable to flee, and takes 50% more damage from all attacks.
 Animation = MEANLOOK
 #-------------------------------
 [DIRGE]
@@ -3175,7 +3175,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = FeatherWard
 Flags = CanMagicCoat
-Description = The user lays a hazard of sharp feathers around the foe. It hurts foes that switch into battle.
+Description = The user lays a trap of sharp feathers around the foe. It hurts foes that switch into battle.
 #-------------------------------
 [FLECHETTES]
 Name = Flechettes
@@ -3242,7 +3242,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = SpikesIfTargetFaints
 Flags = CanProtect
-Description = A large spike is shot at the target. If this causes the target to faint, a hazard layer of Spikes is set on the ground beneath them.
+Description = A large spike is shot at the target. If this causes the target to faint, a layer of Spikes is set on the ground beneath them.
 Animation = SPIKECANNON
 #-------------------------------
 [IRONARROW]
@@ -3655,7 +3655,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = FlameSpikes
 Flags = CanMagicCoat
-Description = The user lays a hazard layer of burning spikes on the foe's side. One layer hurts switched in foes, two layers burns.
+Description = The user lays burning spikes on the foe's side. One layer hurts switched in foes, two layers burns.
 #-------------------------------
 [FLAREUP]
 Name = Flare Up
@@ -3913,7 +3913,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = FlameSpikes
 Flags = CanProtect,Pulse
-Description = The user launches volcanic debris, dealing damage and setting a hazard layer of burning spikes around the target.
+Description = The user launches volcanic debris, dealing damage and setting a layer of burning spikes around the target.
 Animation = FLAMEBURST
 #-------------------------------
 [UPINFLAMES]
@@ -4544,6 +4544,19 @@ FunctionCode = ScalesTallerThanTarget
 Flags = CanProtect
 Description = The user drops some heads from high up. The taller the user compared to the target, the greater the damage.
 #-------------------------------
+[CREEPINGSTRIKE]
+Name = Creeping Strike
+Type = GRASS
+Category = Adaptive
+Power = 60
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = DoubleDamageTargetMoved
+Flags = CanProtect
+Description = If the user moves after the target, this attack's power will be doubled.
+Animation = VINEWHIP
+#-------------------------------
 [CRUELWHIPBLADE]
 Name = Cruel Whipblade
 Type = GRASS
@@ -4554,7 +4567,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = PoisonSpikes
 Flags = CanProtect,Blade
-Description = The user flicks its thorns, dealing damage and setting a hazard layer of poison spikes around the target.
+Description = The user flicks its thorns, dealing damage and setting a layer of poison spikes around the target.
 #-------------------------------
 [ENERGYBALL]
 Name = Energy Ball
@@ -4583,6 +4596,20 @@ Flags = CanProtect
 EffectChance = 10
 Description = The user fires a small bolt of energy at the target. It has a 10% chance to raise user's Sp. Atk.
 Animation = ENERGYBALL
+#-------------------------------
+[FLASHSEED]
+Name = Flash Seed
+Type = GRASS
+Category = Physical
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Dizzy
+Flags = CanProtect
+EffectChance = 30
+Description = The target is disoriented by an explosive seed. It has a 30% chance to dizzy.
+Animation = SEEDBOMB
 #-------------------------------
 [HEADTHROW]
 Name = Head Throw
@@ -4749,19 +4776,6 @@ FunctionCode = StartsCursedIngrain
 Flags = CanSnatch
 Description = Lays roots that heal the user by absorbing 1/8th HP from foes each turn. The user becomes trapped.
 Animation = INGRAIN
-#-------------------------------
-[ROOTWRACK]
-Name = Rootwrack
-Type = GRASS
-Category = Physical
-Power = 60
-Accuracy = 100
-TotalPP = 20
-Target = NearOther
-FunctionCode = PowerBoostTargetMoved25Percent
-Flags = CanProtect
-Description = The user sends its roots to attack. Deals 25% more damage if the target attacked first.
-Animation = VINEWHIP
 #-------------------------------
 [SAPPINGJEALOUSY]
 Name = Sapping Jealousy
@@ -5020,7 +5034,7 @@ Target = NearOther
 FunctionCode = GutCheck
 Flags = CanProtect
 EffectChance = 100
-Description = The user attacks with courage. Sets a Spikes hazard layer if Full. If Hangry, deals double damage and is Dark-type.
+Description = The user attacks with courage. Sets Spikes if Full. If Hangry, deals double damage and is Dark-type.
 Animation = SPARK
 #-------------------------------
 [HEALTHYCHEER]
@@ -5933,7 +5947,7 @@ TotalPP = 15
 Target = FoeSide
 FunctionCode = FrostSpikes
 Flags = CanMagicCoat
-Description = The user lays a hazard layer of frozen spikes on the foe's side. One layer hurts switched in foes, two layers frostbites.
+Description = The user lays frozen spikes on the foe's side. One layer hurts switched in foes, two layers frostbites.
 #-------------------------------
 [GLACIALRAM]
 Name = Glacial Ram
@@ -6063,7 +6077,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = TrapAndFrostbiteTarget
 Flags = CanMagicCoat
-Description = The user pins the target down with icy spikes, applying frostbite and trapping it.
+Description = The user pins the target down with icy spikes, applying frostbite and making it unable to flee.
 Animation = ICICLESPEAR
 #-------------------------------
 [ICYINJECTION]
@@ -6186,7 +6200,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = FrostSpikes
 Flags = CanProtect,Sound
-Description = The user incants a snowy hex, dealing damage and setting a hazard layer of frozen spikes around the target.
+Description = The user incants a snowy hex, dealing damage and setting a layer of frozen spikes around the target.
 Animation = PERISHSONG
 #-------------------------------
 [SUBLIMATE]
@@ -6622,7 +6636,7 @@ Target = NearFoe
 FunctionCode = SwitchOutUserSetSpikes
 Flags = CanProtect
 EffectChance = 100
-Description = Deftly sets a hazard layer of damaging Spikes around the foe, then switches out.
+Description = Deftly sets a layer of damaging Spikes around the foe, then switches out.
 Animation = PARTINGSHOT
 #-------------------------------
 [CHECKMATE]
@@ -7015,7 +7029,7 @@ TotalPP = 5
 Target = AllNearOthers
 FunctionCode = UserFaintsExplosiveScalesWithEnemySideSpikes
 Flags = CanProtect
-Description = Explodes, dealing an extra 30 base power to all foes for each Spikes hazard layer underneath them. The user faints.
+Description = Explodes, dealing an extra 30 base power to all foes for each layer of Spikes underneath them. The user faints.
 Animation = EXPLOSION
 #-------------------------------
 [SPOTTING]
