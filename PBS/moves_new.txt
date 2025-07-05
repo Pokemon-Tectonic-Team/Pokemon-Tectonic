@@ -515,7 +515,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = RoughAndTumble
 Flags = CanProtect
-Description = The user attacks by spreading its body wide. Its power doubles if Curl Up was used previously.
+Description = The user attacks by splaying its body wide. Its power doubles if Curl Up was used previously.
 Animation = BODYSLAM
 #-------------------------------
 [RUIN]
@@ -2370,7 +2370,7 @@ Accuracy = 0
 TotalPP = 12
 Target = NearAlly
 FunctionCode = RaiseTargetWorstThreeStats1
-Description = The user spreads an aroma that raises the target's three weakest stats.
+Description = The user emits an aroma that raises the target's three weakest stats.
 Animation = AROMATICMIST
 #-------------------------------
 [IRRITATE]
