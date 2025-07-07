@@ -337,23 +337,42 @@ def make_party_validator(pbs_dir):
     with io.open(
         os.path.join(pbs_dir, r"abilities.txt"), "r", encoding="utf-8-sig"
     ) as abilities_pbs:
-        for row in csv.reader(abilities_pbs):
-            if len(row) >= 2:
-                ability_syms.add(row[1])
+        abilities_pbs_ = configparser.ConfigParser()
+        abilities_pbs_.read_file(abilities_pbs)
+        for internal_id in abilities_pbs_.sections():
+            ability_syms.add(internal_id)
+
+    with io.open(
+        os.path.join(pbs_dir, r"abilities_new.txt"), "r", encoding="utf-8-sig"
+    ) as abilities_pbs:
+        abilities_pbs_ = configparser.ConfigParser()
+        abilities_pbs_.read_file(abilities_pbs)
+        for internal_id in abilities_pbs_.sections():
+            ability_syms.add(internal_id)
 
     with io.open(
         os.path.join(pbs_dir, r"moves.txt"), "r", encoding="utf-8-sig"
     ) as moves_pbs:
-        for row in csv.reader(moves_pbs):
-            if len(row) >= 2:
-                move_syms.add(row[1])
+        moves_pbs_ = configparser.ConfigParser()
+        moves_pbs_.read_file(moves_pbs)
+        for internal_id in moves_pbs_.sections():
+            move_syms.add(internal_id)
+
+    with io.open(
+        os.path.join(pbs_dir, r"moves_new.txt"), "r", encoding="utf-8-sig"
+    ) as moves_pbs:
+        moves_pbs_ = configparser.ConfigParser()
+        moves_pbs_.read_file(moves_pbs)
+        for internal_id in moves_pbs_.sections():
+            move_syms.add(internal_id)
 
     with io.open(
         os.path.join(pbs_dir, r"items.txt"), "r", encoding="utf-8-sig"
     ) as items_pbs:
-        for row in csv.reader(items_pbs):
-            if len(row) >= 2:
-                item_syms.add(row[1])
+        items_pbs_ = configparser.ConfigParser()
+        items_pbs_.read_file(items_pbs)
+        for internal_id in items_pbs_.sections():
+            item_syms.add(internal_id)
 
     with io.open(
         os.path.join(pbs_dir, r"pokemon_server.txt"), "r", encoding="utf-8-sig"
@@ -464,12 +483,16 @@ def make_party_validator(pbs_dir):
                     nature_id = record.str()
                     nature_stats_id = record.str()
                     ev_sum = 0
-                    for _ in range(6):
+                    attack_ev = 0
+                    for i in range(6):
                         ev = record.int()
+                        if i == 1:
+                            attack_ev = ev
                         if not (0 <= ev <= EV_STAT_LIMIT):
                             logging.debug("invalid EV: %d", ev)
                             errors.append("invalid EV")
                         ev_sum += ev
+                    ev_sum -= attack_ev  # dedupe atk + spatk ev
                     if not (0 <= ev_sum <= EV_LIMIT):
                         logging.debug("invalid EV sum: %d", ev_sum)
                         errors.append("invalid EV sum")
