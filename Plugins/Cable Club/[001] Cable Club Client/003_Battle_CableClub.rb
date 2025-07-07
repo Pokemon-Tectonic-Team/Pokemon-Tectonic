@@ -246,7 +246,7 @@ end
 #===============================================================================
 # This move permanently turns into the last move used by the target. (Sketch)
 #===============================================================================
-class PokeBattle_Move_05D
+class PokeBattle_Move_ReplaceMoveWithTargetLastMoveUsed
   alias _cc_pbMoveFailed? pbMoveFailed?
   def pbMoveFailed?(user, targets)
     if CableClub::DISABLE_SKETCH_ONLINE && !@battle.internalBattle

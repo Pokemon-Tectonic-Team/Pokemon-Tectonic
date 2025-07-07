@@ -17,8 +17,8 @@ end
 class NPCTrainer
   attr_accessor :win_text
   alias _cc_initialize initialize
-  def initialize(name, trainer_type)
-    _cc_initialize(name, trainer_type)
+  def initialize(name, trainer_type, name_for_hashing = nil)
+    _cc_initialize(name, trainer_type, name_for_hashing)
     @win_text = nil
   end
 end

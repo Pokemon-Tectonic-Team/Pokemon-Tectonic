@@ -130,7 +130,8 @@ module CableClub
     writer.int(pkmn.owner.gender)
     writer.int(pkmn.exp)
     writer.int(pkmn.form)
-    writer.nil_or(:sym, pkmn.item_id)
+    writer.nil_or(:sym, pkmn.items[0])
+    writer.nil_or(:sym, pkmn.items[1])
     writer.int(pkmn.numMoves)
     pkmn.moves.each do |move|
       writer.sym(move.id)
@@ -147,15 +148,12 @@ module CableClub
     writer.nil_or(:sym, pkmn.nature_id)
     writer.nil_or(:sym, pkmn.nature_for_stats_id)
     GameData::Stat.each_main do |s|
-      writer.int(pkmn.iv[s.id])
-      writer.nil_or(:bool, pkmn.ivMaxed[s.id])
       writer.int(pkmn.ev[s.id])
     end
     writer.int(pkmn.happiness)
     writer.str(pkmn.name)
     writer.sym(pkmn.poke_ball)
     writer.int(pkmn.steps_to_hatch)
-    writer.int(pkmn.pokerus)
     writer.int(pkmn.obtain_method)
     writer.int(pkmn.obtain_map)
     writer.nil_or(:str,pkmn.obtain_text)
@@ -170,45 +168,6 @@ module CableClub
     writer.int(pkmn.numRibbons)
     pkmn.ribbons.each do |ribbon|
       writer.sym(ribbon)
-    end
-    writer.bool(!!pkmn.mail)
-    if pkmn.mail
-      writer.sym(pkmn.mail.item)
-      writer.str(pkmn.mail.message)
-      writer.str(pkmn.mail.sender)
-      if pkmn.mail.poke1
-        #[species,gender,shininess,form,shadowness,is egg]
-        writer.sym(pkmn.mail.poke1[0])
-        writer.int(pkmn.mail.poke1[1])
-        writer.bool(pkmn.mail.poke1[2])
-        writer.int(pkmn.mail.poke1[3])
-        writer.bool(pkmn.mail.poke1[4])
-        writer.bool(pkmn.mail.poke1[5])
-      else
-        writer.nil_or(:sym,nil)
-      end
-      if pkmn.mail.poke2
-        #[species,gender,shininess,form,shadowness,is egg]
-        writer.sym(pkmn.mail.poke2[0])
-        writer.int(pkmn.mail.poke2[1])
-        writer.bool(pkmn.mail.poke2[2])
-        writer.int(pkmn.mail.poke2[3])
-        writer.bool(pkmn.mail.poke2[4])
-        writer.bool(pkmn.mail.poke2[5])
-      else
-        writer.nil_or(:sym,nil)
-      end
-      if pkmn.mail.poke3
-        #[species,gender,shininess,form,shadowness,is egg]
-        writer.sym(pkmn.mail.poke3[0])
-        writer.int(pkmn.mail.poke3[1])
-        writer.bool(pkmn.mail.poke3[2])
-        writer.int(pkmn.mail.poke3[3])
-        writer.bool(pkmn.mail.poke3[4])
-        writer.bool(pkmn.mail.poke3[5])
-      else
-        writer.nil_or(:sym,nil)
-      end
     end
     writer.bool(!!pkmn.fused)
     if pkmn.fused

@@ -3,12 +3,13 @@ import collections
 import configparser
 import csv
 import io
+import logging
 import os.path
 import re
 import select
 import socket
-from distutils.version import StrictVersion
-import logging
+
+from packaging.version import Version
 
 # This is the v19 version of the server. It is not compatible with earlier versions of the script
 
@@ -20,7 +21,7 @@ RULES_DIR = "./OnlinePresets"
 # Aprox. in seconds
 RULES_REFRESH_RATE = 60
 
-GAME_VERSION = StrictVersion("3.3.0")
+GAME_VERSION = Version("3.3.0")
 POKEMON_MAX_NAME_SIZE = 10
 PLAYER_MAX_NAME_SIZE = 10
 MAXIMUM_LEVEL = 70
@@ -32,12 +33,13 @@ SKETCH_MOVE_IDS = ["SKETCH"]
 
 EBDX_INSTALLED = False
 
+
 class Server:
     def __init__(self, host, port, pbs_dir, rules_dir):
         self.valid_party = make_party_validator(pbs_dir)
         self.loop_count = 1
-        _,self.rules_files = find_changed_files(rules_dir,{})
-        self.rules = load_rules_files(rules_dir,self.rules_files)
+        _, self.rules_files = find_changed_files(rules_dir, {})
+        self.rules = load_rules_files(rules_dir, self.rules_files)
         self.host = host
         self.port = port
         self.rules_dir = rules_dir
@@ -53,21 +55,23 @@ class Server:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as self.socket:
             self.socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
             self.socket.bind((self.host, self.port))
-            logging.info('Started Server on %s:%d', self.host, self.port)
+            logging.info("Started Server on %s:%d", self.host, self.port)
             self.socket.listen()
             while True:
                 try:
                     self.loop()
                 except KeyboardInterrupt:
-                    logging.info('Stopping Server')
+                    logging.info("Stopping Server")
                     break
 
     def loop(self):
         if (self.loop_count % RULES_REFRESH_RATE) == 0:
-            reload_rules,rule_files = find_changed_files(self.rules_dir,self.rules_files)
+            reload_rules, rule_files = find_changed_files(
+                self.rules_dir, self.rules_files
+            )
             if reload_rules:
                 self.rules_files = rule_files
-                self.rules = load_rules_files(self.rules_dir,self.rules_files)
+                self.rules = load_rules_files(self.rules_dir, self.rules_files)
             self.loop_count = 0
         self.loop_count += 1
         reads = list(self.clients)
@@ -94,7 +98,7 @@ class Server:
                 s, address = self.socket.accept()
                 s.setblocking(False)
                 st = self.clients[s] = State(address)
-                logging.info('%s: connect', st)
+                logging.info("%s: connect", st)
             else:
                 st = self.clients[s]
                 try:
@@ -115,7 +119,7 @@ class Server:
                                     # Handle the message.
                                     self.handlers[type(st.state)](s, st, message)
                                 except Exception as e:
-                                    logging.exception('Server Error', exc_info=e)
+                                    logging.exception("Server Error", exc_info=e)
                                     self.disconnect(s, "server error")
                     else:
                         # Zero-length read from a non-blocking socket is
@@ -145,7 +149,7 @@ class Server:
         for _, s, s_ in connections:
             st = self.clients[s]
             st_ = self.clients[s_]
-            logging.info('%s: connected to %s', st, st_)
+            logging.info("%s: connected to %s", st, st_)
 
     def disconnect(self, s, reason="unknown error"):
         try:
@@ -161,7 +165,7 @@ class Server:
                 s.close()
             except Exception:
                 pass
-            logging.info('%s: disconnected (%s)', st, reason)
+            logging.info("%s: disconnected (%s)", st, reason)
             if isinstance(st.state, Connected):
                 self.disconnect(st.state.peer, "peer disconnected")
 
@@ -172,7 +176,7 @@ class Server:
             self.disconnect(s, "bad assert")
         else:
             version = record.str()
-            if not StrictVersion(version) >= GAME_VERSION:
+            if not Version(version) >= GAME_VERSION:
                 self.disconnect(s, "invalid version")
             else:
                 peer_id = record.int()
@@ -182,22 +186,33 @@ class Server:
                 win_text = record.int()
                 lose_text = record.int()
                 party = record.raw_all()
-                logging.debug('%s: Trainer %s, id %d (%s) -> Searching %d', st, name, public_id(id), hex(id), peer_id)
+                logging.debug(
+                    "%s: Trainer %s, id %d (%s) -> Searching %d",
+                    st,
+                    name,
+                    public_id(id),
+                    hex(id),
+                    peer_id,
+                )
                 if not self.valid_party(record):
                     self.disconnect(s, "invalid party")
                 else:
-                    st.state = Finding(peer_id, name, id, ttype, party, win_text, lose_text)
+                    st.state = Finding(
+                        peer_id, name, id, ttype, party, win_text, lose_text
+                    )
                     # Is the peer already waiting?
                     for s_, st_ in self.clients.items():
-                        if (st is not st_ and
-                            isinstance(st_.state, Finding) and
-                            public_id(st_.state.id) == peer_id and
-                            st_.state.peer_id == public_id(id)):
+                        if (
+                            st is not st_
+                            and isinstance(st_.state, Finding)
+                            and public_id(st_.state.id) == peer_id
+                            and st_.state.peer_id == public_id(id)
+                        ):
                             self.connect(s, s_)
 
     # Finding, simply ignore messages until the peer connects.
     def handle_finding(self, s, st, message):
-        logging.info('%s: message dropped (no peer)', st)
+        logging.info("%s: message dropped (no peer)", st)
 
     # Connected, simply forward messages to the peer.
     def handle_connected(self, s, st, message):
@@ -205,9 +220,9 @@ class Server:
         if st_:
             st_.send_buffer += message + b"\n"
         else:
-            logging.info('%s: message dropped (no peer)', st)
-    
-    def write_server_rules(self,writer):
+            logging.info("%s: message dropped (no peer)", st)
+
+    def write_server_rules(self, writer):
         writer.int(len(self.rules))
         for r in self.rules:
             writer.raw(r)
@@ -221,11 +236,17 @@ class State:
         self.recv_buffer = b""
 
     def __str__(self):
-        return f"{self.address[0]}:{self.address[1]}/{type(self.state).__name__.lower()}"
+        return (
+            f"{self.address[0]}:{self.address[1]}/{type(self.state).__name__.lower()}"
+        )
 
-Connecting = collections.namedtuple('Connecting', '')
-Finding = collections.namedtuple('Finding', 'peer_id name id trainertype party win_text lose_text')
-Connected = collections.namedtuple('Connected', 'peer')
+
+Connecting = collections.namedtuple("Connecting", "")
+Finding = collections.namedtuple(
+    "Finding", "peer_id name id trainertype party win_text lose_text"
+)
+Connected = collections.namedtuple("Connected", "peer")
+
 
 class RecordParser:
     def __init__(self, line):
@@ -245,10 +266,10 @@ class RecordParser:
         self.fields.reverse()
 
     def bool(self):
-        return {'true': True, 'false': False}[self.fields.pop()]
+        return {"true": True, "false": False}[self.fields.pop()]
 
     def bool_or_none(self):
-        return {'true': True, 'false': False, '': None}[self.fields.pop()]
+        return {"true": True, "false": False, "": None}[self.fields.pop()]
 
     def int(self):
         return int(self.fields.pop())
@@ -266,8 +287,10 @@ class RecordParser:
     def raw_all(self):
         return list(reversed(self.fields))
 
+
 def public_id(id_):
     return id_ & 0xFFFF
+
 
 class RecordWriter:
     def __init__(self):
@@ -296,11 +319,14 @@ class RecordWriter:
     def raw(self, fs):
         self.fields.extend(fs)
 
-Pokemon = collections.namedtuple('Pokemon', 'genders abilities moves forms')
+
+Pokemon = collections.namedtuple("Pokemon", "genders abilities moves forms")
+
 
 class Universe:
     def __contains__(self, item):
         return True
+
 
 def make_party_validator(pbs_dir):
     ability_syms = set()
@@ -308,144 +334,157 @@ def make_party_validator(pbs_dir):
     item_syms = set()
     pokemon_by_name = {}
 
-    with io.open(os.path.join(pbs_dir, r'abilities.txt'), 'r', encoding='utf-8-sig') as abilities_pbs:
+    with io.open(
+        os.path.join(pbs_dir, r"abilities.txt"), "r", encoding="utf-8-sig"
+    ) as abilities_pbs:
         for row in csv.reader(abilities_pbs):
             if len(row) >= 2:
                 ability_syms.add(row[1])
 
-    with io.open(os.path.join(pbs_dir, r'moves.txt'), 'r', encoding='utf-8-sig') as moves_pbs:
+    with io.open(
+        os.path.join(pbs_dir, r"moves.txt"), "r", encoding="utf-8-sig"
+    ) as moves_pbs:
         for row in csv.reader(moves_pbs):
             if len(row) >= 2:
                 move_syms.add(row[1])
 
-    with io.open(os.path.join(pbs_dir, r'items.txt'), 'r', encoding='utf-8-sig') as items_pbs:
+    with io.open(
+        os.path.join(pbs_dir, r"items.txt"), "r", encoding="utf-8-sig"
+    ) as items_pbs:
         for row in csv.reader(items_pbs):
             if len(row) >= 2:
                 item_syms.add(row[1])
 
-    with io.open(os.path.join(pbs_dir, r'pokemon_server.txt'), 'r', encoding='utf-8-sig') as pokemon_pbs:
+    with io.open(
+        os.path.join(pbs_dir, r"pokemon_server.txt"), "r", encoding="utf-8-sig"
+    ) as pokemon_pbs:
         pokemon_pbs_ = configparser.ConfigParser()
         pokemon_pbs_.read_file(pokemon_pbs)
         for section in pokemon_pbs_.sections():
             species = pokemon_pbs_[section]
-            if 'forms' in species:
-                forms = {int(f) for f in species['forms'].split(',') if f}
+            if "forms" in species:
+                forms = {int(f) for f in species["forms"].split(",") if f}
             else:
                 forms = Universe()
             genders = {
-                'AlwaysMale': {0},
-                'AlwaysFemale': {1},
-                'Genderless': {2},
-            }.get(species['gender_ratio'], {0, 1})
-            ability_names = species['abilities'].split(',')
+                "AlwaysMale": {0},
+                "AlwaysFemale": {1},
+                "Genderless": {2},
+            }.get(species["gender_ratio"], {0, 1})
+            ability_names = species["abilities"].split(",")
             abilities = {a for a in ability_names if a}
-            moves = {m for m in species['moves'].split(',') if m}
+            moves = {m for m in species["moves"].split(",") if m}
             pokemon_by_name[section] = Pokemon(genders, abilities, moves, forms)
 
     def validate_party(record):
-        logging.debug('--BEGIN PARTY VALIDATION--')
+        logging.debug("--BEGIN PARTY VALIDATION--")
         errors = []
         try:
             for _ in range(record.int()):
+
                 def validate_pokemon():
                     species = record.str()
                     species_ = pokemon_by_name.get(species)
                     if species_ is None:
-                        logging.debug('invalid species: %s', species)
+                        logging.debug("invalid species: %s", species)
                         errors.append("invalid species")
-                    logging.debug('Species: %s', species)
+                    logging.debug("Species: %s", species)
                     level = record.int()
                     if not (1 <= level <= MAXIMUM_LEVEL):
-                        logging.debug('invalid level: %d', level)
+                        logging.debug("invalid level: %d", level)
                         errors.append("invalid level")
                     personal_id = record.int()
                     owner_id = record.int()
                     if owner_id & ~0xFFFFFFFF:
-                        logging.debug('invalid owner id: %d', owner_id)
+                        logging.debug("invalid owner id: %d", owner_id)
                         errors.append("invalid owner id")
                     owner_name = record.str()
                     if not (len(owner_name) <= PLAYER_MAX_NAME_SIZE):
-                        logging.debug('invalid owner name: %s', owner_name)
+                        logging.debug("invalid owner name: %s", owner_name)
                         errors.append("invalid owner name")
                     owner_gender = record.int()
                     if owner_gender not in {0, 1}:
-                        logging.debug('invalid owner gender: %d', owner_gender)
+                        logging.debug("invalid owner gender: %d", owner_gender)
                         errors.append("invalid owner gender")
                     exp = record.int()
                     # TODO: validate exp.
                     form = record.int()
                     if form not in species_.forms:
-                        logging.debug('invalid form: %d', form)
+                        logging.debug("invalid form: %d", form)
                         errors.append("invalid form")
                     item = record.str()
                     if item and item not in item_syms:
-                        logging.debug('invalid item id: %s', item)
+                        logging.debug("invalid item id: %s", item)
                         errors.append("invalid item")
                     can_use_sketch = not set(SKETCH_MOVE_IDS).isdisjoint(species_.moves)
                     for _ in range(record.int()):
                         move = record.str()
                         if move:
                             if can_use_sketch and move not in move_syms:
-                                logging.debug('invalid move id (Sketched): %s', move)
+                                logging.debug("invalid move id (Sketched): %s", move)
                                 errors.append("invalid move (Sketched)")
                             elif move not in species_.moves and not can_use_sketch:
-                                logging.debug('invalid move id: %s', move)
+                                logging.debug("invalid move id: %s", move)
                                 errors.append("invalid move")
                         ppup = record.int()
                         if not (0 <= ppup <= 3):
-                            logging.debug('invalid ppup for move id %s: %d', move, ppup)
+                            logging.debug("invalid ppup for move id %s: %d", move, ppup)
                             errors.append("invalid ppup")
                     for _ in range(record.int()):
                         move = record.str()
                         if move:
                             if can_use_sketch and move not in move_syms:
-                                logging.debug('invalid first move id (Sketched): %s', move)
+                                logging.debug(
+                                    "invalid first move id (Sketched): %s", move
+                                )
                                 errors.append("invalid first move (Sketched)")
                             elif move not in species_.moves and not can_use_sketch:
-                                logging.debug('invalid first move id: %s', move)
+                                logging.debug("invalid first move id: %s", move)
                                 errors.append("invalid first move")
                     gender = record.int()
                     if gender not in species_.genders:
-                        logging.debug('invalid gender: %d', gender)
+                        logging.debug("invalid gender: %d", gender)
                         errors.append("invalid gender")
                     shiny = record.bool_or_none()
                     ability = record.str()
                     # stricter check
-                    #if ability and ability not in species_.abilities):
+                    # if ability and ability not in species_.abilities):
                     #    logging.debug('invalid ability strict: %s', ability)
                     #    errors.append("invalid ability strict")
                     if ability and ability not in ability_syms:
-                        logging.debug('invalid ability: %s', ability)
+                        logging.debug("invalid ability: %s", ability)
                         errors.append("invalid ability")
-                    ability_index = record.int_or_none() # so hidden abils are properly inherited
+                    ability_index = (
+                        record.int_or_none()
+                    )  # so hidden abils are properly inherited
                     nature_id = record.str()
                     nature_stats_id = record.str()
                     ev_sum = 0
                     for _ in range(6):
                         iv = record.int()
                         if not (0 <= iv <= IV_STAT_LIMIT):
-                            logging.debug('invalid IV: %d', iv)
+                            logging.debug("invalid IV: %d", iv)
                             errors.append("invalid IV")
                         ivmaxed = record.bool_or_none()
                         ev = record.int()
                         if not (0 <= ev <= EV_STAT_LIMIT):
-                            logging.debug('invalid EV: %d', ev)
+                            logging.debug("invalid EV: %d", ev)
                             errors.append("invalid EV")
                         ev_sum += ev
                     if not (0 <= ev_sum <= EV_LIMIT):
-                       logging.debug('invalid EV sum: %d', ev_sum)
-                       errors.append("invalid EV sum") 
+                        logging.debug("invalid EV sum: %d", ev_sum)
+                        errors.append("invalid EV sum")
                     happiness = record.int()
                     if not (0 <= happiness <= 255):
-                        logging.debug('invalid happiness: %d', happiness)
+                        logging.debug("invalid happiness: %d", happiness)
                         errors.append("invalid happiness")
                     name = record.str()
                     if not (len(name) <= POKEMON_MAX_NAME_SIZE):
-                        logging.debug('invalid name: %s', name)
+                        logging.debug("invalid name: %s", name)
                         errors.append("invalid name")
                     poke_ball = record.str()
                     if poke_ball and poke_ball not in item_syms:
-                        logging.debug('invalid pokeball: %s', poke_ball)
+                        logging.debug("invalid pokeball: %s", poke_ball)
                         errors.append("invalid pokeball")
                     steps_to_hatch = record.int()
                     pokerus = record.int()
@@ -472,96 +511,125 @@ def make_party_validator(pbs_dir):
                         m_sender = record.str()
                         m_species1 = record.int_or_none()
                         if m_species1:
-                            #[species,gender,shininess,form,shadowness,is egg]
+                            # [species,gender,shininess,form,shadowness,is egg]
                             m_gender1 = record.int()
                             m_shiny1 = record.bool()
                             m_form1 = record.int()
                             m_shadow1 = record.bool()
                             m_egg1 = record.bool()
-                        
+
                         m_species2 = record.int_or_none()
                         if m_species2:
-                            #[species,gender,shininess,form,shadowness,is egg]
+                            # [species,gender,shininess,form,shadowness,is egg]
                             m_gender2 = record.int()
                             m_shiny2 = record.bool()
                             m_form2 = record.int()
                             m_shadow2 = record.bool()
                             m_egg2 = record.bool()
-                        
+
                         m_species3 = record.int_or_none()
                         if m_species3:
-                            #[species,gender,shininess,form,shadowness,is egg]
+                            # [species,gender,shininess,form,shadowness,is egg]
                             m_gender3 = record.int()
                             m_shiny3 = record.bool()
                             m_form3 = record.int()
                             m_shadow3 = record.bool()
                             m_egg3 = record.bool()
-                    #fused
+                    # fused
                     if record.bool():
-                        logging.debug('Fused Mon')
+                        logging.debug("Fused Mon")
                         validate_pokemon()
                     if EBDX_INSTALLED:
                         superhue = record.str()
                         if shiny and (superhue == ""):
-                            logging.debug('uninitialized supershiny')
+                            logging.debug("uninitialized supershiny")
                             errors.append("uninitialized supershiny")
                         supervarient = record.bool_or_none()
-                    logging.debug('-------')
+                    logging.debug("-------")
+
                 validate_pokemon()
             rest = record.raw_all()
             if rest:
                 errors.append(f"remaining data: {', '.join(rest)}")
         except Exception as e:
             errors.append(str(e))
-        if errors: logging.debug('Errors: %s', errors)
-        logging.debug('--END PARTY VALIDATION--')
+        if errors:
+            logging.debug("Errors: %s", errors)
+        logging.debug("--END PARTY VALIDATION--")
         return not errors
-        
-        
 
     return validate_party
 
-def find_changed_files(directory,old_files_hash):
+
+def find_changed_files(directory, old_files_hash):
     if os.path.isdir(directory):
-        new_files_hash = dict ([(f, os.stat(os.path.join(directory,f)).st_mtime) for f in os.listdir(directory)])
+        new_files_hash = dict(
+            [
+                (f, os.stat(os.path.join(directory, f)).st_mtime)
+                for f in os.listdir(directory)
+            ]
+        )
         changed = old_files_hash.keys() != new_files_hash.keys()
         if not changed:
-            for k in (old_files_hash.keys() & new_files_hash.keys()):
+            for k in old_files_hash.keys() & new_files_hash.keys():
                 if old_files_hash[k] != new_files_hash[k]:
                     changed = True
                     break
         if changed:
-            logging.info('Refreshing Rules due to changes')
-            return True,new_files_hash
-    return False,old_files_hash
-    
-    
-def load_rules_files(directory,files_hash):
+            logging.info("Refreshing Rules due to changes")
+            return True, new_files_hash
+    return False, old_files_hash
+
+
+def load_rules_files(directory, files_hash):
     rules = []
     for f in iter(files_hash):
         rule = []
-        with open(os.path.join(directory,f)) as rule_file:
-            for num,line in enumerate(rule_file):
+        with open(os.path.join(directory, f)) as rule_file:
+            for num, line in enumerate(rule_file):
                 line = line.strip()
                 if num == 3:
-                    rule.extend(line.split(','))
+                    rule.extend(line.split(","))
                 else:
                     rule.append(line)
         rules.append(rule)
     return rules
 
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--host", default=HOST,help='The host IP Address to run this server on. Should be 0.0.0.0 for Google Cloud.')
-    parser.add_argument("--port", default=PORT,help='The port the server is listening on.')
-    parser.add_argument("--pbs_dir", default=PBS_DIR,help='The path, relative to the working directory, where the PBS files are located.')
-    parser.add_argument("--rules_dir", default=RULES_DIR,help='The path, relative to the working directory, where the rules files are located.')
-    parser.add_argument("--log", default="INFO",help='The log level of the server. Logging messages lower than the level are not written.')
+    parser.add_argument(
+        "--host",
+        default=HOST,
+        help="The host IP Address to run this server on. Should be 0.0.0.0 for Google Cloud.",
+    )
+    parser.add_argument(
+        "--port", default=PORT, help="The port the server is listening on."
+    )
+    parser.add_argument(
+        "--pbs_dir",
+        default=PBS_DIR,
+        help="The path, relative to the working directory, where the PBS files are located.",
+    )
+    parser.add_argument(
+        "--rules_dir",
+        default=RULES_DIR,
+        help="The path, relative to the working directory, where the rules files are located.",
+    )
+    parser.add_argument(
+        "--log",
+        default="INFO",
+        help="The log level of the server. Logging messages lower than the level are not written.",
+    )
     args = parser.parse_args()
     loglevel = getattr(logging, args.log.upper())
     if not isinstance(loglevel, int):
-        raise ValueError('Invalid log level: %s' % loglevel)
-    logging.basicConfig(format='%(asctime)s: %(levelname)s: %(message)s', filename=os.path.join(LOG_DIR,'server.log'), level=loglevel)
-    logging.info('---------------')
-    Server(args.host, int(args.port), args.pbs_dir,args.rules_dir).run()
+        raise ValueError("Invalid log level: %s" % loglevel)
+    logging.basicConfig(
+        format="%(asctime)s: %(levelname)s: %(message)s",
+        filename=os.path.join(LOG_DIR, "server.log"),
+        level=loglevel,
+    )
+    logging.info("---------------")
+    Server(args.host, int(args.port), args.pbs_dir, args.rules_dir).run()
     logging.shutdown()
