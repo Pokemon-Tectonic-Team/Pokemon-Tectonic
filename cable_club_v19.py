@@ -412,9 +412,13 @@ def make_party_validator(pbs_dir):
                     if form not in species_.forms:
                         logging.debug("invalid form: %d", form)
                         errors.append("invalid form")
-                    item = record.str()
-                    if item and item not in item_syms:
-                        logging.debug("invalid item id: %s", item)
+                    item1 = record.str()
+                    if item1 and item1 not in item_syms:
+                        logging.debug("invalid item id: %s", item1)
+                        errors.append("invalid item")
+                    item2 = record.str()
+                    if item2 and item2 not in item_syms:
+                        logging.debug("invalid item id: %s", item2)
                         errors.append("invalid item")
                     can_use_sketch = not set(SKETCH_MOVE_IDS).isdisjoint(species_.moves)
                     for _ in range(record.int()):
@@ -461,11 +465,6 @@ def make_party_validator(pbs_dir):
                     nature_stats_id = record.str()
                     ev_sum = 0
                     for _ in range(6):
-                        iv = record.int()
-                        if not (0 <= iv <= IV_STAT_LIMIT):
-                            logging.debug("invalid IV: %d", iv)
-                            errors.append("invalid IV")
-                        ivmaxed = record.bool_or_none()
                         ev = record.int()
                         if not (0 <= ev <= EV_STAT_LIMIT):
                             logging.debug("invalid EV: %d", ev)
@@ -487,7 +486,6 @@ def make_party_validator(pbs_dir):
                         logging.debug("invalid pokeball: %s", poke_ball)
                         errors.append("invalid pokeball")
                     steps_to_hatch = record.int()
-                    pokerus = record.int()
                     # obtain data
                     obtain_mode = record.int()
                     obtain_map = record.int()
@@ -504,8 +502,6 @@ def make_party_validator(pbs_dir):
                     # ribbons
                     for _ in range(record.int()):
                         ribbon = record.str()
-                    # mail
-                    if record.bool():
                         m_item = record.str()
                         m_msg = record.str()
                         m_sender = record.str()
