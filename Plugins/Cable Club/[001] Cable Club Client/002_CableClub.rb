@@ -20,8 +20,8 @@ module CableClub
   def self.do_battle(connection, client_id, seed, battle_rules, player_party, partner, partner_party)
     $Trainer.heal_party # Avoids having to transmit damaged state.
     partner_party.each{|pkmn| pkmn.heal} # back to back battles desync without it.
-    olditems  = $Trainer.party.transform { |p| p.item_id }
-    olditems2 = partner_party.transform { |p| p.item_id }
+    olditems  = $Trainer.party.transform { |p| p.items }
+    olditems2 = partner_party.transform { |p| p.items }
     if !DISABLE_SKETCH_ONLINE
       oldmoves  = $player.party.transform { |p| p.moves.dup }
       oldmoves2 = partner_party.transform { |p| p.moves.dup }
@@ -55,14 +55,14 @@ module CableClub
             pkmn.heal
             pkmn.makeUnmega
             pkmn.makeUnprimal
-            pkmn.item = olditems[i]
+            pkmn.setItems(olditems[i])
             pkmn.moves = oldmoves[i] if !DISABLE_SKETCH_ONLINE
           end
           partner_party.each_with_index do |pkmn, i|
             pkmn.heal
             pkmn.makeUnmega
             pkmn.makeUnprimal
-            pkmn.item = olditems2[i]
+            pkmn.item.setItems(olditems2[i])
             pkmn.moves = oldmoves2[i] if !DISABLE_SKETCH_ONLINE
           end
         end
@@ -200,7 +200,7 @@ module CableClub
     form = record.int
     #pkmn.forced_form = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
     pkmn.form_simple = form
-    pkmn.item = record.sym
+    pkmn.setItems([record.sym,record.sym])
     pkmn.forget_all_moves
     record.int.times do |i|
       pkmn.moves[i] = Pokemon::Move.new(record.sym)
@@ -218,15 +218,12 @@ module CableClub
     pkmn.nature = record.sym
     pkmn.nature_for_stats = record.nil_or(:sym)
     GameData::Stat.each_main do |s|
-      pkmn.iv[s.id] = record.int
-      pkmn.ivMaxed[s.id] = record.nil_or(:bool)
       pkmn.ev[s.id] = record.int
     end
     pkmn.happiness = record.int
     pkmn.name = record.str
     pkmn.poke_ball = record.sym
     pkmn.steps_to_hatch = record.int
-    pkmn.pokerus = record.int
     pkmn.obtain_method = record.int
     pkmn.obtain_map = record.int
     pkmn.obtain_text = record.nil_or(:str)
@@ -240,48 +237,6 @@ module CableClub
     pkmn.sheen = record.int
     record.int.times do |i|
       pkmn.giveRibbon(record.sym)
-    end
-    if record.bool() # mail
-      m_item = record.sym()
-      m_msg = record.str()
-      m_sender = record.str()
-      m_poke1 = []
-      if m_species1 = record.nil_or(:sym)
-        #[species,gender,shininess,form,shadowness,is egg]
-        m_poke1[0] = m_species1
-        m_poke1[1] = record.int()
-        m_poke1[2] = record.bool()
-        m_poke1[3] = record.int()
-        m_poke1[4] = record.bool()
-        m_poke1[5] = record.bool()
-      else
-        m_poke1 = nil
-      end
-      m_poke2 = []
-      if m_species2 = record.nil_or(:sym)
-        #[species,gender,shininess,form,shadowness,is egg]
-        m_poke2[0] = m_species2
-        m_poke2[1] = record.int()
-        m_poke2[2] = record.bool()
-        m_poke2[3] = record.int()
-        m_poke2[4] = record.bool()
-        m_poke2[5] = record.bool()
-      else
-        m_poke2 = nil
-      end
-      m_poke3 = []
-      if m_species3 = record.nil_or(:sym)
-        #[species,gender,shininess,form,shadowness,is egg]
-        m_poke3[0] = m_species3
-        m_poke3[1] = record.int()
-        m_poke3[2] = record.bool()
-        m_poke3[3] = record.int()
-        m_poke3[4] = record.bool()
-        m_poke3[5] = record.bool()
-      else
-        m_poke3 = nil
-      end
-      pkmn.mail = Mail.new(m_item,m_msg,m_sender,m_poke1,m_poke2,m_poke3)
     end
     if record.bool() # fused
       pkmn.fused = parse_pkmn(record)
