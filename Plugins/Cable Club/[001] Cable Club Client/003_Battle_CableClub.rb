@@ -22,9 +22,9 @@ class PokeBattle_CableClub < PokeBattle_Battle
   def pbRandom(x); return @battleRNG.rand(x); end
   
   # Added optional args to not make v18 break.
-  def pbSwitchInBetween(index, lax=false, cancancel=false)
+  def pbSwitchInBetween(index, lax=false, cancancel=false, safeSwitch=nil)
     if pbOwnedByPlayer?(index)
-      choice = super(index, lax, cancancel)
+      choice = super(index, checkLaxOnly: lax, canCancel: cancancel, safeSwitch: safeSwitch)
       # bug fix for the unknown type :switch. cause: going into the pokemon menu then backing out and attacking, which sends the switch symbol regardless.
       if !cancancel # forced switches do not allow canceling, and both sides would expect a response.
         @connection.send do |writer|
