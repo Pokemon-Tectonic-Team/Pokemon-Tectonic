@@ -18,6 +18,73 @@ class PokeBattle_CableClub < PokeBattle_Battle
     @battleAI  = PokeBattle_CableClub_AI.new(self)
     @battleRNG = Random.new(seed)
   end
+
+  # Override command phase to swap AI and player order
+  def pbCommandPhase
+      @scene.pbBeginCommandPhase
+
+      # Reset choices if commands can be shown
+      @battlers.each_with_index do |b, i|
+          next unless b
+          pbClearChoice(i) if pbCanShowCommands?(i)
+      end
+
+      # Reset choices to perform Mega Evolution if it wasn't done somehow
+      for side in 0...2
+          @megaEvolution[side].each_with_index do |megaEvo, i|
+              @megaEvolution[side][i] = -1 if megaEvo >= 0
+          end
+      end
+
+      preSelectionAlerts
+
+      if pbCheckGlobalAbility(:INVESTIGATOR)
+          # Each of the player's pokemon (or NPC allies)
+          eachSameSideBattler do |b|
+              next unless b.hasActiveAbility?(:INVESTIGATOR)
+              possibleInvestigation = []
+              b.eachOpposing do |bOpp|
+                  next if bOpp.fainted?
+                  possibleInvestigation.push(bOpp)
+              end
+              next if possibleInvestigation.length == 0
+              investigating = possibleInvestigation.sample
+              pbShowAbilitySplash(b, :INVESTIGATOR)
+              # Cannot predict opponent online
+              pbDisplay(_INTL("{1} cannot get a read on {2}!", b.pbThis, investigating.pbThis(true)))
+              pbHideAbilitySplash(b)
+          end
+      end
+
+      # Choose actions for the round (Player first, then "AI" online oponent)
+
+      # Turn skipped due to ambush
+      if @turnCount == 0 && @foeAmbushing
+          # The player is ambushed by the foe!
+          pbDisplayBossNarration(_INTL("You were <imp>ambushed</imp>! The foe gets a free turn!"))
+          eachSameSideBattler do |b|
+              b.extraMovesPerTurn = 0
+          end
+      else
+          pbCommandPhaseLoop(true) # Player chooses their actions
+      end
+
+      # Turn skipped due to ambush
+      if @turnCount == 0 && @playerAmbushing
+          # Player ambushes successfully!
+          pbDisplayBossNarration(_INTL("Your foe was <imp>ambushed</imp>! You get a free turn!"))
+          eachOtherSideBattler do |b|
+              b.extraMovesPerTurn = 0
+          end
+      else
+          # AI chooses their actions
+          pbCommandPhaseLoop(false)
+      end
+
+      return if @decision != 0 # Battle ended, stop choosing actions
+
+      triggerAllChoicesDialogue
+  end
   
   def pbRandom(x); return @battleRNG.rand(x); end
   
@@ -140,11 +207,13 @@ end
 
 class PokeBattle_CableClub_AI < PokeBattle_AI
   def pbDefaultChooseEnemyCommand(index)
+    echoln("Cable Club: Start AI check")
     # Hurray for default methods. have to reverse it to show the expected order.
     our_indices = @battle.pbGetOpposingIndicesInOrder(1).reverse
     their_indices = @battle.pbGetOpposingIndicesInOrder(0).reverse
     # Sends our choices after they have all been locked in.
     if index == their_indices.last
+      echoln("Cable Club: Sending choices")
       # TODO: patch this up to be index agnostic.
       # Would work fine if restricted to single/double battles
       target_order = CableClub::pokemon_target_order(@battle.client_id)
@@ -180,11 +249,13 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
           their_target = target_order[our_target] rescue our_target
           writer.int(their_target)
         end
+        echoln("Cable Club: Sent choices")
       end
       frame = 0
       @battle.scene.pbShowWindow(PokeBattle_Scene::MESSAGE_BOX)
       cw = @battle.scene.sprites["messageWindow"]
       cw.letterbyletter = false
+      echoln("Cable Club: Waiting for opponent's choices")
       begin
         loop do
           frame += 1
@@ -196,6 +267,7 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
           @battle.connection.update do |record|
             case (type = record.sym)
             when :forfeit
+              echoln("Cable Club: Opponent forfeited")
               pbSEPlay("Battle flee")
               @battle.pbDisplay(_INTL("{1} forfeited the match!", @battle.opponent[0].fullname))
               @battle.decision = 1
@@ -210,6 +282,7 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
                 when :mechanic
                   @battle.megaEvolution[1][0] = record.int
                 when :choice
+                  echoln("Cable Club: Receiving opponent's choice")
                   their_index = their_indices.shift
                   partner_pkmn = @battle.battlers[their_index]
                   @battle.choices[their_index][0] = record.sym
@@ -220,7 +293,10 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
                   end
                   @battle.choices[their_index][2] = move
                   @battle.choices[their_index][3] = record.int
-                  break if their_indices.empty?
+                  if their_indices.empty?
+                    echoln("Cable Club: Received all opponent's choices")
+                    break
+                  end
                 else
                   raise "Unknown message: #{t}"
                 end
