@@ -501,9 +501,9 @@ def make_party_validator(pbs_dir):
                         logging.debug("invalid happiness: %d", happiness)
                         errors.append("invalid happiness")
                     name = record.str()
-                    if not (len(name) <= POKEMON_MAX_NAME_SIZE):
-                        logging.debug("invalid name: %s", name)
-                        errors.append("invalid name")
+                    # if not (len(name) <= POKEMON_MAX_NAME_SIZE):
+                    #     logging.debug("invalid name: %s", name)
+                    #     errors.append("invalid name")
                     poke_ball = record.str()
                     if poke_ball and poke_ball not in item_syms:
                         logging.debug("invalid pokeball: %s", poke_ball)
