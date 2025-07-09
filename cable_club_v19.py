@@ -13,11 +13,11 @@ from packaging.version import Version
 
 # This is the v19 version of the server. It is not compatible with earlier versions of the script
 
-HOST = r"127.0.0.1"
+HOST = r"0.0.0.0"
 PORT = 9999
-PBS_DIR = r"./PBS"
-LOG_DIR = r"."
-RULES_DIR = "./OnlinePresets"
+PBS_DIR = r"./home/deewhydeeecks/PBS"
+LOG_DIR = r"./home/deewhydeeecks/"
+RULES_DIR = "./home/deewhydeeecks/OnlinePresets"
 # Aprox. in seconds
 RULES_REFRESH_RATE = 60
 
