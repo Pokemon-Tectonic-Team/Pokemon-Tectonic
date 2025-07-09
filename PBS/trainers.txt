@@ -6340,14 +6340,19 @@ Pokemon = SERPERIOR,70
 #-------------------------------
 [ANOTHERPOSSIBLEZAIN,Zain,1]
 ExtendsVersion = 0
+Policies = CURSE_EMPOWERED_MOVES
 Pokemon = LIEPARD,70
     Item = FOCUSSASH
 Pokemon = FERROTHORN,70
+	Moves = PRIMEVALSPIKES,KNOCKOFF,LEECHSEED,BODYPRESS
     Item = OCCABERRY
 Pokemon = BLAZIKEN,70
+	Moves = BULKUP,CLOSECOMBAT,BLAZEKICK,EMPOWEREDEARTHQUAKE
     Item = LUMBERRY
 Pokemon = GIRATINA,70
     Item = WEAKNESSPOLICY
+Pokemon = SERPERIOR,70
+    Moves = AUTUMNBLAST,SYNTHESIS,EMPOWEREDTHUNDERBOLT,PETRIFY
 #-------------------------------
 [ANOTHERPOSSIBLETAMARIND,Tamarind]
 Policies = ALTERNATE_TAMARIND
@@ -6374,6 +6379,7 @@ Pokemon = BLACEPHALON,70
 #-------------------------------
 [ANOTHERPOSSIBLETAMARIND,Tamarind,1]
 ExtendsVersion = 0
+Policies = CURSE_EMPOWERED_MOVES
 Pokemon = LEDIAN,70
     Item = FLYINGGEM
 Pokemon = UMBREON,70
@@ -6382,6 +6388,10 @@ Pokemon = MEWTWO,70
     Item = LUMBERRY
 Pokemon = BLACEPHALON,70
     Item = SHELLBELL
+Pokemon = COMFEY,70
+    Moves = DRAININGKISS,GIGADRAIN,PRIMEVALTAILWIND
+Pokemon = UMBREON,70
+    Moves = SUCKERPUNCH,QUICKATTACK,PRIMEVALHEALORDER,FOULPLAY
 #-------------------------------
 [ANOTHERPOSSIBLEALESSA,Alessa]
 Policies = ALTERNATE_ALESSA
@@ -6408,6 +6418,7 @@ Pokemon = PORYGONZ,70
 #-------------------------------
 [ANOTHERPOSSIBLEALESSA,Alessa,1]
 ExtendsVersion = 0
+Policies = CURSE_EMPOWERED_MOVES
 Pokemon = WEAVILE,70
     Item = DARKGEM
 Pokemon = ETERNATUS,70
@@ -6416,6 +6427,7 @@ Pokemon = FORRETRESS,70
     Item = OCCABERRY
 Pokemon = PORYGONZ,70
     Item = CHOICESCARF
+	Moves = TRIATTACK,PHANTOMGATE,PSYCHIC,EMPOWEREDICEBEAM
 #-------------------------------
 [MASKEDVILLAIN_DOUBLE,Crimson,12]
 NameForHashing = Imogene
