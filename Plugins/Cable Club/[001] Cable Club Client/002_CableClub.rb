@@ -62,7 +62,7 @@ module CableClub
             pkmn.heal
             pkmn.makeUnmega
             pkmn.makeUnprimal
-            pkmn.item.setItems(olditems2[i])
+            pkmn.setItems(olditems2[i])
             pkmn.moves = oldmoves2[i] if !DISABLE_SKETCH_ONLINE
           end
         end
