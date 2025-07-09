@@ -1,5 +1,9 @@
 module CableClub
-  HOST = "34.61.122.15"
+  # Do not change
+  PUBLIC_HOST = "34.61.122.15"
+
+  # Change if testing locally or connecting to 3rd party server
+  HOST = PUBLIC_HOST
   PORT = 9999
   
   FOLDER_FOR_BATTLE_PRESETS = "OnlinePresets"
