@@ -1,6 +1,7 @@
 module CableClub
   # Do not change
   PUBLIC_HOST = "34.61.122.15"
+  LOCAL_HOST = "127.0.0.1"
 
   # Change if testing locally or connecting to 3rd party server
   HOST = PUBLIC_HOST

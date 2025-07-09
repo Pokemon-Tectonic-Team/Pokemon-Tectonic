@@ -422,7 +422,7 @@ def make_party_validator(pbs_dir):
                         logging.debug("invalid owner name: %s", owner_name)
                         errors.append("invalid owner name")
                     owner_gender = record.int()
-                    if owner_gender not in {0, 1}:
+                    if owner_gender not in {0, 1, 2}:
                         logging.debug("invalid owner gender: %d", owner_gender)
                         errors.append("invalid owner gender")
                     exp = record.int()
