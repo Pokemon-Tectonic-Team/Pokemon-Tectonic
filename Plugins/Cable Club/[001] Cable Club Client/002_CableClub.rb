@@ -202,7 +202,8 @@ module CableClub
     #pkmn.forced_form = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
     pkmn.form_simple = form
     items = [record.sym,record.sym]
-    items.compact!
+    # filter out blank items
+    items = items.select {|i| i.length > 0}
     pkmn.setItems(items)
     pkmn.forget_all_moves
     record.int.times do |i|
