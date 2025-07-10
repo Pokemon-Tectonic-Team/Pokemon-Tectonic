@@ -209,7 +209,12 @@ move, false, true)
             next if nearOnly && !user.near?(b)
             pbAddTarget(choices, user, b, nearOnly)
         end
-        pbAddTarget(targets, user, choices[@battle.pbRandom(choices.length)], nearOnly) if choices.length > 0
+        choice = choices[0]
+        if choices.length > 1
+            # only call random if necessary to prevent online desyncs
+            choice = @battle.pbRandom(choices.length)
+        end
+        pbAddTarget(targets, user, choice, nearOnly) if choices.length > 0
     end
 
     def pbAddTargetRandomFoe(targets, user, _move, nearOnly = true)
@@ -218,7 +223,11 @@ move, false, true)
             next if nearOnly && !user.near?(b)
             pbAddTarget(choices, user, b, nearOnly)
         end
-        pbAddTarget(targets, user, choices[@battle.pbRandom(choices.length)], nearOnly) if choices.length > 0
+        choice = choices[0]
+        if choices.length > 1
+            choice = @battle.pbRandom(choices.length)
+        end
+        pbAddTarget(targets, user, choice, nearOnly) if choices.length > 0
     end
 
     def pbAddTargetClosestFoe(targets, user, _move, nearOnly = true)
