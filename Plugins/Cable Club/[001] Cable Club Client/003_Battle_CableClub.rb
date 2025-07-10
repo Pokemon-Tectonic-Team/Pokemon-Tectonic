@@ -275,7 +275,7 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
             when :forfeit
               echoln("Cable Club: Opponent forfeited")
               pbSEPlay("Battle flee")
-              @battle.pbDisplay(_INTL("{1} forfeited the match!", @battle.opponent[0].fullname))
+              @battle.pbDisplay(_INTL("{1} forfeited the match!", @battle.opponent[0].full_name))
               @battle.decision = 1
               @battle.pbAbort
             
