@@ -490,30 +490,30 @@ class CableClubScreen
   end
   
   def choose_activity(connection)
-    cmds = [_INTL("Battle"), _INTL("Trade")]
-    cmds.push(_INTL("Mix Records")) if CableClub::ENABLE_RECORD_MIXER
-    cmd = -1
-    change_state(:choose_activity){
-      cmd = pbShowCommands(_INTL("Choose an activity."), cmds, -1)
-      break
-    }
-    case cmd
-    when 0 # Battle
+    # cmds = [_INTL("Battle"), _INTL("Trade")]
+    # cmds.push(_INTL("Mix Records")) if CableClub::ENABLE_RECORD_MIXER
+    # cmd = -1
+    # change_state(:choose_activity){
+    #   cmd = pbShowCommands(_INTL("Choose an activity."), cmds, -1)
+    #   break
+    # }
+    # case cmd
+    # when 0 # Battle
       @battle_settings = nil
       choose_battle_settings(connection)
-    when 1 # Trade
-      connection.send do |writer|
-        writer.sym(:trade)
-      end
-      await_accept_activity(connection,:trade,:choose_trade_pokemon)
-    when 2 # # Mix Records
-      connection.send do |writer|
-        writer.sym(:record_mix)
-      end
-      await_accept_activity(connection,:record_mix,:do_mix_records)
-    else # Cancel/Disconnect
-      # TODO: Confirmation box?
-    end
+    # when 1 # Trade
+    #   connection.send do |writer|
+    #     writer.sym(:trade)
+    #   end
+    #   await_accept_activity(connection,:trade,:choose_trade_pokemon)
+    # when 2 # # Mix Records
+    #   connection.send do |writer|
+    #     writer.sym(:record_mix)
+    #   end
+    #   await_accept_activity(connection,:record_mix,:do_mix_records)
+    # else # Cancel/Disconnect
+    #   # TODO: Confirmation box?
+    # end
   end
   
   def await_accept_activity(connection,activity,method_on_accept)
