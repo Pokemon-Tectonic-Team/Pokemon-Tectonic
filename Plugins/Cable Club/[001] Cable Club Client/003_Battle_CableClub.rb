@@ -5,6 +5,7 @@ end
 class PokeBattle_CableClub < PokeBattle_Battle
   attr_reader :connection
   attr_reader :battleRNG
+  attr_reader :rngCalls
   def initialize(connection, client_id, scene, player_party, opponent_party, opponent, seed)
     @connection = connection
     @client_id = client_id
@@ -17,6 +18,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
     super(scene, player_party, opponent_party, [player], [opponent])
     @battleAI  = PokeBattle_CableClub_AI.new(self)
     @battleRNG = Random.new(seed)
+    @rngCalls = 0
   end
 
   # Override command phase to swap AI and player order
@@ -86,7 +88,11 @@ class PokeBattle_CableClub < PokeBattle_Battle
       triggerAllChoicesDialogue
   end
   
-  def pbRandom(x); return @battleRNG.rand(x); end
+  def pbRandom(x)
+    @rngCalls += 1
+    echoln("RNG calls this battle: #{rngCalls}")
+    return @battleRNG.rand(x)
+  end
   
   # Added optional args to not make v18 break.
   def pbSwitchInBetween(index, lax=false, cancancel=false, safeSwitch=nil)
