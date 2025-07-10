@@ -20,8 +20,8 @@ module CableClub
   def self.do_battle(connection, client_id, seed, battle_rules, player_party, partner, partner_party)
     $Trainer.heal_party # Avoids having to transmit damaged state.
     partner_party.each{|pkmn| pkmn.heal} # back to back battles desync without it.
-    olditems  = $Trainer.party.transform { |p| p.items }
-    olditems2 = partner_party.transform { |p| p.items }
+    olditems  = $Trainer.party.transform { |p| p.items.transform { |i| i } }
+    olditems2 = partner_party.transform { |p| p.items.transform { |i| i }  }
     if !DISABLE_SKETCH_ONLINE
       oldmoves  = $player.party.transform { |p| p.moves.dup }
       oldmoves2 = partner_party.transform { |p| p.moves.dup }
