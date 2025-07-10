@@ -97,13 +97,14 @@ module CableClub
   end
   
   def self.choose_team(ruleset)
-    team_order = nil
-    pbFadeOutIn(99999) {
-      scene = PokemonParty_Scene.new
-      screen = PokemonPartyScreen.new(scene, $Trainer.party)
-      team_order = screen.pbPokemonMultipleEntryScreenOrder(ruleset)
-    }
-    return team_order
+    return (0..$Trainer.party.length - 1).to_a
+    # team_order = nil
+    # pbFadeOutIn(99999) {
+    #   scene = PokemonParty_Scene.new
+    #   screen = PokemonPartyScreen.new(scene, $Trainer.party)
+    #   team_order = screen.pbPokemonMultipleEntryScreenOrder(ruleset)
+    # }
+    # return team_order
   end
   
   def self.check_pokemon(pkmn)
@@ -200,7 +201,9 @@ module CableClub
     form = record.int
     #pkmn.forced_form = form if MultipleForms.hasFunction?(pkmn.species,"getForm")
     pkmn.form_simple = form
-    pkmn.setItems([record.sym,record.sym])
+    items = [record.sym,record.sym]
+    items.compact!
+    pkmn.setItems(items)
     pkmn.forget_all_moves
     record.int.times do |i|
       pkmn.moves[i] = Pokemon::Move.new(record.sym)
