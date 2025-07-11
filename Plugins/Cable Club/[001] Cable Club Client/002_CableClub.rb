@@ -129,7 +129,7 @@ module CableClub
     writer.int(pkmn.level)
     writer.int(pkmn.personalID)
     writer.int(pkmn.owner.id)
-    writer.str(pkmn.owner.name)
+    writer.str(pkmn.owner.safe_name)
     writer.int(pkmn.owner.gender)
     writer.int(pkmn.exp)
     writer.int(pkmn.form)
@@ -154,7 +154,7 @@ module CableClub
       writer.int(pkmn.ev[s.id])
     end
     writer.int(pkmn.happiness)
-    writer.str(pkmn.name)
+    writer.str(pkmn.safe_name)
     writer.sym(pkmn.poke_ball)
     writer.int(pkmn.steps_to_hatch)
     writer.int(pkmn.obtain_method)

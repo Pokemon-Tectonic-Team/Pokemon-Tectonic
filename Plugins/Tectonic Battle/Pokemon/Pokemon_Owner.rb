@@ -57,6 +57,14 @@ class Pokemon
         validate new_name => String
         @name = new_name
       end
+
+      # avoid problematic characters for online communication
+      def safe_name
+        if @name.ascii_only? && !@name.include?("\\")
+          return @name
+        end
+        return "Val"
+      end
   
       # @param new_gender [Integer] new owner gender
       def gender=(new_gender)
