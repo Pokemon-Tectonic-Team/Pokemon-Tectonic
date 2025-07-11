@@ -166,12 +166,11 @@ class CableClub_Scene
         elsif !rules.ruleset.hasRegistrableTeam?(partner_party)
           pbDisplay(_INTL("I'm sorry, your partner does not have a valid Pokémon team with these rules."))
         else
-          bracket_cmds = [_INTL("FFA"), _INTL("Lv. 50"),_INTL("Lv. 100")]
+          bracket_cmds = [_INTL("FFA"),_INTL("Lv. 70")]
           bracket = pbShowCommands(_INTL("Choose a bracket."),bracket_cmds, -1)
           if bracket >= 0
             case bracket
-            when 1; rules.setLevelAdjustment(FixedLevelAdjustment,50)
-            when 2; rules.setLevelAdjustment(FixedLevelAdjustment,100)
+            when 1; rules.setLevelAdjustment(FixedLevelAdjustment,70)
             end
             desc = sprintf("%s (%s)",commands[cmd],bracket_cmds[bracket])
             ret = [desc,desc,rules]
