@@ -62,7 +62,7 @@ class CableClub_Scene
         pbUpdate
         if !@sprites["messagebox"].busy?
           if Input.triggerex?(:ESCAPE)
-            ret=currenttext
+            ret=""
             break
           elsif Input.triggerex?(:RETURN)
             ret=window.text
