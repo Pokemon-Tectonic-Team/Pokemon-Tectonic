@@ -175,7 +175,9 @@ class PokeBattle_Battle
                     # Calculate move's priority
                     if @choices[b.index][0] == :UseMove
                         move = @choices[b.index][2]
-                        targets = b.pbFindTargets(@choices[b.index][3], move, b)
+                        target_index = @choices[b.index][3]
+                        target_index = CableClub::pokemon_target_order(0)[target_index]
+                        targets = b.pbFindTargets(target_index, move, b)
                         pri = getMovePriority(move, b, targets)
                         bArray[3] = pri
                         @choices[b.index][4] = pri
