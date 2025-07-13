@@ -386,11 +386,14 @@ class CableClubScreen
     end
     begin
       msg = _ISPRINTF("Opponent's ID (Yours: {1:05d})",$Trainer.public_ID($Trainer.id))
-      partner_id = ""
+      partner_id = $PokemonGlobal.last_partner_id || ""
       loop do
         partner_id = pbEnterText(msg, 5, 5, partner_id)
         return false if partner_id.empty?
-        break if partner_id =~ /^[0-9]{5}$/
+        if partner_id =~ /^[0-9]{5}$/
+          $PokemonGlobal.last_partner_id = partner_id
+          break
+        end
       end
       pbConnectServer(partner_id)
       raise Connection::Disconnected.new("disconnected")
