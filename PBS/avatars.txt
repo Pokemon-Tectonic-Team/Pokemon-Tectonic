@@ -56,8 +56,8 @@ HPMult = 2.0
 #-------------------------------
 [VIGOROTH]
 Ability = VITALSPIRIT
-Moves1 = SCRATCH,BITE,PRIMEVALDRAGONDANCE
-Moves2 = CLASH
+Moves1 = COVET,BITE,PRIMEVALDRAGONDANCE
+Moves2 = SHRED
 HPMult = 3.0
 #-------------------------------
 [BIDOOF]
