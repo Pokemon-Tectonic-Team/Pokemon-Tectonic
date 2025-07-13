@@ -46,9 +46,9 @@ Special,20
 [007] # Repora Forest
 Land,20,20
     40,MEOWTH,23,25
-    20,NICKIT,23,25
     20,SHROOMISH,23,25
     20,SIZZLIPEDE,23,25
+    20,STANTLER,23,25
 LandSparse,20,20
     20,GROWLITHE,23,25
     20,LARVESTA,23,25
@@ -61,6 +61,11 @@ LandTall,20,20
     25,GLAMEOW,24,26
     25,LOTAD,24,26
     25,NATU,24,26
+    25,NICKIT,24,26
+LandSparse,20,20
+    25,HERACROSS,24,26
+    25,KOMALA,24,26
+    25,PINSIR,24,26
     25,PUMPKABOO,24,26
 #-------------------------------
 [011] # Eleig River Crossing
