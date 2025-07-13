@@ -126,7 +126,7 @@ Color = 248,88,136
 DarkColor = 120,16,120
 IsSpecialType = true
 Weaknesses = BUG,GHOST,DARK
-Resistances = FIGHTING,PSYCHIC
+Resistances = FIGHTING,PSYCHIC,STEEL
 #-------------------------------
 [15]
 Name = Ice
