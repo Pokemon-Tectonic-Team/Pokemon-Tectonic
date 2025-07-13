@@ -176,7 +176,9 @@ class PokeBattle_Battle
                     if @choices[b.index][0] == :UseMove
                         move = @choices[b.index][2]
                         target_index = @choices[b.index][3]
-                        target_index = CableClub::pokemon_target_order(0)[target_index]
+                        if @client_id == 1
+                            target_index = CableClub::pokemon_target_order(@client_id)[target_index]                          
+                        end
                         targets = b.pbFindTargets(target_index, move, b)
                         pri = getMovePriority(move, b, targets)
                         bArray[3] = pri
