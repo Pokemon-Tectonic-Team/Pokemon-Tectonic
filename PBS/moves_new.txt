@@ -7628,19 +7628,6 @@ FunctionCode = HitTwoToFiveTimes
 Flags = CanProtect
 Description = The target is multi-hit two to five times.
 #-------------------------------
-[PLANAHEAD]
-Name = Plan Ahead
-Type = FLEX
-Category = Special
-Power = 95
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = AttackTwoTurnsLater
-Flags = Foretold
-Description = Two turns after this move is used, the target is struck by a well-planned attack.
-Animation = FUTURESIGHT
-#-------------------------------
 [RUNAMUCK]
 Name = Run Amuck
 Type = FLEX
@@ -7653,3 +7640,16 @@ FunctionCode = Rampage
 Flags = CanProtect
 Description = The user attacks with simple determination and rampages for two turns.
 Animation = THRASH
+#-------------------------------
+[PLANAHEAD]
+Name = Plan Ahead
+Type = FLEX
+Category = Special
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = AttackTwoTurnsLater
+Flags = Foretold
+Description = Two turns after this move is used, the target is struck by a well-planned attack.
+Animation = FUTURESIGHT
