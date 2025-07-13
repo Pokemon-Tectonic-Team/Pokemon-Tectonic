@@ -42,41 +42,41 @@ class CableClub_Scene
     @sprites["messagebox"].visible = false
   end
   
-  def pbEnterText(helptext,starttext,passwordbox,maxlength)
-    @dots_message = nil
-    @sprites["messagebox"].text    = helptext
-    @sprites["messagebox"].visible = true
-    @sprites["messagebox"].letterbyletter = false
-    ret=""
-    using(window = Window_TextEntry_Keyboard.new(starttext,0,0,240,64)){
-      window.maxlength=maxlength
-      window.visible=true
-      pbPositionNearMsgWindow(window,@sprites["messagebox"],:right)
-      window.z = @viewport.z+1
-      window.text=starttext
-      window.passwordChar="*" if passwordbox
-      Input.text_input = true
-      loop do
-        Graphics.update
-        Input.update
-        pbUpdate
-        if !@sprites["messagebox"].busy?
-          if Input.triggerex?(:ESCAPE)
-            ret=""
-            break
-          elsif Input.triggerex?(:RETURN)
-            ret=window.text
-            break
-          end
-        end
-        window.update
-      end
-      Input.text_input = false
-      window.dispose
-      Input.update
-    }
-    return ret
-  end
+  # def pbEnterText(helptext,starttext,passwordbox,maxlength)
+  #   @dots_message = nil
+  #   @sprites["messagebox"].text    = helptext
+  #   @sprites["messagebox"].visible = true
+  #   @sprites["messagebox"].letterbyletter = false
+  #   ret=""
+  #   using(window = Window_TextEntry_Keyboard.new(starttext,0,0,240,64)){
+  #     window.maxlength=maxlength
+  #     window.visible=true
+  #     pbPositionNearMsgWindow(window,@sprites["messagebox"],:right)
+  #     window.z = @viewport.z+1
+  #     window.text=starttext
+  #     window.passwordChar="*" if passwordbox
+  #     Input.text_input = true
+  #     loop do
+  #       Graphics.update
+  #       Input.update
+  #       pbUpdate
+  #       if !@sprites["messagebox"].busy?
+  #         if Input.triggerex?(:ESCAPE)
+  #           ret=""
+  #           break
+  #         elsif Input.triggerex?(:RETURN)
+  #           ret=window.text
+  #           break
+  #         end
+  #       end
+  #       window.update
+  #     end
+  #     Input.text_input = false
+  #     window.dispose
+  #     Input.update
+  #   }
+  #   return ret
+  # end
   
   def pbShowCommands(helptext,commands,cmdIfCancel=0)
     ret = -1
@@ -357,9 +357,9 @@ class CableClubScreen
   def pbDisplay(text); @scene.pbDisplay(text); end
   def pbDisplayDots(text); @scene.pbDisplayDots(text); end
   def pbHideMessageBox; @scene.pbHideMessageBox; end
-  def pbEnterText(helptext,starttext,passwordbox,maxlength)
-    @scene.pbEnterText(helptext,starttext,passwordbox,maxlength)
-  end
+  # def pbEnterText(helptext,starttext,passwordbox,maxlength)
+  #   @scene.pbEnterText(helptext,starttext,passwordbox,maxlength)
+  # end
   def pbShowCommands(helptext,commands,cmdIfCancel=0)
     return @scene.pbShowCommands(helptext,commands,cmdIfCancel)
   end
@@ -385,10 +385,10 @@ class CableClubScreen
       return false
     end
     begin
-      msg = _ISPRINTF("What's the ID of the trainer you're searching for? (Your ID: {1:05d})",$Trainer.public_ID($Trainer.id))
+      msg = _ISPRINTF("Opponent's ID (Yours: {1:05d})",$Trainer.public_ID($Trainer.id))
       partner_id = ""
       loop do
-        partner_id = pbEnterText(msg, partner_id, false, 5)
+        partner_id = pbEnterText(msg, 5, 5, partner_id)
         return false if partner_id.empty?
         break if partner_id =~ /^[0-9]{5}$/
       end
