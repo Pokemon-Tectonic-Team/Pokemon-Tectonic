@@ -1,5 +1,8 @@
 class PokeBattle_Battle
   attr_reader :client_id
+  def is_online?
+    return @client_id != nil
+  end
 end
 
 class PokeBattle_CableClub < PokeBattle_Battle
