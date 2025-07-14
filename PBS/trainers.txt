@@ -135,10 +135,10 @@ Pokemon = TRAPINCH,13
 Pokemon = MAKUHITA,15
     AbilityIndex = 0 # Thick Fat
 Pokemon = SCRAGGY,15
-    Moves = SMASH,SCHEME,QUICKATTACK,PILFER
+    Moves = LOWSWEEP,SCHEME,QUICKATTACK,THIEF
     AbilityIndex = 1 # Moxie
 Pokemon = NICKIT,15
-    Moves = PILFER,HONECLAWS,QUICKATTACK,ENCORE
+    Moves = THIEF,HONECLAWS,QUICKATTACK,ENCORE
     AbilityIndex = 1 # Sentry
 #-------------------------------
 [LEADER_Lambert,Lambert]
