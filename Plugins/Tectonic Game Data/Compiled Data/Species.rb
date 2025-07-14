@@ -1107,8 +1107,13 @@ module Compiler
                 write_species(f, species)
             end
         end
+        # load server banlist
+        banlist = File.readlines("PBS/pokemon_server_banlist.txt", encoding: "bom|utf-8").map(&:chomp)
         File.open("PBS/pokemon_server.txt", "wb") do |f|
             GameData::Species.each_base do |species|
+                if (species.species == :REGIGIGAS)
+                end
+                next if banlist.include?(species.species.to_s)
                 next if species.form != 0
                 next if species.defined_in_extension
                 pbSetWindowText(_INTL("Writing species {1} for server...", species.id_number))
