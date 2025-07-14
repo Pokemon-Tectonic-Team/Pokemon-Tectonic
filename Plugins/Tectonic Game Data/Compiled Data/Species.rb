@@ -1090,14 +1090,30 @@ module Compiler
     # Save Pokémon data to PBS file
     #=============================================================================
     def write_pokemon
+        form_map = Hash.new # used for pokemon_server generation
         File.open("PBS/pokemon.txt", "wb") do |f|
             add_PBS_header_to_file(f)
             GameData::Species.each_base do |species|
-                next if species.form != 0
                 next if species.defined_in_extension
+                if (!form_map.key?(species.species))
+                    form_map[species.species] = [0]
+                end
+                if species.form != 0
+                    form_map[species.species].push(species.form)
+                    next   
+                end
                 pbSetWindowText(_INTL("Writing species {1}...", species.id_number))
                 Graphics.update if species.id_number % 50 == 0
                 write_species(f, species)
+            end
+        end
+        File.open("PBS/pokemon_server.txt", "wb") do |f|
+            GameData::Species.each_base do |species|
+                next if species.form != 0
+                next if species.defined_in_extension
+                pbSetWindowText(_INTL("Writing species {1} for server...", species.id_number))
+                Graphics.update if species.id_number % 50 == 0
+                write_species_server(f, species, form_map[species.species])
             end
         end
         pbSetWindowText(nil)
@@ -1166,6 +1182,14 @@ module Compiler
         end
     end
 
+    def write_species_server(f, species, form_list)
+        f.write(format("[%s]\r\n", species.species))
+        f.write(format("forms = %s\r\n", form_list.join(",")))
+        f.write(format("gender_ratio = %s\r\n", species.gender_ratio))
+        f.write(format("abilities = %s\r\n", species.abilities.join(","))) if species.abilities.length > 0
+        f.write(format("moves = %s\r\n", species.learnable_moves.join(",")))
+        f.write("\r\n\r\n")
+    end
     #=============================================================================
     # Save Pokémon forms data to PBS file
     #=============================================================================
