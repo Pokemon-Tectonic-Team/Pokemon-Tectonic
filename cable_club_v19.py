@@ -15,9 +15,9 @@ from packaging.version import Version
 
 HOST = r"0.0.0.0"
 PORT = 9999
-PBS_DIR = r"./home/deewhydeeecks/PBS"
-LOG_DIR = r"./home/deewhydeeecks/"
-RULES_DIR = "./home/deewhydeeecks/OnlinePresets"
+PBS_DIR = r"./PBS"
+LOG_DIR = r"."
+RULES_DIR = "./OnlinePresets"
 # Aprox. in seconds
 RULES_REFRESH_RATE = 60
 
