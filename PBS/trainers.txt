@@ -72,7 +72,7 @@ Pokemon = CHEWTLE,10
 #-------------------------------
 [NINJABOY,Matthew]
 Pokemon = BONSLY,12
-    Moves = SHATTERSHOT,VALORBOLT,EMBRITTLE
+    Moves = SHATTERSHOT,CONCUSS,EMBRITTLE
     AbilityIndex = 0 # Desiccate
 Pokemon = NINCADA,12
     Moves = STINGINGJAB,HARDEN,TREMOR,BITE
