@@ -1187,8 +1187,7 @@ module Compiler
         f.write(format("forms = %s\r\n", form_list.join(",")))
         f.write(format("gender_ratio = %s\r\n", species.gender_ratio))
         f.write(format("abilities = %s\r\n", species.abilities.join(","))) if species.abilities.length > 0
-        f.write(format("moves = %s\r\n", species.learnable_moves.join(",")))
-        f.write("\r\n\r\n")
+        f.write(format("moves = %s\r\n\r\n", species.learnable_moves.join(",")))
     end
     #=============================================================================
     # Save Pokémon forms data to PBS file
