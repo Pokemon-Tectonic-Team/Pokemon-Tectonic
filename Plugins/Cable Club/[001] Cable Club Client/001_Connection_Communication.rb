@@ -9,6 +9,7 @@ class Connection
     # XXX: Non-blocking connect.
     begin
       socket = TCPSocket.open(host, port)
+      socket.set_encoding("UTF-8")
       connection = Connection.new(socket)
       yield connection
     end
