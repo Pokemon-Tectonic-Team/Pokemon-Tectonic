@@ -724,13 +724,13 @@ Pokemon = GULPIN,15
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 13,20,17,0,20,0
 Pokemon = PANSEAR,15
-    Moves = COVET,BALEFULBOP,RECYCLE,EMBER
+    Moves = COVET,BALEFULBOP,RECYCLE,FIREPULSE
     AbilityIndex = 1 # Ripen
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 2,20,5,20,20,3
 Pokemon = DRIFLOON,15
-    Moves = BOREALWIND,FIREPULSE,DEADEND,DAZZLE
+    Moves = BOREALWIND,FIREPULSE,OMINOUSWIND,DAZZLE
     AbilityIndex = 0 # Unburden
     Item = FLYINGGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

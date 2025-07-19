@@ -58,7 +58,7 @@ HPMult = 2.0
 Ability = VITALSPIRIT
 Moves1 = COVET,BITE,PRIMEVALDRAGONDANCE
 Moves2 = SHRED
-HPMult = 3.0
+HPMult = 4.0
 #-------------------------------
 [BIDOOF]
 Ability = NORMALIZE
