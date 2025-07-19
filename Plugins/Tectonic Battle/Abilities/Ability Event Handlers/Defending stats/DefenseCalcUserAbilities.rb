@@ -39,3 +39,10 @@ BattleHandlers::DefenseCalcUserAbility.add(:BIGBOSS,
         next defenseMult
     }
 )
+
+BattleHandlers::DefenseCalcUserAbility.add(:SAFEPASSAGE,
+    proc { |ability, _user, battle, defenseMult|
+        defenseMult *= 2 if battle.rainy?
+        next defenseMult
+    }
+)
