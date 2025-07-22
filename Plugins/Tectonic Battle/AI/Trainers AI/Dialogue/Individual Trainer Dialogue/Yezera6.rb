@@ -27,9 +27,9 @@ PokeBattle_AI::TrainerPokemonTookMoveDamageDialogue.add(:YEZERA6,
 )
 
 PokeBattle_AI::TrainerPokemonImmuneDialogue.add(:YEZERA6,
-    proc { |_policy, _attacker, _target, _isImmunityAbility, trainer_speaking, dialogue_array|
+    proc { |_policy, _attacker, target, _isImmunityAbility, trainer_speaking, dialogue_array|
         next dialogue_array if trainer_speaking.policyStates[:PivotComment]
-        next dialogue_array unless taker.species == :TOGEKISS && taker.effectActive?(:SwitchedIn)
+        next dialogue_array unless target.species == :TOGEKISS && target.effectActive?(:SwitchedIn)
         dialogue_array.push(_INTL("The same simple pivot, again and again...I'm bored."))
         trainer_speaking.policyStates[:PivotComment] = true
         next dialogue_array
