@@ -10,7 +10,7 @@ end
 def pbWarpToMap
     mapid = pbListScreen(_INTL("WARP TO MAP"), MapLister.new(pbDefaultMap))
     if mapid > 0
-        x, y = getRandomWarpPointOnMap(mapid)
+        x, y = getRandomWarpPointOnMap(mapid, true)
         return [mapid, x, y]
     end
     return nil

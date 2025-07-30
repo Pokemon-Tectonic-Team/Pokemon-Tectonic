@@ -31,7 +31,7 @@ def gameWon?
 end
 
 Events.onMapChange += proc { |_sender, _e|
-	if playerIsOutdoors?
+	if playerIsOutdoors? || $game_map.map_id == 214 # Team Chasm HQ
 		if $PokemonGlobal.shouldProcGrouzAvatarCall
 			$game_switches[GROUZ_AVATAR_PHONECALL_GLOBAL] = true
 			$PokemonGlobal.shouldProcGrouzAvatarCall = false

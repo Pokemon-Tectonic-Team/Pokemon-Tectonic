@@ -349,8 +349,15 @@ class QuestData
   end
 
   # Get overall quest description
-  def getQuestDescription(quest)
-    return _INTL(QuestModule.const_get(quest)[:QuestDescription])
+  def getQuestDescription(quest,stage=nil)
+    questData = QuestModule.const_get(quest)
+    if stage
+      loc = ("QuestDescription" + "#{stage}").to_sym
+      if questData[loc]
+        return _INTL(questData[loc])
+      end
+    end
+    return _INTL(questData[:QuestDescription])
   end
 
   # Get current task location

@@ -14,10 +14,10 @@ class PokeBattle_Battle
         priority = pbPriority(true)   # in order of fastest -> slowest speeds only
 
         checkBattleStateAchievements(self)
+        
+        pbEORWeather(priority)
 
         pbEORHealing(priority)
-
-        pbEORWeather(priority)
 
         if @field.effectActive?(:EmotionRoom)
             priority.each { |b|
@@ -175,6 +175,7 @@ class PokeBattle_Battle
             if damageDealt > 0
                 priority.each do |b|
                     next unless b.hasActiveAbility?(:TOXINTAX)
+                    next unless b.canHeal?
                     pbShowAbilitySplash(b, :TOXINTAX)
                     healingMessage = _INTL("{1} absorbs the damage from the poison.", b.pbThis)
                     b.pbRecoverHP(damageDealt, true, true, true, healingMessage)

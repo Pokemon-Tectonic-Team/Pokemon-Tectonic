@@ -97,3 +97,15 @@ GameData::BattleWeather.register({
   :name      => _INTL("Blood Moon"),
   :animation => "Moonlight",
 })
+
+GameData::BattleWeather.register({
+  :id        => :StarStorm,
+  :name      => _INTL("Star Storm"),
+  :animation => "Sandstorm",
+})
+
+GameData::BattleWeather.register({
+  :id        => :IceAge,
+  :name      => _INTL("Ice Age"),
+  :animation => "Hail",
+})

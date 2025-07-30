@@ -284,7 +284,7 @@ class QuestList_Scene
       ["#{questName}",Graphics.width/2 - 12,-2,2,Color.new(248,248,248),Color.new(0,0,0),true]
     ])
     # Quest description
-    questDesc = _INTL("<u>Overview</u>: {1}",$quest_data.getQuestDescription(quest.id))
+    questDesc = _INTL("<u>Overview</u>: {1}",$quest_data.getQuestDescription(quest.id,quest.stage))
     drawFormattedTextEx(@sprites["overlay3"].bitmap,38,48,
       436,questDesc,@base,@shadow)
     # Stage description

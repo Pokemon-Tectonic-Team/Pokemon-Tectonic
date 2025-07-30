@@ -141,7 +141,7 @@ Page = 5
 #-------------------------------
 [REACH_FROSTFLOW_CENTER_BEFORE_SURF]
 Name = Sequence Break
-Description = Reach Frostflow Farms Center without aquiring the Surf Board.
+Description = Reach Frostflow Farms Center without acquiring the Surf Board.
 Page = 5
 #-------------------------------
 [REACH_PRIZCA_WEST_BEFORE_TERRAKION]

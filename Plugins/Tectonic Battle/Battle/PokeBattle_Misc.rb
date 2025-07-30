@@ -120,7 +120,7 @@ class PokeBattle_Battle
                 b.pbResetLoweredStatSteps(true)
                 b.resetAbilities
                 b.eachEffect(true) do |effect, _value, data|
-                    next unless data.avatars_purge
+                    next unless data.avatars_purge || data.is_mental?
                     b.disableEffect(effect)
                 end
             end

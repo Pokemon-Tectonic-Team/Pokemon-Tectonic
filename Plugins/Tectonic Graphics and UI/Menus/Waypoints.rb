@@ -69,7 +69,7 @@ class WaypointsTracker
 	def summonPokemonFromWaypoint(avatarSpecies,waypointEvent)
 		$PokemonGlobal.respawnPoint = waypointEvent.id
 		speciesDisplayName = GameData::Species.get(avatarSpecies).name
-		pbMessage(_INTL("By the power of the Primal Clay, a {1} was created!", speciesDisplayName))
+		pbMessage(_INTL("A {1} was created!", speciesDisplayName))
 		level = [50,getLevelCap].min
 		if pbWildBattleCore(avatarSpecies, level) == 4 # Caught
 			$PokemonGlobal.respawnPoint = nil
@@ -214,13 +214,26 @@ def accessWaypoint(waypointName,avatarSpecies=nil)
 
 	if avatarSpecies
 		alternate = true
-		if pbHasItem?(LEGEND_SUMMONING_ITEM)
-			speciesName = GameData::Species.get(avatarSpecies).name
 
+		speciesName = GameData::Species.get(avatarSpecies).name
+		if pbHasItem?(LEGEND_SUMMONING_KEY_ITEM) || pbHasItem?(LEGEND_SUMMONING_CONSUMABLE_ITEM)
 			pbMessage(_INTL("The totem pulses with the frequency of {1}.",speciesName))
-			if pbConfirmMessage(_INTL("Use the {1} to summon {2}?", getItemName(LEGEND_SUMMONING_ITEM), speciesName))
-				# No longer allow summoning the pokemon once its been caught once
+		end
+
+		if pbHasItem?(LEGEND_SUMMONING_KEY_ITEM)
+			if pbConfirmMessage(_INTL("\\i[{1}]Activate the {2} to summon {3}?", LEGEND_SUMMONING_KEY_ITEM, getItemName(LEGEND_SUMMONING_KEY_ITEM), speciesName))
 				if $waypoints_tracker.summonPokemonFromWaypoint(avatarSpecies,waypointEvent)
+					pbMessage(_INTL("The totem returns to its original state."))
+					pbSetSelfSwitch(waypointEvent.id,'A',false)
+					return true
+				end
+				return false
+			end
+		elsif pbHasItem?(LEGEND_SUMMONING_CONSUMABLE_ITEM)
+			if pbConfirmMessage(_INTL("\\i[{1}]Expend the {2} to summon {3}?", LEGEND_SUMMONING_CONSUMABLE_ITEM, getItemName(LEGEND_SUMMONING_CONSUMABLE_ITEM), speciesName))
+				if $waypoints_tracker.summonPokemonFromWaypoint(avatarSpecies,waypointEvent)
+					pbMessage(_INTL("The {1} was consumed in the summoning.", getItemName(LEGEND_SUMMONING_CONSUMABLE_ITEM)))
+					pbDeleteItem(LEGEND_SUMMONING_CONSUMABLE_ITEM)
 					pbMessage(_INTL("The totem returns to its original state."))
 					pbSetSelfSwitch(waypointEvent.id,'A',false)
 					return true
@@ -250,7 +263,7 @@ def setWaypointSummonable(waypointEventID)
 end
 
 def totemAuraSummon(species)
-	unless pbHasItem?(LEGEND_SUMMONING_ITEM)
+	unless pbHasItem?(LEGEND_SUMMONING_KEY_ITEM)
 		pbMessage(_INTL("You sense an powerful presence trying to manifest on this spot."))
 		pbMessage(_INTL("However, you seem to lack a way to interact with it."))
 		return
@@ -258,7 +271,7 @@ def totemAuraSummon(species)
 	speciesName = GameData::Species.get(species).name
 	pbMessage(_INTL("An Avatar Totem is partially manifested on this spot."))
 	pbMessage(_INTL("It pulses with the frequency of {1}.",speciesName))
-	return unless pbConfirmMessage(_INTL("Use the Primal Clay to summon {1}?",speciesName))
+	return unless pbConfirmMessage(_INTL("\\i[{1}]Activate the {2} to summon {3}?", LEGEND_SUMMONING_KEY_ITEM, getItemName(LEGEND_SUMMONING_KEY_ITEM), speciesName))
 	if $waypoints_tracker.summonPokemonFromWaypoint(species,get_character(0))
 		pbMessage(_INTL("The summoning spot exhausted its energy."))
 		setMySwitch('A')
@@ -297,4 +310,5 @@ end
 CHOOSE_BY_LIST = false
 WAYPOINT_EVENT_NAME = "AvatarTotem"
 WAYPOINT_REQUIRED_ITEM = :SPANNINGBAND
-LEGEND_SUMMONING_ITEM = :PRIMALCLAY
+LEGEND_SUMMONING_CONSUMABLE_ITEM = :PRIMALBEAD
+LEGEND_SUMMONING_KEY_ITEM = :PRIMALCLAY

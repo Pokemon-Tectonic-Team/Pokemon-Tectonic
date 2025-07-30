@@ -791,3 +791,80 @@ end
           end
       end
   end
+
+DebugMenuCommands.register("earliestlevels", {
+    "parent"      => "analysis",
+    "name"        => _INTL("Analyze move availability"),
+    "description" => _INTL("See the earliest available level of each move."),
+    "effect"      => proc { |sprites, viewport|
+        move_levels = {}
+        GameData::Move.each do |move|
+            next if move.primeval
+            next if move.cut
+            next if move.zmove
+            move_levels[move.id] = [70, false, []]
+        end
+
+        GameData::Species.each do |species_data|
+            # Don't check the species if its an alt form
+            if species_data.form != 0
+                formName = species_data.real_form_name
+                formName.gsub!("%","") if formName
+                next
+            end
+
+            echoln("Checking the moves of #{species_data.real_name}")
+            species_data.level_moves.each do |learnset_entry|
+                learn_level = learnset_entry[0]
+                move_id = learnset_entry[1]
+                is_evo_move = false
+                # handle evolution moves
+                if learn_level == 0 
+                    is_evo_move = true # set evolution flag
+                    species_data.evolutions.each do |evolutionEntry|
+                        evoMethod = evolutionEntry[1]
+                        param = evolutionEntry[2]
+                        is_prevo = evolutionEntry[3]
+                        next if !is_prevo # checking prevos for evolution methods into this mon
+                        evoLevelThreshold = 0
+                        case evoMethod
+                            # All method based on leveling up to a certain level
+                            when :Level, :LevelDay, :LevelNight, :LevelMale, :LevelFemale, :LevelRain,
+                            :AttackGreater, :AtkDefEqual, :DefenseGreater, :LevelDarkInParty,
+                            :Silcoon, :Cascoon, :Ninjask, :Shedinja, :Originize, :Ability0, :Ability1
+
+                                evoLevelThreshold = param
+                            # All methods based on holding a certain item or using a certain item on the pokemon
+                            when :HoldItem, :HoldItemMale, :HoldItemFemale, :DayHoldItem, :NightHoldItem,
+                            :Item, :ItemMale, :ItemFemale, :ItemDay, :ItemNight, :ItemHappiness
+
+                                # Push this prevo if the evolution from it is gated by an item which is available by this point
+                                evoLevelThreshold = Compiler::getEarliestLevelForItem(param)
+                        end
+                        learn_level = evoLevelThreshold
+                    end
+                end
+                # if multiple pokemon learn at the lowest level, push to the list of learners
+                if move_levels[move_id][0] == learn_level
+                    move_levels[move_id][2].push(species_data.species)
+                end
+                if move_levels[move_id][0] > learn_level
+                    move_levels[move_id][0] = learn_level
+                    move_levels[move_id][1] = is_evo_move
+                    move_levels[move_id][2] = [species_data.species]
+                end
+            end
+        end
+
+        File.open("Analysis/move_levels.txt","wb") { |file|
+            file.write("Move,Level,Evolution,Learners\r\n")
+            move_levels.each do |move_id,levels|
+                level = levels[0]
+                evo = levels[1]
+                learners = levels[2].join(",")
+                file.write("#{move_id},#{level},#{evo},#{learners}\r\n")
+            end
+        }
+        pbMessage(_INTL("Move learn level analysis written to Analysis/move_levels.txt"))
+    }
+})

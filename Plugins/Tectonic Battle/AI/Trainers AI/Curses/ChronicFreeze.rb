@@ -1,4 +1,4 @@
-PokeBattle_Battle::BattleStartApplyCurse.add(:CURSE_ICE_SCULPTURES,
+PokeBattle_Battle::BattleStartApplyCurse.add(:CURSE_NO_MOVING_CYCLICAL,
     proc { |curse_policy, battle, curses_array|
         battle.amuletActivates(
             _INTL("Move, call, step, stop.\nRend, rive, dare, halt.\nClaw, cull, dive, hold.\nFend, flee, fail, fall."),
@@ -9,7 +9,7 @@ PokeBattle_Battle::BattleStartApplyCurse.add(:CURSE_ICE_SCULPTURES,
     }
 )
 
-PokeBattle_Battle::BeginningOfTurnCurseEffect.add(:CURSE_ICE_SCULPTURES,
+PokeBattle_Battle::BeginningOfTurnCurseEffect.add(:CURSE_NO_MOVING_CYCLICAL,
     proc { |curse_policy, battle|
         if battle.turnCount % 4 == 0
             battle.eachSameSideBattler do |b|

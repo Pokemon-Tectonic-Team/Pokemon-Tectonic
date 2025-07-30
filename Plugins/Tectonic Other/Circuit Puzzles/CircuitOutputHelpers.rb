@@ -44,6 +44,37 @@ def switchCurrent(eventIDs,toggleSelf=true)
     slideCameraToPlayer(5)
 end
 
+def resetCurrent(eventIDs)
+    eventIDs = [eventIDs] unless eventIDs.is_a?(Array)  
+    mainEvent = eventIDs[0]
+
+    pbSEPlay("GUI storage put down", 140, 70)
+    pbWait(40)
+
+    slideCameraToEvent(mainEvent,5)
+
+    255.downto(0) do |i|
+        next if i % 3 != 0
+        eventIDs.each do |eventID|
+            get_character(eventID).opacity = i
+        end
+        pbWait(1)
+    end
+
+    pbSEPlay("Anim/PRSFX- Waterfall1", 100, 120)
+    setSwitchesAll(eventIDs,'A',false)
+
+    0.upto(255) do |i|
+        next if i % 3 != 0
+        eventIDs.each do |eventID|
+            get_character(eventID).opacity = i
+        end
+        pbWait(1)
+    end
+    pbWait(20)
+    slideCameraToPlayer(5)
+end
+
 ##########################################################
 ### TUTORIAL
 ##########################################################

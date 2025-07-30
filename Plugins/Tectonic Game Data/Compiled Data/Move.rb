@@ -150,6 +150,7 @@ module GameData
             "Blade"     => _INTL("Blade"),
             "Wind"      => _INTL("Wind"),
             "Kicking"   => _INTL("Kick"),
+            "Light"     => _INTL("Light"),
         }
       end
 

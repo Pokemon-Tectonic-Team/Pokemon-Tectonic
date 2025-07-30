@@ -95,15 +95,15 @@ GameData::BattleEffect.register_effect(:Battler, {
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :EnergyCharge,
-    :real_name => "Charged",
+    :real_name => "Energized",
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} began charging power!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} begins to energize!", battler.pbThis))
     end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :EnergyChargeExpended,
-    :real_name => "Charge Expended",
+    :real_name => "Energy Expended",
     :resets_battlers_eot => true,
 })
 
@@ -439,8 +439,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :HealBlock,
     :real_name => "Healing Blocked",
-    :type => :Integer,
-    :ticks_down => true,
     :baton_passed => true,
     :is_mental => true,
     :apply_proc => proc do |battle, battler, _value|
@@ -448,9 +446,6 @@ GameData::BattleEffect.register_effect(:Battler, {
     end,
     :disable_proc => proc do |battle, battler|
         battle.pbDisplay(_INTL("{1} broke free of the Heal Block!", battler.pbThis))
-    end,
-    :expire_proc => proc do |battle, battler|
-        battle.pbDisplay(_INTL("{1} can use healing again!", battler.pbThis))
     end,
 })
 
@@ -512,7 +507,7 @@ GameData::BattleEffect.register_effect(:Battler, {
             if idxLastParty >= 0 && idxLastParty != battler.pokemonIndex
                 toDisguiseAs = battle.pbParty(battler.index)[idxLastParty]
                 battler.applyEffect(:Illusion, toDisguiseAs)
-                battler.resetAbilities if battler.hasActiveAbility?(:INCOGNITO)
+                battler.addIllusionAbilities if battler.hasActiveAbility?(:INCOGNITO)
             end
         end
 
@@ -605,11 +600,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :Instructed,
-    :real_name => "Instructed",
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :SuddenTurn,
     :real_name => "Instructed",
 })
 

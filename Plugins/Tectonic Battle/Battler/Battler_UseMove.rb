@@ -245,9 +245,15 @@ class PokeBattle_Battler
         # Stance Change
         if isSpecies?(:AEGISLASH) && hasAbility?(:STANCECHANGE)
             if move.damagingMove?
-                pbChangeForm(1, _INTL("{1} changed to Blade Forme!", pbThis))
+                if @form != 1
+                    @battle.pbCommonAnimation("StanceAttack", self)
+                    pbChangeForm(1, _INTL("{1} changed to Blade Forme!", pbThis))
+                end
             elsif move.id == :KINGSSHIELD
-                pbChangeForm(0, _INTL("{1} changed to Shield Forme!", pbThis))
+                if @form != 0
+                    @battle.pbCommonAnimation("StanceProtect", self)
+                    pbChangeForm(0, _INTL("{1} changed to Shield Forme!", pbThis))
+                end
             end
         end
 
@@ -844,7 +850,7 @@ class PokeBattle_Battler
         end
         # Energy Charge expended message
         if user.effectActive?(:EnergyChargeExpended) && hitNum == 0
-            @battle.pbDisplay(_INTL("{1} expended its charge to empower {2}!", user.pbThis, move.name))
+            @battle.pbDisplay(_INTL("{1} used its energy to empower {2}!", user.pbThis, move.name))
         end
         # Bubble Barrier proc message
         targets.each do |b|

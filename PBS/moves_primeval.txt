@@ -165,7 +165,7 @@ TotalPP = 1
 Target = UserSide
 FunctionCode = EmpoweredTailwind
 Flags = Empowered
-Description = The user ups the Speed and attack count of itself and allies, and becomes Flying-type.
+Description = The user sets a powerful tailwind for 6 turns, which also increases move damage by 30%. User becomes Flying-type.
 Animation = TAILWIND
 #-------------------------------
 [PRIMEVALWHIRLWIND]
@@ -256,7 +256,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredPoisonSpikes
 Flags = Empowered
-Description = The user lays 2 hazard layers of poisonous spike traps at the foe's feet, and becomes Poison-type.
+Description = The user lays 2 hazard layers of poisonous spikes at the foe's feet, and becomes Poison-type.
 Animation = TOXICSPIKES
 #-------------------------------
 #		GROUND MOVES
@@ -294,7 +294,7 @@ TotalPP = 1
 Target = User
 FunctionCode = EmpoweredShoreUp
 Flags = Empowered
-Description = The user restores 1/8th of its HP, but begins eroding. At the end of each turn, its defensive stats are lowered and its attacking stats are raised. User becomes Ground-type.
+Description = The user restores 1/8th of its HP, but begins eroding. At the end of each turn, its Defense and Sp. Def are lowered and its Attack and Sp. Atk are raised. User becomes Ground-type.
 Animation = SHOREUP
 #-------------------------------
 [PRIMEVALSPIKES]
@@ -306,7 +306,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredSpikes
 Flags = Empowered
-Description = The user lays 3 hazard layers of spike traps at the foe's feet, and becomes Ground-type.
+Description = The user lays 3 hazard layers of spikes at the foe's feet, and becomes Ground-type.
 Animation = SPIKES
 #-------------------------------
 [WARPINGCORE]
@@ -373,7 +373,7 @@ TotalPP = 1
 Target = User
 FunctionCode = EmpoweredRockPolish
 Flags = Empowered
-Description = The sharply raises its speed, gains an extra two moves per turn, and becomes Rock-type.
+Description = The user raises its Speed by six steps, gains a Rock Gem, and becomes Rock-type.
 Animation = ROCKPOLISH
 #-------------------------------
 [PRIMEVALSANDSTORM]
@@ -542,7 +542,7 @@ TotalPP = 1
 Target = User
 FunctionCode = EmpoweredPolarizedRoom
 Flags = Empowered
-Description = The user creates a Polarized Room for 8 turns, raises both of its Defensive stats, and becomes Steel-type.
+Description = The user creates a Polarized Room for 8 turns, raises its Defense and Sp. Def, and becomes Steel-type.
 Animation = POLARIZEDROOM
 #-------------------------------
 [PRIMEVALSWORDSDANCE]
@@ -595,7 +595,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredFlameSpikes
 Flags = Empowered
-Description = The user lays 2 hazard layers of flaming spike traps at the foe's feet, and becomes Fire-type.
+Description = The user lays 2 hazard layers of flaming spikes at the foe's feet, and becomes Fire-type.
 Animation = FLAMESPIKES
 #-------------------------------
 [PRIMEVALIGNITE]
@@ -948,7 +948,7 @@ TotalPP = 1
 Target = FoeSide
 FunctionCode = EmpoweredFrostSpikes
 Flags = Empowered
-Description = The user lays 2 hazard layers of frozen spike traps at the foe's feet, and becomes Ice-type.
+Description = The user lays 2 hazard layers of frozen spikes at the foe's feet, and becomes Ice-type.
 Animation = FROSTSPIKES
 #-------------------------------
 [PRIMEVALHAIL]
@@ -987,7 +987,7 @@ TotalPP = 1
 Target = AllNearOthers
 FunctionCode = EmpoweredCruelty
 Flags = CanProtect,Empowered
-Description = The user crushes all near foes with evil intent. This deals double damage to targets with a status condition.
+Description = The user crushes all near foes with evil intent. This deals double damage to targets with a non-volatile status condition.
 Animation = CRUSHCLAW
 #-------------------------------
 [EMPOWEREDDRAGONBREATH]
@@ -1074,7 +1074,7 @@ TotalPP = 1
 Target = BothSides
 FunctionCode = EmpoweredMoonglow
 Flags = Empowered
-Description = Summons moonglow for 5 turns, buffs the defending stats of all allies, and user becomes Fairy-type.
+Description = Summons moonglow for 5 turns, raises the Defense and Sp. Def of all allies, and user becomes Fairy-type.
 Animation = MOONGLOW
 #-------------------------------
 [PRIMEVALPUZZLEROOM]
@@ -1086,5 +1086,5 @@ TotalPP = 1
 Target = User
 FunctionCode = EmpoweredPuzzleRoom
 Flags = Empowered
-Description = The user creates a Puzzle Room for 8 turns, raises both of its Attacking stats, and becomes Fairy-type.
+Description = The user creates a Puzzle Room for 8 turns, raises its Attack and Sp. Atk, and becomes Fairy-type.
 Animation = PUZZLEROOM

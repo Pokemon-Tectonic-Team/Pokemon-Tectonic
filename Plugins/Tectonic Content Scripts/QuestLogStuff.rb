@@ -30,12 +30,6 @@ def completeFormerChamps
     end
 end
 
-def completeDragonIsleQuest
-    if pbGetSelfSwitch(1, 'A', 356) && pbGetSelfSwitch(2, 'A', 356)
-        completeQuest(:QUEST_LEGEND_DRAGON_ISLE)
-    end
-end
-
 def completeSpiritAtollQuest
     if pbGetSelfSwitch(1, 'A', 375) && pbGetSelfSwitch(1, 'A', 419) && pbGetSelfSwitch(1, 'A', 420)
         completeQuest(:QUEST_LEGEND_ATOLL)

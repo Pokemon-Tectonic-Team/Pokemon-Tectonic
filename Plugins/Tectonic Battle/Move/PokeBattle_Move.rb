@@ -73,11 +73,12 @@ class PokeBattle_Move
     #=============================================================================
     def pbTarget(user)
         targetData = GameData::Target.get(@target)
-        if damagingMove? && targetData.can_target_one_foe? && user.effectActive?(:FlareWitch)
-          return GameData::Target.get(:AllNearFoes)
-        else
-          return targetData
+        # Effects that make things spread
+        if damagingMove? && targetData.can_target_one_foe?
+          return GameData::Target.get(:AllNearFoes) if user.effectActive?(:FlareWitch)
+          return GameData::Target.get(:AllNearFoes) if @calcType == :PSYCHIC && user.hasActiveAbility?(:MULTITASKER)
         end
+        return targetData
     end
   
     def total_pp
@@ -144,6 +145,7 @@ class PokeBattle_Move
     def bladeMove?;             return @flags.include?("Blade"); end
     def windMove?;              return @flags.include?("Wind"); end
     def kickingMove?;           return @flags.include?("Kicking"); end
+    def lightMove?;             return @flags.include?("Light"); end
     def foretoldMove?;          return @flags.include?("Foretold"); end
     def empoweredMove?;         return @flags.include?("Empowered"); end
 

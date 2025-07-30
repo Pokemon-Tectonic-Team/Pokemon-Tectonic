@@ -149,13 +149,11 @@ class PokeBattle_Move_UseChoiceOf3RandomNonSignatureStatusMoves < PokeBattle_Mov
             next if move_data.function_code == "Invalid"
             next if move_data.is_signature?
             next unless move_data.learnable?
-
             if battle
-                next unless battle.canInvokeMove?(move)
+                next unless battle.canInvokeMove?(move_id)
             else
                 next if move_data.uninvocable?
             end
-
             @discoverableMoves.push(move_data.id)
         end
     end

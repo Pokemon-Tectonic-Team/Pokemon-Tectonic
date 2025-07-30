@@ -1482,6 +1482,12 @@ FrontSprite = -9,19
 ShadowX = 0
 ShadowSize = 3
 #-------------------------------
+[DIPPLIN]
+BackSprite = -6,15
+FrontSprite = 0,23
+ShadowX = 0
+ShadowSize = 2
+#-------------------------------
 [DITTO]
 BackSprite = 0,34
 FrontSprite = 0,30
@@ -2945,6 +2951,12 @@ BackSprite = 0,31
 FrontSprite = -1,34
 ShadowX = 0
 ShadowSize = 2
+#-------------------------------
+[HYDRAPPLE]
+BackSprite = 0,6
+FrontSprite = 2,12
+ShadowX = 0
+ShadowSize = 3
 #-------------------------------
 [HYDREIGON]
 BackSprite = 0,4

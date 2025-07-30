@@ -6,7 +6,7 @@ def takeSelfie
       followerEvent = pbGetFollowerDependentEvent
       followerEvent.moveto($game_player.x - 1,$game_player.y)
 
-      get_player.turn_down
+      pbMapInterpreter.get_player.turn_down
       followerEvent.turn_down
 
       # Set the text

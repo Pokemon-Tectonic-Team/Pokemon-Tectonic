@@ -126,7 +126,7 @@ Color = 248,88,136
 DarkColor = 120,16,120
 IsSpecialType = true
 Weaknesses = BUG,GHOST,DARK
-Resistances = FIGHTING,PSYCHIC
+Resistances = FIGHTING,PSYCHIC,STEEL
 #-------------------------------
 [15]
 Name = Ice
@@ -174,3 +174,10 @@ IsPseudoType = true
 Weaknesses = NORMAL,DRAGON
 Resistances = ELECTRIC,FIGHTING,POISON,ROCK,GHOST,DARK
 Immunities = FIRE,ICE
+#-------------------------------
+[20]
+Name = Flex
+InternalName = FLEX
+Color = 150,150,150
+DarkColor = 80,80,80
+IsPseudoType = true

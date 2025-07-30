@@ -209,6 +209,8 @@ class PokemonEncounters
         ret = :SewerWater
       when :FishingContest
         ret = :FishingContest
+      when :WaterGrass
+        ret = :WaterGrass
       end
     else
       case current_terrain_id

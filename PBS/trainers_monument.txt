@@ -1090,7 +1090,7 @@ Pokemon = GOODRA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
 Pokemon = GARDEVOIR,70
-    Moves = NERVEBLOCK,DRAININGKISS,PSYCHIC,DISCHARGE
+    Moves = NERVEBLOCK,DRAININGKISS,PSYCHIC,ARCLAMP
     AbilityIndex = 1 # Feedback
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1331,7 +1331,7 @@ Pokemon = LINOONE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
 Pokemon = PIDGEOT,70
-    Moves = TEMPEST,DUSTMACHPULSE,SUPERCOOL,THUNDER
+    Moves = TEMPEST,DUSTSTORM,SUPERCOOL,THUNDER
     AbilityIndex = 0 # No Guard
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1596,7 +1596,7 @@ Pokemon = MANERGETIC,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
 Pokemon = WAILORD,70
-    Moves = SKYFALL,MAELSTROM,COLDFRONT,MENDINGSPRING
+    Moves = SKYFALL,BUBBLEBLASTER,COLDFRONT,MENDINGSPRING
     AbilityIndex = 0 # Pressure
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1661,7 +1661,7 @@ Pokemon = POLIWRATH,70
     EV = 10,10,0,10,10,20
 Pokemon = GIGALITH,70
     Moves = METEORBEAM,THUNDERBOLT,POWERGEM,CRIMSONSTORM
-    AbilityIndex = 1 # Unburden
+    AbilityIndex = 1 # Celeritas
     Item = POWERHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -1869,7 +1869,7 @@ Pokemon = CONIFEAR,70
     EV = 20,20,5,0,20,5
 Pokemon = JELLICENT,70
     Gender = male
-    Moves = SHIVER,HEX,MAELSTROM,STRENGTHSAP
+    Moves = SHIVER,HEX,SLAMSHUT,STRENGTHSAP
     AbilityIndex = 1 # Sentry
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2445,7 +2445,7 @@ Pokemon = MEGANIUM,70
     EV = 20,0,20,0,0,10
 Pokemon = ARCANINE,70
     Moves = BLAZINGSPEED,CLOSECOMBAT,ELECTROSLASH,PLAYROUGH
-    AbilityIndex = 1 # Heart of Justice
+    AbilityIndex = 1 # Serene Grace
     Item = FIREGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
@@ -2564,6 +2564,7 @@ Pokemon = BARBARACLE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,5,0,20,5
 Pokemon = FLORGES,70
+    Form = 2 # Orange Flower Form
     Moves = SYNTHESIS,CALMMIND,MOONBLAST,GIGADRAIN
     AbilityIndex = 1 # Sentry
     Item = LEFTOVERS

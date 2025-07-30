@@ -631,6 +631,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat,Sound
 Description = A soothing lullaby is sung in a calming voice that puts the target into a deep slumber.
 #-------------------------------
+[SKULLBASH]
+Name = Skull Bash
+Type = NORMAL
+Category = Physical
+Power = 140
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user charges to raise its Defense by four steps in the first turn, then rams the foe on the second.
+#-------------------------------
 [SLAM]
 Name = Slam
 Type = NORMAL
@@ -1324,6 +1336,19 @@ EffectChance = 10
 Description = The user controls turbulent dust and sand to attack all nearby foes.
 Animation = SCORCHINGSANDS
 #-------------------------------
+[DUSTMACHPULSE]
+Name = Dustmach Pulse
+Type = GROUND
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 5
+Target = AllNearOthers
+FunctionCode = Invalid
+Flags = CanProtect,Pulse
+Description = The user whips up dirt at supersonic speeds, damaging everything around it.
+Animation = SCORCHINGSANDS
+#-------------------------------
 [FISSURE]
 Name = Fissure
 Type = GROUND
@@ -1554,6 +1579,20 @@ TotalPP = 10
 Target = NearAlly
 FunctionCode = Invalid
 Description = The user makes its ally perform the move in the user's first slot.
+#-------------------------------
+[NOISEORDER]
+Name = Noise Order
+Type = BUG
+Category = Special
+Power = 60
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,Sound
+EffectChance = 100
+Description = The user calls out its underlings to annoy the target with buzzing sounds, dizzying it.
+Animation = BUGBUZZ
 #-------------------------------
 [POWDER]
 Name = Powder
@@ -1838,6 +1877,19 @@ Flags = CanProtect
 Description = The user generates an intense magnetic connection between it and the target, striking it without fail.
 Animation = METALCLAW
 #-------------------------------
+[MAGNETWAVE]
+Name = Magnet Wave
+Type = STEEL
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 30
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+EffectChance = 20
+Description = The target is hit by a wave of magnetic energy. It has a 20% chance to lower their Speed.
+#-------------------------------
 [MIRRORSHOT]
 Name = Mirror Shot
 Type = STEEL
@@ -2046,6 +2098,19 @@ Flags = CanProtect,CanMagicCoat
 Description = The user waterlogs the target, then welcomes in rainstorm for eight turns.
 Animation = RAINSTORM
 #-------------------------------
+[MAELSTROM]
+Name = Maelstrom
+Type = WATER
+Category = Special
+Power = 75
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The foe is pulled into a huge whirlpool, trapping and damaging it for three turns.
+Animation = WHIRLPOOL
+#-------------------------------
 [MUDDYWATER]
 Name = Muddy Water
 Type = WATER
@@ -2153,6 +2218,18 @@ FunctionCode = Invalid
 Flags = CanProtect
 Description = Strikes the target with lunar tides, then summons rain for five turns.
 Animation = SURF
+#-------------------------------
+[WHIRLPOOL]
+Name = Whirlpool
+Type = WATER
+Category = Special
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user swirls the target in a whirlpool, trapping and damaging it for three turns.
 #-------------------------------
 [WITHDRAW]
 Name = Withdraw
@@ -2358,6 +2435,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = The user scatters a big cloud of sleep-inducing dust around the target.
 #-------------------------------
+[SNAPTRAP]
+Name = Snap Trap
+Type = GRASS
+Category = Physical
+Power = 75
+Accuracy = 100
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user snares the target, trapping and damaging it for three turns.
+#-------------------------------
 [SOLARBLADE]
 Name = Solar Blade
 Type = GRASS
@@ -2417,6 +2506,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = A sweet scent that lowers the foe's evasiveness. It also lures wild Pokémon if used in grass, etc.
 #-------------------------------
+[VINEBIND]
+Name = Vinebind
+Type = GRASS
+Category = Physical
+Power = 50
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = Binds the foe with vines, trapping and damaging it for three turns.
+Animation = GRASSKNOT
+#-------------------------------
 [VINEMAZE]
 Name = Vine Maze
 Type = GRASS
@@ -2456,6 +2558,19 @@ FunctionCode = Invalid
 Flags = CanProtect
 EffectChance = 10
 Description = Type changes depending on the user's form. It has a 10% chance to numb.
+#-------------------------------
+[DISCHARGE]
+Name = Discharge
+Type = ELECTRIC
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 12
+Target = AllNearOthers
+FunctionCode = Invalid
+Flags = CanProtect
+EffectChance = 30
+Description = A flare of electricity is loosed to strike the area around the user. It has a 30% chance to numb.
 #-------------------------------
 [ELECTRICTERRAIN]
 Name = Electric Terrain
@@ -2740,6 +2855,19 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = The user distracts the target by bending a spoon. It lowers the target's accuracy.
 #-------------------------------
+[LUSTERPURGE]
+Name = Luster Purge
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,Light
+EffectChance = 100
+Description = The user lets loose a damaging burst of light. It also lowers the target's Sp. Def by two steps.
+#-------------------------------
 [MAGICPOWDER]
 Name = Magic Powder
 Type = PSYCHIC
@@ -2807,6 +2935,19 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = Enables the user to hit a Dark type with any type of move. It also enables the user to hit an evasive foe.
+#-------------------------------
+[MISTBALL]
+Name = Mist Ball
+Type = PSYCHIC
+Category = Special
+Power = 70
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+EffectChance = 100
+Description = A mistlike flurry of down envelops and damages the target. It also lowers the target's Sp. Atk by two steps.
 #-------------------------------
 [POWERSWAP]
 Name = Power Swap

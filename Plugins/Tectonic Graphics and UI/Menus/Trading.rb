@@ -211,20 +211,22 @@ class PokemonTrade_Scene
     end
   end
   
-  def pbStartTrade(pokemonIndex,newpoke,nickname,trainerName,trainerClass=:POKEMONTRAINER_Androgynous)
+  def pbStartTrade(pokemonIndex,newpoke,nickname,trainerName,trainerClass=:POKEMONTRAINER_Androgynous,heldItem: nil)
     myPokemon = $Trainer.party[pokemonIndex]
     pbTakeItemsFromPokemon(myPokemon) if myPokemon.hasItem?
     receivingPokemon = createTradedPokemon(newpoke,myPokemon.level,nickname,trainerName,trainerClass)
+    receivingPokemon.setItems(heldItem)
     pbStartTradeGraphics(myPokemon,receivingPokemon,trainerName)
     $Trainer.party[pokemonIndex] = receivingPokemon
     refreshFollow(false)
   end
 
-  def pbStartBoxTrade(myPokemon,storageLocation,newpoke,nickname,trainerName,trainerClass=:POKEMONTRAINER_Androgynous)
+  def pbStartBoxTrade(myPokemon,storageLocation,newpoke,nickname,trainerName,trainerClass=:POKEMONTRAINER_Androgynous,heldItem: nil)
     storageBox = storageLocation[0]
     boxIndex = storageLocation[1]
     pbTakeItemsFromPokemon(myPokemon) if myPokemon.hasItem?
     receivingPokemon = createTradedPokemon(newpoke,myPokemon.level,nickname,trainerName,trainerClass)
+    receivingPokemon.setItems(heldItem)
     pbStartTradeGraphics(myPokemon,receivingPokemon,trainerName)
     if storageBox == -1
       $Trainer.party[boxIndex] = receivingPokemon

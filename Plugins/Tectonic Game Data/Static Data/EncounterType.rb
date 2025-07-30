@@ -299,3 +299,11 @@ GameData::EncounterType.register({
   :trigger_chance => 1,
   :old_slots      => [20, 20, 10, 10, 10, 10, 5, 5, 4, 4, 1, 1]
 })
+
+# Grass in water
+GameData::EncounterType.register({
+  :id             => :WaterGrass,
+  :type           => :water,
+  :trigger_chance => 15,
+  :old_slots      => [60, 30, 5, 4, 1]
+})

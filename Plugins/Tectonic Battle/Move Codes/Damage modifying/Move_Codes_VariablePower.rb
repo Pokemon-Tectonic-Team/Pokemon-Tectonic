@@ -10,6 +10,17 @@ class PokeBattle_Move_ScalesWithUserHP < PokeBattle_Move
         basePower = (26 * hpFraction).floor * 5
         return basePower
     end
+	
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the more HP the user has left. Affected by Overhealing.")
+        detailsList << _INTL("Range 65-195")
+        detailsList << _INTL("<u>50% HP:</u> 65 BP")
+        detailsList << _INTL("<u>75% HP:</u> 95 BP")
+        detailsList << _INTL("<u>100% HP:</u> 130 BP")
+        detailsList << _INTL("<u>125% HP:</u> 160 BP")
+        detailsList << _INTL("<u>150% HP:</u> 195 BP")
+    end
+	
 end
 
 #===============================================================================
@@ -25,7 +36,7 @@ class PokeBattle_Move_ScalesWithTargetHP < PokeBattle_Move
 end
 
 #===============================================================================
-# Power increases the quicker the target is than the user. (Gyro Ball)
+# Power increases the quicker the target is than the user. (Gyro Ball, Sugar Ball)
 #===============================================================================
 class PokeBattle_Move_ScalesSlowerThanTarget < PokeBattle_Move
     def pbBaseDamage(_baseDmg, user, target)
@@ -35,6 +46,16 @@ class PokeBattle_Move_ScalesSlowerThanTarget < PokeBattle_Move
         basePower = 40 if basePower < 40
         return basePower
     end
+	
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the slower the user is compared to the target. Range 40-150")
+        detailsList << _INTL("<u>1/2 of the target's speed:</u> 50 BP")
+        detailsList << _INTL("<u>1/3 of the target's speed:</u> 75 BP")
+        detailsList << _INTL("<u>1/4 of the target's speed:</u> 100 BP")
+        detailsList << _INTL("<u>1/5 of the target's speed:</u> 125 BP")
+        detailsList << _INTL("<u>1/6 of the target's speed:</u> 150 BP")
+    end
+	
 end
 
 #===============================================================================
@@ -77,7 +98,7 @@ class PokeBattle_Move_ScalesWithLostPP < PokeBattle_Move
 end
 
 #===============================================================================
-# Power increases the less HP the user has. (Flail, Reversal)
+# Power increases the less HP the user has. (Flail, Shiver Squirm)
 #===============================================================================
 def flailBasePowerFormula(ratio)
     return [(20 / ((ratio * 5)**0.75)).floor * 5,200].min
@@ -87,6 +108,17 @@ class PokeBattle_Move_ScalesWithLostHP < PokeBattle_Move
     def pbBaseDamage(_baseDmg, user, _target)
         ratio = user.hp.to_f / user.totalhp.to_f
         return flailBasePowerFormula(ratio)
+    end
+	
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the lower the user's HP is. Range 25-200")
+        detailsList << _INTL("<u>100% HP:</u> 25 BP")
+        detailsList << _INTL("<u>50% HP:</u> 50 BP")
+        detailsList << _INTL("<u>30% HP:</u> 70 BP")
+        detailsList << _INTL("<u>20% HP:</u> 100 BP")
+        detailsList << _INTL("<u>15% HP:</u> 120 BP")
+        detailsList << _INTL("<u>10% HP:</u> 165 BP")
+        detailsList << _INTL("<u>7.5% HP:</u> 200 BP")
     end
 end
 

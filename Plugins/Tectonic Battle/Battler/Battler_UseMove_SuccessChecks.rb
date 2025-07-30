@@ -80,7 +80,7 @@ GameData::Move.get(@effects[:ChoiceBand]).name)
         if effectActive?(:GorillaTactics)
             choiceLockingAbility = hasActiveAbility?(GameData::Ability.getByFlag("ChoiceLocking"))
             if choiceLockingAbility
-                if move.id != @effects[:GorillaTactics]
+                if move.id != @effects[:GorillaTactics] && move.id != :STRUGGLE
                     msg = _INTL("{1} allows the use of only {2}!", getAbilityName(choiceLockingAbility),
 GameData::Move.get(@effects[:GorillaTactics]).name)
                     if showMessages

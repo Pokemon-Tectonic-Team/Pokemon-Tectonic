@@ -76,3 +76,15 @@ ItemIconEvents::ModifyItemIconBitmap.add(:EXPEZDISPENSER,
       pbDrawTextPositions(bitmap,[textPos])
   }
 )
+
+ItemIconEvents::ModifyItemIconBitmap.add(:OMINOUSEGG,
+  proc { |item, bitmap|
+      base = Color.new(235, 235, 235)
+      shadow = Color.new(50, 50, 50)
+      currentUses = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
+      if currentUses
+        textPos = [currentUses.to_s, 38, 14, 1, base, shadow, true]
+        pbDrawTextPositions(bitmap,[textPos])
+      end
+  }
+)

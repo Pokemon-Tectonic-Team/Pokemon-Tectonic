@@ -391,7 +391,7 @@ class PokeBattle_Battle
         weather_data = GameData::BattleWeather.try_get(@field.weather)
         pbCommonAnimation(weather_data.animation) if weather_data
         case @field.weather
-        when :Sunshine         then pbDisplay(_INTL("The sunlight is strong."))
+        when :Sunshine    then pbDisplay(_INTL("The sunlight is strong."))
         when :Rainstorm   then pbDisplay(_INTL("It is storming."))
         when :Sandstorm   then pbDisplay(_INTL("A sandstorm is raging."))
         when :Hail        then pbDisplay(_INTL("Hail is falling."))
@@ -400,6 +400,8 @@ class PokeBattle_Battle
         when :StrongWinds then pbDisplay(_INTL("The wind is strong."))
         when :RingEclipse then pbDisplay(_INTL("A planetary ring dominates the skyline."))
         when :Bloodmoon   then pbDisplay(_INTL("The moon is taken by a nightmare."))
+        when :StarStorm   then pbDisplay(_INTL("Stardust churns all around."))
+        when :IceAge      then pbDisplay(_INTL("An ice age is here."))
         end
         # Change avatars for auto-testing
         if @autoTesting

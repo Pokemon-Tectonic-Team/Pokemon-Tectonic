@@ -47,14 +47,12 @@ BattleHandlers::SpecialAttackCalcUserAbility.add(:SOLARCELL,
   }
 )
 
-BattleHandlers::SpecialAttackCalcUserAbility.add(:RADIATE,
+BattleHandlers::SpecialAttackCalcUserAbility.add(:ARCANE,
   proc { |ability, _user, _battle, spAtkMult|
       spAtkMult *= 1.3
       next spAtkMult
   }
 )
-
-BattleHandlers::SpecialAttackCalcUserAbility.copy(:RADIATE, :ARCANE)
 
 BattleHandlers::SpecialAttackCalcUserAbility.add(:OVERTHINKING,
   proc { |ability, _user, _battle, spAtkMult|

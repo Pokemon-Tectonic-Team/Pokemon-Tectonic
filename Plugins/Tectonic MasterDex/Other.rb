@@ -191,6 +191,8 @@ def getNameForEncounterType(encounterType)
 		return _INTL("Deep Water")
 	when :FishingContest
 		return _INTL("Surfing")
+	when :WaterGrass
+		return _INTL("Water Grass")
 	end
 	return _INTL("Unknown")
 end

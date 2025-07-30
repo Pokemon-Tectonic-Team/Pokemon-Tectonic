@@ -20,12 +20,20 @@ end
 class PokeBattle_Move_EmpoweredTailwind < PokeBattle_Move_StartUserSideDoubleSpeed4
     include EmpoweredMove
 
+    def initialize(battle, move)
+        super
+        @tailwindDuration = 6
+    end
+
     def pbEffectGeneral(user)
-        user.pbOwnSide.applyEffect(:Tailwind, 4)
-        @battle.eachSameSideBattler(user) do |b|
-            b.applyEffect(:ExtraTurns, 1)
-        end
+        user.pbOwnSide.applyEffect(:EmpoweredTailwind, @tailwindDuration)
         transformType(user, :FLYING)
+    end
+
+    def getEffectScore(user, _target)
+        score = getTailwindEffectScore(user, @tailwindDuration, self)
+        score *= 1.5
+        return score
     end
 end
 
@@ -135,11 +143,7 @@ class PokeBattle_Move_EmpoweredGreyMist < PokeBattle_Move_StartGreyMist5
 
     def pbEffectGeneral(user)
         super
-
-        itemName = GameData::Item.get(:BLACKSLUDGE).name
-        @battle.pbDisplay(_INTL("{1} crafts itself a {2}!", user.pbThis, itemName))
-        user.giveItem(:BLACKSLUDGE)
-
+        craftItem(user,:BLACKSLUDGE)
         transformType(user, :POISON)
     end
 end

@@ -1,9 +1,5 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
 #-------------------------------
-[ADAPTED]
-Name = Adapted
-Description = Powers up moves of the same type by 33%.
-#-------------------------------
 [AIRLOCK]
 Name = Air Lock
 Description = Suppresses the effects of weather.
@@ -217,7 +213,7 @@ Description = Boosts Sp. Atk after knocking out any Pokémon.
 #-------------------------------
 [GULPMISSILE]
 Name = Gulp Missile
-Description = Attacks with prey caught when using Surf, Dive, or Depth Charge.
+Description = Attacks with prey caught when using Immerse, Whelm, Surf, Dive, or Depth Charge.
 Flags = Immutable
 #-------------------------------
 [HEAVYMETAL]
@@ -414,10 +410,6 @@ Description = The Pokémon receives 25% less move damage from super-effective at
 Name = Protean
 Description = It changes type to that of the move it's about to use.
 #-------------------------------
-[PUREFORCE]
-Name = Pure Force
-Description = Raises the Pokémon's Attack by 50%, including Style Values and other bonuses.
-#-------------------------------
 [RAINDISH]
 Name = Rain Dish
 Description = Heals 1/8th of its max HP each turn if in rainstorm.
@@ -451,11 +443,6 @@ Description = Physical moves against it inflict 1/8th max HP damage to the foe.
 [SANDRUSH]
 Name = Sand Rush
 Description = Doubles the Pokémon's Speed in a sandstorm.
-Flags = SandstormSynergy
-#-------------------------------
-[SANDSHROUD]
-Name = Sand Shroud
-Description = Takes 30% less damage in a sandstorm.
 Flags = SandstormSynergy
 #-------------------------------
 [SANDSTREAM]
@@ -551,7 +538,7 @@ Flags = Immutable
 #-------------------------------
 [STATIC]
 Name = Static
-Description = Physical attacks against the Pokémon has a 30% chance to cause numbing.
+Description = Physical attacks against the Pokémon have a 30% chance to cause numbing.
 #-------------------------------
 [STEELWORKER]
 Name = Steelworker
@@ -626,6 +613,10 @@ Description = Ignores modified Defense and Sp. Def while attacking, and ignores 
 Name = Unburden
 Description = Doubles the Pokémon's Speed if its held item is consumed or lost.
 #-------------------------------
+[UNNERVE]
+Name = Unnerve
+Description = Makes the foe nervous and unable to eat Berries or Leftovers.
+#-------------------------------
 [UNSEENFIST]
 Name = Unseen Fist
 Description = Physical moves negate all protection effects.
@@ -657,11 +648,6 @@ Description = Weakens incoming Fire-type moves, and doubles Water-type damage.
 [WEAKARMOR]
 Name = Weak Armor
 Description = Physical attacks against the Pokémon raise its Speed by two steps but lower its Defense.
-#-------------------------------
-[WHITESMOKE]
-Name = White Smoke
-Description = Prevents stat steps from being lowered (except when self-inflicted).
-Flags = OtherStatDropImmunity
 #-------------------------------
 [WIMPOUT]
 Name = Wimp Out

@@ -240,30 +240,6 @@ class PokeBattle_Move_DisableTargetStatusMoves2 < PokeBattle_Move_DisableTargetS
 end
 
 #===============================================================================
-# For 5 rounds, disables the target's healing moves. (Heal Block)
-#===============================================================================
-class PokeBattle_Move_DisableTargetHealingMoves5 < PokeBattle_Move
-    def pbFailsAgainstTarget?(user, target, show_message)
-        if target.effectActive?(:HealBlock)
-            @battle.pbDisplay(_INTL("But it failed, since the target's healing is already blocked!")) if show_message
-            return true
-        end
-        return true if pbMoveFailedAromaVeil?(user, target, show_message)
-        return false
-    end
-
-    def pbEffectAgainstTarget(_user, target)
-        target.applyEffect(:HealBlock, 5)
-    end
-
-    def getTargetAffectingEffectScore(_user, target)
-        return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
-        return 0 unless target.hasHealingMove?
-        return 40
-    end
-end
-
-#===============================================================================
 # For 4 rounds, the target must use the same move each round. (Encore)
 #===============================================================================
 class PokeBattle_Move_DisableTargetUsingDifferentMove4 < PokeBattle_Move

@@ -11,6 +11,14 @@ class PokeBattle_Move
                 ret = BattleHandlers.triggerMoveBaseTypeModifierAbility(ability, user, self, ret)
             end
         end
+        if ret == :FLEX
+            userTypes = user.pbTypes(true)
+            if userTypes.empty?
+                ret = userTypes[0]
+            else
+                ret = :NORMAL
+            end
+        end
         return ret
     end
 

@@ -1,5 +1,13 @@
 TRAINERS_PERFECTED_GLOBAL_VAR = 79
 
+OMINOUS_EGG_REWARDS = {
+    30 => :LIFEORB,
+    60 => :PRISMSTONE,
+    90 => :MASTERBALL,
+    120 => :RELICSTATUE,
+    150 => :SHINYCHARM,
+}
+
 GlobalStateHandlers::GlobalVariableChanged.add(TRAINERS_PERFECTED_GLOBAL_VAR,
     proc { |variableID, value|
         if $PokemonBag && pbHasItem?(:OMINOUSEGG)
@@ -14,35 +22,19 @@ def receiveOminousEgg
 end
 
 def checkForOminousEggRewards
-    value = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
+    perfectedCount = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
 
     $PokemonGlobal.ominous_egg_stage = 0 if $PokemonGlobal.ominous_egg_stage.nil?
 
     rewards = []
 
-    if value >= 30 && $PokemonGlobal.ominous_egg_stage == 0
-        rewards.push(:LIFEORB)
-        $PokemonGlobal.ominous_egg_stage += 1
-    end
-
-    if value >= 60 && $PokemonGlobal.ominous_egg_stage == 1
-        rewards.push(:PRISMSTONE)
-        $PokemonGlobal.ominous_egg_stage += 1
-    end
-
-    if value >= 90 && $PokemonGlobal.ominous_egg_stage == 2
-        rewards.push(:MASTERBALL)
-        $PokemonGlobal.ominous_egg_stage += 1
-    end
-
-    if value >= 120 && $PokemonGlobal.ominous_egg_stage == 3
-        rewards.push(:RELICSTATUE)
-        $PokemonGlobal.ominous_egg_stage += 1
-    end
-
-    if value >= 150 && $PokemonGlobal.ominous_egg_stage == 4
-        rewards.push(:SHINYCHARM)
-        $PokemonGlobal.ominous_egg_stage += 1
+    OMINOUS_EGG_REWARDS.each_with_index do |kvp, index|
+        key = kvp[0]
+        value = kvp[1]
+        if perfectedCount >= key && $PokemonGlobal.ominous_egg_stage == index
+            rewards.push(value)
+            $PokemonGlobal.ominous_egg_stage += 1
+        end
     end
 
     unless rewards.empty?
@@ -71,3 +63,32 @@ def playOminousEggCutscene
         pbMessage(_INTL("\\i[OMINOUSEGG]...nothing can hide from you..."))
     end
 end
+
+def checkOminousEggProgress
+    pbWait(20)
+    pbMessage(_INTL("\\i[OMINOUSEGG]...you hear whispers from the Ominous Egg."))
+    pbWait(20)
+
+    anyShown = false
+
+    perfectedCount = getGlobalVariable(TRAINERS_PERFECTED_GLOBAL_VAR)
+    OMINOUS_EGG_REWARDS.each_with_index do |kvp, index|
+        key = kvp[0]
+        if perfectedCount < key
+            pbMessage(_INTL("\\i[OMINOUSEGG]...the next stage requires..."))
+            pbMessage(_INTL("\\i[OMINOUSEGG]...{1} feedings...",key - perfectedCount))
+            anyShown = true
+            break
+        end
+    end
+
+    unless anyShown
+        pbMessage(_INTL("\\i[OMINOUSEGG]...metamorphosis complete..."))
+    end
+    pbWait(20)
+end
+
+ItemHandlers::UseInField.add(:OMINOUSEGG,proc { |item|
+    checkOminousEggProgress
+    next true
+})

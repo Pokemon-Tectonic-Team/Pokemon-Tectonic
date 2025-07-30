@@ -12,7 +12,7 @@ Events.onStepTakenFieldMovement += proc { |_sender, e|
 				tag = $MapFactory.getTerrainTag(event.map.map_id, x, y, true)
 				if tag.shows_grass_rustle
 					$scene.spriteset.addUserAnimation(Settings::GRASS_ANIMATION_ID, x, y, true, 1)
-				elsif tag == :Puddle || tag == :ActiveWater
+				elsif tag == :Puddle || tag == :ActiveWater || tag == :WaterGrass
 					$scene.spriteset.addUserAnimation(8, x, y, true, 1)
 				elsif tag == :FishingContest
 					$scene.spriteset.addUserAnimation(8, x, y, true, 1)

@@ -197,6 +197,14 @@ module QuestModule
     :QuestDescription => _INTL("You've been offered a gauntlet of scientists to try to get past. How difficult could these eggheads be anyways?"),
   }
 
+  QUEST_SHOW_LEGEND = {
+    :Name => _INTL("The Bucket List"),
+    :QuestGiver => _INTL("Old Lady"),
+    :Stage1 => _INTL("Show her a legendary."),
+    :Location1 => _INTL("East-Peaks Gatehouse"),
+    :QuestDescription => _INTL("An elderly lady notices your strength and status, and figures you may have a legendary Pokémon. She only wishes to see it and admire it. How about humoring her request? I'm sure there is something powerful in this region that you could find."),
+  }
+
   # Gym Leader Avatars
 
   QUEST_GYM_AVATARS_1 = {
@@ -332,7 +340,9 @@ module QuestModule
     :Location1 => _INTL("Grouz"),
     :Location2 => _INTL("Hollowed Layer"),
     :Location3 => _INTL("Grouz"),
-    :QuestDescription => _INTL("Dr. Hekata gave you a call mysteriously, asking to meet her in her home of Grouz. What could she want of you?"),
+    :QuestDescription1 => _INTL("Dr. Hekata gave you a call mysteriously, asking to meet her in her home of Grouz. What could she want of you?"),
+    :QuestDescription2 => _INTL("Dr. Hekata heard of your dealings in the Chamber of Regigigas, and wants you to return there to find a magical artifact."),
+    :QuestDescription3 => _INTL("You've found the Primal Clay, the artifact that Dr. Hekata was interested in. Return to her house to show it to her."),
   }
 
   QUEST_LEGEND_REGIROCK = {
@@ -532,7 +542,7 @@ module QuestModule
   }
 
   QUEST_LEGEND_DRAGON_ISLE = {
-    :Name => _INTL("Isle of Dragons"),
+    :Name => _INTL("To Train Your Dragons"),
     :QuestGiver => _INTL("Dragon Hatcher"),
     :Stage1 => _INTL("Bring one of every egg to him."),
     :Stage2 => _INTL("Explore the isle."),

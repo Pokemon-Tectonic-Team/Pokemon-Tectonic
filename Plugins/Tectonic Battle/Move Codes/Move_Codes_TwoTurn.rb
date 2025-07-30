@@ -155,7 +155,7 @@ end
 # Two turn attack. Ups user's Defense by 4 steps first turn, attacks second turn.
 # (Skull Bash)
 #===============================================================================
-class PokeBattle_Move_TwoTurnAttackChargeRaiseUserDef1 < PokeBattle_TwoTurnMove
+class PokeBattle_Move_TwoTurnAttackChargeRaiseUserDef4 < PokeBattle_TwoTurnMove
     def pbChargingTurnMessage(user, _targets)
         @battle.pbDisplay(_INTL("{1} tucked in its head!", user.pbThis))
     end
@@ -207,6 +207,38 @@ class PokeBattle_Move_TwoTurnAttackInvulnerableInSky < PokeBattle_Move_TwoTurnAt
 
     def pbChargingTurnMessage(user, _targets)
         @battle.pbDisplay(_INTL("{1} flew up high!", user.pbThis))
+    end
+end
+
+#===============================================================================
+# Two turn attack. Skips first turn, attacks second turn. 
+# Power increases the quicker the user is than the target (Jet Speed)
+#===============================================================================
+class PokeBattle_Move_TwoTurnAttackInvulnerableScalesFaster < PokeBattle_Move_TwoTurnAttackInvulnerable
+    def pbBaseDamage(_baseDmg, user, target)
+        ratio = user.pbSpeed.to_f / target.pbSpeed.to_f
+        basePower = 30 + (10 * ratio).floor * 5
+        basePower = 200 if basePower > 200
+        basePower = 60 if basePower < 60
+        return basePower
+    end
+
+    def pbChargingTurnMessage(user, _targets)
+        @battle.pbDisplay(_INTL("{1} flew up high!", user.pbThis))
+    end
+end
+
+#===============================================================================
+# Two turn attack. Skips first turn, inflicts Jinx and Frostbite second turn. (Misty Mirage)
+#===============================================================================
+class PokeBattle_Move_TwoTurnAttackInvulnerableJinxFrostbite < PokeBattle_Move_TwoTurnAttackInvulnerable
+    def pbAttackingTurnEffect(user, target)
+        target.applyFrostbite(user) if target.canFrostbite?(user, false, self)
+        target.applyEffect(:Jinxed, DEFAULT_JINX_DURATION)
+    end
+
+    def pbChargingTurnMessage(user, _targets)
+        @battle.pbDisplay(_INTL("{1} disappears into mist!", user.pbThis))
     end
 end
 

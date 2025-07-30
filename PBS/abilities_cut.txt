@@ -48,13 +48,13 @@ Description = Boosts Sp. Atk and Speed by 25% in rain.
 Name = Breaking Wave
 Description = Slips past hazards. On the first turn, its attacks are always critical.
 #-------------------------------
-[ARCANE]
-Name = Arcane
-Description = Increases Sp. Atk by 30%.
-#-------------------------------
 [ARENATRAP]
 Name = Arena Trap
 Description = Prevents the foe from fleeing unless it is airborne.
+#-------------------------------
+[AROMATIC]
+Name = Aromatic
+Description = Uses Aromatherapy if an attack lowers its HP to half or below.
 #-------------------------------
 [AROMAVEIL]
 Name = Aroma Veil
@@ -89,6 +89,10 @@ Flags = CritImmunity
 [BEASTBOOST]
 Name = Beast Boost
 Description = Boosts its best stat each time it deals a KO.
+#-------------------------------
+[BELLIGERENT]
+Name = Belligerent
+Description = Boosts Attack and Sp. Atk by three steps when a stat is lowered by a foe.
 #-------------------------------
 [BIGPECKS]
 Name = Big Pecks
@@ -1093,6 +1097,11 @@ Description = Transforms into Midnight Form at the Full Moon. Ability becomes No
 [WHIRLER]
 Name = Whirler
 Description = Upon entry, traps each opponent in a whirlpool for two turns.
+#-------------------------------
+[WHITESMOKE]
+Name = White Smoke
+Description = Prevents stat steps from being lowered (except when self-inflicted).
+Flags = OtherStatDropImmunity
 #-------------------------------
 [WILLBREAK]
 Name = Bizarre

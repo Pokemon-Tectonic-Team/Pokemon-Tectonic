@@ -286,7 +286,7 @@ BattleHandlers::DamageCalcTargetAbility.add(:LIMINAL,
 BattleHandlers::DamageCalcTargetAbility.add(:MISTFORM,
   proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
     if target.effectActive?(:SwitchedIn)
-      mults[:final_damage_multiplier] *= 0.5
+      mults[:final_damage_multiplier] *= 0.33
       target.aiLearnsAbility(ability) unless aiCheck
     end
   }

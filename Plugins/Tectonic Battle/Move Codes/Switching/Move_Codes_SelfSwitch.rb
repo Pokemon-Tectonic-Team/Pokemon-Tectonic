@@ -128,6 +128,18 @@ class PokeBattle_Move_SwitchOutUserDamagingMoveScalesWithLostHP < PokeBattle_Mov
         ratio = user.hp.to_f / user.totalhp.to_f
         return flailBasePowerFormula(ratio)
     end
+	
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the lower the user's HP is. Range 25-200")
+        detailsList << _INTL("<u>100% HP:</u> 25 BP")
+        detailsList << _INTL("<u>50% HP:</u> 50 BP")
+        detailsList << _INTL("<u>30% HP:</u> 70 BP")
+        detailsList << _INTL("<u>20% HP:</u> 100 BP")
+        detailsList << _INTL("<u>15% HP:</u> 120 BP")
+        detailsList << _INTL("<u>10% HP:</u> 165 BP")
+        detailsList << _INTL("<u>7.5% HP:</u> 200 BP")
+    end
+	
 end
 
 #===============================================================================

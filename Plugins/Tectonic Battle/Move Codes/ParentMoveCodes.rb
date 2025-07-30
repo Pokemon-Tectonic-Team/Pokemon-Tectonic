@@ -582,6 +582,8 @@ class PokeBattle_TwoTurnMove < PokeBattle_Move
                     TwoTurnAttackInvulnerableUnderground
                     TwoTurnAttackInvulnerableUnderwater
                     TwoTurnAttackInvulnerableInSkyNumbTarget
+                    TwoTurnAttackInvulnerableScalesFaster
+                    TwoTurnAttackInvulnerableJinxFrostbite
                     TwoTurnAttackInvulnerableRemoveProtections].include?(@function)
                 @battle.pbDisplay(_INTL("{1} became fully charged due to its Power Herb!", user.pbThis))
                 user.consumeItem(:POWERHERB)
@@ -1536,6 +1538,14 @@ module EmpoweredMove
             summonMessage ||= _INTL("{1} summons another Avatar!", user.pbThis)
             @battle.pbDisplay(summonMessage)
             @battle.summonAvatarBattler(species, user.level, 0, user.index % 2)
+        end
+    end
+
+    def craftItem(user,itemID)
+        itemName = GameData::Item.get(itemID).name
+        if user.canAddItem?(itemID)
+          @battle.pbDisplay(_INTL("{1} crafts itself a {2}!", user.pbThis, itemName))
+          user.giveItem(itemID)
         end
     end
 end

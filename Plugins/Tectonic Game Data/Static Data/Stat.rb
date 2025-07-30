@@ -125,7 +125,7 @@ module GameData
   GameData::Stat.register({
     :id         => :EVASION,
     :id_number  => 7,
-    :name       => _INTL("Evasiveness"),
+    :name       => _INTL("Evasion"),
     :name_brief => _INTL("Eva"),
     :type       => :battle
   })

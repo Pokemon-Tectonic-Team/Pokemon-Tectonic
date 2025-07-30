@@ -378,6 +378,11 @@ class PokeBattle_Move
         if user.pbOwnSide.effectActive?(:TurbulentSky)
             multipliers[:final_damage_multiplier] *= 1.3
         end
+
+        # Empowered Tailwind
+        if user.pbOwnSide.effectActive?(:EmpoweredTailwind)
+            multipliers[:final_damage_multiplier] *= 1.3
+        end
     end
 
     def pbCalcTribeBasedDamageMultipliers(user,target,type,multipliers,checkingForAI=false)
@@ -514,11 +519,8 @@ class PokeBattle_Move
 
         # Multi-targeting attacks
         if numTargets > 1
-            if user.shouldAbilityApply?(:RESONANT,aiCheck)
-                multipliers[:final_damage_multiplier] *= 1.25
-            else
-                multipliers[:final_damage_multiplier] *= 0.75
-            end
+            multipliers[:final_damage_multiplier] *= 0.75
+            multipliers[:final_damage_multiplier] *= 1.5 if user.shouldAbilityApply?(:RESONANT,aiCheck)
         end
 
         # Battler properites

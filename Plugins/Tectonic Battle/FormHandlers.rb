@@ -326,14 +326,6 @@ MultipleForms.register(:SCATTERBUG,{
 
 MultipleForms.copy(:SCATTERBUG,:SPEWPA,:VIVILLON)
 
-MultipleForms.register(:FLABEBE,{
-  "getFormOnCreation" => proc { |pkmn|
-    next rand(5)
-  }
-})
-
-MultipleForms.copy(:FLABEBE,:FLOETTE,:FLORGES)
-
 MultipleForms.register(:ESPURR,{
   "getFormOnCreation" => proc { |pkmn|
     next pkmn.gender

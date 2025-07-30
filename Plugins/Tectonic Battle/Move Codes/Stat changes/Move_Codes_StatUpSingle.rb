@@ -207,12 +207,17 @@ end
 # Empowered Bullet Train
 
 # Empowered Rock Polish
-class PokeBattle_Move_EmpoweredRockPolish < PokeBattle_Move_RaiseUserSpd4
+class PokeBattle_Move_EmpoweredRockPolish < PokeBattle_StatUpMove
     include EmpoweredMove
+
+    def initialize(battle, move)
+        super
+        @statUp = [:SPEED, 6]
+    end
 
     def pbEffectGeneral(user)
         super
-        user.applyEffect(:ExtraTurns, 2)
+        craftItem(user,:ROCKGEM)
         transformType(user, :ROCK)
     end
 end

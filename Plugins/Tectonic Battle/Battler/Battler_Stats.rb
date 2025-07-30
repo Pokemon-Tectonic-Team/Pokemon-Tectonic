@@ -240,8 +240,8 @@ class PokeBattle_Battler
         
         defenseMult *= 1.3 if hasTribeBonus?(:SCRAPPER)
 
-        # Hail
-        if @battle.icy? && pbHasType?(:ICE)
+        # Hail and Ice Age
+        if @battle.icy? && (pbHasType?(:ICE) || (pbHasType?(:GHOST) && @battle.pbWeather == :IceAge))
             hailAddition = 0.5
             hailAddition *= 2 if @battle.pbCheckGlobalAbility(:BITTERCOLD)
             hailAddition *= 2 if @battle.curseActive?(:CURSE_BOOSTED_HAIL)
@@ -273,8 +273,8 @@ class PokeBattle_Battler
         
         spDefMult *= 1.3 if hasTribeBonus?(:RADIANT)
 
-        # Sandstorm
-        if @battle.sandy? && pbHasType?(:ROCK)
+        # Sandstorm and Star Storm
+        if @battle.sandy? && (pbHasType?(:ROCK) || (pbHasType?(:GROUND) && @battle.pbWeather == :StarStorm))
             sandAddition = 0.5
             sandAddition *= 2 if @battle.pbCheckGlobalAbility(:IRONSTORM)
             sandAddition *= 2 if @battle.curseActive?(:CURSE_BOOSTED_SAND)
@@ -302,7 +302,7 @@ class PokeBattle_Battler
         
         # Other effects
         unless afterSwitching
-            speedMult *= 2.0 if pbOwnSide.effectActive?(:Tailwind)
+            speedMult *= 2.0 if pbOwnSide.effectActive?(:Tailwind) || pbOwnSide.effectActive?(:EmpoweredTailwind)
             speedMult /= 2.0 if pbOwnSide.effectActive?(:Swamp)
             speedMult *= 2.0 if effectActive?(:OnDragonRide)
         end

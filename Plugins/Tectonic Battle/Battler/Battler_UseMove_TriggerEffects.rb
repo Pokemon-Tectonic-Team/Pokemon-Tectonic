@@ -75,8 +75,8 @@ class PokeBattle_Battler
                 end
             end
             # Destiny Bond (recording that it should apply)
-            if target.effectActive?(:DestinyBond) && target.fainted? && !user.effectActive?(:DestinyBondTarget)
-                applyEffect(:DestinyBondTarget, target.index)
+            if target.effectActive?(:DestinyBond, true) && target.fainted? && !user.effectActive?(:DestinyBondTarget)
+                user.applyEffect(:DestinyBondTarget, target.index)
             end
             # Stunning Curl
             if target.effectActive?(:StunningCurl) && !user.numbed?
@@ -100,7 +100,7 @@ user.pbThis(true)))
             if target.effectActive?(:VenomGuard) && !user.poisoned?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Venom Guard")
                 if user.canPoison?(target, false)
-                    @battle.pbDisplay(_INTL("{1} was stuck by {2}'s venom!", user.pbThis, user.pbThis(true)))
+                    @battle.pbDisplay(_INTL("{1} was stuck by {2}'s venom!", user.pbThis, target.pbThis(true)))
                     user.applyPoison(target)
                 end
             end
@@ -108,7 +108,7 @@ user.pbThis(true)))
             if target.effectActive?(:Floodgate) && !user.waterlogged?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Floodgate")
                 if user.canWaterlog?(target, false)
-                    @battle.pbDisplay(_INTL("{1} was flooded by {2}!", user.pbThis, user.pbThis(true)))
+                    @battle.pbDisplay(_INTL("{1} was flooded by {2}!", user.pbThis, target.pbThis(true)))
                     user.applyWaterlog(target)
                 end
             end

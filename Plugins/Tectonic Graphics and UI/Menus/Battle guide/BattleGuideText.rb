@@ -125,7 +125,7 @@ def battleGuideHeldItemsHash
         _INTL("What are Held Items?") => _INTL("Held items are items which you can give your Pokémon to benefit them during battle. They can increase their damage, heal them, or other things."),
         _INTL("Equipping an item") => _INTL("You can give a Pokémon an item from your bag, or through the summary screen. Not all items do an effect when held, so read carefully."),
         _INTL("Berries") => _INTL("Berries are a common held item. During battles, Pokémon will eat the berry to get a benefit. Get berries by picking from Berry Trees."),
-        _INTL("Sitrus and Amwi Berry") => _INTL("Sitrus Berry and Cado Berry are common berries which heal your Pokémon when at low health. If in doubt about what item to give a Pokémon, give them one of these."),
+        _INTL("Sitrus and Cado Berry") => _INTL("Sitrus Berry and Cado Berry are common berries which heal your Pokémon when at low health. If in doubt about what item to give a Pokémon, give them one of these."),
         _INTL("Rematerializer") => _INTL("In Pokémon Tectonic, the Rematerializer regenerates held items which are consumed in battle. You'll never run out of berries!"),
         _INTL("Wild Held Items") => _INTL("Wild Pokémon can be found holding items. These items sometimes have held effects, but often don't."),
         _INTL("Getting More") => _INTL("You will find more held items on the ground when traveling, or as gifts from people, or as the reward for defeating Avatars, or as purchasable items in shops."),

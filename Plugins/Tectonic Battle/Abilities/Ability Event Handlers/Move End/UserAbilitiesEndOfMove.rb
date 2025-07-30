@@ -572,30 +572,13 @@ BattleHandlers::UserAbilityEndOfMove.add(:HYBRIDFIGHTER,
       elsif previousMoveData.punchingMove? && currentMoveData.bitingMove?
         user.showMyAbilitySplash(ability)
         if user.effectActive?(:EnergyCharge)
-          battle.pbDisplay(_INTL("But {1} is already charged...", user.pbThis(true)))
+          battle.pbDisplay(_INTL("But {1} is already energized...", user.pbThis(true)))
         else
           battle.pbAnimation(:CHARGE, user, nil)
           user.applyEffect(:EnergyCharge)
         end
         user.hideMyAbilitySplash
       end
-  }
-)
-
-BattleHandlers::UserAbilityEndOfMove.add(:SUDDENTURN,
-  proc { |ability, user, targets, move, battle, switchedBattlers|
-    next if battle.futureSight
-    next unless move.damagingMove?
-    next unless user.firstTurn?
-    next if user.effectActive?(:SuddenTurn)
-    hitAnything = false
-    targets.each do |b|
-      next if b.damageState.unaffected
-      hitAnything = true
-      break
-    end
-    next unless hitAnything
-    battle.forceUseMove(user, :RAPIDSPIN, moveUsageEffect: :SuddenTurn, ability: ability)
   }
 )
 
@@ -609,5 +592,16 @@ BattleHandlers::UserAbilityEndOfMove.add(:OFFENSIVE,
       next if b.damageState.calcDamage == 0 || b.damageState.substitute
       b.pbFlinch
     end
+  }
+)
+
+BattleHandlers::UserAbilityEndOfMove.add(:BLINDING,
+  proc { |ability, user, _targets, move, battle, _switchedBattlers|
+      next unless move.lightMove?
+      battle.pbShowAbilitySplash(user, ability)
+      user.eachOpposing do |b|
+        b.tryLowerStat(:SPECIAL_DEFENSE, user, increment: 1, showFailMsg: true)
+      end
+      battle.pbHideAbilitySplash(user)
   }
 )

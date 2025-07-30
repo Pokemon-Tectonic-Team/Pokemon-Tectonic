@@ -178,6 +178,15 @@ FieldUse = OnPokemon
 Flags = EvolutionItem
 Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally tart.
 #-------------------------------
+[SYRUPYAPPLE]
+Name = Syrupy Apple
+NamePlural = Syrupy Apples
+Pocket = 1
+Price = 2000
+FieldUse = OnPokemon
+Flags = EvolutionItem
+Description = A peculiar apple that can make a certain species of Pokémon evolve. It's exceptionally syrupy.
+#-------------------------------
 [HELIXFOSSIL]
 Name = Helix Fossil
 NamePlural = Helix Fossils
@@ -951,6 +960,34 @@ Pocket = 5
 Price = 4000
 Description = Raises Attack by two steps when the Pokémon uses a blade move the first time each battle.
 #-------------------------------
+[PINWHEEL]
+Name = Pinwheel
+NamePlural = Pinwheels
+Pocket = 5
+Price = 4000
+Description = Raises Speed by two steps when the Pokémon uses a wind move the first time each battle.
+#-------------------------------
+[INSOLES]
+Name = Insoles
+NamePlural = Insoles
+Pocket = 5
+Price = 4000
+Description = Raises Speed by two steps when the Pokémon uses a kicking move the first time each battle.
+#-------------------------------
+[PROTEINSHAKE]
+Name = Protein Shake
+NamePlural = Protein Shakes
+Pocket = 5
+Price = 4000
+Description = Consumed to heal for one third of max HP when the Pokémon uses a punching move. This can overheal.
+#-------------------------------
+[STRESSBALL]
+Name = Stress Ball
+NamePlural = Stress Balls
+Pocket = 5
+Price = 4000
+Description = Consumed to heal for one third of max HP when the Pokémon uses a pulse move. This can overheal.
+#-------------------------------
 [UTILITYUMBRELLA]
 Name = Utility Umbrella
 NamePlural = Utility Umbrellas
@@ -981,7 +1018,7 @@ NamePlural = Prismatic Plates
 Pocket = 5
 Price = 0
 Flags = TypeSetting
-Description = A tablet that boosts same-type attacks by 20%. If held by Arceus, you can change its type between battles.
+Description = A tablet that boosts same-type moves by 20%. If held by Arceus, you can change its type between battles.
 #-------------------------------
 [WILDCARD]
 Name = Wild Card
@@ -1010,6 +1047,7 @@ Name = Courage Badge
 NamePlural = Courage Badges
 Pocket = 5
 Price = 3000
+Flags = Clothing
 Description = A held item. The holder is protected from flinching.
 #-------------------------------
 [CLEARAMULET]
@@ -1017,6 +1055,7 @@ Name = Clear Amulet
 NamePlural = Clear Amulets
 Pocket = 5
 Price = 3000
+Flags = Clothing
 Description = A held item. The holder is protected from stat drops (except when self-inflicted).
 #-------------------------------
 [ADAMANTORB]
@@ -2737,15 +2776,6 @@ Price = 0
 Flags = KeyItem,SkipPocketMessage
 Description = It would be a delicious treat if you were a Pokémon.
 #-------------------------------
-[PRIMALCLAY]
-Name = Primal Clay
-NamePlural = Primal Clay
-Pocket = 8
-Price = 0
-FieldUse = OnPokemon
-Flags = KeyItem
-Description = A lump of ancient clay. It glows with a soft golden color.
-#-------------------------------
 [OMNIDRIVE]
 Name = OmniDrive
 NamePlural = OmniDrives
@@ -3053,5 +3083,32 @@ Name = Ominous Egg
 NamePlural = Ominous Eggs
 Pocket = 8
 Price = 0
+FieldUse = Direct
 Flags = KeyItem,SkipPocketMessage
 Description = A vessel for negative emotions. Perfectly defeat enough trainers to earn its rewards.
+#-------------------------------
+[SMARTPHONE]
+Name = Smart Phone
+NamePlural = Smart Phones
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A smart phone. Use it to take selfies.
+#-------------------------------
+[PRIMALBEAD]
+Name = Primal Bead
+NamePlural = Primal Bead
+Pocket = 1
+Price = 0
+Consumable = true
+Flags = KeyItem
+Description = A drop of ancient clay. Use it to summon a Pokemon from a resonating totem.
+#-------------------------------
+[PRIMALCLAY]
+Name = Primal Clay
+NamePlural = Primal Clay
+Pocket = 8
+Price = 0
+Flags = KeyItem
+Description = A lump of ancient clay. Allows you to summon any number of Pokemon from resonating totems.

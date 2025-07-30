@@ -437,3 +437,11 @@ module GameData
     :pinning_wind           => true,
     :ignore_passability     => true,
   })
+
+  GameData::TerrainTag.register({
+    :id                     => :WaterGrass,
+    :id_number              => 44,
+    :battle_environment     => :Water,
+    :can_surf               => true,
+    :encounter_tile         => true,
+  })
