@@ -834,7 +834,7 @@ Description = Intensifies gravity for four turns when hit by an attack.
 #-------------------------------
 [GRIPSTRENGTH]
 Name = Grip Strength
-Description = Moves that trap the opponent deal 50% more damage (on the initial hit).
+Description = Moves that bind the opponent deal 50% more damage (on the initial hit).
 #-------------------------------
 [GRIT]
 Name = Grit
