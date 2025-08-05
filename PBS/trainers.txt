@@ -2593,7 +2593,7 @@ TrainerTypeLabel = DEVELOPER
 Pokemon = PURUGLY,70
     AbilityIndex = 1 # Competitive
 Pokemon = METAGROSS,70
-    AbilityIndex = 0 # Brute Force
+    AbilityIndex = 0 # Pin Down
 Pokemon = WEAVILE,70
     AbilityIndex = 0 # Inner Focus
 Pokemon = WHIMSICOTT,70
@@ -9030,8 +9030,9 @@ Pokemon = LEAFEON,70
     AbilityIndex = 1 # Reluctant Blade
     Item = ROCKYHELMET
 Pokemon = METAGROSS,70
-    Moves = PIERCINGDOUBT,METEORMASH,DETACHMENT,MUDSLIDE
-    AbilityIndex = 0 # Brute Force
+    Moves = CENSOR,FARADAYCAGE,METEORMASH,POWERUPPUNCH
+    AbilityIndex = 0 # Pin Down
+    Item = GRIPCLAW
 #-------------------------------
 [EXPERTM,Hiroshi]
 Pokemon = ELECTIVIRE,70

@@ -1222,6 +1222,10 @@ Flags = FlinchImmunity
 Name = Mental Damage
 Description = Disables the opponent's most recently-used move for two turns upon hitting it.
 #-------------------------------
+[PINDOWN]
+Name = Pin Down
+Description = The user's moves cannot miss against trapped targets.
+#-------------------------------
 [METEORIC]
 Name = Meteoric
 Description = Boosts the Pokémon's Speed by 50% in sandstorm or hail.
