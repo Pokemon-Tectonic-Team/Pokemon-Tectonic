@@ -1222,10 +1222,6 @@ Flags = FlinchImmunity
 Name = Mental Damage
 Description = Disables the opponent's most recently-used move for two turns upon hitting it.
 #-------------------------------
-[PINDOWN]
-Name = Pin Down
-Description = The user's moves cannot miss against trapped targets.
-#-------------------------------
 [METEORIC]
 Name = Meteoric
 Description = Boosts the Pokémon's Speed by 50% in sandstorm or hail.
@@ -1455,6 +1451,10 @@ Description = Whenever a foe raises their stats, the Pokémon follows suit.
 [PHASESHIFT]
 Name = Phase Shift
 Description = The Pokémon's moves deal 50% more damage if they're a different type than last.
+#-------------------------------
+[PINDOWN]
+Name = Pin Down
+Description = The user's moves cannot miss against trapped targets.
 #-------------------------------
 [PLACIDITY]
 Name = Placidity
