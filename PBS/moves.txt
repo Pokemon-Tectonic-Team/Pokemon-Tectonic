@@ -469,7 +469,7 @@ TotalPP = 25
 Target = AllNearFoes
 FunctionCode = LowerTargetDef2
 Flags = CanProtect,CanMagicCoat
-Description = The user leers at nearby foes with sharp eyes. Their Defense stat is reduced by two steps.
+Description = The user leers at nearby foes with sharp eyes. Their Defense stat is lowered by two steps.
 #-------------------------------
 [LUCKYCHANT]
 Name = Lucky Chant
@@ -2746,7 +2746,7 @@ Target = AllNearFoes
 FunctionCode = LowerTargetSpAtk2
 Flags = CanProtect
 EffectChance = 100
-Description = While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk is reduced by two steps.
+Description = While resisting, the user attacks the opposing Pokémon. The targets' Sp. Atk is lowered by two steps.
 #-------------------------------
 [TAILGLOW]
 Name = Tail Glow

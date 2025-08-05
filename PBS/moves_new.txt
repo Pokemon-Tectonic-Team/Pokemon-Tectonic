@@ -554,7 +554,7 @@ TotalPP = 25
 Target = AllNearFoes
 FunctionCode = LowerTargetSpDef2
 Flags = CanProtect,CanMagicCoat
-Description = The user smirks with confidence. The Sp. Def of nearby enemies is reduced.
+Description = The user smirks with confidence. The Sp. Def of nearby enemies is lowered.
 Animation = SCARYFACE
 #-------------------------------
 [STELLARATE]
@@ -2477,6 +2477,18 @@ Flags = CanProtect,Light
 EffectChance = 40
 Description = The user attacks with a blinding flash of bioluminscence. It has a 40% chance to make the target flinch.
 Animation = SIGNALBEAM
+#-------------------------------
+[LURINGLIGHT]
+Name = Luring Light
+Type = BUG
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = User
+Priority = 2
+FunctionCode = RedirectAllMovesToUserLowerFoesAtkSpAtk1
+Flags = Uninvocable
+Description = All foes have their Attack and Sp. Atk lowered. They can only target the user this turn.
 #-------------------------------
 [MANYNEEDLE]
 Name = Manyneedle
