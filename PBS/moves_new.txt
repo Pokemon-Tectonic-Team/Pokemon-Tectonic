@@ -2975,20 +2975,6 @@ Flags = CanProtect
 Description = The user buries the target with somber force. Then, this move is disabled.
 Animation = SHADOWPUNCH
 #-------------------------------
-[SOULEATER]
-Name = Soul Eater
-Type = GHOST
-Category = Special
-Power = 65
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = UserHealsByHalfOfDamageDoneLowerTargetSpDef1
-Flags = CanProtect
-EffectChance = 100
-Description = The user absorbs the target's soul, lowering its Sp. Def and draining its life in the process.
-Animation = NIGHTSHADE
-#-------------------------------
 [SPECTRALTONGUE]
 Name = Spectral Tongue
 Type = GHOST

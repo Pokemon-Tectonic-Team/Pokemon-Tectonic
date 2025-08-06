@@ -1804,6 +1804,20 @@ Flags = CanProtect
 Description = The user claws at the target's soul, dealing damage through their Sp. Def rather than their Defense.
 Animation = SHADOWCLAW
 #-------------------------------
+[SOULEATER]
+Name = Soul Eater
+Type = GHOST
+Category = Special
+Power = 65
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+EffectChance = 100
+Description = The user absorbs the target's soul, lowering its Sp. Def and draining its life in the process.
+Animation = NIGHTSHADE
+#-------------------------------
 [SPITE]
 Name = Spite
 Type = GHOST

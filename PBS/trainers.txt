@@ -2752,7 +2752,7 @@ Pokemon = DELCATTY,70
     Item = WILDCARD
 Pokemon = HTYPHLOSION,70
     Gender = female
-    Moves = SOULEATER,STITCHUP,BURNINGJEALOUSY,PIERCINGDOUBT
+    Moves = SHADOWBALL,STITCHUP,BURNINGJEALOUSY,PIERCINGDOUBT
     AbilityIndex = 1 # Exorcist
     Item = UTILITYUMBRELLA
 Pokemon = MILOTIC,70
@@ -3086,7 +3086,7 @@ Pokemon = APPLETUN,35
     AbilityIndex = 0 # Ripen
     Item = SITRUSBERRY
 Pokemon = MNINETALES,36
-    Moves = SOULEATER,FLASHCANNON,DEADEND,IRONDEFENSE
+    Moves = SHADOWBALL,FLASHCANNON,DEADEND,IRONDEFENSE
     AbilityIndex = 0 # Gild
     Item = ROCKYHELMET
 Pokemon = MCARNIVINE,37
@@ -8910,7 +8910,7 @@ Pokemon = HONCHKROW,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = MNINETALES,70
-    Moves = ENERGYBALL,SOULEATER,SLAG,SCORCHINGSANDS
+    Moves = ENERGYBALL,SHADOWBALL,SLAG,SCORCHINGSANDS
     AbilityIndex = 1 # Luxury Taste
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -8998,7 +8998,7 @@ Pokemon = MOTHIM,70
     AbilityIndex = 1 # Moth Burglar
     Item = EJECTBUTTON
 Pokemon = HTYPHLOSION,70
-    Moves = STITCHUP,SOULEATER,HEATWAVE,FRIGIDFLURRY
+    Moves = STITCHUP,SHADOWBALL,HEATWAVE,FRIGIDFLURRY
     AbilityIndex = 1 # Exorcist
 #-------------------------------
 [MEDIUM,Izumi]

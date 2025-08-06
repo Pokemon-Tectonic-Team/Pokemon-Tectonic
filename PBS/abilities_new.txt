@@ -731,10 +731,6 @@ Description = Raises Attack and Sp. Atk by two steps when hit by a not-very-effe
 Name = Foreman
 Description = Doubles the Pokémon's Speed in Rooms.
 #-------------------------------
-[FORTIFIED]
-Name = Fortified
-Description = Take 30% less damage from attacks on turns when it hasn't moved yet.
-#-------------------------------
 [FREERIDE]
 Name = Free Ride
 Description = Raises other allies' Speed by two steps upon entering the battle.

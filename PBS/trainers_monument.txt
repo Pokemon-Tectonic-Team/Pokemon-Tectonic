@@ -407,7 +407,7 @@ Pokemon = PRIMARINA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,11,20,9
 Pokemon = MGIGALITH,70
-    Moves = ABERRANTMOTE,SINGINGSTONE,MIASMA,SOULEATER
+    Moves = ABERRANTMOTE,SINGINGSTONE,MIASMA,OMINOUSWIND
     AbilityIndex = 1 # Space Interloper
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

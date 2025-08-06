@@ -292,6 +292,10 @@ Description = Doubles Defense in sunshine.
 Name = Forewarn
 Description = Determines what moves a foe has.
 #-------------------------------
+[FORTIFIED]
+Name = Fortified
+Description = Take 30% less damage from attacks on turns when it hasn't moved yet.
+#-------------------------------
 [FORTUNE]
 Name = Fortune
 Description = Doubles the money gained from battles in which it participates.
