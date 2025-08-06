@@ -1,3 +1,66 @@
+# super ugly convoluted vibe coded hack to make Array.sample predictable
+# but i tested it and it seems to work - LunaFlare
+module DeterministicSample
+  def self.included(base)
+    base.prepend(InstanceMethods)
+  end
+
+  module InstanceMethods
+    def initialize(*args)
+      super
+      override_array_sample
+    end
+
+    private
+
+    def override_array_sample
+      battle = self
+      
+      Array.class_eval do
+        unless method_defined?(:cable_club_sample)
+          alias_method :original_ruby_sample, :sample
+          
+          define_method :cable_club_sample do |n = nil, random: nil|
+            if n.nil?
+              # Sample single element
+              return nil if empty?
+              self[battle.pbRandom(length)]
+            else
+              # Sample n elements (without replacement by default)
+              return [] if n <= 0 || empty?
+              n = [n, length].min
+              
+              # Use reservoir sampling algorithm with pbRandom
+              result = []
+              self.each_with_index do |item, index|
+                if index < n
+                  result << item
+                else
+                  # Random index from 0 to index (inclusive)
+                  j = battle.pbRandom(index + 1)
+                  if j < n
+                    result[j] = item
+                  end
+                end
+              end
+              result
+            end
+          end
+          
+          define_method :sample do |n = nil, random: nil|
+            # Use deterministic sample if we have access to the battle instance
+            if defined?(battle) && battle.respond_to?(:pbRandom)
+              cable_club_sample(n, random: random)
+            else
+              original_ruby_sample(n, random: random)
+            end
+          end
+        end
+      end
+    end
+  end
+end
+
 class PokeBattle_Battle
   attr_reader :client_id
   def is_online?
@@ -6,6 +69,7 @@ class PokeBattle_Battle
 end
 
 class PokeBattle_CableClub < PokeBattle_Battle
+  include DeterministicSample
   attr_reader :connection
   attr_reader :battleRNG
   attr_reader :rngCalls
