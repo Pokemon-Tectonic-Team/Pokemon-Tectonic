@@ -122,7 +122,7 @@ Pokemon = THIEVUL,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 Pokemon = SALAMENCE,70
-    Moves = OUTRAGE,EARTHQUAKE,STRAFE,SMASHINGSTEEL
+    Moves = OUTRAGE,EARTHQUAKE,STRAFE,IRONTAIL
     AbilityIndex = 0 # Intimidate
     Item = CHOICESCARF
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -1583,7 +1583,7 @@ Pokemon = CHARIZARD,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = FURRET,70
-    Moves = UNDERMINE,UTURN,SMASHINGSTEEL,GLACIALRAM
+    Moves = UNDERMINE,UTURN,IRONTAIL,GLACIALRAM
     AbilityIndex = 1 # Slinky
     Item = CRYSTALVEIL
     ItemType = GROUND

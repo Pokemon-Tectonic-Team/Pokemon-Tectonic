@@ -4036,7 +4036,7 @@ Pocket = 4
 Price = 5000
 FieldUse = TM
 Flags = SkipPocketMessage
-Move = SMASHINGSTEEL
+Move = IRONTAIL
 #-------------------------------
 [TM132]
 Name = TM132
