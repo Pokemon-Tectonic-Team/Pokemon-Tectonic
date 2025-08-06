@@ -1640,6 +1640,17 @@ Flags = CanProtect
 Description = Attacks by blasting dirt and debris at the target. This move always goes first in sandstorm.
 Animation = SANDATTACK
 #-------------------------------
+[GROUNDING]
+Name = Grounding
+Type = GROUND
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = RaiseUserAtkSpDefAcc2
+Flags = CanSnatch
+Description = The user stabilizes its stance. This raises its Attack, Sp. Def, and Accuracy by two steps.
+#-------------------------------
 [LEYLINEBURST]
 Name = Leyline Burst
 Type = GROUND
@@ -3612,6 +3623,17 @@ Flags = CanProtect,Light
 Description = Charges by summoning sunshine for five turns, then overwhelms the foe with fiery light on the second turn.
 Animation = FIREBLAST
 #-------------------------------
+[BIRDSEYEVIEW]
+Name = Bird's-Eye View
+Type = FIRE
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = RaiseUserSpAtkDefAcc2
+Flags = CanSnatch
+Description = The user takes an aerial look at the field. This raises its Sp. Atk, Defense, and Accuracy by two steps.
+#-------------------------------
 [BLAZINGSPEED]
 Name = Blazing Speed
 Type = FIRE
@@ -3738,6 +3760,17 @@ Flags = CanProtect,Dance
 EffectChance = 100
 Description = The user dances rapidly, emitting tropical heat. Any frostbitten Pokémon will be healed by this heat.
 Animation = HEATWAVE
+#-------------------------------
+[HOLDFIRE]
+Name = Hold Fire
+Type = FIRE
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = RaiseUserSpAtkSpDefAcc2
+Flags = CanSnatch
+Description = The user pauses to plan its ranged attacks. This raises its Sp. Atk, Sp. Def, and Accuracy by two steps.
 #-------------------------------
 [HOTSHOT]
 Name = Hot Shot
@@ -3921,17 +3954,6 @@ Flags = CanProtect,Dance
 EffectChance = 100
 Description = Cloaked in flames, the user dances wildly, raising its Sp. Atk by two steps.
 Animation = FIERYDANCE
-#-------------------------------
-[STOREFUEL]
-Name = Store Fuel
-Type = FIRE
-Category = Status
-Accuracy = 0
-TotalPP = 6
-Target = User
-FunctionCode = RaiseUserSpAtkSpDefAcc2
-Flags = CanSnatch
-Description = The user conserves for future attacks. This raises its Sp. Atk, Sp. Def, and Accuracy by two steps.
 #-------------------------------
 [SUNSHINE]
 Name = Sunshine

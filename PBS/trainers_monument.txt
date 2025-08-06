@@ -1979,7 +1979,7 @@ Pokemon = SWAMPERT,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 12,20,0,18,20,0
 Pokemon = CLAWITZER,70
-    Moves = SLUDGEWAVE,ICEBEAM,BUBBLEBLASTER,CALMMIND
+    Moves = SLUDGEWAVE,ICEBEAM,BUBBLEBLASTER,HOLDFIRE
     AbilityIndex = 1 # Cloudburst
     Item = WATERGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

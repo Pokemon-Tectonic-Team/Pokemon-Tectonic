@@ -3253,7 +3253,7 @@ Pokemon = FROSLASS,45
 #-------------------------------
 [SKIER_F,Natalia]
 Pokemon = MNOCTOWL,45
-    Moves = HAIL,ROOST,COLDFRONT,HONESIGHT
+    Moves = HAIL,ROOST,COLDFRONT,BIRDSEYEVIEW
     AbilityIndex = 0 # Sentry
 Pokemon = GRIMICE,45
     Moves = ICEPICK,SHIVER,SUCKERPUNCH,ADAMANTINEPRESS

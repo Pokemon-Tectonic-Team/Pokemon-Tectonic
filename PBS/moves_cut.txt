@@ -2052,6 +2052,17 @@ Target = BothSides
 FunctionCode = Invalid
 Description = Intensifies the sun for five turns, boosting Fire-type attacks and hindering most other attacks.
 #-------------------------------
+[STOREFUEL]
+Name = Store Fuel
+Type = FIRE
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user conserves for future attacks. This raises its Sp. Atk, Sp. Def, and Accuracy by two steps.
+#-------------------------------
 [SUNNYDAY]
 Name = Sunny Day
 Type = FIRE

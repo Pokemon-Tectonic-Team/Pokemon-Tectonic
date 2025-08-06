@@ -112,6 +112,16 @@ class PokeBattle_Move_EmpoweredFlowState < PokeBattle_MultiStatUpMove
 end
 
 #===============================================================================
+# Increases the user's Attack, Sp. Def and accuracy by 2 steps each. (Grounding)
+#===============================================================================
+class PokeBattle_Move_RaiseUserAtkSpDefAcc2 < PokeBattle_MultiStatUpMove
+    def initialize(battle, move)
+        super
+        @statUp = [:ATTACK, 2, :SPECIAL_DEFENSE, 2, :ACCURACY, 2]
+    end
+end
+
+#===============================================================================
 # Increases the user's Attack by 2 steps, and Speed by 1. (Dragon Dance)
 #===============================================================================
 class PokeBattle_Move_RaiseUserAtk2Spd1 < PokeBattle_MultiStatUpMove
@@ -460,6 +470,16 @@ class PokeBattle_Move_RaiseUserSpAtkDef2 < PokeBattle_MultiStatUpMove
     def initialize(battle, move)
         super
         @statUp = [:SPECIAL_ATTACK, 2, :DEFENSE, 2]
+    end
+end
+
+#===============================================================================
+# Increases the user's Sp. Atk, Defense and accuracy by 2 steps each. (Aerial View)
+#===============================================================================
+class PokeBattle_Move_RaiseUserSpAtkDefAcc2 < PokeBattle_MultiStatUpMove
+    def initialize(battle, move)
+        super
+        @statUp = [:SPECIAL_ATTACK, 2, :DEFENSE, 2, :ACCURACY, 2]
     end
 end
 
