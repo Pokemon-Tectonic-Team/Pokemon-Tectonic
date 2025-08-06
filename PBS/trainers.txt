@@ -3459,7 +3459,7 @@ Pokemon = GALLADE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = KOMMOO,70
-    Moves = CLANGOROUSSOUL,DRACOMETEOR,IRONTAIL,EARTHQUAKE
+    Moves = CLANGOROUSSOUL,DRACOMETEOR,SMASHINGSTEEL,EARTHQUAKE
     AbilityIndex = 0 # Sound Barrier
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -4190,7 +4190,7 @@ Pokemon = GOLISOPOD,55
     Moves = FIRSTIMPRESSION,CROSSCHOP,STUNNINGCURL,WATERFALL
     AbilityIndex = 0 # Emergency Exit
 Pokemon = DIGNIPHITE,54
-    Moves = HEAVYSLAM,REFURBISH,TRAMPLE,IRONTAIL
+    Moves = HEAVYSLAM,REFURBISH,TRAMPLE,SMASHINGSTEEL
     AbilityIndex = 1 # Fascinate
     Item = LEFTOVERS
 #-------------------------------
@@ -5075,7 +5075,7 @@ Pokemon = CHANDELURE,65
 Pokemon = TYRANITAR,65
     Name = Autochthon
     Gender = male
-    Moves = CRUNCH,ROCKALANCHE,EARTHQUAKE,IRONTAIL
+    Moves = CRUNCH,ROCKALANCHE,EARTHQUAKE,SMASHINGSTEEL
     AbilityIndex = 1 # Stressful
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
@@ -7184,7 +7184,7 @@ Pokemon = REAVOR,70
     AbilityIndex = 0 # Technician
     Item = CADOBERRY
 Pokemon = MZANGOOSE,70
-    Moves = HONECLAWS,SUNDERFATE,IRONTAIL,CROSSCHOP
+    Moves = HONECLAWS,SUNDERFATE,SMASHINGSTEEL,CROSSCHOP
     AbilityIndex = 1 # Mental Damage
 Pokemon = GARCHOMP,70
     Moves = MACHFLIGHT,REND,STRAFE,EARTHQUAKE
