@@ -4175,6 +4175,20 @@ FunctionCode = UserTakesHalfDamageThisTurnWaterlogAttackers
 Description = Halves attack damage taken this turn. Waterlogs any attackers. Fails if used successively.
 Animation = AQUARING
 #-------------------------------
+[FLOUNDER]
+Name = Flounder
+Type = WATER
+Category = Special
+Power = 20
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Waterlog
+Flags = CanProtect
+EffectChance = 100
+Description = The user struggles in the water, splashing it onto the target. They become waterlogged.
+Animation = SPLASH
+#-------------------------------
 [FLOWSTATE]
 Name = Flow State
 Type = WATER
