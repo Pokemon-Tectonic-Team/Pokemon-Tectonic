@@ -381,7 +381,7 @@ BattleHandlers::DamageCalcUserAbility.add(:ERUDITE,
 BattleHandlers::DamageCalcUserAbility.add(:MULTITASKER,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if type == :PSYCHIC
-      mults[:attack_multiplier] *= 1.2
+      mults[:attack_multiplier] *= 1.35
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }
@@ -390,7 +390,7 @@ BattleHandlers::DamageCalcUserAbility.add(:MULTITASKER,
 BattleHandlers::DamageCalcUserAbility.add(:EVENHANDED,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if type == :FIGHTING
-      mults[:attack_multiplier] *= 1.2
+      mults[:attack_multiplier] *= 1.35
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }
