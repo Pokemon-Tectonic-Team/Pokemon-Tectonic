@@ -387,6 +387,15 @@ BattleHandlers::DamageCalcUserAbility.add(:MULTITASKER,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:EVENHANDED,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if type == :FIGHTING
+      mults[:attack_multiplier] *= 1.2
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:PECKINGORDER,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if type == :FLYING

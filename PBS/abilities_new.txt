@@ -1282,6 +1282,10 @@ Description = Hits opponent with Thief when withdrawn from battle.
 Name = Multitasker
 Description = The Pokemon's Psychic-type attacks become spread and deal 20% more damage.
 #-------------------------------
+[EVENHANDED]
+Name = Evenhanded
+Description = The Pokemon's Fighting-type attacks become spread and deal 20% more damage.
+#-------------------------------
 [MUPROTOCOL]
 Name = MU Protocol
 Description = Immune to the type of the memory disc it holds.
