@@ -7117,14 +7117,12 @@ Animation = THIEF
 [PLANTDOUBT]
 Name = Plant Doubt
 Type = DARK
-Category = Special
-Power = 20
+Category = Status
 Accuracy = 100
-TotalPP = 15
+TotalPP = 10
 Target = NearOther
 FunctionCode = Leech
-Flags = CanProtect,Sound
-EffectChance = 100
+Flags = CanProtect,CanMagicCoat,Sound
 Description = The user entangles the target's mind with dark thoughts, leeching it.
 #-------------------------------
 [PROFANE]
