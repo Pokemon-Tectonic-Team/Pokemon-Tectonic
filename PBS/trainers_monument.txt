@@ -2361,7 +2361,7 @@ Pokemon = AMUK,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,0,0,10
 Pokemon = VENOMOTH,70
-    Moves = TERRORSWARM,LATCHON,DEFOG,SYNTHESIS
+    Moves = TERRORSWARM,ENVENOM,DEFOG,SYNTHESIS
     AbilityIndex = 0 # Fell Omen
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

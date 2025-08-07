@@ -1122,7 +1122,7 @@ Pokemon = STOUTLAND,45
     Moves = CLOUDBREAK,WISH,ROAR,NUMB
     AbilityIndex = 0 # Break Through
 Pokemon = VESPIQUEN,45
-    Moves = SWARMORDER,LATCHON,DEFENDORDER,HEALORDER
+    Moves = SWARMORDER,ENVENOM,DEFENDORDER,HEALORDER
     AbilityIndex = 1 # Stressful
     Item = LEFTOVERS
 #-------------------------------
@@ -1325,7 +1325,7 @@ Pokemon = EELEKTRIK,27
     AbilityIndex = 0 # Levitate
     Item = BIGROOT
 Pokemon = BEAUTIFLY,26
-    Moves = SUCKBLOOD,DRAININGKISS,LATCHON,AERIALACE
+    Moves = SUCKBLOOD,DRAININGKISS,ENVENOM,AERIALACE
     AbilityIndex = 0 # Gorging
 #-------------------------------
 [SAGE,Imay]
@@ -4808,7 +4808,7 @@ Pokemon = MGIGALITH,56
     AbilityIndex = 0 # Time Interloper
     Item = LIFEORB
 Pokemon = GOLISOPOD,56
-    Moves = FIRSTIMPRESSION,WATERFALL,CROSSCHOP,LATCHON
+    Moves = FIRSTIMPRESSION,WATERFALL,CROSSCHOP,ENVENOM
     AbilityIndex = 0 # Emergency Exit
 #-------------------------------
 [RUINMANIAC2,Nabil]
@@ -6399,7 +6399,7 @@ Pokemon = ETERNATUS,70
     Moves = DYNAMAXCANNON,COSMICPOWER,RECOVER,SLUDGEWAVE
     AbilityIndex = 0 # Pressure
 Pokemon = FORRETRESS,70
-    Moves = SWARMBURST,GYROBALL,LATCHON,VOLTSWITCH
+    Moves = SWARMBURST,GYROBALL,ENVENOM,VOLTSWITCH
     AbilityIndex = 0 # Natural Cure
 Pokemon = PORYGONZ,70
     Moves = TRIATTACK,PHANTOMGATE,PSYCHIC,ICEBEAM
@@ -7039,7 +7039,7 @@ Pokemon = GOLURK,70
 [TRAINER_Imogene_A,Imogene,1]
 Flags = NoPerfect
 Pokemon = GOLISOPOD,70
-    Moves = FIRSTIMPRESSION,LATCHON,LIQUIDATION,XSCISSOR
+    Moves = FIRSTIMPRESSION,ENVENOM,LIQUIDATION,XSCISSOR
     AbilityIndex = 0 # Emergency Exit
 Pokemon = CORVIKNIGHT,70
     Moves = DEFOG,TAILWIND,UTURN,ROOST
@@ -9279,7 +9279,7 @@ Pokemon = LICKILICKY,70
 #-------------------------------
 [CHEF,Gordon]
 Pokemon = PYUKUMUKU,70
-    Moves = LATCHON,LIFEDEW,LIGHTSCREEN,REFLECT
+    Moves = POISONGAS,LIFEDEW,LIGHTSCREEN,REFLECT
     AbilityIndex = 1 # Realist
     Item = LIGHTCLAY
 Pokemon = MAROMATISSE,70

@@ -1592,6 +1592,18 @@ Target = NearAlly
 FunctionCode = Invalid
 Description = The user makes its ally perform the move in the user's first slot.
 #-------------------------------
+[LATCHON]
+Name = Latch On
+Type = BUG
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat
+Description = Small bugs swarm the target, causing it to become leeched.
+Animation = INFESTATION
+#-------------------------------
 [NOISEORDER]
 Name = Noise Order
 Type = BUG

@@ -2449,18 +2449,6 @@ EffectChance = 10
 Description = The user applies a painful chemical to the target with a smack. It has a 10% chance to poison.
 Animation = SKITTERSMACK
 #-------------------------------
-[LATCHON]
-Name = Latch On
-Type = BUG
-Category = Status
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = Leech
-Flags = CanProtect,CanMagicCoat
-Description = Small bugs swarm the target, causing it to become leeched.
-Animation = INFESTATION
-#-------------------------------
 [LIGHTSHOW]
 Name = Light Show
 Type = BUG
