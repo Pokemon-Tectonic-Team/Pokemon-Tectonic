@@ -2398,6 +2398,17 @@ FunctionCode = Invalid
 Flags = CanProtect
 Description = The user drains the foe's energy with its horns. The user's HP is restored by half the damage inflicted.
 #-------------------------------
+[INGRAIN]
+Name = Ingrain
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user lays roots that restore 1/8th HP on every turn. Because it is rooted, it is trapped.
+#-------------------------------
 [LEAFTORNADO]
 Name = Leaf Tornado
 Type = GRASS

@@ -1034,7 +1034,7 @@ Pokemon = HAXORUS,70
 #-------------------------------
 [AROMALADY,Litha]
 Pokemon = FERROTHORN,70
-    Moves = POWERWHIP,SPIKES,NUMB,BODYPRESS
+    Moves = POWERWHIP,SPIKES,LEECHSEED,BODYPRESS
     AbilityIndex = 0 # Iron Barbs
     Item = REDCARD
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
