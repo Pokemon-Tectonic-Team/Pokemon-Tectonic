@@ -1592,6 +1592,18 @@ Target = NearAlly
 FunctionCode = Invalid
 Description = The user makes its ally perform the move in the user's first slot.
 #-------------------------------
+[LATCHON]
+Name = Latch On
+Type = BUG
+Category = Status
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,CanMagicCoat
+Description = Small bugs swarm the target, causing it to become leeched.
+Animation = INFESTATION
+#-------------------------------
 [NOISEORDER]
 Name = Noise Order
 Type = BUG
@@ -2397,6 +2409,17 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect
 Description = The user drains the foe's energy with its horns. The user's HP is restored by half the damage inflicted.
+#-------------------------------
+[INGRAIN]
+Name = Ingrain
+Type = GRASS
+Category = Status
+Accuracy = 0
+TotalPP = 15
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user lays roots that restore 1/8th HP on every turn. Because it is rooted, it is trapped.
 #-------------------------------
 [LEAFTORNADO]
 Name = Leaf Tornado

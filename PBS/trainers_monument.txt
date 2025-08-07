@@ -307,7 +307,7 @@ Pokemon = TALONFLAME,70
 [VETERANM_2,Luke]
 Pokemon = RIOJIN,70
     Moves = VACUUMWAVE,SECRETTECHNIQUE,DARKALLURE,FLASHCANNON
-    AbilityIndex = 0 # Honorable
+    AbilityIndex = 0 # Emanation
     Item = FOCUSSASH
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
@@ -1034,7 +1034,7 @@ Pokemon = HAXORUS,70
 #-------------------------------
 [AROMALADY,Litha]
 Pokemon = FERROTHORN,70
-    Moves = POWERWHIP,SPIKES,NUMB,BODYPRESS
+    Moves = POWERWHIP,SPIKES,LEECHSEED,BODYPRESS
     AbilityIndex = 0 # Iron Barbs
     Item = REDCARD
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2361,7 +2361,7 @@ Pokemon = AMUK,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,0,0,10
 Pokemon = VENOMOTH,70
-    Moves = TERRORSWARM,LATCHON,DEFOG,SYNTHESIS
+    Moves = TERRORSWARM,ENVENOM,DEFOG,SYNTHESIS
     AbilityIndex = 0 # Fell Omen
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -2547,7 +2547,7 @@ Pokemon = FERALIGATR,70
     EV = 10,20,0,3,20,17
 Pokemon = MLILLIGANT,70
     Moves = DRAGBENEATH,GLACIALRAM,PLAYROUGH,ICESHARD
-    AbilityIndex = 0 # Tangling Hair
+    AbilityIndex = 0 # Sudden Chill
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,18,10,12,18,0

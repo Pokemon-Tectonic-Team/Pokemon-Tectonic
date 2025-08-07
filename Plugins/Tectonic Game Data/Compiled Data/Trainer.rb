@@ -137,6 +137,7 @@ module GameData
             next if partyEntry[:species] == :SMEARGLE
             trainerName = "#{@trainer_type} #{@real_name}"
             speciesData = GameData::Species.get_species_form(partyEntry[:species],partyEntry[:form] || 0)
+            hasStatusMove = false
             partyEntry[:moves]&.each do |moveID|
                 moveData = GameData::Move.get(moveID)
                 unless moveData.learnable?
@@ -146,12 +147,20 @@ module GameData
                 unless speciesData.learnable_moves.include?(moveID)
                   raise _INTL("Trainer #{trainerName}'s #{speciesData.species} can't learn the move #{moveID} assigned to it!")
                 end
+
+                hasStatusMove = true if moveData.status?
             end
 
+            statusBlockItem = false
             partyEntry[:item]&.each do |itemID|
                 itemData = GameData::Item.get(itemID)
                 next if itemData.legal?(true)
+                statusBlockItem = true if itemData.is_no_status_use?
                 raise _INTL("Illegal item #{itemID} assigned to a party member of trainer #{trainerName}!")
+            end
+
+            if hasStatusMove && statusBlockItem
+              echoln(_INTL("WARNING: Trainer #{trainerName}'s #{speciesData.species} knows a status move despite holding a status move blocking item."))
             end
         end
       end

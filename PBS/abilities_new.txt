@@ -523,6 +523,10 @@ Description = Repeats another Pokémon's sound and pulse moves immediately at 50
 Name = Efflorescent
 Description = The Pokémon and its allies are protected from flinching, Intimidate, Fascinate, and Frustrate.
 #-------------------------------
+[EMANATION]
+Name = Emanation
+Description = Boosts the power of pulse moves by 30%.
+#-------------------------------
 [EMERGENCYPOWER]
 Name = Emergency Power
 Description = Uses Lightning Dance if an attack lowers its HP to half or below.

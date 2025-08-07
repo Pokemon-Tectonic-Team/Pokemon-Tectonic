@@ -4283,17 +4283,6 @@ FunctionCode = RaiseUserAtkSpAtk2Or4InSun
 Flags = CanSnatch
 Description = The user's body grows all at once, raising Attack and Sp. Atk by two steps, or four in sunshine.
 #-------------------------------
-[INGRAIN]
-Name = Ingrain
-Type = GRASS
-Category = Status
-Accuracy = 0
-TotalPP = 15
-Target = User
-FunctionCode = StartHealUserEachTurnTrapUser
-Flags = CanSnatch
-Description = The user lays roots that restore 1/8th HP on every turn. Because it is rooted, it is trapped.
-#-------------------------------
 [JUNGLEHEALING]
 Name = Jungle Healing
 Type = GRASS

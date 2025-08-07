@@ -60,6 +60,15 @@ BattleHandlers::DamageCalcUserAbility.add(:MEGALAUNCHER,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:EMANATION,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.pulseMove?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:REFRACTIVE,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.lightMove?
