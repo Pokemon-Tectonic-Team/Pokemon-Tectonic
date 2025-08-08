@@ -1337,7 +1337,7 @@ GameData::BattleEffect.register_effect(:Battler, {
         battle.pbDisplay(_INTL("{1} was freed from constriction!", battler.pbThis))
     end,
     :expire_proc => proc do |battle, battler|
-        battle.pbDisplay(_INTL("{1} is no longer constricted by {2}.", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} is no longer constricted.", battler.pbThis))
     end,
     :remain_proc => proc do |battle, battler, _value|
         battle.pbCommonAnimation("Wrap", battler)
