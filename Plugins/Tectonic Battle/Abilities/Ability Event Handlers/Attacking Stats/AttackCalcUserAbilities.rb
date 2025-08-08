@@ -187,10 +187,3 @@ BattleHandlers::AttackCalcUserAbility.add(:FUELHUNGRY,
       next attackMult
   }
 )
-
-BattleHandlers::AttackCalcUserAbility.add(:PINDOWN,
-  proc { |ability, _user, _battle, attackMult|
-      attackMult *= 1.3
-      next attackMult
-  }
-)
