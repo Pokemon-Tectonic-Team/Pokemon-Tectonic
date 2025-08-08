@@ -551,6 +551,10 @@ Description = Eclipse counts down twice as quickly.
 Name = Erudite
 Description = Powers up Psychic-type moves by 50%.
 #-------------------------------
+[EVENHANDED]
+Name = Evenhanded
+Description = The Pokemon's Fighting-type attacks become spread and deal 35% more damage.
+#-------------------------------
 [EVENTHORIZON]
 Name = Event Horizon
 Description = Changes the weather to star storm, which increases its damage over time. Lingers for 3 turns after leaving.
@@ -1280,7 +1284,7 @@ Description = Hits opponent with Thief when withdrawn from battle.
 #-------------------------------
 [MULTITASKER]
 Name = Multitasker
-Description = The Pokemon's Psychic-type attacks become spread and deal 20% more damage.
+Description = The Pokemon's Psychic-type attacks become spread and deal 35% more damage.
 #-------------------------------
 [MUPROTOCOL]
 Name = MU Protocol

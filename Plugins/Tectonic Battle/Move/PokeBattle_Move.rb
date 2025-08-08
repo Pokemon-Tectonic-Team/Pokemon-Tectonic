@@ -77,6 +77,7 @@ class PokeBattle_Move
         if damagingMove? && targetData.can_target_one_foe?
           return GameData::Target.get(:AllNearFoes) if user.effectActive?(:FlareWitch)
           return GameData::Target.get(:AllNearFoes) if @calcType == :PSYCHIC && user.hasActiveAbility?(:MULTITASKER)
+          return GameData::Target.get(:AllNearFoes) if @calcType == :FIGHTING && user.hasActiveAbility?(:EVENHANDED)
           return GameData::Target.get(:AllNearFoes) if user.hasActiveAbility?(:SPACIALDISTORTION)
         end
         return targetData

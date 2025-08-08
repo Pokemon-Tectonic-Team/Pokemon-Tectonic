@@ -994,7 +994,7 @@ Pokemon = ILLUMISE,35
     EV = 20,0,10,0,0,20
 Pokemon = BARBARACLE,35
     Moves = ADAMANTINEPRESS,CROSSCHOP,ACCELEROCK,WAVEBREAK
-    AbilityIndex = 0 # Tough Claws
+    AbilityIndex = 0 # Evenhanded
     Item = COVERTCLOAK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
