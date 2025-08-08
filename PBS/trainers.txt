@@ -3441,7 +3441,7 @@ Pokemon = JYNX,65
     Item = ASSAULTVEST
 Pokemon = SNORLAX,65
     Moves = BELLYDRUM,KNOCKOFF,EARTHQUAKE,BODYSLAM
-    AbilityIndex = 1 # Rolling Blows
+    AbilityIndex = 1 # Thick Fat
     Item = SITRUSBERRY
 #-------------------------------
 [FORMERCHAMP_Scilla,Scilla]
@@ -8311,7 +8311,7 @@ Pokemon = DECIDUEYE,70
     Item = MENTALHERB
 Pokemon = SNORLAX,70
     Moves = MEGAPUNCH,BEDFELLOWS,KNOCKOFF,HEAVYSLAM
-    AbilityIndex = 1 # Rolling Blows
+    AbilityIndex = 1 # Thick Fat
     Item = LEFTOVERS
 #-------------------------------
 [TAPU_BULU,Tapu Bulu]
