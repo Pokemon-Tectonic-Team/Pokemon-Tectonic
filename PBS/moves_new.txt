@@ -5872,6 +5872,19 @@ Flags = CanProtect,Pulse
 Description = The user sends waves of cosmic energy to overwhelm the target's senses. Multi-hits two to five times.
 Animation = CONFUSION
 #-------------------------------
+[QUASARCRUSH]
+Name = Quasar crush
+Type = PSYCHIC
+Category = Physical
+Power = 120
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TwoTurnAttackChargeRaiseUserAtk2
+Flags = CanProtect
+Description = Charges with astral power and boosts its Attack by two steps on one turn, then attacks on the second turn.
+Animation = METEORMASH
+#-------------------------------
 [REVERBWARD]
 Name = Reverb Ward
 Type = PSYCHIC
