@@ -348,6 +348,7 @@ BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
         next -30 if aiCheck
         next if user.effectActive?(:Trapping)
         next if user.effectActive?(:Constricted)
+        next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
         user.applyEffect(:Constricted, 3)
         user.pointAt(:TrappingUser, target)

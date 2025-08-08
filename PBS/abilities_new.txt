@@ -338,7 +338,7 @@ Description = Immune to Ice-type moves, and raises Attack and Sp. Atk if hit by 
 #-------------------------------
 [CONSTRICTOR]
 Name = Constrictor
-Description = When hit with a physical move, traps and damages the attacker for three turns.
+Description = When hit with a physical move, traps and damages the attacker for three turns. Does not work on turns the user switched in.
 #-------------------------------
 [COREPROVENANCE]
 Name = Core Provenance
