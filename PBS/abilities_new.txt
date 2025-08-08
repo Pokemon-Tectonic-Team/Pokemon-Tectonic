@@ -1630,6 +1630,10 @@ Description = Heals 1/8th of its max HP each turn during sandstorm.
 Name = Rock Climber
 Description = Immune to Rock-type moves and to Stealth Rock, and raises Speed whenever one would hit it.
 #-------------------------------
+[ROLLINGBLOWS]
+Name = Rolling Blows
+Description = Takes 50% less damage while performing a move which charges up or exhausts the user.
+#-------------------------------
 [ROOTED]
 Name = Rooted
 Description = Gets 50% more healing from all sources.

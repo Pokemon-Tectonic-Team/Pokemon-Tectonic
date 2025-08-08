@@ -373,3 +373,12 @@ BattleHandlers::DamageCalcTargetAbility.add(:PALACEGUARD,
       end
   }
 )
+
+BattleHandlers::DamageCalcTargetAbility.add(:ROLLINGBLOWS,
+  proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
+    if target.effectActive?(:TwoTurnAttack) || target.effectActive?(:HyperBeam)
+      mults[:final_damage_multiplier] *= 0.5
+      target.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
