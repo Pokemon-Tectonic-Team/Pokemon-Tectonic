@@ -1190,7 +1190,7 @@ Description = The Pokémon's Speed is doubled while using Sound-based moves.
 #-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
-Description = Traps foes whose Sp. Atk is less than its.
+Description = When hit with a special move, traps and damages the attacker for three turns. Fails on turns the user switched in.
 #-------------------------------
 [MALICE]
 Name = Malice

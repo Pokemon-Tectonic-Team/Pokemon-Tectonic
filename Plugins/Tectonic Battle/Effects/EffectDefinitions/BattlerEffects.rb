@@ -1351,6 +1351,33 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Magnetized,
+    :real_name => "Magnet Trap Turns",
+    :type => :Integer,
+    :ticks_down => true,
+    :trapping => true,
+    :swaps_with_battlers => true,
+    :apply_proc => proc do |battle, battler, value|
+        battle.pbDisplay(_INTL("{1} is being magnetized!",battler.pbThis))
+    end,
+    :disable_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} was freed from the magnet trap!", battler.pbThis))
+    end,
+    :expire_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} is no longer magnetized.", battler.pbThis))
+    end,
+    :remain_proc => proc do |battle, battler, _value|
+        battle.pbCommonAnimation("MagnetBomb", battler)
+        if battler.takesIndirectDamage?
+            fraction = trappingDamageFraction(battler)
+            battle.pbDisplay(_INTL("{1} is hurt by the magnet trap!", battler.pbThis))
+            battler.applyFractionalDamage(fraction)
+        end
+    end,
+    :sub_effects => %i[TrappingUser],
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
     :id => :Truant,
     :real_name => "Not Slacking Off",
 })

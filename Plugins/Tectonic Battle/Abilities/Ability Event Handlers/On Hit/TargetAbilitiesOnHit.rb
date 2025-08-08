@@ -356,6 +356,21 @@ BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
   }
 )
 
+BattleHandlers::TargetAbilityOnHit.add(:MAGNETTRAP,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless move.specialMove?
+        next if target.fainted?
+        next -30 if aiCheck
+        next if user.effectActive?(:Trapping)
+        next if user.effectActive?(:Magnetized)
+        next if target.effectActive?(:SwitchedIn)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Magnetized, 3)
+        user.pointAt(:TrappingUser, target)
+        battle.pbHideAbilitySplash(target)
+  }
+)
+
 BattleHandlers::TargetAbilityOnHit.add(:FRIGIDREFLECTION,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
