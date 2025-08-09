@@ -1698,7 +1698,7 @@ Flags = SandstormSynergy
 #-------------------------------
 [SAPPER]
 Name = Sapper
-Description = Upon entry, traps each opponent in a sand tomb for two turns.
+Description = Deals 30% more damage to trapped foes.
 #-------------------------------
 [SATURATER]
 Name = Saturater
