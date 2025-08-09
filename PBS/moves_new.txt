@@ -359,10 +359,10 @@ Category = Physical
 Power = 90
 Accuracy = 100
 TotalPP = 12
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit,DoubleCritChance,Blade
-Description = All foes are cut by a wide and clean slice. Can random critical hit, and does so twice as often.
+Description = The target is cut by a piercing slash. Can random critical hit, and does so twice as often.
 Animation = SLASH
 #-------------------------------
 [PARTICLEPULSE]
