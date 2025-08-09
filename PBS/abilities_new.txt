@@ -1342,7 +1342,7 @@ Description = Deals no damage to a target while they are using a status move.
 #-------------------------------
 [NOHOPE]
 Name = No Hope
-Description = Traps foes whose Attack is less than its.
+Description = Traps foes when they are below half health.
 #-------------------------------
 [NOXIOUS]
 Name = Noxious
