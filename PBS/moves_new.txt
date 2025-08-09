@@ -551,10 +551,10 @@ Category = Special
 Power = 25
 Accuracy = 0
 TotalPP = 15
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = HitTwoToFiveTimesAlwaysHits
 Flags = CanProtect,Light
-Description = A barrage of star-shaped rays are shot at the opposing team that multi-hits two to five times. Can't miss and skips protections.
+Description = A barrage of star-shaped rays are shot at the target, to multi-hit two to five times. Can't miss and skips protections.
 Animation = SWIFT
 #-------------------------------
 [THIEVINGSPREE]
@@ -2353,7 +2353,7 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 30
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = LowerTargetSpDef1
 Flags = CanProtect,Sound
 EffectChance = 20
@@ -6594,7 +6594,7 @@ TotalPP = 15
 Target = AllNearFoes
 FunctionCode = DamageBoostEclipse50Percent
 Flags = CanProtect
-Description = Attacks all near others with dragon energy. Power increases by 50% in eclipse.
+Description = Attacks all foes with hidden draconic energy. Power increases by 50% in eclipse.
 Animation = DRAGONPULSE
 #-------------------------------
 [REND]
