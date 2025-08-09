@@ -467,20 +467,6 @@ FunctionCode = EmpoweredBulletPunch
 Flags = CanProtect,Punch,Empowered
 Description = The user strikes the target with 3 punches like bullets. This move always goes first.
 #-------------------------------
-[EMPOWEREDBULLETTRAIN]
-Name = Empowered Bullet Train
-Type = STEEL
-Category = Physical
-Power = 200
-Accuracy = 100
-TotalPP = 1
-Target = NearOther
-FunctionCode = EmpoweredBulletTrain
-Flags = CanProtect,Empowered
-EffectChance = 100
-Description = The user becomes a pain train. This raises the user's Speed by 2 steps.
-Animation = BULLETTRAIN
-#-------------------------------
 [EMPOWEREDMETALCLAW]
 Name = Empowered Metal Claw
 Type = STEEL
