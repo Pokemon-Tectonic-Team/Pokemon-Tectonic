@@ -163,12 +163,12 @@ class PokeBattle_Move
     def statStepStealingMove?; return false; end
     def redirectionMove?; return false; end
     def hazardRemovalMove?; return false; end
+    def screenRemovalMove?; return false; end
     def rampagingMove?; return false; end
   
     def ignoresSubstitute?(user)   # user is the Pokémon using this move
       return true if soundMove?
-      return true if user && user.hasActiveAbility?(:INFILTRATOR)
-      return true if user && user.hasActiveAbility?(:RAMPROW)
+      return true if user && user.hasActiveAbility?(GameData::Ability.getByFlag("IgnoreSubstitute"))
       return false
     end
 

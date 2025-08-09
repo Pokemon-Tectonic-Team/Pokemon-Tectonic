@@ -905,8 +905,7 @@ class PokeBattle_Battler
     end
 
     def ignoreScreens?(checkingForAI)
-        return true if shouldAbilityApply?(:INFILTRATOR,checkingForAI)
-        return true if shouldAbilityApply?(:RAMPROW,checkingForAI)
+        return true if shouldAbilityApply?(GameData::Ability.getByFlag("IgnoreScreens"),checkingForAI)
         return false
     end
 

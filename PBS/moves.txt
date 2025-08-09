@@ -2345,7 +2345,7 @@ Power = 120
 Accuracy = 100
 TotalPP = 10
 Target = NearOther
-FunctionCode = TwoTurnAttackChargeRaiseUserSpAtk1
+FunctionCode = TwoTurnAttackChargeRaiseUserSpAtk2
 Flags = CanProtect
 Description = Charges with space power and boosts its Sp. Atk by two steps on one turn, then attacks on the second turn.
 #-------------------------------

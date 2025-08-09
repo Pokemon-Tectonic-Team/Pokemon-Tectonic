@@ -256,6 +256,7 @@ Flags = Immutable
 [INFILTRATOR]
 Name = Infiltrator
 Description = Ignores screens and other barriers, Substitute, and boosted Defense and Sp. Def.
+Flags = IgnoreScreens,IgnoreSubstitute
 #-------------------------------
 [INNARDSOUT]
 Name = Innards Out

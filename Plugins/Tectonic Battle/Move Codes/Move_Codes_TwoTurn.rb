@@ -116,7 +116,7 @@ end
 #===============================================================================
 # Boosts Attack on 1st Turn and Attacks on 2nd
 #===============================================================================
-class PokeBattle_Move_TwoTurnAttackChargeRaiseUserAtk1 < PokeBattle_TwoTurnMove
+class PokeBattle_Move_TwoTurnAttackChargeRaiseUserAtk2 < PokeBattle_TwoTurnMove
     def pbChargingTurnMessage(user, _targets)
         @battle.pbDisplay(_INTL("{1} is overflowing with power!", user.pbThis))
     end
@@ -135,7 +135,7 @@ end
 #===============================================================================
 # Boosts Sp Atk on 1st Turn and Attacks on 2nd (Meteor Beam)
 #===============================================================================
-class PokeBattle_Move_TwoTurnAttackChargeRaiseUserSpAtk1 < PokeBattle_TwoTurnMove
+class PokeBattle_Move_TwoTurnAttackChargeRaiseUserSpAtk2 < PokeBattle_TwoTurnMove
     def pbChargingTurnMessage(user, _targets)
         @battle.pbDisplay(_INTL("{1} is overflowing with space power!", user.pbThis))
     end

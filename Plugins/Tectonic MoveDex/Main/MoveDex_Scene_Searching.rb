@@ -246,6 +246,11 @@ class MoveDex_Scene
     def searchByMoveTargeting
         selection = pbMessage(_INTL("Which targeting?"), [_INTL("Single Target"), _INTL("Multi Target"), _INTL("No Target"), _INTL("Cancel")], 4)
         if selection != 3
+            if selection == 1
+                spread_selection = pbMessage(_INTL("Which multi-target?"), [_INTL("Foes Only"), _INTL("Targets Allies"), _INTL("Cancel")], 3)  
+                return if spread_selection == 2
+            end
+
             dexlist = searchStartingList
 
             dexlist = dexlist.find_all do |dex_item|
@@ -254,7 +259,12 @@ class MoveDex_Scene
                 when 0
                     next target_data.single_target?
                 when 1
-                    next target_data.spread?
+                    case spread_selection
+                    when 0
+                        next target_data.spread? && !target_data.targets_ally && !target_data.targets_all
+                    when 1
+                        next target_data.spread? && (target_data.targets_ally || target_data.targets_all)
+                    end
                 when 2
                     next target_data.no_targets?
                 end
