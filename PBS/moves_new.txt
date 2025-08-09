@@ -91,19 +91,6 @@ EffectChance = 45
 Description = The user thrashes while infused with elements. It has a 15% chance each to poison, waterlog or leech.
 Animation = FIERYWRATH
 #-------------------------------
-[CLOUDBREAK]
-Name = Cloudbreak
-Type = NORMAL
-Category = Physical
-Power = 90
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = RemoveWeatherIncidental
-Flags = CanProtect
-Description = A tremendous strike that clears any active weather.
-Animation = STRENGTH
-#-------------------------------
 [CONCENTRATE]
 Name = Concentrate
 Type = NORMAL
@@ -163,19 +150,6 @@ FunctionCode = Basic
 Flags = CanProtect,Pulse
 Description = The user shoots a pulse of diffuse energy at the target.
 Animation = SIMPLEBEAM
-#-------------------------------
-[DISSIPATION]
-Name = Dissipation
-Type = NORMAL
-Category = Special
-Power = 90
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = RemoveRoomsIncidental
-Flags = CanProtect
-Description = An unusual shockwave that breaks down all active Rooms.
-Animation = SUPERSONIC
 #-------------------------------
 [DRAINAGE]
 Name = Drainage
@@ -298,6 +272,19 @@ FunctionCode = RaiseUserSpAtkAcc3
 Flags = CanSnatch
 Description = The user focuses its aim to raise its Sp. Atk and Accuracy by three steps.
 Animation = LASERFOCUS
+#-------------------------------
+[HORIZONSLICE]
+Name = Horizon Slice
+Type = NORMAL
+Category = Physical
+Power = 105
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user slashes broadly, cleanly slicing all nearby battlers.
+Animation = SLASH
 #-------------------------------
 [LATHER]
 Name = Lather
@@ -901,18 +888,6 @@ Flags = CanProtect
 Description = The user grabs the target, slamming both of them into the ground. The user takes 20% recoil.
 Animation = SUBMISSION
 #-------------------------------
-[SCYTHEKICK]
-Name = Scythe Kick
-Type = FIGHTING
-Category = Physical
-Power = 95
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect,Kicking
-Description = The user kicks the target with a powerful, arcing technique.
-#-------------------------------
 [SECRETTECHNIQUE]
 Name = Secret Technique
 Type = FIGHTING
@@ -988,6 +963,19 @@ Target = NearOther
 FunctionCode = RampageAlwaysCriticalHit
 Flags = CanProtect
 Description = The user relentlessly rampages with its whip-like hands for two turns. Each hit will always be a critical hit.
+#-------------------------------
+[WHIRLWINDKICK]
+Name = Whirlwind Kick
+Type = FIGHTING
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect,Kick
+Description = The user kicks while rotating at high speed, dashing across the battlefield to deal damage to all nearby battlers.
+Animation = ROLLINGKICK
 #-------------------------------
 #		FLYING MOVES
 #-------------------------------
@@ -3134,20 +3122,6 @@ EffectChance = 30
 Description = The user uses gunpowder to rocket at its foe. It has a 30% chance to raise its Speed.
 Animation = BULLETPUNCH
 #-------------------------------
-[BULLETTRAIN]
-Name = Bullet Train
-Type = STEEL
-Category = Physical
-Power = 90
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = RaiseUserSpd1
-Flags = CanProtect
-EffectChance = 20
-Description = The user becomes a pain train. It has a 20% chance to raise the user's Speed.
-Animation = HEAVYSLAM
-#-------------------------------
 [CAVALRYCHARGE]
 Name = Cavalry Charge
 Type = STEEL
@@ -3353,6 +3327,19 @@ Target = BothSides
 FunctionCode = StartPolarizeTypeMatchups8
 Description = The user creates a high quality area for eight turns in which super-effective deals 25% more, and not very effective deals 25% less.
 Animation = WONDERROOM
+#-------------------------------
+[POWDERBOMB]
+Name = Powder Bomb
+Type = STEEL
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user creates an explosion from powdered metal, inflicting damage to all nearby battlers.
+Animation = SELFDESTRUCT
 #-------------------------------
 [RAILCANNON]
 Name = Rail Cannon
@@ -5618,6 +5605,19 @@ FunctionCode = ChangeUserMewtwoChoiceOfForm
 Description = The user psychically modifies its own genes, transforming into either Overmatter form or Overmind form.
 Animation = TRANSFORM
 #-------------------------------
+[HUNDREDHANDCLAP]
+Name = Hundred-Hand Clap
+Type = PSYCHIC
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user claps with the power of a hundred hands, psionically striking all nearby battlers.
+Animation = SONICBOOM
+#-------------------------------
 [INVITEECLIPSE]
 Name = Invite Eclipse
 Type = PSYCHIC
@@ -5921,19 +5921,6 @@ FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit
 Description = The target is scrutinized, damaging their psyche. Can random critical hit.
 Animation = CONFUSION
-#-------------------------------
-[SEERSTRIKE]
-Name = Seer Strike
-Type = PSYCHIC
-Category = Physical
-Power = 90
-Accuracy = 0
-TotalPP = 15
-Target = NearOther
-FunctionCode = AlwaysHits
-Flags = CanProtect
-Description = The user perfectly predicts the target's future location, then strikes. It lands without fail.
-Animation = ZENHEADBUTT
 #-------------------------------
 [SELECTIVEMEMORY]
 Name = Selective Memory
