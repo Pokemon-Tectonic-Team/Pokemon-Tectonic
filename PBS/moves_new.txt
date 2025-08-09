@@ -7877,3 +7877,42 @@ FunctionCode = Rampage
 Flags = CanProtect
 Description = The user attacks with simple determination and rampages for two turns.
 Animation = THRASH
+#-------------------------------
+[HUNDREDHANDCLAP]
+Name = Hundred-Hand Clap
+Type = PSYCHIC
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user claps with the power of a hundred hands, psionically striking all nearby battlers.
+Animation = SONICBOOM
+#-------------------------------
+[HORIZONSLICE]
+Name = Horizon Slice
+Type = NORMAL
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user slashes broadly, cleanly slicing all nearby battlers.
+Animation = SLASH
+#-------------------------------
+[POWDERBOMB]
+Name = Powder Bomb
+Type = STEEL
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 10
+Target = AllNearOthers
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user creates an explosion from powdered metal, inflicting damage to all nearby battlers.
+Animation = SELFDESTRUCT
