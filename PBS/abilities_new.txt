@@ -220,6 +220,10 @@ Description = Heals from trapping damage it deals. Takes 25% less damage from Po
 Name = Boulder Nest
 Description = Lays a hazard of levitating stones around the opponent when its HP is lowered below half.
 #-------------------------------
+[BOUNCEBACK]
+Name = Bounce Back
+Description = When hit with an attack, uses Pain Split on the attacker.
+#-------------------------------
 [BRAINSCRAMBLE]
 Name = Brain Scramble
 Description = Has a 30% chance to dizzy targets when using special moves.
