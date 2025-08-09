@@ -237,7 +237,7 @@ class PokeBattle_Move_StartHealUserEachTurnTrapUser < PokeBattle_Move
     def getEffectScore(user, _target)
 		return 0 if user.effects[:PerishSong] > 0
         score = 50
-        score += 30 if @battle.pbIsTrapped?(user.index)
+        score += 30 if user.trapped?
         score += 20 if user.firstTurn?
         score += 20 if user.aboveHalfHealth?
         return score

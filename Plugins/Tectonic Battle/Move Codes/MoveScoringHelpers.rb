@@ -1046,7 +1046,7 @@ def getDisableEffectScore(target, duration)
     return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
     return 0 unless target.canBeDisabled?
     score = 15 * duration
-    score *= 1.5 if target.battle.pbIsTrapped?(target.index)
+    score *= 1.5 if target.trapped?
     return score
 end
 
