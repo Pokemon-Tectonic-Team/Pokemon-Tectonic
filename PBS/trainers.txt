@@ -8047,7 +8047,7 @@ Pokemon = COFAGRIGUS,70
 Pokemon = RUBARIOR,70
     AbilityIndex = 0 # Warding
 Pokemon = KINGDRA,70
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 0 # Serene Grace
 #-------------------------------
 [POKEMONMASTER_Vanya,Vanya,13]
 Flags = NoPerfect,PlayerTeam:Maken33
@@ -8531,7 +8531,7 @@ Pokemon = RIBOMBEE,60
     Item = FOCUSSASH
 Pokemon = KINGDRA,60
     Moves = MURKYFOG,HYDROPUMP,SCOUR,WATERLOG
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 1 # Cold-blooded
 #-------------------------------
 [POKEMONBREEDER_F4,Sara]
 Pokemon = SANDSLASH,60
@@ -9593,8 +9593,8 @@ Pokemon = CLAYDOL,60
     AbilityIndex = 0 # Planar Veil
     Item = LIGHTCLAY
 Pokemon = KINGDRA,60
-    Moves = MURKYFOG,DRACOMETEOR,SNIPESHOT,PROTECT
-    AbilityIndex = 1 # Gyre Spinner
+    Moves = MURKYFOG,DRACOMETEOR,SNIPESHOT,WATERLOG
+    AbilityIndex = 1 # Cold-blooded
     Item = LEFTOVERS
 Pokemon = KINGAMBIT,60
     Moves = PURSUIT,BULLETPUNCH,BRICKBREAK,SUCKERPUNCH

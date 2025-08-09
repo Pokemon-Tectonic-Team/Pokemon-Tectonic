@@ -332,6 +332,10 @@ Name = Clumsy Kinesis
 Description = Can hold two items, but drops one when swapping out.
 Flags = MultipleItems
 #-------------------------------
+[COLDBLOODED]
+Name = Cold-blooded
+Description = Its attacks are critical against waterlogged targets.
+#-------------------------------
 [COLDCALCULATION]
 Name = Cold Calculation
 Description = Boosts Sp. Atk by 75%, but the Pokémon becomes frostbitten after attacking.

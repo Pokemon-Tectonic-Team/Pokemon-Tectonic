@@ -45,3 +45,9 @@ BattleHandlers::GuaranteedCriticalUserAbility.add(:PERFECTLUCK,
         next true
     }
 )
+
+BattleHandlers::GuaranteedCriticalUserAbility.add(:COLDBLOODED,
+    proc { |ability, _user, target, _battle|
+        next true if target.waterlogged?
+    }
+)

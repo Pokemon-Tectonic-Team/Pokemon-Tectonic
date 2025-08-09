@@ -682,7 +682,7 @@ Pokemon = TOGEDEMARU,70
     EV = 12,20,0,18,20,0
 Pokemon = KINGDRA,70
     Moves = BUBBLEBLASTER,SLUDGEWAVE,DRACOMETEOR,BLIZZARD
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 0 # Serene Grace
     Item = AIRBALLOON
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
@@ -2509,7 +2509,7 @@ Pokemon = MNOCTOWL,70
     EV = 20,12,0,8,12,10
 Pokemon = KINGDRA,70
     Moves = DRACOMETEOR,BLIZZARD,BUBBLEBLASTER,SLUDGEWAVE
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 0 # Serene Grace
     Item = LIFEORB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
