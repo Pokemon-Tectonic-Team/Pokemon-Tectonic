@@ -4012,16 +4012,6 @@ Flags = CanProtect,Sound
 EffectChance = 100
 Description = The user bursts into song, emitting many bubbles. Any burning Pokémon will be healed by these bubbles.
 #-------------------------------
-[SPLASH]
-Name = Splash
-Type = WATER
-Category = Status
-Accuracy = 0
-TotalPP = 30
-Target = User
-FunctionCode = DoesNothingUnusableInGravity
-Description = The user just flops and splashes around to no effect at all...
-#-------------------------------
 [STEAMERUPTION]
 Name = Steam Eruption
 Type = WATER
