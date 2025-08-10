@@ -4224,6 +4224,20 @@ Flags = CanProtect
 EffectChance = 100
 Description = The user controls the drum's roots to attack the target. This also lowers the target's Speed stat by two steps.
 #-------------------------------
+[ENERGYBALL]
+Name = Energy Ball
+Type = GRASS
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = RaiseUserSpAtk1
+Flags = CanProtect,Pulse
+EffectChance = 20
+Description = The user attacks with the essence of life. It has a 20% chance to raise user's Sp. Atk.
+Animation = ENERGYBALL
+#-------------------------------
 [FRENZYPLANT]
 Name = Frenzy Plant
 Type = GRASS
@@ -4955,8 +4969,8 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect
-EffectChance = 50
-Description = The user unleashes a vicious blow after a cute act. It has a 50% chance to cause flinching.
+EffectChance = 40
+Description = The user unleashes a vicious blow after a cute act. It has a 40% chance to cause flinching.
 #-------------------------------
 [HEARTSWAP]
 Name = Heart Swap
@@ -5667,8 +5681,8 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,Wind
-EffectChance = 30
-Description = A small tornado hits the target. It has a 30% chance to make targets flinch.
+EffectChance = 40
+Description = A small tornado hits the target. It has a 40% chance to make targets flinch.
 #-------------------------------
 #		DARK MOVES
 #-------------------------------

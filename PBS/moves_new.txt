@@ -48,7 +48,6 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = TargetsAttackDefends
 Flags = CanProtect
-EffectChance = 20
 Description = The user engages the target in a head-to-head fight. The damage is based on the target's Attack rather than their Defense.
 Animation = HEADBUTT
 #-------------------------------
@@ -349,7 +348,6 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = ResetTargetStatSteps
 Flags = CanProtect,Pulse
-EffectChance = 30
 Description = The target is struck by a pulse of negative energy. This resets the target's stat changes.
 #-------------------------------
 [PALEBLADE]
@@ -621,7 +619,7 @@ Target = NearOther
 FunctionCode = RaiseUserSpAtk1
 Flags = CanProtect
 EffectChance = 20
-Description = The user forms their excitement into a lash with a 10% chance of raising the user's Sp. Atk.
+Description = The user forms their excitement into a lash with a 20% chance of raising the user's Sp. Atk.
 Animation = FOCUSBLAST
 #-------------------------------
 [ARTOFWAR]
@@ -1899,7 +1897,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = FractureTarget
 Flags = CanProtect
-EffectChance = 30
+EffectChance = 50
 Description = The user bludgeons the target's arms and legs with a large rock. This has a 50% chance to fracture it.
 Animation = ROCKTOMB
 #-------------------------------
@@ -2114,7 +2112,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = FractureTarget
 Flags = CanProtect
-EffectChance = 50
+EffectChance = 30
 Description = The user afflicts the target by turning their skin into stone. This has a 30% chance to fracture it.
 #-------------------------------
 [PLANETCRACKER]
@@ -2207,7 +2205,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = FractureTarget
 Flags = CanProtect
-EffectChance = 30
+EffectChance = 50
 Description = The user grinds stone into shrapnel and sprays it at the target. This has a 50% chance to fracture it.
 Animation = SANDATTACK
 #-------------------------------
@@ -2447,8 +2445,8 @@ TotalPP = 25
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,Light
-EffectChance = 20
-Description = The user attacks with small beams of light. It has a 20% chance to make the target flinch.
+EffectChance = 40
+Description = The user attacks with small beams of light. It has a 40% chance to make the target flinch.
 Animation = SIGNALBEAM
 #-------------------------------
 [LUMINBURST]
@@ -2487,7 +2485,6 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = HitsThreeTimesAsBeedrillFiveTimesAsWornet
 Flags = CanProtect
-EffectChance = 20
 Description = The foe is stabbed once by each of the user's stingers.
 Animation = TWINEEDLE
 #-------------------------------
@@ -3223,7 +3220,7 @@ Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect
 EffectChance = 40
-Description = The user headbutts the target with a metal head. It has a 20% chance to make the target flinch.
+Description = The user headbutts the target with a metal head. It has a 40% chance to make the target flinch.
 Animation = IRONHEAD
 #-------------------------------
 [IMPALINGSPIKE]
@@ -3796,8 +3793,8 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = RaiseUserSpd1
 Flags = CanProtect
-EffectChance = 30
-Description = The user cloaks itself in a fierce blaze and attacks. It has a 10% chance to raise Speed.
+EffectChance = 20
+Description = The user cloaks itself in a fierce blaze and attacks. It has a 20% chance to raise Speed.
 #-------------------------------
 [INVITESUNSHINE]
 Name = Invite Sunshine
@@ -4522,8 +4519,8 @@ TotalPP = 30
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect
-EffectChance = 30
-Description = The user rides a wave, then crashes into the target. Has a 30% chance to cause a flinch.
+EffectChance = 40
+Description = The user rides a wave, then crashes into the target. Has a 40% chance to cause a flinch.
 Animation = AQUAJET
 #-------------------------------
 #		GRASS MOVES
@@ -4627,20 +4624,6 @@ Target = NearOther
 FunctionCode = PoisonSpikes
 Flags = CanProtect,Blade
 Description = The user flicks its thorns, dealing damage and setting a hazard layer of poison spikes around the target.
-#-------------------------------
-[ENERGYBALL]
-Name = Energy Ball
-Type = GRASS
-Category = Special
-Power = 90
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = RaiseUserSpAtk1
-Flags = CanProtect,Pulse
-EffectChance = 20
-Description = The user attacks with the essence of life. It has a 20% chance to raise user's Sp. Atk.
-Animation = ENERGYBALL
 #-------------------------------
 [ESSENCEARROW]
 Name = Essence Arrow
@@ -5028,7 +5011,6 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = TargetsSpAtkDefends
 Flags = CanProtect
-EffectChance = 20
 Description = The user and the target pit their energy against one another. The damage is based on the target's Sp. Atk rather than their Sp. Def.
 Animation = HYPERBEAM
 #-------------------------------
@@ -6647,8 +6629,8 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,Wind
-EffectChance = 30
-Description = The user whips up a tornado to tear at the target. It has a 30% chance to make them flinch.
+EffectChance = 40
+Description = The user whips up a tornado to tear at the target. It has a 40% chance to make them flinch.
 #-------------------------------
 [SHRED]
 Name = Shred
@@ -6967,8 +6949,8 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,Sound
-EffectChance = 30
-Description = The target is confronted with painful words. It has a 30% chance to make the target flinch.
+EffectChance = 40
+Description = The target is confronted with painful words. It has a 40% chance to make the target flinch.
 Animation = DARKPULSE
 #-------------------------------
 [HATEFULHAYMAKER]
