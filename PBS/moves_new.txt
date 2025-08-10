@@ -348,6 +348,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = ResetTargetStatSteps
 Flags = CanProtect,Pulse
+EffectChance = 100
 Description = The target is struck by a pulse of negative energy. This resets the target's stat changes.
 #-------------------------------
 [PALEBLADE]
