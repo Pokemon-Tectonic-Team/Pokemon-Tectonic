@@ -990,6 +990,17 @@ Flags = CanProtect
 Description = A reckless rushing attack from the air. The user also takes 25% recoil.
 Animation = BRAVEBIRD
 #-------------------------------
+[BIRDSEYEVIEW]
+Name = Bird's-Eye View
+Type = FLYING
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = RaiseUserSpAtkDefAcc2
+Flags = CanSnatch
+Description = The user takes an aerial look at the field. This raises its Sp. Atk, Defense, and Accuracy by two steps.
+#-------------------------------
 [BLUSTER]
 Name = Bluster
 Type = FLYING
@@ -3595,17 +3606,6 @@ Flags = CanProtect,Light
 Description = Charges by summoning sunshine for five turns, then overwhelms the foe with fiery light on the second turn.
 Animation = FIREBLAST
 #-------------------------------
-[BIRDSEYEVIEW]
-Name = Bird's-Eye View
-Type = FIRE
-Category = Status
-Accuracy = 0
-TotalPP = 6
-Target = User
-FunctionCode = RaiseUserSpAtkDefAcc2
-Flags = CanSnatch
-Description = The user takes an aerial look at the field. This raises its Sp. Atk, Defense, and Accuracy by two steps.
-#-------------------------------
 [BLAZINGSPEED]
 Name = Blazing Speed
 Type = FIRE
@@ -4982,7 +4982,6 @@ TotalPP = 10
 Target = AllNearOthers
 FunctionCode = Basic
 Flags = CanProtect,Light
-EffectChance = 30
 Description = A flare of electricity creates a bright light, damaging all nearby battlers.
 Animation = FLASH
 #-------------------------------
