@@ -29,6 +29,7 @@ tribeRewards = [[:EXPCANDYXL,4]]
 PokEstate::LoadDataDependentAwards += proc {
     # For every type, create three award event subscribers at different thresholds
     GameData::Tribe.each do |tribe|
+        next if !$DEBUG && tribe.id.start_with?("DEBUG_") # skip debug tribes if not in debug mode
         tribeThreshold.each_with_index do |threshold,thresholdIndex|
             id = ("TRIBE" + tribe.id.to_s + "AWARD" + thresholdIndex.to_s).to_sym
             PokEstate::GrantAwards.add(id,
