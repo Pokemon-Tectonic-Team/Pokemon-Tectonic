@@ -114,6 +114,43 @@ class PokeBattle_Move_TwoTurnAttackBurnTarget < PokeBattle_TwoTurnMove
 end
 
 #===============================================================================
+# Cures nvsc and sleeps on 1st Turn and Attacks on 2nd
+#===============================================================================
+class PokeBattle_Move_TwoTurnAttackChargeSleep < PokeBattle_TwoTurnMove
+    def usableWhenAsleep?; return true; end
+    
+    def pbMoveFailed?(user, targets, show_message)
+        return true unless user.canSleep?(user, show_message, self, true)
+        return true if super
+        return false
+    end
+
+     def pbMoveFailedAI?(user, targets)
+        return true unless user.canSleep?(user, false, self, true)
+        return true if super
+        return false
+    end
+
+    def pbChargingTurnMessage(user, _targets)
+        @battle.pbDisplay(_INTL("{1} takes a curative nap!", user.pbThis))
+    end
+
+    def pbChargingTurnEffect(user, _target)
+        user.applySleepSelf
+    end
+    
+    def pbAttackingTurnEffect(user, _target)
+        user.pbCureStatus(true, :SLEEP)
+    end
+
+    def getEffectScore(user, target)
+        score = super
+        score +=30 if user.hasStatusNoSleep?
+        score +=45 if user.hasStatusSleep?
+        return score
+    end
+end
+#===============================================================================
 # Boosts Attack on 1st Turn and Attacks on 2nd
 #===============================================================================
 class PokeBattle_Move_TwoTurnAttackChargeRaiseUserAtk2 < PokeBattle_TwoTurnMove

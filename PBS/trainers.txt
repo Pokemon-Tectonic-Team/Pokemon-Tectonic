@@ -8530,7 +8530,7 @@ Pokemon = RIBOMBEE,60
     AbilityIndex = 0 # Karma
     Item = FOCUSSASH
 Pokemon = KINGDRA,60
-    Moves = MURKYFOG,HYDROPUMP,SCOUR,WATERLOG
+    Moves = WAKEFULTIDE,HYDROPUMP,SCOUR,WATERLOG
     AbilityIndex = 1 # Cold-blooded
 #-------------------------------
 [POKEMONBREEDER_F4,Sara]
@@ -8768,7 +8768,7 @@ Pokemon = WEEZING,70
     AbilityIndex = 0 # Neutralizing Gas
     Item = LEFTOVERS
 Pokemon = KINGDRA,70
-    Moves = MURKYFOG,DREAMDANCE,SCALD,GALLINGSPIT
+    Moves = WAKEFULTIDE,DREAMDANCE,SCALD,GALLINGSPIT
     AbilityIndex = 0 # Serene Grace
 #-------------------------------
 [CRIMINALTEAM,Gianna and Rocco]
@@ -9593,7 +9593,7 @@ Pokemon = CLAYDOL,60
     AbilityIndex = 0 # Planar Veil
     Item = LIGHTCLAY
 Pokemon = KINGDRA,60
-    Moves = MURKYFOG,DRACOMETEOR,SNIPESHOT,WATERLOG
+    Moves = WAKEFULTIDE,DRACOMETEOR,SNIPESHOT,WATERLOG
     AbilityIndex = 1 # Cold-blooded
     Item = LEFTOVERS
 Pokemon = KINGAMBIT,60

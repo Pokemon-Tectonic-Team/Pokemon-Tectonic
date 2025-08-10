@@ -1405,19 +1405,6 @@ EffectChance = 30
 Description = The user envelops the target in a foul wind. It has a 30% chance to poison.
 Animation = SMOG
 #-------------------------------
-[MURKYFOG]
-Name = Murky Fog
-Type = POISON
-Category = Special
-Power = 85
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = ResetTargetStatSteps
-Flags = CanProtect
-Description = The user attacks with a pitch black fog. All of the target's stat changes are returned to normal.
-Animation = SMOKESCREEN
-#-------------------------------
 [NASTYNIP]
 Name = Nasty Nip
 Type = POISON
@@ -4460,6 +4447,19 @@ FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit,Blade
 Description = The user uses a jet of water like a sword and attacks by slashing. Can random critical hit.
 Animation = LIQUIDATION
+#-------------------------------
+[WAKEFULTIDE]
+Name = Wakeful Tide
+Type = WATER
+Category = Special
+Power = 120
+Accuracy = 100
+TotalPP = 8
+Target = NearOther
+FunctionCode = TwoTurnAttackChargeSleep
+Flags = CanProtect
+Description = The user charges and cures itself of non-volatile status conditions by sleeping on the first turn, then wakes to unleash the tides.
+Animation = SURF
 #-------------------------------
 [WATERLOG]
 Name = Waterlog

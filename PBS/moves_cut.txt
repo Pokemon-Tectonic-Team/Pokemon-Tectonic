@@ -1221,6 +1221,19 @@ Flags = CanProtect,Sound
 EffectChance = 30
 Description = The user creates distorted guitar sounds to attack the target. It has a 30% chance to dizzy.
 #-------------------------------
+[MURKYFOG]
+Name = Murky Fog
+Type = POISON
+Category = Special
+Power = 85
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user attacks with a pitch black fog. All of the target's stat changes are returned to normal.
+Animation = SMOKESCREEN
+#-------------------------------
 [POISONPOWDER]
 Name = Poison Powder
 Type = POISON
