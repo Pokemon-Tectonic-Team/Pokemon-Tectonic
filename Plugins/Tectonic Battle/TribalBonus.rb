@@ -13,7 +13,7 @@ class TribalBonus
         @tribesGivingBonus = []
         # Reset all counts
         GameData::Tribe.each do |tribe|
-            next if !$DEBUG and tribe.id.start_with?("DEBUG_") # skip debug tribes if not in debug mode
+            next if !$DEBUG && tribe.id.start_with?("DEBUG_") # skip debug tribes if not in debug mode
             @tribeCounts[tribe.id] = 0
         end
     end
