@@ -972,9 +972,9 @@ Category = Special
 Power = 65
 Accuracy = 0
 TotalPP = 15
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = AlwaysHits
-Description = Star-shaped rays are shot at the opposing team. Can't miss and skips protections.
+Description = Star-shaped rays are shot at the target. Can't miss and skips protections.
 #-------------------------------
 [TACKLE]
 Name = Tackle
@@ -1851,7 +1851,7 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 25
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = LowerTargetSpDef1
 Flags = CanProtect
 EffectChance = 20
@@ -2172,7 +2172,7 @@ Accuracy = 0
 TotalPP = 5
 Target = BothSides
 FunctionCode = StartGravity5
-Description = Gravity is intensified for five turns, forcing Pokémon down from the air and doubling all move Accuracy.
+Description = Gravity is intensified for five turns, grounding all Pokémon, doubling their weight, and doubling all move Accuracy.
 #-------------------------------
 [LANDSWRATH]
 Name = Land's Wrath
@@ -3188,10 +3188,10 @@ Category = Physical
 Power = 1
 Accuracy = 100
 TotalPP = 10
-Target = NearOther
+Target = AllNearFoes
 FunctionCode = ScalesHeavierThanTarget
 Flags = CanProtect
-Description = The user slams into the foe with its heavy body. The heavier the user, the greater the damage.
+Description = The user slams into the opposing side with its heavy body. The heavier the user, the greater the damage.
 #-------------------------------
 [IRONDEFENSE]
 Name = Iron Defense
@@ -3624,10 +3624,10 @@ Category = Physical
 Power = 1
 Accuracy = 100
 TotalPP = 10
-Target = NearOther
+Target = AllNearFoes
 FunctionCode = ScalesHeavierThanTarget
 Flags = CanProtect
-Description = The user slams the foe with its flaming body. The heavier the user is, the greater the damage.
+Description = The user slams the opposing side with its flaming body. The heavier the user is, the greater the damage.
 #-------------------------------
 [HEATWAVE]
 Name = Heat Wave
@@ -3826,11 +3826,11 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 25
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = LowerTargetSpd1
 Flags = CanProtect
 EffectChance = 20
-Description = A spray of bubbles is jetted at all near foes. This has a 20% chance to lower their Speed.
+Description = A spray of bubbles is jetted at the target. This has a 20% chance to lower their Speed.
 #-------------------------------
 [BUBBLEBEAM]
 Name = Bubble Beam
@@ -5432,7 +5432,7 @@ Category = Special
 Power = 40
 Accuracy = 100
 TotalPP = 20
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = Frostbite
 Flags = CanProtect,Wind
 EffectChance = 10
@@ -6223,10 +6223,10 @@ Category = Special
 Power = 40
 Accuracy = 0
 TotalPP = 12
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = AlwaysHits
 Flags = Sound
-Description = The user does emotional damage to foes. Can't miss and skips protections.
+Description = The user does emotional damage to the target. Can't miss and skips protections.
 #-------------------------------
 [DRAININGKISS]
 Name = Draining Kiss

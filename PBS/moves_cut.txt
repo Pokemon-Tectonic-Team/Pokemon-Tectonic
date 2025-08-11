@@ -104,6 +104,19 @@ Flags = CanProtect,Sound
 Description = The user attacks in an uproar for three turns. Over that time, no one can fall asleep.
 Animation = UPROAR
 #-------------------------------
+[CLOUDBREAK]
+Name = Cloudbreak
+Type = NORMAL
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = A tremendous strike that clears any active weather.
+Animation = STRENGTH
+#-------------------------------
 [COMETPUNCH]
 Name = Comet Punch
 Type = NORMAL
@@ -210,6 +223,19 @@ Target = User
 FunctionCode = Invalid
 Flags = CanSnatch
 Description = The user curls up to conceal weak spots and raise both of its defensive stats.
+#-------------------------------
+[DISSIPATION]
+Name = Dissipation
+Type = NORMAL
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = An unusual shockwave that breaks down all active Rooms.
+Animation = SUPERSONIC
 #-------------------------------
 [DOUBLEDOWN]
 Name = Double Down
@@ -937,6 +963,18 @@ FunctionCode = Invalid
 Flags = CanProtect,Kicking
 EffectChance = 40
 Description = The user lashes out with a quick, spinning kick. It has a 40% chance to make the target flinch.
+#-------------------------------
+[SCYTHEKICK]
+Name = Scythe Kick
+Type = FIGHTING
+Category = Physical
+Power = 95
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,Kicking
+Description = The user kicks the target with a powerful, arcing technique.
 #-------------------------------
 [SEISMICTOSS]
 Name = Seismic Toss
@@ -1879,6 +1917,20 @@ FunctionCode = Invalid
 Flags = CanProtect
 EffectChance = 100
 Description = The user entangles the target with its anchor chain. The target becomes unable to flee.
+#-------------------------------
+[BULLETTRAIN]
+Name = Bullet Train
+Type = STEEL
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+EffectChance = 20
+Description = The user becomes a pain train. It has a 20% chance to raise the user's Speed.
+Animation = HEAVYSLAM
 #-------------------------------
 [GEARUP]
 Name = Gear Up
@@ -3078,6 +3130,19 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect
 Description = The target is attacked with an odd psychic wave. The attack varies in intensity.
+#-------------------------------
+[SEERSTRIKE]
+Name = Seer Strike
+Type = PSYCHIC
+Category = Physical
+Power = 90
+Accuracy = 0
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user perfectly predicts the target's future location, then strikes. It lands without fail.
+Animation = ZENHEADBUTT
 #-------------------------------
 [SPEEDSWAP]
 Name = Speed Swap

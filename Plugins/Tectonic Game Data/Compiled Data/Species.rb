@@ -696,6 +696,15 @@ module Compiler
                             move_array.sort! { |a, b| (a[0] == b[0]) ? a[2] <=> b[2] : a[0] <=> b [0] }
                             move_array.each { |arr| arr.pop }
                             contents[key] = move_array
+
+                            levelUpSet = []
+                            move_array.each do |levelUpEntry|
+                                if levelUpSet.include?(levelUpEntry[1])
+                                    echoln("WARNING: Level up learnset of species #{species_symbol} contains duplicate value #{levelUpEntry[1]}")
+                                else
+                                    levelUpSet.push(levelUpEntry[1])
+                                end
+                            end
                         when "TutorMoves", "EggMoves", "LineMoves", "Abilities", "HiddenAbility"
                             contents[key] = [contents[key]] unless contents[key].is_a?(Array)
                             contents[key].compact!

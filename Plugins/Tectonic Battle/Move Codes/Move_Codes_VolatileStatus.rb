@@ -290,7 +290,7 @@ class PokeBattle_Move_DisableTargetUsingDifferentMove4 < PokeBattle_Move
     def getTargetAffectingEffectScore(user, target)
         return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
         score = 60
-        score += 40 if @battle.pbIsTrapped?(target.index)
+        score += 40 if target.trapped?
         userSpeed = user.pbSpeed(true, move: self)
         targetSpeed = target.pbSpeed(true)
         if userSpeed > targetSpeed
