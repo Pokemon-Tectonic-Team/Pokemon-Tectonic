@@ -59,7 +59,7 @@ BattleHandlers::CriticalCalcUserAbility.add(:VICTORYSTAR,
   }
 )
 
-BattleHandlers::CriticalCalcUserAbility.add(:TEATIME,
+BattleHandlers::CriticalCalcUserAbility.add(:CAFFEINERUSH,
   proc { |ability, user, _target, _move, c|
       next c + 1 if user.battle.icy?
   }

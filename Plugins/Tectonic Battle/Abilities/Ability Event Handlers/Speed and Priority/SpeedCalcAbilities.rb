@@ -192,7 +192,7 @@ BattleHandlers::SpeedCalcAbility.add(:FOREMAN,
   }
 )
 
-BattleHandlers::SpeedCalcAbility.add(:TEATIME,
+BattleHandlers::SpeedCalcAbility.add(:CAFFEINERUSH,
   proc { |ability, battler, mult|
       next mult * 1.5 if battler.battle.icy?
   }

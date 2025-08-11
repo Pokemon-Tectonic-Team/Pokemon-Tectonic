@@ -269,6 +269,11 @@ Description = Has a 30% chance to burn targets when using physical moves.
 Name = Burn Skill
 Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
+[CAFFEINERUSH]
+Name = Caffeine Rush
+Description = During hail, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
+Flags = HailSynergy
+#-------------------------------
 [CANDYVEIL]
 Name = Candy Veil
 Description = Prevents itself and allies from being poisoned, leeched, or waterlogged.
@@ -2059,11 +2064,6 @@ Description = Draws in attacks from enemies with below half health.
 [TEAMPLAYER]
 Name = Team Player
 Description = Deals 25% more move damage for each ally in battle.
-#-------------------------------
-[TEATIME]
-Name = Tea Time
-Description = During hail, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
-Flags = HailSynergy
 #-------------------------------
 [TEMPORALDISTORTION]
 Name = Temporal Distortion
