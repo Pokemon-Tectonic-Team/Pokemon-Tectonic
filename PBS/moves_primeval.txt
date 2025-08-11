@@ -318,7 +318,7 @@ TotalPP = 1
 Target = BothSides
 FunctionCode = GroudonStartGravityDoubleAllWeight
 Flags = AvatarSignature
-Description = A move that only the avatar of Groudon can use. For the rest of the battle, gravity is intensified and Pokemon have their weight doubled.
+Description = A move that only the avatar of Groudon can use. Gravity is intensified for the rest of the battle.
 #-------------------------------
 #		ROCK MOVES
 #-------------------------------
