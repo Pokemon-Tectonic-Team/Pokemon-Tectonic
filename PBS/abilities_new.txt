@@ -944,6 +944,10 @@ Name = High-rise
 Description = The Pokémon and its allies are immune to weather downsides.
 Flags = AllWeatherSynergy
 #-------------------------------
+[HIVEMIND]
+Name = Hive Mind
+Description = Powers up Bug-type moves of itself and its allies by 50%.
+#-------------------------------
 [HOLIDAYCHEER]
 Name = Holiday Cheer
 Description = When entering battle, heals self and allies for 25% of their max health.
@@ -2056,6 +2060,11 @@ Description = Draws in attacks from enemies with below half health.
 Name = Team Player
 Description = Deals 25% more move damage for each ally in battle.
 #-------------------------------
+[TEATIME]
+Name = Tea Time
+Description = During hail, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
+Flags = HailSynergy
+#-------------------------------
 [TEMPORALDISTORTION]
 Name = Temporal Distortion
 Description = Every 3 turns it gets to move twice.
@@ -2294,7 +2303,3 @@ Description = Uses Dragon Dance if an attack lowers its HP to half or below.
 [WREAKHAVOC]
 Name = Wreak Havoc
 Description = Boosts the power of rampaging moves by 30%, and makes them physical or special based on which would be more effective.
-#-------------------------------
-[HIVEMIND]
-Name = Hive Mind
-Description = Powers up Bug-type moves of itself and its allies by 50%.

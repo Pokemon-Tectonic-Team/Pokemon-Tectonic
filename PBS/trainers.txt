@@ -8873,7 +8873,7 @@ Pokemon = AMPHAROS,70
     EV = 20,0,5,20,0,5
 Pokemon = ORBEETLE,70
     Moves = ECLIPSE,MINDSAP,BUGBUZZ,BODYPRESS
-    AbilityIndex = 1 # Tractor Beam
+    AbilityIndex = 1 # Hive Mind
     Item = COLBURBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,0,0,10
