@@ -204,8 +204,6 @@ class PokeBattle_Move_RaiseUserSpd4 < PokeBattle_StatUpMove
     end
 end
 
-# Empowered Bullet Train
-
 # Empowered Rock Polish
 class PokeBattle_Move_EmpoweredRockPolish < PokeBattle_StatUpMove
     include EmpoweredMove

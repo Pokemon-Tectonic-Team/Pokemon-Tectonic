@@ -83,9 +83,6 @@ GameData::BattleEffect.register_effect(:Field, {
     :disable_proc => proc do |battle, _battler|
         battle.pbDisplay(_INTL("Gravity was forced back to normal!"))
     end,
-    :expire_proc => proc do |battle, _battler|
-        battle.pbDisplay(_INTL("Gravity returned to normal."))
-    end,
 })
 
 GameData::BattleEffect.register_effect(:Field, {
