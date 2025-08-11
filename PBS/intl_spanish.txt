@@ -42838,7 +42838,7 @@ Rust & Wrack
 Ancla Oxidada
 Steam Power
 Comburente
-Sapper
+Pit Fighter
 Zapador
 Sickening
 Nauseabundo

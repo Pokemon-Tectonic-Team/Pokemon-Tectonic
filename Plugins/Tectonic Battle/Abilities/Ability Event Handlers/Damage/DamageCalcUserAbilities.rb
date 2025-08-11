@@ -853,7 +853,7 @@ BattleHandlers::DamageCalcUserAbility.add(:TERRORIZE,
   }
 )
 
-BattleHandlers::DamageCalcUserAbility.add(:SAPPER,
+BattleHandlers::DamageCalcUserAbility.add(:PITFIGHTER,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if target.trapped?
       mults[:base_damage_multiplier] *= 1.3

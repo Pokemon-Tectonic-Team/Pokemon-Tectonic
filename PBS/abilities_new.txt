@@ -182,10 +182,6 @@ Name = Big Boss
 Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
 Flags = FlinchImmunity
 #-------------------------------
-[COLDBLOODED]
-Name = Cold-blooded
-Description = Its attacks are critical against frostbitten targets.
-#-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
 Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.
@@ -337,9 +333,9 @@ Name = Clumsy Kinesis
 Description = Can hold two items, but drops one when swapping out.
 Flags = MultipleItems
 #-------------------------------
-[STERN]
-Name = Stern
-Description = Its attacks are critical against waterlogged targets.
+[COLDBLOODED]
+Name = Cold-blooded
+Description = Its attacks are critical against frostbitten targets.
 #-------------------------------
 [COLDCALCULATION]
 Name = Cold Calculation
@@ -1477,6 +1473,10 @@ Description = The Pokémon's moves deal 50% more damage if they're a different t
 Name = Pin Down
 Description = The user's moves cannot miss against trapped targets.
 #-------------------------------
+[PITFIGHTER]
+Name = Pit Fighter
+Description = Deals 30% more damage to trapped foes.
+#-------------------------------
 [PLACIDITY]
 Name = Placidity
 Description = Takes no damage from non-volatile status conditions.
@@ -1709,10 +1709,6 @@ Name = Sandworn Auger
 Description = During sandstorm, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
 Flags = SandstormSynergy
 #-------------------------------
-[SAPPER]
-Name = Sapper
-Description = Deals 30% more damage to trapped foes.
-#-------------------------------
 [SATURATER]
 Name = Saturater
 Description = Special moves have a 30% chance to waterlog targets.
@@ -1935,6 +1931,10 @@ Description = Immune to Steel-type moves and restores 25% of max HP if hit by on
 [STEEPFLYING]
 Name = Steep Flying
 Description = Fly and Dive Bomb deal 50% more damage.
+#-------------------------------
+[STERN]
+Name = Stern
+Description = Its attacks are critical against waterlogged targets.
 #-------------------------------
 [STICKYFINGERS]
 Name = Sticky Fingers

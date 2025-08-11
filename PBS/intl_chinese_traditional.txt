@@ -39501,7 +39501,7 @@ Sand Sniper
 沙狙
 Sandworn Auger
 山地螺旋鑽
-Sapper
+Pit Fighter
 掘沙
 Saturater
 飽和者

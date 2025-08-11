@@ -1123,7 +1123,7 @@ Pokemon = ALAKAZAM,70
     EV = 10,20,0,20,20,0
 Pokemon = DUGTRIO,70
     Moves = ROTARYHEADBUTT,GRINDSTONE,PROPELLANT,DISTURB
-    AbilityIndex = 1 # Sapper
+    AbilityIndex = 1 # Pit Fighter
     Item = CHOICEBAND
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0

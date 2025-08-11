@@ -1943,6 +1943,18 @@ FunctionCode = Invalid
 Flags = CanSnatch
 Description = The user engages its gears to raise the Attack and Sp. Atk of allies with the Plus or Minus Ability.
 #-------------------------------
+[IRONTAIL]
+Name = Iron Tail
+Type = STEEL
+Category = Physical
+Power = 115
+Accuracy = 80
+TotalPP = 12
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The target is slammed with a steel-hard tail.
+#-------------------------------
 [JOUST]
 Name = Joust
 Type = STEEL
@@ -3769,15 +3781,3 @@ FunctionCode = Invalid
 Flags = CanProtect,Sound
 Description = The target is put to sleep, and the user's Attack is raised. Fails unless the target is at or below half health.
 Animation = SING
-#-------------------------------
-[IRONTAIL]
-Name = Iron Tail
-Type = STEEL
-Category = Physical
-Power = 115
-Accuracy = 80
-TotalPP = 12
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect
-Description = The target is slammed with a steel-hard tail.
