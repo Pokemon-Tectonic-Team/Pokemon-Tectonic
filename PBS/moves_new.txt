@@ -281,7 +281,7 @@ Accuracy = 100
 TotalPP = 10
 Target = AllNearOthers
 FunctionCode = Basic
-Flags = CanProtect
+Flags = CanProtect,Blade
 Description = The user slashes broadly, cleanly slicing all nearby battlers.
 Animation = SLASH
 #-------------------------------
