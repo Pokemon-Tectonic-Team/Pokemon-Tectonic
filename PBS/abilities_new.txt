@@ -182,8 +182,8 @@ Name = Big Boss
 Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
 Flags = FlinchImmunity
 #-------------------------------
-[BITTER]
-Name = Bitter
+[COLDBLOODED]
+Name = Cold-blooded
 Description = Its attacks are critical against frostbitten targets.
 #-------------------------------
 [BITTERCOLD]
@@ -337,8 +337,8 @@ Name = Clumsy Kinesis
 Description = Can hold two items, but drops one when swapping out.
 Flags = MultipleItems
 #-------------------------------
-[COLDBLOODED]
-Name = Cold-blooded
+[STERN]
+Name = Stern
 Description = Its attacks are critical against waterlogged targets.
 #-------------------------------
 [COLDCALCULATION]

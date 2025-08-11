@@ -2134,7 +2134,7 @@ Pokemon = PROBOPASS,70
     EV = 20,20,10,0,20,0
 Pokemon = MBEAUTIFLY,70
     Moves = UTURN,PSYCHIC,INFINITEFORCE,ICYINJECTION
-    AbilityIndex = 0 # Bitter
+    AbilityIndex = 0 # Cold-blooded
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
