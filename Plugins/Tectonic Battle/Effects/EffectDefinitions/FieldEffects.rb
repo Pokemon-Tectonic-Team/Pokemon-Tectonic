@@ -32,7 +32,7 @@ GameData::BattleEffect.register_effect(:Field, {
     :ticks_down => true,
     :apply_proc => proc do |battle, _value|
         battle.pbDisplay(_INTL("Gravity intensified!"))
-        battle.pbDisplay(_INTL("Everyone is twice as accurate!"))
+        battle.pbDisplay(_INTL("Everyone is twice as accurate and weighs twice as much!"))
         battle.eachBattler do |b|
             showMessage = false
             if b.inTwoTurnSkyAttack?
@@ -59,10 +59,11 @@ GameData::BattleEffect.register_effect(:Field, {
 
 GameData::BattleEffect.register_effect(:Field, {
     :id => :WarpingCore,
-    :real_name => "Warped Core",
+    :real_name => "Intense Gravity",
     :apply_proc => proc do |battle, _value|
-        battle.pbDisplay(_INTL("Gravity was extremely warped!"))
+        battle.pbDisplay(_INTL("Gravity intensified!"))
         battle.pbDisplay(_INTL("Everyone is twice as accurate and weighs twice as much!"))
+        battle.pbDisplay(_INTL("This will last for the rest of the battle!"))
         battle.eachBattler do |b|
             showMessage = false
             if b.inTwoTurnSkyAttack?
@@ -80,7 +81,10 @@ GameData::BattleEffect.register_effect(:Field, {
         end
     end,
     :disable_proc => proc do |battle, _battler|
-        battle.pbDisplay(_INTL("The warped gravity was forced back to normal!"))
+        battle.pbDisplay(_INTL("Gravity was forced back to normal!"))
+    end,
+    :expire_proc => proc do |battle, _battler|
+        battle.pbDisplay(_INTL("Gravity returned to normal."))
     end,
 })
 
