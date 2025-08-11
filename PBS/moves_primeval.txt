@@ -64,6 +64,18 @@ Flags = CanProtect,Empowered
 Description = The user copies and gains the first ability of each foe.
 Animation = ROLEPLAY
 #-------------------------------
+[PRIMEVALWORKUP]
+Name = Primeval Work Up
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = EmpoweredWorkUp
+Flags = Empowered
+Description = The user is roused, giving it the ability to use an extra move each turn.
+Animation = WORKUP
+#-------------------------------
 [PRIMEVALYAWN]
 Name = Primeval Yawn
 Type = NORMAL
