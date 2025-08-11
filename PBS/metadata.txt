@@ -488,7 +488,6 @@ Environment = Grass
 Outdoor = false
 ShowArea = false
 Bicycle = false
-HealingSpot = 59,26,20
 #-------------------------------
 [062]
 # Novo Gym
