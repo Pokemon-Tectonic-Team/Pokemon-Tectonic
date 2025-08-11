@@ -222,7 +222,7 @@ Description = Lays a hazard of levitating stones around the opponent when its HP
 #-------------------------------
 [BOUNCEBACK]
 Name = Bounce Back
-Description = When hit with an attack, uses Pain Split on the attacker.
+Description = When hit with an attack, uses Pain Split on the attacker if its HP is lower than the attacker.
 #-------------------------------
 [BRAINSCRAMBLE]
 Name = Brain Scramble
