@@ -861,3 +861,12 @@ BattleHandlers::DamageCalcUserAbility.add(:SAPPER,
     end
   }
 )
+
+BattleHandlers::DamageCalcUserAbility.add(:HIVEMIND,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if type == :BUG
+      mults[:base_damage_multiplier] *= 1.5
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)

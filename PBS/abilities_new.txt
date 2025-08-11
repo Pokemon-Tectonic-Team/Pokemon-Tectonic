@@ -2294,3 +2294,7 @@ Description = Uses Dragon Dance if an attack lowers its HP to half or below.
 [WREAKHAVOC]
 Name = Wreak Havoc
 Description = Boosts the power of rampaging moves by 30%, and makes them physical or special based on which would be more effective.
+#-------------------------------
+[HIVEMIND]
+Name = Hive Mind
+Description = Powers up Bug-type moves of itself and its allies by 50%.
