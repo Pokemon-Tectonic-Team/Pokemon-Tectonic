@@ -122,7 +122,7 @@ Pokemon = THIEVUL,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 Pokemon = SALAMENCE,70
-    Moves = OUTRAGE,EARTHQUAKE,STRAFE,IRONTAIL
+    Moves = OUTRAGE,EARTHQUAKE,STRAFE,POWERHAMMER
     AbilityIndex = 0 # Intimidate
     Item = CHOICESCARF
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -682,7 +682,7 @@ Pokemon = TOGEDEMARU,70
     EV = 12,20,0,18,20,0
 Pokemon = KINGDRA,70
     Moves = BUBBLEBLASTER,SLUDGEWAVE,DRACOMETEOR,BLIZZARD
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 0 # Serene Grace
     Item = AIRBALLOON
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
@@ -1123,7 +1123,7 @@ Pokemon = ALAKAZAM,70
     EV = 10,20,0,20,20,0
 Pokemon = DUGTRIO,70
     Moves = ROTARYHEADBUTT,GRINDSTONE,PROPELLANT,DISTURB
-    AbilityIndex = 1 # Sapper
+    AbilityIndex = 1 # Pit Fighter
     Item = CHOICEBAND
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -1583,7 +1583,7 @@ Pokemon = CHARIZARD,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = FURRET,70
-    Moves = UNDERMINE,UTURN,IRONTAIL,GLACIALRAM
+    Moves = UNDERMINE,UTURN,POWERHAMMER,GLACIALRAM
     AbilityIndex = 1 # Slinky
     Item = CRYSTALVEIL
     ItemType = GROUND
@@ -2134,7 +2134,7 @@ Pokemon = PROBOPASS,70
     EV = 20,20,10,0,20,0
 Pokemon = MBEAUTIFLY,70
     Moves = UTURN,PSYCHIC,INFINITEFORCE,ICYINJECTION
-    AbilityIndex = 0 # Bitter
+    AbilityIndex = 0 # Cold-blooded
     Item = HEAVYDUTYBOOTS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -2509,7 +2509,7 @@ Pokemon = MNOCTOWL,70
     EV = 20,12,0,8,12,10
 Pokemon = KINGDRA,70
     Moves = DRACOMETEOR,BLIZZARD,BUBBLEBLASTER,SLUDGEWAVE
-    AbilityIndex = 1 # Gyre Spinner
+    AbilityIndex = 0 # Serene Grace
     Item = LIFEORB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0

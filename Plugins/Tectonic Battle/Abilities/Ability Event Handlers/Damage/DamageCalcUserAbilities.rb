@@ -852,3 +852,21 @@ BattleHandlers::DamageCalcUserAbility.add(:TERRORIZE,
     user.aiLearnsAbility(ability) unless aiCheck
   }
 )
+
+BattleHandlers::DamageCalcUserAbility.add(:PITFIGHTER,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if target.trapped?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:HIVEMIND,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if type == :BUG
+      mults[:base_damage_multiplier] *= 1.5
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)

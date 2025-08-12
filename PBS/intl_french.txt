@@ -47321,8 +47321,8 @@ Berry Bunch
 Berry Bunch
 Big Boss
 Big Boss
-Bitter
-Bitter
+Cold-blooded
+Cold-blooded
 Bitter Cold
 Bitter Cold
 Bizarre
@@ -47963,8 +47963,8 @@ Sand Sniper
 Sand Sniper
 Sandworn Auger
 Sandworn Auger
-Sapper
-Sapper
+Pit Fighter
+Pit Fighter
 Saturnal Sky
 Saturnal Sky
 Scalding Smoke

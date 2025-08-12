@@ -47613,7 +47613,7 @@ Berry Bunch
 树果狂
 Big Boss
 大老板
-Bitter
+Cold-blooded
 严寒刺骨
 Bitter Cold
 严寒
@@ -48257,7 +48257,7 @@ Sand Sniper
 沙狙
 Sandworn Auger
 山地螺旋钻
-Sapper
+Pit Fighter
 军士长
 Saturnal Sky
 土星天

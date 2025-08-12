@@ -58,3 +58,9 @@ BattleHandlers::CriticalCalcUserAbility.add(:VICTORYSTAR,
       next c + 1
   }
 )
+
+BattleHandlers::CriticalCalcUserAbility.add(:CAFFEINERUSH,
+  proc { |ability, user, _target, _move, c|
+      next c + 1 if user.battle.icy?
+  }
+)
