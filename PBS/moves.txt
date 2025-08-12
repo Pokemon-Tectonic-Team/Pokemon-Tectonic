@@ -849,7 +849,6 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = FailsIfUserNotAsleep
 Flags = CanProtect,Sound,Uninvocable
-EffectChance = 50
 Description = An attack that can be used only if the user is asleep.
 #-------------------------------
 [SOFTBOILED]
@@ -1913,9 +1912,8 @@ Power = 90
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = Poison
+FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit,Blade
-EffectChance = 20
 Description = A slashing attack with a poisonous blade. Can random critical hit.
 #-------------------------------
 [GUNKSHOT]
@@ -2013,8 +2011,8 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = CategoryDependsOnHigherDamagePoisonTarget
 Flags = CanProtect
-EffectChance = 25
-Description = Inflicts physical or special damage, whichever will be more effective. This has a 25% chance to poison.
+EffectChance = 30
+Description = Inflicts physical or special damage, whichever will be more effective. This has a 30% chance to poison.
 #-------------------------------
 [SLUDGE]
 Name = Sludge
@@ -2971,7 +2969,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDef3
 Flags = CanProtect
-EffectChance = 20
+EffectChance = 100
 Description = The user beats the target with a bone containing a spirit. This lowers their Defense by three steps.
 #-------------------------------
 [SHADOWCLAW]
@@ -3602,8 +3600,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = RecoilThirdOfDamageDealt
 Flags = CanProtect
-EffectChance = 10
-Description = The user runs at the foe while on fire. The user also takes 33% recoil. This has a 10% chance to burn.
+Description = The user runs at the foe while on fire. The user also takes 33% recoil.
 #-------------------------------
 [FUSIONFLARE]
 Name = Fusion Flare
@@ -4015,16 +4012,6 @@ Flags = CanProtect,Sound
 EffectChance = 100
 Description = The user bursts into song, emitting many bubbles. Any burning Pokémon will be healed by these bubbles.
 #-------------------------------
-[SPLASH]
-Name = Splash
-Type = WATER
-Category = Status
-Accuracy = 0
-TotalPP = 30
-Target = User
-FunctionCode = DoesNothingUnusableInGravity
-Description = The user just flops and splashes around to no effect at all...
-#-------------------------------
 [STEAMERUPTION]
 Name = Steam Eruption
 Type = WATER
@@ -4223,6 +4210,20 @@ FunctionCode = LowerTargetSpd2
 Flags = CanProtect
 EffectChance = 100
 Description = The user controls the drum's roots to attack the target. This also lowers the target's Speed stat by two steps.
+#-------------------------------
+[ENERGYBALL]
+Name = Energy Ball
+Type = GRASS
+Category = Special
+Power = 90
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = RaiseUserSpAtk1
+Flags = CanProtect,Pulse
+EffectChance = 20
+Description = The user attacks with the essence of life. It has a 20% chance to raise user's Sp. Atk.
+Animation = ENERGYBALL
 #-------------------------------
 [FRENZYPLANT]
 Name = Frenzy Plant
@@ -4529,7 +4530,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = Numb
 Flags = CanProtect
-EffectChance = 20
+EffectChance = 30
 Description = The user launches at its foe, surrounding itself with lightning. It has a 30% chance to numb.
 #-------------------------------
 [CHARGE]
@@ -4773,10 +4774,9 @@ Power = 120
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = RecoilThirdOfDamageDealtNumbTarget
+FunctionCode = RecoilThirdOfDamageDealt
 Flags = CanProtect
-EffectChance = 10
-Description = The user lunges at the foe while electrified. The user also takes 33% recoil. This has a 10% chance to numb.
+Description = The user lunges at the foe while electrified. The user also takes 33% recoil.
 #-------------------------------
 [WILDBOLTSTORM]
 Name = Wildbolt Storm
@@ -4955,8 +4955,8 @@ TotalPP = 20
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect
-EffectChance = 50
-Description = The user unleashes a vicious blow after a cute act. It has a 50% chance to cause flinching.
+EffectChance = 40
+Description = The user unleashes a vicious blow after a cute act. It has a 40% chance to cause flinching.
 #-------------------------------
 [HEARTSWAP]
 Name = Heart Swap
@@ -5261,7 +5261,7 @@ Target = AllNearFoes
 FunctionCode = FrostbiteTargetAlwaysHitsInHail
 Flags = CanProtect,Wind
 EffectChance = 30
-Description = A blizzard strikes all near foes. Can't miss in hail. 30% chance to frostbite.
+Description = A blizzard strikes all near foes. Can't miss in hail. It has a 30% chance to frostbite.
 #-------------------------------
 [FREEZESHOCK]
 Name = Freeze Shock
@@ -5667,8 +5667,8 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = Flinch
 Flags = CanProtect,Wind
-EffectChance = 30
-Description = A small tornado hits the target. It has a 30% chance to make targets flinch.
+EffectChance = 40
+Description = A small tornado hits the target. It has a 40% chance to make targets flinch.
 #-------------------------------
 #		DARK MOVES
 #-------------------------------

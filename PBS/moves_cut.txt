@@ -2284,6 +2284,16 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = The user shoots a torrent of water at the target and changes the target's type to Water.
 #-------------------------------
+[SPLASH]
+Name = Splash
+Type = WATER
+Category = Status
+Accuracy = 0
+TotalPP = 30
+Target = User
+FunctionCode = Invalid
+Description = The user just flops and splashes around to no effect at all...
+#-------------------------------
 [TIDALKINESIS]
 Name = Tidalkinesis
 Type = WATER
