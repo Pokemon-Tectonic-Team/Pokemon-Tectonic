@@ -341,6 +341,15 @@ BattleHandlers::TargetAbilityOnHit.add(:WIBBLEWOBBLE,
   }
 )
 
+BattleHandlers::TargetAbilityOnHit.add(:BOUNCEBACK,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless user.hp > target.hp
+        next if target.fainted?
+        next -20 if aiCheck
+        battle.forceUseMove(target, :PAINSPLIT, user.index, ability: ability)
+  }
+)
+
 BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
@@ -348,8 +357,24 @@ BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
         next -30 if aiCheck
         next if user.effectActive?(:Trapping)
         next if user.effectActive?(:Constricted)
+        next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
         user.applyEffect(:Constricted, 3)
+        user.pointAt(:TrappingUser, target)
+        battle.pbHideAbilitySplash(target)
+  }
+)
+
+BattleHandlers::TargetAbilityOnHit.add(:MAGNETTRAP,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next unless move.specialMove?
+        next if target.fainted?
+        next -30 if aiCheck
+        next if user.effectActive?(:Trapping)
+        next if user.effectActive?(:Magnetized)
+        next if target.effectActive?(:SwitchedIn)
+        battle.pbShowAbilitySplash(target, ability)
+        user.applyEffect(:Magnetized, 3)
         user.pointAt(:TrappingUser, target)
         battle.pbHideAbilitySplash(target)
   }

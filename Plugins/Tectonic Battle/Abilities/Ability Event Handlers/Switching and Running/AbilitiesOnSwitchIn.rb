@@ -841,14 +841,6 @@ BattleHandlers::AbilityOnSwitchIn.add(:GYRESPINNER,
   }
 )
 
-BattleHandlers::AbilityOnSwitchIn.add(:SAPPER,
-  proc { |ability, battler, battle, aiCheck|
-      next entryTrappingAbility(ability, battler, battle, :SANDTOMB, aiCheck: aiCheck) { |trappedFoe|
-        _INTL("{1} became trapped in the sand!", trappedFoe.pbThis)
-      }
-  }
-)
-
 BattleHandlers::AbilityOnSwitchIn.add(:SUSTAINABLE,
   proc { |ability, battler, battle, aiCheck|
       next 0 unless battler.recyclableItem
