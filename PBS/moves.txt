@@ -3217,18 +3217,6 @@ Flags = CanProtect
 EffectChance = 40
 Description = The foe slams the target with its steel-hard head. It has a 40% chance to make the target flinch.
 #-------------------------------
-[IRONTAIL]
-Name = Iron Tail
-Type = STEEL
-Category = Physical
-Power = 115
-Accuracy = 80
-TotalPP = 12
-Target = NearOther
-FunctionCode = Basic
-Flags = CanProtect
-Description = The target is slammed with a steel-hard tail.
-#-------------------------------
 [KINGSSHIELD]
 Name = King's Shield
 Type = STEEL

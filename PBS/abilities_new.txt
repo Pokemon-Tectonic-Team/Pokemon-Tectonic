@@ -182,10 +182,6 @@ Name = Big Boss
 Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
 Flags = FlinchImmunity
 #-------------------------------
-[BITTER]
-Name = Bitter
-Description = Its attacks are critical against frostbitten targets.
-#-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
 Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.
@@ -219,6 +215,10 @@ Description = Heals from trapping damage it deals. Takes 25% less damage from Po
 [BOULDERNEST]
 Name = Boulder Nest
 Description = Lays a hazard of levitating stones around the opponent when its HP is lowered below half.
+#-------------------------------
+[BOUNCEBACK]
+Name = Bounce Back
+Description = When hit with an attack, uses Pain Split on the attacker if its HP is lower than the attacker.
 #-------------------------------
 [BRAINSCRAMBLE]
 Name = Brain Scramble
@@ -264,6 +264,11 @@ Description = Has a 30% chance to burn targets when using physical moves.
 [BURNSKILL]
 Name = Burn Skill
 Description = Has a 30% chance to burn targets when using special moves.
+#-------------------------------
+[CAFFEINERUSH]
+Name = Caffeine Rush
+Description = During hail, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
+Flags = HailSynergy
 #-------------------------------
 [CANDYVEIL]
 Name = Candy Veil
@@ -328,6 +333,10 @@ Name = Clumsy Kinesis
 Description = Can hold two items, but drops one when swapping out.
 Flags = MultipleItems
 #-------------------------------
+[COLDBLOODED]
+Name = Cold-blooded
+Description = Its attacks are critical against frostbitten targets.
+#-------------------------------
 [COLDCALCULATION]
 Name = Cold Calculation
 Description = Boosts Sp. Atk by 75%, but the Pokémon becomes frostbitten after attacking.
@@ -338,7 +347,7 @@ Description = Immune to Ice-type moves, and raises Attack and Sp. Atk if hit by 
 #-------------------------------
 [CONSTRICTOR]
 Name = Constrictor
-Description = When hit with a physical move, traps and damages the attacker for three turns.
+Description = When hit with a physical move, traps and damages the attacker for three turns. Fails on turns the user switched in.
 #-------------------------------
 [COREPROVENANCE]
 Name = Core Provenance
@@ -838,7 +847,7 @@ Description = Intensifies gravity for four turns when hit by an attack.
 #-------------------------------
 [GRIPSTRENGTH]
 Name = Grip Strength
-Description = Moves that bind the opponent deal 50% more damage (on the initial hit).
+Description = Moves that trap and damage the opponent for three turns deal 50% more damage on the initial hit.
 #-------------------------------
 [GRIT]
 Name = Grit
@@ -935,6 +944,10 @@ Flags = Immutable
 Name = High-rise
 Description = The Pokémon and its allies are immune to weather downsides.
 Flags = AllWeatherSynergy
+#-------------------------------
+[HIVEMIND]
+Name = Hive Mind
+Description = Powers up Bug-type moves of itself and its allies by 50%.
 #-------------------------------
 [HOLIDAYCHEER]
 Name = Holiday Cheer
@@ -1190,7 +1203,7 @@ Description = The Pokémon's Speed is doubled while using Sound-based moves.
 #-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
-Description = Traps foes whose Sp. Atk is less than its.
+Description = When hit with a special move, traps and damages the attacker for three turns. Fails on turns the user switched in.
 #-------------------------------
 [MALICE]
 Name = Malice
@@ -1342,7 +1355,7 @@ Description = Deals no damage to a target while they are using a status move.
 #-------------------------------
 [NOHOPE]
 Name = No Hope
-Description = Traps foes whose Attack is less than its.
+Description = Traps foes when they are below half health.
 #-------------------------------
 [NOXIOUS]
 Name = Noxious
@@ -1455,6 +1468,14 @@ Description = Whenever a foe raises their stats, the Pokémon follows suit.
 [PHASESHIFT]
 Name = Phase Shift
 Description = The Pokémon's moves deal 50% more damage if they're a different type than last.
+#-------------------------------
+[PINDOWN]
+Name = Pin Down
+Description = The user's moves cannot miss against trapped targets.
+#-------------------------------
+[PITFIGHTER]
+Name = Pit Fighter
+Description = Deals 30% more damage to trapped foes.
 #-------------------------------
 [PLACIDITY]
 Name = Placidity
@@ -1626,6 +1647,10 @@ Description = Heals 1/8th of its max HP each turn during sandstorm.
 Name = Rock Climber
 Description = Immune to Rock-type moves and to Stealth Rock, and raises Speed whenever one would hit it.
 #-------------------------------
+[ROLLINGBLOWS]
+Name = Rolling Blows
+Description = Takes 50% less damage while performing a move which charges up or exhausts the user.
+#-------------------------------
 [ROOTED]
 Name = Rooted
 Description = Gets 50% more healing from all sources.
@@ -1683,10 +1708,6 @@ Flags = SandstormSynergy
 Name = Sandworn Auger
 Description = During sandstorm, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
 Flags = SandstormSynergy
-#-------------------------------
-[SAPPER]
-Name = Sapper
-Description = Upon entry, traps each opponent in a sand tomb for two turns.
 #-------------------------------
 [SATURATER]
 Name = Saturater
@@ -1910,6 +1931,10 @@ Description = Immune to Steel-type moves and restores 25% of max HP if hit by on
 [STEEPFLYING]
 Name = Steep Flying
 Description = Fly and Dive Bomb deal 50% more damage.
+#-------------------------------
+[STERN]
+Name = Stern
+Description = Its attacks are critical against waterlogged targets.
 #-------------------------------
 [STICKYFINGERS]
 Name = Sticky Fingers
