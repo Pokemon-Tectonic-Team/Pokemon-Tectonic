@@ -111,6 +111,7 @@ def pbListScreenBlock(title,lister)
       lister.refresh(list.index)
       selectedmap = list.index
     end
+    searchListWindow(list) if Input.trigger?(Input::SPECIAL)
     if Input.trigger?(Input::ACTION)
       yield(Input::ACTION, lister.value(selectedmap))
       list.commands = lister.commands
