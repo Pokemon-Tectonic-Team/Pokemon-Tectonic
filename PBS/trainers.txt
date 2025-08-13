@@ -2250,7 +2250,7 @@ Pokemon = MAGCARGO,40
 #-------------------------------
 [LADY3,Kristiane]
 Pokemon = PIDGEOT,40
-    Moves = DUSTSTORM,AIRSLASH,GALLINGSPIT,SHOUT
+    Moves = DUSTSTORM,COLDFRONT,HALTINGCOLD,SHOUT
     AbilityIndex = 1 # Brisk
     Item = SITRUSBERRY
 Pokemon = MINIOR,40
@@ -3459,7 +3459,7 @@ Pokemon = GALLADE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = KOMMOO,70
-    Moves = CLANGOROUSSOUL,DRACOMETEOR,POWERHAMMER,EARTHQUAKE
+    Moves = CLANGOROUSSOUL,DRAGONPULSE,FLASHCANNON,DRAINPUNCH
     AbilityIndex = 0 # Well Rounded
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -3706,7 +3706,7 @@ Pokemon = ALTARIA,46
 #-------------------------------
 [BIRDKEEPER_M2,Bernhard]
 Pokemon = PIDGEOT,36
-    Moves = DUSTSTORM,AIRSLASH,GALLINGSPIT,SHOUT
+    Moves = DUSTSTORM,COLDFRONT,SCOUR,SHOUT
     AbilityIndex = 1 # Brisk
 Pokemon = WHISCASH,37
     Moves = TREMOR,WATERFALL,DRAGONTAIL,REST
@@ -4566,7 +4566,7 @@ Pokemon = ORANGURU,48
 #-------------------------------
 [LINEBACKER,Lorenzo]
 Pokemon = KOMMOO,48
-    Moves = CRUELTY,AURASPHERE,NERVEBLOCK,SHOUT
+    Moves = GUTTURALROAR,AURASPHERE,NERVEBLOCK,SHOUT
     AbilityIndex = 0 # Well Rounded
     Item = AGILITYHERB
 Pokemon = GRENINJA,48
@@ -5616,7 +5616,7 @@ Pokemon = THIEVUL,70
     EV = 20,0,15,0,0,15
 Pokemon = GYARADOS,70
     Name = Tiamat
-    Moves = REND,WATERFALL,POWERWHIP,POWDERBOMB
+    Moves = REND,WATERFALL,POWERWHIP,POWERHAMMER
     AbilityIndex = 1 # City Razer
     Item = ASSAULTVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -5631,7 +5631,7 @@ Pokemon = HYDREIGON,70
 Pokemon = GRENINJA,70
     Name = Revenant
     Moves = DARKALLURE,BUBBLEBLASTER,POWERGEM,SLUDGEWAVE
-    AbilityIndex = 0 # Mutable
+    AbilityIndex = 1 # Wise Hunter
     Item = PRISMATICPLATE
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
@@ -6965,7 +6965,7 @@ ExtendsVersion = 0
 Pokemon = TITANIX,70
     Name = Notalones
     Gender = male
-    Moves = SCORCHINGSANDS,SLAG,POWERGEM,AURASPHERE
+    Moves = SCORCHINGSANDS,FLASHCANNON,POWERGEM,AURASPHERE
     AbilityIndex = 0 # Radiate
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -7394,7 +7394,7 @@ Pokemon = MBEAUTIFLY,59
     Moves = ICYINJECTION,LEECHLIFE,PLAYROUGH,UTURN
     AbilityIndex = 1 # Schadenfreude
 Pokemon = GOLDUCK,58
-    Moves = PIERCINGDOUBT,SLAMSHUT,CALMMIND,PACIFY
+    Moves = PIERCINGDOUBT,BUBBLEBLASTER,CALMMIND,WATERLOG
     AbilityIndex = 1 # Inner Focus
     Item = SITRUSBERRY
 Pokemon = WYRDEER,58
@@ -7415,7 +7415,7 @@ Pokemon = GUMSHOOS,57
     Item = CRYSTALVEIL
     ItemType = GHOST
 Pokemon = TITANIX,57
-    Moves = PULVERIZERCHORD,FRAGMENTATION,INFERNO,ZAPCANNON
+    Moves = PULVERIZERCHORD,SHARDSURGE,INFERNO,ZAPCANNON
     AbilityIndex = 1 # Gravitas
     Item = SHELLBELL
 Pokemon = BOLTUND,57
@@ -8215,7 +8215,7 @@ Pokemon = DODRIO,70
     AbilityIndex = 0 # Fluster Flock
     Item = PERSIMBERRY
 Pokemon = KOMMOO,70
-    Moves = BODYPRESS,GUTTURALROAR,POWDERBOMB,CLANGOROUSSOUL
+    Moves = BODYPRESS,DRAGONPULSE,FLASHCANNON,CLANGOROUSSOUL
     AbilityIndex = 0 # Well Rounded
     Item = LEFTOVERS
 Pokemon = VIKAVOLT,70
