@@ -184,7 +184,7 @@ BattleHandlers::DamageCalcTargetAbility.add(:VIGILANT,
 
 BattleHandlers::DamageCalcTargetAbility.add(:TRAPPER,
   proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
-    if user.battle.pbIsTrapped?(user.index)
+    if user.trapped?
       mults[:final_damage_multiplier] *= 0.7
       target.aiLearnsAbility(ability) unless aiCheck
     end
@@ -193,7 +193,7 @@ BattleHandlers::DamageCalcTargetAbility.add(:TRAPPER,
 
 BattleHandlers::DamageCalcTargetAbility.add(:BOTTOMFEEDER,
   proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
-    if user.battle.pbIsTrapped?(user.index)
+    if user.trapped?
       mults[:final_damage_multiplier] *= 0.75
       target.aiLearnsAbility(ability) unless aiCheck
     end
@@ -371,5 +371,14 @@ BattleHandlers::DamageCalcTargetAbility.add(:PALACEGUARD,
         mults[:final_damage_multiplier] *= 0.66
         target.aiLearnsAbility(ability) unless aiCheck
       end
+  }
+)
+
+BattleHandlers::DamageCalcTargetAbility.add(:ROLLINGBLOWS,
+  proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
+    if target.effectActive?(:TwoTurnAttack) || target.effectActive?(:HyperBeam)
+      mults[:final_damage_multiplier] *= 0.5
+      target.aiLearnsAbility(ability) unless aiCheck
+    end
   }
 )

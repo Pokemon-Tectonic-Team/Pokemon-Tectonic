@@ -726,8 +726,8 @@ class PokeBattle_Battler
 
     def avatarPhaseLowerHealthBound
         raise _INTL("#{@name} isn't an avatar, but something is requesting its Phase Lower Health Bound!") unless boss?
-        hpFraction = 1 - (@avatarPhase / avatarData.num_phases.to_f)
-        return (@totalhp * hpFraction).floor
+        avatarHPFraction = 1 - (@avatarPhase / avatarData.num_phases.to_f)
+        return (@totalhp * avatarHPFraction).floor
     end
 
     def avatarHealthPerPhase
@@ -874,6 +874,10 @@ class PokeBattle_Battler
         end
     end
 
+    def hpFraction
+        return @hp / @totalhp.to_f
+    end
+
     def fullHealth?
         return @hp >= @totalhp
     end
@@ -905,8 +909,7 @@ class PokeBattle_Battler
     end
 
     def ignoreScreens?(checkingForAI)
-        return true if shouldAbilityApply?(:INFILTRATOR,checkingForAI)
-        return true if shouldAbilityApply?(:RAMPROW,checkingForAI)
+        return true if shouldAbilityApply?(GameData::Ability.getByFlag("IgnoreScreens"),checkingForAI)
         return false
     end
 

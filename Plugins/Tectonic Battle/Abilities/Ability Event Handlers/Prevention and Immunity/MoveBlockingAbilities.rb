@@ -7,12 +7,6 @@ BattleHandlers::MoveBlockingAbility.add(:ROYALMAJESTY,
   }
 )
 
-BattleHandlers::MoveBlockingAbility.add(:KILLJOY,
-    proc { |ability, _bearer, _user, _targets, move, _battle, aiCheck|
-        next move.danceMove? || move.soundMove?
-    }
-)
-
 BattleHandlers::MoveBlockingAbility.add(:DESICCATE,
     proc { |ability, _bearer, _user, _targets, move, battle, aiCheck|
         next %i[GRASS WATER].include?(move.calcType) && battle.sandy?

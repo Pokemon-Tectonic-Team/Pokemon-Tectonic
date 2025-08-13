@@ -52,7 +52,7 @@ class PokeBattle_Move_StartWeakenPhysicalDamageAgainstUserSide5 < PokeBattle_Mov
     end
 
     def getEffectScore(user, _target)
-        return getReflectEffectScore(user)
+        return getReflectEffectScore(user, nil, self)
     end
 end
 
@@ -65,7 +65,7 @@ class PokeBattle_Move_StartWeakenSpecialDamageAgainstUserSide5 < PokeBattle_Move
     end
 
     def getEffectScore(user, _target)
-        return getLightScreenEffectScore(user)
+        return getLightScreenEffectScore(user, nil, self)
     end
 end
 
@@ -75,7 +75,7 @@ end
 #===============================================================================
 class PokeBattle_Move_StartWeakenDamageAgainstUserSideIfInHail5 < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        if @battle.pbWeather != :Hail
+        unless @battle.icy?
             @battle.pbDisplay(_INTL("But it failed, since it's not Hailing!")) if show_message
             return true
         end
@@ -91,13 +91,7 @@ class PokeBattle_Move_StartWeakenDamageAgainstUserSideIfInHail5 < PokeBattle_Mov
     end
 
     def getEffectScore(user, _target)
-        score = 0
-        user.eachOpposing do |b|
-            score += 40 if b.hasDamagingAttack?
-        end
-        score += 15 * user.getScreenDuration(aiCheck: true)
-        score = (score * 1.3).ceil if user.fullHealth?
-        return score
+        return getScreenEffectScore(user, :AuroraVeil, nil, self)
     end
 end
 

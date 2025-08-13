@@ -97,7 +97,7 @@ class PokeBattle_Battler
         val = @pokemon.extraMovesPerTurn || 0
         val += @effects[:ExtraTurns]
         val += 1 if effectActive?(:GreaterGlories)
-        val += 1 if hasActiveAbility?(:HEAVENSCROWN) && @battle.totalEclipse?
+        val += 1 if effectActive?(:TemporalDistortion)
         return val
     end
 
@@ -267,7 +267,7 @@ class PokeBattle_Battler
         @effects[:Refurbished].times do
             ret /= 2.0
         end
-        ret *= 2 if @battle.field.effectActive?(:WarpingCore)
+        ret *= 2 if @battle.gravityIntensified?
         ret = ret.round
         ret = 1 if ret < 1
         unless @battle.moldBreaker

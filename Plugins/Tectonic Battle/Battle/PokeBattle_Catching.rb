@@ -284,10 +284,7 @@ class PokeBattle_Battle
     def captureThresholdCalc(pkmn, battler, catch_rate, ball)
         # Get a catch rate if one wasn't provided
         catch_rate ||= pkmn.species_data.catch_rate
-        ultraBeast = %i[NIHILEGO BUZZWOLE PHEROMOSA XURKITREE CELESTEELA
-                        KARTANA GUZZLORD POIPOLE NAGANADEL STAKATAKA
-                        BLACEPHALON].include?(pkmn.species)
-        catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler, ultraBeast)
+        catch_rate = BallHandlers.modifyCatchRate(ball, catch_rate, self, battler)
         catch_rate = (catch_rate * 1.5).floor if ballMimicActive?
         return PokeBattle_Battle.captureThresholdCalcInternals(battler.status, battler.statusCount, battler.hp, battler.totalhp, catch_rate)
     end

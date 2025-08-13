@@ -45,3 +45,25 @@ class PokeBattle_Move_RedirectAllMovesToTarget < PokeBattle_Move
         return score
     end
 end
+
+#===============================================================================
+# This round, user becomes the target of attacks that have single targets.
+# All foes have their Attack and Sp. Atk lowered by 1 step.
+# (Luring Light)
+#===============================================================================
+class PokeBattle_Move_RedirectAllMovesToUserLowerFoesAtkSpAtk1 < PokeBattle_Move_RedirectAllMovesToUser
+    def pbEffectGeneral(user)
+        super
+        user.eachOpposing do |b|
+            b.pbLowerMultipleStatSteps(ATTACKING_STATS_1, user, showFailMsg: true)
+        end
+    end
+
+    def getEffectScore(user, _target)
+        score = super
+        user.eachOpposing do |b|
+            score += getMultiStatDownEffectScore(ATTACKING_STATS_1,user,b)
+        end
+        return score
+    end
+end

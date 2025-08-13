@@ -64,6 +64,18 @@ Flags = CanProtect,Empowered
 Description = The user copies and gains the first ability of each foe.
 Animation = ROLEPLAY
 #-------------------------------
+[PRIMEVALWORKUP]
+Name = Primeval Work Up
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+FunctionCode = EmpoweredWorkUp
+Flags = Empowered
+Description = The user is roused, giving it the ability to use an extra move each turn.
+Animation = WORKUP
+#-------------------------------
 [PRIMEVALYAWN]
 Name = Primeval Yawn
 Type = NORMAL
@@ -318,7 +330,7 @@ TotalPP = 1
 Target = BothSides
 FunctionCode = GroudonStartGravityDoubleAllWeight
 Flags = AvatarSignature
-Description = A move that only the avatar of Groudon can use. For the rest of the battle, gravity is intensified and Pokemon have their weight doubled.
+Description = A move that only the avatar of Groudon can use. Gravity is intensified for the rest of the battle.
 #-------------------------------
 #		ROCK MOVES
 #-------------------------------
@@ -466,20 +478,6 @@ Priority = 1
 FunctionCode = EmpoweredBulletPunch
 Flags = CanProtect,Punch,Empowered
 Description = The user strikes the target with 3 punches like bullets. This move always goes first.
-#-------------------------------
-[EMPOWEREDBULLETTRAIN]
-Name = Empowered Bullet Train
-Type = STEEL
-Category = Physical
-Power = 200
-Accuracy = 100
-TotalPP = 1
-Target = NearOther
-FunctionCode = EmpoweredBulletTrain
-Flags = CanProtect,Empowered
-EffectChance = 100
-Description = The user becomes a pain train. This raises the user's Speed by 2 steps.
-Animation = BULLETTRAIN
 #-------------------------------
 [EMPOWEREDMETALCLAW]
 Name = Empowered Metal Claw

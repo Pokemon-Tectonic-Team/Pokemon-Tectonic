@@ -243,7 +243,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:KILLJOY,
   proc { |ability, battler, battle, aiCheck|
       next 0 if aiCheck
       battle.pbShowAbilitySplash(battler, ability)
-      battle.pbDisplay(_INTL("{1} is a killjoy! No one is allowed to dance or make sound!", battler.pbThis))
+      battle.pbDisplay(_INTL("{1} is a killjoy! Stats can't be raised!", battler.pbThis))
       battle.pbHideAbilitySplash(battler)
   }
 )
@@ -837,14 +837,6 @@ BattleHandlers::AbilityOnSwitchIn.add(:GYRESPINNER,
   proc { |ability, battler, battle, aiCheck|
       next entryTrappingAbility(ability, battler, battle, :WHIRLPOOL, aiCheck: aiCheck) { |trappedFoe|
         _INTL("{1} became trapped in the vortex!", trappedFoe.pbThis)
-      }
-  }
-)
-
-BattleHandlers::AbilityOnSwitchIn.add(:SAPPER,
-  proc { |ability, battler, battle, aiCheck|
-      next entryTrappingAbility(ability, battler, battle, :SANDTOMB, aiCheck: aiCheck) { |trappedFoe|
-        _INTL("{1} became trapped in the sand!", trappedFoe.pbThis)
       }
   }
 )

@@ -1307,7 +1307,7 @@ class PokeBattle_PartyAttackMove < PokeBattle_Move
     end
 
     def baseDamageFromStat(stat)
-        return 5 + (stat / 10)
+        return 10 + (stat / 8)
     end
 
     def pbBaseDamage(_baseDmg, user, _target)

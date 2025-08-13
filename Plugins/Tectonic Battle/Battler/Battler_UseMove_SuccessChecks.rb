@@ -165,7 +165,7 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
         return false unless move.pbCanChooseMove?(self, commandPhase, showMessages)
         # Turbulent Sky
         if pbOwnSide.effectActive?(:TurbulentSky) && !effectActive?(:Instructed) &&
-            @lastMoveUsedType && move.calcType == @lastMoveUsedType && move.id != @battle.struggle.id
+                @lastMoveUsedType && move.pbCalcType(self) == @lastMoveUsedType && move.id != @battle.struggle.id
              msg = _INTL("{1} can't use the same type twice in a row due to the turbulent sky!", pbThis)
              if showMessages
                  commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)
@@ -297,6 +297,7 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                     pbOwnSide.applyEffect(:TyrannicalImmunity)
                 elsif hasActiveItem?(:COURAGEBADGE)
                     @battle.pbDisplay(_INTL("{1} would have flinched, but it holds a Courage Badge!", pbThis))
+                    aiLearnsItem(:COURAGEBADGE)
                 else
                     @battle.pbDisplay(_INTL("{1} flinched and couldn't move!", pbThis))
                     eachActiveAbility do |ability|
@@ -412,11 +413,11 @@ animationName, show_message) do
                 end
                 return false
             end
-            if target.hasActiveAbility?(:MAGICSHIELD) && !@battle.moldBreaker
+            if target.hasActiveAbility?(:WARDING) && !@battle.moldBreaker
                 unless aiCheck
                     target.damageState.protected = true
                     if show_message
-                        @battle.pbShowAbilitySplash(target, :MAGICSHIELD)
+                        @battle.pbShowAbilitySplash(target, :WARDING)
                         @battle.pbDisplay(_INTL("{1} shielded itself from the {2}!", target.pbThis, move.name))
                         @battle.pbHideAbilitySplash(target)
                     end

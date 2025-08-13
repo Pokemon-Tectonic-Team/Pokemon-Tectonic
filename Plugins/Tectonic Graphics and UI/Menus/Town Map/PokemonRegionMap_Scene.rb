@@ -292,15 +292,23 @@ class PokemonRegionMap_Scene
                 next
             end
             currentWaypoint = $waypoints_tracker.getWaypointAtMapPosition(@mapX, @mapY)
-            if mode == 0 && !waypointsShowing || currentWaypoint.nil?
+            if mode == 0 # Town Map
                 if waypointsShowing
-                    @sprites["mapbottom"].waypointName = _INTL("ACTION/Z to hide Totems")
+                    if currentWaypoint
+                        @sprites["mapbottom"].waypointName = _INTL(currentWaypoint)
+                    else
+                        @sprites["mapbottom"].waypointName = _INTL("ACTION/Z to hide Totems")
+                    end
                 else
                     @sprites["mapbottom"].waypointName = _INTL("ACTION/Z to view Totems")
                 end
-			elsif waypointsShowing
-            	@sprites["mapbottom"].waypointName = _INTL(currentWaypoint)
-			end
+            else # Waypoints choice
+                if currentWaypoint
+                    @sprites["mapbottom"].waypointName = _INTL(currentWaypoint)
+                else
+                    @sprites["mapbottom"].waypointName = ""
+                end
+            end
             @sprites["mapbottom"].maplocation = pbGetMapLocation(@mapX, @mapY)
             @sprites["mapbottom"].mapdetails  = pbGetMapDetails(@mapX, @mapY)
             ox = 0

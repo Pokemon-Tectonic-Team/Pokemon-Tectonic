@@ -11,8 +11,8 @@ module BallHandlers
         return !ret.nil? ? ret : false
     end
 
-    def self.modifyCatchRate(ball, catchRate, battle, battler, ultraBeast)
-        ret = ModifyCatchRate.trigger(ball, catchRate, battle, battler, ultraBeast)
+    def self.modifyCatchRate(ball, catchRate, battle, battler)
+        ret = ModifyCatchRate.trigger(ball, catchRate, battle, battler)
         pseudoBonus = [1.0 + (0.1 * battle.ballsUsed), 4].min
         return !ret.nil? ? (ret * pseudoBonus) : (catchRate * pseudoBonus)
     end

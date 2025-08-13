@@ -119,7 +119,7 @@ class PokeBattle_Move_UseMoveDependingOnEnvironment < PokeBattle_Move
         when :Snow, :Ice
             npMove = :ICEBEAM if GameData::Move.exists?(:ICEBEAM)
         when :Volcano
-            npMove = :LAVAPLUME if GameData::Move.exists?(:LAVAPLUME)
+            npMove = :FLAMETHROWER if GameData::Move.exists?(:FLAMETHROWER)
         when :Graveyard
             npMove = :SHADOWBALL if GameData::Move.exists?(:SHADOWBALL)
         when :Sky
@@ -147,4 +147,20 @@ class PokeBattle_Move_UseMoveDependingOnEnvironment < PokeBattle_Move
         pseudoMove = calculateNaturePower
         return @battle.getBattleMoveInstanceFromID(pseudoMove).getTargetAffectingEffectScore(user, target)
     end
+	
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Turns into a different move depending on the environment.")
+        detailsList << _INTL("<u>Grassy</u>: Energy Ball")
+        detailsList << _INTL("<u>Water</u>: Bubble Blaster")
+        detailsList << _INTL("<u>Caves</u>: Power Gem")
+        detailsList << _INTL("<u>Rocky, Sandy</u>: Earth Power")
+        detailsList << _INTL("<u>Snowy, Icy</u>: Ice Beam")
+        detailsList << _INTL("<u>Volcanos</u>: Flamethrower")
+        detailsList << _INTL("<u>Graveyards</u>: Shadow Ball")
+        detailsList << _INTL("<u>In The Sky</u>: Air Slash")
+        detailsList << _INTL("<u>Space</u>: Draco Meteor")
+        detailsList << _INTL("<u>Ultraspace</u>: Psycho Boost")
+        detailsList << _INTL("<u>Everywhere Else</u>: Ruin")
+    end
+
 end

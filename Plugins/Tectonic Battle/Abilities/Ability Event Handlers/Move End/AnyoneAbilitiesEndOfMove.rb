@@ -1,14 +1,7 @@
-BattleHandlers::AnyoneAbilityEndOfMove.add(:FIESTA,
-    proc { |ability, battler, user, targets, move, battle|
-        next unless move.soundMove? || move.danceMove?
-        battler.applyFractionalHealing(1.0 / 8.0, ability: ability)
-    }
-)
-
-BattleHandlers::AnyoneAbilityEndOfMove.add(:ANCESTRALDANCE,
+BattleHandlers::AnyoneAbilityEndOfMove.add(:CELEBRATION,
     proc { |ability, battler, user, targets, move, battle|
         next unless move.danceMove?
-        defenseStatStackingAbility(ability, battler)
+        battler.applyFractionalHealing(1.0 / 5.0, ability: ability, canOverheal: true)
     }
 )
 
@@ -22,6 +15,6 @@ BattleHandlers::AnyoneAbilityEndOfMove.add(:CHOREOGRAPHY,
 BattleHandlers::AnyoneAbilityEndOfMove.add(:GROOVY,
     proc { |ability, battler, user, targets, move, battle|
         next unless move.danceMove?
-        battler.pbRaiseMultipleStatSteps([:ATTACK, 1], user, ability: ability)
+        battler.pbRaiseMultipleStatSteps(ATTACKING_STATS_1, user, ability: ability)
     }
 )

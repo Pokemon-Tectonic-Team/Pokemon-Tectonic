@@ -71,6 +71,13 @@ class PokeBattle_Battler
     def pbCanRaiseStatStep?(stat, user = nil, move = nil, showFailMsg = false, ignoreContrary = false, ignoreAbilities: false)
         validateStat(stat)
         return false if fainted?
+        killjoy = @battle.pbCheckGlobalAbility(:KILLJOY)
+        if killjoy
+            if showFailMsg
+                @battle.pbDisplay(_INTL("{1}'s {2} prevents {3} from raising its {4}!", killjoy.pbThis, getAbilityName(:KILLJOY), pbThis(true), GameData::Stat.get(stat).name))
+            end
+            return false
+        end
         # Contrary
         if hasActiveAbility?(%i[CONTRARY ECCENTRIC]) && !ignoreContrary && !@battle.moldBreaker && !ignoreAbilities
             return pbCanLowerStatStep?(stat, user, move, showFailMsg, true, ignoreAbilities: ignoreAbilities)

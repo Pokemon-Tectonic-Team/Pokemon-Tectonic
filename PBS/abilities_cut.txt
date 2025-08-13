@@ -12,9 +12,17 @@ Description = Powers up Steel-type moves by 50%.
 Name = Adaptability
 Description = Powers up moves of the same type.
 #-------------------------------
+[ADAPTIVESKIN]
+Name = Adaptive Skin
+Description = After being attacked, gains resistance to that move's type but loses other adaptive resistances.
+#-------------------------------
 [AERILATE]
 Name = Aerilate
 Description = Normal-type moves become Flying-type and power up by 30%.
+#-------------------------------
+[AEROSHELL]
+Name = Aeroshell
+Description = After using a wind move, raises the Pokémon's Defense and Sp. Def. Caps out at +4.
 #-------------------------------
 [AFTERMATH]
 Name = Aftermath
@@ -276,6 +284,10 @@ Description = Turns the ground into Fairy Terrain for 5 turns when entering batt
 Name = Fauxliage
 Description = Gain priority with Grass-type moves.
 #-------------------------------
+[FIESTA]
+Name = Fiesta
+Description = Heals by 1/8th HP whenever any Pokémon uses a dance or sound move.
+#-------------------------------
 [FLAREBOOST]
 Name = Flare Boost
 Description = Boosts Sp. Atk by 50% attacks when burned.
@@ -291,6 +303,10 @@ Description = Doubles Defense in sunshine.
 [FOREWARN]
 Name = Forewarn
 Description = Determines what moves a foe has.
+#-------------------------------
+[FORTIFIED]
+Name = Fortified
+Description = Take 30% less damage from attacks on turns when it hasn't moved yet.
 #-------------------------------
 [FORTUNE]
 Name = Fortune
@@ -506,6 +522,10 @@ Description = Summons moonglow for four turns when hit by an attack.
 [LURING]
 Name = Luring
 Description = Its attacks are critical against dizzy targets.
+#-------------------------------
+[MAGICSHIELD]
+Name = Magic Shield
+Description = Negates enemy status moves that target the Pokémon or create hazards around it.
 #-------------------------------
 [MAGMAARMOR]
 Name = Magma Armor
@@ -900,6 +920,10 @@ Description = Reduces damage from super-effective attacks by 25%.
 Name = Soul Read
 Description = Double damage to targets who don't share a type with their last-used move.
 #-------------------------------
+[SOUNDBARRIER]
+Name = Sound Barrier
+Description = After using a sound move, raises the Pokémon's Defense and Sp. Def. Caps out at +4.
+#-------------------------------
 [SOUNDPROOF]
 Name = Soundproof
 Description = Gives full immunity to all sound-based moves.
@@ -1057,6 +1081,11 @@ Description = Moves can be used regardless of Abilities.
 [UNCONCERNED]
 Name = Unconcerned
 Description = Takes 20% less damage from neutrally effective attacks.
+#-------------------------------
+[UNCONQUERABLE]
+Name = Unconquerable
+Description = Blocks random added effects of attacks taken, and prevents critical hits.
+Flags = CritImmunity
 #-------------------------------
 [VARIETY]
 Name = Variety

@@ -1,23 +1,21 @@
 ItemHandlers::UseOnPokemon.add(:UNIVERSALFORMALIZER,proc { |item,pkmn,scene|
 	species = pkmn.species
-	validSpecies = %i[DEOXYS ORICORIO LYCANROC ROTOM DARMANITAN GDARMANITAN DEERLING SAWSBUCK URSHIFU MELOETTA]
-	if validSpecies.include?(species)
-		possibleForms = []
-		possibleFormNames = []
-		GameData::Species.each do |species_data|
-			next unless species_data.species == species
-			next if species_data.form == pkmn.form
-			next if species_data.species == :LYCANROC && species_data.form == 1
-			possibleForms.push(species_data)
-			possibleFormNames.push(species_data.form_name)
-		end
+	species_data = GameData::Species.get_species_form(species,0) # get base form for the formalizer list
+	valid_forms = species_data.formalizer.clone
+	valid_forms.delete(pkmn.form)
+	if valid_forms.length > 0
+		possibleForms = valid_forms
+		possibleFormNames = valid_forms.map { |form|
+			form_data = GameData::Species.get_species_form(species,form)
+			next form_data.form_name
+		}
 		possibleFormNames.push(_INTL("Cancel"))
 		choice = pbMessage(_INTL("Which form shall the Pokemon take?"),possibleFormNames,possibleFormNames.length)
 		if choice < possibleForms.length
 			pbSceneDefaultDisplay(_INTL("{1} swapped to {2}!", pkmn.name, possibleFormNames[choice]),scene)
 			
 			showPokemonChanges(pkmn) {
-				pkmn.form = possibleForms[choice].form
+				pkmn.form = possibleForms[choice]
 			}
 		end
 		next true

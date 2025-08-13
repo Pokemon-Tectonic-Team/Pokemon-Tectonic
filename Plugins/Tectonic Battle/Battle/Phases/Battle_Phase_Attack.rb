@@ -177,6 +177,7 @@ class PokeBattle_Battle
         return if attackPhaseNonMoveActions
         speedAffectingTriggers
         pbAttackPhaseMoves
+        endOfAttackPhase
     end
 
     def speedAffectingTriggers
@@ -231,5 +232,16 @@ class PokeBattle_Battle
             next if @commandPhasesThisRound - 1 > battler.extraMovesPerTurn
             battler.pbProcessTurn(@choices[battler.index])
         end
+    end
+
+    def endOfAttackPhase
+        # Temporal Distortion
+        eachBattler do |b|
+            next unless b.hasActiveAbility?(:TEMPORALDISTORTION) && (b.turnCount % 3 == 0)
+            pbShowAbilitySplash(b,:TEMPORALDISTORTION)
+            pbDisplay(_INTL("{1} takes control of time itself!", b.pbThis))
+            b.applyEffect(:TemporalDistortion)
+            pbHideAbilitySplash(b)
+        end  
     end
 end

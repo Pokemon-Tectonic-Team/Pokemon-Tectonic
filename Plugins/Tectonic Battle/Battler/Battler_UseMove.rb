@@ -408,7 +408,7 @@ class PokeBattle_Battler
         #---------------------------------------------------------------------------
         magicCoater  = -1
         magicBouncer = -1
-        magicShielder = -1
+        warder = -1
         if targets.length == 0 && move.pbTarget(user).num_targets > 0 && !move.worksWithNoTargets?
             # def pbFindTargets should have found a target(s), but it didn't because
             # they were all fainted
@@ -447,9 +447,9 @@ class PokeBattle_Battler
                         magicBouncer = b.index
                         b.applyEffect(:MagicBounce)
                         break
-                    elsif b.hasActiveAbility?(:MAGICSHIELD) && !@battle.moldBreaker
-                        magicShielder = b.index
-                        @battle.pbShowAbilitySplash(b, :MAGICSHIELD)
+                    elsif b.hasActiveAbility?(:WARDING) && !@battle.moldBreaker
+                        warder = b.index
+                        @battle.pbShowAbilitySplash(b, :WARDING)
                         @battle.pbDisplay(_INTL("{1} shielded its side from the {2}!", b.pbThis, move.name))
                         @battle.pbHideAbilitySplash(b)
                         user.onMoveFailed(move)
@@ -484,7 +484,7 @@ class PokeBattle_Battler
             # Process each hit in turn
             # Skip all hits if the move is being magic coated, magic bounced, or magic shielded
             realNumHits = 0
-            moveIsBlocked = magicCoater >= 0 || magicBouncer >= 0 || magicShielder >= 0 || quarantined
+            moveIsBlocked = magicCoater >= 0 || magicBouncer >= 0 || warder >= 0 || quarantined
             unless moveIsBlocked
                 for i in 0...numHits
                     success = pbProcessMoveHit(move, user, targets, i, skipAccuracyCheck, multiHitAesthetics)
@@ -697,6 +697,19 @@ class PokeBattle_Battler
             @battle.forceUseMove(b, moveID, preTarget, false, usageMessage, moveUsageEffect: :Instructed)
         end
         if moveSucceeded
+            # Killjoy
+            if move.danceMove?
+                killjoy = @battle.pbCheckGlobalAbility(:KILLJOY)
+                if killjoy
+                    killjoy.showMyAbilitySplash(:KILLJOY)
+                    if user.takesIndirectDamage?(true)
+                        battle.pbDisplay(_INTL("{1} was punished for its joy!", user.pbThis))
+                        user.applyFractionalDamage(1.0 / 4.0)
+                    end
+                    killjoy.hideMyAbilitySplash
+                end
+            end
+
             # Dancer
             if !effectActive?(:Dancer) && move.danceMove?
                 dancers = []

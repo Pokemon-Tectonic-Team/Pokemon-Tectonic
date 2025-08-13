@@ -140,3 +140,13 @@ class PokeBattle_Move_StartUserShedTypeWeaknesses < PokeBattle_Move
         end
     end
 end
+
+# User gains an extra move per turn. (Empowered Work Up)
+class PokeBattle_Move_EmpoweredWorkUp
+    include EmpoweredMove
+
+    def pbEffectGeneral(user)
+        super
+        user.applyEffect(:ExtraTurns, 1)
+    end
+end

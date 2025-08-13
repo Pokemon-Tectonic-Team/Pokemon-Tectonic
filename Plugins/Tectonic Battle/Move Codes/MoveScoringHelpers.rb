@@ -933,35 +933,43 @@ def getGreyMistSettingEffectScore(user,duration)
 end
 
 def getReflectEffectScore(user, baseDuration = nil, move = nil)
-    score = 0
-    # Current turn value
-    unless user.pbOwnSide.effectActive?(:Reflect)
-        user.eachOpposing do |b|
-            next unless b.hasPhysicalAttack?
-            score += 60 if !move || user.battle.battleAI.userMovesFirst?(move, user, b)
-        end
-    end
-    duration = baseDuration ? user.getScreenDuration(baseDuration,aiCheck: true) : user.getScreenDuration(aiCheck: true)
-    duration -= user.pbOwnSide.countEffect(:Reflect) if user.pbOwnSide.effectActive?(:Reflect)
-    score += 10 * duration
-    score = (score * 1.3).ceil if user.fullHealth?
-    return score
+    return getScreenEffectScore(user, :Reflect, baseDuration, move)
 end
 
 def getLightScreenEffectScore(user, baseDuration = nil, move = nil)
+    return getScreenEffectScore(user, :LightScreen, baseDuration, move)
+end
+
+def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
     score = 0
     # Current turn value
     unless user.pbOwnSide.effectActive?(:LightScreen)
         user.eachOpposing do |b|
-            next unless b.hasSpecialAttack?
+            next if b.ignoreScreens?(true)
+            next if effect == :Reflect && !b.hasSpecialAttack?
+            next if effect == :LightScreen && !b.hasSpecialAttack?
+            next if effect == :AuroraVeil && !b.hasDamagingAttack?
+
             score += 60 if !move || user.battle.battleAI.userMovesFirst?(move, user, b)
         end
     end
-    duration = baseDuration ? user.getScreenDuration(baseDuration,aiCheck: true) : user.getScreenDuration(aiCheck: true)
-    duration -= user.pbOwnSide.countEffect(:LightScreen) if user.pbOwnSide.effectActive?(:LightScreen)
-    score += 10 * duration
-    score = (score * 1.3).ceil if user.fullHealth?
-    return score
+    foeCanBreak = false
+    user.eachOpposing do |opp|
+        next unless opp.hasScreenRemovalMove?
+        foeCanBreak = true
+        break  
+    end
+    unless foeCanBreak
+        duration = baseDuration ? user.getScreenDuration(baseDuration,aiCheck: true) : user.getScreenDuration(aiCheck: true)
+        duration -= user.pbOwnSide.countEffect(effect) if user.pbOwnSide.effectActive?(effect)
+        if effect == :AuroraVeil
+            score += 15 * duration
+        else
+            score += 10 * duration  
+        end
+        score = (score * 1.3).ceil if user.fullHealth?
+    end
+    return score  
 end
 
 def getSafeguardEffectScore(user, duration)
@@ -1038,7 +1046,7 @@ def getDisableEffectScore(target, duration)
     return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
     return 0 unless target.canBeDisabled?
     score = 15 * duration
-    score *= 1.5 if target.battle.pbIsTrapped?(target.index)
+    score *= 1.5 if target.trapped?
     return score
 end
 

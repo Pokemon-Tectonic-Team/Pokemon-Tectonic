@@ -60,9 +60,18 @@ BattleHandlers::DamageCalcUserAbility.add(:MEGALAUNCHER,
   }
 )
 
-BattleHandlers::DamageCalcUserAbility.add(:REFRACTIVE,
+BattleHandlers::DamageCalcUserAbility.add(:EMANATION,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.pulseMove?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:REFRACTIVE,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.lightMove?
       mults[:base_damage_multiplier] *= 1.3
       user.aiLearnsAbility(ability) unless aiCheck
     end
@@ -248,6 +257,15 @@ BattleHandlers::DamageCalcUserAbility.add(:RADIATE,
   }
 )
 
+BattleHandlers::DamageCalcUserAbility.add(:WELLROUNDED,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if move.tagged?
+      mults[:base_damage_multiplier] *= 1.2
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
 BattleHandlers::DamageCalcUserAbility.add(:BADOMEN,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.foretoldMove?
@@ -372,7 +390,16 @@ BattleHandlers::DamageCalcUserAbility.add(:ERUDITE,
 BattleHandlers::DamageCalcUserAbility.add(:MULTITASKER,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if type == :PSYCHIC
-      mults[:attack_multiplier] *= 1.2
+      mults[:attack_multiplier] *= 1.35
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:EVENHANDED,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if type == :FIGHTING
+      mults[:attack_multiplier] *= 1.35
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }
@@ -823,6 +850,31 @@ BattleHandlers::DamageCalcUserAbility.add(:SLINKY,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.is_a?(PokeBattle_Move_TwoTurnAttackInvulnerable)
       mults[:base_damage_multiplier] *= 2.0
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:TERRORIZE,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    mults[:base_damage_multiplier] *= 0.9
+    user.aiLearnsAbility(ability) unless aiCheck
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:PITFIGHTER,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if target.trapped?
+      mults[:base_damage_multiplier] *= 1.3
+      user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+
+BattleHandlers::DamageCalcUserAbility.add(:HIVEMIND,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if type == :BUG
+      mults[:base_damage_multiplier] *= 1.5
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }

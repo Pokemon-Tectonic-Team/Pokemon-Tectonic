@@ -10,7 +10,7 @@ BattleHandlers::GuaranteedCriticalUserAbility.add(:HARSH,
     }
 )
 
-BattleHandlers::GuaranteedCriticalUserAbility.add(:BITTER,
+BattleHandlers::GuaranteedCriticalUserAbility.add(:COLDBLOODED,
     proc { |ability, _user, target, _battle|
         next true if target.frostbitten?
     }
@@ -43,5 +43,11 @@ BattleHandlers::GuaranteedCriticalUserAbility.add(:LURING,
 BattleHandlers::GuaranteedCriticalUserAbility.add(:PERFECTLUCK,
     proc { |ability, _user, target, _battle|
         next true
+    }
+)
+
+BattleHandlers::GuaranteedCriticalUserAbility.add(:STERN,
+    proc { |ability, _user, target, _battle|
+        next true if target.waterlogged?
     }
 )

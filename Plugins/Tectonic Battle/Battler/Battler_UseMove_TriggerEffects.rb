@@ -63,6 +63,13 @@ class PokeBattle_Battler
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Condensate")
                 user.applyFrostbite(target) if move.specialMove? && user.canFrostbite?(target, true, move)
             end
+            # Shard Surge
+            if target.effectActive?(:ShardSurge)
+                PBDebug.log("[Lingering effect] #{target.pbThis}'s Shard Surge")
+                if move.specialMove? && !user.pbOpposingSide.effectAtMax?(:Spikes)
+                    target.pbOpposingSide.incrementEffect(:Spikes)
+                end
+            end
             # Are set to move, but haven't yet
             if @battle.choices[target.index][0] == :UseMove && !target.movedThisRound?
                 # Shell Trap (make the trapper move next if the trap was triggered)

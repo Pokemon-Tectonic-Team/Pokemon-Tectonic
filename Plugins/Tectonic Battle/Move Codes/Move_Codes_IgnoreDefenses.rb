@@ -90,6 +90,7 @@ end
 #===============================================================================
 class PokeBattle_Move_RemoveScreens < PokeBattle_Move
     def ignoresReflect?; return true; end
+    def screenRemovalMove?; return true; end
 
     def pbEffectWhenDealingDamage(_user, target)
         side = target.pbOwnSide
@@ -167,6 +168,7 @@ end
 class PokeBattle_Move_RemoveScreensSubstituteProtections < PokeBattle_Move
     def ignoresSubstitute?(_user); return true; end
     def ignoresReflect?; return true; end
+    def screenRemovalMove?; return true; end
     
     def pbEffectAgainstTarget(_user, target)
         removeProtections(target)

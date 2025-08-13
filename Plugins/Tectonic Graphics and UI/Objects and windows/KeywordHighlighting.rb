@@ -71,6 +71,7 @@ def battleKeywordsImportant
         "traps",
         "trap",
         "gravity",
+        "trick room",
         "puzzle room",
         "odd room",
         "polarized room",
@@ -111,6 +112,8 @@ def battleKeywordsImportant
         "exhausting",
         "energized",
         "energize",
+        "substitutes",
+        "substitute",
     ]
 end
 

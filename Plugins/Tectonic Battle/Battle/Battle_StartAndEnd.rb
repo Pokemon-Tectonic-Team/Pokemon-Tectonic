@@ -477,16 +477,7 @@ class PokeBattle_Battle
                     end
 
                     resetMoveUsageState
-
-                    # Ability popups for triggered extra turn abilities
-                    eachBattler do |b|
-                        next unless b.extraMovesPerTurn >= 1
-                        next unless b.hasActiveAbility?(:HEAVENSCROWN) && totalEclipse?
-                        pbShowAbilitySplash(b,:HEAVENSCROWN)
-                        pbDisplay(_INTL("{1} is blessed by the shattered sky!", b.pbThis))
-                        pbHideAbilitySplash(b)
-                    end
-
+                    
                     # Command phase
                     PBDebug.logonerr { pbExtraCommandPhase }
                     break if @decision > 0

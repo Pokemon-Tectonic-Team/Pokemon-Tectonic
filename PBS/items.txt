@@ -1047,7 +1047,7 @@ Name = Courage Badge
 NamePlural = Courage Badges
 Pocket = 5
 Price = 3000
-Flags = Clothing
+Flags = Clothing,FlinchImmunity
 Description = A held item. The holder is protected from flinching.
 #-------------------------------
 [CLEARAMULET]

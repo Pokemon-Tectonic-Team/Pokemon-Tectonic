@@ -223,7 +223,7 @@ def createBossGraphics(avatarData, overworldMult = 1.5, battleMult = 1.5, overwr
             copiedOverworldBitmap = speciesOverworldBitmap.copy
             bossifiedOverworld = bossify(copiedOverworldBitmap.bitmap, overworldMult, opacity: BASE_OPACITY_OVERWORLD)
             bossifiedOverworld.to_file(bossOWFilePath)
-        else
+        elsif SHOW_BOSSIFICATION_DEBUG
             echoln("Overworld sprite already exists for Avatar #{avatarData.species}")
         end
     end
@@ -233,7 +233,7 @@ def createBossGraphics(avatarData, overworldMult = 1.5, battleMult = 1.5, overwr
         dataKey = form > 0 ? sprintf("%s_%d", avatarData.species.to_s, form).to_sym : avatarData.species
         break unless GameData::Species::DATA.key?(dataKey)
 
-        echoln("Checking the boss graphics for Avatar #{avatarData.species} (form #{form})")
+        echoln("Checking the boss graphics for Avatar #{avatarData.species} (form #{form})") if SHOW_BOSSIFICATION_DEBUG
 
         # Create the in battle sprites
         PBDebug.logonerr do
@@ -252,6 +252,8 @@ def createBossGraphics(avatarData, overworldMult = 1.5, battleMult = 1.5, overwr
     end
 end
 
+SHOW_BOSSIFICATION_DEBUG = false
+
 def bossifyBattleSprites(avatarData, form, baseSpeciesFrontFilePath, baseSpeciesBackFilePath, type, sizeMult, overwriteExisting: true)
     identifier = "Avatar #{avatarData.species} (form #{form})"
     identifier = "#{identifier} -- #{type.to_s}" if type
@@ -265,7 +267,7 @@ def bossifyBattleSprites(avatarData, form, baseSpeciesFrontFilePath, baseSpecies
         copiedBattleBitmap = battlebitmap.copy
         bossifiedBattle = bossify(copiedBattleBitmap.bitmap, sizeMult, type)
         bossifiedBattle.to_file(bossFrontFilePath)
-    else
+    elsif SHOW_BOSSIFICATION_DEBUG
         echoln("Front sprite already exists for #{identifier}")
     end
 
@@ -278,7 +280,7 @@ def bossifyBattleSprites(avatarData, form, baseSpeciesFrontFilePath, baseSpecies
         copiedBattleBitmap = battlebitmap.copy
         bossifiedBattle = bossify(copiedBattleBitmap.bitmap, sizeMult, type)
         bossifiedBattle.to_file(bossBackFilePath)
-    else
+    elsif SHOW_BOSSIFICATION_DEBUG
         echoln("Back sprite already exists for #{identifier}")
     end  
 end

@@ -42252,7 +42252,7 @@ Heartless
 Desalmado
 Cold Reception
 Arropado
-Bitter
+Cold-blooded
 Frígido
 Stability
 Estabilidad
@@ -42838,7 +42838,7 @@ Rust & Wrack
 Ancla Oxidada
 Steam Power
 Comburente
-Sapper
+Pit Fighter
 Zapador
 Sickening
 Nauseabundo

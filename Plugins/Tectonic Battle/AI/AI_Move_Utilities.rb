@@ -97,7 +97,7 @@ class PokeBattle_AI
             @battle.eachBattler do |b|
                 next unless b.opposes?(user)
                 next if b.semiInvulnerable?
-                next unless (b.hasActiveAbilityAI?(%i[MAGICBOUNCE MAGICSHIELD]) && !@battle.moldBreaker) || b.canChooseMagicCoat?
+                next unless (b.hasActiveAbilityAI?(%i[MAGICBOUNCE WARDING]) && !@battle.moldBreaker) || b.canChooseMagicCoat?
                 echoln("\t\t[AI FAILURE CHECK] #{user.pbThis} rejects #{move.id} -- thinks will fail against #{target.pbThis(false)} due to Magic Bounce etc.")
                 fails = true
                 break

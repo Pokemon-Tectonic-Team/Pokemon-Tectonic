@@ -310,6 +310,14 @@ class PokeBattle_Battler
         end
         return false
     end
+
+    def hasScreenRemovalMove?
+        eachAIKnownMove do |m|
+            next unless m.screenRemovalMove?
+            return true
+        end
+        return false
+    end
     
     def hasRedirectionMove?
         eachAIKnownMove do |m|

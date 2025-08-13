@@ -18,13 +18,13 @@ class PokeBattle_Move_TypeDependsOnWeather < PokeBattle_Move
             ret = :FIRE if GameData::Type.exists?(:FIRE)
         when :Rainstorm, :HeavyRain
             ret = :WATER if GameData::Type.exists?(:WATER)
-        when :Sandstorm
+        when :Sandstorm, :StarStorm
             ret = :ROCK if GameData::Type.exists?(:ROCK)
-        when :Hail
+        when :Hail, :IceAge
             ret = :ICE if GameData::Type.exists?(:ICE)
-        when :Eclipse,:RingEclipse
+        when :Eclipse, :RingEclipse
             ret = :PSYCHIC if GameData::Type.exists?(:PSYCHIC)
-        when :Moonglow,:BloodMoon
+        when :Moonglow, :BloodMoon
             ret = :FAIRY if GameData::Type.exists?(:FAIRY)
         when :StrongWinds
             ret = :FLYING if GameData::Type.exists?(:FLYING)
