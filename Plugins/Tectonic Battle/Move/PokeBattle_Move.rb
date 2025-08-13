@@ -139,15 +139,32 @@ class PokeBattle_Move
     def canMirrorMove?;         return @flags.include?("CanMirrorMove"); end
     def canRandomCrit?;         return @flags.include?("CanRandomCrit"); end
     def doubleCritChance?;      return @flags.include?("DoubleCritChance"); end
-    def bitingMove?;            return @flags.include?("Biting"); end
+
     def punchingMove?;          return @flags.include?("Punch"); end
-    def soundMove?;             return @flags.include?("Sound"); end
-    def pulseMove?;             return @flags.include?("Pulse"); end
-    def danceMove?;             return @flags.include?("Dance"); end
-    def bladeMove?;             return @flags.include?("Blade"); end
-    def windMove?;              return @flags.include?("Wind"); end
     def kickingMove?;           return @flags.include?("Kicking"); end
+    def bitingMove?;            return @flags.include?("Biting"); end
+    def bladeMove?;             return @flags.include?("Blade"); end
+    
+    def soundMove?;             return @flags.include?("Sound"); end
+    def windMove?;              return @flags.include?("Wind"); end
     def lightMove?;             return @flags.include?("Light"); end
+    def pulseMove?;             return @flags.include?("Pulse"); end
+    
+    def danceMove?;             return @flags.include?("Dance"); end
+
+    def tagged?
+      return true if punchingMove?
+      return true if kickingMove?
+      return true if bitingMove?
+      return true if bladeMove?
+
+      return true if windMove?
+      return true if windMove?
+      return true if lightMove?
+      return true if pulseMove?
+      return false
+    end
+
     def foretoldMove?;          return @flags.include?("Foretold"); end
     def empoweredMove?;         return @flags.include?("Empowered"); end
 

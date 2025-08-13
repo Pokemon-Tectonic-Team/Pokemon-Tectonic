@@ -3458,6 +3458,20 @@ Flags = CanProtect
 EffectChance = 20
 Description = The user tackles the foe while exhibiting overwhelming menace. It may also make the target flinch.
 #-------------------------------
+[SCALEGLINT]
+Name = Scale Glint
+Type = DRAGON
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,Light
+EffectChance = 20
+Description = The shine from scales damages the target. This has a 20% chance to reduce the higher of the target's Attack or Sp. Atk.
+Animation = DAZZLINGGLEAM
+#-------------------------------
 [SCALESHOT]
 Name = Scale Shot
 Type = DRAGON
