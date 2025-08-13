@@ -46,3 +46,12 @@ BattleHandlers::TypeCalcAbility.add(:OTHERWORLDLY,
         next types
     }
 )
+
+BattleHandlers::TypeCalcAbility.add(:COLORCOLLECTOR,
+    proc { |ability, battler, types|
+        if battler.effectActive?(:ColorCollector)
+            types.concat(battler.effects[:ColorCollector])
+        end
+        next types
+    }
+)

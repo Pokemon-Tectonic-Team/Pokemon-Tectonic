@@ -153,26 +153,6 @@ BattleHandlers::TargetAbilityOnHit.add(:GRIT,
     }
 )
 
-BattleHandlers::TargetAbilityOnHit.add(:ADAPTIVESKIN,
-    proc { |ability, user, target, move, _battle, aiCheck, aiNumHits|
-        statToRaise = nil
-        if move.physicalMove?
-            statToRaise = :DEFENSE
-        else
-            statToRaise = :SPECIAL_DEFENSE
-        end
-        next if target.steps[statToRaise] >= DEFENSE_STACKING_ABILITY_STEP_CAP
-        if aiCheck
-            ret = 0
-            aiNumHits.times do |i|
-                ret -= getMultiStatUpEffectScore([statToRaise,1], user, target, fakeStepModifier: i, evaluateThreat: false)
-            end
-            next ret
-        end
-        target.tryRaiseStat(statToRaise, target, ability: ability, increment: 1)
-    }
-)
-
 BattleHandlers::TargetAbilityOnHit.add(:WEAKARMOR,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
@@ -739,3 +719,22 @@ BattleHandlers::TargetAbilityOnHit.add(:MULTISCALE,
 
 # Only does stuff for the AI
 BattleHandlers::TargetAbilityOnHit.copy(:MULTISCALE,:DOMINEERING,:SHADOWSHIELD)
+
+BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
+  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next if target.fainted?
+
+        type = move.calcType
+
+        next if target.pbHasType?(type)
+        if target.effectActive?(:ColorCollector)
+            target.effects[:ColorCollector].push(type)
+        else
+            target.applyEffect(:ColorCollector,[type])  
+        end
+
+        typeName = GameData::Type.get(type).name
+        battle.pbDisplay(_INTL("{1} collected the {2} type!", target.pbThis, typeName))
+        battle.scene.pbRefresh
+  }
+)

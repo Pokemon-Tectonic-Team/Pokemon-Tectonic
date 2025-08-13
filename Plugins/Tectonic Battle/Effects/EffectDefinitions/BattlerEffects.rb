@@ -2285,3 +2285,8 @@ GameData::BattleEffect.register_effect(:Battler, {
     end,
 })
 
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :ColorCollector,
+    :real_name => "Collecting Colors",
+    :type => :Array,
+})
