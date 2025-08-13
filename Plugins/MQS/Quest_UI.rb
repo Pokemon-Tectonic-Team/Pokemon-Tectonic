@@ -29,9 +29,13 @@ class Window_Quest < Window_DrawableCommand
     name = "<u>" + "#{name}" + "</u>" if @quests[index].story
     base = self.baseColor
     shadow = self.shadowColor
-    colorID = @quests[index].colorID || 0
-    questNameColors = getTextColorsFromIDNumber(colorID)
-    drawFormattedTextEx(self.contents,rect.x,rect.y+4, 436,name,questNameColors[0],questNameColors[1])
+    # This doesn't work and I don't know why
+    # if @quests[index].colorID
+    #   questNameColors = getTextColorsFromIDNumber(@quests[index].colorID)
+    #   base = Rgb16ToColor(questNameColors[0])
+    #   shadow = Rgb16ToColor(questNameColors[1])
+    # end    
+    drawFormattedTextEx(self.contents,rect.x,rect.y+4, 436,name,base,shadow)
     pbDrawImagePositions(self.contents,[[sprintf("Graphics/Pictures/QuestUI/new"),rect.width-16,rect.y+4]]) if @quests[index].new
   end
 
