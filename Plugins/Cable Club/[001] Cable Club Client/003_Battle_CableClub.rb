@@ -76,14 +76,16 @@ class PokeBattle_CableClub < PokeBattle_Battle
   def initialize(connection, client_id, scene, player_party, opponent_party, opponent, seed)
     @connection = connection
     @client_id = client_id
-    online_back_check = GameData::TrainerType.player_back_sprite_filename($Trainer.online_trainer_type)
-    if online_back_check
-      player = NPCTrainer.new($Trainer.name, $Trainer.online_trainer_type)
-    else
-      player = NPCTrainer.new($Trainer.name, $Trainer.trainertype)
-    end
+    # Disable custom backsprite feature because overriding the player Trainer messes with Tribes
+    # online_back_check = GameData::TrainerType.player_back_sprite_filename($Trainer.online_trainer_type)
+    # if online_back_check
+    #   player = NPCTrainer.new($Trainer.name, $Trainer.online_trainer_type)
+    # else
+    #   player = NPCTrainer.new($Trainer.name, $Trainer.trainertype)
+    # end
     # attach parties to trainers for tribe calculations
-    player.party = player_party
+    # player.party = player_party
+    player = $Trainer
     opponent.party = opponent_party
     super(scene, player_party, opponent_party, [player], [opponent])
     @battleAI  = PokeBattle_CableClub_AI.new(self)
