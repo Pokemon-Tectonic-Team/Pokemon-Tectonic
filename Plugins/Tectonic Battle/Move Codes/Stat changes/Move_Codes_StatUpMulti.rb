@@ -288,14 +288,14 @@ class PokeBattle_Move_RaiseUserDefSpDef2 < PokeBattle_MultiStatUpMove
 end
 
 #===============================================================================
-# Increases the user's Defense and Sp. Def by 2 steps. User curls up. (Curl Up)
+# Increases the user's Defense and Sp. Def by 1 step. User curls up. (Curl Up)
 #===============================================================================
-class PokeBattle_Move_RaiseUserDefSpDef2CurlsUp < PokeBattle_MultiStatUpMove
+class PokeBattle_Move_RaiseUserDefSpDef1CurlsUp < PokeBattle_MultiStatUpMove
     def aiAutoKnows?(pokemon); return true; end
 
     def initialize(battle, move)
         super
-        @statUp = DEFENDING_STATS_2
+        @statUp = DEFENDING_STATS_1
     end
 
     def pbEffectGeneral(user)

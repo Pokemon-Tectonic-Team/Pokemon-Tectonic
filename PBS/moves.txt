@@ -4853,17 +4853,6 @@ FunctionCode = RaiseUserSpAtkSpDef2
 Flags = CanSnatch
 Description = The user quietly focuses its mind to raise its Sp. Atk and Sp. Def by two steps.
 #-------------------------------
-[COSMICPOWER]
-Name = Cosmic Power
-Type = PSYCHIC
-Category = Status
-Accuracy = 0
-TotalPP = 3
-Target = User
-FunctionCode = RaiseUserDefSpDef2
-Flags = CanSnatch
-Description = The user absorbs a mystical power from space to raise its Defense and Sp. Def by two steps.
-#-------------------------------
 [EERIESPELL]
 Name = Eerie Spell
 Type = PSYCHIC

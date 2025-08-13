@@ -120,9 +120,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 3
 Target = User
-FunctionCode = RaiseUserDefSpDef2CurlsUp
+FunctionCode = RaiseUserDefSpDef1CurlsUp
 Flags = CanSnatch
-Description = The user curls up to conceal weak spots and raise both of its Defense and Sp. Def by two steps.
+Description = The user curls up to conceal weak spots and raise both of its Defense and Sp. Def.
 Animation = DEFENSECURL
 #-------------------------------
 [DAZZLE]
