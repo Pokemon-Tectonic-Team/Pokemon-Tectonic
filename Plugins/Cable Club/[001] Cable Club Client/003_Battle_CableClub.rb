@@ -82,6 +82,9 @@ class PokeBattle_CableClub < PokeBattle_Battle
     else
       player = NPCTrainer.new($Trainer.name, $Trainer.trainertype)
     end
+    # attach parties to trainers for tribe calculations
+    player.party = player_party
+    opponent.party = opponent_party
     super(scene, player_party, opponent_party, [player], [opponent])
     @battleAI  = PokeBattle_CableClub_AI.new(self)
     @battleRNG = Random.new(seed)
