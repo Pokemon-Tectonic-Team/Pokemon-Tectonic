@@ -1210,11 +1210,16 @@ module Compiler
             f.write(format("Type2 = %s\r\n", species.type2)) if species.type2 != species.type1
         end
         stats_array = []
+        total = 0
+        base_species_total = 0
         GameData::Stat.each_main do |s|
             next if s.pbs_order < 0
             stats_array[s.pbs_order] = species.base_stats[s.id]
+            total += species.base_stats[s.id]
+            base_species_total += base_species.base_stats[s.id]
         end
         f.write(format("BaseStats = %s\r\n", stats_array.join(","))) if species.base_stats != base_species.base_stats
+        f.write(format("# Total = %s\r\n", total)) if species.base_stats != base_species.base_stats
         f.write(format("BaseEXP = %d\r\n", species.base_exp)) if species.base_exp != base_species.base_exp
         f.write(format("Rareness = %d\r\n", species.catch_rate)) if species.catch_rate != base_species.catch_rate
         f.write(format("Happiness = %d\r\n", species.happiness)) if species.happiness != base_species.happiness

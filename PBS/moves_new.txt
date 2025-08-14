@@ -120,9 +120,9 @@ Category = Status
 Accuracy = 0
 TotalPP = 3
 Target = User
-FunctionCode = RaiseUserDefSpDef2CurlsUp
+FunctionCode = RaiseUserDefSpDef1CurlsUp
 Flags = CanSnatch
-Description = The user curls up to conceal weak spots and raise both of its Defense and Sp. Def by two steps.
+Description = The user curls up to conceal weak spots and raise both of its Defense and Sp. Def.
 Animation = DEFENSECURL
 #-------------------------------
 [DAZZLE]
@@ -6554,6 +6554,20 @@ FunctionCode = ProtectUserExtendEclipse1Turn
 Description = Protects the user from attacks. If an eclipse is active, extends it by one turn. Fails if used in succession.
 Animation = PROTECT
 #-------------------------------
+[HISS]
+Name = Hiss
+Type = DRAGON
+Category = Special
+Power = 40
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = LowerTargetHighestStat1
+Flags = CanProtect,Sound
+EffectChance = 20
+Description = The target is harmed by a malevolent sound. This has a 20% chance to reduce the higher of the target's Attack or Sp. Atk.
+Animation = GROWL
+#-------------------------------
 [JETSPEED]
 Name = Jet Speed
 Type = DRAGON
@@ -6616,20 +6630,6 @@ FunctionCode = HitTwoToFiveTimesAddMoneyGainedFromBattleEachHit
 Flags = CanProtect
 Description = The user makes an offering, then multi-hits two to five times. Money is earned for each hit.
 Animation = PAYDAY
-#-------------------------------
-[SCALEGLINT]
-Name = Scale Glint
-Type = DRAGON
-Category = Special
-Power = 40
-Accuracy = 100
-TotalPP = 15
-Target = NearOther
-FunctionCode = LowerTargetHighestStat1
-Flags = CanProtect,Light
-EffectChance = 20
-Description = The shine from scales damages the target. This has a 20% chance to reduce the higher of the target's Attack or Sp. Atk.
-Animation = DAZZLINGGLEAM
 #-------------------------------
 [SCOUR]
 Name = Scour

@@ -18,10 +18,6 @@ Flags = RainstormSynergy
 Name = Adapted
 Description = Powers up moves of the same type by 33%.
 #-------------------------------
-[ADAPTIVESKIN]
-Name = Adaptive Skin
-Description = After being hit, the Pokémon raises either Defense or Sp. Def based on the attack's category. Caps out at +4.
-#-------------------------------
 [ADRENALINERUSH]
 Name = Adrenaline Rush
 Description = Raises Speed by four steps when its HP is lowered below half.
@@ -29,10 +25,6 @@ Description = Raises Speed by four steps when its HP is lowered below half.
 [AERODYNAMIC]
 Name = Aerodynamic
 Description = Grants immunity to Flying-type moves and raises Speed if hit by one.
-#-------------------------------
-[AEROSHELL]
-Name = Aeroshell
-Description = After using a wind move, raises the Pokémon's Defense and Sp. Def. Caps out at +4.
 #-------------------------------
 [AFROTECTION]
 Name = Afrotection
@@ -278,6 +270,10 @@ Description = Prevents itself and allies from being poisoned, leeched, or waterl
 Name = Cash Out
 Description = Upon entry, consumes scattered coins to heal for 1/10th the amount consumed. This can overheal.
 #-------------------------------
+[CELEBRATION]
+Name = Celebration
+Description = Heals by 1/5th HP whenever any Pokémon uses a dance move. Can overheal.
+#-------------------------------
 [CELERITAS]
 Name = Celeritas
 Description = The Pokémon's Speed is doubled while using light-based moves.
@@ -344,6 +340,10 @@ Description = Boosts Sp. Atk by 75%, but the Pokémon becomes frostbitten after 
 [COLDRECEPTION]
 Name = Cold Reception
 Description = Immune to Ice-type moves, and raises Attack and Sp. Atk if hit by one.
+#-------------------------------
+[COLORCOLLECTOR]
+Name = Color Collector
+Description = When hit with an attack, gains that attack's type.
 #-------------------------------
 [CONSTRICTOR]
 Name = Constrictor
@@ -662,10 +662,6 @@ Description = The Pokémon is also Fire-type.
 Name = Fiery Spirit
 Description = Special moves against the Pokémon have a 30% chance to burn the attacker.
 #-------------------------------
-[FIESTA]
-Name = Fiesta
-Description = Heals by 1/8th HP whenever any Pokémon uses a dance or sound move.
-#-------------------------------
 [FIGHTINGVIGOR]
 Name = Fighting Vigor
 Description = Heals 1/16th HP every turn. Protected from being numbed or waterlogged.
@@ -855,7 +851,7 @@ Description = Boosts Sp. Def by two steps when hit by an attack.
 #-------------------------------
 [GROOVY]
 Name = Groovy
-Description = Raises Attack whenever any Pokémon uses a dance move.
+Description = Raises Attack and Sp. Atk whenever any Pokémon uses a dance move.
 #-------------------------------
 [GROTESQUEVITALS]
 Name = Grotesque Vitals
@@ -1865,10 +1861,6 @@ Flags = MoonglowSynergy
 Name = Sopping
 Description = Physical attacks against the Pokémon have a 30% chance to waterlog the attacker.
 #-------------------------------
-[SOUNDBARRIER]
-Name = Sound Barrier
-Description = After using a sound move, raises the Pokémon's Defense and Sp. Def. Caps out at +4.
-#-------------------------------
 [SPACEINTERLOPER]
 Name = Space Interloper
 Description = Attacks hit twice for half damage, drain 25% of damage dealt and become special.
@@ -1879,7 +1871,7 @@ Description = Your attacks become spread.
 #-------------------------------
 [SPARESCALES]
 Name = Spare Scales
-Description = Raises defenses after using a Grass-, Ground-, or Steel-type move. Caps out at +4.
+Description = The Pokemon is healed for 1/5th HP after using a Grass-, Ground-, or Steel-type move. Can overheal.
 #-------------------------------
 [SPECTRUMVISION]
 Name = Spectrum Vision
@@ -2248,6 +2240,10 @@ Flags = RainstormSynergy
 Name = Weathered
 Description = Immune to weather downsides, and takes 20% less damage from attacks during weather.
 Flags = AllWeatherSynergy
+#-------------------------------
+[WELLROUNDED]
+Name = Well Rounded
+Description = Powers up all tagged moves by 20%.
 #-------------------------------
 [WELLSUITED]
 Name = Well Suited

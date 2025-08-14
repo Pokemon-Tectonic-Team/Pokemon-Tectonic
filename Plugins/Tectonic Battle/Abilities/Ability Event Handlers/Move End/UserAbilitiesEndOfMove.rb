@@ -232,24 +232,11 @@ BattleHandlers::UserAbilityEndOfMove.add(:SPACEINTERLOPER,
   }
 )
 
-BattleHandlers::UserAbilityEndOfMove.add(:SOUNDBARRIER,
-  proc { |ability, user, _targets, move, _battle, _switchedBattlers|
-      next unless move.soundMove?
-      defenseStatStackingAbility(ability, user)
-  }
-)
-
-BattleHandlers::UserAbilityEndOfMove.add(:AEROSHELL,
-  proc { |ability, user, _targets, move, _battle, _switchedBattlers|
-      next unless move.windMove?
-      defenseStatStackingAbility(ability, user)
-  }
-)
-
 BattleHandlers::UserAbilityEndOfMove.add(:SPARESCALES,
   proc { |ability, user, _targets, move, _battle, _switchedBattlers|
       next unless %i[GRASS GROUND STEEL].include?(move.calcType)
-      defenseStatStackingAbility(ability, user)
+      healingMessage = _INTL("{1} gathered up material.", battler.pbThis)
+      battler.applyFractionalHealing(1.0 / 5.0, ability: ability, customMessage: healingMessage, canOverheal: true)
   }
 )
 
