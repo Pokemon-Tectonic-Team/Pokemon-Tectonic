@@ -114,16 +114,19 @@ Pokedex = This is the form Castform takes when an eclipse covers the sky. It mov
 [DEOXYS,1]
 FormName = Attack
 BaseStats = 50,180,20,150,180,20
+# Total = 600
 Moves = 1,GRAVITY,1,LEER,5,RETREAT,10,PULSAR,15,TAUNT,20,PURSUIT,25,PSYCHIC,30,SUPERPOWER,35,PSYCHESWITCH,40,ZENHEADBUTT,45,WORKUP,50,ZAPCANNON,55,PSYCHOBOOST,60,HYPERBEAM
 #-------------------------------
 [DEOXYS,2]
 FormName = Defense
 BaseStats = 50,70,160,90,70,160
+# Total = 600
 Moves = 1,GRAVITY,1,LEER,5,RETREAT,10,PULSAR,15,KNOCKOFF,20,SPIKES,25,PSYCHIC,30,SNATCH,35,PSYCHESWITCH,40,ZENHEADBUTT,45,HELPINGHAND,50,AMNESIA,55,RECOVER,60,PSYCHOBOOST,65,COUNTER,65,MIRRORCOAT
 #-------------------------------
 [DEOXYS,3]
 FormName = Speed
 BaseStats = 50,95,90,180,95,90
+# Total = 600
 Moves = 1,GRAVITY,1,LEER,5,RETREAT,10,PULSAR,15,KNOCKOFF,20,PURSUIT,25,PSYCHIC,30,SWIFT,35,PSYCHESWITCH,40,ZENHEADBUTT,45,AGILITY,50,RECOVER,55,PSYCHOBOOST,60,EXTREMESPEED
 #-------------------------------
 [BURMY,1]
@@ -194,6 +197,7 @@ Pokedex = This is Rotom after it's seized control of a lawn mower that has a spe
 [GIRATINA,1]
 FormName = Origin
 BaseStats = 140,110,90,80,110,90
+# Total = 620
 Abilities = LEVITATE
 Height = 6.9
 Weight = 650.0
@@ -203,6 +207,7 @@ FormName = Sky
 Type1 = GRASS
 Type2 = FLYING
 BaseStats = 100,105,75,125,120,75
+# Total = 600
 Abilities = AERODYNAMIC,FLOWERVEIL
 Moves = 1,GROWTH,5,GUST,10,MAGICALLEAF,15,LEECHSEED,20,QUICKATTACK,25,NATURALGIFT,30,BLUSTER,35,ROOST,40,ENERGYBALL,45,SWEETKISS,50,AIRSLASH,55,LEAFSTORM,60,SEEDFLARE
 Height = 0.4
@@ -289,6 +294,7 @@ FormName = Summer
 Type1 = NORMAL
 Type2 = GRASS
 BaseStats = 60,80,50,70,40,80
+# Total = 380
 Moves = 1,GROWL,1,TACKLE,4,LEAFAGE,8,SMIRK,12,ANESTHETIZE,16,RAZORLEAF,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,WHIRLWINDKICK,36,WHIPKICK,40,AROMATHERAPY,44,TAUNT,48,DOUBLEEDGE,52,SOLARGLIDE,56,SYNTHESIS,60,SEASONSEND
 #-------------------------------
 [DEERLING,2]
@@ -296,6 +302,7 @@ FormName = Autumn
 Type1 = NORMAL
 Type2 = GROUND
 BaseStats = 60,50,50,85,40,95
+# Total = 380
 Moves = 1,GROWL,1,TACKLE,4,TREADON,8,LEER,12,BESTOW,16,TREMOR,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,WHIRLWINDKICK,36,TRAMPLE,40,SYMBIOSIS,44,SPIKES,48,DOUBLEEDGE,52,EARTHQUAKE,56,SHOREUP,60,SEASONSEND
 #-------------------------------
 [DEERLING,3]
@@ -303,6 +310,7 @@ FormName = Winter
 Type1 = NORMAL
 Type2 = ICE
 BaseStats = 60,65,95,55,45,60
+# Total = 380
 Moves = 1,GROWL,1,TACKLE,4,COLDEMBRACE,8,DAZZLE,12,CHILL,16,FROSTBARB,20,HEADBUTT,24,DOUBLEKICK,28,TAKEDOWN,32,WHIRLWINDKICK,36,ICECALIBUR,40,CHARM,44,SHIVERDANCE,48,DOUBLEEDGE,52,GLACIALRAM,56,WISH,60,SEASONSEND
 #-------------------------------
 [SAWSBUCK,1]
@@ -310,34 +318,40 @@ FormName = Summer
 Type1 = NORMAL
 Type2 = GRASS
 BaseStats = 80,120,70,90,60,100
+# Total = 520
 #-------------------------------
 [SAWSBUCK,2]
 FormName = Autumn
 Type1 = NORMAL
 Type2 = GROUND
 BaseStats = 80,90,70,105,60,115
+# Total = 520
 #-------------------------------
 [SAWSBUCK,3]
 FormName = Winter
 Type1 = NORMAL
 Type2 = ICE
 BaseStats = 80,105,125,70,60,80
+# Total = 520
 #-------------------------------
 [TORNADUS,1]
 FormName = Therian
 BaseStats = 80,100,80,120,110,90
+# Total = 580
 Abilities = REGENERATOR
 Height = 1.4
 #-------------------------------
 [THUNDURUS,1]
 FormName = Therian
 BaseStats = 80,105,70,100,145,80
+# Total = 580
 Abilities = VOLTABSORB
 Height = 3.0
 #-------------------------------
 [LANDORUS,1]
 FormName = Therian
 BaseStats = 90,145,90,90,105,80
+# Total = 600
 Abilities = INTIMIDATE
 Height = 1.3
 #-------------------------------
@@ -384,6 +398,7 @@ FormName = Pirouette
 Type1 = NORMAL
 Type2 = FIGHTING
 BaseStats = 100,130,90,130,75,75
+# Total = 600
 #-------------------------------
 [GENESECT,1]
 FormName = Shock Drive
@@ -523,6 +538,7 @@ FormName = Female
 [AEGISLASH,1]
 FormName = Blade
 BaseStats = 60,150,50,60,150,50
+# Total = 520
 #-------------------------------
 [PUMPKABOO,1]
 FormName = Average Size
@@ -597,6 +613,7 @@ FormName = Unbound
 Type1 = PSYCHIC
 Type2 = DARK
 BaseStats = 70,140,55,70,150,115
+# Total = 600
 Abilities = SUBSPACESCHISM,UNBOUND
 Moves = 1,HELPINGHAND,1,MINDWAVES,4,ASTONISH,8,MAGICCOAT,12,LIGHTSCREEN,16,PSYBEAM,20,SKILLSWAP,24,POWERSPLIT,28,GUARDSPLIT,32,PHANTOMFORCE,36,ZENHEADBUTT,40,SHADOWBALL,44,TRICK,48,DESTINYBOND,52,DREAMDANCE,56,PSYCHIC,60,HYPERSPACEFURY
 Height = 6.5
@@ -831,6 +848,7 @@ Pokedex = They diligently serve people and Pokémon so they can gather feelings 
 FormName = Hangry
 Type1 = DARK
 BaseStats = 90,125,70,120,85,70
+# Total = 560
 Pokedex = Hunger hormones affect its temperament. Until its hunger is appeased, it gets up to all manner of evil deeds.
 #-------------------------------
 [ZACIAN,1]
@@ -983,6 +1001,7 @@ Pokedex = The DNA from the original Mew has grown exponentially in this form. It
 [ENAMORUS,1]
 FormName = Therian
 BaseStats = 75,115,110,45,135,100
+# Total = 580
 Abilities = WEATHERED
 #-------------------------------
 [MAROMATISSE,1]
