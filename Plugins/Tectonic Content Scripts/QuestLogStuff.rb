@@ -26,7 +26,7 @@ end
 
 def completeFormerChamps
     if pbGetSelfSwitch(41, 'D', 34) && pbGetSelfSwitch(33, 'D', 165) && pbGetSelfSwitch(3, 'D', 270) && pbGetSelfSwitch(3, 'B', 265) && pbGetSelfSwitch(3, 'D', 270) && pbGetSelfSwitch(5, 'D', 316)
-        completeQuest(:QUEST_FORMER_CHAMPIONS, 2)
+        completeQuest(:QUEST_FORMER_CHAMPIONS)
     end
 end
 
