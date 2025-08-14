@@ -2471,7 +2471,7 @@ TotalPP = 5
 Target = User
 Priority = 2
 FunctionCode = RedirectAllMovesToUserLowerFoesAtkSpAtk1
-Flags = Uninvocable
+Flags = Uninvocable,Light
 Description = All foes have their Attack and Sp. Atk lowered. They can only target the user this turn.
 #-------------------------------
 [MANYNEEDLE]
