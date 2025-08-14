@@ -2910,6 +2910,17 @@ EffectChance = 100
 Description = The user questions the existence of the target, dealing psychic damage and dizzying them.
 Animation = AMNESIA
 #-------------------------------
+[COSMICPOWER]
+Name = Cosmic Power
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 3
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user absorbs a mystical power from space to raise its Defense and Sp. Def by two steps.
+#-------------------------------
 [DREAMEATER]
 Name = Dream Eater
 Type = PSYCHIC
