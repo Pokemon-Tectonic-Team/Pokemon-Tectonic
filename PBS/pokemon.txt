@@ -15432,7 +15432,6 @@ BaseEXP = 147
 Rareness = 50
 Happiness = 35
 Abilities = CLEARBODY,SUNEATER
-Moves = 44,DARKPULSE
 Tribes = SCOURGE,TYRANNICAL,TACTICIAN
 StepsToHatch = 10455
 Height = 1.4
