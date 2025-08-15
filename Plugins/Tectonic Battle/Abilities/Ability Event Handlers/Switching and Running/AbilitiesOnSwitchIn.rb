@@ -383,6 +383,24 @@ BattleHandlers::AbilityOnSwitchIn.add(:CELERITAS,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:FEROCIOUS,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} is ferocious!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:LIGHTTRICK,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} tricks the eye!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
 ##########################################
 # Screen setting abilities
 ##########################################
