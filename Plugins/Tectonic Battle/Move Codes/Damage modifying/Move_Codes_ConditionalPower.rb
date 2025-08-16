@@ -577,3 +577,19 @@ class PokeBattle_Move_DamageBoost50PercentNotTargetFirstTurn < PokeBattle_Move
     end
     # AI does not understand this buff, unsure of how to code it
 end
+
+#===============================================================================
+# Power and Money is doubled if the target has a status problem. (Royal Tribute)
+#===============================================================================
+class PokeBattle_Move_DoubleDamageMoneyTargetStatused < PokeBattle_Move
+    def pbBaseDamage(baseDmg, user, target)
+        baseDmg *= 2 if target.pbHasAnyStatus?
+        return baseDmg
+    end
+    
+    def pbAdditionalEffect(user, target)
+        money = 8
+        money *= 2 if target.pbHasAnyStatus?
+        user.generateMoney(money)
+    end
+end
