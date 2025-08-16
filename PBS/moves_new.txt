@@ -7139,13 +7139,14 @@ Animation = SNARL
 Name = Royal Tribute
 Type = DARK
 Category = Special
-Power = 90
+Power = 70
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = AddMoneyGainedFromBattle
+FunctionCode = DoubleDamageMoneyTargetStatused
 Flags = CanProtect
-Description = The user demands tribute from the target. Money is earned after the battle.
+EffectChance = 100
+Description = The user demands tribute from the target. Money is earned after the battle. This deals double damage and makes double the money if the target has a non-volatile status condition.
 Animation = PAYDAY
 #-------------------------------
 [SCAM]
