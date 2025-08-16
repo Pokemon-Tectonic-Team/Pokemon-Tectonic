@@ -1063,7 +1063,7 @@ Description = Special moves have a 30% chance to poison targets.
 #-------------------------------
 [INTROVERT]
 Name = Introvert
-Description = Takes 30% less damage until it uses an attack.
+Description = Takes 30% less damage until the first time it uses an attacking move.
 #-------------------------------
 [INVESTIGATOR]
 Name = Investigator
