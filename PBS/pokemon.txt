@@ -10106,7 +10106,7 @@ StepsToHatch = 10455
 Height = 1.5
 Weight = 102.6
 Kind = Dragon
-Pokedex = While basking in the joy of flight generally keeps this Pokémon in high spirits, Salamence turns into an uncontrollable menace if something angers it.
+Pokedex = While basking in the joy of flight generally keeps this Pokémon in high spirits, it turns into an uncontrollable menace if something angers it.
 Generation = 3
 WildItemUncommon = DRAGONFANG
 #-------------------------------
