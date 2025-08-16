@@ -6756,6 +6756,7 @@ Accuracy = 0
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = StartGravity5
+Flags = CanProtect
 Description = Bites a hole in reality, creating a black hole to damage all near foes. Gravity is intensified for five turns.
 Animation = BLACKHOLEECLIPSE
 #-------------------------------
