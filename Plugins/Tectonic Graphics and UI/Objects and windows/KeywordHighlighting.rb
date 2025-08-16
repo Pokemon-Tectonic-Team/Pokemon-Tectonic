@@ -134,25 +134,6 @@ end
 
 def battleKeywordsUnimportant
     return [
-        "two",
-        "three",
-        "four",
-        "five",
-        "six",
-        "seven",
-        "eight",
-        "nine",
-        "ten",
-        "eleven",
-        "twelve",
-        "thirteen",
-        "fourteen",
-        "fifteen",
-        "sixteen",
-        "seventeen",
-        "eighteen",
-        "nineteen",
-        "twenty",
         "twice",
         "doubles",
         "double",
@@ -176,6 +157,30 @@ def battleKeywordsUnimportant
     ]
 end
 
+def battleKeywordsUnimportantCaseSensitive
+    return [
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten",
+        "eleven",
+        "twelve",
+        "thirteen",
+        "fourteen",
+        "fifteen",
+        "sixteen",
+        "seventeen",
+        "eighteen",
+        "nineteen",
+        "twenty",
+    ]
+end
+
 def addBattleKeywordHighlighting(description)
     # Highlight very important words in red
     importantColorTag = getSkinColor(nil, 2, darkMode?, true)
@@ -191,7 +196,9 @@ def addBattleKeywordHighlighting(description)
     battleKeywordsUnimportant.each do |keyword|
         description = description.gsub(/\b(#{keyword})\b/i,"#{unimportantColorTag}\\1</c3>")
     end
-    description = description.gsub(/\b(\d+%)/i,"#{unimportantColorTag}\\1</c3>")
+    battleKeywordsUnimportantCaseSensitive.each do |keyword|
+    description = description.gsub(/\b(#{keyword})\b/,"#{unimportantColorTag}\\1</c3>")
+    end
 
     return description
 end
