@@ -542,7 +542,7 @@ module QuestModule
   QUEST_LEGEND_DRAGON_ISLE = {
     :Name => _INTL("Isle of Dragons"),
     :QuestGiver => _INTL("Dragon Hatcher"),
-    :Stage1 => _INTL("Bring one of every egg to him."),
+    :Stage1 => _INTL("Fully evolve every Dragon Egg."),
     :Stage2 => _INTL("Explore the isle."),
     :Location1 => _INTL("Samorn's House"),
     :Location2 => _INTL("Isle of Dragons"),
