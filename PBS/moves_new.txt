@@ -3723,14 +3723,14 @@ Description = Raises Sp. Atk by three steps. Until switch out, the user's attack
 Name = Hearthfire Hula
 Type = FIRE
 Category = Special
-Power = 80
+Power = 95
 Accuracy = 100
 TotalPP = 10
 Target = AllNearOthers
 FunctionCode = CureTargetFrostbite
-Flags = CanProtect,Dance
+Flags = CanProtect,Dance,HalfDamageToAllies
 EffectChance = 100
-Description = The user dances rapidly, emitting tropical heat. Any frostbitten Pokémon will be healed by this heat.
+Description = The user dances with great heat. Pokémon hit by this are cured of frostbite. Deals 50% less damage to allies.
 Animation = HEATWAVE
 #-------------------------------
 [HOLDFIRE]
