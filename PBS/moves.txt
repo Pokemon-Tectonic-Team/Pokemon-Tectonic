@@ -3991,14 +3991,14 @@ Description = The target is struck with a supersonic water blast. Can random cri
 Name = Sparkling Aria
 Type = WATER
 Category = Special
-Power = 80
+Power = 95
 Accuracy = 100
 TotalPP = 10
 Target = AllNearOthers
 FunctionCode = CureTargetBurn
-Flags = CanProtect,Sound
+Flags = CanProtect,Sound,HalfDamageToAllies
 EffectChance = 100
-Description = The user bursts into song, emitting many bubbles. Any burning Pokémon will be healed by these bubbles.
+Description = The user bursts into a bubbly song. Pokémon hit by this are cured of burn. Deals 50% less damage to allies.
 #-------------------------------
 [STEAMERUPTION]
 Name = Steam Eruption
