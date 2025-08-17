@@ -184,7 +184,7 @@ class PokeBattle_Move_StartEclipse8 < PokeBattle_WeatherMove
 end
 
 # Empowered Eclipse
-class PokeBattle_Move_EmpoweredEclipse < PokeBattle_Move_StartEclipse8
+class PokeBattle_Move_EmpoweredEclipse < PokeBattle_Move_StartEclipse6
     include EmpoweredMove
 
     def pbEffectGeneral(user)

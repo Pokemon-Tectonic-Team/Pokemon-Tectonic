@@ -1229,7 +1229,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserDefSpDef2
 Flags = CanProtect
-Description = The user fights the foe up close without guarding itself. This lowers the user Defense and Sp. Def by two steps.
+Description = The user fights the foe up close without guarding itself. This lowers the user's Defense and Sp. Def by two steps.
 #-------------------------------
 [COACHING]
 Name = Coaching
@@ -3005,7 +3005,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = AlwaysHits
 Flags = CanProtect,Punch
-Description = The user throws a punch from the shadows. The punch lands without fail.
+Description = The user throws a punch from the shadows. Lands without fail.
 #-------------------------------
 [SHADOWSNEAK]
 Name = Shadow Sneak
@@ -3699,7 +3699,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user attacks the target at full power. Lowers the user's Sp. Atk by four steps.
+Description = The user attacks the target at full power. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [PYROBALL]
 Name = Pyro Ball
@@ -3775,7 +3775,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpdDefSpDef2
 Flags = CanProtect
-Description = With a fiery forehead, the user hurls itself at the foe. Lowers the user's Defense, Sp. Def, and Speed by two steps.
+Description = With a fiery forehead, the user hurls itself at the foe. This lowers the user's Defense, Sp. Def, and Speed by two steps.
 #-------------------------------
 #		WATER MOVES
 #-------------------------------
@@ -3973,7 +3973,7 @@ TotalPP = 12
 Target = User
 FunctionCode = LowerUserDefSpDef2RaiseUserAtkSpAtkSpd3
 Flags = CanSnatch
-Description = The user breaks its shell, lowering its Defense and Sp. Def by two steps but raising Attack, Sp. Atk and Speed by three steps.
+Description = The user breaks its shell. This raises the user's Attack, Sp. Atk and Speed by three steps, but lowers Defense and Sp. Def by two steps.
 #-------------------------------
 [SNIPESHOT]
 Name = Snipe Shot
@@ -4316,7 +4316,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect,Wind
-Description = A storm of sharp leaves is whipped up. Lowers the user's Sp. Atk by four steps.
+Description = A storm of sharp leaves is whipped up. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [LEECHSEED]
 Name = Leech Seed
@@ -5085,7 +5085,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user attacks the target at full power. Lowers the user's Sp. Atk by four steps.
+Description = The user attacks the target at full power. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [PSYCHOCUT]
 Name = Psycho Cut
@@ -5349,7 +5349,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserSpd2
 Flags = CanProtect,Punch
-Description = The user swings and hits with its strong, heavy fist. Lowers the user's Speed by two steps.
+Description = The user swings and hits with its strong, heavy fist. This lowers the user's Speed by two steps.
 #-------------------------------
 [ICEPUNCH]
 Name = Ice Punch
@@ -5463,7 +5463,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = Comets are summoned down from the sky. Lowers the user's Sp. Atk by four steps.
+Description = Comets are summoned down from the sky. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [DRAGONBREATH]
 Name = Dragon Breath
@@ -6249,7 +6249,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user unleashes a strong beam. Lowers the user's Sp. Atk by four steps.
+Description = The user unleashes a strong beam. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [GEOMANCY]
 Name = Geomancy

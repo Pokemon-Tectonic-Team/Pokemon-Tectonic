@@ -55,7 +55,7 @@ class PokeBattle_Move_EmpoweredMindLink < PokeBattle_Move_RaiseUserSpAtk3AlliesS
     include EmpoweredMove
 
     def pbEffectGeneral(user)
-        summonAvatar(user, :ABRA, _INTL("{1} gathers an new mind!", user.pbThis))
+        summonAvatar(user, :ABRA, _INTL("{1} gathers a new mind!", user.pbThis))
         super
         transformType(user, :PSYCHIC)
     end
