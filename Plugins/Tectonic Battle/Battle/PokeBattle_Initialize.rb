@@ -247,13 +247,15 @@ class PokeBattle_Battle
     end
 
     def setMaxPPsForTrainer(trainer,includeMults)
-        pp_mult = 1
-        if includeMults
-            pp_mult *= 2.0 if trainer.tribalBonus.hasTribeBonus?(:TACTICIAN)
-        end
-
         trainer.party.each do |pokemon|
             pokemon.moves.each do |move|
+                pp_mult = 1
+                if includeMults
+                    if trainer.tribalBonus.hasTribeBonus?(:TACTICIAN) && move.priority > 0
+                        pp_mult *= 2.0
+                    end
+                end
+
                 move.pp_mult = pp_mult
                 move.restore_pp
             end
