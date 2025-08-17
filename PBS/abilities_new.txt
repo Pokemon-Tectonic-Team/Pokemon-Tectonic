@@ -847,7 +847,7 @@ Description = Moves that trap and damage the opponent for three turns deal 50% m
 #-------------------------------
 [GRIT]
 Name = Grit
-Description = Boosts Sp. Def by two steps when hit by an attack.
+Description = Raises Sp. Def when hit by an attack.
 #-------------------------------
 [GROOVY]
 Name = Groovy

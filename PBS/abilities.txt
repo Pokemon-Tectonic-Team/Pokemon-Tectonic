@@ -530,7 +530,7 @@ Description = Speed is raised by two steps at the end of each of its turns.
 #-------------------------------
 [STAMINA]
 Name = Stamina
-Description = Boosts Defense by two steps when hit by an attack.
+Description = Raises Defense when hit by an attack.
 #-------------------------------
 [STANCECHANGE]
 Name = Stance Change
