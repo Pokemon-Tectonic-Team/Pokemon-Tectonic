@@ -298,6 +298,14 @@ class PokeBattle_Move
             end
         end
 
+        # Hearsh Sunlight
+        if @battle.pbWeather == :HarshSun && applySunDebuff?(user, @calcType, checkingForAI)
+            unless checkingForAI
+                battle.pbDisplay(_INTL("The harsh sunlight prevents the hit from being critical!", target.pbThis))
+            end
+            return true
+        end
+
         # Lucky Chant
         if target.pbOwnSide.effectActive?(:LuckyChant)
             unless checkingForAI
@@ -367,6 +375,12 @@ class PokeBattle_Move
 showMessages)
                 return false
             end
+        end
+        if @battle.pbWeather == :HeavyRain && applyRainDebuff?(user, @calcType, aiCheck)
+            if showMessages
+                battle.pbDisplay(_INTL("The heavy rain prevents a random added effect!"))
+            end
+            return false
         end
         if target.shouldItemApply?(:COVERTCLOAK, aiCheck) && user.opposes?(target)
             if showMessages

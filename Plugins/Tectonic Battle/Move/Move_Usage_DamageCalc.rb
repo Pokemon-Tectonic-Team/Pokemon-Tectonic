@@ -182,7 +182,7 @@ class PokeBattle_Move
         weather = @battle.pbWeather
         case weather
         when :Sunshine, :HarshSun
-            if type == :FIRE
+            if type == :FIRE || (type == :GRASS && weather == :HarshSun)
                 damageBonus = weather == :HarshSun ? 0.5 : 0.3
                 damageBonus *= 2 if @battle.curseActive?(:CURSE_BOOSTED_SUN)
                 multipliers[:final_damage_multiplier] *= (1 + damageBonus)
@@ -193,7 +193,7 @@ class PokeBattle_Move
                 multipliers[:final_damage_multiplier] *= (1 - damageReduction)
             end
         when :Rainstorm, :HeavyRain
-            if type == :WATER
+            if type == :WATER || (type == :ELECTRIC && weather == :HeavyRain)
                 damageBonus = weather == :HeavyRain ? 0.5 : 0.3
                 damageBonus *= 2 if @battle.curseActive?(:CURSE_BOOSTED_RAIN)
                 multipliers[:final_damage_multiplier] *= (1 + damageBonus)

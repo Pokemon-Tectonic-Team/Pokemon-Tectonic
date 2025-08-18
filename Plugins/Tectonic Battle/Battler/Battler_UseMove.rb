@@ -377,28 +377,6 @@ class PokeBattle_Battler
         # Display messages about BP adjustment and weather debuffing
         move.displayDamagingMoveMessages(self, move, targets) if move.damagingMove?
         
-        # Primordial Sea, Desolate Land
-        if move.damagingMove?
-            case @battle.pbWeather
-            when :HeavyRain
-                if move.calcType == :FIRE
-                    @battle.pbDisplay(_INTL("The Fire-type attack fizzled out in the heavy rain!"))
-                    user.onMoveFailed(move)
-                    pbCancelMoves
-                    pbEndTurn(choice)
-                    return
-                end
-            when :HarshSun
-                if move.calcType == :WATER
-                    @battle.pbDisplay(_INTL("The Water-type attack evaporated in the harsh sunlight!"))
-                    user.onMoveFailed(move)
-                    pbCancelMoves
-                    pbEndTurn(choice)
-                    return
-                end
-            end
-        end
-        
         # Abilities that trigger before a move starts
         # E.g. Protean
         user.eachActiveAbility do |ability|
