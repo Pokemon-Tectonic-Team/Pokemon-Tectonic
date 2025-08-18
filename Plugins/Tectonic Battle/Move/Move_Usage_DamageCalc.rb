@@ -134,6 +134,7 @@ class PokeBattle_Move
         return true if user.shouldAbilityApply?(:UNAWARE, aiCheck)
         return true if user.shouldAbilityApply?(:BLADEBRAINED, aiCheck) && bladeMove?
         return true if user.shouldAbilityApply?(:TUNEDOUT, aiCheck) && soundMove?
+        return true if empoweredMove?
         return false
     end
 
