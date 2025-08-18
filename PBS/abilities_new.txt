@@ -611,6 +611,10 @@ Flags = EclipseSynergy
 Name = Fae Veil
 Description = Prevents itself and allies from being burned, frostbitten, or numbed.
 #-------------------------------
+[FALSEFRONT]
+Name = False Front
+Description = Upon entry, gains your choice of Fighting-, Dark-, or Fairy-type.
+#-------------------------------
 [FASCINATE]
 Name = Fascinate
 Description = Upon entry, lowers the foe's Sp. Atk stat by two steps.
