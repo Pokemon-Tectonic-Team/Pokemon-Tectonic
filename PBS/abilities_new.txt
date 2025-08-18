@@ -1991,10 +1991,6 @@ Name = Stylish
 Description = The Pokémon benefits twice as much from style points.
 Flags = Immutable
 #-------------------------------
-[SUBSPACESCHISM]
-Name = Subspace Schism
-Description = Upon entry, creates a Trick Room for four turns, inverting the effect of Speed.
-#-------------------------------
 [SUBZERO]
 Name = Sub Zero
 Description = Powers up Ice-type moves by 50%.
