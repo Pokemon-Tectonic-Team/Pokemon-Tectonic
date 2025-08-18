@@ -366,7 +366,6 @@ Ability = INTIMIDATE,CITYRAZER
 Moves1 = REND,WATERFALL,PRIMEVALTORMENT
 Moves2 = CRUNCH,WATERFALL
 Item = LIFEORB
-Aggression = 8
 #-------------------------------
 [PARASECT]
 Ability = INFECTED,BADDREAMS
