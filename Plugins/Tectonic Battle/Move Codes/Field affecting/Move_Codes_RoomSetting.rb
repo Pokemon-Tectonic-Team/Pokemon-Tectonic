@@ -62,3 +62,13 @@ class PokeBattle_Move_EmpoweredOddRoom < PokeBattle_Move_StartSwapOffensiveAndDe
         transformType(user, :PSYCHIC)
     end
 end
+
+#===============================================================================
+# For 4 rounds, swaps the effects of speed on round order. (Trick Room)
+#===============================================================================
+class PokeBattle_Move_StartSwapSpeedOrder4 < PokeBattle_RoomMove
+    def initialize(battle, move)
+        super
+        @roomEffect = :TrickRoom
+    end
+end
