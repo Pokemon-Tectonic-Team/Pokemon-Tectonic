@@ -302,6 +302,9 @@ class PokeBattle_Battle
         # Update tribe counts
         updateTribeCounts
 
+        # Ensure the player's pokemon have up to date stats (e.g. due to balance changes between updates)
+        updatePlayerStats
+
         pbEnsureParticipants
         begin
             pbStartBattleCore
@@ -357,6 +360,12 @@ class PokeBattle_Battle
         @opponent&.each do |opponentTrainer|
             opponentTrainer.tribalBonus.updateTribeCount
         end
+    end
+
+    def updatePlayerStats
+        $Trainer.party.each do |partyMember|
+            partyMember.calc_stats
+        end  
     end
 
     def pbStartBattleCore

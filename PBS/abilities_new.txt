@@ -1201,6 +1201,10 @@ Flags = MoonglowSynergy
 Name = Maestro
 Description = The Pokémon's Speed is doubled while using Sound-based moves.
 #-------------------------------
+[MAGMATRAIL]
+Name = Magma Trail
+Description = Pokémon that swap in for this have their Attack and Sp. Atk raised.
+#-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
 Description = When hit with a special move, traps and damages the attacker for three turns. Fails on turns the user switched in.
@@ -1262,6 +1266,10 @@ Flags = SunshineSynergy
 Name = Mist Form
 Description = Slips past hazards. Takes one third less damage if it switched in this turn.
 Flags = HazardImmunity
+#-------------------------------
+[MISTTRAIL]
+Name = Mist Trail
+Description = Pokémon that swap in for this have their Defense and Sp. Defense raised.
 #-------------------------------
 [MOISTSKIN]
 Name = Moist Skin
@@ -1953,6 +1961,10 @@ Flags = RainstormSynergy
 [STORMTOTEM]
 Name = Storm Totem
 Description = Upon entry, summons a Turbulent Sky on the Pokémon's side for 6 turns.
+#-------------------------------
+[STORMTRAIL]
+Name = Storm Trail
+Description = Pokémon that swap in for this have their Speed raised.
 #-------------------------------
 [STRAIGHTAHEAD]
 Name = Straight Ahead
