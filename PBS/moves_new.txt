@@ -495,7 +495,7 @@ Animation = JUDGMENT
 #-------------------------------
 [SCHEME]
 Name = Scheme
-Type = NORMAL
+Type = DARK
 Category = Status
 Accuracy = 0
 TotalPP = 25
