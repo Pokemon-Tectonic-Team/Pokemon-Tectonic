@@ -940,6 +940,10 @@ Name = Heroic Finale
 Description = Turns to Finale Form when only unfainted on team. Ability becomes Inner Focus.
 Flags = Immutable
 #-------------------------------
+[HIGHJUDGE]
+Name = High Judge
+Description = Has Judgment as its 5th move.
+#-------------------------------
 [HIGHRISE]
 Name = High-rise
 Description = The Pokémon and its allies are immune to weather downsides.

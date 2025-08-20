@@ -107,25 +107,40 @@ class PokeBattle_Battler
 
     def getMoves
         movesArray = @moves.clone
-        if @battle.field.effectActive?(:InsightRoom)
-            insightMove = getInsightMove
-            movesArray.push(insightMove) if insightMove
+        if hasActiveAbility?(:HIGHJUDGE)
+            hasJudgmentAlready = false
+            movesArray.each do |move|
+                next unless move.id == :JUDGMENT
+                hasJudgmentAlready = true
+                break
+            end
+            unless hasJudgmentAlready
+                judgment = @battle.getBattleMoveInstanceFromID(:JUDGMENT)
+                movesArray.push(judgment)
+            end
+        end
+        if @battle.field.effectActive?(:InsightRoom) && @pokemon
+            speciesLearnSet = @pokemon.getMoveList
+            speciesLearnSet.each do |learnSetEntry|
+                moveLevel = learnSetEntry[0]
+                break if moveLevel > @level
+                next if moveLevel < 45
+                moveAtThisLevel = learnSetEntry[1]
+                
+                hasMoveAlready = false
+                movesArray.each do |existingMove|    
+                    next unless existingMove.id == moveAtThisLevel
+                    hasMoveAlready = true
+                    break
+                end
+                next if hasMoveAlready
+
+                insightMove = @battle.getBattleMoveInstanceFromID(moveAtThisLevel)
+                movesArray.push(insightMove)
+                break
+            end
         end
         return movesArray
-    end
-
-    def getInsightMove
-        return nil if @pokemon.nil?
-        speciesLearnSet = @pokemon.getMoveList.reverse
-        speciesLearnSet.each do |learnSetEntry|
-            moveLevel = learnSetEntry[0]
-            next if moveLevel > @level
-            next if moveLevel > 48
-            move = learnSetEntry[1]
-            next if @pokemon.hasMove?(move)
-            return @battle.getBattleMoveInstanceFromID(move)
-        end
-        return nil
     end
 
     def getHighestLearnsetMoveID

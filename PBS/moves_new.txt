@@ -493,18 +493,6 @@ EffectChance = 20
 Description = The user brings down a ruinous power on the target. This has a 20% chance of lowering all the target's stats.
 Animation = JUDGMENT
 #-------------------------------
-[SCHEME]
-Name = Scheme
-Type = DARK
-Category = Status
-Accuracy = 0
-TotalPP = 25
-Target = User
-FunctionCode = RaiseUserAtkSpAtk2AndSpeed2InMoonglow
-Flags = CanSnatch
-Description = The user schemes to raise its Attack and Sp. Atk by two steps. During moonglow, also raises Speed by two steps.
-Animation = NASTYPLOT
-#-------------------------------
 [SEASONSEND]
 Name = Season's End
 Type = NORMAL
@@ -7176,6 +7164,18 @@ FunctionCode = LowerTargetAtk1
 Flags = CanProtect
 EffectChance = 100
 Description = The user slashes all around them, creating deep scars. This lowers each target's Attack.
+#-------------------------------
+[SCHEME]
+Name = Scheme
+Type = DARK
+Category = Status
+Accuracy = 0
+TotalPP = 25
+Target = User
+FunctionCode = RaiseUserAtkSpAtk2AndSpeed2InMoonglow
+Flags = CanSnatch
+Description = The user schemes to raise its Attack and Sp. Atk by two steps. During moonglow, also raises Speed by two steps.
+Animation = NASTYPLOT
 #-------------------------------
 [SEVER]
 Name = Sever
