@@ -439,6 +439,7 @@ def make_party_validator(pbs_dir):
                     if item2 and item2 not in item_syms:
                         logging.debug("invalid item id: %s", item2)
                         errors.append("invalid item")
+                    item_type = record.str() # don't need to validate but do need to read for data alignment
                     can_use_sketch = not set(SKETCH_MOVE_IDS).isdisjoint(species_.moves)
                     for _ in range(record.int()):
                         move = record.str()

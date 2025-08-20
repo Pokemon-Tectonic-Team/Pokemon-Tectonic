@@ -135,6 +135,7 @@ module CableClub
     writer.int(pkmn.form)
     writer.nil_or(:sym, pkmn.items[0])
     writer.nil_or(:sym, pkmn.items[1])
+    writer.sym(pkmn.itemTypeChosen) # don't need nil_or because defaults to normal
     writer.int(pkmn.numMoves)
     pkmn.moves.each do |move|
       writer.sym(move.id)
@@ -207,6 +208,7 @@ module CableClub
     # filter out blank items
     items = items.select {|i| i.length > 0}
     pkmn.setItems(items)
+    pkmn.itemTypeChosen = record.sym
     pkmn.forget_all_moves
     record.int.times do |i|
       pkmn.moves[i] = Pokemon::Move.new(record.sym)
