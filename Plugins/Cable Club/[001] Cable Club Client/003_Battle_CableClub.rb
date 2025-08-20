@@ -367,7 +367,7 @@ class PokeBattle_CableClub_AI < PokeBattle_AI
                   @battle.choices[their_index][1] = record.int
                   move = record.nil_or(:bool)
                   if move
-                    move = (@battle.choices[their_index][1]<0) ? @battle.struggle : partner_pkmn.moves[@battle.choices[their_index][1]]
+                    move = (@battle.choices[their_index][1]<0) ? @battle.struggle : partner_pkmn.getMoves[@battle.choices[their_index][1]]
                   end
                   @battle.choices[their_index][2] = move
                   @battle.choices[their_index][3] = record.int
