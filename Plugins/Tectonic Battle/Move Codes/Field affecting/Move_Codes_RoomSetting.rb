@@ -6,6 +6,7 @@ class PokeBattle_Move_StartPolarizeTypeMatchups5 < PokeBattle_RoomMove
     def initialize(battle, move)
         super
         @roomEffect = :PolarizedRoom
+        @duration = 5
     end
 end
 
@@ -34,6 +35,7 @@ class PokeBattle_Move_StartSwapAttackingStats5 < PokeBattle_RoomMove
     def initialize(battle, move)
         super
         @roomEffect = :PuzzleRoom
+        @duration = 5
     end
 end
 
@@ -63,6 +65,7 @@ class PokeBattle_Move_StartSwapOffensiveAndDefensiveStats5 < PokeBattle_RoomMove
     def initialize(battle, move)
         super
         @roomEffect = :OddRoom
+        @duration = 5
     end
 end
 
