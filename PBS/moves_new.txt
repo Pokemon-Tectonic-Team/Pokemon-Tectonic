@@ -1981,9 +1981,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = RecoilThirdOfDamageDealt
+FunctionCode = RecoilQuarterOfDamageDealt
 Flags = CanProtect
-Description = The user rushes into the target with its stony body. The user also takes 33% recoil.
+Description = The user rushes into the target with its stony body. The user also takes 25% recoil.
 Animation = HEADSMASH
 #-------------------------------
 [GRINDSTONE]
