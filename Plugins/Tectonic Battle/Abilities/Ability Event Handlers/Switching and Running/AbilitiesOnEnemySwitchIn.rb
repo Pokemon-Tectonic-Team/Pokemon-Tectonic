@@ -11,10 +11,13 @@ BattleHandlers::AbilityOnEnemySwitchIn.add(:DETERRENT,
 
 BattleHandlers::AbilityOnEnemySwitchIn.add(:CLAUSTROPHOBIA,
     proc { |ability, switcher, bearer, battle|
+        next unless battle.roomActive?
         battle.pbShowAbilitySplash(bearer, ability)
         if switcher.takesIndirectDamage?(true)
             battle.pbDisplay(_INTL("The walls close in on {1}!", switcher.pbThis))
-            switcher.applyFractionalDamage(1.0 / 6.0)
+            bTypes = switcher.pbTypes(true)
+            getTypedHazardHPRatio = battle.getTypedHazardHPRatio(:PSYCHIC, bTypes[0], bTypes[1], bTypes[2], ratio: 1.0/6.0)
+            switcher.applyFractionalDamage(getTypedHazardHPRatio)
         end
         battle.pbHideAbilitySplash(bearer)
     }

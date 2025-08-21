@@ -309,7 +309,7 @@ Flags = Immutable
 #-------------------------------
 [CLAUSTROPHOBIA]
 Name = Claustrophobia
-Description = Enemies which swap in when a room is active take psychic damage equal to 1/6th their HP.
+Description = If there is an active Room, enemies which swap in take Psychic-type damage equal to 1/6th their HP.
 #-------------------------------
 [CLEANFREAK]
 Name = Clean Freak
