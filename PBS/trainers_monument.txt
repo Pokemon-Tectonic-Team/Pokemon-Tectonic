@@ -2011,8 +2011,8 @@ Pokemon = ELECTIVIRE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
 Pokemon = SIGILYPH,70
-    Moves = PSYCHIC,COLDFRONT,TERRAFORM,ROOST
-    AbilityIndex = 0 # Magic Guard
+    Moves = PULSAR,WINDTUNNEL,TERRAFORM,ROOST
+    AbilityIndex = 0 # Repetition
     Item = ENERGYLOCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,10,0,20,0
