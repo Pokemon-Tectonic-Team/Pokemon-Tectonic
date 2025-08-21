@@ -694,7 +694,7 @@ Name = Big Root
 NamePlural = Big Roots
 Pocket = 5
 Price = 4000
-Description = A held item. The holder recovers 30% more HP from draining moves, Ingrain, Aqua Ring, and leech.
+Description = A held item. The holder recovers 30% more HP from draining moves, Aqua Ring, and leech.
 #-------------------------------
 [BLACKSLUDGE]
 Name = Black Sludge
