@@ -1936,49 +1936,35 @@ Pokemon = BEWEAR,55
 Pokemon = HITMONTOP,35
     Moves = BRUTALSWING,FAKEOUT,MACHPUNCH,WHIRLWINDKICK
     AbilityIndex = 0 # Intimidate
-    Item = EJECTBUTTON
-Pokemon = NINJASK,35
-    Moves = DUALWINGBEAT,NIGHTSLASH,RUMBLE,SUCKBLOOD
-    AbilityIndex = 0 # Speed Boost
-    Item = LIFEORB
-Pokemon = GWEEZING,35
-    Moves = MISTBURST,MIASMA,POISONGAS,FIREPULSE
-    AbilityIndex = 1 # Industrialize
 Pokemon = ARAICHU,35
-    Moves = SURF,THUNDERBOLT,SHOUT,NUZZLE
+    Moves = RAPIDHERTZ,PULSAR,PROTECT,BUBBLEBARRAGE
     AbilityIndex = 1 # Surf's Up
+    Item = LOADEDDICE
 #-------------------------------
 [JOGGER,Georgio]
+Pokemon = GRAPIDASH,35
+    Moves = ZENHEADBUTT,MISADVENTURE,DRILLPECK,BODYSLAM
+    AbilityIndex = 1 # Heart of Justice
+    Item = LUCKHERB
 Pokemon = BISHARP,35
-    Moves = BULLETPUNCH,NIGHTSLASH,SLASH,METALCLAW
+    Moves = BULLETPUNCH,KNOCKOFF,ROCKTOMB,METALCLAW
     AbilityIndex = 1 # Sturdy
-    Item = WEAKNESSPOLICY
-Pokemon = AEXEGGUTOR,35
-    Moves = DRAGONHAMMER,FLASHSEED,KICKSTART,SYNTHESIS
-    AbilityIndex = 0 # Realist
-Pokemon = FURRET,35
-    Moves = COIL,SLASH,REST,DIG
-    AbilityIndex = 0 # Hustle
-    Item = CHESTOBERRY
-Pokemon = BEAUTIFLY,35
-    Moves = SUCKBLOOD,DRAININGKISS,AIRSLASH,UTURN
-    AbilityIndex = 0 # Gorging
 #-------------------------------
 [TWINS2,Bella and Meghan]
-Pokemon = EXCADRILL,35
-    Moves = DRILLRUN,METALCLAW,TREMOR,HONECLAWS
-    AbilityIndex = 1 # Juggernaut
+Pokemon = LURANTIS,35
+    Moves = CREEPINGSTRIKE,XSCISSOR,BRICKBREAK,SYNTHESIS
+    AbilityIndex = 1 # Polarizing
+    Item = REINFORCINGROD
 Pokemon = SIGILYPH,35
-    Moves = REFLECT,LIGHTSCREEN,WINDTUNNEL,PULSAR
-    AbilityIndex = 0 # Repetition
-    Item = LIGHTCLAY
-Pokemon = ARAQUANID,35
-    Moves = LEECHLIFE,BUBBLEBEAM,WATERFALL,MEGADRAIN
-    AbilityIndex = 1 # Water Bubble
+    Moves = WHIRLWIND,AIRSLASH,ROOST,PSYPIERCE
+    AbilityIndex = 1 # Claustrophobia
+Pokemon = HARCANINE,35
+    Moves = INFERNOIMPACT,IGNITE,ADAMANTINEPRESS,CRUNCH
+    AbilityIndex = 1 # Stone Mane
 Pokemon = GSLOWKING,35
-    Moves = EERIESPELL,BLIGHT,BELCH
+    Moves = EERIESPELL,NERVEBLOCK,BELCH,SLACKOFF
     AbilityIndex = 0 # Curious Medicine
-    Item = SALACBERRY
+    Item = KEEBERRY
 #-------------------------------
 [SWIMMER_M,Stannis]
 Policies = MOONGLOW_TEAM
@@ -3297,7 +3283,7 @@ Pokemon = GLACEON,45
     AbilityIndex = 0 # Snow Shroud
     Item = OCCABERRY
 Pokemon = ESPEON,45
-    Moves = WEATHERBALL,PIERCINGDOUBT,EARTHPOWER,DETACHMENT
+    Moves = WEATHERBURST,PIERCINGDOUBT,EARTHPOWER,DETACHMENT
     AbilityIndex = 0 # Overthinking
 #-------------------------------
 [LEADER_Noel,Noel]
