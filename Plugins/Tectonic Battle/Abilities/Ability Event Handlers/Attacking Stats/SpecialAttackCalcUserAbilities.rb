@@ -119,7 +119,7 @@ BattleHandlers::SpecialAttackCalcUserAbility.add(:EXTREMEVOLTAGE,
 
 BattleHandlers::SpecialAttackCalcUserAbility.add(:CASTELLAN,
   proc { |ability, _user, battle, spAtkMult|
-      spAtkMult *= 1.3 if battle.sunny?
+      spAtkMult *= 1.3 if battle.roomActive?
       next spAtkMult
   }
 )

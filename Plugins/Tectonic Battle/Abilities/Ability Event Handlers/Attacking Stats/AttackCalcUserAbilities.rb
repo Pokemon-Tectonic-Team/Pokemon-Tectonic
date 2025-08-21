@@ -190,7 +190,7 @@ BattleHandlers::AttackCalcUserAbility.add(:FUELHUNGRY,
 
 BattleHandlers::AttackCalcAllyAbility.add(:CASTELLAN,
   proc { |ability, _user, battle, spAtkMult|
-      attackMult *= 1.3 if battle.sunny?
+      attackMult *= 1.3 if battle.roomActive?
       next spAtkMult
   }
 )
