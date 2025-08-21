@@ -340,12 +340,12 @@ end
 #===============================================================================
 # User is protected against moves with the "CanProtect" flag this round. If a Pokémon
 # attacks with the user with a physical attack while this effect applies, that Pokémon is
-# frostbitten. (Icicle Armor)
+# frostbitten. (Ice-Nine Wall)
 #===============================================================================
 class PokeBattle_Move_ProtectUserFrostbitePhysAttacker < PokeBattle_ProtectMove
     def initialize(battle, move)
         super
-        @effect = :IcicleArmor
+        @effect = :IceNineWall
     end
 
     def getEffectScore(user, target)

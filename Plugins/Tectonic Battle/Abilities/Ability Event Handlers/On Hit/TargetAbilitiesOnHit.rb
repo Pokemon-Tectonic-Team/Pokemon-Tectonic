@@ -132,11 +132,11 @@ BattleHandlers::TargetAbilityOnHit.add(:STAMINA,
         if aiCheck
             ret = 0
             aiNumHits.times do |i|
-                ret -= getMultiStatUpEffectScore([:DEFENSE,2], user, target, fakeStepModifier: i, evaluateThreat: false)
+                ret -= getMultiStatUpEffectScore([:DEFENSE,1], user, target, fakeStepModifier: i, evaluateThreat: false)
             end
             next ret
         end
-        target.tryRaiseStat(:DEFENSE, target, ability: ability, increment: 2)
+        target.tryRaiseStat(:DEFENSE, target, ability: ability, increment: 1)
   }
 )
 
@@ -145,11 +145,11 @@ BattleHandlers::TargetAbilityOnHit.add(:GRIT,
         if aiCheck
             ret = 0
             aiNumHits.times do |i|
-                ret -= getMultiStatUpEffectScore([:SPECIAL_DEFENSE,2], user, target, fakeStepModifier: i, evaluateThreat: false)
+                ret -= getMultiStatUpEffectScore([:SPECIAL_DEFENSE,1], user, target, fakeStepModifier: i, evaluateThreat: false)
             end
             next ret
         end
-        target.tryRaiseStat(:SPECIAL_DEFENSE, target, ability: ability, increment: 2)
+        target.tryRaiseStat(:SPECIAL_DEFENSE, target, ability: ability, increment: 1)
     }
 )
 

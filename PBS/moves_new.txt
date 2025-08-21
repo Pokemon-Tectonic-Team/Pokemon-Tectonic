@@ -150,6 +150,19 @@ Flags = CanProtect,Pulse
 Description = The user shoots a pulse of diffuse energy at the target.
 Animation = SIMPLEBEAM
 #-------------------------------
+[DISCOMBOBULATE]
+Name = Discombobulate
+Type = NORMAL
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartSwapAttackingStats5
+Flags = CanProtect
+Description = Alters the reality of the area to damage a foe. Puzzle Room is created for five turns.
+Animation = CONFUSERAY
+#-------------------------------
 [DRAINAGE]
 Name = Drainage
 Type = NORMAL
@@ -492,18 +505,6 @@ Flags = CanProtect
 EffectChance = 20
 Description = The user brings down a ruinous power on the target. This has a 20% chance of lowering all the target's stats.
 Animation = JUDGMENT
-#-------------------------------
-[SCHEME]
-Name = Scheme
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 25
-Target = User
-FunctionCode = RaiseUserAtkSpAtk2AndSpeed2InMoonglow
-Flags = CanSnatch
-Description = The user schemes to raise its Attack and Sp. Atk by two steps. During moonglow, also raises Speed by two steps.
-Animation = NASTYPLOT
 #-------------------------------
 [SEASONSEND]
 Name = Season's End
@@ -1286,7 +1287,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserDefSpDef2
 Flags = CanProtect
-Description = The user and target bathe in acid. Lowers the user's Defense and Sp. Def by two steps.
+Description = The user and target bathe in acid. This lowers the user's Defense and Sp. Def by two steps.
 Animation = ACIDDOWNPOUR
 #-------------------------------
 [BLIGHT]
@@ -1609,7 +1610,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserAtk4
 Flags = CanProtect
-Description = The user cracks the earth under the target with a massive strike. Lowers the user's Attack by four steps.
+Description = The user cracks the earth under the target with a massive strike. This lowers the user's Attack by four steps.
 Animation = FISSURE
 #-------------------------------
 [ERODE]
@@ -1993,9 +1994,9 @@ Power = 80
 Accuracy = 100
 TotalPP = 12
 Target = NearOther
-FunctionCode = RecoilThirdOfDamageDealt
+FunctionCode = RecoilQuarterOfDamageDealt
 Flags = CanProtect
-Description = The user rushes into the target with its stony body. The user also takes 33% recoil.
+Description = The user rushes into the target with its stony body. The user also takes 25% recoil.
 Animation = HEADSMASH
 #-------------------------------
 [GRINDSTONE]
@@ -2471,7 +2472,7 @@ TotalPP = 5
 Target = User
 Priority = 2
 FunctionCode = RedirectAllMovesToUserLowerFoesAtkSpAtk1
-Flags = Uninvocable
+Flags = Uninvocable,Light
 Description = All foes have their Attack and Sp. Atk lowered. They can only target the user this turn.
 #-------------------------------
 [MANYNEEDLE]
@@ -2508,7 +2509,7 @@ TotalPP = 12
 Target = User
 FunctionCode = Trade6SpdForAtk
 Flags = CanSnatch,Blade
-Description = The user prepares its weapons, raising Attack by six steps but lowering Speed by six steps.
+Description = The user prepares its weapons. This raises the user's Attack by six steps but lowers Speed by six steps.
 Animation = SWORDSDANCE
 #-------------------------------
 [RAKE]
@@ -2561,7 +2562,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = CantMissLowerUserSpeedSpDef1
 Flags = CanProtect,Wind
-Description = The user sheds a huge volley of scales at the target. Lands without fail and lowers the user's Sp. Def and Speed.
+Description = The user sheds a huge volley of scales at the target. Lands without fail. This lowers the user's Sp. Def and Speed.
 Animation = SILVERWIND
 #-------------------------------
 [SEDATINGDUST]
@@ -2573,7 +2574,7 @@ TotalPP = 3
 Target = NearOther
 FunctionCode = SleepTargetIfSlowerThanUserMinUserSpeed
 Flags = CanProtect,CanMagicCoat
-Description = If the user is faster than the target, puts the target to sleep, then minimizes the user's Speed stat.
+Description = If the user is faster than the target, puts the target to sleep, then minimizes the user's Speed.
 Animation = POISONPOWDER
 #-------------------------------
 [SKEWER]
@@ -2586,7 +2587,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserAtk4
 Flags = CanProtect
-Description = The user stabs through the target using tremendous force. Lowers the user's Attack by four steps.
+Description = The user stabs through the target using tremendous force. This lowers the user's Attack by four steps.
 Animation = FELLSTINGER
 #-------------------------------
 [SMUSH]
@@ -3723,14 +3724,14 @@ Description = Raises Sp. Atk by three steps. Until switch out, the user's attack
 Name = Hearthfire Hula
 Type = FIRE
 Category = Special
-Power = 80
+Power = 95
 Accuracy = 100
 TotalPP = 10
 Target = AllNearOthers
 FunctionCode = CureTargetFrostbite
-Flags = CanProtect,Dance
+Flags = CanProtect,Dance,HalfDamageToAllies
 EffectChance = 100
-Description = The user dances rapidly, emitting tropical heat. Any frostbitten Pokémon will be healed by this heat.
+Description = The user dances with great heat. Pokémon hit by this are cured of frostbite. Deals 50% less damage to allies.
 Animation = HEATWAVE
 #-------------------------------
 [HOLDFIRE]
@@ -4308,7 +4309,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserSpd3
 Flags = CanProtect
-Description = The user rams its sharp face right into the target. Lowers the user's Speed by three steps.
+Description = The user rams its sharp face right into the target. This lowers the user's Speed by three steps.
 Animation = LIQUIDATION
 #-------------------------------
 [RIPTIDE]
@@ -4744,6 +4745,19 @@ Flags = CanProtect,CanMagicCoat
 Description = The target eats a strange seed. They become numbed if faster than the user, or leeched if slower.
 Animation = LEECHSEED
 #-------------------------------
+[ODDBLOOM]
+Name = Odd Bloom
+Type = GRASS
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartSwapOffensiveAndDefensiveStats5
+Flags = CanProtect
+Description = Creates an odd flower to throw and damage a foe. Odd Room is created for five turns.
+Animation = PETALDANCE
+#-------------------------------
 [PETALTEMPEST]
 Name = Petal Tempest
 Type = GRASS
@@ -5138,7 +5152,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = InertiaShock
 Flags = CanProtect
-Description = Deals 50% more damage if faster than the target. Lowers the user's Speed.
+Description = Deals 50% more damage if faster than the target. This lowers the user's Speed.
 Animation = VOLTTACKLE
 #-------------------------------
 [JOKEJOLT]
@@ -5279,6 +5293,19 @@ FunctionCode = Numb
 Flags = CanProtect,CanRandomCrit,Light
 EffectChance = 50
 Description = The user slices with claws of light that have a 50% chance to numb. Can random critical hit.
+#-------------------------------
+[POLARCHARGE]
+Name = Polar Charge
+Type = ELECTRIC
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartPolarizeTypeMatchups5
+Flags = CanProtect
+Description = Sends a pulse to flip the charges of those nearby to damage a foe. Polarized Room is created for five turns.
+Animation = DISCHARGE
 #-------------------------------
 [QUARANTINE]
 Name = Quarantine
@@ -5735,7 +5762,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = CantMissLowerUserSpeedDef1
 Flags = CanProtect
-Description = Lands without fail and lowers the user's Defense and Speed.
+Description = The user perfectly predicts the target's future location, then strikes. Lands without fail. This lowers the user's Defense and Speed.
 #-------------------------------
 [ONEIROMANCY]
 Name = Oneiromancy
@@ -6171,7 +6198,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserAtk4
 Flags = CanProtect
-Description = The user picks up an iceberg and slams it into the target. Lowers the user's Attack by four steps.
+Description = The user picks up an iceberg and slams it into the target. This lowers the user's Attack by four steps.
 Animation = AVALANCHE
 #-------------------------------
 [ICECALIBUR]
@@ -6297,7 +6324,7 @@ TotalPP = 12
 Target = User
 FunctionCode = RaiseUserSpAtk1Speed2LowerUserSpDef1
 Flags = CanSnatch
-Description = The user sheds excess covering, raising Sp. Atk and Speed by three steps, but lowering Sp. Def by two steps.
+Description = The user sheds excess covering. This raises the user's Sp. Atk and Speed by three steps, but lowers Sp. Def by two steps.
 #-------------------------------
 [SHIVERDANCE]
 Name = Shiver Dance
@@ -6756,6 +6783,7 @@ Accuracy = 0
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = StartGravity5
+Flags = CanProtect
 Description = Bites a hole in reality, creating a black hole to damage all near foes. Gravity is intensified for five turns.
 Animation = BLACKHOLEECLIPSE
 #-------------------------------
@@ -7003,7 +7031,7 @@ TotalPP = 12
 Target = NearOther
 FunctionCode = AlwaysCritialLowerUserSpeed1
 Flags = CanProtect,Blade
-Description = The user prepares a precise cut. Always a critical hit, but lowers the user's Speed.
+Description = The user prepares a precise cut. Always a critical hit. This lowers the user's Speed.
 Animation = NIGHTSLASH
 #-------------------------------
 [KEELHAUL]
@@ -7139,13 +7167,14 @@ Animation = SNARL
 Name = Royal Tribute
 Type = DARK
 Category = Special
-Power = 90
+Power = 70
 Accuracy = 100
 TotalPP = 15
 Target = NearOther
-FunctionCode = AddMoneyGainedFromBattle
+FunctionCode = DoubleDamageMoneyTargetStatused
 Flags = CanProtect
-Description = The user demands tribute from the target. Money is earned after the battle.
+EffectChance = 100
+Description = The user demands tribute from the target. Money is earned after the battle. This deals double damage and makes double the money if the target has a non-volatile status condition.
 Animation = PAYDAY
 #-------------------------------
 [SCAM]
@@ -7174,6 +7203,18 @@ FunctionCode = LowerTargetAtk1
 Flags = CanProtect
 EffectChance = 100
 Description = The user slashes all around them, creating deep scars. This lowers each target's Attack.
+#-------------------------------
+[SCHEME]
+Name = Scheme
+Type = DARK
+Category = Status
+Accuracy = 0
+TotalPP = 25
+Target = User
+FunctionCode = RaiseUserAtkSpAtk2AndSpeed2InMoonglow
+Flags = CanSnatch
+Description = The user schemes to raise its Attack and Sp. Atk by two steps. During moonglow, also raises Speed by two steps.
+Animation = NASTYPLOT
 #-------------------------------
 [SEVER]
 Name = Sever
@@ -7548,7 +7589,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserAtk4
 Flags = CanProtect
-Description = The user wields an exaggerated power to strike the target. Lowers the user's Attack by four steps.
+Description = The user wields an exaggerated power to strike the target. This lowers the user's Attack by four steps.
 Animation = TWINKLETACKLE
 #-------------------------------
 [INNOCENTMASQUE]

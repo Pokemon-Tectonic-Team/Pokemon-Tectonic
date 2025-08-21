@@ -2065,8 +2065,8 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :IcicleArmor,
-    :real_name => "Icicle Armor",
+    :id => :IceNineWall,
+    :real_name => "Ice-Nine Wall",
     :resets_eor	=> true,
     :protection_info => {
         :hit_proc => proc do |user, target, move, _battle|

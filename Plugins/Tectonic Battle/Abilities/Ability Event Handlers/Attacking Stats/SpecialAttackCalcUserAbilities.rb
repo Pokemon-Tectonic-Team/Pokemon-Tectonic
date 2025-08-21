@@ -116,3 +116,10 @@ BattleHandlers::SpecialAttackCalcUserAbility.add(:EXTREMEVOLTAGE,
       next spAtkMult
   }
 )
+
+BattleHandlers::SpecialAttackCalcUserAbility.add(:CASTELLAN,
+  proc { |ability, _user, battle, spAtkMult|
+      spAtkMult *= 1.3 if battle.roomActive?
+      next spAtkMult
+  }
+)

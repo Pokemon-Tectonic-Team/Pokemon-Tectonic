@@ -134,6 +134,7 @@ class PokeBattle_Move
         return true if user.shouldAbilityApply?(:UNAWARE, aiCheck)
         return true if user.shouldAbilityApply?(:BLADEBRAINED, aiCheck) && bladeMove?
         return true if user.shouldAbilityApply?(:TUNEDOUT, aiCheck) && soundMove?
+        return true if empoweredMove?
         return false
     end
 
@@ -181,7 +182,7 @@ class PokeBattle_Move
         weather = @battle.pbWeather
         case weather
         when :Sunshine, :HarshSun
-            if type == :FIRE
+            if type == :FIRE || (type == :GRASS && weather == :HarshSun)
                 damageBonus = weather == :HarshSun ? 0.5 : 0.3
                 damageBonus *= 2 if @battle.curseActive?(:CURSE_BOOSTED_SUN)
                 multipliers[:final_damage_multiplier] *= (1 + damageBonus)
@@ -192,7 +193,7 @@ class PokeBattle_Move
                 multipliers[:final_damage_multiplier] *= (1 - damageReduction)
             end
         when :Rainstorm, :HeavyRain
-            if type == :WATER
+            if type == :WATER || (type == :ELECTRIC && weather == :HeavyRain)
                 damageBonus = weather == :HeavyRain ? 0.5 : 0.3
                 damageBonus *= 2 if @battle.curseActive?(:CURSE_BOOSTED_RAIN)
                 multipliers[:final_damage_multiplier] *= (1 + damageBonus)
@@ -522,6 +523,8 @@ class PokeBattle_Move
             multipliers[:final_damage_multiplier] *= 0.75
             multipliers[:final_damage_multiplier] *= 1.5 if user.shouldAbilityApply?(:RESONANT,aiCheck)
         end
+
+        multipliers[:final_damage_multiplier] *= 0.5 if !user.opposes?(target) && halfDamageToAllies?
 
         # Battler properites
         multipliers[:base_damage_multiplier] *= user.dmgMult

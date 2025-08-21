@@ -270,6 +270,10 @@ Description = Prevents itself and allies from being poisoned, leeched, or waterl
 Name = Cash Out
 Description = Upon entry, consumes scattered coins to heal for 1/10th the amount consumed. This can overheal.
 #-------------------------------
+[CASTELLAN]
+Name = Castellan
+Description = Boosts Attack and Sp. Atk by 30% in rooms.
+#-------------------------------
 [CELEBRATION]
 Name = Celebration
 Description = Heals by 1/5th HP whenever any Pokémon uses a dance move. Can overheal.
@@ -302,6 +306,10 @@ Description = Physical moves have a 30% chance to frostbite targets.
 Name = City Razer
 Description = After knocking out any Pokémon with Waterfall, transforms into its Rampage form. Ability becomes Juggernaut.
 Flags = Immutable
+#-------------------------------
+[CLAUSTROPHOBIA]
+Name = Claustrophobia
+Description = If there is an active Room, enemies which swap in take Psychic-type damage equal to 1/6th their HP.
 #-------------------------------
 [CLEANFREAK]
 Name = Clean Freak
@@ -611,6 +619,10 @@ Flags = EclipseSynergy
 Name = Fae Veil
 Description = Prevents itself and allies from being burned, frostbitten, or numbed.
 #-------------------------------
+[FALSEFRONT]
+Name = False Front
+Description = Upon entry, gains your choice of Fighting-, Dark-, or Fairy-type.
+#-------------------------------
 [FASCINATE]
 Name = Fascinate
 Description = Upon entry, lowers the foe's Sp. Atk stat by two steps.
@@ -847,7 +859,7 @@ Description = Moves that trap and damage the opponent for three turns deal 50% m
 #-------------------------------
 [GRIT]
 Name = Grit
-Description = Boosts Sp. Def by two steps when hit by an attack.
+Description = Raises Sp. Def when hit by an attack.
 #-------------------------------
 [GROOVY]
 Name = Groovy
@@ -935,6 +947,10 @@ Description = Wild Pokémon are more likely to appear in pairs and to be species
 Name = Heroic Finale
 Description = Turns to Finale Form when only unfainted on team. Ability becomes Inner Focus.
 Flags = Immutable
+#-------------------------------
+[HIGHJUDGE]
+Name = High Judge
+Description = Has Judgment as its 5th move.
 #-------------------------------
 [HIGHRISE]
 Name = High-rise
@@ -1063,7 +1079,7 @@ Description = Special moves have a 30% chance to poison targets.
 #-------------------------------
 [INTROVERT]
 Name = Introvert
-Description = Takes 30% less damage until it uses an attack.
+Description = Takes 30% less damage until the first time it uses an attacking move.
 #-------------------------------
 [INVESTIGATOR]
 Name = Investigator
@@ -1197,6 +1213,10 @@ Flags = MoonglowSynergy
 Name = Maestro
 Description = The Pokémon's Speed is doubled while using Sound-based moves.
 #-------------------------------
+[MAGMATRAIL]
+Name = Magma Trail
+Description = Pokémon that swap in for this have their Attack and Sp. Atk raised.
+#-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
 Description = When hit with a special move, traps and damages the attacker for three turns. Fails on turns the user switched in.
@@ -1258,6 +1278,10 @@ Flags = SunshineSynergy
 Name = Mist Form
 Description = Slips past hazards. Takes one third less damage if it switched in this turn.
 Flags = HazardImmunity
+#-------------------------------
+[MISTTRAIL]
+Name = Mist Trail
+Description = Pokémon that swap in for this have their Defense and Sp. Defense raised.
 #-------------------------------
 [MOISTSKIN]
 Name = Moist Skin
@@ -1950,6 +1974,10 @@ Flags = RainstormSynergy
 Name = Storm Totem
 Description = Upon entry, summons a Turbulent Sky on the Pokémon's side for 6 turns.
 #-------------------------------
+[STORMTRAIL]
+Name = Storm Trail
+Description = Pokémon that swap in for this have their Speed raised.
+#-------------------------------
 [STRAIGHTAHEAD]
 Name = Straight Ahead
 Description = Ignores Abilities that would affect its moves. Its attacks can't be redirected to new targets.
@@ -1986,10 +2014,6 @@ Flags = MoonglowSynergy
 Name = Stylish
 Description = The Pokémon benefits twice as much from style points.
 Flags = Immutable
-#-------------------------------
-[SUBSPACESCHISM]
-Name = Subspace Schism
-Description = Upon entry, creates a Trick Room for four turns, inverting the effect of Speed.
 #-------------------------------
 [SUBZERO]
 Name = Sub Zero

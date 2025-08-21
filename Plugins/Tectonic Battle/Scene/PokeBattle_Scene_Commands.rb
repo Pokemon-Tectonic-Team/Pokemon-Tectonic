@@ -158,14 +158,14 @@ class PokeBattle_Scene
         elsif Input.trigger?(Input::UP)
           if (cw.index&2) == 2
             cw.index -= 2
-          elsif battler.getMoves.length == 5 && cw.index == 0
-            cw.index = 4
+          elsif battler.getMoves.length > Pokemon::MAX_MOVES && cw.index < 2
+            cw.index += 4
           end
         elsif Input.trigger?(Input::DOWN)
           if battler.getMoves[cw.index+2] && battler.getMoves[cw.index+2].id
             cw.index += 2 if (cw.index&2)==0
-          elsif cw.index == 4
-            cw.index = 0
+          elsif cw.index >= Pokemon::MAX_MOVES
+            cw.index -= 4
           end
         end
         pbPlayCursorSE if cw.index!=oldIndex

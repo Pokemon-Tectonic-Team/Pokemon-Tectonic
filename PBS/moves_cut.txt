@@ -3234,17 +3234,6 @@ Priority = -6
 FunctionCode = Invalid
 Description = The user switches out to a party Pokémon in waiting. Always goes last.
 #-------------------------------
-[TRICKROOM]
-Name = Trick Room
-Type = PSYCHIC
-Category = Status
-Accuracy = 0
-TotalPP = 5
-Target = BothSides
-Priority = -7
-FunctionCode = Invalid
-Description = The user creates a bizarre area in which slower Pokémon get to move first for five turns.
-#-------------------------------
 [TWINBEAM]
 Name = Twin Beam
 Type = PSYCHIC

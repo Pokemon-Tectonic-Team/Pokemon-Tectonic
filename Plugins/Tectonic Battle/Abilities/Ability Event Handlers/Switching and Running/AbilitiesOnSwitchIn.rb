@@ -383,6 +383,24 @@ BattleHandlers::AbilityOnSwitchIn.add(:CELERITAS,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:FEROCIOUS,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} is ferocious!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:LIGHTTRICK,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} tricks the eye!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
 ##########################################
 # Screen setting abilities
 ##########################################
@@ -1157,5 +1175,36 @@ BattleHandlers::AbilityOnSwitchIn.add(:CASHOUT,
         battler.pbOwnSide.effects[:PayDay] -= coinsToConsume
         battler.hideMyAbilitySplash
       end
+  }
+)
+
+BattleHandlers::AbilityOnSwitchIn.add(:FALSEFRONT,
+  proc { |ability, battler, battle, aiCheck|
+      next unless battler.canChangeType?
+      next 0 if aiCheck
+      battler.showMyAbilitySplash(ability)
+      validTypes = %i[FIGHTING DARK FAIRY]
+      validTypeNames = []
+      validTypes.each do |typeID|
+          validTypeNames.push(GameData::Type.get(typeID).name)
+      end
+      if validTypes.length == 1
+          chosenType = validTypes[0]
+      elsif validTypes.length > 1
+          if battle.autoTesting
+              chosenType = validTypes.sample
+          elsif !battler.pbOwnedByPlayer? # Trainer AI
+              validTypes.each do |type|
+                next unless battler.pbHasAttackingType?(type)
+                chosenType = type
+              end
+              chosenType = chosenType || validTypes[0]
+          else
+              chosenIndex = battle.scene.pbShowCommands(_INTL("Which type should {1} fake?", battler.pbThis(true)),validTypeNames,0)
+              chosenType = validTypes[chosenIndex]
+          end
+      end
+      battler.applyEffect(:Type3,chosenType)
+      battler.hideMyAbilitySplash
   }
 )

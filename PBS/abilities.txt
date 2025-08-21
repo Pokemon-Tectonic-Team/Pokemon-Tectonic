@@ -108,7 +108,7 @@ Description = Changes the weather to Strong Winds, which remove Flying-type's we
 #-------------------------------
 [DESOLATELAND]
 Name = Desolate Land
-Description = Changes the weather to Harsh Sunlight, which nullifies Water-type moves. Lingers for 3 turns after leaving.
+Description = Changes the weather to Harsh Sunlight, which debuffs most attacks and prevents them from critting. Lingers for 3 turns after leaving.
 Flags = SunshineSynergy
 #-------------------------------
 [DISGUISE]
@@ -400,7 +400,7 @@ Description = The Pokémon raises the foe's PP usage.
 #-------------------------------
 [PRIMORDIALSEA]
 Name = Primordial Sea
-Description = Changes the weather to Heavy Rain, which nullifies Fire-type moves. Lingers for 3 turns after leaving.
+Description = Changes the weather to Heavy Rain, which debuffs most attacks and prevents their random added effects. Lingers for 3 turns after leaving.
 Flags = RainstormSynergy
 #-------------------------------
 [PRISMARMOR]
@@ -530,7 +530,7 @@ Description = Speed is raised by two steps at the end of each of its turns.
 #-------------------------------
 [STAMINA]
 Name = Stamina
-Description = Boosts Defense by two steps when hit by an attack.
+Description = Raises Defense when hit by an attack.
 #-------------------------------
 [STANCECHANGE]
 Name = Stance Change
