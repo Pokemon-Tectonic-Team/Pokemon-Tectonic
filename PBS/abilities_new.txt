@@ -270,6 +270,10 @@ Description = Prevents itself and allies from being poisoned, leeched, or waterl
 Name = Cash Out
 Description = Upon entry, consumes scattered coins to heal for 1/10th the amount consumed. This can overheal.
 #-------------------------------
+[CASTELLAN]
+Name = Castellan
+Description = Boosts Attack and Sp. Atk by 30% in rooms.
+#-------------------------------
 [CELEBRATION]
 Name = Celebration
 Description = Heals by 1/5th HP whenever any Pokémon uses a dance move. Can overheal.
@@ -302,6 +306,10 @@ Description = Physical moves have a 30% chance to frostbite targets.
 Name = City Razer
 Description = After knocking out any Pokémon with Waterfall, transforms into its Rampage form. Ability becomes Juggernaut.
 Flags = Immutable
+#-------------------------------
+[CLAUSTROPHOBIA]
+Name = Claustrophobia
+Description = If there is an active Room, enemies which swap in take Psychic-type damage equal to 1/6th their HP.
 #-------------------------------
 [CLEANFREAK]
 Name = Clean Freak
