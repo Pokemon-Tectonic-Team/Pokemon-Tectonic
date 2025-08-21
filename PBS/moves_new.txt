@@ -150,6 +150,19 @@ Flags = CanProtect,Pulse
 Description = The user shoots a pulse of diffuse energy at the target.
 Animation = SIMPLEBEAM
 #-------------------------------
+[DISCOMBOBULATE]
+Name = Discombobulate
+Type = NORMAL
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartSwapAttackingStats5
+Flags = CanProtect
+Description = Alters the reality of the area to damage a foe. Puzzle Room is created for five turns.
+Animation = CONFUSERAY
+#-------------------------------
 [DRAINAGE]
 Name = Drainage
 Type = NORMAL
@@ -4732,6 +4745,19 @@ Flags = CanProtect,CanMagicCoat
 Description = The target eats a strange seed. They become numbed if faster than the user, or leeched if slower.
 Animation = LEECHSEED
 #-------------------------------
+[ODDBLOOM]
+Name = Odd Bloom
+Type = GRASS
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartSwapOffensiveAndDefensiveStats5
+Flags = CanProtect
+Description = Creates an odd flower to throw and damage a foe. Odd Room is created for five turns.
+Animation = PETALDANCE
+#-------------------------------
 [PETALTEMPEST]
 Name = Petal Tempest
 Type = GRASS
@@ -5267,6 +5293,19 @@ FunctionCode = Numb
 Flags = CanProtect,CanRandomCrit,Light
 EffectChance = 50
 Description = The user slices with claws of light that have a 50% chance to numb. Can random critical hit.
+#-------------------------------
+[POLARCHARGE]
+Name = Polar Charge
+Type = ELECTRIC
+Category = Adaptive
+Power = 75
+Accuracy = 0
+TotalPP = 5
+Target = NearOther
+FunctionCode = StartPolarizeTypeMatchups5
+Flags = CanProtect
+Description = Sends a pulse to flip the charges of those nearby to damage a foe. Polarized Room is created for five turns.
+Animation = DISCHARGE
 #-------------------------------
 [QUARANTINE]
 Name = Quarantine
