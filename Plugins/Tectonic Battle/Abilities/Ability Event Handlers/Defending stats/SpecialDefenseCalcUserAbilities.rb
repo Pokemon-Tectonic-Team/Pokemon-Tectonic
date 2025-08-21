@@ -7,7 +7,7 @@ BattleHandlers::SpecialDefenseCalcUserAbility.add(:MARVELSKIN,
 
 BattleHandlers::SpecialDefenseCalcUserAbility.add(:SOLARCELL,
     proc { |ability, _user, battle, spDefMult|
-        spDefMult *= 1.25 if battle.sunny?
+        spDefMult *= 1.3 if battle.sunny?
         next spDefMult
     }
 )
