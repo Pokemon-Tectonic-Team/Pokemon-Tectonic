@@ -1870,7 +1870,7 @@ Pokemon = CONIFEAR,70
 Pokemon = JELLICENT,70
     Gender = male
     Moves = SHIVER,HEX,SLAMSHUT,STRENGTHSAP
-    AbilityIndex = 1 # Sentry
+    AbilityIndex = 1 # Castellan
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,0,0,10
