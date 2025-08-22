@@ -60,10 +60,6 @@ Description = Slips past hazards. On the first turn, its attacks are always crit
 Name = Arena Trap
 Description = Prevents the foe from fleeing unless it is airborne.
 #-------------------------------
-[AROMATIC]
-Name = Aromatic
-Description = Uses Aromatherapy if an attack lowers its HP to half or below.
-#-------------------------------
 [AROMAVEIL]
 Name = Aroma Veil
 Description = Protects against attacks that limit move choices.
@@ -102,9 +98,18 @@ Description = Boosts its best stat each time it deals a KO.
 Name = Belligerent
 Description = Boosts Attack and Sp. Atk by three steps when a stat is lowered by a foe.
 #-------------------------------
+[BIGBOSS]
+Name = Big Boss
+Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
+Flags = FlinchImmunity
+#-------------------------------
 [BIGPECKS]
 Name = Big Pecks
 Description = Protects from Def-lowering or Sp. Def-lowering.
+#-------------------------------
+[BIZARRE]
+Name = Bizarre
+Description = Its special attacks reduce the target's Sp. Def.
 #-------------------------------
 [BLADETRAINED]
 Name = Blade Trained
@@ -129,6 +134,10 @@ Description = Protects the Pokémon from some ball and bomb moves.
 [BURNHEAL]
 Name = Burn Heal
 Description = Restores 1/12th HP each turn if burned. Ignores burn physical damage reduction.
+#-------------------------------
+[BURNSKILL]
+Name = Burn Skill
+Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
 [BURROWER]
 Name = Burrower
@@ -271,6 +280,10 @@ Description = Boosts one defending stat by two steps according to the foe's atta
 [EXOADAPTION]
 Name = Exo-Adaption
 Description = User heals by 25% after taking a special attack.
+#-------------------------------
+[EXTORTER]
+Name = Extorter
+Description = At low health, eats other battlers' low-health triggered berries.
 #-------------------------------
 [EXTREMEENERGY]
 Name = Extreme Voltage
@@ -706,6 +719,10 @@ Description = Raises the Pokémon's Attack by 50%, including Style Values and ot
 [PRECHARGED]
 Name = Pre-Charged
 Description = Becomes charged upon entry, doubling the power of its next Electric-type attack.
+#-------------------------------
+[PREDATION]
+Name = Predation
+Description = Has a 30% chance to leech targets when using physical moves.
 #-------------------------------
 [PROPELLERTAIL]
 Name = Propeller Tail
