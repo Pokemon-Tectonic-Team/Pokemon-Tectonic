@@ -92,7 +92,7 @@ Description = Powers up each Pokémon's Dark-type moves.
 #-------------------------------
 [DAUNTLESSSHIELD]
 Name = Dauntless Shield
-Description = Raises Defense when the Pokémon enters a battle.
+Description = Raises Defense upon entry.
 #-------------------------------
 [DEFEATIST]
 Name = Defeatist
@@ -126,12 +126,12 @@ Description = Powers up Dragon-type moves by 50%.
 #-------------------------------
 [DRIZZLE]
 Name = Drizzle
-Description = Summons rainstorm for 4 turns when it enters battle.
+Description = Summons rainstorm for 4 turns upon entry.
 Flags = RainstormSynergy
 #-------------------------------
 [DROUGHT]
 Name = Drought
-Description = Turns the weather to sunshine for 4 turns when it enters battle.
+Description = Turns the weather to sunshine for 4 turns upon entry.
 Flags = SunshineSynergy
 #-------------------------------
 [DRYSKIN]
@@ -273,7 +273,7 @@ Description = Upon entry, lowers the foe's Attack stat by two steps.
 #-------------------------------
 [INTREPIDSWORD]
 Name = Intrepid Sword
-Description = Raises Attack when the Pokémon enters a battle.
+Description = Raises Attack upon entry.
 #-------------------------------
 [IRONBARBS]
 Name = Iron Barbs
@@ -448,7 +448,7 @@ Flags = SandstormSynergy
 #-------------------------------
 [SANDSTREAM]
 Name = Sand Stream
-Description = Summons a sandstorm for 4 turns when it enters battle.
+Description = Summons a sandstorm for 4 turns upon entry.
 Flags = SandstormSynergy
 #-------------------------------
 [SAPSIPPER]
@@ -512,7 +512,7 @@ Description = Doubles the critical hit chance of random crit moves. Powers up cr
 #-------------------------------
 [SNOWWARNING]
 Name = Snow Warning
-Description = Summons a hail for 4 turns when it enters battle.
+Description = Summons a hailstorm for 4 turns upon entry.
 Flags = HailSynergy
 #-------------------------------
 [SOLARPOWER]

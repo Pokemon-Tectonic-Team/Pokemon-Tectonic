@@ -688,46 +688,56 @@ class PokeBattle_Battler
                 end
             end
 
-            # Dancer
-            if !effectActive?(:Dancer) && move.danceMove?
-                dancers = []
-                @battle.pbPriority(true).each do |b|
-                    dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
+            unless hasCopiedMoveMarker?
+                # Dancer
+                if move.danceMove?
+                    dancers = []
+                    @battle.pbPriority(true).each do |b|
+                        dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
+                    end
+                    while dancers.length > 0
+                        nextUser = dancers.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Dancer, ability: :DANCER)
+                    end
                 end
-                while dancers.length > 0
-                    nextUser = dancers.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Dancer, ability: :DANCER)
+                # Echo
+                if move.soundMove? || move.pulseMove?
+                    echoers = []
+                    @battle.pbPriority(true).each do |b|
+                        echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
+                    end
+                    while echoers.length > 0
+                        nextUser = echoers.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Echo, ability: :ECHO)
+                    end
                 end
-            end
-            # Echo
-            if !effectActive?(:Echo) && (move.soundMove? || move.pulseMove?)
-                echoers = []
-                @battle.pbPriority(true).each do |b|
-                    echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
-                end
-                while echoers.length > 0
-                    nextUser = echoers.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Echo, ability: :ECHO)
-                end
-            end
-            # Martial Discipline
-            if !effectActive?(:MartialDiscipline) && (move.punchingMove? || move.kickingMove?)
-                discipliners = []
-                @battle.pbPriority(true).each do |b|
-                    discipliners.push(b) if b.index != user.index && b.hasActiveAbility?(:MARTIALDISCIPLINE)
-                end
-                while discipliners.length > 0
-                    nextUser = discipliners.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :MartialDiscipline, ability: :MARTIALDISCIPLINE)
+                # Martial Discipline
+                if move.punchingMove? || move.kickingMove?
+                    discipliners = []
+                    @battle.pbPriority(true).each do |b|
+                        discipliners.push(b) if b.index != user.index && b.hasActiveAbility?(:MARTIALDISCIPLINE)
+                    end
+                    while discipliners.length > 0
+                        nextUser = discipliners.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :MartialDiscipline, ability: :MARTIALDISCIPLINE)
+                    end
                 end
             end
         end
+    end
+
+    def hasCopiedMoveMarker?
+        eachEffect(true) do |effect, _value, data|
+            next unless data.copied_move_marker?
+            return true
+        end
+        return false
     end
 
     #=============================================================================
