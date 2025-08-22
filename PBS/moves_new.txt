@@ -5477,7 +5477,8 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = DisableTargetLastMoveUsed
 Flags = CanProtect
-Description = The user psychically alters the target's brain to forget. This move disables the target's last move.
+EffectChance = 100
+Description = The user psychically alters the target's brain to forget. This move disables the target's last move for 5 turns.
 Animation = DISABLE
 #-------------------------------
 [MINDLINK]
