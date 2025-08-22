@@ -6822,7 +6822,7 @@ TotalPP = 3
 Target = AllNearFoes
 FunctionCode = SacrificeAllySleepTargetNextTurn
 Flags = CanProtect,CanMagicCoat
-Description = The user sacrifices their ally to cover all near foes in total darkness. They become drowsy.
+Description = The user sacrifices their ally to cover all near foes in total darkness, making them drowsy. Fails if the user has no ally.
 Animation = DARKVOID
 #-------------------------------
 [CALTROPARTS]

@@ -66,6 +66,6 @@ BattleHandlers::AccuracyCalcUserAbility.add(:WATERFALLCONDITIONING,
 
 BattleHandlers::AccuracyCalcUserAbility.add(:PINDOWN,
     proc { |ability, mults, user, target, _move, _type|
-        mults[:base_accuracy] = 0 if target.battle.pbIsTrapped?(user.index)
+        mults[:base_accuracy] = 0 if target.trapped?
     }
 )

@@ -146,7 +146,7 @@ Description = Your Poké Balls are 50% more effective.
 #-------------------------------
 [BARRIERMAKER]
 Name = Barrier Maker
-Description = Sets a Reflect for 4 turns upon entering the battle.
+Description = Sets a Reflect for 4 turns upon entry.
 #-------------------------------
 [BATTLEHARDENED]
 Name = Battle-Hardened
@@ -330,7 +330,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [CLOVERSONG]
 Name = Clover Song
-Description = Sets a Lucky Chant upon entering the battle, protecting from critical hits for 10 turns.
+Description = Sets a Lucky Chant upon entry, protecting from critical hits for 10 turns.
 #-------------------------------
 [CLUMSYKINESIS]
 Name = Clumsy Kinesis
@@ -508,7 +508,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [DRIFTINGMIST]
 Name = Drifting Mist
-Description = Creates Grey Mist for three turns when entering the battlefield.
+Description = Creates Grey Mist for three turns upon entry.
 Flags = SetupCounterAI
 #-------------------------------
 [DYNAMICENTRANCE]
@@ -758,7 +758,7 @@ Description = Doubles the Pokémon's Speed in Rooms.
 #-------------------------------
 [FREERIDE]
 Name = Free Ride
-Description = Raises other allies' Speed by two steps upon entering the battle.
+Description = Raises other allies' Speed by two steps upon entry.
 #-------------------------------
 [FREESTYLE]
 Name = Freestyle
@@ -875,7 +875,7 @@ Description = Upon entry, traps each opponent in a whirlpool for two turns.
 #-------------------------------
 [HARBINGER]
 Name = Harbinger
-Description = Summons eclipse for four turns when it enters battle.
+Description = Summons eclipse for four turns upon entry.
 Flags = EclipseSynergy
 #-------------------------------
 [HARDAS]
@@ -963,7 +963,7 @@ Description = Powers up Bug-type moves of itself and its allies by 50%.
 #-------------------------------
 [HOLIDAYCHEER]
 Name = Holiday Cheer
-Description = When entering battle, heals self and allies for 25% of their max health.
+Description = Upon entry, heals self and allies for 25% of their max health.
 #-------------------------------
 [HONORABLE]
 Name = Honorable
@@ -991,7 +991,7 @@ Description = Punches, Kicks, and Bites combo together to create special effects
 #-------------------------------
 [HYPERSPEED]
 Name = Hyper Speed
-Description = Doubles Speed. Dashes to avoid hazards when entering.
+Description = Doubles Speed. Dashes to avoid hazards upon entry.
 Flags = HazardImmunity
 #-------------------------------
 [IAIJUTSU]
@@ -1137,7 +1137,7 @@ Description = At end of turn, regenerates its previously-used berry.
 #-------------------------------
 [LASTGASP]
 Name = Last Gasp
-Description = Cannot take damage or be switched out. Hears Perish Song upon entering, ensuring its demise.
+Description = Cannot take damage or be switched out. Hears Perish Song upon entry, ensuring its demise.
 Flags = Immutable
 #-------------------------------
 [LATEBLOOMER]
@@ -1303,7 +1303,7 @@ Flags = MoonglowSynergy
 #-------------------------------
 [MOONGAZE]
 Name = Moon Gaze
-Description = Summons moonglow for four turns when it enters battle.
+Description = Summons moonglow for four turns upon entry.
 Flags = MoonglowSynergy
 #-------------------------------
 [MOONLIGHTER]
@@ -1399,7 +1399,7 @@ Description = On the first turn, its attacks cause the target to flinch.
 #-------------------------------
 [ONTHEWIND]
 Name = On the Wind
-Description = Sets a Tailwind for four turns upon entering the battle, increasing Speed.
+Description = Sets a Tailwind for four turns upon entry, increasing Speed.
 #-------------------------------
 [OPTIMIZEDALLOY]
 Name = Optimized Alloy
@@ -1929,7 +1929,7 @@ Flags = EnablesRandomCrits
 #-------------------------------
 [STARGUARDIAN]
 Name = Star Guardian
-Description = Sets a Light Screen for 4 turns upon entering the battle.
+Description = Sets a Light Screen for 4 turns upon entry.
 #-------------------------------
 [STARSALIGN]
 Name = Stars Align
