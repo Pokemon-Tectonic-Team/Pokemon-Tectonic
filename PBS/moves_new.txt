@@ -4693,6 +4693,20 @@ Flags = CanProtect
 Description = The user attacks the target with the power of a warding charm. Super effective vs Ghost-types.
 Animation = BLOOMDOOM
 #-------------------------------
+[KICKDRUM]
+Name = Kick Drum
+Type = GRASS
+Category = Adaptive
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = RaiseUserAndAlliesSpdAcc1
+Flags = CanProtect,Sound,Kicking
+EffectChance = 100
+Description = The user keeps time for the team while attacking. Raises user's and allies' Speed and Accuracy. Counts as a Sound and Kick move.
+Animation = DRUMBEATING
+#-------------------------------
 [MASQUERBLADE]
 Name = Masquerblade
 Type = GRASS
@@ -5701,7 +5715,8 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = DisableTargetLastMoveUsed
 Flags = CanProtect
-Description = The user psychically alters the target's brain to forget. This move disables the target's last move.
+EffectChance = 100
+Description = The user psychically alters the target's brain to forget. This move disables the target's last move for 5 turns.
 Animation = DISABLE
 #-------------------------------
 [MINDLINK]
@@ -7533,13 +7548,13 @@ Animation = MAGNETBOMB
 Name = Heart Rhythm
 Type = FAIRY
 Category = Special
-Power = 60
+Power = 90
 Accuracy = 100
 TotalPP = 20
 Target = NearOther
-FunctionCode = HeartRhythm
+FunctionCode = Round
 Flags = CanProtect,Sound
-Description = Power increases by 20 each time it's used in succession. User heals for half of damage dealt.
+Description = Makes everyone's hearts beat together. Others can join in the Round and make the attack do greater damage.
 Animation = ROUND
 #-------------------------------
 [HONEYSLATHER]
