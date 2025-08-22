@@ -4700,11 +4700,11 @@ Category = Adaptive
 Power = 80
 Accuracy = 100
 TotalPP = 10
-Target = AllNearFoes
+Target = NearOther
 FunctionCode = RaiseUserAndAlliesSpdAcc1
-Flags = CanProtect,Sound,Kick
+Flags = CanProtect,Sound,Kicking
 EffectChance = 100
-Description = The user keeps time for the team. Raises user's and allies' Speed and Accuracy. Also is a Sound and Kick move.
+Description = The user keeps time for the team while attacking. Raises user's and allies' Speed and Accuracy. Counts as a Sound and Kick move.
 Animation = DRUMBEATING
 #-------------------------------
 [MASQUERBLADE]
