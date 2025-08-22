@@ -4693,6 +4693,20 @@ Flags = CanProtect
 Description = The user attacks the target with the power of a warding charm. Super effective vs Ghost-types.
 Animation = BLOOMDOOM
 #-------------------------------
+[KICKDRUM]
+Name = Kick Drum
+Type = GRASS
+Category = Adaptive
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = RaiseUserAndAlliesSpdAcc1
+Flags = CanProtect,Sound,Kick
+EffectChance = 100
+Description = The user keeps time for the team. Raises user's and allies' Speed and Accuracy. Also is a Sound and Kick move.
+Animation = DRUMBEATING
+#-------------------------------
 [MASQUERBLADE]
 Name = Masquerblade
 Type = GRASS

@@ -2416,6 +2416,19 @@ FunctionCode = Invalid
 Flags = CanSnatch
 Description = The user spends 25% HP to lay down evil roots. This curses all foes. The user becomes trapped, but heals by 1/8th HP every turn.
 #-------------------------------
+[DRUMBEATING]
+Name = Drum Beating
+Type = GRASS
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = LowerTargetSpd2
+Flags = CanProtect
+EffectChance = 100
+Description = The user controls the drum's roots to attack the target. This also lowers the target's Speed stat by two steps.
+#-------------------------------
 [FORESTSCURSE]
 Name = Forest's Curse
 Type = GRASS

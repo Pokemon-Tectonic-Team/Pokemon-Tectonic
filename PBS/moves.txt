@@ -4186,19 +4186,6 @@ FunctionCode = LowerTargetSpd4
 Flags = CanProtect,CanMagicCoat
 Description = The user releases cotton-like spores that cling to the foe, reducing their Speed by four steps.
 #-------------------------------
-[DRUMBEATING]
-Name = Drum Beating
-Type = GRASS
-Category = Physical
-Power = 80
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetSpd2
-Flags = CanProtect
-EffectChance = 100
-Description = The user controls the drum's roots to attack the target. This also lowers the target's Speed stat by two steps.
-#-------------------------------
 [ENERGYBALL]
 Name = Energy Ball
 Type = GRASS
