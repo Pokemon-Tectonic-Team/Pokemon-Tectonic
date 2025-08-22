@@ -118,6 +118,7 @@ class PokeBattle_Battle
                 b.pbCureStatus
                 b.pbCureStatus # Duplicated intentionally
                 b.pbResetLoweredStatSteps(true)
+                b.disableLoweredBaseStatEffects
                 b.resetAbilities
                 b.eachEffect(true) do |effect, _value, data|
                     next unless data.avatars_purge || data.is_mental?
