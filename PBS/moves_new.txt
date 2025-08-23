@@ -2688,7 +2688,7 @@ Accuracy = 0
 TotalPP = 10
 Target = User
 FunctionCode = RaiseUserSpAtk2Spd2
-Flags = CanSnatch,Sound
+Flags = CanSnatch
 Description = The user amps itself up for performance, raising its Sp. Atk and Speed by two steps.
 Animation = CALMMIND
 #-------------------------------
