@@ -217,6 +217,9 @@ The FnF Showdown community
 Eclipse and Moonglow Castform
 Atteathesilly
 
+Legends ZA Hex Maniac
+CamiOfTargon
+
 Spanish PokeDex Translations
 Everson
 
