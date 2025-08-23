@@ -149,7 +149,7 @@ module GameData
             "Dance"     => _INTL("Dance"),
             "Blade"     => _INTL("Blade"),
             "Wind"      => _INTL("Wind"),
-            "Kicking"   => _INTL("Kick"),
+            "Kick"      => _INTL("Kick"),
             "Light"     => _INTL("Light"),
         }
       end
