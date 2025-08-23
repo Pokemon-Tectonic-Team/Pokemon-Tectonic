@@ -142,7 +142,7 @@ class PokeBattle_Move
     def halfDamageToAllies?;    return @flags.include?("HalfDamageToAllies"); end
 
     def punchingMove?;          return @flags.include?("Punch"); end
-    def kickingMove?;           return @flags.include?("Kicking"); end
+    def kickingMove?;           return @flags.include?("Kick"); end
     def bitingMove?;            return @flags.include?("Biting"); end
     def bladeMove?;             return @flags.include?("Blade"); end
     
