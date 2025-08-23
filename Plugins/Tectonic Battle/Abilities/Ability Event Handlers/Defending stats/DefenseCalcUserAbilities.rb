@@ -33,13 +33,6 @@ BattleHandlers::DefenseCalcUserAbility.add(:SOLONOCTURNE,
     }
 )
 
-BattleHandlers::DefenseCalcUserAbility.add(:BIGBOSS,
-    proc { |ability, _user, _battle, defenseMult|
-        defenseMult *= 1.25
-        next defenseMult
-    }
-)
-
 BattleHandlers::DefenseCalcUserAbility.add(:SAFEPASSAGE,
     proc { |ability, _user, battle, defenseMult|
         defenseMult *= 2 if battle.rainy?
