@@ -2670,7 +2670,7 @@ Pokemon = YANMEGA,70
 Pokemon = MPOLTEAGEIST,70
     AbilityIndex = 1 # Chill Out
 #-------------------------------
-[HEXMANIAC,Riptide]
+[HEXMANIAC_1,Riptide]
 TrainerTypeLabel = DEVELOPER
 Pokemon = AMUK,70
     Moves = BRUTALSWING,RECOVER,FLOWSTATE,BULKUP

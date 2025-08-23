@@ -697,6 +697,12 @@ Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
 #-------------------------------
+[HEXMANIAC_1]
+Name = Hex Maniac
+Gender = Female
+BaseMoney = 32
+IntroBGM = PSYCHIC
+#-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male
@@ -1090,12 +1096,6 @@ Name = Pilot
 Gender = Male
 BaseMoney = 40
 IntroBGM = CYCLING
-#-------------------------------
-[HEXMANIAC_1]
-Name = Hex Maniac
-Gender = Female
-BaseMoney = 32
-IntroBGM = PSYCHIC
 #-------------------------------
 [POKEFAN_F]
 Name = Poké Fan
