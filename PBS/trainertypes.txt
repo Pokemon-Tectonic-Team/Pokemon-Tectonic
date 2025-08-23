@@ -1091,7 +1091,7 @@ Gender = Male
 BaseMoney = 40
 IntroBGM = CYCLING
 #-------------------------------
-[PLZA_HEX_MANIAC]
+[HEX_MANIAC_1]
 Name = Hex Maniac
 Gender = Female
 BaseMoney = 32
