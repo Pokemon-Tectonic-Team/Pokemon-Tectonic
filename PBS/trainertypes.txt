@@ -697,6 +697,12 @@ Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
 #-------------------------------
+[HEXMANIAC_1]
+Name = Hex Maniac
+Gender = Female
+BaseMoney = 32
+IntroBGM = PSYCHIC
+#-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male

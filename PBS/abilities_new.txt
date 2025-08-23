@@ -91,6 +91,10 @@ Description = Sound-based attacks turn Ice-type and are boosted by 30%.
 Name = Armor Piercing
 Description = Deals double damage against Pokémon that have raised defenses or that are protected by a screen.
 #-------------------------------
+[AROMATIC]
+Name = Aromatic
+Description = Uses Aromatherapy if an attack lowers its HP to half or below.
+#-------------------------------
 [ASSAULTSPINES]
 Name = Assault Spines
 Description = Doubles Sp. Def, but the Pokémon can't use status moves.
@@ -169,19 +173,10 @@ Name = Berry Bunch
 Description = Can hold two different items, if both are Berries.
 Flags = MultipleItems
 #-------------------------------
-[BIGBOSS]
-Name = Big Boss
-Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
-Flags = FlinchImmunity
-#-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
 Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.
 Flags = HailSynergy
-#-------------------------------
-[BIZARRE]
-Name = Bizarre
-Description = Its special attacks reduce the target's Sp. Def.
 #-------------------------------
 [BLADEBRAINED]
 Name = Bladebrained
@@ -252,10 +247,6 @@ Description = Receives 33% less move damage, but the Pokémon is hurt for 1/10th
 [BURNOUT]
 Name = Burn Out
 Description = Has a 30% chance to burn targets when using physical moves.
-#-------------------------------
-[BURNSKILL]
-Name = Burn Skill
-Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
 [CAFFEINERUSH]
 Name = Caffeine Rush
@@ -405,6 +396,10 @@ Description = Boosts Attack and Sp. Atk after knocking out any Pokémon.
 [DAWNFALL]
 Name = Dawnfall
 Description = On the first turn, its attacks burn the target.
+#-------------------------------
+[DEADBEAT]
+Name = Deadbeat
+Description = Has a 30% chance to leech targets when using physical moves.
 #-------------------------------
 [DEBRISFIELD]
 Name = Debris Field
@@ -593,10 +588,6 @@ Flags = ChoiceLocking
 [EXPERTISE]
 Name = Expertise
 Description = Powers up super-effective moves by 30%.
-#-------------------------------
-[EXTORTER]
-Name = Extorter
-Description = At low health, eats other battlers' low-health triggered berries.
 #-------------------------------
 [EXTRASCOOP]
 Name = Extra Scoop
@@ -1538,10 +1529,6 @@ Description = Upon switch out, lowers the foe's Attack and Sp. Atk stat by insul
 Name = Power Lifter
 Description = Its physical attacks go last but force the target to switch out after use.
 #-------------------------------
-[PREDATION]
-Name = Predation
-Description = Has a 30% chance to leech targets when using physical moves.
-#-------------------------------
 [PRESSUREVALVE]
 Name = Pressure Valve
 Description = Right before the Pokémon is attacked, the attacker's stat changes are reset.
@@ -1654,6 +1641,10 @@ Description = Immune to Dark-type and Bug-type moves.
 [RESONANT]
 Name = Resonant
 Description = Spread moves hitting multiple targets deal 50% more damage.
+#-------------------------------
+[ROARINGFLAME]
+Name = Roaring Flame
+Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
 [ROAST]
 Name = Roast
