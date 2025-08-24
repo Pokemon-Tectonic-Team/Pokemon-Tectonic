@@ -7296,9 +7296,9 @@ Pokemon = DONPHAN,60
     Moves = EARTHQUAKE,ADAMANTINEPRESS,HUMBLE,CARAPACECRUSH
     AbilityIndex = 1 # Burn Out
 Pokemon = KOMALA,60
-    Moves = NULLPULSE,DREAMDANCE,FRENZYPLANT,SLACKOFF
+    Moves = NULLPULSE,DREAMDANCE,HOLLYCHARM,SLACKOFF
     AbilityIndex = 0 # Comatose
-    Item = ENERGYHERB
+    Item = GRASSGEM
 #-------------------------------
 [LOST_RANGER_GREEN,Farid]
 Flags = NoPerfect
