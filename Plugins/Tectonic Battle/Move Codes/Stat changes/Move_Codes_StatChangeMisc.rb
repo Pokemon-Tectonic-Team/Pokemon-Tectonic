@@ -3,15 +3,15 @@
 #===============================================================================
 class PokeBattle_Move_ResetTargetStatSteps < PokeBattle_Move
     def pbEffectAgainstTarget(_user, target)
-        if target.damageState.calcDamage > 0 && !target.damageState.substitute && target.hasAlteredStatSteps?
-            target.pbResetStatSteps
+        if target.damageState.calcDamage > 0 && !target.damageState.substitute && target.hasRaisedStatSteps?
+            target.pbResetRaisedStatSteps
             @battle.pbDisplay(_INTL("{1}'s stat changes were removed!", target.pbThis))
         end
     end
 
     def getTargetAffectingEffectScore(_user, target)
         score = 0
-        if !target.substituted? && target.hasAlteredStatSteps?
+        if !target.substituted? && target.hasRaisedStatSteps?
             GameData::Stat.each_battle do |s|
                 score += target.steps[s.id] * 10
             end
