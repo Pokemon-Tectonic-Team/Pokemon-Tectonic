@@ -119,6 +119,10 @@ class PokeBattle_Battler
                 movesArray.push(judgment)
             end
         end
+        if hasActiveAbility?(:PURESTLIGHT)
+            lightthatburnsthesky = @battle.getBattleMoveInstanceFromID(:LIGHTTHATBURNSTHESKY)
+            movesArray.push(lightthatburnsthesky)
+        end
         if @battle.field.effectActive?(:InsightRoom) && @pokemon
             speciesLearnSet = @pokemon.getMoveList
             speciesLearnSet.each do |learnSetEntry|

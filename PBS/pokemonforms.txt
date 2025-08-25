@@ -791,6 +791,7 @@ Type1 = ROCK
 Type2 = STEEL
 BaseStats = 90,140,115,70,105,100
 # Total = 620
+Abilities = PURESTLIGHT,PRISMARMOR
 FormMove = SUNSTEELSTRIKE
 Height = 3.8
 Weight = 460.0
@@ -802,6 +803,7 @@ Type1 = ROCK
 Type2 = GHOST
 BaseStats = 90,105,100,70,140,115
 # Total = 620
+Abilities = PURESTLIGHT,PRISMARMOR
 FormMove = MOONGEISTBEAM
 Height = 4.2
 Weight = 350.0
@@ -819,12 +821,13 @@ Pokedex = The light pouring out from all over its body affects living things and
 #-------------------------------
 [NECROZMA,4]
 FormName = Ultra
-Type1 = PSYCHIC
+Type1 = ROCK
 Type2 = DRAGON
 BaseStats = 95,165,95,130,165,95
 # Total = 745
 Abilities = NEUROFORCE
 Height = 7.5
+Pokedex = The light pouring out from all over its body affects living things and nature, impacting them in various ways.
 #-------------------------------
 [CRAMORANT,1]
 FormName = Gulping

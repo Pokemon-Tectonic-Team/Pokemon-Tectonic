@@ -5596,6 +5596,18 @@ FunctionCode = TwoTurnAttack
 Flags = CanProtect,Uninvocable
 Description = The most powerful attack of the original form. The user is exhausted on the next turn.
 #-------------------------------
+[LIGHTTHATBURNSTHESKY]
+Name = Light That Burns the Sky
+Type = DRAGON
+Category = Adaptive
+Power = 200
+Accuracy = 100
+TotalPP = 1
+Target = NearOther
+FunctionCode = IgnoreTargetAbilityChangeUserNecrozmaForm
+Flags = CanProtect,Light
+Description = The user attacks with apocalyptic light. This move can be used on the target regardless of its Abilities. Changes Necrozma's form upon use.
+#-------------------------------
 [OUTRAGE]
 Name = Outrage
 Type = DRAGON

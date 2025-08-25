@@ -1554,6 +1554,11 @@ Description = Raises the Pokémon's Attack by 50%, including Style Values and ot
 Name = Pure Rage
 Description = The Pokémon's Dragon-type hits deal additional damage equal to half the Pokémon's level.
 #-------------------------------
+[PURESTLIGHT]
+Name = Purest Light
+Description = Has Light That Burns the Sky as its 5th move.
+Flags = Immutable
+#-------------------------------
 [PUZZLING]
 Name = Puzzling
 Description = Upon entry, creates a Puzzle Room for four turns, swapping unmodified Attack and Sp. Atk.
