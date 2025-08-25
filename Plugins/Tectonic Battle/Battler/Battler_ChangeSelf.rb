@@ -592,6 +592,9 @@ class PokeBattle_Battler
     end
 
 def disableLoweredBaseStatEffects
+  base_stats = @pokemon&.baseStats
+  return if base_stats.nil?
+
   {
     BaseAttack: :ATTACK,
     BaseDefense: :DEFENSE,
@@ -603,9 +606,6 @@ def disableLoweredBaseStatEffects
     next if current_effect.nil?
 
     stat_data = GameData::Stat.get(stat_sym)
-    base_stats = @pokemon&.baseStats
-    next if base_stats.nil?
-
     original_base = base_stats[stat_data.id]
     next if original_base.nil?
 
