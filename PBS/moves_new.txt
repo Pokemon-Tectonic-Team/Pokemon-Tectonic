@@ -5909,7 +5909,7 @@ Description = The user sends waves of cosmic energy to overwhelm the target's se
 Animation = CONFUSION
 #-------------------------------
 [QUASARCRUSH]
-Name = Quasar crush
+Name = Quasar Crush
 Type = PSYCHIC
 Category = Physical
 Power = 120
