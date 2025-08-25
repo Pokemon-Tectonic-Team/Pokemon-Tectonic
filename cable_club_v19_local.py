@@ -471,9 +471,9 @@ def make_party_validator(pbs_dir):
                     shiny = record.bool_or_none()
                     ability = record.str()
                     # stricter check
-                    # if ability and ability not in species_.abilities):
-                    #    logging.debug('invalid ability strict: %s', ability)
-                    #    errors.append("invalid ability strict")
+                    if ability and ability not in species_.abilities:
+                        logging.debug("invalid ability strict: %s", ability)
+                        errors.append("invalid ability strict")
                     if ability and ability not in ability_syms:
                         logging.debug("invalid ability: %s", ability)
                         errors.append("invalid ability")

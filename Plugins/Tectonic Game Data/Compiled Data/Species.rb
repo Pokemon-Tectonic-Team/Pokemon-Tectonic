@@ -1102,10 +1102,10 @@ module Compiler
             GameData::Species.each_base do |species|
                 next if species.defined_in_extension
                 if (!form_map.key?(species.species))
-                    form_map[species.species] = [0]
+                    form_map[species.species] = [species]
                 end
                 if species.form != 0
-                    form_map[species.species].push(species.form)
+                    form_map[species.species].push(species) # push whole form data for later use
                     next   
                 end
                 pbSetWindowText(_INTL("Writing species {1}...", species.id_number))
@@ -1195,12 +1195,23 @@ module Compiler
         end
     end
 
-    def write_species_server(f, species, form_list)
+    def write_species_server(f, species, forms)
+        form_list = [0]
+        all_abilities = species.abilities.clone
+        all_moves = species.learnable_moves.clone
+        forms.each do |form|
+            next if form.form == 0
+            form_list.append(form.form)
+            all_abilities.concat(form.abilities)
+            all_moves.concat(form.learnable_moves)
+        end
+        all_abilities.uniq!
+        all_moves.uniq!
         f.write(format("[%s]\r\n", species.species))
         f.write(format("forms = %s\r\n", form_list.join(",")))
         f.write(format("gender_ratio = %s\r\n", species.gender_ratio))
-        f.write(format("abilities = %s\r\n", species.abilities.join(","))) if species.abilities.length > 0
-        f.write(format("moves = %s\r\n\r\n", species.learnable_moves.join(",")))
+        f.write(format("abilities = %s\r\n", all_abilities.join(","))) if all_abilities.length > 0
+        f.write(format("moves = %s\r\n\r\n", all_moves.join(",")))
     end
     #=============================================================================
     # Save Pokémon forms data to PBS file
