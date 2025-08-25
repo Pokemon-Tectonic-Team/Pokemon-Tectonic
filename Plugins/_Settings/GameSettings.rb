@@ -1,6 +1,6 @@
 module Settings
     # The version of your game. It has to adhere to the MAJOR.MINOR.PATCH format.
-    GAME_VERSION = "3.3.0"
+    GAME_VERSION = "3.4.0"
     DEV_VERSION  = true
   
     #=============================================================================

@@ -42,7 +42,7 @@ BattleHandlers::SpecialAttackCalcUserAbility.add(:DEBRISFIELD,
 
 BattleHandlers::SpecialAttackCalcUserAbility.add(:SOLARCELL,
   proc { |ability, _user, battle, spAtkMult|
-      spAtkMult *= 1.25 if battle.sunny?
+      spAtkMult *= 1.3 if battle.sunny?
       next spAtkMult
   }
 )
@@ -113,6 +113,13 @@ BattleHandlers::SpecialAttackCalcUserAbility.add(:COLDCALCULATION,
 BattleHandlers::SpecialAttackCalcUserAbility.add(:EXTREMEVOLTAGE,
   proc { |ability, _user, _battle, spAtkMult|
       spAtkMult *= 1.5
+      next spAtkMult
+  }
+)
+
+BattleHandlers::SpecialAttackCalcUserAbility.add(:CASTELLAN,
+  proc { |ability, _user, battle, spAtkMult|
+      spAtkMult *= 1.3 if battle.roomActive?
       next spAtkMult
   }
 )

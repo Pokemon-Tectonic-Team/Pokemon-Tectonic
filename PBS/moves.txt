@@ -1229,7 +1229,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserDefSpDef2
 Flags = CanProtect
-Description = The user fights the foe up close without guarding itself. This lowers the user Defense and Sp. Def by two steps.
+Description = The user fights the foe up close without guarding itself. This lowers the user's Defense and Sp. Def by two steps.
 #-------------------------------
 [COACHING]
 Name = Coaching
@@ -1275,7 +1275,7 @@ Accuracy = 100
 TotalPP = 25
 Target = NearOther
 FunctionCode = HitTwoTimes
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The target is quickly kicked twice in succession using both feet.
 #-------------------------------
 [DRAINPUNCH]
@@ -1374,7 +1374,7 @@ Accuracy = 80
 TotalPP = 10
 Target = NearOther
 FunctionCode = CrashDamageIfFailsUnusableInGravity
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
 #-------------------------------
 [KARATECHOP]
@@ -1398,7 +1398,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = LowerTargetSpd2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user attacks the target's legs swiftly, reducing the target's Speed stat by two steps.
 #-------------------------------
@@ -1556,7 +1556,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDef2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user kicks the target with lightning-like movement. It lowers the target's Defense by two steps.
 #-------------------------------
@@ -1660,7 +1660,7 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = TwoTurnAttackInvulnerableInSkyNumbTarget
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 30
 Description = The user bounces up high, charging and becoming invulnerable, then drops on the foe on the second turn. It has a 30% chance to numb.
 #-------------------------------
@@ -2109,7 +2109,7 @@ Accuracy = 100
 TotalPP = 15
 Target = AllNearOthers
 FunctionCode = LowerTargetSpd1
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user strikes everything around it by stomping on the ground. It reduces hit Pokémon's Speed.
 #-------------------------------
@@ -2267,7 +2267,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = DoubleDamageLastMoveFailed
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The user attacks driven by frustration. Power increases if previous move failed.
 #-------------------------------
 [THOUSANDARROWS]
@@ -3005,7 +3005,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = AlwaysHits
 Flags = CanProtect,Punch
-Description = The user throws a punch from the shadows. The punch lands without fail.
+Description = The user throws a punch from the shadows. Lands without fail.
 #-------------------------------
 [SHADOWSNEAK]
 Name = Shadow Sneak
@@ -3397,7 +3397,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 10
 Description = The user launches a fiery kick. It has a 10% chance to burn.
 #-------------------------------
@@ -3699,7 +3699,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user attacks the target at full power. Lowers the user's Sp. Atk by four steps.
+Description = The user attacks the target at full power. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [PYROBALL]
 Name = Pyro Ball
@@ -3775,7 +3775,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpdDefSpDef2
 Flags = CanProtect
-Description = With a fiery forehead, the user hurls itself at the foe. Lowers the user's Defense, Sp. Def, and Speed by two steps.
+Description = With a fiery forehead, the user hurls itself at the foe. This lowers the user's Defense, Sp. Def, and Speed by two steps.
 #-------------------------------
 #		WATER MOVES
 #-------------------------------
@@ -3973,7 +3973,7 @@ TotalPP = 12
 Target = User
 FunctionCode = LowerUserDefSpDef2RaiseUserAtkSpAtkSpd3
 Flags = CanSnatch
-Description = The user breaks its shell, lowering its Defense and Sp. Def by two steps but raising Attack, Sp. Atk and Speed by three steps.
+Description = The user breaks its shell. This raises the user's Attack, Sp. Atk and Speed by three steps, but lowers Defense and Sp. Def by two steps.
 #-------------------------------
 [SNIPESHOT]
 Name = Snipe Shot
@@ -3991,14 +3991,14 @@ Description = The target is struck with a supersonic water blast. Can random cri
 Name = Sparkling Aria
 Type = WATER
 Category = Special
-Power = 80
+Power = 95
 Accuracy = 100
 TotalPP = 10
 Target = AllNearOthers
 FunctionCode = CureTargetBurn
-Flags = CanProtect,Sound
+Flags = CanProtect,Sound,HalfDamageToAllies
 EffectChance = 100
-Description = The user bursts into song, emitting many bubbles. Any burning Pokémon will be healed by these bubbles.
+Description = The user bursts into a bubbly song. Pokémon hit by this are cured of burn. Deals 50% less damage to allies.
 #-------------------------------
 [STEAMERUPTION]
 Name = Steam Eruption
@@ -4186,19 +4186,6 @@ FunctionCode = LowerTargetSpd4
 Flags = CanProtect,CanMagicCoat
 Description = The user releases cotton-like spores that cling to the foe, reducing their Speed by four steps.
 #-------------------------------
-[DRUMBEATING]
-Name = Drum Beating
-Type = GRASS
-Category = Physical
-Power = 80
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = LowerTargetSpd2
-Flags = CanProtect
-EffectChance = 100
-Description = The user controls the drum's roots to attack the target. This also lowers the target's Speed stat by two steps.
-#-------------------------------
 [ENERGYBALL]
 Name = Energy Ball
 Type = GRASS
@@ -4316,7 +4303,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect,Wind
-Description = A storm of sharp leaves is whipped up. Lowers the user's Sp. Atk by four steps.
+Description = A storm of sharp leaves is whipped up. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [LEECHSEED]
 Name = Leech Seed
@@ -4466,7 +4453,7 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = LowerTargetAtk2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user lands an intense tropical kick on the target. This also lowers the target's Attack stat by two steps.
 #-------------------------------
@@ -5085,7 +5072,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user attacks the target at full power. Lowers the user's Sp. Atk by four steps.
+Description = The user attacks the target at full power. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [PSYCHOCUT]
 Name = Psycho Cut
@@ -5187,6 +5174,17 @@ Target = NearOther
 FunctionCode = SwapItems
 Flags = CanProtect
 Description = The user catches the target off guard and swaps its held item with its own.
+#-------------------------------
+[TRICKROOM]
+Name = Trick Room
+Type = PSYCHIC
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = BothSides
+Priority = -7
+FunctionCode = StartSwapSpeedOrder4
+Description = The user creates a bizarre area in which slower Pokémon get to move first for four turns.
 #-------------------------------
 [ZENHEADBUTT]
 Name = Zen Headbutt
@@ -5349,7 +5347,7 @@ TotalPP = 10
 Target = NearOther
 FunctionCode = LowerUserSpd2
 Flags = CanProtect,Punch
-Description = The user swings and hits with its strong, heavy fist. Lowers the user's Speed by two steps.
+Description = The user swings and hits with its strong, heavy fist. This lowers the user's Speed by two steps.
 #-------------------------------
 [ICEPUNCH]
 Name = Ice Punch
@@ -5463,7 +5461,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = Comets are summoned down from the sky. Lowers the user's Sp. Atk by four steps.
+Description = Comets are summoned down from the sky. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [DRAGONBREATH]
 Name = Dragon Breath
@@ -6249,7 +6247,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = LowerUserSpAtk4
 Flags = CanProtect
-Description = The user unleashes a strong beam. Lowers the user's Sp. Atk by four steps.
+Description = The user unleashes a strong beam. This lowers the user's Sp. Atk by four steps.
 #-------------------------------
 [GEOMANCY]
 Name = Geomancy

@@ -377,28 +377,6 @@ class PokeBattle_Battler
         # Display messages about BP adjustment and weather debuffing
         move.displayDamagingMoveMessages(self, move, targets) if move.damagingMove?
         
-        # Primordial Sea, Desolate Land
-        if move.damagingMove?
-            case @battle.pbWeather
-            when :HeavyRain
-                if move.calcType == :FIRE
-                    @battle.pbDisplay(_INTL("The Fire-type attack fizzled out in the heavy rain!"))
-                    user.onMoveFailed(move)
-                    pbCancelMoves
-                    pbEndTurn(choice)
-                    return
-                end
-            when :HarshSun
-                if move.calcType == :WATER
-                    @battle.pbDisplay(_INTL("The Water-type attack evaporated in the harsh sunlight!"))
-                    user.onMoveFailed(move)
-                    pbCancelMoves
-                    pbEndTurn(choice)
-                    return
-                end
-            end
-        end
-        
         # Abilities that trigger before a move starts
         # E.g. Protean
         user.eachActiveAbility do |ability|
@@ -710,46 +688,56 @@ class PokeBattle_Battler
                 end
             end
 
-            # Dancer
-            if !effectActive?(:Dancer) && move.danceMove?
-                dancers = []
-                @battle.pbPriority(true).each do |b|
-                    dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
+            unless hasCopiedMoveMarker?
+                # Dancer
+                if move.danceMove?
+                    dancers = []
+                    @battle.pbPriority(true).each do |b|
+                        dancers.push(b) if b.index != user.index && b.hasActiveAbility?(:DANCER)
+                    end
+                    while dancers.length > 0
+                        nextUser = dancers.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Dancer, ability: :DANCER)
+                    end
                 end
-                while dancers.length > 0
-                    nextUser = dancers.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Dancer, ability: :DANCER)
+                # Echo
+                if move.soundMove? || move.pulseMove?
+                    echoers = []
+                    @battle.pbPriority(true).each do |b|
+                        echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
+                    end
+                    while echoers.length > 0
+                        nextUser = echoers.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Echo, ability: :ECHO)
+                    end
                 end
-            end
-            # Echo
-            if !effectActive?(:Echo) && (move.soundMove? || move.pulseMove?)
-                echoers = []
-                @battle.pbPriority(true).each do |b|
-                    echoers.push(b) if b.index != user.index && b.hasActiveAbility?(:ECHO)
-                end
-                while echoers.length > 0
-                    nextUser = echoers.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :Echo, ability: :ECHO)
-                end
-            end
-            # Martial Discipline
-            if !effectActive?(:MartialDiscipline) && (move.punchingMove? || move.kickingMove?)
-                discipliners = []
-                @battle.pbPriority(true).each do |b|
-                    discipliners.push(b) if b.index != user.index && b.hasActiveAbility?(:MARTIALDISCIPLINE)
-                end
-                while discipliners.length > 0
-                    nextUser = discipliners.pop
-                    preTarget = choice[3]
-                    preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
-                    @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :MartialDiscipline, ability: :MARTIALDISCIPLINE)
+                # Martial Discipline
+                if move.punchingMove? || move.kickingMove?
+                    discipliners = []
+                    @battle.pbPriority(true).each do |b|
+                        discipliners.push(b) if b.index != user.index && b.hasActiveAbility?(:MARTIALDISCIPLINE)
+                    end
+                    while discipliners.length > 0
+                        nextUser = discipliners.pop
+                        preTarget = choice[3]
+                        preTarget = user.index if nextUser.opposes?(user) || !nextUser.opposes?(preTarget)
+                        @battle.forceUseMove(nextUser, move.id, preTarget, moveUsageEffect: :MartialDiscipline, ability: :MARTIALDISCIPLINE)
+                    end
                 end
             end
         end
+    end
+
+    def hasCopiedMoveMarker?
+        eachEffect(true) do |effect, _value, data|
+            next unless data.copied_move_marker?
+            return true
+        end
+        return false
     end
 
     #=============================================================================

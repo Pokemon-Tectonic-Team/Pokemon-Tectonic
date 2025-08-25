@@ -91,6 +91,10 @@ Description = Sound-based attacks turn Ice-type and are boosted by 30%.
 Name = Armor Piercing
 Description = Deals double damage against Pokémon that have raised defenses or that are protected by a screen.
 #-------------------------------
+[AROMATIC]
+Name = Aromatic
+Description = Uses Aromatherapy if an attack lowers its HP to half or below.
+#-------------------------------
 [ASSAULTSPINES]
 Name = Assault Spines
 Description = Doubles Sp. Def, but the Pokémon can't use status moves.
@@ -146,7 +150,7 @@ Description = Your Poké Balls are 50% more effective.
 #-------------------------------
 [BARRIERMAKER]
 Name = Barrier Maker
-Description = Sets a Reflect for 4 turns upon entering the battle.
+Description = Sets a Reflect for 4 turns upon entry.
 #-------------------------------
 [BATTLEHARDENED]
 Name = Battle-Hardened
@@ -169,19 +173,10 @@ Name = Berry Bunch
 Description = Can hold two different items, if both are Berries.
 Flags = MultipleItems
 #-------------------------------
-[BIGBOSS]
-Name = Big Boss
-Description = Boosts Defense by 25%. The Pokémon cannot be flinched.
-Flags = FlinchImmunity
-#-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
 Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.
 Flags = HailSynergy
-#-------------------------------
-[BIZARRE]
-Name = Bizarre
-Description = Its special attacks reduce the target's Sp. Def.
 #-------------------------------
 [BLADEBRAINED]
 Name = Bladebrained
@@ -253,10 +248,6 @@ Description = Receives 33% less move damage, but the Pokémon is hurt for 1/10th
 Name = Burn Out
 Description = Has a 30% chance to burn targets when using physical moves.
 #-------------------------------
-[BURNSKILL]
-Name = Burn Skill
-Description = Has a 30% chance to burn targets when using special moves.
-#-------------------------------
 [CAFFEINERUSH]
 Name = Caffeine Rush
 Description = During hail, the Pokémon's Speed is boosted by 50% and twice as likely to crit.
@@ -269,6 +260,10 @@ Description = Prevents itself and allies from being poisoned, leeched, or waterl
 [CASHOUT]
 Name = Cash Out
 Description = Upon entry, consumes scattered coins to heal for 1/10th the amount consumed. This can overheal.
+#-------------------------------
+[CASTELLAN]
+Name = Castellan
+Description = Boosts Attack and Sp. Atk by 30% in rooms.
 #-------------------------------
 [CELEBRATION]
 Name = Celebration
@@ -303,6 +298,10 @@ Name = City Razer
 Description = After knocking out any Pokémon with Waterfall, transforms into its Rampage form. Ability becomes Juggernaut.
 Flags = Immutable
 #-------------------------------
+[CLAUSTROPHOBIA]
+Name = Claustrophobia
+Description = If there is an active Room, enemies which swap in take Psychic-type damage equal to 1/6th their HP.
+#-------------------------------
 [CLEANFREAK]
 Name = Clean Freak
 Description = Boosts move damage by 50% while it has a non-volatile status condition. It suffers double effect from such status conditions.
@@ -322,7 +321,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [CLOVERSONG]
 Name = Clover Song
-Description = Sets a Lucky Chant upon entering the battle, protecting from critical hits for 10 turns.
+Description = Sets a Lucky Chant upon entry, protecting from critical hits for 10 turns.
 #-------------------------------
 [CLUMSYKINESIS]
 Name = Clumsy Kinesis
@@ -397,6 +396,10 @@ Description = Boosts Attack and Sp. Atk after knocking out any Pokémon.
 [DAWNFALL]
 Name = Dawnfall
 Description = On the first turn, its attacks burn the target.
+#-------------------------------
+[DEADBEAT]
+Name = Deadbeat
+Description = Has a 30% chance to leech targets when using physical moves.
 #-------------------------------
 [DEBRISFIELD]
 Name = Debris Field
@@ -500,7 +503,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [DRIFTINGMIST]
 Name = Drifting Mist
-Description = Creates Grey Mist for three turns when entering the battlefield.
+Description = Creates Grey Mist for three turns upon entry.
 Flags = SetupCounterAI
 #-------------------------------
 [DYNAMICENTRANCE]
@@ -586,10 +589,6 @@ Flags = ChoiceLocking
 Name = Expertise
 Description = Powers up super-effective moves by 30%.
 #-------------------------------
-[EXTORTER]
-Name = Extorter
-Description = At low health, eats other battlers' low-health triggered berries.
-#-------------------------------
 [EXTRASCOOP]
 Name = Extra Scoop
 Description = Upon entry, the Pokémon heals itself for 1/4th max HP. This can overheal.
@@ -610,6 +609,10 @@ Flags = EclipseSynergy
 [FAEVEIL]
 Name = Fae Veil
 Description = Prevents itself and allies from being burned, frostbitten, or numbed.
+#-------------------------------
+[FALSEFRONT]
+Name = False Front
+Description = Upon entry, gains your choice of Fighting-, Dark-, or Fairy-type.
 #-------------------------------
 [FASCINATE]
 Name = Fascinate
@@ -746,7 +749,7 @@ Description = Doubles the Pokémon's Speed in Rooms.
 #-------------------------------
 [FREERIDE]
 Name = Free Ride
-Description = Raises other allies' Speed by two steps upon entering the battle.
+Description = Raises other allies' Speed by two steps upon entry.
 #-------------------------------
 [FREESTYLE]
 Name = Freestyle
@@ -847,7 +850,7 @@ Description = Moves that trap and damage the opponent for three turns deal 50% m
 #-------------------------------
 [GRIT]
 Name = Grit
-Description = Boosts Sp. Def by two steps when hit by an attack.
+Description = Raises Sp. Def when hit by an attack.
 #-------------------------------
 [GROOVY]
 Name = Groovy
@@ -863,7 +866,7 @@ Description = Upon entry, traps each opponent in a whirlpool for two turns.
 #-------------------------------
 [HARBINGER]
 Name = Harbinger
-Description = Summons eclipse for four turns when it enters battle.
+Description = Summons eclipse for four turns upon entry.
 Flags = EclipseSynergy
 #-------------------------------
 [HARDAS]
@@ -936,6 +939,10 @@ Name = Heroic Finale
 Description = Turns to Finale Form when only unfainted on team. Ability becomes Inner Focus.
 Flags = Immutable
 #-------------------------------
+[HIGHJUDGE]
+Name = High Judge
+Description = Has Judgment as its 5th move.
+#-------------------------------
 [HIGHRISE]
 Name = High-rise
 Description = The Pokémon and its allies are immune to weather downsides.
@@ -947,7 +954,7 @@ Description = Powers up Bug-type moves of itself and its allies by 50%.
 #-------------------------------
 [HOLIDAYCHEER]
 Name = Holiday Cheer
-Description = When entering battle, heals self and allies for 25% of their max health.
+Description = Upon entry, heals self and allies for 25% of their max health.
 #-------------------------------
 [HONORABLE]
 Name = Honorable
@@ -975,7 +982,7 @@ Description = Punches, Kicks, and Bites combo together to create special effects
 #-------------------------------
 [HYPERSPEED]
 Name = Hyper Speed
-Description = Doubles Speed. Dashes to avoid hazards when entering.
+Description = Doubles Speed. Dashes to avoid hazards upon entry.
 Flags = HazardImmunity
 #-------------------------------
 [IAIJUTSU]
@@ -1121,7 +1128,7 @@ Description = At end of turn, regenerates its previously-used berry.
 #-------------------------------
 [LASTGASP]
 Name = Last Gasp
-Description = Cannot take damage or be switched out. Hears Perish Song upon entering, ensuring its demise.
+Description = Cannot take damage or be switched out. Hears Perish Song upon entry, ensuring its demise.
 Flags = Immutable
 #-------------------------------
 [LATEBLOOMER]
@@ -1197,6 +1204,10 @@ Flags = MoonglowSynergy
 Name = Maestro
 Description = The Pokémon's Speed is doubled while using Sound-based moves.
 #-------------------------------
+[MAGMATRAIL]
+Name = Magma Trail
+Description = Pokémon that swap in for this have their Attack and Sp. Atk raised.
+#-------------------------------
 [MAGNETTRAP]
 Name = Magnet Trap
 Description = When hit with a special move, traps and damages the attacker for three turns. Fails on turns the user switched in.
@@ -1259,6 +1270,10 @@ Name = Mist Form
 Description = Slips past hazards. Takes one third less damage if it switched in this turn.
 Flags = HazardImmunity
 #-------------------------------
+[MISTTRAIL]
+Name = Mist Trail
+Description = Pokémon that swap in for this have their Defense and Sp. Defense raised.
+#-------------------------------
 [MOISTSKIN]
 Name = Moist Skin
 Description = If an attack lowers its HP to half or less, waterlogs the attacker.
@@ -1279,7 +1294,7 @@ Flags = MoonglowSynergy
 #-------------------------------
 [MOONGAZE]
 Name = Moon Gaze
-Description = Summons moonglow for four turns when it enters battle.
+Description = Summons moonglow for four turns upon entry.
 Flags = MoonglowSynergy
 #-------------------------------
 [MOONLIGHTER]
@@ -1375,7 +1390,7 @@ Description = On the first turn, its attacks cause the target to flinch.
 #-------------------------------
 [ONTHEWIND]
 Name = On the Wind
-Description = Sets a Tailwind for four turns upon entering the battle, increasing Speed.
+Description = Sets a Tailwind for four turns upon entry, increasing Speed.
 #-------------------------------
 [OPTIMIZEDALLOY]
 Name = Optimized Alloy
@@ -1514,10 +1529,6 @@ Description = Upon switch out, lowers the foe's Attack and Sp. Atk stat by insul
 Name = Power Lifter
 Description = Its physical attacks go last but force the target to switch out after use.
 #-------------------------------
-[PREDATION]
-Name = Predation
-Description = Has a 30% chance to leech targets when using physical moves.
-#-------------------------------
 [PRESSUREVALVE]
 Name = Pressure Valve
 Description = Right before the Pokémon is attacked, the attacker's stat changes are reset.
@@ -1630,6 +1641,10 @@ Description = Immune to Dark-type and Bug-type moves.
 [RESONANT]
 Name = Resonant
 Description = Spread moves hitting multiple targets deal 50% more damage.
+#-------------------------------
+[ROARINGFLAME]
+Name = Roaring Flame
+Description = Has a 30% chance to burn targets when using special moves.
 #-------------------------------
 [ROAST]
 Name = Roast
@@ -1905,7 +1920,7 @@ Flags = EnablesRandomCrits
 #-------------------------------
 [STARGUARDIAN]
 Name = Star Guardian
-Description = Sets a Light Screen for 4 turns upon entering the battle.
+Description = Sets a Light Screen for 4 turns upon entry.
 #-------------------------------
 [STARSALIGN]
 Name = Stars Align
@@ -1950,6 +1965,10 @@ Flags = RainstormSynergy
 Name = Storm Totem
 Description = Upon entry, summons a Turbulent Sky on the Pokémon's side for 6 turns.
 #-------------------------------
+[STORMTRAIL]
+Name = Storm Trail
+Description = Pokémon that swap in for this have their Speed raised.
+#-------------------------------
 [STRAIGHTAHEAD]
 Name = Straight Ahead
 Description = Ignores Abilities that would affect its moves. Its attacks can't be redirected to new targets.
@@ -1986,10 +2005,6 @@ Flags = MoonglowSynergy
 Name = Stylish
 Description = The Pokémon benefits twice as much from style points.
 Flags = Immutable
-#-------------------------------
-[SUBSPACESCHISM]
-Name = Subspace Schism
-Description = Upon entry, creates a Trick Room for four turns, inverting the effect of Speed.
 #-------------------------------
 [SUBZERO]
 Name = Sub Zero

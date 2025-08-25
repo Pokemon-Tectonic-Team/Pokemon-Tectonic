@@ -72,6 +72,9 @@ module GameData
         # Bespoke information for type applying spikes
         attr_reader :status_applying_hazard
 
+        # Whether the effect marks the move as being copied
+        attr_reader :copied_move_marker
+
         # Effects an AI battlers willingness to stay in
         attr_reader :stay_in_rating_proc
 
@@ -105,6 +108,11 @@ module GameData
         # Fury Cutter, etc.
         def snowballing_move_counter?
             return @snowballing_move_counter
+        end
+
+        # For Dancer, etc.
+        def copied_move_marker?
+            return @copied_move_marker
         end
 
         # Reflect, etc.
@@ -261,11 +269,13 @@ module GameData
 
             @status_applying_hazard = hash[:status_applying_hazard]
 
-            @is_room	= hash[:is_room] || false
+            @is_room	            = hash[:is_room] || false
             @is_screen				= hash[:is_screen] || false
             @is_hazard				= hash[:is_hazard] || false
             @is_mental				= hash[:is_mental] || false
             @is_spike				= hash[:is_spike] || false
+
+            @copied_move_marker     = hash[:copied_move_marker] || false
 
             @avatars_purge = hash[:avatars_purge] || false
 

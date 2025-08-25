@@ -139,9 +139,10 @@ class PokeBattle_Move
     def canMirrorMove?;         return @flags.include?("CanMirrorMove"); end
     def canRandomCrit?;         return @flags.include?("CanRandomCrit"); end
     def doubleCritChance?;      return @flags.include?("DoubleCritChance"); end
+    def halfDamageToAllies?;    return @flags.include?("HalfDamageToAllies"); end
 
     def punchingMove?;          return @flags.include?("Punch"); end
-    def kickingMove?;           return @flags.include?("Kicking"); end
+    def kickingMove?;           return @flags.include?("Kick"); end
     def bitingMove?;            return @flags.include?("Biting"); end
     def bladeMove?;             return @flags.include?("Blade"); end
     

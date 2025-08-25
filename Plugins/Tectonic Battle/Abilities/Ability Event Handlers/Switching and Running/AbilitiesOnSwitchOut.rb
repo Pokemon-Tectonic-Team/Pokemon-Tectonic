@@ -40,10 +40,24 @@ BattleHandlers::AbilityOnSwitchOut.add(:POORCONDUCT,
   }
 )
 
-BattleHandlers::AbilityOnSwitchOut.add(:GAUSSAFTERSHOCK,
+BattleHandlers::AbilityOnSwitchOut.add(:STORMTRAIL,
   proc { |ability, battler, battle, endOfBattle|
       next if endOfBattle
-      battler.position.applyEffect(:GaussAftershock, battler.pokemonIndex)
+      battler.position.applyEffect(:StormTrail, battler.pokemonIndex)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchOut.add(:MISTTRAIL,
+  proc { |ability, battler, battle, endOfBattle|
+      next if endOfBattle
+      battler.position.applyEffect(:MistTrail, battler.pokemonIndex)
+  }
+)
+
+BattleHandlers::AbilityOnSwitchOut.add(:MAGMATRAIL,
+  proc { |ability, battler, battle, endOfBattle|
+      next if endOfBattle
+      battler.position.applyEffect(:MagmaTrail, battler.pokemonIndex)
   }
 )
 

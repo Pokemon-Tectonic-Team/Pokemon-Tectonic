@@ -697,6 +697,12 @@ Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
 #-------------------------------
+[HEXMANIAC_1]
+Name = Hex Maniac
+Gender = Female
+BaseMoney = 32
+IntroBGM = PSYCHIC
+#-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male
@@ -1596,6 +1602,18 @@ BattleBGM = Battle nora
 Name = Shadow
 Gender = Female
 BaseMoney = 80
+#-------------------------------
+[SIGHTSEER_F]
+Name = Swimmer
+Gender = Female
+BaseMoney = 16
+IntroBGM = CYCLING
+#-------------------------------
+[SIGHTSEER_M]
+Name = Swimmer
+Gender = Male
+BaseMoney = 16
+IntroBGM = CYCLING
 #-------------------------------
 [SISANDBRO]
 Name = Sis and Bro

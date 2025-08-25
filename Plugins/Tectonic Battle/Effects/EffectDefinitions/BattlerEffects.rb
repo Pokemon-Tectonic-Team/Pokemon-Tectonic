@@ -192,11 +192,19 @@ GameData::BattleEffect.register_effect(:Battler, {
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :Dancer,
     :real_name => "Dancer",
+    :copied_move_marker => true,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Echo,
+    :real_name => "Echo",
+    :copied_move_marker => true,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :MartialDiscipline,
     :real_name => "MartialDiscipline",
+    :copied_move_marker => true,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
@@ -1914,11 +1922,6 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Echo,
-    :real_name => "Echo",
-})
-
-GameData::BattleEffect.register_effect(:Battler, {
     :id => :EmpoweredShoreUp,
     :real_name => "Eroding",
     :apply_proc => proc do |battle, battler, _value|
@@ -2065,8 +2068,8 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :IcicleArmor,
-    :real_name => "Icicle Armor",
+    :id => :IceNineWall,
+    :real_name => "Ice-Nine Wall",
     :resets_eor	=> true,
     :protection_info => {
         :hit_proc => proc do |user, target, move, _battle|

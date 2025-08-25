@@ -31,6 +31,12 @@ def getAidKitHealingAmount
 	return AID_KIT_BASE_HEALING + HEALING_UPGRADE_AMOUNT * [$PokemonGlobal.teamHealerUpgrades,MAX_AID_KIT_UPGRADES].min
 end
 
+def maxAidKit
+	$PokemonGlobal.teamHealerUpgrades 		= MAX_AID_KIT_UPGRADES
+	$PokemonGlobal.teamHealerMaxUses 		= AID_KIT_BASE_CHARGES + MAX_AID_KIT_CHARGES
+	$PokemonGlobal.teamHealerCurrentUses 	= AID_KIT_BASE_CHARGES + MAX_AID_KIT_CHARGES
+end
+
 def useAidKit()
 	alreadyHealthy = true
 	$Trainer.party.each do |p|
