@@ -81,7 +81,7 @@ BattleHandlers::EORWeatherAbility.add(:FINESUGAR,
             battle.pbHideAbilitySplash(battler)
         end
         if battle.sunny?
-            healingMessage = _INTL("{1} caramlizes slightly in the heat.", battler.pbThis)
+            healingMessage = _INTL("{1} caramelizes slightly in the heat.", battler.pbThis)
             battler.applyFractionalHealing(WEATHER_ABILITY_HEALING_FRACTION, ability: ability, customMessage: healingMessage)
         end
     }
