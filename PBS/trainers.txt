@@ -1664,7 +1664,7 @@ Pokemon = QUILLADIN,30
 Pokemon = AMAROWAK,30
     Name = Apotropaia
     Gender = female
-    Moves = BULLDOZE,SHADOWPUNCH,FIRELASH,BREAKDANCE
+    Moves = STAMPDOWN,SHADOWPUNCH,FIRELASH,BREAKDANCE
     AbilityIndex = 1 # Celebration
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,12,9,0,12,9
@@ -1711,7 +1711,7 @@ Pokemon = WHIMSICOTT,30
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
 Pokemon = AMAROWAK,30
-    Moves = BULLDOZE,SHADOWPUNCH,FIRELASH,SWORDSDANCE
+    Moves = STAMPDOWN,SHADOWPUNCH,FIRELASH,SWORDSDANCE
 Pokemon = ORICORIO,30
     Moves = FEATHERDANCE,LIGHTNINGDANCE,SQUALLDART,SMOLDERRAVE
 RemovePokemon = QUILLADIN,30
