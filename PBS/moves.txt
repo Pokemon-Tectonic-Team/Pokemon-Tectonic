@@ -5606,7 +5606,7 @@ Accuracy = 100
 TotalPP = 1
 Target = NearOther
 FunctionCode = IgnoreTargetAbilityChangeUserNecrozmaForm
-Flags = CanProtect,Light
+Flags = CanProtect,Light,ForceSignature
 Description = The user attacks with apocalyptic light. This ignores their ability. Changes Necrozma's form upon use.
 #-------------------------------
 [OUTRAGE]
