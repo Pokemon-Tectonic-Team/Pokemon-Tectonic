@@ -109,10 +109,3 @@ BattleHandlers::SpecialDefenseCalcUserAbility.add(:BACKWASH,
         next spDefMult
     }
 )
-
-BattleHandlers::SpecialDefenseCalcUserAbility.add(:CURSEDTAIL,
-    proc { |ability, _user, _battle, spDefMult|
-        spDefMult *= 1.2
-        next spDefMult
-    }
-)

@@ -88,10 +88,3 @@ BattleHandlers::DefenseCalcUserAbility.add(:SOPPING,
         next defenseMult
     }
 )
-
-BattleHandlers::DefenseCalcUserAbility.add(:CURSEDTAIL,
-    proc { |ability, _user, _battle, defenseMult|
-        defenseMult *= 1.2
-        next defenseMult
-    }
-)
