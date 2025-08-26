@@ -1787,11 +1787,11 @@ Name = Stabilize
 Type = GROUND
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPExtendWeather1
 Flags = CanSnatch
-Description = The user slathers mud around to heal itself for half of their max HP, and extends any active screens by one turn.
+Description = The user slathers mud around to heal itself by half of its max HP. This extends any active screens by one turn.
 Animation = MUDSPORT
 #-------------------------------
 [STAMPDOWN]
@@ -2919,7 +2919,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = CurseTargetEarnMoneyFromCurse
 Flags = CanProtect,CanMagicCoat
-Description = The target becomes Cursed. Health lost from Curse becomes coins for you to earn after battle.
+Description = The target becomes cursed. Health lost from curse becomes coins for you to earn after battle.
 Animation = CURSE
 #-------------------------------
 [SEANCE]
@@ -2994,7 +2994,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserByTwoThirdsOfTotalHPDisableSelf
 Flags = CanSnatch
-Description = The user restores two thirds of its own HP. Then, this move is disabled.
+Description = The user heals itself by 66% of its max HP. Then, this move is disabled.
 Animation = RECOVER
 #-------------------------------
 [SUFFOCATE]
@@ -3368,11 +3368,11 @@ Name = Refurbish
 Type = STEEL
 Category = Status
 Accuracy = 0
-TotalPP = 15
+TotalPP = 5
 Target = User
 FunctionCode = HealUserBasedOnWeightHalvesWeight
 Flags = CanSnatch
-Description = The user economizes half of its weight, healing based on the weight lost.
+Description = The user economizes half of its weight, healing itself based on the weight lost.
 Animation = AUTOTOMIZE
 #-------------------------------
 [ROCKETPUNCH]
@@ -3526,7 +3526,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPExtendWeather1
 Flags = CanSnatch
-Description = The user heals itself for half of their max HP, and extends the current weather by one turn.
+Description = The user heals itself by half of their max HP. This extends the current weather by one turn.
 Animation = RECOVER
 #-------------------------------
 [VANGUARD]
@@ -4357,7 +4357,7 @@ Name = River Rest
 Type = WATER
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPStartHealUserEachTurn
 Flags = CanSnatch
@@ -4941,7 +4941,7 @@ Type = GRASS
 Category = Special
 Power = 100
 Accuracy = 50
-TotalPP = 12
+TotalPP = 5
 Target = NearOther
 FunctionCode = HealUserByThreeQuartersOfDamageDone
 Flags = CanProtect
@@ -5153,7 +5153,7 @@ TotalPP = 5
 Target = NearAlly
 FunctionCode = HealTargetHalfOfTotalHPAndCureStatus
 Flags = CanProtect,CanMagicCoat,Dance
-Description = The user dances to restore an ally by half of their max HP. They're cured of any non-volatile status conditions.
+Description = The user dances to heal an ally by half of their max HP. They're cured of any non-volatile status conditions.
 Animation = HEALPULSE
 #-------------------------------
 [INERTIASHOCK]
@@ -6915,7 +6915,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPRaiseDefSpDefCriticalHitRate1
 Flags = CanSnatch
-Description = The user restores half of their max HP and raises their Defense, Sp. Def, and critical hit chance by two steps.
+Description = The user heals itself by half of its max HP and raises their Defense, Sp. Def, and critical hit chance by two steps.
 Animation = COSMICPOWER
 #-------------------------------
 [DROWN]
@@ -7097,7 +7097,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = HealUserByTargetSpAtkLowerTargetSpAtk1
 Flags = CanProtect,CanMagicCoat
-Description = Lowers the target's Sp. Atk stat, then restores its own HP by the target's Sp. Atk.
+Description = Lowers the target's Sp. Atk, then heals itself by the target's Sp. Atk.
 Animation = STRENGTHSAP
 #-------------------------------
 [MOUTHFUL]
@@ -7290,7 +7290,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnMoonglow
 Flags = CanSnatch
-Description = The user restores half of their max HP, or 66% in moonglow.
+Description = The user heals itself by half of its max HP, or 66% in moonglow.
 Animation = REST
 #-------------------------------
 [TEASE]
@@ -7566,7 +7566,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserFullHPBindsTarget
 Flags = CanSnatch
-Description = The user uses honey to fully restore their HP. However, this lures swarming insects, trapping and damaging the user for three turns.
+Description = The user uses honey to fully restore its HP. However, this lures swarming insects, trapping and damaging the user for three turns.
 Animation = RECOVER
 #-------------------------------
 [HUMBLE]

@@ -522,11 +522,11 @@ Name = Milk Drink
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user restores its own HP by up to half of its max HP.
+Description = The user heals itself by half of its max HP.
 #-------------------------------
 [MULTIATTACK]
 Name = Multi-Attack
@@ -643,7 +643,7 @@ TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = Restoring its own cells, the user restores its own HP by half of its max HP.
+Description = Restoring its own cells, the user heals itself by half of its max HP.
 #-------------------------------
 [RECYCLE]
 Name = Recycle
@@ -803,7 +803,7 @@ TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user slacks off, restoring its own HP by up to half of its max HP.
+Description = By slacking off, the user heals itself by half of its max HP.
 #-------------------------------
 [SLASH]
 Name = Slash
@@ -857,11 +857,11 @@ Name = Soft-Boiled
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user restores its own HP by up to half of its max HP.
+Description = The user heals itself by half of its max HP.
 #-------------------------------
 [SPITUP]
 Name = Spit Up
@@ -963,7 +963,7 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserDependingOnUserStockpile
 Flags = CanSnatch
-Description = The user consumes its Stockpile to heal for 50% max HP per stack. This can overheal.
+Description = The user consumes its Stockpile to heal itself by 50% of its max HP per stack. This can overheal.
 #-------------------------------
 [SWIFT]
 Name = Swift
@@ -1131,7 +1131,7 @@ Name = Wish
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserPositionNextTurn
 Flags = CanSnatch
@@ -1817,7 +1817,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPLoseFlyingTypeThisTurn
 Flags = CanSnatch
-Description = Restores the user's HP by up to half of its max HP. User loses Flying-type this turn.
+Description = The user heals itself by half of its max HP. The user loses Flying-type this turn.
 #-------------------------------
 [TAILWIND]
 Name = Tailwind
@@ -2000,7 +2000,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = CureTargetStatusHealUserHalfOfTotalHP
 Flags = CanProtect,CanMagicCoat
-Description = The user heals the target's non-volatile status condition. If so, it also restores the user's own HP.
+Description = The user heals the target's non-volatile status condition. If so, it also heals itself by half of its max HP.
 #-------------------------------
 [SHELLSIDEARM]
 Name = Shell Side Arm
@@ -2246,7 +2246,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSandstorm
 Flags = CanSnatch
-Description = The user regains up to half of its max HP. It restores 66% in a sandstorm.
+Description = The user heals itself by half of its max HP, or 66% in sandstorm.
 #-------------------------------
 [SPIKES]
 Name = Spikes
@@ -2583,11 +2583,11 @@ Name = Heal Order
 Type = BUG
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserThreeFifthsOfTotalHP
 Flags = CanSnatch
-Description = The user calls out its underlings to heal it. The user regains 60% of its max HP.
+Description = The user calls out its underlings to heal it. The user heals itself by 60% of its max HP.
 #-------------------------------
 [INFESTATION]
 Name = Infestation
@@ -3912,7 +3912,7 @@ TotalPP = 10
 Target = UserAndAllies
 FunctionCode = HealUserAndAlliesQuarterOfTotalHP
 Flags = CanSnatch
-Description = The user scatters mysterious water around and restores the HP of itself and allies by 25%.
+Description = The user scatters mysterious water around and heals itself and allies by 25% of their max HP.
 #-------------------------------
 [LIQUIDATION]
 Name = Liquidation
@@ -4268,7 +4268,7 @@ Accuracy = 0
 TotalPP = 5
 Target = UserAndAllies
 FunctionCode = HealUserAndAlliesQuarterOfTotalHPCureStatus
-Description = The user restores the HP of itself and allies by 25%, as well as healing non-volatile status conditions.
+Description = The user heals itself and allies by 25% of their max HP, as well as healing non-volatile status conditions.
 #-------------------------------
 [LEAFAGE]
 Name = Leafage
@@ -4432,7 +4432,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = HealUserByTargetAtkLowerTargetAtk1
 Flags = CanProtect,CanMagicCoat
-Description = Lowers the target's Attack stat, then restores its own HP by the target's Attack.
+Description = Lowers the target's Attack, then heals itself by the target's Attack.
 #-------------------------------
 [SYNTHESIS]
 Name = Synthesis
@@ -4443,7 +4443,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSunshine
 Flags = CanSnatch
-Description = The user restores half of their max HP, or 66% in sunshine.
+Description = The user heals itself by half of its max HP, or 66% in sunshine.
 #-------------------------------
 [TROPKICK]
 Name = Trop Kick
@@ -4611,7 +4611,7 @@ Type = ELECTRIC
 Category = Special
 Power = 85
 Accuracy = 100
-TotalPP = 15
+TotalPP = 10
 Target = AllNearOthers
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect
@@ -4908,7 +4908,7 @@ TotalPP = 5
 Target = NearAlly
 FunctionCode = HealTargetHalfOfTotalHP
 Flags = CanProtect,CanMagicCoat,Pulse
-Description = The user emits a healing pulse which restores the target's HP by half of its max HP.
+Description = The user emits a healing pulse which heals the target's HP by half of its max HP.
 #-------------------------------
 [HEARTSTAMP]
 Name = Heart Stamp
