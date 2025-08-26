@@ -116,7 +116,7 @@ module GameData
       end
 
       def is_signature?
-        return !@signature_of.nil? || avatarSignature?
+        return !@signature_of.nil? || avatarSignature? || @flags.include?("ForceSignature")
       end
 
       def empoweredMove?
