@@ -126,7 +126,7 @@ Description = Healing on the Pokémon is reversed.
 #-------------------------------
 [BACKWASH]
 Name = Backwash
-Description = Special attacks against the Pokémon have a 30% chance to waterlog the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become waterlogged.
 #-------------------------------
 [BADINFLUENCE]
 Name = Bad Influence
@@ -162,7 +162,7 @@ Description = Boosts power of light-based moves by 30%.
 #-------------------------------
 [BEGUILING]
 Name = Beguiling
-Description = Special attacks against the Pokémon have a 30% chance to dizzy the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become dizzied.
 #-------------------------------
 [BELLOWER]
 Name = Bellower
@@ -279,7 +279,7 @@ Description = Immune to Fighting-type moves, and raises Attack and Sp. Atk if hi
 #-------------------------------
 [CHILLEDBODY]
 Name = Chilled Body
-Description = Physical moves against the Pokémon have a 30% chance to frostbite the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become frostbitten.
 #-------------------------------
 [CHILLOUT]
 Name = Chill Out
@@ -366,7 +366,7 @@ Description = When hit with a special move, hits back instantly with Breach.
 #-------------------------------
 [CURSEDTAIL]
 Name = Cursed Tail
-Description = When a foe hits the Pokémon, they are warned. If they do it again, they become cursed.
+Description = Boosts Defense and Sp. Def by 20%. When a foe hits the Pokémon, they are warned. If they do it again, they become cursed.
 #-------------------------------
 [CYNIC]
 Name = Cynic
@@ -461,7 +461,7 @@ Description = On the first turn, its attacks numb the target.
 #-------------------------------
 [DISORIENTING]
 Name = Disorienting
-Description = Physical attacks against the Pokémon have a 30% chance to dizzy the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become dizzied.
 #-------------------------------
 [DOMINATING]
 Name = Dominating
@@ -663,7 +663,7 @@ Description = The Pokémon is also Fire-type.
 #-------------------------------
 [FIERYSPIRIT]
 Name = Fiery Spirit
-Description = Special moves against the Pokémon have a 30% chance to burn the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become burned.
 #-------------------------------
 [FIGHTINGVIGOR]
 Name = Fighting Vigor
@@ -1104,7 +1104,7 @@ Description = If an attack lowers the Pokémon's HP to half or less, the attacke
 #-------------------------------
 [KELPLINK]
 Name = Kelp Link
-Description = Physical moves against the Pokémon have a 30% chance to leech the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become leeched.
 #-------------------------------
 [KICKBACK]
 Name = Kickback
@@ -1470,7 +1470,7 @@ Description = While the Pokémon is below half health, its attacks leech those h
 #-------------------------------
 [PETRIFYING]
 Name = Petrifying
-Description = Special attacks against the Pokémon have a 30% chance to cause numbing.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become numbed.
 #-------------------------------
 [PETTY]
 Name = Petty
@@ -1515,7 +1515,7 @@ Description = Immune to Poison-type moves and restores 25% of max HP if hit by o
 #-------------------------------
 [POISONPUNISH]
 Name = Poison Punish
-Description = Special attacks against the Pokémon have a 30% chance to poison the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become poisoned.
 #-------------------------------
 [POLARIZING]
 Name = Polarizing
@@ -1540,7 +1540,7 @@ Description = Deals 25% more damage per stockpile.
 #-------------------------------
 [PUNISHER]
 Name = Punisher
-Description = Special moves against the Pokémon have a 30% chance to leech the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become leeched.
 #-------------------------------
 [PUREENERGY]
 Name = Pure Energy
@@ -1874,7 +1874,7 @@ Flags = MoonglowSynergy
 #-------------------------------
 [SOPPING]
 Name = Sopping
-Description = Physical attacks against the Pokémon have a 30% chance to waterlog the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become waterlogged.
 #-------------------------------
 [SPACEINTERLOPER]
 Name = Space Interloper
@@ -2012,7 +2012,7 @@ Description = Powers up Ice-type moves by 50%.
 #-------------------------------
 [SUDDENCHILL]
 Name = Sudden Chill
-Description = Special moves against the Pokémon have a 30% chance to frostbite the attacker.
+Description = Boosts Sp. Def by 20%. When the Pokémon takes its second special hit from a foe, they become frostbitten.
 #-------------------------------
 [SUDDENTURN]
 Name = Sudden Turn

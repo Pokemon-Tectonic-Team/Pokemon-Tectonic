@@ -39,3 +39,59 @@ BattleHandlers::DefenseCalcUserAbility.add(:SAFEPASSAGE,
         next defenseMult
     }
 )
+
+BattleHandlers::DefenseCalcUserAbility.add(:STATIC,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:POISONPOINT,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:FLAMEBODY,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:CHILLEDBODY,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:DISORIENT,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:KELPLINK,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:SOPPING,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
+
+BattleHandlers::DefenseCalcUserAbility.add(:CURSEDTAIL,
+    proc { |ability, _user, _battle, defenseMult|
+        defenseMult *= 1.2
+        next defenseMult
+    }
+)
