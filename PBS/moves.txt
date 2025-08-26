@@ -101,7 +101,7 @@ Accuracy = 0
 TotalPP = 25
 Target = User
 FunctionCode = SetUserTypesToUserMoveType
-Flags = CanSnatch
+Flags = CanSnatch,ForceSignature
 Description = The user changes its type to become the same type as one of its moves.
 #-------------------------------
 [CONVERSION2]
@@ -112,6 +112,7 @@ Accuracy = 0
 TotalPP = 25
 Target = NearOther
 FunctionCode = SetUserTypesToResistLastAttack
+Flags = ForceSignature
 Description = The user changes its type to make itself resistant to the type of the attack the opponent used last.
 #-------------------------------
 [COVET]
@@ -2805,7 +2806,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = Basic
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.
 #-------------------------------
 [CONFUSERAY]
@@ -2875,7 +2876,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = IgnoreTargetAbility
-Flags = CanProtect,Light
+Flags = CanProtect,Light,ForceSignature
 Description = The user emits a sinister ray. This move can be used on the target regardless of its Abilities.
 #-------------------------------
 [NIGHTMARE]
@@ -3345,7 +3346,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = IgnoreTargetAbility
-Flags = CanProtect,Light
+Flags = CanProtect,Light,ForceSignature
 Description = The user slams into the target with the force of a meteor. Can't be stopped by the target's Ability.
 #-------------------------------
 [SWORDSDANCE]
@@ -4419,7 +4420,7 @@ Accuracy = 100
 TotalPP = 1
 Target = NearOther
 FunctionCode = Sleep
-Flags = CanProtect,CanMagicCoat
+Flags = CanProtect,CanMagicCoat,ForceSignature
 Description = The user scatters bursts of spores that induce sleep. Only one use per battle.
 #-------------------------------
 [STRENGTHSAP]
@@ -5247,7 +5248,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttackParalyzeTarget
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 EffectChance = 30
 Description = Charges up, then on the second turn, the user strikes with electrified ice. It has a 30% chance to numb.
 #-------------------------------
@@ -5272,7 +5273,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = Basic
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.
 #-------------------------------
 [GLACIATE]
@@ -5320,7 +5321,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttackBurnTarget
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 EffectChance = 30
 Description = Charges up, then on the second turn, an ultracold, freezing wind surrounds the foe. It has a 30% chance to burn.
 #-------------------------------
@@ -5859,6 +5860,7 @@ Accuracy = 0
 TotalPP = 5
 Target = NearOther
 FunctionCode = HyperspaceFury
+Flags = ForceSignature
 Description = Unleashes a barrage of attacks. Can't miss, skips Substitutes and destroys protections. Lowers the user's Defense by two steps.
 #-------------------------------
 [JAWLOCK]
@@ -6293,7 +6295,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = FixedDamageHalfTargetHP
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user hits the target with the force of nature. It cuts the target's HP to half.
 #-------------------------------
 [PLAYROUGH]
