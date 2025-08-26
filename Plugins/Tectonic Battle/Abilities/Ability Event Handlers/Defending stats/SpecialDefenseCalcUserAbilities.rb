@@ -60,3 +60,52 @@ BattleHandlers::SpecialDefenseCalcUserAbility.add(:ICEMIRROR,
         next spDefMult
     }
 )
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:PETRIFYING,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:POISONPUNISH,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:FIERYSPIRIT,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:SUDDENCHILL,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:BEGUILING,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:PUNISHER,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)
+
+BattleHandlers::SpecialDefenseCalcUserAbility.add(:BACKWASH,
+    proc { |ability, _user, _battle, spDefMult|
+        spDefMult *= 1.2
+        next spDefMult
+    }
+)

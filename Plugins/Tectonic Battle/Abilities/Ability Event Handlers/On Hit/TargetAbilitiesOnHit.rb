@@ -394,18 +394,45 @@ BattleHandlers::TargetAbilityOnHit.add(:LOUDSLEEPER,
 #########################################
 # Numb inducing abilities
 #########################################
-
 BattleHandlers::TargetAbilityOnHit.add(:STATIC,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysNumbWarned) || aiNumHits > 1
+                next -getNumbEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysNumbWarned)
+            randomStatusProcTargetAbility(ability, :NUMB, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysNumbWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will numb.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
-  
+
 BattleHandlers::TargetAbilityOnHit.add(:PETRIFYING,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :NUMB, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecNumbWarned) || aiNumHits > 1
+                next -getNumbEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecNumbWarned)
+            randomStatusProcTargetAbility(ability, :NUMB, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecNumbWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will numb.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -415,14 +442,42 @@ BattleHandlers::TargetAbilityOnHit.add(:PETRIFYING,
 BattleHandlers::TargetAbilityOnHit.add(:POISONPOINT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :POISON, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysPoisonWarned) || aiNumHits > 1
+                next -getPoisonEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysPoisonWarned)
+            randomStatusProcTargetAbility(ability, :POISON, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysPoisonWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will poison.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
-  )
+)
 
 BattleHandlers::TargetAbilityOnHit.add(:POISONPUNISH,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :POISON, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecPoisonWarned) || aiNumHits > 1
+                next -getPoisonEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecPoisonWarned)
+            randomStatusProcTargetAbility(ability, :POISON, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecPoisonWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will poison.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -432,14 +487,42 @@ BattleHandlers::TargetAbilityOnHit.add(:POISONPUNISH,
 BattleHandlers::TargetAbilityOnHit.add(:FLAMEBODY,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysBurnWarned) || aiNumHits > 1
+                next -getBurnEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysBurnWarned)
+            randomStatusProcTargetAbility(ability, :BURN, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysBurnWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will burn.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
 BattleHandlers::TargetAbilityOnHit.add(:FIERYSPIRIT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecBurnWarned) || aiNumHits > 1
+                next -getBurnEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecBurnWarned)
+            randomStatusProcTargetAbility(ability, :BURN, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecBurnWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will burn.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -449,14 +532,42 @@ BattleHandlers::TargetAbilityOnHit.add(:FIERYSPIRIT,
 BattleHandlers::TargetAbilityOnHit.add(:CHILLEDBODY,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysFrostWarned) || aiNumHits > 1
+                next -getFrostbiteEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysFrostWarned)
+            randomStatusProcTargetAbility(ability, :FROSTBITE, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysFrostWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will frostbite.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
 BattleHandlers::TargetAbilityOnHit.add(:SUDDENCHILL,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :FROSTBITE, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecFrostWarned) || aiNumHits > 1
+                next -getFrostbiteEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecFrostWarned)
+            randomStatusProcTargetAbility(ability, :FROSTBITE, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecFrostWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will frostbite.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -466,14 +577,42 @@ BattleHandlers::TargetAbilityOnHit.add(:SUDDENCHILL,
 BattleHandlers::TargetAbilityOnHit.add(:DISORIENT,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysDizzyWarned) || aiNumHits > 1
+                next -getDizzyEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysDizzyWarned)
+            randomStatusProcTargetAbility(ability, :DIZZY, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysDizzyWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will dizzy.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
 BattleHandlers::TargetAbilityOnHit.add(:BEGUILING,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :DIZZY, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecDizzyWarned) || aiNumHits > 1
+                next -getDizzyEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecDizzyWarned)
+            randomStatusProcTargetAbility(ability, :DIZZY, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecDizzyWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will dizzy.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -483,14 +622,42 @@ BattleHandlers::TargetAbilityOnHit.add(:BEGUILING,
 BattleHandlers::TargetAbilityOnHit.add(:KELPLINK,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysLeechWarned) || aiNumHits > 1
+                next -getLeechEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysLeechWarned)
+            randomStatusProcTargetAbility(ability, :LEECHED, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysLeechWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will leech.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
 BattleHandlers::TargetAbilityOnHit.add(:PUNISHER,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecLeechWarned) || aiNumHits > 1
+                next -getLeechEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecLeechWarned)
+            randomStatusProcTargetAbility(ability, :LEECHED, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecLeechWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will leech.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
@@ -500,14 +667,42 @@ BattleHandlers::TargetAbilityOnHit.add(:PUNISHER,
 BattleHandlers::TargetAbilityOnHit.add(:SOPPING,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.physicalMove?
-        randomStatusProcTargetAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:PhysWaterlogWarned) || aiNumHits > 1
+                next -getWaterlogEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:PhysWaterlogWarned)
+            randomStatusProcTargetAbility(ability, :WATERLOG, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:PhysWaterlogWarned)
+            battle.pbDisplay(_INTL("The next physical hit from {1} will waterlog.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
 BattleHandlers::TargetAbilityOnHit.add(:BACKWASH,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next unless move.specialMove?
-        randomStatusProcTargetAbility(ability, :WATERLOG, 30, user, target, move, battle, aiCheck, aiNumHits)
+        if aiCheck
+            if user.effectActive?(:SpecWaterlogWarned) || aiNumHits > 1
+                next -getWaterlogEffectScore(target, user)
+            else
+                next -10
+            end
+        end
+        battle.pbShowAbilitySplash(target, ability)
+        if user.effectActive?(:SpecWaterlogWarned)
+            randomStatusProcTargetAbility(ability, :WATERLOG, 100, user, target, move, battle, aiCheck, aiNumHits)
+        else
+            user.applyEffect(:SpecWaterlogWarned)
+            battle.pbDisplay(_INTL("The next special hit from {1} will waterlog.", user.pbThis))
+        end
+        battle.pbHideAbilitySplash(target)
     }
 )
 
