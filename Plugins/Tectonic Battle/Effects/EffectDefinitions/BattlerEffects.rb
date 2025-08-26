@@ -156,7 +156,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Numb-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} sparks!", battler.pbThis))
     end,
 })
 
@@ -165,7 +165,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Numb-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} sparks!", battler.pbThis))
     end,
 })
 
@@ -174,7 +174,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Poison-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} bubbles with poison!", battler.pbThis))
     end,
 })
 
@@ -183,7 +183,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Poison-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} bubbles with poison!", battler.pbThis))
     end,
 })
 
@@ -192,7 +192,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Burn-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} smolders!", battler.pbThis))
     end,
 })
 
@@ -201,7 +201,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Burn-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} smolders!", battler.pbThis))
     end,
 })
 
@@ -210,7 +210,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Frost-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} is frosty!", battler.pbThis))
     end,
 })
 
@@ -219,7 +219,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Frost-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} is frosty!", battler.pbThis))
     end,
 })
 
@@ -228,7 +228,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Dizzy-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} is dizzying!", battler.pbThis))
     end,
 })
 
@@ -237,7 +237,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Dizzy-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} is dizzying!", battler.pbThis))
     end,
 })
 
@@ -246,7 +246,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Leech-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} almost siphons!", battler.pbThis))
     end,
 })
 
@@ -255,7 +255,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Leech-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} almost siphons!", battler.pbThis))
     end,
 })
 
@@ -264,7 +264,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Waterlog-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} splashes!", battler.pbThis))
     end,
 })
 
@@ -273,7 +273,7 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Waterlog-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbDisplay(_INTL("{1} was warned not to attack it again!", battler.pbThis))
+        battle.pbDisplay(_INTL("{1} splashes!", battler.pbThis))
     end,
 })
 
