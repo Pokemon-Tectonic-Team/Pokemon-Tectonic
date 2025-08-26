@@ -366,7 +366,7 @@ Description = When hit with a special move, hits back instantly with Breach.
 #-------------------------------
 [CURSEDTAIL]
 Name = Cursed Tail
-Description = Boosts Defense and Sp. Def by 20%. When a foe hits the Pokémon, they are warned. If they do it again, they become cursed.
+Description = When a foe hits the Pokémon, they are warned. If they do it again, they become cursed.
 #-------------------------------
 [CYNIC]
 Name = Cynic
