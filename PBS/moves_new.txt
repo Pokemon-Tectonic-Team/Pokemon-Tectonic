@@ -6097,7 +6097,7 @@ Target = AllNearFoes
 FunctionCode = FrostbiteTargetIfTargetHasRaisedStats
 Flags = CanProtect
 EffectChance = 100
-Description = Attacks with emotion from jealousy. All opposing Pokémon with stat boosts get frostbitten.
+Description = Attacks with energy from jealousy. All opposing Pokémon with stat boosts get frostbitten.
 #-------------------------------
 [FROSTBARB]
 Name = Frost Barb
