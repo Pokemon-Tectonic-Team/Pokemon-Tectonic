@@ -460,6 +460,10 @@ class PokeBattle_Move_IgnoreTargetAbilityChangeUserNecrozmaForm < PokeBattle_Mov
         @battle.moldBreaker = true unless specialUsage
     end
 
+    def pbDisplayUseMessage(user, _targets = [])
+        @battle.pbDisplayBrief(_INTL("{1} used Light That Burns the Sky!", user.pbThis))
+    end
+
     def pbDisplayChargeMessage(user)
         if user.form == 1
             @battle.pbCommonAnimation("UltraBurst", user)
