@@ -1667,6 +1667,10 @@ Description = Immune to Rock-type moves and to Stealth Rock, and raises Speed wh
 Name = Rolling Blows
 Description = Takes 50% less damage while performing a move which charges up or exhausts the user.
 #-------------------------------
+[ROOMLOCK]
+Name = Room Lock
+Description = While the Pokemon is active, Rooms do not decay.
+#-------------------------------
 [ROOTED]
 Name = Rooted
 Description = Gets 50% more healing from all sources.

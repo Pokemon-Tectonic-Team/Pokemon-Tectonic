@@ -1158,6 +1158,15 @@ BattleHandlers::AbilityOnSwitchIn.add(:UNBOUND,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:ROOMLOCK,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} prevents rooms from decaying!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
+
 CASHOUT_HEALING_DIVISOR = 10
 
 BattleHandlers::AbilityOnSwitchIn.add(:CASHOUT,
