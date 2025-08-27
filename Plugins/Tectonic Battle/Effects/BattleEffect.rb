@@ -49,9 +49,6 @@ module GameData
         # Only used for Battler effects
         attr_reader :avatars_purge
 
-        # If it ticks down at end of round. Only used for integers
-        attr_reader :ticks_down
-
         # When battlers swap position, the effect changes value to point to the correct battler
         # Only used for :Position type effects
         attr_reader :swaps_with_battlers
@@ -218,6 +215,7 @@ module GameData
 
             @ticks_down             = hash[:ticks_down] || false
             @tick_amount            = hash[:tick_amount] || 1
+            @ticks_down_proc        = hash[:ticks_down_proc]
 
             # Called when the battler is initialized
             @initialize_proc        = hash[:initialize_proc]
@@ -292,7 +290,7 @@ module GameData
             if @type != :Integer
                 raise _INTL("Battle effect #{@id} defines increment proc when its not an integer.") if @increment_proc
                 raise _INTL("Battle effect #{@id} defines expire proc when its not an integer.") if @expire_proc
-                raise _INTL("Battle effect #{@id} is set to down down, but its not an integer.") if @ticks_down
+                raise _INTL("Battle effect #{@id} is set to down down, but its not an integer.") if @ticks_down || @ticks_down_proc
                 raise _INTL("Battle effect #{@id} was given a maximum, but its not an integer.") unless @maximum.nil?
             end
             if @entry_proc && @location != :Position && @location != :Side
@@ -387,6 +385,11 @@ module GameData
                 return "ERROR"
             end
             return ""
+        end
+
+        def ticks_down?(battle, value)
+            return @ticks_down_proc.call(battle, value) if @ticks_down_proc
+            return @ticks_down
         end
 
         ### Methods dealing with the effect when a battler is initialized

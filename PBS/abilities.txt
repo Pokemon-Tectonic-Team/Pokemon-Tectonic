@@ -153,7 +153,7 @@ Description = Reduces damage from super-effective attacks by 25%.
 #-------------------------------
 [FLAMEBODY]
 Name = Flame Body
-Description = Physical moves against the Pokémon have a 30% chance to burn the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become burned.
 #-------------------------------
 [FLOWERGIFT]
 Name = Flower Gift
@@ -370,7 +370,7 @@ Flags = SetupCounterAI
 #-------------------------------
 [POISONPOINT]
 Name = Poison Point
-Description = Physical attacks against the Pokémon have a 30% chance to poison the attacker.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become poisoned.
 #-------------------------------
 [POISONTOUCH]
 Name = Poison Touch
@@ -539,7 +539,7 @@ Flags = Immutable
 #-------------------------------
 [STATIC]
 Name = Static
-Description = Physical attacks against the Pokémon have a 30% chance to cause numbing.
+Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become numbed.
 #-------------------------------
 [STEELWORKER]
 Name = Steelworker

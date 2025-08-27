@@ -2062,8 +2062,8 @@ Pokemon = ZEBSTRIKA,39
 #-------------------------------
 [CLERK_M2,Marton]
 Pokemon = KLEFKI,38
-    Moves = JAVELIN,ENCHANTINGSONG,BREAKINGSWIPE,SWEETKISS
-    AbilityIndex = 1 # Kleptomaniac
+    Moves = ILLWISHES,LIGHTSCREEN,REFLECT,NUMB
+    AbilityIndex = 0 # Prankster
     Item = CADOBERRY
 Pokemon = CENTISKORCH,39
     Moves = AGONIZE,COIL,BURNINGJEALOUSY,THUNDERFANG
