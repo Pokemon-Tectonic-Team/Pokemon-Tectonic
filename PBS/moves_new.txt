@@ -5169,6 +5169,17 @@ Flags = CanProtect
 Description = Deals 50% more damage if faster than the target. This lowers the user's Speed.
 Animation = VOLTTACKLE
 #-------------------------------
+[IONEXCHANGE]
+Name = Ion Exchange
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = SwitchUserTargetSpeedsItems
+Flags = CanProtect
+Description = The user swaps the target's held item with its own. It also switches its unmodified Speed with the target's Speed.
+#-------------------------------
 [JOKEJOLT]
 Name = Joke Jolt
 Type = ELECTRIC
