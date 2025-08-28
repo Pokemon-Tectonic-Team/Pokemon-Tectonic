@@ -105,3 +105,7 @@ def pbChangeOnlineLoseText
   end
   Kernel.pbMessage(_INTL("...Hopefully you don't need to use it."))
 end
+
+def stringIsUnsafe(str)
+    return CableClub::UNSAFE_CHARACTERS.any? { |char| str.include?(char) }
+end

@@ -60,7 +60,7 @@ class Pokemon
 
       # avoid problematic characters for online communication
       def safe_name
-        if !@name.include?("\\")
+        if !stringIsUnsafe(@name)
           return @name
         end
         return "Val"
