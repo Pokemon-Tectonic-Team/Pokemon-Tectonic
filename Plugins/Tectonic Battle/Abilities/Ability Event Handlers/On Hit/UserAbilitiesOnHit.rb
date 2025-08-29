@@ -26,7 +26,7 @@ BattleHandlers::UserAbilityOnHit.add(:DARKSCALECLOUD,
 #########################################
 # Burn abilities
 #########################################
-BattleHandlers::UserAbilityOnHit.add(:BURNSKILL,
+BattleHandlers::UserAbilityOnHit.add(:ROARINGFLAME,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless move.specialMove?
     randomStatusProcUserAbility(ability, :BURN, 30, user, target, move, battle, aiCheck, aiNumHits)
@@ -153,7 +153,7 @@ BattleHandlers::UserAbilityOnHit.add(:BRAINSCRAMBLE,
 #########################################
 # Leech abilities
 #########################################
-BattleHandlers::UserAbilityOnHit.add(:PREDATION,
+BattleHandlers::UserAbilityOnHit.add(:DEADBEAT,
   proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
     next unless move.physicalMove?
     randomStatusProcUserAbility(ability, :LEECHED, 30, user, target, move, battle, aiCheck, aiNumHits)

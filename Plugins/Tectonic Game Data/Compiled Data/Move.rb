@@ -116,7 +116,7 @@ module GameData
       end
 
       def is_signature?
-        return !@signature_of.nil? || avatarSignature?
+        return !@signature_of.nil? || avatarSignature? || @flags.include?("ForceSignature")
       end
 
       def empoweredMove?
@@ -149,7 +149,7 @@ module GameData
             "Dance"     => _INTL("Dance"),
             "Blade"     => _INTL("Blade"),
             "Wind"      => _INTL("Wind"),
-            "Kicking"   => _INTL("Kick"),
+            "Kick"      => _INTL("Kick"),
             "Light"     => _INTL("Light"),
         }
       end

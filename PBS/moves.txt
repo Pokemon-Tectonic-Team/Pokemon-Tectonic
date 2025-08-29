@@ -101,7 +101,7 @@ Accuracy = 0
 TotalPP = 25
 Target = User
 FunctionCode = SetUserTypesToUserMoveType
-Flags = CanSnatch
+Flags = CanSnatch,ForceSignature
 Description = The user changes its type to become the same type as one of its moves.
 #-------------------------------
 [CONVERSION2]
@@ -112,6 +112,7 @@ Accuracy = 0
 TotalPP = 25
 Target = NearOther
 FunctionCode = SetUserTypesToResistLastAttack
+Flags = ForceSignature
 Description = The user changes its type to make itself resistant to the type of the attack the opponent used last.
 #-------------------------------
 [COVET]
@@ -243,7 +244,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = DoubleDamageUserStatused
 Flags = CanProtect
-Description = Doubles its power if the user has a non-volatile status condition. Ignores damage reduction from Burn or Frostbite.
+Description = Doubles its power if the user has a non-volatile status condition. Ignores damage reduction from burn or frostbite.
 #-------------------------------
 [FAKEOUT]
 Name = Fake Out
@@ -323,7 +324,7 @@ Name = Glare
 Type = NORMAL
 Category = Status
 Accuracy = 100
-TotalPP = 12
+TotalPP = 10
 Target = NearOther
 FunctionCode = Numb
 Flags = CanProtect,CanMagicCoat
@@ -521,11 +522,11 @@ Name = Milk Drink
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user restores its own HP by up to half of its max HP.
+Description = The user heals itself by half of its max HP.
 #-------------------------------
 [MULTIATTACK]
 Name = Multi-Attack
@@ -642,7 +643,7 @@ TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = Restoring its own cells, the user restores its own HP by half of its max HP.
+Description = Restoring its own cells, the user heals itself by half of its max HP.
 #-------------------------------
 [RECYCLE]
 Name = Recycle
@@ -802,7 +803,7 @@ TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user slacks off, restoring its own HP by up to half of its max HP.
+Description = By slacking off, the user heals itself by half of its max HP.
 #-------------------------------
 [SLASH]
 Name = Slash
@@ -856,11 +857,11 @@ Name = Soft-Boiled
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserHalfOfTotalHP
 Flags = CanSnatch
-Description = The user restores its own HP by up to half of its max HP.
+Description = The user heals itself by half of its max HP.
 #-------------------------------
 [SPITUP]
 Name = Spit Up
@@ -962,7 +963,7 @@ TotalPP = 10
 Target = User
 FunctionCode = HealUserDependingOnUserStockpile
 Flags = CanSnatch
-Description = The user consumes its Stockpile to heal for 50% max HP per stack. This can overheal.
+Description = The user consumes its Stockpile to heal itself by 50% of its max HP per stack. This can overheal.
 #-------------------------------
 [SWIFT]
 Name = Swift
@@ -1130,7 +1131,7 @@ Name = Wish
 Type = NORMAL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserPositionNextTurn
 Flags = CanSnatch
@@ -1275,7 +1276,7 @@ Accuracy = 100
 TotalPP = 25
 Target = NearOther
 FunctionCode = HitTwoTimes
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The target is quickly kicked twice in succession using both feet.
 #-------------------------------
 [DRAINPUNCH]
@@ -1374,7 +1375,7 @@ Accuracy = 80
 TotalPP = 10
 Target = NearOther
 FunctionCode = CrashDamageIfFailsUnusableInGravity
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The target is attacked with a knee kick from a jump. If it misses, the user is hurt instead.
 #-------------------------------
 [KARATECHOP]
@@ -1398,7 +1399,7 @@ Accuracy = 100
 TotalPP = 15
 Target = NearOther
 FunctionCode = LowerTargetSpd2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user attacks the target's legs swiftly, reducing the target's Speed stat by two steps.
 #-------------------------------
@@ -1556,7 +1557,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetDef2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user kicks the target with lightning-like movement. It lowers the target's Defense by two steps.
 #-------------------------------
@@ -1660,7 +1661,7 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = TwoTurnAttackInvulnerableInSkyNumbTarget
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 30
 Description = The user bounces up high, charging and becoming invulnerable, then drops on the foe on the second turn. It has a 30% chance to numb.
 #-------------------------------
@@ -1816,7 +1817,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserHalfOfTotalHPLoseFlyingTypeThisTurn
 Flags = CanSnatch
-Description = Restores the user's HP by up to half of its max HP. User loses Flying-type this turn.
+Description = The user heals itself by half of its max HP. The user loses Flying-type this turn.
 #-------------------------------
 [TAILWIND]
 Name = Tailwind
@@ -1946,7 +1947,7 @@ Name = Poison Gas
 Type = POISON
 Category = Status
 Accuracy = 100
-TotalPP = 30
+TotalPP = 10
 Target = NearFoe
 FunctionCode = Poison
 Flags = CanProtect,CanMagicCoat,Wind
@@ -1999,7 +2000,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = CureTargetStatusHealUserHalfOfTotalHP
 Flags = CanProtect,CanMagicCoat
-Description = The user heals the target's non-volatile status condition. If so, it also restores the user's own HP.
+Description = The user heals the target's non-volatile status condition. If so, it also heals itself by half of its max HP.
 #-------------------------------
 [SHELLSIDEARM]
 Name = Shell Side Arm
@@ -2057,7 +2058,7 @@ Name = Toxic Thread
 Type = POISON
 Category = Status
 Accuracy = 100
-TotalPP = 15
+TotalPP = 10
 Target = NearOther
 FunctionCode = PoisonTargetLowerTargetSpd4
 Flags = CanProtect,CanMagicCoat
@@ -2109,7 +2110,7 @@ Accuracy = 100
 TotalPP = 15
 Target = AllNearOthers
 FunctionCode = LowerTargetSpd1
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user strikes everything around it by stomping on the ground. It reduces hit Pokémon's Speed.
 #-------------------------------
@@ -2245,7 +2246,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSandstorm
 Flags = CanSnatch
-Description = The user regains up to half of its max HP. It restores 66% in a sandstorm.
+Description = The user heals itself by half of its max HP, or 66% in sandstorm.
 #-------------------------------
 [SPIKES]
 Name = Spikes
@@ -2267,7 +2268,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = DoubleDamageLastMoveFailed
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 Description = The user attacks driven by frustration. Power increases if previous move failed.
 #-------------------------------
 [THOUSANDARROWS]
@@ -2365,7 +2366,7 @@ Type = ROCK
 Category = Special
 Power = 170
 Accuracy = 100
-TotalPP = 10
+TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttack
 Flags = CanProtect,Uninvocable
@@ -2582,11 +2583,11 @@ Name = Heal Order
 Type = BUG
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 8
 Target = User
 FunctionCode = HealUserThreeFifthsOfTotalHP
 Flags = CanSnatch
-Description = The user calls out its underlings to heal it. The user regains 60% of its max HP.
+Description = The user calls out its underlings to heal it. The user heals itself by 60% of its max HP.
 #-------------------------------
 [INFESTATION]
 Name = Infestation
@@ -2805,7 +2806,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = Basic
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user attacks by sending a frightful amount of small ghosts at opposing Pokémon.
 #-------------------------------
 [CONFUSERAY]
@@ -2875,7 +2876,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = IgnoreTargetAbility
-Flags = CanProtect,Light
+Flags = CanProtect,Light,ForceSignature
 Description = The user emits a sinister ray. This move can be used on the target regardless of its Abilities.
 #-------------------------------
 [NIGHTMARE]
@@ -3061,7 +3062,7 @@ Name = Will-O-Wisp
 Type = GHOST
 Category = Status
 Accuracy = 100
-TotalPP = 12
+TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
 Flags = CanProtect,CanMagicCoat
@@ -3345,7 +3346,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = IgnoreTargetAbility
-Flags = CanProtect,Light
+Flags = CanProtect,Light,ForceSignature
 Description = The user slams into the target with the force of a meteor. Can't be stopped by the target's Ability.
 #-------------------------------
 [SWORDSDANCE]
@@ -3397,7 +3398,7 @@ Accuracy = 100
 TotalPP = 10
 Target = NearOther
 FunctionCode = Burn
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 10
 Description = The user launches a fiery kick. It has a 10% chance to burn.
 #-------------------------------
@@ -3911,7 +3912,7 @@ TotalPP = 10
 Target = UserAndAllies
 FunctionCode = HealUserAndAlliesQuarterOfTotalHP
 Flags = CanSnatch
-Description = The user scatters mysterious water around and restores the HP of itself and allies by 25%.
+Description = The user scatters mysterious water around and heals itself and allies by 25% of their max HP.
 #-------------------------------
 [LIQUIDATION]
 Name = Liquidation
@@ -4267,7 +4268,7 @@ Accuracy = 0
 TotalPP = 5
 Target = UserAndAllies
 FunctionCode = HealUserAndAlliesQuarterOfTotalHPCureStatus
-Description = Restores HP and heals non-volatile status conditions of itself and its ally.
+Description = The user heals itself and allies by 25% of their max HP, as well as healing non-volatile status conditions.
 #-------------------------------
 [LEAFAGE]
 Name = Leafage
@@ -4419,7 +4420,7 @@ Accuracy = 100
 TotalPP = 1
 Target = NearOther
 FunctionCode = Sleep
-Flags = CanProtect,CanMagicCoat
+Flags = CanProtect,CanMagicCoat,ForceSignature
 Description = The user scatters bursts of spores that induce sleep. Only one use per battle.
 #-------------------------------
 [STRENGTHSAP]
@@ -4431,7 +4432,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = HealUserByTargetAtkLowerTargetAtk1
 Flags = CanProtect,CanMagicCoat
-Description = Lowers the target's Attack stat, then restores its own HP by the target's Attack.
+Description = Lowers the target's Attack, then heals itself by the target's Attack.
 #-------------------------------
 [SYNTHESIS]
 Name = Synthesis
@@ -4442,7 +4443,7 @@ TotalPP = 5
 Target = User
 FunctionCode = HealUserDependingOnSunshine
 Flags = CanSnatch
-Description = The user restores half of their max HP, or 66% in sunshine.
+Description = The user heals itself by half of its max HP, or 66% in sunshine.
 #-------------------------------
 [TROPKICK]
 Name = Trop Kick
@@ -4453,7 +4454,7 @@ Accuracy = 100
 TotalPP = 12
 Target = NearOther
 FunctionCode = LowerTargetAtk2
-Flags = CanProtect,Kicking
+Flags = CanProtect,Kick
 EffectChance = 100
 Description = The user lands an intense tropical kick on the target. This also lowers the target's Attack stat by two steps.
 #-------------------------------
@@ -4610,7 +4611,7 @@ Type = ELECTRIC
 Category = Special
 Power = 85
 Accuracy = 100
-TotalPP = 15
+TotalPP = 10
 Target = AllNearOthers
 FunctionCode = HealUserByHalfOfDamageDone
 Flags = CanProtect
@@ -4907,7 +4908,7 @@ TotalPP = 5
 Target = NearAlly
 FunctionCode = HealTargetHalfOfTotalHP
 Flags = CanProtect,CanMagicCoat,Pulse
-Description = The user emits a healing pulse which restores the target's HP by half of its max HP.
+Description = The user emits a healing pulse which heals the target's HP by half of its max HP.
 #-------------------------------
 [HEARTSTAMP]
 Name = Heart Stamp
@@ -5247,7 +5248,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttackParalyzeTarget
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 EffectChance = 30
 Description = Charges up, then on the second turn, the user strikes with electrified ice. It has a 30% chance to numb.
 #-------------------------------
@@ -5272,7 +5273,7 @@ Accuracy = 100
 TotalPP = 5
 Target = AllNearFoes
 FunctionCode = Basic
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user attacks by hurling a blizzard-cloaked icicle lance at opposing Pokémon.
 #-------------------------------
 [GLACIATE]
@@ -5320,7 +5321,7 @@ Accuracy = 100
 TotalPP = 5
 Target = NearOther
 FunctionCode = TwoTurnAttackBurnTarget
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 EffectChance = 30
 Description = Charges up, then on the second turn, an ultracold, freezing wind surrounds the foe. It has a 30% chance to burn.
 #-------------------------------
@@ -5596,6 +5597,18 @@ FunctionCode = TwoTurnAttack
 Flags = CanProtect,Uninvocable
 Description = The most powerful attack of the original form. The user is exhausted on the next turn.
 #-------------------------------
+[LIGHTTHATBURNSTHESKY]
+Name = Light That...
+Type = DRAGON
+Category = Adaptive
+Power = 200
+Accuracy = 100
+TotalPP = 1
+Target = NearOther
+FunctionCode = IgnoreTargetAbilityChangeUserNecrozmaForm
+Flags = CanProtect,Light,ForceSignature
+Description = The user attacks with apocalyptic light. This ignores their ability. Changes Necrozma's form upon use.
+#-------------------------------
 [OUTRAGE]
 Name = Outrage
 Type = DRAGON
@@ -5859,6 +5872,7 @@ Accuracy = 0
 TotalPP = 5
 Target = NearOther
 FunctionCode = HyperspaceFury
+Flags = ForceSignature
 Description = Unleashes a barrage of attacks. Can't miss, skips Substitutes and destroys protections. Lowers the user's Defense by two steps.
 #-------------------------------
 [JAWLOCK]
@@ -6293,7 +6307,7 @@ Accuracy = 90
 TotalPP = 10
 Target = NearOther
 FunctionCode = FixedDamageHalfTargetHP
-Flags = CanProtect
+Flags = CanProtect,ForceSignature
 Description = The user hits the target with the force of nature. It cuts the target's HP to half.
 #-------------------------------
 [PLAYROUGH]

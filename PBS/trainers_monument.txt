@@ -2221,7 +2221,7 @@ Pokemon = MASQUERAIN,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,20,0,0,20,10
 Pokemon = MAROWAK,70
-    Moves = BONEMERANG,BRICKBREAK,HYPERBEAM,STEALTHROCK
+    Moves = BONEMERANG,DISTURB,METEORASSAULT,STEALTHROCK
     AbilityIndex = 1 # Break Through
     Item = ENERGYHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

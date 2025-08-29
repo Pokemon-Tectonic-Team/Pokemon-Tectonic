@@ -77,4 +77,12 @@ class PokeBattle_AI_Boss
             next !user.firstTurnThisRound? && battle.turnCount % 2 == 1
         })
     end
+
+    # Have the avatar use the move every three turns if possible
+    # and otherwise never
+    def everyThreeTurns(moveID)
+        @useMoveIFF.add(moveID, proc { |_move, user, _target, battle|
+            next battle.turnCount % 3 == 1
+        })
+    end
 end

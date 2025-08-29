@@ -1066,3 +1066,20 @@ class PokeBattle_AI_TOXTRICITY < PokeBattle_AI_Boss
         })
     end
 end
+
+class PokeBattle_AI_SIGILYPH < PokeBattle_AI_Boss
+    def initialize(user, battle)
+        super
+        secondMoveEveryTurn(:DISCOURAGE)
+        everyThreeTurns(:EMPOWEREDFUTURESIGHT)
+
+        @warnedIFFMove.add(:POLARIZEDROOM, {
+            :condition => proc { |_move, _user, _target, battle|
+                next !battle.roomActive?
+            },
+            :warning => proc { |_move, user, targets, _battle|
+                _INTL("{1} yearns for a high-quality room!",user.pbThis)
+            },
+        })
+    end
+end

@@ -178,11 +178,11 @@ module EffectHolder
     end
 
     def processEffectsEOR
-        eachEffect(true) do |effect, _value, data|
+        eachEffect(true) do |effect, value, data|
             # Active end of round effects
             @eor_proc.call(data)
             # Tick down active effects that tick down
-            tickDownAndProc(effect) if data.ticks_down
+            tickDownAndProc(effect) if data.ticks_down?(@battle, value)
             # Disable effects that reset end of round
             disableEffect(effect) if data.resets_eor
         end
