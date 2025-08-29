@@ -929,7 +929,9 @@ BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
         end
 
         typeName = GameData::Type.get(type).name
+        target.showMyAbilitySplash(ability)
         battle.pbDisplay(_INTL("{1} collected the {2} type!", target.pbThis, typeName))
         battle.scene.pbRefresh
+        target.hideMyAbilitySplash
   }
 )
