@@ -326,6 +326,19 @@ def statStepsValueScore(battler)
     return score
 end
 
+def speedStatEffectScore(user, target)
+    if user.hasActiveItemAI?(%i[FLAMEORB POISONORB STICKYBARB IRONBALL FROSTORB])
+        return 130
+    elsif user.hasActiveItemAI?(GameData::Item.getByFlag("ChoiceLocking"))
+        return 100
+    elsif !user.firstItem && target.firstItem
+        if user.lastMoveUsed && GameData::Move.get(user.lastMoveUsed).function_code == "SwapItems" # Trick/Switcheroo
+            return 0
+        end
+    end
+    return 0
+end
+
 def getMultiStatUpEffectScore(statUpArray, user, target, fakeStepModifier: 0, evaluateThreat: true)
     echoln("\t\t[EFFECT SCORING] Scoring the effect of raising stats #{statUpArray.to_s} on target #{target.pbThis(true)}")
     
