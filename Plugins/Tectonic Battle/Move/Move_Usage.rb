@@ -445,7 +445,7 @@ target.pbThis(true)))
                     oldHP = b.hp + b.damageState.hpLost
                 end
                 PBDebug.log("[Move damage] #{b.pbThis} lost #{b.damageState.hpLost} HP (#{oldHP}=>#{b.hp})")
-                effectiveness = b.damageState.typeMod / Effectiveness::NORMAL_EFFECTIVE
+                effectiveness = b.damageState.typeMod
                 animArray.push([b, oldHP, effectiveness])
             end
             if animArray.length > 0

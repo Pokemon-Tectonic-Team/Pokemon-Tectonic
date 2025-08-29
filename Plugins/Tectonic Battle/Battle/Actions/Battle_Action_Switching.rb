@@ -377,8 +377,8 @@ class PokeBattle_Battle
         end
     end
 
-    def getTypedHazardHPRatio(hazardType, type1, type2 = nil, type3 = nil, ratio: 0.125)
-        typeMod = Effectiveness.calculate(hazardType, type1, type2, type3)
+    def getTypedHazardHPRatio(hazardType, battler, ratio: 0.125)
+        typeMod = Effectiveness.calculate(hazardType, battler.pbTypes(true))
         effectivenessMult = typeEffectivenessMult(typeMod)
         return effectivenessMult * ratio
     end
@@ -452,8 +452,7 @@ class PokeBattle_Battle
         unless battler.immuneToHazards?(aiCheck)
             # Stealth Rock
             if battler.pbOwnSide.effectActive?(:StealthRock) && battler.takesIndirectDamage?(false,aiCheck)
-                bTypes = battler.pbTypes(true)
-                getTypedHazardHPRatio = getTypedHazardHPRatio(:ROCK, bTypes[0], bTypes[1], bTypes[2])
+                getTypedHazardHPRatio = getTypedHazardHPRatio(:ROCK, battler)
                 if getTypedHazardHPRatio > 0
                     # Rock Climber
                     if battler.shouldAbilityApply?(:ROCKCLIMBER,aiCheck)
@@ -486,8 +485,7 @@ class PokeBattle_Battle
 
             # Feather Ward
             if battler.pbOwnSide.effectActive?(:FeatherWard) && battler.takesIndirectDamage?(false,aiCheck)
-                bTypes = battler.pbTypes(true)
-                getTypedHazardHPRatio = getTypedHazardHPRatio(:STEEL, bTypes[0], bTypes[1], bTypes[2])
+                getTypedHazardHPRatio = getTypedHazardHPRatio(:STEEL, battler)
                 if getTypedHazardHPRatio > 0
                     if aiCheck
                         featherWardDamage = battler.applyFractionalDamage(getTypedHazardHPRatio, aiCheck: true)
@@ -540,10 +538,9 @@ class PokeBattle_Battle
 
                 # Live Wire
                 if battler.pbOwnSide.effectActive?(:LiveWire) && battler.takesIndirectDamage?(false,aiCheck)
-                    bTypes = battler.pbTypes(true)
                     liveWireRation = 1.0/12.0
                     liveWireRation *= 2 if rainy?
-                    getTypedHazardHPRatio = getTypedHazardHPRatio(:ELECTRIC, bTypes[0], bTypes[1], bTypes[2], ratio: liveWireRation)
+                    getTypedHazardHPRatio = getTypedHazardHPRatio(:ELECTRIC, battler, ratio: liveWireRation)
                     if getTypedHazardHPRatio > 0
                         if aiCheck
                             liveWireDamage = battler.applyFractionalDamage(getTypedHazardHPRatio, aiCheck: true)
