@@ -918,7 +918,7 @@ class PokemonPokedex_Scene
                 GameData::Type.each do |type|
                     next if type.pseudo_type
 
-                    effectiveness = Effectiveness.calculate(type.id, dex_item[:data].type1, dex_item[:data].type2 || dex_item[:data].type1)
+                    effectiveness = Effectiveness.calculate(type.id, [dex_item[:data].type1, dex_item[:data].type2])
 
                     if sectionSelection == 4 && Effectiveness.ineffective?(effectiveness)
                         hasThingOfInterest = true
@@ -973,7 +973,7 @@ class PokemonPokedex_Scene
 
                     survivesSearch = true
                     typesSearchInfo.each do |type, reversed|
-                        effect = Effectiveness.calculate(type, dex_item[:data].type1, dex_item[:data].type2 || dex_item[:data].type1)
+                        effect = Effectiveness.calculate(type, [dex_item[:data].type1, dex_item[:data].type2])
 
                         case effectivenessSelection
                         when 0

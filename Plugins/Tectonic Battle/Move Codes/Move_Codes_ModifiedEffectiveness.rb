@@ -46,8 +46,7 @@ class PokeBattle_Move_EffectivenessIncludesFlyingType < PokeBattle_Move
     def pbCalcTypeModSingle(moveType, defType, user=nil, target=nil)
         ret = super
         if GameData::Type.exists?(:FLYING)
-            flyingEff = Effectiveness.calculate_one(:FLYING, defType)
-            ret *= flyingEff.to_f / Effectiveness::NORMAL_EFFECTIVE_ONE
+            ret *= Effectiveness.calculate_one(:FLYING, defType)
         end
         return ret
     end
@@ -61,8 +60,7 @@ class PokeBattle_Move_EffectivenessIncludesPsychicType < PokeBattle_Move
     def pbCalcTypeModSingle(moveType, defType, user=nil, target=nil)
         ret = super
         if GameData::Type.exists?(:PSYCHIC)
-            psychicEffectiveness = Effectiveness.calculate_one(:PSYCHIC, defType)
-            ret *= psychicEffectiveness.to_f / Effectiveness::NORMAL_EFFECTIVE_ONE
+            ret *= Effectiveness.calculate_one(:PSYCHIC, defType)
         end
         return ret
     end
