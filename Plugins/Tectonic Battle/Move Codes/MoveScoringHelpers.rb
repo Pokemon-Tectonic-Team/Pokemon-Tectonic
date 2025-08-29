@@ -326,15 +326,11 @@ def statStepsValueScore(battler)
     return score
 end
 
-def speedStatEffectScore(user, target)
-    if user.hasActiveItemAI?(%i[FLAMEORB POISONORB STICKYBARB IRONBALL FROSTORB])
-        return 130
+def getExchangeItemEffectScore(user, target)
+    if user.hasActiveItemAI?(%i[FLAMEORB FROSTORB POISONORB STICKYBARB IRONBALL])
+        return 150
     elsif user.hasActiveItemAI?(GameData::Item.getByFlag("ChoiceLocking"))
-        return 100
-    elsif !user.firstItem && target.firstItem
-        if user.lastMoveUsed && GameData::Move.get(user.lastMoveUsed).function_code == "SwapItems" # Trick/Switcheroo
-            return 0
-        end
+        return 120
     end
     return 0
 end
