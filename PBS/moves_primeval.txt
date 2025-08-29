@@ -875,7 +875,7 @@ TotalPP = 1
 Target = BothSides
 FunctionCode = EmpoweredEclipse
 Flags = Empowered
-Description = The user summons eclipse for five turns. This raises ist Attack and Sp. Atk. User becomes Psychic-type.
+Description = The user summons eclipse for five turns. This raises its Attack and Sp. Atk. User becomes Psychic-type.
 Animation = ECLIPSE
 #-------------------------------
 [PRIMEVALMAGICCOAT]
