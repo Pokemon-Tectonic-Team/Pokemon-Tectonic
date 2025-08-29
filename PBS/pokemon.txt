@@ -617,8 +617,8 @@ Name = Gigachu
 Type1 = ELECTRIC
 Type2 = NORMAL
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 185,100,65,40,65,65
-# Total = 520
+BaseStats = 185,100,65,45,70,65
+# Total = 530
 BaseEXP = 218
 Rareness = 60
 Happiness = 50
@@ -1206,8 +1206,8 @@ Name = Vileplume
 Type1 = GRASS
 Type2 = POISON
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 85,80,85,70,115,120
-# Total = 555
+BaseStats = 85,80,85,70,115,110
+# Total = 545
 BaseEXP = 221
 Rareness = 35
 Happiness = 50
@@ -1226,8 +1226,8 @@ Name = Bellossom
 Type1 = GRASS
 Type2 = FIRE
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 80,60,95,85,100,100
-# Total = 520
+BaseStats = 85,80,95,85,100,100
+# Total = 545
 BaseEXP = 221
 Rareness = 35
 Happiness = 50
@@ -3853,8 +3853,8 @@ Name = Kleavor
 Type1 = BUG
 Type2 = ROCK
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 75,140,115,75,65,85
-# Total = 555
+BaseStats = 75,140,115,75,60,85
+# Total = 550
 BaseEXP = 255
 Rareness = 20
 Abilities = SWORDPLAY,WEAKARMOR
@@ -5028,8 +5028,8 @@ Evolutions = HTYPHLOSION,Originize,36,TYPHLOSION,Level,36
 Name = Typhlosion
 Type1 = FIRE
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 80,75,80,100,120,85
-# Total = 540
+BaseStats = 80,70,80,100,120,85
+# Total = 535
 BaseEXP = 240
 Rareness = 35
 Abilities = BRISK,HUBRIS
@@ -10949,8 +10949,8 @@ Name = Mothim
 Type1 = BUG
 Type2 = NORMAL
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 85,90,85,75,90,85
-# Total = 510
+BaseStats = 85,105,85,75,105,85
+# Total = 540
 BaseEXP = 198
 Rareness = 35
 Abilities = SPARESCALES,MOTHBURGLAR
@@ -12403,7 +12403,7 @@ Generation = 5
 Name = Purrloin
 Type1 = DARK
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 60,75,45,45,75,75
+BaseStats = 60,75,45,75,45,75
 # Total = 375
 BaseEXP = 56
 Rareness = 195
@@ -16522,8 +16522,8 @@ Name = M. Aromatisse
 Type1 = FAIRY
 Type2 = GHOST
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 120,80,100,40,80,100
-# Total = 520
+BaseStats = 120,80,100,45,80,100
+# Total = 525
 BaseEXP = 162
 Rareness = 155
 Happiness = 50
@@ -17458,8 +17458,8 @@ Name = Decidueye
 Type1 = GRASS
 Type2 = GHOST
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 90,115,80,70,70,105
-# Total = 530
+BaseStats = 90,115,80,75,70,105
+# Total = 535
 BaseEXP = 239
 Rareness = 35
 Happiness = 50
