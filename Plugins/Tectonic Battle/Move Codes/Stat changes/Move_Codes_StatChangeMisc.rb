@@ -225,6 +225,51 @@ class PokeBattle_Move_AverageUserTargetOffenses < PokeBattle_Move
 end
 
 #===============================================================================
+# Swaps the user's speed and item with the target. (Ion Exchange)
+#===============================================================================
+class PokeBattle_Move_SwitchUserTargetSpeedsItems < PokeBattle_Move_SwapItems
+    def pbMoveFailed?(user, _targets, show_message)
+        if @battle.wildBattle? && user.opposes? && !user.boss
+            @battle.pbDisplay(_INTL("But it failed, since this is a wild battle!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbFailsAgainstTarget?(user, target, show_message)
+        return false  
+    end
+
+    def pbEffectAgainstTarget(user, target)
+        super
+
+        newUserSpeed   = target.base_speed
+        newTargetSpeed = user.base_speed
+        user.applyEffect(:BaseSpeed,newUserSpeed)
+        target.applyEffect(:BaseSpeed,newTargetSpeed)
+        @battle.pbDisplay(_INTL("{1} swapped its unmodified speed stats with the target!", user.pbThis))
+    end
+
+    def getEffectScore(user, target)
+        score = super
+
+        userSpeed = target.base_speed
+        targetSpeed = user.base_speed
+        score = 0
+        if userSpeed < targetSpeed / 2
+            score = 90
+        elsif userSpeed < targetSpeed
+            score = 50
+        elsif userSpeed > targetSpeed * 2
+            score = -90
+        elsif userSpeed > targetSpeed
+            score = -50
+        end
+        return score
+    end
+end
+
+#===============================================================================
 # Averages the user's and target's base Defense.
 # Averages the user's and target's base Special Defense. (Guard Split)
 #===============================================================================
