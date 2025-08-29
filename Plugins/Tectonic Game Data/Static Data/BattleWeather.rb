@@ -59,19 +59,19 @@ GameData::BattleWeather.register({
 GameData::BattleWeather.register({
   :id        => :HarshSun,
   :name      => _INTL("Harsh Sun"),
-  :animation => "HarshSun",
+  :animation => "Sunny",
 })
 
 GameData::BattleWeather.register({
   :id        => :HeavyRain,
   :name      => _INTL("Heavy Rain"),
-  :animation => "HeavyRain",
+  :animation => "Rain",
 })
 
 GameData::BattleWeather.register({
   :id        => :StrongWinds,
   :name      => _INTL("Strong Winds"),
-  :animation => "StrongWinds",
+  :animation => "Wind",
 })
 
 GameData::BattleWeather.register({
@@ -95,7 +95,7 @@ GameData::BattleWeather.register({
 GameData::BattleWeather.register({
   :id        => :BloodMoon,
   :name      => _INTL("Blood Moon"),
-  :animation => "Moonlight",
+  :animation => "Moonglow",
 })
 
 GameData::BattleWeather.register({

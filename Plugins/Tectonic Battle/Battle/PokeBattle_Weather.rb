@@ -284,7 +284,7 @@ class PokeBattle_Battle
                         pbDisplay(_INTL("The Full Moon rises!"))
                     end
                 end
-                pbAnimation(:Moonglow, @battlers[0], [])
+                pbCommonAnimation("Moonglow")
                 anyAffected = false
                 priority.each do |b|
                     next if b.fainted?
