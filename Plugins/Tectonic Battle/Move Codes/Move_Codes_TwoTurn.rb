@@ -114,7 +114,7 @@ class PokeBattle_Move_TwoTurnAttackBurnTarget < PokeBattle_TwoTurnMove
 end
 
 #===============================================================================
-# Cures nvsc and sleeps on 1st Turn and Attacks on 2nd
+# Cures NVSC and sleeps on 1st Turn and Attacks on 2nd (Wakeful Tide)
 #===============================================================================
 class PokeBattle_Move_TwoTurnAttackChargeSleep < PokeBattle_TwoTurnMove
     def usableWhenAsleep?; return true; end
@@ -145,8 +145,8 @@ class PokeBattle_Move_TwoTurnAttackChargeSleep < PokeBattle_TwoTurnMove
 
     def getEffectScore(user, target)
         score = super
-        score +=30 if user.hasStatusNoSleep?
-        score +=45 if user.hasStatusSleep?
+        score += 30 if user.hasStatusNoSleep?
+        score += 45 if user.asleep?
         return score
     end
 end
