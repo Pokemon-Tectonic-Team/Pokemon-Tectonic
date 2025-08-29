@@ -21,14 +21,14 @@ ItemHandlers::UseInField.add(:EXPEZDISPENSER,proc { |item|
 def useEXPEZ()
 	$PokemonGlobal.expJAR = 0 if $PokemonGlobal.expJAR.nil?
 	$PokemonGlobal.expJARUpgraded = false if $PokemonGlobal.expJARUpgraded.nil?
-	pbMessage(_INTL("You have {1} EXP stored in the EXP-EZ Dispenser.",separate_comma($PokemonGlobal.expJAR)))
+	pbMessage(_INTL("\\i[EXPEZDISPENSER]You have {1} EXP stored in the EXP-EZ Dispenser.",separate_comma($PokemonGlobal.expJAR)))
 
 	xsCandyTotal, sCandyTotal, mCandyTotal, lCandyTotal = calculateCandySplitForEXP($PokemonGlobal.expJAR,$PokemonGlobal.expJARUpgraded)
 
 	# Prompt the player to make the candies
 	if xsCandyTotal > 0 || sCandyTotal > 0 || mCandyTotal > 0 || lCandyTotal > 0
 		if !$PokemonGlobal.expJARUpgraded
-			if pbConfirmMessage(_INTL("You can make {1} Medium, {2} Small and {3} Extra-Small candies. Would you like to?",
+			if pbConfirmMessage(_INTL("\\i[EXPEZDISPENSER]You can make {1} Medium, {2} Small and {3} Extra-Small candies. Would you like to?",
 					separate_comma(mCandyTotal), separate_comma(sCandyTotal), separate_comma(xsCandyTotal)))
 				pbReceiveItem(:EXPCANDYM,mCandyTotal) if mCandyTotal > 0
 				pbReceiveItem(:EXPCANDYS,sCandyTotal) if sCandyTotal > 0
@@ -36,7 +36,7 @@ def useEXPEZ()
 				$PokemonGlobal.expJAR = $PokemonGlobal.expJAR % EXP_PER_EXTRA_SMALL
 			end
 		else
-			if pbConfirmMessage(_INTL("You can make {1} Large, {2} Medium and {3} Small candies. Would you like to?",
+			if pbConfirmMessage(_INTL("\\i[EXPEZDISPENSER]You can make {1} Large, {2} Medium and {3} Small candies. Would you like to?",
 					separate_comma(lCandyTotal), separate_comma(mCandyTotal), separate_comma(sCandyTotal)))
 				pbReceiveItem(:EXPCANDYL,lCandyTotal) if lCandyTotal > 0
 				pbReceiveItem(:EXPCANDYM,mCandyTotal) if mCandyTotal > 0
@@ -45,7 +45,7 @@ def useEXPEZ()
 			end
 		end
 	else
-		pbMessage(_INTL("That's not enough to make any candies."))
+		pbMessage(_INTL("\\i[EXPEZDISPENSER]That's not enough to make any candies."))
 		return 0
 	end
 	return 1
