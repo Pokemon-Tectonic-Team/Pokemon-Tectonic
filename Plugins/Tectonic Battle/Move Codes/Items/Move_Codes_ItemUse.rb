@@ -240,11 +240,12 @@ class PokeBattle_Move_Fling < PokeBattle_Move
     end
 
     def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("<u>300 BP</u>: Pearl of Wisdom")
         detailsList << _INTL("<u>150 BP</u>: Iron Ball")
         detailsList << _INTL("<u>100 BP</u>: Choice Items, Weather Rocks, Life Orb")
         detailsList << _INTL("<u>75 BP</u>: Everything else")
         detailsList << _INTL("<u>Poison</u>: Poison Orb")
-        detailsList << _INTL("<u>Burn</u>: Burn Orb")
+        detailsList << _INTL("<u>Burn</u>: Flame Orb")
         detailsList << _INTL("<u>Frostbite</u>: Frost Orb")
         detailsList << _INTL("<u>Leech</u>: Big Root, Binding Band")
         detailsList << _INTL("<u>Waterlog</u>: Water Balloon")
