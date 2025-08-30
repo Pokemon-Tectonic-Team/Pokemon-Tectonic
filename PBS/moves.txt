@@ -6229,16 +6229,6 @@ FunctionCode = HealUserByThreeQuartersOfDamageDone
 Flags = CanProtect
 Description = The user steals the target's HP with a kiss. The user's HP is restored by 75% of the damage dealt.
 #-------------------------------
-[FAIRYLOCK]
-Name = Fairy Lock
-Type = FAIRY
-Category = Status
-Accuracy = 0
-TotalPP = 10
-Target = BothSides
-FunctionCode = TrapAllBattlersForOneTurn
-Description = By locking down the battlefield, the user traps all Pokémon during the next turn.
-#-------------------------------
 [FAIRYWIND]
 Name = Fairy Wind
 Type = FAIRY
