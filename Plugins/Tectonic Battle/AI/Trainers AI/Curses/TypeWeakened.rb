@@ -14,7 +14,7 @@ PokeBattle_Battle::EffectivenessChangeCurseEffect.add(:CURSE_TYPE_WEAKENED,
         if user.pbOwnedByPlayer? &&
                 !target.pbOwnedByPlayer? &&
                 Effectiveness.super_effective?(effectiveness)
-            next Effectiveness::NORMAL_EFFECTIVE / 2
+            next Effectiveness::NOT_VERY_EFFECTIVE
         end
     }
 )

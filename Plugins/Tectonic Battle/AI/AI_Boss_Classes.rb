@@ -362,14 +362,13 @@ class PokeBattle_AI_GENESECT < PokeBattle_AI_Boss
                 next unless b
                 type1 = b.type1
                 type2 = b.type2
-                weakToElectric += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:ELECTRIC, type1,
-type2))
+                weakToElectric += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:ELECTRIC, [type1, type2]))
                 maxValue = weakToElectric if weakToElectric > maxValue
-                weakToFire += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:FIRE, type1, type2))
+                weakToFire += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:FIRE, [type1, type2]))
                 maxValue = weakToFire if weakToFire > maxValue
-                weakToIce += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:ICE, type1, type2))
+                weakToIce += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:ICE, [type1, type2]))
                 maxValue = weakToIce if weakToIce > maxValue
-                weakToWater += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:WATER, type1, type2))
+                weakToWater += 1 if Effectiveness.super_effective?(Effectiveness.calculate(:WATER, [type1, type2]))
                 maxValue = weakToWater if weakToWater > maxValue
             end
 

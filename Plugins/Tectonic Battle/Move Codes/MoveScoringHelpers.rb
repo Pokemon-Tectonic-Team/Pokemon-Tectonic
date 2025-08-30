@@ -326,6 +326,15 @@ def statStepsValueScore(battler)
     return score
 end
 
+def getExchangeItemEffectScore(user, target)
+    if user.hasActiveItemAI?(%i[FLAMEORB FROSTORB POISONORB STICKYBARB IRONBALL])
+        return 150
+    elsif user.hasActiveItemAI?(GameData::Item.getByFlag("ChoiceLocking"))
+        return 120
+    end
+    return 0
+end
+
 def getMultiStatUpEffectScore(statUpArray, user, target, fakeStepModifier: 0, evaluateThreat: true)
     echoln("\t\t[EFFECT SCORING] Scoring the effect of raising stats #{statUpArray.to_s} on target #{target.pbThis(true)}")
     

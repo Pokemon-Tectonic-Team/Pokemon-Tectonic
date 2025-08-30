@@ -502,7 +502,7 @@ class PokeBattle_FixedDamageMove < PokeBattle_Move
 
     def pbCalcTypeModSingle(moveType, defType, user=nil, target=nil)
         ret = super
-        ret = Effectiveness::NORMAL_EFFECTIVE_ONE unless Effectiveness.ineffective?(ret)
+        ret = Effectiveness::NORMAL_EFFECTIVE unless Effectiveness.ineffective?(ret)
         return ret
     end
 
@@ -1494,7 +1494,7 @@ class PokeBattle_TypeSuperMove < PokeBattle_Move
     def pbCalcTypeModSingle(moveType, defType, user=nil, target=nil)
         effectiveness = super
         return effectiveness if Effectiveness.ineffective?(effectiveness)
-        return Effectiveness::SUPER_EFFECTIVE_ONE if defType == @typeHated
+        return Effectiveness::SUPER_EFFECTIVE if defType == @typeHated
         return effectiveness
     end
 end

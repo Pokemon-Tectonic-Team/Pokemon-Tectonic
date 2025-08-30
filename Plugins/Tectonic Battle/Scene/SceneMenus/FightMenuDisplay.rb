@@ -341,8 +341,7 @@ class FightMenuDisplay < BattleMenuBase
                 effectivenessCategory = 3
             end
         else
-            ration = effectiveness/Effectiveness::NORMAL_EFFECTIVE.to_f
-            case ration
+            case effectiveness
                 when 0                  then effectivenessCategory = 0
                 when 0.00001..0.25      then effectivenessCategory = 1
                 when 0.5 	            then effectivenessCategory = 2
