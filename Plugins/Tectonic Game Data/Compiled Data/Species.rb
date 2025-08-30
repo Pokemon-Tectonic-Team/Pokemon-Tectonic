@@ -611,6 +611,12 @@ module GameData
             return @flags.include?("UltraBeast")
         end
 
+        def hasType?(type)
+            return true if @type1 == type
+            return true if @type2 == type
+            return false
+        end
+
         def self.load
             super
             const_set(:FORM_SPECIFIC_MOVES, load_data("Data/#{self::FORM_SPECIFIC_MOVES_DATA_FILENAME}"))
