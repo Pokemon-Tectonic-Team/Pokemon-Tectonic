@@ -1175,7 +1175,7 @@ Animation = AGILITY
 [PRESSURESHOCK]
 Name = Pressure Shock
 Type = FLYING
-Category = Special
+Category = Adaptive
 Power = 80
 Accuracy = 100
 TotalPP = 5
