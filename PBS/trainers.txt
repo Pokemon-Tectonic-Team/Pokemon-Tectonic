@@ -5933,9 +5933,9 @@ Pokemon = MRMIME,70
 Pokemon = SENSIBELLE,70
     Item = LUNCHBOX
 Pokemon = INDEEDEE,70
-    Item = PINPOINTROCK
-Pokemon = MIMIKYU,70
     Item = LUNUSBERRY
+Pokemon = MIMIKYU,70
+    Item = CLARITYSASH
 Pokemon = GARDEVOIR,70
     Item = DEATHORB
 #-------------------------------
