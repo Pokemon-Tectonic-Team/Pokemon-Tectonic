@@ -59727,8 +59727,8 @@ gym
 gym
 {1} looks eager to battle!
 {1} looks eager to battle!
-{1} is looking at {2} with a determined gleam in its' eye.
-{1} is looking at {2} with a determined gleam in its' eye.
+{1} is looking at {2} with a determined gleam in its eye.
+{1} is looking at {2} with a determined gleam in its eye.
 {1} is trying to intimidate the other trainers.
 {1} is trying to intimidate the other trainers.
 {1} trusts {2} to come up with a winning strategy.
@@ -59839,8 +59839,8 @@ The snow seems to have put {1} in a good mood.
 {1} is cheerful because of the cold!
 {1} is nipping at the falling snowflakes.
 {1} is nipping at the falling snowflakes.
-{1} wants to catch a snowflake in its' mouth.
-{1} wants to catch a snowflake in its' mouth.
+{1} wants to catch a snowflake in its mouth.
+{1} wants to catch a snowflake in its mouth.
 {1} is fascinated by the snow.
 {1} is fascinated by the snow.
 {1}'s teeth are chattering!
@@ -60061,14 +60061,14 @@ It looks like {1} will fight just about anyone right now!
 {1} seems to be observing the surroundings instead of watching {2}.
 {1} looks a bit bored.
 {1} looks a bit bored.
-{1} has an intense look on its' face.
-{1} has an intense look on its' face.
+{1} has an intense look on its face.
+{1} has an intense look on its face.
 {1} is staring off into the distance.
 {1} is staring off into the distance.
 {1} seems to be carefully examining {2}'s face.
 {1} seems to be carefully examining {2}'s face.
-{1} seems to be trying to communicate with its' eye(s).
-{1} seems to be trying to communicate with its' eye(s).
+{1} seems to be trying to communicate with its eye(s).
+{1} seems to be trying to communicate with its eye(s).
 ...{1} seems to have sneezed!
 ...{1} seems to have sneezed!
 ...{1} noticed that {2}'s shoes are a bit dirty.
@@ -60107,8 +60107,8 @@ Seems {1} ate something strange, it's making an odd face...
 {1} is still feeling great!
 {1} stretched out its body and is relaxing.
 {1} stretched out its body and is relaxing.
-{1} is doing its' best to keep up with {2}.
-{1} is doing its' best to keep up with {2}.
+{1} is doing its best to keep up with {2}.
+{1} is doing its best to keep up with {2}.
 {1} is happily cuddling up to {2}!
 {1} is happily cuddling up to {2}!
 {1} is full of energy!
@@ -60127,8 +60127,8 @@ Seems {1} ate something strange, it's making an odd face...
 {1} looks thrilled at getting attention from {2}.
 {1} seems very pleased that {2} is noticing it!
 {1} seems very pleased that {2} is noticing it!
-{1} started wriggling its' entire body with excitement!
-{1} started wriggling its' entire body with excitement!
+{1} started wriggling its entire body with excitement!
+{1} started wriggling its entire body with excitement!
 It seems like {1} can barely keep itself from hugging {2}!
 It seems like {1} can barely keep itself from hugging {2}!
 {1} is keeping close to {2}'s feet.
@@ -60167,8 +60167,8 @@ Woah! {1} suddenly hugged {2}.
 {1} looks like it wants {2} to pet it!
 {1} is rubbing itself against {2} affectionately.
 {1} is rubbing itself against {2} affectionately.
-{1} bumps its' head gently against {2}'s hand.
-{1} bumps its' head gently against {2}'s hand.
+{1} bumps its head gently against {2}'s hand.
+{1} bumps its head gently against {2}'s hand.
 {1} rolls over and looks at {2} expectantly.
 {1} rolls over and looks at {2} expectantly.
 {1} is looking at {2} with trusting eyes.
