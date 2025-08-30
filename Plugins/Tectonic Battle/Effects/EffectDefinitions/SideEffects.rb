@@ -602,6 +602,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :type => :Integer,
     :ticks_down => true,
     :apply_proc => proc do |battle, _side, teamName, value|
+        teamName = teamName.downcase
         battle.pbDisplay(_INTL("A Tailwind blew from behind {1}!", teamName))
         if value > 99
             battle.pbDisplay(_INTL("It will last forever!"))
@@ -623,6 +624,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :type => :Integer,
     :ticks_down => true,
     :apply_proc => proc do |battle, _side, teamName, value|
+        teamName = teamName.downcase
         battle.pbDisplay(_INTL("A Primeval Tailwind blew from behind {1}!", teamName))
         if value > 99
             battle.pbDisplay(_INTL("It will last forever!"))
