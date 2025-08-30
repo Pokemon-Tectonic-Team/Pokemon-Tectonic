@@ -2828,6 +2828,36 @@ Pokemon = JELLICENT,70
     Gender = male
     AbilityIndex = 0 # Backwash
 #-------------------------------
+[DELINQUENT,Lilypad]
+TrainerTypeLabel = DEVELOPER
+Pokemon = PORYGONZ,70
+    Name = Beepo
+    Shiny = yes
+    Moves = HYPERBEAM,CRITICALERROR,PHANTOMGATE,ICEBEAM
+    AbilityIndex = 1 # Adapted
+    Item = ENERGYHERB
+Pokemon = PORYGONZ,70
+    Moves = SUBLIMATE,CONVERSION,CRITICALERROR,RECOVER
+    AbilityIndex = 1 # Adapted
+    Item = ICEGEM
+Pokemon = PORYGONZ,70
+    Moves = CURSEDOATH,FOULPLAY,NUMB,RECOVER
+    AbilityIndex = 0 # Realist
+    Item = CRYSTALVEIL
+    ItemType = DARK
+Pokemon = INTELEON,70
+    Moves = HYDROPUMP,LASERFOCUS,PSYCHOBOOST,SHADOWBALL
+    AbilityIndex = 1 # Incognito
+    Item = LIFEORB
+Pokemon = PORYGONZ,70
+    Moves = POWERHAMMER,DISTURB,HORIZONSLICE,CONVERSION
+    AbilityIndex = 1 # Adapted
+    Item = POWERLOCK
+Pokemon = PORYGONZ,70
+    Moves = DREAMDANCE,LASTRESORT
+    AbilityIndex = 1 # Adapted
+    Item = SITRUSBERRY
+#-------------------------------
 [LEADER_Bence,Bence]
 Policies = BENCE
 Flags = NoPerfect
