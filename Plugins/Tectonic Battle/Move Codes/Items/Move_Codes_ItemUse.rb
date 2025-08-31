@@ -395,77 +395,15 @@ class PokeBattle_Move_SwapItems < PokeBattle_Move
     end
 
     def pbFailsAgainstTarget?(user, target, show_message)
-        unless target.hasAnyItem?
-            if show_message
-                @battle.pbDisplay(_INTL("But it failed, since {1} doesn't have an item!", target.pbThis(true)))
-            end
-            return true
-        end
-        unless user.hasAnyItem?
-            @battle.pbDisplay(_INTL("But it failed, since {1} doesn't have an item!", user.pbThis(true))) if show_message
-            return true
-        end
-        if target.unlosableItem?(target.firstItem) ||
-           target.unlosableItem?(user.firstItem) ||
-           user.unlosableItem?(user.firstItem) ||
-           user.unlosableItem?(target.firstItem)
-            @battle.pbDisplay(_INTL("But it failed!")) if show_message
-            return true
-        end
-        if user.firstItem == :PEARLOFWISDOM
-             @battle.pbDisplay(_INTL("But it failed, since the Pearl of Fate cannot be exchanged!")) if show_message
-            return true
-        end
-        if target.hasActiveAbility?(:STICKYHOLD) && !@battle.moldBreaker
-            if show_message
-                @battle.pbShowAbilitySplash(target, ability)
-                @battle.pbDisplay(_INTL("But it failed to affect {1}!", target.pbThis(true)))
-                @battle.pbHideAbilitySplash(target)
-            end
-            return true
-        end
-        return false
+        return !canExchangeItems?(user, target, show_message)
     end
 
     def pbEffectAgainstTarget(user, target)
-        oldUserItem = user.firstItem
-        oldUserItemName = getItemName(oldUserItem)
-        oldTargetItem = target.firstItem
-        oldTargetItemName = getItemName(target.firstItem)
-        user.removeItem(oldUserItem)
-        target.removeItem(oldTargetItem)
-        if @battle.stolenItemTurnsToDust?
-            @battle.pbDisplay(_INTL("{1}'s {2} turned to dust.", user.pbThis, oldUserItemName)) if oldUserItem
-            @battle.pbDisplay(_INTL("{1}'s {2} turned to dust.", target.pbThis, oldTargetItemName)) if oldTargetItem
-        elsif !user.opposes? && target.shouldStoreStolenItem?(oldTargetItem)
-            @battle.pbDisplay(_INTL("{1} switched items with its opponent!", user.pbThis))
-            target.setInitialItems(nil)
-            pbReceiveItem(oldTargetItem)
-            target.giveItem(oldUserItem)
-            @battle.pbDisplay(_INTL("{1} obtained {2}.", target.pbThis, oldUserItemName)) if oldUserItem
-            target.pbHeldItemTriggerCheck
-        else
-            user.giveItem(oldTargetItem)
-            target.giveItem(oldUserItem)
-            @battle.pbDisplay(_INTL("{1} switched items with its opponent!", user.pbThis))
-            @battle.pbDisplay(_INTL("{1} obtained {2}.", user.pbThis, oldTargetItemName)) if oldTargetItem
-            @battle.pbDisplay(_INTL("{1} obtained {2}.", target.pbThis, oldUserItemName)) if oldUserItem
-            user.pbHeldItemTriggerCheck
-            target.pbHeldItemTriggerCheck
-        end
+        exchangeItems(user, target)
     end
 
     def getEffectScore(user, target)
-        if user.hasActiveItemAI?(%i[FLAMEORB POISONORB STICKYBARB IRONBALL])
-            return 130
-        elsif user.hasActiveItemAI?(GameData::Item.getByFlag("ChoiceLocking"))
-            return 100
-        elsif !user.firstItem && target.firstItem
-            if user.lastMoveUsed && GameData::Move.get(user.lastMoveUsed).function_code == "SwapItems" # Trick/Switcheroo
-                return 0
-            end
-        end
-        return 0
+        return getExchangeItemEffectScore(user, target)
     end
 end
 

@@ -167,8 +167,7 @@ BattleHandlers::EOREffectAbility.add(:FIREFESTIVAL,
     battle.eachBattler do |b|
       if b.takesIndirectDamage?(true)
         battle.pbDisplay(_INTL("{1} is splashed with fire!", b.pbThis))
-        bTypes = b.pbTypes(true)
-        damageFraction = battle.getTypedHazardHPRatio(:FIRE, bTypes[0], bTypes[1], bTypes[2])
+        damageFraction = battle.getTypedHazardHPRatio(:FIRE, b)
         b.applyFractionalDamage(damageFraction, false)
       end
     end

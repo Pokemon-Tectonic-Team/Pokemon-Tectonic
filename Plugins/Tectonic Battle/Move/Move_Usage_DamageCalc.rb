@@ -410,10 +410,15 @@ class PokeBattle_Move
         # Mystic tribe
         if user.hasTribeBonus?(:MYSTIC) && user.lastRoundMoveCategory == 2 # Status
             multipliers[:final_damage_multiplier] *= 1.25
-        end    
+        end
+
+        # Deceiver tribe
+        if user.hasTribeBonus?(:DECEIVER) && user.species_data
+            multipliers[:final_damage_multiplier] *= 1.15 unless user.species_data.hasType?(type)
+        end
 
         # Scavenger tribe
-        if user.hasTribeBonus?(:SCAVENGER)
+        if user.hasTribeBonus?(:DECEIVER)
             if checkingForAI
                 multipliers[:final_damage_multiplier] *= 1.25 if user.hasGem?
             else

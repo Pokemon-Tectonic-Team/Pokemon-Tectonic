@@ -308,13 +308,13 @@ class RuledTeam
     data = GameData::Move.get(move)
     return 0 if data.base_damage == 0
     atype = data.type
-    typemod = Effectiveness::NORMAL_EFFECTIVE_ONE ** 2
+    typemod = Effectiveness::NORMAL_EFFECTIVE
     if ability != :LEVITATE || data.type != :GROUND
       mod1 = Effectiveness.calculate_one(atype, otype1)
-      mod2 = (otype1 == otype2) ? Effectiveness::NORMAL_EFFECTIVE_ONE : Effectiveness.calculate_one(atype, otype2)
+      mod2 = (otype1 == otype2) ? Effectiveness::NORMAL_EFFECTIVE : Effectiveness.calculate_one(atype, otype2)
       if ability == :WONDERGUARD
-        mod1 = Effectiveness::NORMAL_EFFECTIVE_ONE if mod1 <= Effectiveness::NORMAL_EFFECTIVE_ONE
-        mod2 = Effectiveness::NORMAL_EFFECTIVE_ONE if mod2 <= Effectiveness::NORMAL_EFFECTIVE_ONE
+        mod1 = Effectiveness::NORMAL_EFFECTIVE if mod1 <= Effectiveness::NORMAL_EFFECTIVE
+        mod2 = Effectiveness::NORMAL_EFFECTIVE if mod2 <= Effectiveness::NORMAL_EFFECTIVE
       end
       typemod = mod1 * mod2
     end

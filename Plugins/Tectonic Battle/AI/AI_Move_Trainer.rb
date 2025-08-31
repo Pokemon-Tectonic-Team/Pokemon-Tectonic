@@ -422,11 +422,6 @@ class PokeBattle_AI
         # Calculate how much damage the move will do (roughly)
         realDamage,subDestroyed = pbTotalDamageAI(move, user, target, numTargets)
 
-        if playerTribalBonus.hasTribeBonus?(:DECEIVER)
-            realDamage *= 1.5
-            echoln("\t[MOVE SCORING] #{user.pbThis} is overestimating its damage by 50 percent due to the deceiver tribal bonus")
-        end
-
         # Convert damage to percentage of target's remaining HP
         damagePercentage = realDamage * 100.0 / target.totalhp
 

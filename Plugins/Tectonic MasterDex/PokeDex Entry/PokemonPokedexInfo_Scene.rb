@@ -532,7 +532,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
             GameData::Type.each do |t|
                 next if t.pseudo_type
 
-                effect = Effectiveness.calculate(t.id, fSpecies.type1, fSpecies.type2)
+                effect = Effectiveness.calculate(t.id, [fSpecies.type1, fSpecies.type2])
 
                 if Effectiveness.ineffective?(effect)
                     immuneTypes.push(t)
@@ -614,8 +614,8 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
             GameData::Type.each do |t|
                 next if t.pseudo_type
 
-                effect1 = Effectiveness.calculate(fSpecies.type1, t.id, t.id)
-                effect2 = Effectiveness.calculate(fSpecies.type2, t.id, t.id)
+                effect1 = Effectiveness.calculate_one(fSpecies.type1, t.id)
+                effect2 = Effectiveness.calculate_one(fSpecies.type2, t.id)
                 effect = [effect1, effect2].max
 
                 if Effectiveness.ineffective?(effect)
@@ -1416,8 +1416,7 @@ sp.form) && !Settings::DEX_SHOWS_ALL_FORMS
                 next if otherSpeciesData.isLegendary?
 
                 typesOfCoverage.each do |coverageType|
-                    effect = Effectiveness.calculate(coverageType, otherSpeciesData.type1,
-    otherSpeciesData.type2)
+                    effect = Effectiveness.calculate(coverageType, [otherSpeciesData.type1, otherSpeciesData.type2])
 
                     if Effectiveness.super_effective?(effect)
                         numberCovered += 1

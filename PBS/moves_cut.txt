@@ -3656,6 +3656,16 @@ Flags = CanProtect,Blade
 Description = The user attacks the target with just force. Guaranteed critical hit on foes with boosted stats.
 Animation = PLAYROUGH
 #-------------------------------
+[FAIRYLOCK]
+Name = Fairy Lock
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = BothSides
+FunctionCode = Invalid
+Description = By locking down the battlefield, the user traps all Pokémon during the next turn.
+#-------------------------------
 [FAIRYTERRAIN]
 Name = Fairy Terrain
 Type = FAIRY

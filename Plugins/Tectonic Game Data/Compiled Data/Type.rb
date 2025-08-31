@@ -57,11 +57,11 @@ module GameData
       def special?;  return @special_type; end
   
       def effectiveness(other_type)
-        return Effectiveness::NORMAL_EFFECTIVE_ONE if !other_type
-        return Effectiveness::SUPER_EFFECTIVE_ONE if @weaknesses.include?(other_type)
-        return Effectiveness::NOT_VERY_EFFECTIVE_ONE if @resistances.include?(other_type)
+        return Effectiveness::NORMAL_EFFECTIVE if !other_type
+        return Effectiveness::SUPER_EFFECTIVE if @weaknesses.include?(other_type)
+        return Effectiveness::NOT_VERY_EFFECTIVE if @resistances.include?(other_type)
         return Effectiveness::INEFFECTIVE if @immunities.include?(other_type)
-        return Effectiveness::NORMAL_EFFECTIVE_ONE
+        return Effectiveness::NORMAL_EFFECTIVE
       end
     end
   end
@@ -70,10 +70,10 @@ module GameData
   
   module Effectiveness
     INEFFECTIVE            = 0
-    NOT_VERY_EFFECTIVE_ONE = 1
-    NORMAL_EFFECTIVE_ONE   = 2
-    SUPER_EFFECTIVE_ONE    = 4
-    NORMAL_EFFECTIVE       = NORMAL_EFFECTIVE_ONE ** 3
+    NOT_VERY_EFFECTIVE = 0.5
+    NORMAL_EFFECTIVE   = 1.0
+    SUPER_EFFECTIVE    = 2.0
+    HYPER_EFFECTIVE    = 4.0
   
     module_function
   
@@ -84,9 +84,13 @@ module GameData
     def not_very_effective?(value)
       return value > INEFFECTIVE && value < NORMAL_EFFECTIVE
     end
+
+    def barely_effective?(value)
+      return value < NORMAL_EFFECTIVE / 2 && value > INEFFECTIVE
+    end
   
     def resistant?(value)
-      return value < NORMAL_EFFECTIVE
+      return value < NORMAL_EFFECTIVE && value > INEFFECTIVE
     end
   
     def normal?(value)
@@ -96,49 +100,39 @@ module GameData
     def super_effective?(value)
       return value > NORMAL_EFFECTIVE
     end
-  
-    def ineffective_type?(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      value = calculate(attack_type, defend_type1, defend_type2, defend_type3)
-      return ineffective?(value)
-    end
-  
-    def not_very_effective_type?(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      value = calculate(attack_type, defend_type1, defend_type2, defend_type3)
-      return not_very_effective?(value)
-    end
-  
-    def resistant_type?(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      value = calculate(attack_type, defend_type1, defend_type2, defend_type3)
-      return resistant?(value)
-    end
-  
-    def normal_type?(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      value = calculate(attack_type, defend_type1, defend_type2, defend_type3)
-      return normal?(value)
-    end
-  
-    def super_effective_type?(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      value = calculate(attack_type, defend_type1, defend_type2, defend_type3)
-      return super_effective?(value)
-    end
 
     def hyper_effective?(value)
       return value > NORMAL_EFFECTIVE * 2
     end
   
-    def hyper_effective_type?(attack_type,defend_type1=nil,defend_type2=nil,defend_type3=nil)
-      return attack_type > NORMAL_EFFECTIVE * 2 if !defend_type1
-      value = calculate(attack_type, target_type1, target_type2, target_type3)
-      return hyper_effective?(value)
+    def ineffective_type?(attack_type, defend_type)
+      value = calculate_one(attack_type, defend_type)
+      return ineffective?(value)
     end
   
-    def barely_effective?(value)
-      return value < NORMAL_EFFECTIVE / 2 && value > INEFFECTIVE
+    def not_very_effective_type?(attack_type, defend_type)
+      value = calculate_one(attack_type, defend_type)
+      return not_very_effective?(value)
     end
   
-    def barely_effective_type?(attack_type,defend_type1=nil,defend_type2=nil,defend_type3=nil)
+    def resistant_type?(attack_type, defend_type)
+      value = calculate_one(attack_type, defend_type)
+      return resistant?(value)
+    end
+  
+    def normal_type?(attack_type, defend_type)
+      value = calculate_one(attack_type, defend_type)
+      return normal?(value)
+    end
+  
+    def super_effective_type?(attack_type, defend_type)
+      value = calculate_one(attack_type, defend_type)
+      return super_effective?(value)
+    end
+  
+    def barely_effective_type?(attack_type, types = [])
       return attack_type < NORMAL_EFFECTIVE / 2 && attack_type > INEFFECTIVE if !defend_type1
-      value = calculate(attack_type, target_type1, target_type2, target_type3)
+      value = calculate(attack_type, types = [])
       return barely_effective?(value)
     end
   
@@ -153,17 +147,12 @@ module GameData
       return GameData::Type.get(defend_type).effectiveness(attack_type)
     end
   
-    def calculate(attack_type, defend_type1, defend_type2 = nil, defend_type3 = nil)
-      mod1 = calculate_one(attack_type, defend_type1)
-      mod2 = NORMAL_EFFECTIVE_ONE
-      mod3 = NORMAL_EFFECTIVE_ONE
-      if defend_type2 && defend_type1 != defend_type2
-        mod2 = calculate_one(attack_type, defend_type2)
+    def calculate(attack_type, types = [])
+      modifier = 1.0
+      types.compact.uniq.each do |type|
+        modifier *= calculate_one(attack_type, type)
       end
-      if defend_type3 && defend_type1 != defend_type3 && defend_type2 != defend_type3
-        mod3 = calculate_one(attack_type, defend_type3)
-      end
-      return mod1 * mod2 * mod3
+      return modifier
     end
 end
 

@@ -45,28 +45,25 @@ class PokeBattle_Move
         ret = Effectiveness.calculate_one(moveType, defType)
         # Ring Target
         if target&.hasActiveItem?(:RINGTARGET) && Effectiveness.ineffective_type?(moveType, defType)
-            ret = Effectiveness::NORMAL_EFFECTIVE_ONE
+            ret = Effectiveness::NORMAL_EFFECTIVE
         end
         # Delta Stream's weather
         if @battle&.pbWeather == :StrongWinds && (defType == :FLYING && Effectiveness.super_effective_type?(moveType, defType))
-            ret = Effectiveness::NORMAL_EFFECTIVE_ONE
+            ret = Effectiveness::NORMAL_EFFECTIVE
         end
         # Grounded Flying-type Pokémon become susceptible to Ground moves
-        ret = Effectiveness::NORMAL_EFFECTIVE_ONE if !target&.airborne? && (defType == :FLYING && moveType == :GROUND)
+        ret = Effectiveness::NORMAL_EFFECTIVE if !target&.airborne? && (defType == :FLYING && moveType == :GROUND)
         # Inured
         ret /= 2 if target&.effectActive?(:Inured) && Effectiveness.super_effective_type?(moveType, defType)
         # Break Through
         if user&.hasActiveAbility?(:BREAKTHROUGH) && Effectiveness.ineffective_type?(moveType, defType)
-            ret = Effectiveness::NORMAL_EFFECTIVE_ONE
+            ret = Effectiveness::NORMAL_EFFECTIVE
         end
         return ret
     end
 
     def pbCalcTypeMod(moveType, user, target, uiOnlyCheck = false)
         return Effectiveness::NORMAL_EFFECTIVE unless moveType
-        if moveType == :GROUND && target.pbHasType?(:FLYING) && target.hasActiveItem?(:IRONBALL)
-            return Effectiveness::NORMAL_EFFECTIVE
-        end
 
         # Determine types
         tTypes = target.pbTypes(true, uiOnlyCheck)
@@ -74,15 +71,11 @@ class PokeBattle_Move
         immunityPierced = false
 
         # Get effectivenesses
-        typeMods = [Effectiveness::NORMAL_EFFECTIVE_ONE] * 3 # 3 types max
-        tTypes.each_with_index do |type, i|
-            newTypeMod = pbCalcTypeModSingle(moveType, type, user, target)
-            typeMods[i] = newTypeMod
-        end
-
-        # Multiply all effectivenesses together
         ret = 1
-        typeMods.each { |m| ret *= m }
+        tTypes.each do |type|
+            next if moveType == :GROUND && type == :FLYING && target.hasActiveItem?(:IRONBALL)
+            ret *= pbCalcTypeModSingle(moveType, type, user, target)
+        end
 
         # Partially pierce immunities
         if inherentImmunitiesPierced?(user, target)

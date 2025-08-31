@@ -1172,6 +1172,20 @@ Flags = CanSnatch
 Description = The user takes off at sonic speeds, raising its Speed by four steps and gaining the Flying type.
 Animation = AGILITY
 #-------------------------------
+[PRESSURESHOCK]
+Name = Pressure Shock
+Type = FLYING
+Category = Special
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 2
+FunctionCode = Basic
+Flags = CanProtect
+Description = The user quickly increases the air pressure to damage the target. This attack always goes before any other move.
+Animation = SONICBOOM
+#-------------------------------
 [SKYFALL]
 Name = Sky Fall
 Type = FLYING
@@ -5168,6 +5182,17 @@ FunctionCode = InertiaShock
 Flags = CanProtect
 Description = Deals 50% more damage if faster than the target. This lowers the user's Speed.
 Animation = VOLTTACKLE
+#-------------------------------
+[IONEXCHANGE]
+Name = Ion Exchange
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = NearOther
+FunctionCode = SwitchUserTargetSpeedsItems
+Flags = CanProtect
+Description = The user swaps the target's held item with its own. It also switches its unmodified Speed with the target's Speed.
 #-------------------------------
 [JOKEJOLT]
 Name = Joke Jolt
