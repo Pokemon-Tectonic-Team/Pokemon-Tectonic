@@ -594,7 +594,7 @@ Target = AllNearFoes
 FunctionCode = UserTakesThirdLessDamageThisTurn
 Flags = CanProtect
 Description = The user strikes the target, then slinks into the water. The user takes 33% less damage this turn.
-Animation = HEATWAVE
+Animation = QUICKATTACK
 #-------------------------------
 [WEATHERBURST]
 Name = Weather Burst

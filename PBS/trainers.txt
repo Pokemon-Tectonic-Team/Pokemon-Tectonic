@@ -7556,20 +7556,6 @@ Pokemon = TENTACRUEL,60
     AbilityIndex = 1 # Grip Strength
     Item = GRIPCLAW
 #-------------------------------
-[TECHWIZARD_JOVAN,Jovan]
-Pokemon = TROPIUS,60
-    Moves = GIGADRAIN,EVERNALIZE,RECYCLE,LEECHSEED
-    AbilityIndex = 1 # Berry Bunch
-    Item = CHERIBERRY,CADOBERRY
-Pokemon = KLEFKI,60
-    Moves = POLARIZEDROOM,ILLWISHES,BAR,NUMB
-    AbilityIndex = 0 # Prankster
-    Item = REINFORCINGROD
-Pokemon = STARMIE,60
-    Moves = RAPIDSPIN,BUBBLEBARRAGE,PULSAR,RAPIDHERTZ
-    AbilityIndex = 1 # Spectrum Vision
-    Item = LOADEDDICE
-#-------------------------------
 [DELINQUENT,Jeralyn]
 Pokemon = DITTO,58
     AbilityIndex = 0 # Imposter
