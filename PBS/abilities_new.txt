@@ -721,7 +721,7 @@ Description = Upon entry, summons a Cruel Cocoon on the Pokémon's side for 6 tu
 #-------------------------------
 [FLYBY]
 Name = Fly By
-Description = Hits opponent with Gust when withdrawn from battle.
+Description = Hits opponent with Gust when switched out.
 #-------------------------------
 [FLYTRAP]
 Name = Flytrap
@@ -1304,7 +1304,7 @@ Flags = MoonglowSynergy
 #-------------------------------
 [MOTHBURGLAR]
 Name = Moth Burglar
-Description = Hits opponent with Thief when withdrawn from battle.
+Description = Hits opponent with Thief when switched out.
 #-------------------------------
 [MULTITASKER]
 Name = Multitasker
