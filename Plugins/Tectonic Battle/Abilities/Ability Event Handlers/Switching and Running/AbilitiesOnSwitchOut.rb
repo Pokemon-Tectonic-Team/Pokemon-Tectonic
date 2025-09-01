@@ -14,6 +14,17 @@ BattleHandlers::AbilityOnSwitchOut.add(:NATURALCURE,
   }
 )
 
+BattleHandlers::AbilityOnSwitchOut.add(:RAPIDREFRESH,
+  proc { |ability, battler, battle, endOfBattle|
+      next if endOfBattle
+      battler.pbRecoverHP(battler.totalhp / 2.0, false, false, false)
+      if battler.pbHasAnyStatus?
+        battler.pbCureStatus(false)
+        battler.aiLearnsAbility(ability)
+      end
+  }
+)
+
 BattleHandlers::AbilityOnSwitchOut.add(:FLYBY,
   proc { |ability, battler, battle, endOfBattle|
       next if endOfBattle

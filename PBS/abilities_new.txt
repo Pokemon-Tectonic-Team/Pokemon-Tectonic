@@ -1585,6 +1585,10 @@ Name = Ram Prow
 Description = Ignores screens, Substitute, and Abilities that would affect its moves.
 Flags = MoldBreaking,IgnoreScreens,IgnoreSubstitute
 #-------------------------------
+[RAPIDREFRESH]
+Name = Rapid Refresh
+Description = Restores 50% of max HP and heals all non-volatile status conditions when switched out.
+#-------------------------------
 [RATTLEEM]
 Name = Rattle 'Em
 Description = Moves that can flinch are 50% more likely. Deals 50% more damage to Pokémon with flinch immunity.
