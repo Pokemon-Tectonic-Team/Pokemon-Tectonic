@@ -62,7 +62,9 @@ class CatchingMinigame
     def scorePokemon(pokemon,baseLevelForScoring)
         rarity = GameData::Species.get(pokemon.species).catch_rate
         level = pokemon.level
-        return [((255-rarity)/4.0 + (level - baseLevelForScoring) * 4).floor,0].max
+        score = [((255-rarity)/4.0 + (level - baseLevelForScoring) * 4).floor,0].max
+        score += 20 if pokemon.shiny?
+        return score
     end
 
     def spendTurn()
@@ -85,8 +87,13 @@ class CatchingMinigame
         if @currentMaxScorePokemon.nil?
             pbMessage(_INTL("You caught no Pokemon worth any points."))
         else
-            speciesName = GameData::Species.get(currentMaxScorePokemon.species).name
-            pbMessage(_INTL("Your best catch was a level {1} {2}, which gives you a score of {3}.",@currentMaxScorePokemon.level,speciesName,@currentMaxScore))
+            speciesName = GameData::Species.get(@currentMaxScorePokemon.species).name
+            if @currentMaxScorePokemon.shiny?
+              pbMessage(_INTL("Your best catch was a shiny level {1} {2}.",@currentMaxScorePokemon.level,speciesName))
+            else
+              pbMessage(_INTL("Your best catch was a level {1} {2}.",@currentMaxScorePokemon.level,speciesName))
+            end
+            pbMessage(_INTL("Your final score is {1}.",@currentMaxScore))
             giveReward(@currentMaxScore)
         end
         @currentMaxScore = 0
