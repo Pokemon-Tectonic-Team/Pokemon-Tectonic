@@ -14,13 +14,14 @@ module DeterministicSample
     private
 
     def override_array_sample
-      battle = self
-      
       Array.class_eval do
         unless method_defined?(:cable_club_sample)
           alias_method :original_ruby_sample, :sample
           
           define_method :cable_club_sample do |n = nil, random: nil|
+            # Get the current battle instance dynamically
+            battle = Thread.current[:current_cable_club_battle]
+            return original_ruby_sample(n, random: random) unless battle&.respond_to?(:pbRandom)
             if n.nil?
               # Sample single element
               return nil if empty?
@@ -49,7 +50,8 @@ module DeterministicSample
           
           define_method :sample do |n = nil, random: nil|
             # Use deterministic sample if we have access to the battle instance
-            if defined?(battle) && battle.respond_to?(:pbRandom)
+            battle = Thread.current[:current_cable_club_battle]
+            if battle&.respond_to?(:pbRandom)
               cable_club_sample(n, random: random)
             else
               original_ruby_sample(n, random: random)
@@ -87,6 +89,7 @@ class PokeBattle_CableClub < PokeBattle_Battle
     # player.party = player_party
     player = $Trainer
     opponent.party = opponent_party
+    Thread.current[:current_cable_club_battle] = self
     super(scene, player_party, opponent_party, [player], [opponent])
     @battleAI  = PokeBattle_CableClub_AI.new(self)
     @battleRNG = Random.new(seed)
@@ -165,7 +168,12 @@ class PokeBattle_CableClub < PokeBattle_Battle
     echoln("RNG calls this battle: #{rngCalls}")
     return @battleRNG.rand(x)
   end
-  
+
+  def dispose
+    Thread.current[:current_cable_club_battle] = nil
+    super
+  end
+
   # Added optional args to not make v18 break.
   def pbSwitchInBetween(index, lax=false, cancancel=false, safeSwitch=nil)
     if pbOwnedByPlayer?(index)
