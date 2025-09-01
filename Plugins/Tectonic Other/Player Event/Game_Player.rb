@@ -10,9 +10,6 @@ class Game_Player < Game_Character
     attr_accessor :charsetData
     attr_accessor :encounter_count
   
-    SCREEN_CENTER_X = (Settings::SCREEN_WIDTH / 2 - Game_Map::TILE_WIDTH / 2) * Game_Map::X_SUBPIXELS
-    SCREEN_CENTER_Y = (Settings::SCREEN_HEIGHT / 2 - Game_Map::TILE_HEIGHT / 2) * Game_Map::Y_SUBPIXELS
-  
     def initialize(*arg)
       super(*arg)
       @lastdir=0
@@ -205,9 +202,17 @@ class Game_Player < Game_Character
     #-----------------------------------------------------------------------------
     # * Set Map Display Position to Center of Screen
     #-----------------------------------------------------------------------------
+    def screenCenterX
+      return (Settings::SCREEN_WIDTH / 2 - Game_Map::TILE_WIDTH / 2) * Game_Map::X_SUBPIXELS
+    end
+
+    def screenCenterY
+      return (Settings::SCREEN_HEIGHT / 2 - Game_Map::TILE_HEIGHT / 2) * Game_Map::Y_SUBPIXELS
+    end
+
     def center(x, y)
-      self.map.display_x = x * Game_Map::REAL_RES_X - SCREEN_CENTER_X
-      self.map.display_y = y * Game_Map::REAL_RES_Y - SCREEN_CENTER_Y
+      self.map.display_x = x * Game_Map::REAL_RES_X - screenCenterX
+      self.map.display_y = y * Game_Map::REAL_RES_Y - screenCenterY
     end
   
     #-----------------------------------------------------------------------------
@@ -433,10 +438,10 @@ class Game_Player < Game_Character
     end
   
     # Center player on-screen
-    def update_screen_position(last_real_x, last_real_y)
+    def update_screen_position(last_real_x = nil, last_real_y = nil)
       return if self.map.scrolling? || !(@moved_last_frame || @moved_this_frame)
-      self.map.display_x = @real_x - SCREEN_CENTER_X
-      self.map.display_y = @real_y - SCREEN_CENTER_Y
+      self.map.display_x = @real_x - screenCenterX
+      self.map.display_y = @real_y - screenCenterY
     end
   
     def update_event_triggering
