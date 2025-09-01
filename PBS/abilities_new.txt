@@ -463,6 +463,10 @@ Description = On the first turn, its attacks numb the target.
 Name = Disorienting
 Description = Boosts Defense by 20%. When the Pokémon takes its second physical hit from a foe, they become dizzied.
 #-------------------------------
+[DISTORTEDGRAVITY]
+Name = Distorted Gravity
+Description = While Gravity is active, deals damage to all foes. While the Pokemon is active, Gravity does not decay.
+#-------------------------------
 [DOMINATING]
 Name = Dominating
 Description = After knocking out any Pokémon, raises its Attack and Defense.

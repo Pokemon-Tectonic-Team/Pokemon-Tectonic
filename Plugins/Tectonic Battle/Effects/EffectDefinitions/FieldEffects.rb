@@ -29,7 +29,9 @@ GameData::BattleEffect.register_effect(:Field, {
     :id => :Gravity,
     :real_name => "Gravity Turns",
     :type => :Integer,
-    :ticks_down => true,
+    :ticks_down_proc => proc do |battle, value|
+        next !battle.pbCheckGlobalAbility(:DISTORTEDGRAVITY)
+    end,
     :apply_proc => proc do |battle, _value|
         battle.pbDisplay(_INTL("Gravity intensified!"))
         battle.pbDisplay(_INTL("Everyone is twice as accurate and weighs twice as much!"))
