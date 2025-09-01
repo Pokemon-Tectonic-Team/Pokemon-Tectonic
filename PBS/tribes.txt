@@ -19,4 +19,4 @@ SERENE,5,Serene,"Enemy Pokemon's chance to activate their additional effects aga
 STAMPEDE,5,Stampede,"Your team has 15% increased Speed."
 TACTICIAN,5,Tactician,"Your Pokemon deal 15% more damage to targets that haven’t moved yet this turn. Your priority attacks and priority status moves have doubled PP."
 TYRANNICAL,5,Tyrannical,"Ignore the first time each battle that one of your team members would flinch or get a non-volatile status condition."
-WARRIOR,5,Warrior,"Your team members take 15% less move damage if they're using an attack this turn."
+WARRIOR,5,Warrior,"Your team members take 15% less move damage if they choose an attack this turn."
