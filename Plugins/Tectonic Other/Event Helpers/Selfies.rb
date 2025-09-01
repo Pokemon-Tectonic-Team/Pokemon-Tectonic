@@ -1,3 +1,5 @@
+SELFIE_ZOOM_FACTOR = 0.5
+
 def takeSelfie
     caption = ""
     blackFadeOutIn {
@@ -11,7 +13,12 @@ def takeSelfie
 
       # Set the text
       caption = pbEnterText(_INTL("Enter caption."),0,50,"",0,nil,true)
+
+      Graphics.resize_screen((Settings::SCREEN_WIDTH * SELFIE_ZOOM_FACTOR).floor, (Settings::SCREEN_HEIGHT * SELFIE_ZOOM_FACTOR).floor)
+      pbSetResizeFactor($Options.screensize)
+      $game_map.centerCameraOnPlayer(0,-0.5)
     }
+
     pbWait(10)
 
     if caption.length > 0
@@ -23,12 +30,12 @@ def takeSelfie
       overlay = BitmapSprite.new(Graphics.width, Graphics.height, viewport)
 
       overlay.bitmap.blt(0,0,selfieShaderBitmap.bitmap,Rect.new(0,0,Graphics.width,Graphics.height))
-      overlay.bitmap.font.size = 24
+      overlay.bitmap.font.size = 18
       overlay.z = 1
       
       # Draw the text
       pbDrawTextPositions(overlay.bitmap,[
-        [caption,Graphics.width / 2, Graphics.height / 2 + 88, 2, base, shadow, false]
+        [caption,Graphics.width / 2, Graphics.height * 2/3, 2, base, shadow, false]
       ])
     end
 
@@ -40,9 +47,15 @@ def takeSelfie
 
     pbWait(80)
 
-    # Dispose of elements
-    if caption.length > 0
-      overlay.dispose
-      viewport.dispose
-    end
+    blackFadeOutIn {
+      Graphics.resize_screen(Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)
+      pbSetResizeFactor($Options.screensize)
+      $game_map.centerCameraOnPlayer
+
+      # Dispose of elements
+      if caption.length > 0
+        overlay.dispose
+        viewport.dispose
+      end
+    }
 end

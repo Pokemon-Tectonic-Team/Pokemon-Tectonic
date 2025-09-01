@@ -791,13 +791,17 @@ class Game_Map
     end
 
     def centerCameraOnSpot(centerX, centerY)
-        self.display_x = (centerX - 7) * 128
-        self.display_y = (centerY - 7) * 128
+        centerOffsetX = (Graphics.width / TILE_WIDTH) / 2 - 1
+        self.display_x = (centerX - centerOffsetX) * 128
+        centerOffsetY = (Graphics.height / TILE_HEIGHT) / 2 + 1
+        self.display_y = (centerY - centerOffsetY) * 128
     end
 
-    def centerCameraOnPlayer
-        self.display_x = ($game_player.x - 7.5) * 128
-        self.display_y = ($game_player.y - 5.5) * 128
+    def centerCameraOnPlayer(xPixelsOffset = 0, yPixelsOffset = 0)
+        centerOffsetX = (Graphics.width / TILE_WIDTH) / 2 - 0.5
+        self.display_x = ($game_player.x - centerOffsetX + xPixelsOffset) * 128
+        centerOffsetY = (Graphics.height / TILE_HEIGHT) / 2 - 0.5
+        self.display_y = ($game_player.y - centerOffsetY + yPixelsOffset) * 128
     end
 
     def slideCameraToPlayer(speed = 3)
