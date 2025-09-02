@@ -238,16 +238,6 @@ MultipleForms.register(:ROTOM,{
   }
 })
 
-MultipleForms.register(:GIRATINA,{
-  "getForm" => proc { |pkmn|
-    maps = [49,50,51,72,73]   # Map IDs for Origin Forme
-    if pkmn.hasItem?(:GRISEOUSORB) || ($game_map && maps.include?($game_map.map_id))
-      next 1
-    end
-    next 0
-  }
-})
-
 MultipleForms.register(:ARCEUS,{
   "getForm" => proc { |pkmn|
     next nil unless pkmn.hasAbility?(:MULTITYPE)

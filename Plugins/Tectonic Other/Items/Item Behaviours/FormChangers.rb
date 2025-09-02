@@ -277,3 +277,54 @@ ItemHandlers::UseOnPokemon.add(:REINSOFUNITY, proc { |item, pkmn, scene|
     }
     next true
 })
+
+ItemHandlers::UseOnPokemon.add(:GRISEOUSCORE,proc { |item,pkmn,scene|
+    unless pkmn.isSpecies?(:GIRATINA)
+        pbSceneDefaultDisplay(_INTL("It has no effect on Pokémon other than Giratina."),scene)
+        next false
+    end
+    if pkmn.fainted?
+        pbSceneDefaultDisplay(_INTL("This can't be used on the fainted Pokémon."),scene)
+        next false
+    end
+    formToSet = pkmn.form == 0 ? 1 : 0
+    pkmn.setForm(formToSet) {
+        scene&.pbRefresh
+        pbSceneDefaultDisplay(_INTL("{1} changed Forme!",pkmn.name),scene)
+    }
+    next true
+})
+
+ItemHandlers::UseOnPokemon.add(:LUSTROUSGLOBE,proc { |item,pkmn,scene|
+    unless pkmn.isSpecies?(:PALKIA)
+        pbSceneDefaultDisplay(_INTL("It has no effect on Pokémon other than Palkia."),scene)
+        next false
+    end
+    if pkmn.fainted?
+        pbSceneDefaultDisplay(_INTL("This can't be used on the fainted Pokémon."),scene)
+        next false
+    end
+    formToSet = pkmn.form == 0 ? 1 : 0
+    pkmn.setForm(formToSet) {
+        scene&.pbRefresh
+        pbSceneDefaultDisplay(_INTL("{1} changed Forme!",pkmn.name),scene)
+    }
+    next true
+})
+
+ItemHandlers::UseOnPokemon.add(:ADAMANTCRYSTAL,proc { |item,pkmn,scene|
+    unless pkmn.isSpecies?(:DIALGA)
+        pbSceneDefaultDisplay(_INTL("It has no effect on Pokémon other than Dialga."),scene)
+        next false
+    end
+    if pkmn.fainted?
+        pbSceneDefaultDisplay(_INTL("This can't be used on the fainted Pokémon."),scene)
+        next false
+    end
+    formToSet = pkmn.form == 0 ? 1 : 0
+    pkmn.setForm(formToSet) {
+        scene&.pbRefresh
+        pbSceneDefaultDisplay(_INTL("{1} changed Forme!",pkmn.name),scene)
+    }
+    next true
+})
