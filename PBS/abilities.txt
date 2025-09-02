@@ -388,7 +388,7 @@ Flags = Uncopyable
 #-------------------------------
 [POWERSPOT]
 Name = Power Spot
-Description = Powers up nearby allies moves by 30%.
+Description = Powers up nearby allies' moves by 30%.
 #-------------------------------
 [PRANKSTER]
 Name = Prankster

@@ -198,3 +198,18 @@ BattleHandlers::EOREffectAbility.add(:AUTOSTRUCTURE,
     battler.hideMyAbilitySplash
   }
 )
+
+BattleHandlers::EOREffectAbility.add(:DISTORTEDGRAVITY,
+  proc { |ability, battler, battle|
+  next unless battle.gravityIntensified? 
+  battler.showMyAbilitySplash(ability)
+    battle.eachOtherSideBattler do |b|
+      if b.takesIndirectDamage?(true)
+        battle.pbDisplay(_INTL("{1} is crushed by the distorted gravity!", b.pbThis))
+        damageFraction = 1.0 / 16.0
+        b.applyFractionalDamage(damageFraction, false)
+      end
+    end
+    battler.hideMyAbilitySplash
+  }
+)

@@ -1217,3 +1217,13 @@ BattleHandlers::AbilityOnSwitchIn.add(:FALSEFRONT,
       battler.hideMyAbilitySplash
   }
 )
+
+BattleHandlers::AbilityOnSwitchIn.add(:DISTORTEDGRAVITY,
+  proc { |ability, battler, battle, aiCheck|
+      next unless battle.gravityIntensified?
+      next 0 if aiCheck
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("{1} twists the dimensions!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)

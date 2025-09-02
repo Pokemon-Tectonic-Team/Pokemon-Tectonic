@@ -194,6 +194,24 @@ Abilities = LEVITATE,HAUNTED
 FormMove = LEAFSTORM
 Pokedex = This is Rotom after it's seized control of a lawn mower that has a special motor. As it mows down grass, it scatters the clippings everywhere.
 #-------------------------------
+[DIALGA,1]
+FormName = Origin
+BaseStats = 90,90,110,85,135,110
+# Total = 620
+Abilities = PRESSURE
+Height = 7.0
+Weight = 850.0
+Pokedex = Radiant light caused Dialga to take on a form with the appearance of the creator. Dialga now wields such colossal strength that this must be its true form.
+#-------------------------------
+[PALKIA,1]
+FormName = Origin
+BaseStats = 85,95,95,115,135,95
+# Total = 620
+Abilities = PRESSURE
+Height = 6.3
+Weight = 660.0
+Pokedex = It soars across the sky in a form that greatly resembles the creator of all things. Perhaps this is Palkia's strategy for gaining Arceus's powers.
+#-------------------------------
 [GIRATINA,1]
 FormName = Origin
 BaseStats = 140,110,90,80,110,90
@@ -201,6 +219,7 @@ BaseStats = 140,110,90,80,110,90
 Abilities = LEVITATE
 Height = 6.9
 Weight = 650.0
+Pokedex = Giratina loses its legs upon changing into this form. This Pokémon must hail from a world where the heavens and the earth are as one.
 #-------------------------------
 [SHAYMIN,1]
 FormName = Sky
