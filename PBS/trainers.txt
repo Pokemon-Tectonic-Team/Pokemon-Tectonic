@@ -3509,7 +3509,7 @@ Pokemon = MAROMATISSE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15
 Pokemon = FLOATZEL,70
-    Moves = GIGAIMPACT,WHIRLWINDKICK,HYPERJET,FAKEOUT
+    Moves = GIGAIMPACT,WHIRLWINDKICK,WEASELING,FAKEOUT
     AbilityIndex = 0 # Moxie
     Item = ENERGYHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
@@ -4835,7 +4835,7 @@ Pokemon = CRADILY,55
 #-------------------------------
 [SWIMMER_M3,Diego]
 Pokemon = FLOATZEL,56
-    Moves = FAKEOUT,HYPERJET,STORMTHROW,MEGAPUNCH
+    Moves = FAKEOUT,WEASELING,STORMTHROW,MEGAPUNCH
     AbilityIndex = 1 # Technician
     Item = EJECTBUTTON
 Pokemon = CACTURNE,56
@@ -7483,7 +7483,7 @@ Pokemon = BARRASKEWDA,60
     Item = MUSCLEBAND
 Pokemon = CORSOLA,60
     Moves = RECOVER,MOONBLAST,SLAMSHUT,PROTECT
-    AbilityIndex = 1 # Persistent Growth
+    AbilityIndex = 0 # Persistent Growth
     Item = LEFTOVERS
 Pokemon = HITMONLEE,60
     Moves = WHIRLWINDKICK,WHIPKICK,BLAZEKICK,STOMPINGTANTRUM
@@ -7555,20 +7555,6 @@ Pokemon = TENTACRUEL,60
     Moves = SLAMSHUT,POISONJAB,TERRORSWARM,KINETICGRIP
     AbilityIndex = 1 # Grip Strength
     Item = GRIPCLAW
-#-------------------------------
-[TECHWIZARD_JOVAN,Jovan]
-Pokemon = TROPIUS,60
-    Moves = GIGADRAIN,EVERNALIZE,RECYCLE,LEECHSEED
-    AbilityIndex = 1 # Berry Bunch
-    Item = CHERIBERRY,CADOBERRY
-Pokemon = KLEFKI,60
-    Moves = POLARIZEDROOM,ILLWISHES,BAR,NUMB
-    AbilityIndex = 0 # Prankster
-    Item = REINFORCINGROD
-Pokemon = STARMIE,60
-    Moves = RAPIDSPIN,BUBBLEBARRAGE,PULSAR,RAPIDHERTZ
-    AbilityIndex = 1 # Spectrum Vision
-    Item = LOADEDDICE
 #-------------------------------
 [DELINQUENT,Jeralyn]
 Pokemon = DITTO,58
@@ -9060,7 +9046,7 @@ Pokemon = INFERNAPE,70
     Moves = ACROBATICS,SECRETTECHNIQUE,FLAREBLITZ,UTURN
     AbilityIndex = 1 # Monkey Mischief
 Pokemon = FLOATZEL,70
-    Moves = HYPERJET,FURYSWIPES,ROCKBLAST,ICICLESPEAR
+    Moves = WEASELING,FURYSWIPES,ROCKBLAST,ICICLESPEAR
     AbilityIndex = 1 # Technician
     Item = LOADEDDICE
 Pokemon = LEAFEON,70

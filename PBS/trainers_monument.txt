@@ -1172,7 +1172,7 @@ Pokemon = HONCHKROW,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,0,20,20,10
 Pokemon = FLOATZEL,70
-    Moves = GIGAIMPACT,WHIRLWINDKICK,HYPERJET,FACADE
+    Moves = GIGAIMPACT,WHIRLWINDKICK,WEASELING,FACADE
     AbilityIndex = 0 # Moxie
     Item = ENERGYHERB
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

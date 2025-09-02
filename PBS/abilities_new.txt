@@ -725,7 +725,7 @@ Description = Upon entry, summons a Cruel Cocoon on the Pokémon's side for 6 tu
 #-------------------------------
 [FLYBY]
 Name = Fly By
-Description = Hits opponent with Gust when withdrawn from battle.
+Description = Hits opponent with Gust when switched out.
 #-------------------------------
 [FLYTRAP]
 Name = Flytrap
@@ -1308,7 +1308,7 @@ Flags = MoonglowSynergy
 #-------------------------------
 [MOTHBURGLAR]
 Name = Moth Burglar
-Description = Hits opponent with Thief when withdrawn from battle.
+Description = Hits opponent with Thief when switched out.
 #-------------------------------
 [MULTITASKER]
 Name = Multitasker
@@ -1588,6 +1588,10 @@ Flags = RainstormSynergy
 Name = Ram Prow
 Description = Ignores screens, Substitute, and Abilities that would affect its moves.
 Flags = MoldBreaking,IgnoreScreens,IgnoreSubstitute
+#-------------------------------
+[RAPIDREFRESH]
+Name = Rapid Refresh
+Description = Restores 50% of max HP and heals all non-volatile status conditions when switched out.
 #-------------------------------
 [RATTLEEM]
 Name = Rattle 'Em
