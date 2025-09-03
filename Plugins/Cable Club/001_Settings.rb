@@ -6,6 +6,8 @@ module CableClub
   # Change if testing locally or connecting to 3rd party server
   HOST = PUBLIC_HOST
   PORT = 9999
+
+  UNSAFE_CHARACTERS = ["\\", ","]
   
   FOLDER_FOR_BATTLE_PRESETS = "OnlinePresets"
   
