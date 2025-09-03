@@ -153,6 +153,7 @@ end
 def moveUseTypeChangeAbility(ability, user, move, battle, thirdType = false)
     return false if move.callsAnotherMove?
     return false if move.snatched
+    return false if battle.struggle
     return false if GameData::Type.get(move.calcType).pseudo_type
     return false unless user.pbHasOtherType?(move.calcType)
     battle.pbShowAbilitySplash(user, ability)
