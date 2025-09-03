@@ -583,6 +583,19 @@ Flags = CanProtect
 Description = The user flings the dirty oil on its fur. It transfers any non-volatile status condition to the target.
 Animation = ACIDSPRAY
 #-------------------------------
+[WEASELING]
+Name = Weaseling
+Type = NORMAL
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = AllNearFoes
+FunctionCode = UserTakesThirdLessDamageThisTurn
+Flags = CanProtect
+Description = The user strikes the target, then slinks into the water. The user takes 33% less damage this turn.
+Animation = QUICKATTACK
+#-------------------------------
 [WEATHERBURST]
 Name = Weather Burst
 Type = NORMAL
@@ -4237,20 +4250,6 @@ FunctionCode = RecoilThirdOfDamageDealt
 Flags = CanProtect
 Description = The user crashes into the target like a tsunami. The user also takes 33% recoil.
 Animation = WATERFALL
-#-------------------------------
-[HYPERJET]
-Name = Hyper Jet
-Type = WATER
-Category = Physical
-Power = 80
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-Priority = 2
-FunctionCode = Basic
-Flags = CanProtect
-Description = The user swims at the target at blinding speed. This attack always goes before any other move.
-Animation = AQUAJET
 #-------------------------------
 [IMMERSE]
 Name = Immerse

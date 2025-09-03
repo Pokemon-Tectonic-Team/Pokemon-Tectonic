@@ -817,17 +817,6 @@ FunctionCode = Basic
 Flags = CanProtect,CanRandomCrit,Blade
 Description = The target is attacked with a slash of claws or blades. Can random critical hit.
 #-------------------------------
-[SLEEPTALK]
-Name = Sleep Talk
-Type = NORMAL
-Category = Status
-Accuracy = 0
-TotalPP = 10
-Target = User
-FunctionCode = UseRandomUserMoveIfAsleep
-Flags = Sound
-Description = While it is asleep, the user randomly uses one of the moves it knows.
-#-------------------------------
 [SMELLINGSALTS]
 Name = Smelling Salts
 Type = NORMAL

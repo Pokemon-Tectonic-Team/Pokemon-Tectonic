@@ -681,6 +681,17 @@ FunctionCode = Invalid
 Flags = CanProtect
 Description = The target is slammed with a long tail, vines, etc., to inflict damage.
 #-------------------------------
+[SLEEPTALK]
+Name = Sleep Talk
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = Invalid
+Flags = Sound
+Description = While it is asleep, the user randomly uses one of the moves it knows.
+#-------------------------------
 [SMOKESCREEN]
 Name = Smokescreen
 Type = NORMAL
@@ -2211,6 +2222,20 @@ Target = NearOther
 FunctionCode = Invalid
 Flags = CanProtect,CanRandomCrit
 Description = The target is hammered with a large pincer. Can random critical hit.
+#-------------------------------
+[HYPERJET]
+Name = Hyper Jet
+Type = WATER
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+Priority = 2
+FunctionCode = Invalid
+Flags = CanProtect
+Description = The user swims at the target at blinding speed. This attack always goes before any other move.
+Animation = AQUAJET
 #-------------------------------
 [INVITERAIN]
 Name = Invite Rain

@@ -340,7 +340,7 @@ Description = When the Pokémon is hit by an attack, the attacker's ability beco
 #-------------------------------
 [NATURALCURE]
 Name = Natural Cure
-Description = All non-volatile status conditions heal when it switches out.
+Description = All non-volatile status conditions heal when switched out.
 #-------------------------------
 [NEUROFORCE]
 Name = Neuroforce
@@ -388,7 +388,7 @@ Flags = Uncopyable
 #-------------------------------
 [POWERSPOT]
 Name = Power Spot
-Description = Powers up nearby allies moves by 30%.
+Description = Powers up nearby allies' moves by 30%.
 #-------------------------------
 [PRANKSTER]
 Name = Prankster
@@ -422,7 +422,7 @@ Description = Powers up moves that have recoil damage by 30%.
 #-------------------------------
 [REGENERATOR]
 Name = Regenerator
-Description = Restores 25% of max HP when withdrawn from battle.
+Description = Restores 25% of max HP when switched out.
 #-------------------------------
 [RIPEN]
 Name = Ripen
