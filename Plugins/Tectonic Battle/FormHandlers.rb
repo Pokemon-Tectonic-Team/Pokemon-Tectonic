@@ -240,7 +240,7 @@ MultipleForms.register(:ROTOM,{
 
 MultipleForms.register(:ARCEUS,{
   "getForm" => proc { |pkmn|
-    next nil unless pkmn.hasAbility?(:MULTITYPE)
+    next 0 unless pkmn.hasAbility?(:MULTITYPE)
     next 0 unless pkmn.hasItem?(:PRISMATICPLATE)
     next GameData::Type.get(pkmn.itemTypeChosen).id_number
   }
