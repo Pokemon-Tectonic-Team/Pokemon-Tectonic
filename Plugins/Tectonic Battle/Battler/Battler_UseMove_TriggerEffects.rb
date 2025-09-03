@@ -43,10 +43,6 @@ class PokeBattle_Battler
             end
         end
         if target.opposes?(user) && user.activatesTargetEffects?
-            # Rage
-            if target.effectActive?(:Rage) && !target.fainted? && target.tryRaiseStat(:ATTACK, target, increment: 2)
-                @battle.pbDisplay(_INTL("{1}'s rage is building!", target.pbThis))
-            end
             # Primal Forest
             if target.pbOwnSide.effectActive?(:PrimalForest) && !target.fainted?
                 @battle.pbDisplay(_INTL("{1} communes with the primal forest!", target.pbThis))
@@ -54,17 +50,17 @@ class PokeBattle_Battler
                 target.pbLowerMultipleStatSteps(DEFENDING_STATS_1, nil)
             end
             # Beak Blast
-            if target.effectActive?(:BeakBlast)
+            if target.effectActive?(:BeakBlast, true)
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Beak Blast")
                 user.applyBurn(target) if move.physicalMove? && user.canBurn?(target, true, move)
             end
             # Condensate
-            if target.effectActive?(:Condensate)
+            if target.effectActive?(:Condensate, true)
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Condensate")
                 user.applyFrostbite(target) if move.specialMove? && user.canFrostbite?(target, true, move)
             end
             # Shard Surge
-            if target.effectActive?(:ShardSurge)
+            if target.effectActive?(:ShardSurge, true)
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Shard Surge")
                 if move.specialMove? && !user.pbOpposingSide.effectAtMax?(:Spikes)
                     target.pbOpposingSide.incrementEffect(:Spikes)
@@ -83,10 +79,11 @@ class PokeBattle_Battler
             end
             # Destiny Bond (recording that it should apply)
             if target.effectActive?(:DestinyBond, true) && target.fainted? && !user.effectActive?(:DestinyBondTarget)
+                PBDebug.log("[Lingering effect] #{target.pbThis}'s Destiny Bond")
                 user.applyEffect(:DestinyBondTarget, target.index)
             end
             # Stunning Curl
-            if target.effectActive?(:StunningCurl) && !user.numbed?
+            if target.effectActive?(:StunningCurl, true) && !user.numbed?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Stunning Curl")
                 if user.canNumb?(target, false)
                     @battle.pbDisplay(_INTL("{1}'s stance made {2}'s attack bounce off akwardly!", target.pbThis,
@@ -95,7 +92,7 @@ user.pbThis(true)))
                 end
             end
             # Root Shelter
-            if target.effectActive?(:RootShelter) && !user.leeched?
+            if target.effectActive?(:RootShelter, true) && !user.leeched?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Root Shelter")
                 if user.canLeech?(target, false)
                     @battle.pbDisplay(_INTL("The roots guarding {1} dig into {2}!", target.pbThis(true),
@@ -104,7 +101,7 @@ user.pbThis(true)))
                 end
             end
             # Venom Guard
-            if target.effectActive?(:VenomGuard) && !user.poisoned?
+            if target.effectActive?(:VenomGuard, true) && !user.poisoned?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Venom Guard")
                 if user.canPoison?(target, false)
                     @battle.pbDisplay(_INTL("{1} was stuck by {2}'s venom!", user.pbThis, target.pbThis(true)))
@@ -112,7 +109,7 @@ user.pbThis(true)))
                 end
             end
             # Floodgate
-            if target.effectActive?(:Floodgate) && !user.waterlogged?
+            if target.effectActive?(:Floodgate, true) && !user.waterlogged?
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Floodgate")
                 if user.canWaterlog?(target, false)
                     @battle.pbDisplay(_INTL("{1} was flooded by {2}!", user.pbThis, target.pbThis(true)))
@@ -120,7 +117,7 @@ user.pbThis(true)))
                 end
             end
             # Bubble Barrier
-            if target.effectActive?(:BubbleBarrier) && target.damageState.bubbleBarrier > 0
+            if target.effectActive?(:BubbleBarrier, true) && target.damageState.bubbleBarrier > 0
                 recoilMessage = _INTL("The bubble barrier bursts, harming {1}!", user.pbThis(true))
                 user.applyRecoilDamage(target.damageState.bubbleBarrier, true, true, recoilMessage)
                 target.disableEffect(:BubbleBarrier)
