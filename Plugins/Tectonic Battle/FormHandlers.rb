@@ -378,7 +378,7 @@ MultipleForms.register(:WISHIWASHI,{
 
 MultipleForms.register(:SILVALLY,{
   "getForm" => proc { |pkmn|
-    next nil unless pkmn.hasAbility?(:RKSSYSTEM)
+    next 0 unless pkmn.hasAbility?(:RKSSYSTEM)
     next 0 unless pkmn.hasItem?(:MEMORYSET)
     next GameData::Type.get(pkmn.itemTypeChosen).id_number
   }
