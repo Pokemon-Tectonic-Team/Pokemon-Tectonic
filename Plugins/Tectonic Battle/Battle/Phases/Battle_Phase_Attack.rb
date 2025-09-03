@@ -198,7 +198,6 @@ class PokeBattle_Battle
             if @choices[i][0] != :UseMove && @choices[i][0] != :Shift && @choices[i][0] != :SwitchOut
                 b.disableEffect(:DestinyBond)
             end
-            b.disableEffect(:Rage) unless pbChoseMoveFunctionCode?(i, "093") # Rage
             b.applyEffect(:ChoseAttack) if b.usingAttackThisTurn?
             b.applyEffect(:ChoseStatus) if b.usingStatusThisTurn?
             b.lastRoundHighestTypeModFromFoe = -1
