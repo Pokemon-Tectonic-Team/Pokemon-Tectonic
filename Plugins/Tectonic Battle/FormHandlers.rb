@@ -312,9 +312,9 @@ MultipleForms.register(:GENESECT,{
   }
 })
 
-MultipleForms.register(:GRENINJA,{
+MultipleForms.register(:CRAMORANT,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next 1 if pkmn.form == 2 && (pkmn.fainted? || endBattle)
+    next 0
   }
 })
 
