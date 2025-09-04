@@ -517,6 +517,7 @@ Bicycle = false
 Outdoor = false
 ShowArea = true
 Bicycle = true
+BattleBack = indoor2
 #-------------------------------
 [068]
 # Room 104

@@ -681,6 +681,17 @@ FunctionCode = Invalid
 Flags = CanProtect
 Description = The target is slammed with a long tail, vines, etc., to inflict damage.
 #-------------------------------
+[SLEEPTALK]
+Name = Sleep Talk
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = User
+FunctionCode = Invalid
+Flags = Sound
+Description = While it is asleep, the user randomly uses one of the moves it knows.
+#-------------------------------
 [SMOKESCREEN]
 Name = Smokescreen
 Type = NORMAL

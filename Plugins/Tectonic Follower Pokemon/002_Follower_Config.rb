@@ -198,7 +198,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
     pbWait(72)
     messages = [
       _INTL("{1} looks eager to battle!"),
-      _INTL("{1} is looking at {2} with a determined gleam in its' eye."),
+      _INTL("{1} is looking at {2} with a determined gleam in its eye."),
       _INTL("{1} is trying to intimidate the other trainers."),
       _INTL("{1} trusts {2} to come up with a winning strategy."),
       _INTL("{1} is keeping an eye on the gym leader."),
@@ -330,7 +330,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       messages = [
         _INTL("{1} is watching the snow fall."),
         _INTL("{1} is nipping at the falling snowflakes."),
-        _INTL("{1} wants to catch a snowflake in its' mouth."),
+        _INTL("{1} wants to catch a snowflake in its mouth."),
         _INTL("{1} is fascinated by the snow."),
         _INTL("{1}'s teeth are chattering!"),
         _INTL("{1} made its body slightly smaller because of the cold...")
@@ -651,10 +651,10 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       _INTL("{1}'s mind seems to be elsewhere."),
       _INTL("{1} seems to be observing the surroundings instead of watching {2}."),
       _INTL("{1} looks a bit bored."),
-      _INTL("{1} has an intense look on its' face."),
+      _INTL("{1} has an intense look on its face."),
       _INTL("{1} is staring off into the distance."),
       _INTL("{1} seems to be carefully examining {2}'s face."),
-      _INTL("{1} seems to be trying to communicate with its' eye(s)."),
+      _INTL("{1} seems to be trying to communicate with its eye(s)."),
       _INTL("...{1} seems to have sneezed!"),
       _INTL("...{1} noticed that {2}'s shoes are a bit dirty."),
       _INTL("Seems {1} ate something strange, it's making an odd face... "),
@@ -702,7 +702,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       _INTL("{1} is jumping with joy!"),
       _INTL("{1} is still feeling great!"),
       _INTL("{1} stretched out its body and is relaxing."),
-      _INTL("{1} is doing its' best to keep up with {2}."),
+      _INTL("{1} is doing its best to keep up with {2}."),
       _INTL("{1} is happily cuddling up to {2}!"),
       _INTL("{1} is full of energy!"),
       _INTL("{1} is so happy that it can't stand still!"),
@@ -713,7 +713,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       _INTL("{1} is so happy, it started rolling around."),
       _INTL("{1} looks thrilled at getting attention from {2}."),
       _INTL("{1} seems very pleased that {2} is noticing it!"),
-      _INTL("{1} started wriggling its' entire body with excitement!"),
+      _INTL("{1} started wriggling its entire body with excitement!"),
       _INTL("It seems like {1} can barely keep itself from hugging {2}!"),
       _INTL("{1} is keeping close to {2}'s feet.")
     ]
@@ -773,7 +773,7 @@ Events.OnTalkToFollower += proc {|pkmn,event,random_val|
       _INTL("{1} looks like it wants a treat from {2}."),
       _INTL("{1} looks like it wants {2} to pet it!"),
       _INTL("{1} is rubbing itself against {2} affectionately."),
-      _INTL("{1} bumps its' head gently against {2}'s hand."),
+      _INTL("{1} bumps its head gently against {2}'s hand."),
       _INTL("{1} rolls over and looks at {2} expectantly."),
       _INTL("{1} is looking at {2} with trusting eyes."),
       _INTL("{1} seems to be begging {2} for some affection!"),

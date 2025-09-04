@@ -7417,7 +7417,7 @@ Pokemon = GENGAR,57
     AbilityIndex = 0 # Levitate
     Item = ICEGEM
 Pokemon = MMUSHARNA,57
-    Moves = SLEEPTALK,PIERCINGDOUBT,DIAMONDFORCE,DIAMETRICBREATH
+    Moves = SNORE,PIERCINGDOUBT,DIAMONDFORCE,DIAMETRICBREATH
     AbilityIndex = 0 # Slumbering Drake
 Pokemon = ZANGOOSE,58
     Moves = DEEPBREATHING,PALEBLADE,DISTURB,PSYCHICFANGS
@@ -7465,7 +7465,7 @@ Pokemon = MSEVIPER,58
     Moves = IRONHEAD,LIGHTNINGSLAM,LIQUIDATION,SWORDSDANCE
     AbilityIndex = 0 # Tesla Coils
 Pokemon = POLITOED,58
-    Moves = SLAMSHUT,HYPERVOICE,REST,SLEEPTALK
+    Moves = SLAMSHUT,HYPERVOICE,REST,SNORE
     AbilityIndex = 1 # Bellower
 Pokemon = KRICKETUNE,60
     Moves = BUGBUZZ,DARKALLURE,EERIESPELL,HYPERVOICE
@@ -8878,7 +8878,7 @@ Pokemon = MMUSHARNA,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10
 Pokemon = MUSHARNA,70
-    Moves = MOONBLAST,THUNDERBOLT,REST,SLEEPTALK
+    Moves = MOONBLAST,THUNDERBOLT,REST,SNORE
     AbilityIndex = 0 # Dream Weaver
     Item = SHELLBELL
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
