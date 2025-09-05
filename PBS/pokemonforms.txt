@@ -131,9 +131,13 @@ Moves = 1,GRAVITY,1,LEER,5,RETREAT,10,PULSAR,15,KNOCKOFF,20,PURSUIT,25,PSYCHIC,3
 #-------------------------------
 [BURMY,1]
 FormName = Sand
+Type1 = BUG
+Type2 = GROUND
 #-------------------------------
 [BURMY,2]
 FormName = Trash
+Type1 = BUG
+Type2 = STEEL
 #-------------------------------
 [WORMADAM,1]
 FormName = Sand
