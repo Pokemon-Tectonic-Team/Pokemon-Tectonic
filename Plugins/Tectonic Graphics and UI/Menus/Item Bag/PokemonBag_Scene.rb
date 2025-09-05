@@ -49,9 +49,9 @@ class PokemonBag_Scene
       @sprites["background_color"] = IconSprite.new(0,0,@viewport)
       @sprites["overlay"] = BitmapSprite.new(Graphics.width,Graphics.height,@viewport)
       pbSetSystemFont(@sprites["overlay"].bitmap)
-      @sprites["pocketicon"] = BitmapSprite.new(186,32,@viewport)
+      @sprites["pocketicon"] = BitmapSprite.new(186,52,@viewport)
       @sprites["pocketicon"].x = 0
-      @sprites["pocketicon"].y = 224
+      @sprites["pocketicon"].y = 202
       @sprites["leftarrow"] = AnimatedSprite.new("Graphics/Pictures/leftarrow",8,40,28,2,@viewport)
       @sprites["leftarrow"].x       = -4
       @sprites["leftarrow"].y       = 76
@@ -135,13 +135,14 @@ class PokemonBag_Scene
       if @choosing && @filterlist
         for i in 1...@bag.pockets.length
           if @filterlist[i].length==0
-            @sprites["pocketicon"].bitmap.blt(6+(i-1)*22,6,
-               @pocket_unused_bitmap.bitmap,Rect.new((i-1)*20,0,20,20))
+            @sprites["pocketicon"].bitmap.blt(6+((i-1))*22,6,
+               @pocket_unused_bitmap.bitmap,Rect.new(((i-1) % 8)*20,((i-1) / 8) * 22,20,20))
           end
         end
       end
+      # Draw the selected pocket icon
       pocketGraphicIndex = (@sprites["itemlist"].pocket-1)
-      @sprites["pocketicon"].bitmap.blt(2+(pocketGraphicIndex & 8)*22,2 + (pocketGraphicIndex / 8) * ,
+      @sprites["pocketicon"].bitmap.blt(2+(pocketGraphicIndex % 8)*22,2 + (pocketGraphicIndex / 8) * 22,
          @pocketbitmap.bitmap,Rect.new(pocketGraphicIndex*28,0,28,28))
       # Refresh the item window
       @sprites["itemlist"].refresh
@@ -265,20 +266,20 @@ class PokemonBag_Scene
                     break if @bag.pockets[newpocket].length>0
                   end
                 end
-              elsif Input.trigger?(Input::JUMPUP)
-                potentialNewPocket = newpocket >= 9 ? newpocket - 8 : newpocket + 8
-                if @filterlist
-                  newpocket = potentialNewPocket if @filterlist[potentialNewPocket].length>0
-                else
-                  newpocket = potentialNewPocket
-                end
-              elsif Input.trigger?(Input::JUMPDOWN)
-                potentialNewPocket = newpocket <= 8 ? newpocket + 8 : newpocket - 8
-                if @filterlist
-                  newpocket = potentialNewPocket if @filterlist[potentialNewPocket].length>0
-                else
-                  newpocket = potentialNewPocket
-                end
+              # elsif Input.trigger?(Input::JUMPUP)
+              #   potentialNewPocket = newpocket >= 9 ? newpocket - 8 : newpocket + 8
+              #   if @filterlist
+              #     newpocket = potentialNewPocket if @filterlist[potentialNewPocket].length>0
+              #   else
+              #     newpocket = potentialNewPocket
+              #   end
+              # elsif Input.trigger?(Input::JUMPDOWN)
+              #   potentialNewPocket = newpocket <= 8 ? newpocket + 8 : newpocket - 8
+              #   if @filterlist
+              #     newpocket = potentialNewPocket if @filterlist[potentialNewPocket].length>0
+              #   else
+              #     newpocket = potentialNewPocket
+              #   end
               elsif Input.trigger?(Input::ACTION)   # Start switching the selected item
                 if !@choosing
                   if thispocket.length>1 && itemwindow.index < thispocket.length &&
