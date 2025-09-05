@@ -478,7 +478,40 @@ module Compiler
     f.write(sprintf("[%s]\r\n", item.id))
     f.write(sprintf("Name = %s\r\n", item.real_name))
     f.write(sprintf("NamePlural = %s\r\n", item.real_name_plural))
-    f.write(sprintf("Pocket = %d\r\n", item.pocket))
+    modifiedPocket = item.pocket
+    # case item.pocket
+    # when 1
+    #   if item.is_evolution_item?
+    #     modifiedPocket = 4
+    #   elsif item.name.downcase.include?("fossil") || item.name.downcase.include?("token") || item.name.downcase.include?("ore") || item.name.downcase.include?("egg")
+    #     modifiedPocket = 16
+    #   end
+    # when 2
+    #   if item.name.downcase.include?("candy")
+    #     modifiedPocket = 3
+    #   end
+    # when 3
+    #   modifiedPocket = 14
+    # when 4
+    #   modifiedPocket = 5
+    # when 5
+    #   if item.is_berry?
+    #     modifiedPocket = 9
+    #   elsif item.is_gem?
+    #     modifiedPocket = 10
+    #   elsif item.is_herb?
+    #     modifiedPocket = 11
+    #   elsif item.is_clothing?
+    #     modifiedPocket = 12
+    #   else
+    #     modifiedPocket = 13
+    #   end
+    # when 6
+    #   modifiedPocket = 15
+    # when 7
+    #   modifiedPocket = 6
+    # end
+    f.write(sprintf("Pocket = %d\r\n", modifiedPocket))
     f.write(sprintf("Price = %d\r\n", item.price))
     f.write(sprintf("SellPrice = %d\r\n", item.sell_price)) if item.sell_price != item.price / 2
     field_use = GameData::Item::SCHEMA["FieldUse"][2].key(item.field_use)

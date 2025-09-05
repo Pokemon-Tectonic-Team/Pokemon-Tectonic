@@ -3,7 +3,7 @@
 [CHOICECROWN]
 Name = Choice Crown
 NamePlural = Choice Crowns
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,ChoiceLocking
 Description = Held item which ups Attacking stats and Speed by 50%, but allows the use of only one move.
@@ -11,7 +11,7 @@ Description = Held item which ups Attacking stats and Speed by 50%, but allows t
 [ZENITHBAND]
 Name = Zenith Band
 NamePlural = Zenith Bands
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,ChoiceLocking
 Description = Held item which doubles Attack, but allows the use of only one move.
@@ -19,7 +19,7 @@ Description = Held item which doubles Attack, but allows the use of only one mov
 [ZENITHSPECS]
 Name = Zenith Specs
 NamePlural = Zenith Specs
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,ChoiceLocking
 Description = Held item which doubles Sp. Atk, but allows the use of only one move.
@@ -27,7 +27,7 @@ Description = Held item which doubles Sp. Atk, but allows the use of only one mo
 [ZENITHSCARF]
 Name = Zenith Scarf
 NamePlural = Zenith Scarves
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,ChoiceLocking
 Description = Held item which doubles Speed, but allows the use of only one move.
@@ -35,7 +35,7 @@ Description = Held item which doubles Speed, but allows the use of only one move
 [CLARITYSASH]
 Name = Clarity Sash
 NamePlural = Clarity Sashes
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing
 Description = An item to be held by a Pokémon. The holder will endure one potential KO attack, leaving 1 HP.
@@ -43,7 +43,7 @@ Description = An item to be held by a Pokémon. The holder will endure one poten
 [ALLPURPOSEVEST]
 Name = All-Purpose Vest
 NamePlural = All-Purpose Vests
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,NoStatusUse
 Description = An item to be held by a Pokémon. The holder's defenses are raised 50% but it can't use status moves.
@@ -51,7 +51,7 @@ Description = An item to be held by a Pokémon. The holder's defenses are raised
 [STRIKECORSET]
 Name = Strike Corset
 NamePlural = Strike Corsets
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,NoStatusUse
 Description = The holder's Defense is raised 50%, and it harms those who use special attacks against it for 1/6th HP.
@@ -59,7 +59,7 @@ Description = The holder's Defense is raised 50%, and it harms those who use spe
 [ASSAULTCORSET]
 Name = Assault Corset
 NamePlural = Assault Corsets
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,NoStatusUse
 Description = The holder's Sp. Def is raised 50%, and it harms those who use physical attacks against it for 1/6th HP.
@@ -67,7 +67,7 @@ Description = The holder's Sp. Def is raised 50%, and it harms those who use phy
 [JAGGEDHELMET]
 Name = Jagged Helmet
 NamePlural = Jagged Helmets
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,AttackerRecoil
 Description = Damages attackers for 1/3rd of their HP when they hit the holder with physical attacks.
@@ -75,7 +75,7 @@ Description = Damages attackers for 1/3rd of their HP when they hit the holder w
 [LUSTROUSJACKET]
 Name = Lustrous Radio
 NamePlural = Lustrous Radios
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,AttackerRecoil
 Description = Damages attackers for 1/3rd of their HP when they hit the holder with special attacks.
@@ -83,7 +83,7 @@ Description = Damages attackers for 1/3rd of their HP when they hit the holder w
 [SITREONBERRY]
 Name = Sitreon Berry
 NamePlural = Sitreon Berries
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry,Pinch
 Description = If held by a Pokémon, it heals its HP by 50% at half health.
@@ -91,7 +91,7 @@ Description = If held by a Pokémon, it heals its HP by 50% at half health.
 [ROSELIFEAST]
 Name = Roseli Feast
 NamePlural = Roseli Feasts
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry,Leftovers
 Description = Halves the damage from one supereffective Fairy-type attack. Holder heals 1/16th HP each turn.
@@ -99,7 +99,7 @@ Description = Halves the damage from one supereffective Fairy-type attack. Holde
 [OCCAFEAST]
 Name = Occa Feast
 NamePlural = Occa Feasts
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry,Leftovers
 Description = Halves the damage from one supereffective Fire-type attack. Holder heals 1/16th HP each turn.
@@ -107,7 +107,7 @@ Description = Halves the damage from one supereffective Fire-type attack. Holder
 [RINDOFEAST]
 Name = Rindo Feast
 NamePlural = Rindo Feasts
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry,Leftovers
 Description = Halves the damage from one supereffective Ground-type attack. Holder heals 1/16th HP each turn.
@@ -115,7 +115,7 @@ Description = Halves the damage from one supereffective Ground-type attack. Hold
 [LUNUSBERRY]
 Name = Lunus Berry
 NamePlural = Lunus Berries
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry
 Description = Held to recover from a status problem once per battle. Then, all of the holder's stats are raised by two stages.
@@ -123,7 +123,7 @@ Description = Held to recover from a status problem once per battle. Then, all o
 [ZALAKABERRY]
 Name = Zalaka Berry
 NamePlural = Zalaka Berries
-Pocket = 5
+Pocket = 9
 Price = 0
 Flags = Berry
 Description = If held by a Pokémon which goes below 50% health, it maximizes its Speed stat.
@@ -131,7 +131,7 @@ Description = If held by a Pokémon which goes below 50% health, it maximizes it
 [LUCENTGEM]
 Name = Lucent Gem
 NamePlural = Lucent Gems
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = A brilliant gem. Boosts the power of an attacking move by 50% once per battle.
@@ -139,7 +139,7 @@ Description = A brilliant gem. Boosts the power of an attacking move by 50% once
 [NORMALRING]
 Name = Normal Ring
 NamePlural = Normal Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Normal move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -147,7 +147,7 @@ Description = Boosts the power of a Normal move by 50% once per battle. Holder h
 [FIRERING]
 Name = Fire Ring
 NamePlural = Fire Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Fire move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -155,7 +155,7 @@ Description = Boosts the power of a Fire move by 50% once per battle. Holder hea
 [WATERRING]
 Name = Water Ring
 NamePlural = Water Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Water move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -163,7 +163,7 @@ Description = Boosts the power of a Water move by 50% once per battle. Holder he
 [GRASSRING]
 Name = Grass Ring
 NamePlural = Grass Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Grass move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -171,7 +171,7 @@ Description = Boosts the power of a Grass move by 50% once per battle. Holder he
 [ELECTRICRING]
 Name = Electric Ring
 NamePlural = Electric Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Electric move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -179,7 +179,7 @@ Description = Boosts the power of a Electric move by 50% once per battle. Holder
 [ICERING]
 Name = Ice Ring
 NamePlural = Ice Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Ice move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -187,7 +187,7 @@ Description = Boosts the power of a Ice move by 50% once per battle. Holder heal
 [FIGHTINGRING]
 Name = Fighting Ring
 NamePlural = Fighting Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Fighting move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -195,7 +195,7 @@ Description = Boosts the power of a Fighting move by 50% once per battle. Holder
 [POISONRING]
 Name = Poison Ring
 NamePlural = Poison Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Poison move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -203,7 +203,7 @@ Description = Boosts the power of a Poison move by 50% once per battle. Holder h
 [GROUNDRING]
 Name = Ground Ring
 NamePlural = Ground Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Ground move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -211,7 +211,7 @@ Description = Boosts the power of a Ground move by 50% once per battle. Holder h
 [FLYINGRING]
 Name = Flying Ring
 NamePlural = Flying Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Flying move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -219,7 +219,7 @@ Description = Boosts the power of a Flying move by 50% once per battle. Holder h
 [PSYCHICRING]
 Name = Psychic Ring
 NamePlural = Psychic Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Psychic move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -227,7 +227,7 @@ Description = Boosts the power of a Psychic move by 50% once per battle. Holder 
 [BUGRING]
 Name = Bug Ring
 NamePlural = Bug Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Bug move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -235,7 +235,7 @@ Description = Boosts the power of a Bug move by 50% once per battle. Holder heal
 [ROCKRING]
 Name = Rock Ring
 NamePlural = Rock Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Rock move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -243,7 +243,7 @@ Description = Boosts the power of a Rock move by 50% once per battle. Holder hea
 [GHOSTRING]
 Name = Ghost Ring
 NamePlural = Ghost Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Ghost move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -251,7 +251,7 @@ Description = Boosts the power of a Ghost move by 50% once per battle. Holder he
 [DARKRING]
 Name = Dark Ring
 NamePlural = Dark Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Dark move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -259,7 +259,7 @@ Description = Boosts the power of a Dark move by 50% once per battle. Holder hea
 [DRAGONRING]
 Name = Dragon Ring
 NamePlural = Dragon Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Dragon move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -267,7 +267,7 @@ Description = Boosts the power of a Dragon move by 50% once per battle. Holder h
 [STEELRING]
 Name = Steel Ring
 NamePlural = Steel Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Steel move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -275,7 +275,7 @@ Description = Boosts the power of a Steel move by 50% once per battle. Holder he
 [FAIRYRING]
 Name = Fairy Ring
 NamePlural = Fairy Rings
-Pocket = 5
+Pocket = 10
 Price = 0
 Flags = TypeGem
 Description = Boosts the power of a Fairy move by 50% once per battle. Holder heals 1/16th HP each round.
@@ -283,21 +283,21 @@ Description = Boosts the power of a Fairy move by 50% once per battle. Holder he
 [WHITEBOUGH]
 Name = White Bough
 NamePlural = White Boughs
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = A held item. Restores any lowered stats, then heals the holder by 50% HP.
 #-------------------------------
 [TERRAINSEALANT]
 Name = Terrain Sealant
 NamePlural = Terrain Sealant
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = While held, terrains set by the holder do not expire.
 #-------------------------------
 [LEADBALLOON]
 Name = Lead Balloon
 NamePlural = Lead Balloons
-Pocket = 5
+Pocket = 13
 Price = 0
 Flags = Levitation
 Description = An item to be held by a Pokémon. The holder floats in the air, making Ground attacks miss.
@@ -305,21 +305,21 @@ Description = An item to be held by a Pokémon. The holder floats in the air, ma
 [SPELLBELL]
 Name = Spell Bell
 NamePlural = Spell Bells
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = The holder's HP is restored a little every time it inflicts damage. Boosts Ghost-type moves by 20%.
 #-------------------------------
 [BIGREDBUTTON]
 Name = Big Red Button
 NamePlural = Big Red Buttons
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = When the holder is struck by a foe, it switches out, leaving a layer of spikes around the foe.
 #-------------------------------
 [HEATSASH]
 Name = Heat Sash
 NamePlural = Heat Sashes
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,Endure
 Description = The user summons Sunshine for twice as long. The holder will endure one potential KO.
@@ -327,7 +327,7 @@ Description = The user summons Sunshine for twice as long. The holder will endur
 [DAMPSASH]
 Name = Damp Sash
 NamePlural = Damp Sashes
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,Endure
 Description = The user summons Rain for twice as long. The holder will endure one potential KO.
@@ -335,7 +335,7 @@ Description = The user summons Rain for twice as long. The holder will endure on
 [SMOOTHSASH]
 Name = Smooth Sash
 NamePlural = Smooth Sashes
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,Endure
 Description = The user summons Sandstorm for twice as long. The holder will endure one potential KO.
@@ -343,7 +343,7 @@ Description = The user summons Sandstorm for twice as long. The holder will endu
 [ICYSASH]
 Name = Icy Sash
 NamePlural = Icy Sashes
-Pocket = 5
+Pocket = 12
 Price = 0
 Flags = Clothing,Endure
 Description = The user summons Hail for twice as long. The holder will endure one potential KO.
@@ -351,56 +351,56 @@ Description = The user summons Hail for twice as long. The holder will endure on
 [HOOHSASHES]
 Name = Ho-oh's Ashes
 NamePlural = Ho-oh's Ashes
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = A held item. When the holder faints, a random other party member is fully revived.
 #-------------------------------
 [DEATHORB]
 Name = Death Orb
 NamePlural = Death Orbs
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = A held item. It boosts the power of moves by 30%. The user heals for a third of all move damage they deal.
 #-------------------------------
 [POWERKEY]
 Name = Power Key
 NamePlural = Power Locks
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = A held item. In battles, it sets the holder's base Attack and base Defense stats to 120.
 #-------------------------------
 [ENERGYKEY]
 Name = Energy Key
 NamePlural = Power Locks
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = A held item. In battles, it sets the holder's base Sp. Atk and base Sp. Def stats to 120.
 #-------------------------------
 [GRANDMASTERSCROLL]
 Name = Grandmaster Scroll
 NamePlural = Grandmaster Scroll
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = An ancient scroll that makes the user  that boosts the holder's supereffective moves by 20%.
 #-------------------------------
 [LUNCHBOX]
 Name = Lunch Box
 NamePlural = Lunch Boxes
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = The holder's HP is restored by 1/8th each turn, and takes a third less damage at full HP. The holder won't drop it.
 #-------------------------------
 [BRIGHTCLAY]
 Name = Bright Clay
 NamePlural = Bright Clays
-Pocket = 5
+Pocket = 13
 Price = 0
 Description = An item to be held by a Pokémon. Protective moves like Light Screen and Reflect will be effective for 6 turns longer.
 #-------------------------------
 [PEARLOFWISDOM]
 Name = Pearl of Wisdom
 NamePlural = Pearls of Wisdom
-Pocket = 5
+Pocket = 13
 Price = 0
 Flags = Leftovers
 Description = User heals 1/16th HP every turn. Will sacrifice itself to cure the user of status.

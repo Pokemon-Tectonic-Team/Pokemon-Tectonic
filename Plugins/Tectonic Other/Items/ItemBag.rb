@@ -71,9 +71,7 @@ class PokemonBag
     end
   
     def maxPocketSize(pocket)
-      maxsize = Settings::BAG_MAX_POCKET_SIZE[pocket]
-      return -1 if !maxsize
-      return maxsize
+      return -1
     end
   
     # Gets the index of the current selected item in the pocket
