@@ -560,8 +560,8 @@ FormName = Female
 #-------------------------------
 [AEGISLASH,1]
 FormName = Blade
-BaseStats = 60,150,50,60,150,50
-# Total = 520
+BaseStats = 60,140,50,60,140,50
+# Total = 500
 #-------------------------------
 [PUMPKABOO,1]
 FormName = Average Size

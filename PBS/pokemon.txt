@@ -16460,8 +16460,8 @@ Name = Aegislash
 Type1 = STEEL
 Type2 = GHOST
 # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-BaseStats = 60,50,150,60,50,150
-# Total = 520
+BaseStats = 60,50,140,60,50,140
+# Total = 500
 BaseEXP = 234
 Rareness = 170
 Happiness = 50
