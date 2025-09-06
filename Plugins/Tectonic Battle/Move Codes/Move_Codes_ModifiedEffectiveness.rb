@@ -39,7 +39,7 @@ class PokeBattle_Move_SuperEffectiveAgainstFighting < PokeBattle_TypeSuperMove
 end
 
 #===============================================================================
-# Effectiveness against Electric-type is 2x. (Venom Lacerate)
+# Effectiveness against Steel-type is 1x. (Acid Breach)
 #===============================================================================
 class PokeBattle_Move_NeutralEffectiveAgainstSteelLowerDef1 < PokeBattle_TypeSuperMove
     def initialize(battle, move)
