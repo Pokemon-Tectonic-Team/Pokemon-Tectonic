@@ -1559,6 +1559,20 @@ FunctionCode = UserTakesHalfDamageThisTurnPoisonAttackers
 Description = Halves attack damage taken this turn. Poisons any attackers. Fails if used successively.
 Animation = DEFENSECURL
 #-------------------------------
+[VENOMLACERATE]
+Name = Venom Lacerate
+Type = POISON
+Category = Physical
+Power = 80
+Accuracy = 100
+TotalPP = 15
+Target = NearOther
+FunctionCode = NeutralEffectiveAgainstSteelLowerDef1
+Flags = CanProtect
+EffectChance = 100
+Description = The user lashes the target with its corroded tail. This hits Steel-types for neutral damage and lowers Defense.
+Animation = CROSSPOISON
+#-------------------------------
 [VENOMORTAR]
 Name = Venomortar
 Type = POISON

@@ -39,6 +39,21 @@ class PokeBattle_Move_SuperEffectiveAgainstFighting < PokeBattle_TypeSuperMove
 end
 
 #===============================================================================
+# Effectiveness against Electric-type is 2x. (Venom Lacerate)
+#===============================================================================
+class PokeBattle_Move_NeutralEffectiveAgainstSteelLowerDef1 < PokeBattle_TypeSuperMove
+    def initialize(battle, move)
+        super
+        @typeNeutral = :STEEL
+    end
+
+    def pbAdditionalEffect(user, target)
+        return if target.damageState.substitute
+        target.tryLowerStat(:DEFENSE, user)
+    end
+end
+
+#===============================================================================
 # Type effectiveness is multiplied by the Flying-type's effectiveness against
 # the target. (Flying Press)
 #===============================================================================
