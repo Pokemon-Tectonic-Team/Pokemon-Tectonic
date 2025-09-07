@@ -725,7 +725,7 @@ class PokeBattle_Move_HealUserBasedOnWeightHalvesWeight < PokeBattle_HealingMove
     end
 
     def getDetailsForMoveDex(detailsList = [])
-        values = [1024, 512, 1023, 256, 511, 128, 255, 64, 127, 63]
+        values = [1024, 512, 256, 128, 64]
         unit = "kg"
         if System.user_language[3..4] == "US" # If the user is in the United States
             values.map! { |weight| (weight / 0.45359).round }
@@ -733,11 +733,11 @@ class PokeBattle_Move_HealUserBasedOnWeightHalvesWeight < PokeBattle_HealingMove
         end
         detailsList << _INTL("Heals more the heavier the user is.")
         detailsList << _INTL("<u>{1} {2} and more:</u> 100%", values[0], unit)
-        detailsList << _INTL("<u>{1} - {2} {3}:</u> 75%", values[1], values[2], unit)
-        detailsList << _INTL("<u>{1} - {2} {3}:</u> 50%", values[3], values[4], unit)
-        detailsList << _INTL("<u>{1} - {2} {3}:</u> 25%", values[5], values[6], unit)
-        detailsList << _INTL("<u>{1} - {2} {3}:</u> 12.5%", values[7], values[8], unit)
-        detailsList << _INTL("<u>{1} {2} and less:</u> 6.25%", values[9], unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 75%", values[1], values[0]-1, unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 50%", values[2], values[1]-1, unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 25%", values[3], values[2]-1, unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 12.5%", values[4], values[3]-1, unit)
+        detailsList << _INTL("<u>{1} {2} and less:</u> 6.25%", values[4]-1, unit)
     end
 end
 
