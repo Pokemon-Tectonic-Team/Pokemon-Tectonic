@@ -220,6 +220,12 @@ Atteathesilly
 Legends ZA Hex Maniac
 CamiOfTargon
 
+Cryscross
+JWNutz
+Atsui
+John Willow
+Atteathesilly
+
 Spanish PokeDex Translations
 Everson
 
