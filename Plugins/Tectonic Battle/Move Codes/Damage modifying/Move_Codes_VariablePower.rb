@@ -157,13 +157,19 @@ class PokeBattle_Move_ScalesTargetsWeight < PokeBattle_Move
     end
 
     def getDetailsForMoveDex(detailsList = [])
+        values = [2, 6.9, 57, 77, 400, 450, 900, 950, 1000]
+        unit = "kg"
+        if System.user_language[3..4] == "US" # If the user is in the United States
+            values.map! { |weight| (weight / 0.45359).round }
+            unit = "lbs"
+        end
         detailsList << _INTL("Does more damage the heavier the target is. Range 20-195")
-        detailsList << _INTL("<u>Less than 2 KG:</u> 20 BP")
-        detailsList << _INTL("<u>2 - 6.9 KG:</u> 25 BP")
-        detailsList << _INTL("<u>57 - 77 KG:</u> 50 BP")
-        detailsList << _INTL("<u>400 - 450 KG:</u> 100 BP")
-        detailsList << _INTL("<u>900 - 950 KG:</u> 140 BP")
-        detailsList << _INTL("<u>>1000 KG:</u> 160 BP")
+        detailsList << _INTL("<u>Less than {1} {2}:</u> 20 BP", values[0], unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 25 BP", values[0], values[1], unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 50 BP", values[2], values[3], unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 100 BP", values[4], values[5], unit)
+        detailsList << _INTL("<u>{1} - {2} {3}:</u> 140 BP", values[6], values[7], unit)
+        detailsList << _INTL("<u>>{1} {2}:</u> 160 BP", values[8], unit)
     end
 end
 
