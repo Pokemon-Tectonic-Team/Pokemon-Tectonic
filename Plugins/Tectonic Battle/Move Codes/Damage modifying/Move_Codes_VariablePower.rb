@@ -133,6 +133,16 @@ class PokeBattle_Move_ScalesFasterThanTarget < PokeBattle_Move
         basePower = 40 if basePower < 40
         return basePower
     end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the faster the user is compared to the target. Range 40-150")
+        detailsList << _INTL("<u>Slower than target:</u> 40 BP")
+        detailsList << _INTL("<u>Same Speed as target:</u> 45 BP")
+        detailsList << _INTL("<u>1.5x faster than target:</u> 60 BP")
+        detailsList << _INTL("<u>2x faster than target:</u> 80 BP")
+        detailsList << _INTL("<u>3x faster than target:</u> 115 BP")
+        detailsList << _INTL("<u>4x faster than target:</u> 150 BP")
+    end
 end
 
 #===============================================================================
@@ -144,6 +154,16 @@ class PokeBattle_Move_ScalesTargetsWeight < PokeBattle_Move
         weight = [target.pbWeight / 10,2000].min
         ret += 19 + ((4 * (weight**0.5)) / 5).floor * 5
         return ret
+    end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the heavier the target is. Range 20-195")
+        detailsList << _INTL("<u>Less than 2 KG:</u> 20 BP")
+        detailsList << _INTL("<u>2 - 6.9 KG:</u> 25 BP")
+        detailsList << _INTL("<u>57 - 77 KG:</u> 50 BP")
+        detailsList << _INTL("<u>400 - 450 KG:</u> 100 BP")
+        detailsList << _INTL("<u>900 - 950 KG:</u> 140 BP")
+        detailsList << _INTL("<u>>1000 KG:</u> 160 BP")
     end
 end
 
@@ -157,6 +177,15 @@ class PokeBattle_Move_ScalesHeavierThanTarget < PokeBattle_Move
         ratio = 10 if ratio > 10
         ret += ((16 * (ratio**0.75)) / 5).floor * 5
         return ret
+    end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the heavier the user is compared to the target. Range 40-125")
+        detailsList << _INTL("<u>1/5 of target's weight:</u> 40 BP")
+        detailsList << _INTL("<u>Same weight as target:</u> 55 BP")
+        detailsList << _INTL("<u>2x heavier than target:</u> 65 BP")
+        detailsList << _INTL("<u>5x heavier than target:</u> 90 BP")
+        detailsList << _INTL("<u>10x heavier than target:</u> 125 BP")
     end
 end
 
@@ -190,6 +219,15 @@ class PokeBattle_Move_HardPlace < PokeBattle_Move
         highestDefense = 200 if highestDefense > 200
         return highestDefense
     end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the higher any ally's Defense is. Range 40-200")
+        detailsList << _INTL("<u>No ally:</u> 40 BP")
+        detailsList << _INTL("<u>Ally Defense 44 or less:</u> 40 BP")
+        detailsList << _INTL("<u>Ally Defense 45-49:</u> 45 BP")
+        detailsList << _INTL("<u>Ally Defense 100-104:</u> 100 BP")
+        detailsList << _INTL("<u>Ally Defense 200 or more:</u> 200 BP")
+    end
 end
 
 #===============================================================================
@@ -202,6 +240,15 @@ class PokeBattle_Move_ScalesTallerThanTarget < PokeBattle_Move
         ratio = 10 if ratio > 10
         ret += ((16 * (ratio**0.75)) / 5).floor * 5
         return ret
+    end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Does more damage the taller the user is compared to the target. Range 40-125")
+        detailsList << _INTL("<u>Target 5x taller than user:</u> 40 BP")
+        detailsList << _INTL("<u>Same height as target:</u> 55 BP")
+        detailsList << _INTL("<u>2x taller than target:</u> 65 BP")
+        detailsList << _INTL("<u>5x taller than target:</u> 90 BP")
+        detailsList << _INTL("<u>10x taller than target:</u> 125 BP")
     end
 end
 

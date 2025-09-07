@@ -723,6 +723,16 @@ class PokeBattle_Move_HealUserBasedOnWeightHalvesWeight < PokeBattle_HealingMove
         super
         user.incrementEffect(:Refurbished)
     end
+
+    def getDetailsForMoveDex(detailsList = [])
+        detailsList << _INTL("Heals more the heavier the user is.")
+        detailsList << _INTL("<u>1024 kg and more:</u> 100%")
+        detailsList << _INTL("<u>512 - 1023 kg:</u> 75%")
+        detailsList << _INTL("<u>256 - 511 kg:</u> 50%")
+        detailsList << _INTL("<u>128 - 255 kg:</u> 25%")
+        detailsList << _INTL("<u>64 - 127 kg:</u> 12.5%")
+        detailsList << _INTL("<u>63 kg and less:</u> 6.25%")
+    end
 end
 
 #===============================================================================
