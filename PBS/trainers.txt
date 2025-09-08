@@ -344,12 +344,12 @@ Pokemon = TYNAMO,20
     AbilityIndex = 0 # Levitate
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
-Pokemon = VULPIX,20
-    Moves = FIRESPIN,DISARMINGVOICE,WILLOWISP,SNARL
-    AbilityIndex = 0 # Cursed Tail
+Pokemon = MMANTYKE,20
+    Moves = ICEFANG,POISONTAIL,BULLETCHARGE,CHILL
+    AbilityIndex = 1 # Misty Form
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-    EV = 20,0,5,20,0,5
+    EV = 10,20,0,20,20,0
 #-------------------------------
 [LEADER_Eko,Eko,1]
 ExtendsVersion = 0
@@ -5189,7 +5189,7 @@ Pokemon = HAXORUS,55
     Moves = CRUELTY,DRAGONDANCE,POISONJAB,XSCISSOR
     AbilityIndex = 1 # Stressful
 Pokemon = RILLABOOM,55
-    Moves = SOLARGLIDE,KNOCKOFF,SWORDSDANCE,ACROBATICS
+    Moves = KICKDRUM,KNOCKOFF,SWORDSDANCE,ACROBATICS
     AbilityIndex = 1 # Vital Rhythm
 #-------------------------------
 [MASKEDVILLAIN,Crimson,3]
@@ -5419,7 +5419,7 @@ Pokemon = HAXORUS,65
     Moves = CRUELTY,DRAGONDANCE,POISONJAB,XSCISSOR
     AbilityIndex = 1 # Stressful
 Pokemon = RILLABOOM,65
-    Moves = SOLARGLIDE,KNOCKOFF,SWORDSDANCE,ACROBATICS
+    Moves = KICKDRUM,KNOCKOFF,SWORDSDANCE,ACROBATICS
     AbilityIndex = 1 # Vital Rhythm
 #-------------------------------
 [MASKEDVILLAIN2,Teal,3]
@@ -6506,7 +6506,7 @@ Pokemon = HAXORUS,70
     Moves = CRUELTY,DRAGONDANCE,CLOSECOMBAT,XSCISSOR
     AbilityIndex = 1 # Stressful
 Pokemon = RILLABOOM,70
-    Moves = SOLARGLIDE,KNOCKOFF,SWORDSDANCE,ACROBATICS
+    Moves = KICKDRUM,KNOCKOFF,SWORDSDANCE,ACROBATICS
     AbilityIndex = 1 # Vital Rhythm
 Pokemon = DIGNIPHITE,70
     Moves = HEAVYSLAM,EARTHQUAKE,TANTRUM,HEATCRASH
@@ -6733,7 +6733,7 @@ Pokemon = HAXORUS,70
     Moves = CRUELTY,DRAGONDANCE,CLOSECOMBAT,XSCISSOR
     AbilityIndex = 1 # Stressful
 Pokemon = RILLABOOM,70
-    Moves = SOLARGLIDE,KNOCKOFF,SWORDSDANCE,ACROBATICS
+    Moves = KICKDRUM,KNOCKOFF,SWORDSDANCE,ACROBATICS
     AbilityIndex = 1 # Vital Rhythm
 Pokemon = DIGNIPHITE,70
     Moves = HEAVYSLAM,EARTHQUAKE,TANTRUM,HEATCRASH
@@ -7140,7 +7140,7 @@ Pokemon = HAXORUS,55
     Moves = CRUELTY,DRAGONDANCE,POISONJAB,XSCISSOR
     AbilityIndex = 1 # Stressful
 Pokemon = RILLABOOM,55
-    Moves = SOLARGLIDE,KNOCKOFF,SWORDSDANCE,ACROBATICS
+    Moves = KICKDRUM,KNOCKOFF,SWORDSDANCE,ACROBATICS
     AbilityIndex = 1 # Vital Rhythm
 Pokemon = DIGNIPHITE,55
     Moves = HEAVYSLAM,ADAMANTINEPRESS,BRICKBREAK,POWDERBOMB
