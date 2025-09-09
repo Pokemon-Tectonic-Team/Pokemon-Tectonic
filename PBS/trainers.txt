@@ -346,7 +346,7 @@ Pokemon = TYNAMO,20
     EV = 10,20,0,0,20,20
 Pokemon = MMANTYKE,20
     Moves = ICEFANG,POISONTAIL,BULLETCHARGE,CHILL
-    AbilityIndex = 1 # Misty Form
+    AbilityIndex = 1 # Mist Form
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
