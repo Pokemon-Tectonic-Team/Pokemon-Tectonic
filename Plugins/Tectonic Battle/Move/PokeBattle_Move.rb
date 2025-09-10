@@ -79,6 +79,7 @@ class PokeBattle_Move
           return GameData::Target.get(:AllNearFoes) if @calcType == :PSYCHIC && user.hasActiveAbility?(:MULTITASKER)
           return GameData::Target.get(:AllNearFoes) if @calcType == :FIGHTING && user.hasActiveAbility?(:EVENHANDED)
           return GameData::Target.get(:AllNearFoes) if user.hasActiveAbility?(:SPACIALDISTORTION)
+          return GameData::Target.get(:AllNearFoes) if @calcType == :DRAGON && user.hasActiveAbility?(:VICIOUSCYCLE) 
         end
         return targetData
     end
