@@ -451,6 +451,10 @@ Description = Reduces move damage taken by 50% when HP is full. Can't be dizzied
 Name = Double Check
 Description = Deals 50% more damage to targets who have already taken damage this turn.
 #-------------------------------
+[DRAGONDRAIN]
+Name = Dragon Drain
+Description = Dragon-type moves hit all enemies and restore the user's HP by 33% of the damage dealt.
+#-------------------------------
 [DRAGONSBLOOD]
 Name = Dragon's Blood
 Description = Reduces the damage of each hit against it by an amount equal to its level.

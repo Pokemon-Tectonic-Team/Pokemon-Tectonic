@@ -2356,7 +2356,7 @@ Pokemon = CROBAT,70
 Pokemon = SWALOT,70
     AbilityIndex = 0 # Thick Fat
 Pokemon = HYDREIGON,70
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Dragon Drain
 #-------------------------------
 [SUPERNERD,Agentbla]
 TrainerTypeLabel = DEVELOPER
@@ -3914,7 +3914,7 @@ Pokemon = WORMADAM,42
 [SCIENTIST_M3,Gunter]
 Pokemon = HYDREIGON,55
     Moves = MASSDESTRUCTION,TRIPLETHREAT,HEATWAVE,TAILWIND
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Dragon Drain
     Item = SHELLBELL
 Pokemon = BRELOOM,55
     Moves = DRAINPUNCH,LEAFBLADE,SHORTCIRCUIT,SPORE
@@ -4842,7 +4842,7 @@ Pokemon = MMANDIBUZZ,63
     Item = BLACKSLUDGE
 Pokemon = HYDREIGON,63
     Moves = TRIPLETHREAT,DARKPULSE,GIGADRAIN,GUTTURALROAR
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Dragon Drain
     Item = LEFTOVERS
 Pokemon = METAGROSS,64
     Moves = ELECTROSLASH,OMNISCIENTBLOW,BULLETPUNCH,METEORMASH
@@ -5537,7 +5537,7 @@ Pokemon = GYARADOS,70
 Pokemon = HYDREIGON,70
     Name = Seraph
     Moves = TRIPLETHREAT,FLASHCANNON,EARTHPOWER,ROOST
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Dragon Drain
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10

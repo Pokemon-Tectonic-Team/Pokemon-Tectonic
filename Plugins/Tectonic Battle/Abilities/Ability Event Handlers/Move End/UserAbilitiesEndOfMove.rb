@@ -329,6 +329,15 @@ BattleHandlers::UserAbilityEndOfMove.add(:ASTRALHARVEST,
   }
 )
 
+BattleHandlers::UserAbilityEndOfMove.add(:DRAGONDRAIN,
+  proc { |ability, user, targets, move, battle, _switchedBattlers|
+      next if battle.futureSight
+      next unless move.damagingMove?
+      next unless move.type == :DRAGON
+      user.pbRecoverHPFromMultiDrain(targets, 0.33, ability: ability)
+  }
+)
+
 BattleHandlers::UserAbilityEndOfMove.add(:SILVERSENSE,
   proc { |ability, user, targets, move, battle, _switchedBattlers|
       next if battle.futureSight

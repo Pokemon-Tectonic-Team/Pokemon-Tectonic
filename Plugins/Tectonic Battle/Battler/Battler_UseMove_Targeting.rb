@@ -172,6 +172,24 @@ move, false, true)
         if move.damagingMove? && user.belowHalfHealth?
             targets = pbChangeTargetByAbility(:TANTALIZING, move, user, targets, priority, nearOnly)
         end
+        #Dragon Drain
+        if move.damagingMove? && move.type == :DRAGON
+            if user.hasActiveAbility?(:DRAGONDRAIN)
+                targetAlly = false
+                targets.each do |b| #Check if move also targets allies
+                    if !b.opposes?(user)
+                        targetAlly = true 
+                        break
+                    end
+                end
+                if !targetAlly && targets.size() == 1
+                    targets.clear
+                    @battle.eachOtherSideBattler do |b|
+                        pbAddTarget(targets, user, b, move)
+                    end
+                end
+            end
+        end
         return targets
     end
 
