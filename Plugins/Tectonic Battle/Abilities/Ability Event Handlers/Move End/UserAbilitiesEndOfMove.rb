@@ -340,6 +340,17 @@ BattleHandlers::UserAbilityEndOfMove.add(:TORPORSAP,
   }
 )
 
+BattleHandlers::UserAbilityEndOfMove.add(:VICIOUSCYCLE,
+  proc { |ability, user, targets, move, battle, _switchedBattlers, aiCheck|
+      next if battle.futureSight
+      next unless move.damagingMove?
+      next unless move.type == :DRAGON
+      # AI learns ability if move spreads or drain happens
+      user.aiLearnsAbility(ability) if ( !aiCheck && ( targets.size() > 1 || user.hp != user.totalhp) )
+      user.pbRecoverHPFromMultiDrain(targets, 0.33, ability: ability)
+  }
+)
+
 BattleHandlers::UserAbilityEndOfMove.add(:ETERNALWINTER,
   proc { |ability, user, targets, _move, battle, _switchedBattlers|
       next if battle.pbAllFainted?(user.idxOpposingSide)
