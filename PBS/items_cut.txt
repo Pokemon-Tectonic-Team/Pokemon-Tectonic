@@ -4734,3 +4734,38 @@ Pocket = 13
 Price = 0
 Flags = Leftovers
 Description = User heals 1/16th HP every turn. Will sacrifice itself to cure the user of status.
+#-------------------------------
+[MEGARING]
+Name = Mega Ring
+NamePlural = Mega Rings
+Pocket = 6
+Price = 0
+Flags = KeyItem,SkipPocketMessage
+Description = This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
+#-------------------------------
+[DEADSKYSLIVER]
+Name = Dead Sky Sliver
+NamePlural = Dead Sky Slivers
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A dark sliver of something that hurts to look at. It bears an inscription.
+#-------------------------------
+[TIMELOSTALABASTER]
+Name = Timelost Alabaster
+NamePlural = Timelost Alabasters
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = Inscribed, delicate pale stone. It’s always been here, but it hasn’t always always been here.
+#-------------------------------
+[WRETCHEDWHITEWING]
+Name = Wretched Whitewing
+NamePlural = Wretched Whitewings
+Pocket = 8
+Price = 0
+FieldUse = Direct
+Flags = KeyItem
+Description = A radiant wing. It radiates misery, but you feel peaceful holding it. Returning home, returning home...

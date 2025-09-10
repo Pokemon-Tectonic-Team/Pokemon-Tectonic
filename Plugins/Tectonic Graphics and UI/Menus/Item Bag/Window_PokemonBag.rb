@@ -66,7 +66,7 @@ class Window_PokemonBag < Window_DrawableCommand
           rect = Rect.new(rect.x+16,rect.y+16,rect.width-16,rect.height)
           thispocket = @bag.pockets[@pocket]
           if index==self.itemCount-1
-            textpos.push([_INTL("CLOSE BAG"),rect.x,rect.y-2,false,self.baseColor,self.shadowColor])
+            textpos.push([_INTL("CLOSE POCKET"),rect.x,rect.y-2,false,self.baseColor,self.shadowColor])
           else
             item = (@filterlist) ? thispocket[@filterlist[@pocket][index]][0] : thispocket[index][0]
             baseColor   = self.baseColor
@@ -110,7 +110,7 @@ class Window_PokemonBag < Window_DrawableCommand
         next if i<self.top_item-1 || i>self.top_item+self.page_item_max
         drawItem(i,@item_max,itemRect(i))
       end
-      drawCursor(self.index,itemRect(self.index))
+      drawCursor(self.index,itemRect(self.index)) if @active
     end
   
     def update

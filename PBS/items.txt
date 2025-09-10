@@ -206,7 +206,7 @@ Description = A fossil of an ancient Pokémon that lived in the sea. It appears 
 [OLDAMBER]
 Name = Old Amber
 NamePlural = Old Ambers
-Pocket = 1
+Pocket = 16
 Price = 5000
 Flags = Fossil
 Description = A piece of amber that contains the genes of an ancient Pokémon. It is clear with a reddish tint.
@@ -2188,7 +2188,7 @@ Description = A glass that reveals the truth. It is a mysterious glass that retu
 [SHINYCHARM]
 Name = Shiny Charm
 NamePlural = Shiny Charms
-Pocket = 6
+Pocket = 7
 Price = 0
 Consumable = true
 Flags = KeyItem,SkipPocketMessage
@@ -2197,7 +2197,7 @@ Description = A shiny charm which doubles the chance of finding a Shiny Pokémon
 [SWEETTOOTH]
 Name = Sweet Tooth
 NamePlural = Sweet Teeth
-Pocket = 6
+Pocket = 7
 Price = 0
 Flags = KeyItem,SkipPocketMessage
 Description = A charm in the shape of a tooth. It increases the EXP. gained from EXP Candy by 15%.
@@ -2205,7 +2205,7 @@ Description = A charm in the shape of a tooth. It increases the EXP. gained from
 [SOOTHECHARM]
 Name = Soothe Charm
 NamePlural = Soothe Charms
-Pocket = 6
+Pocket = 7
 Price = 0
 Consumable = true
 Flags = KeyItem,SkipPocketMessage
@@ -2291,14 +2291,6 @@ Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem
 Description = A machine to fuse Necrozma, which needs light, and Lunala.
-#-------------------------------
-[MEGARING]
-Name = Mega Ring
-NamePlural = Mega Rings
-Pocket = 6
-Price = 0
-Flags = KeyItem,SkipPocketMessage
-Description = This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.
 #-------------------------------
 [ZYGARDECUBE]
 Name = Zygarde Cube
@@ -2412,7 +2404,7 @@ Description = Reins that people presented to the king. They enable Calyrex to co
 [EXPCHARM]
 Name = EXP Charm
 NamePlural = EXP Charms
-Pocket = 6
+Pocket = 7
 Price = 0
 Flags = KeyItem,SkipPocketMessage
 Description = A charm that increases the Exp. Points that Pokémon can get by 10%. A machine-like object is inside the charm.
@@ -2420,7 +2412,7 @@ Description = A charm that increases the Exp. Points that Pokémon can get by 10
 [CATCHINGCHARM]
 Name = Catching Charm
 NamePlural = Catching Charms
-Pocket = 6
+Pocket = 7
 Price = 0
 Flags = KeyItem,SkipPocketMessage
 Description = A charm that doubles the chance of getting a critical catch.
@@ -2516,7 +2508,7 @@ Description = An abandoned Dreepy egg that is cold and calm. Only an expert woul
 [EEVEETICKET]
 Name = Eevee Ticket
 NamePlural = Eevee Tickets
-Pocket = 1
+Pocket = 16
 Price = 20000
 Description = A ticket that can be exchanged for an Eevee at the Skeevy Eevee Pub.
 #-------------------------------
@@ -2566,7 +2558,7 @@ Description = A wisp of ideas with infinite potential. Use it on a Pokémon to t
 [SACCHARITEPICK]
 Name = Saccharite Pick
 NamePlural = Saccharite Picks
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A food grade mining tool. Allows you to extract EXP. Candy from saccharite deposits.
@@ -2574,7 +2566,7 @@ Description = A food grade mining tool. Allows you to extract EXP. Candy from sa
 [SURFBOARD]
 Name = Surf Board
 NamePlural = Surf Boards
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A surf board, allowing you to surf on water.
@@ -2590,7 +2582,7 @@ Description = An ID card which unlocks Team Chasm gates and doors, giving access
 [CLIMBINGGEAR]
 Name = Climbing Gear
 NamePlural = Climbing Gears
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A set of climbing gear, allowing you to climb on white rocks.
@@ -2598,7 +2590,7 @@ Description = A set of climbing gear, allowing you to climb on white rocks.
 [FLORASCEPTRE]
 Name = Flora Sceptre
 NamePlural = Flora Sceptres
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = An ancient kingly rod. You can use it to make certain plants grow.
@@ -2615,7 +2607,7 @@ Description = A teleporter which brings you to your last safe spot using the pow
 [REMATERIALIZER]
 Name = Rematerializer
 NamePlural = Rematerializers
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A 3D printer which automatically copies consumed held items after battles.
@@ -2641,7 +2633,7 @@ Description = Use on a Pokémon to switch it into another one of its forms.
 [SPANNINGBAND]
 Name = Spanning Bands
 NamePlural = Spanning Bands
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = An ancient pair of interlocking ceramic rings. Unlocks the ability to teleport between Avatar Totems.
@@ -2667,7 +2659,7 @@ Description = An advanced transporter which allows you to access your Pokémon S
 [STYLINGKIT]
 Name = Styling Kit
 NamePlural = Styling Kits
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -2676,7 +2668,7 @@ Description = A suite of training tools which allows you to modify your Pokémon
 [TAROTAMULET]
 Name = Tarot Amulet
 NamePlural = Tarot Amulets
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -2685,7 +2677,7 @@ Description = If reversed, gym leaders and story fights will become harder throu
 [NOISEMACHINE]
 Name = Noise Machine
 NamePlural = Noise Machines
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -2703,7 +2695,7 @@ Description = A high tech surveillance device. Use it to scout out the teams of 
 [CELLBOOSTER]
 Name = Cell Booster
 NamePlural = Cell Boosters
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = Direct
 Flags = KeyItem
@@ -2721,7 +2713,7 @@ Description = A small compass. Relic of a heroic age. It can be used to find loo
 [MAGNETICGAUNTLET]
 Name = Magnetic Gauntlet
 NamePlural = Magnetic Gauntlets
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = An electrified glove with a claw-like shape. Recovers the first failed Poké Ball thrown in a wild battle.
@@ -2772,7 +2764,7 @@ Description = A device which creates then launches regular Poké Balls, never ru
 [PERFORMANCEANALYZER]
 Name = Performance Analyzer
 NamePlural = Performance Analyzers
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A hi-tech recording device which creates a Battle Report by analyzing the results of momentous battles.
@@ -2780,7 +2772,7 @@ Description = A hi-tech recording device which creates a Battle Report by analyz
 [PERFORMANCEANALYZER2]
 Name = Performance Analyzer 2
 NamePlural = Performance Analyzers 2
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = An upgraded, hi-tech recording device. It increases experience earned from battles by 10%.
@@ -3070,33 +3062,6 @@ FieldUse = Direct
 Flags = KeyItem
 Description = A damaged traveler's journal. If you find its scattered pages, you can put them back in place.
 #-------------------------------
-[DEADSKYSLIVER]
-Name = Dead Sky Sliver
-NamePlural = Dead Sky Slivers
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = A dark sliver of something that hurts to look at. It bears an inscription.
-#-------------------------------
-[TIMELOSTALABASTER]
-Name = Timelost Alabaster
-NamePlural = Timelost Alabasters
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = Inscribed, delicate pale stone. It’s always been here, but it hasn’t always always been here.
-#-------------------------------
-[WRETCHEDWHITEWING]
-Name = Wretched Whitewing
-NamePlural = Wretched Whitewings
-Pocket = 8
-Price = 0
-FieldUse = Direct
-Flags = KeyItem
-Description = A radiant wing. It radiates misery, but you feel peaceful holding it. Returning home, returning home...
-#-------------------------------
 [VIPCARD]
 Name = VIP Card
 NamePlural = VIP Cards
@@ -3108,7 +3073,7 @@ Description = A glamorous steel card. While holding it, all vendors cost 10% les
 [OMINOUSEGG]
 Name = Ominous Egg
 NamePlural = Ominous Eggs
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = Direct
 Flags = KeyItem,SkipPocketMessage
@@ -3135,7 +3100,7 @@ Description = A drop of ancient clay. Use it to summon a Pokemon from a resonati
 [PRIMALCLAY]
 Name = Primal Clay
 NamePlural = Primal Clay
-Pocket = 8
+Pocket = 7
 Price = 0
 Flags = KeyItem
 Description = A lump of ancient clay. Allows you to summon any number of Pokemon from resonating totems.

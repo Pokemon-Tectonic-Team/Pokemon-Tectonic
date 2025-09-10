@@ -10,16 +10,19 @@ class PokemonBagScreen
     def pbStartScreen
         @scene.pbStartScene(@bag)
         item = nil
+
+        openPocketImmediately = false
+        
         loop do
-          item = @scene.pbChooseItem
+          item = @scene.pbChooseItem(openPocketImmediately)
           break if !item
           itm = GameData::Item.get(item)
-          cmdRead     = -1
           cmdUse      = -1
           cmdRegister = -1
           cmdGive     = -1
           cmdToss     = -1
           cmdDebug    = -1
+          cmdCancel   = -1
           commands = []
           # Generate command list
           canUseAsTM = itm.is_machine? && $Trainer.party.length > 0
@@ -38,10 +41,11 @@ class PokemonBagScreen
             commands[cmdRegister = commands.length] = _INTL("Register")
           end
           commands[cmdDebug = commands.length]      = _INTL("Debug") if $DEBUG
-          commands[commands.length]                 = _INTL("Cancel")
+          commands[cmdCancel = commands.length]     = _INTL("Cancel")
           # Show commands generated above
           itemname = itm.name
           command = @scene.pbShowCommands(_INTL("{1} is selected.",itemname),commands)
+          openPocketImmediately = true unless command == cmdCancel
           if cmdUse>=0 && command==cmdUse   # Use item
             if (ItemHandlers.hasUseOnPokemon(item) || canUseAsTM) && !teamEditingAllowed?()
               showNoTeamEditingMessage()

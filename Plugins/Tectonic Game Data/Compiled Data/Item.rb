@@ -287,7 +287,7 @@ module GameData
         return false
       end
   
-      def can_hold?;           return !is_important? && @pocket == 5; end
+      def can_hold?;           return !is_important? && @pocket >= 9 && @pocket <= 13; end
 
       def consumed_after_use?
         return !is_important? && @consumable
