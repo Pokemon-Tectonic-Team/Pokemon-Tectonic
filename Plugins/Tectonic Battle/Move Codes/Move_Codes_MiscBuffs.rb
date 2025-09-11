@@ -141,6 +141,37 @@ class PokeBattle_Move_StartUserShedTypeWeaknesses < PokeBattle_Move
     end
 end
 
+#===============================================================================
+# User is protected from random additional effects for a number of turns, by consuming coins (Wishing Well)
+#===============================================================================
+class PreventAddedEffectsScalesWithMoney < PokeBattle_Move
+    def initialize(battle, move)
+        super
+        @coinsToConsume = 0
+    end
+
+    def pbOnStartUse(user, targets)
+        @coinsToConsume = [user.pbOwnSide.countEffect(:PayDay),1000].min
+    end
+
+    def pbEffectGeneral(user)
+        beforeCoins = user.pbOwnSide.effects[:PayDay]
+        user.pbOwnSide.effects[:PayDay] -= @coinsToConsume
+        user.pbOwnSide.effects[:PayDay] = 0 if user.pbOwnSide.effects[:PayDay] < 0
+        actualCoinAmountConsumed = beforeCoins - user.pbOwnSide.effects[:PayDay]
+        if actualCoinAmountConsumed > 0
+            @battle.pbDisplay(_INTL("{1} coins were thrown in the Wishing Well!", actualCoinAmountConsumed))
+            user.applyEffect(:WishingWell, (actualCoinAmountConsumed / 10).floor)
+        else
+            @battle.pbDisplay(_INTL("There were no coins to throw in the Wishing Well..."))
+        end
+        
+    end
+    
+end
+
+
+
 # User gains an extra move per turn. (Empowered Work Up)
 class PokeBattle_Move_EmpoweredWorkUp < PokeBattle_Move
     include EmpoweredMove

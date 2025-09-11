@@ -375,6 +375,12 @@ showMessages)
             end
             return false
         end
+        if target.effectActive?(:WishingWell)
+            if showMessages
+                battle.pbDisplay(_INTL("The Wishing Well protects {1} from a random added effect!", target.pbThis))
+            end
+            return false
+        end
         if target.shouldItemApply?(:COVERTCLOAK, aiCheck) && user.opposes?(target)
             if showMessages
                 battle.pbDisplay(_INTL("{1}'s {2} protects it from a random added effect!", target.pbThis, getItemName(:COVERTCLOAK)))
