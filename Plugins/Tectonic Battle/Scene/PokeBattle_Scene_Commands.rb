@@ -289,7 +289,7 @@ class PokeBattle_Scene
         cmdCancel = -1
         commands = []
         commands[cmdUse = commands.length] = _INTL("Use") if useType && useType != 0
-        commands[cmdChance = commands.length] = _INTL("Chance") if item.pocket == 3
+        commands[cmdChance = commands.length] = _INTL("Chance") if item.is_poke_ball?
         commands[cmdCancel = commands.length] = _INTL("Cancel")
         command = itemScene.pbShowCommands(_INTL("{1} is selected.",itemName),commands)
         if cmdChance > -1 && command == cmdChance # Show the chance of the selected Pokeball catching

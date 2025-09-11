@@ -659,7 +659,7 @@ end
       GameData::Item.each do |itemData|
           next if itemData.super
           next if itemData.cut
-          next unless itemData.pocket == 5
+          next unless itemData.can_hold?
           itemDataSorted.push(itemData)
       end
   

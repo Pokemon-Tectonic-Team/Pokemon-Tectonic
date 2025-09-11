@@ -1510,7 +1510,7 @@ Description = A 100% pure juice made of Berries. It restores the HP of one Poké
 [RAGECANDYBAR]
 Name = Rage Candy Bar
 NamePlural = Rage Candy Bars
-Pocket = 3
+Pocket = 2
 Price = 350
 FieldUse = OnPokemon
 Description = Mahogany Town's famous candy. It can be used once to heal all the status conditions of a Pokémon.
@@ -2798,7 +2798,7 @@ Description = It would be a delicious treat if you were a Pokémon.
 [OMNIDRIVE]
 Name = OmniDrive
 NamePlural = OmniDrives
-Pocket = 8
+Pocket = 7
 Price = 0
 FieldUse = OnPokemon
 Flags = KeyItem

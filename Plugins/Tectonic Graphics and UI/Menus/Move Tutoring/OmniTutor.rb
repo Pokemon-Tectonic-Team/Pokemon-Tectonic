@@ -18,11 +18,13 @@ end
 
 def getTMLearnableMoves
     moves = []
-    $PokemonBag.pockets[4].each do |itemEntry|
-        itemID = itemEntry[0]
-        itemData = GameData::Item.get(itemID)
-        next unless itemData.is_machine?
-        moves.push(itemData.move)
+    $PokemonBag.pockets.each do |pocket|
+        pocket.each do |itemEntry|
+            itemID = itemEntry[0]
+            itemData = GameData::Item.get(itemID)
+            next unless itemData.is_machine?
+            moves.push(itemData.move)
+        end
     end
 
     moves.uniq!
