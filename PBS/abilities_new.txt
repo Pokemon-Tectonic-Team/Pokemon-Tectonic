@@ -2240,7 +2240,7 @@ Description = Powers up Grass-type moves of itself and its allies by 50%.
 #-------------------------------
 [VICIOUSCYCLE]
 Name = Vicious Cycle
-Description = Dragon-type moves by the user hit all enemies and drain 33% HP.
+Description = The Pokemon's Dragon-type attacks become spread and drain 33% HP.
 #-------------------------------
 [VICTORYMOLT]
 Name = Victory Molt
