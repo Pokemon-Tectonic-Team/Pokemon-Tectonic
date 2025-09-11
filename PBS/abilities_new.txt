@@ -2233,6 +2233,10 @@ Description = Whenever a foe's poison worsens, the Pokémon heals for 25% max HP
 Name = Verdant
 Description = Powers up Grass-type moves of itself and its allies by 50%.
 #-------------------------------
+[VICIOUSCYCLE]
+Name = Vicious Cycle
+Description = The Pokemon's Dragon-type attacks become spread and drain 33% HP.
+#-------------------------------
 [VICTORYMOLT]
 Name = Victory Molt
 Description = Heals non-volatile status conditions and resets stat changes after knocking out any Pokémon.
