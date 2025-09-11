@@ -186,12 +186,19 @@ class PokemonBag_Scene
           end
           overlay.blt(470,y+boxheight-18,@sliderbitmap.bitmap,Rect.new(36,20,36,18))
         end
+
+        # Set the selected item's icon
+        @sprites["itemicon"].item = itemlist.item
+        @sprites["itemicon"].visible = true
+        # Set the selected item's description
+        @sprites["itemtext"].text = (itemlist.item) ? GameData::Item.get(itemlist.item).description : _INTL("Close pocket.")
+      else
+        # Set the selected item's icon
+        @sprites["itemicon"].item = nil
+        @sprites["itemicon"].visible = false
+        # Set the selected item's description
+        @sprites["itemtext"].text = _INTL("Select a pocket.")
       end
-      # Set the selected item's icon
-      @sprites["itemicon"].item = itemlist.item
-      # Set the selected item's description
-      @sprites["itemtext"].text =
-         (itemlist.item) ? GameData::Item.get(itemlist.item).description : _INTL("Close bag.")
     end
   
     def pbRefreshFilter
