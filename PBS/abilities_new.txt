@@ -2262,6 +2262,10 @@ Description = At the end of each turn, itself and each ally heals for 1/16th of 
 Name = Wall Ninja
 Description = The Pokémon's attacks are always critical if there is an active Room.
 #-------------------------------
+[WANINGWILLPOWER]
+Name = Waning Willpower
+Description = During the Full Moon, the Pokémon saps the enemy Pokémon of their vitality, leeching them.
+#-------------------------------
 [WARDING]
 Name = Warding
 Description = Negates enemy status moves that target the Pokémon or create hazards around it.

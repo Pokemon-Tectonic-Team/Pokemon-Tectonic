@@ -1783,7 +1783,7 @@ Pokemon = HUNTAIL,70
     EV = 10,20,0,20,20,0
 Pokemon = THIEVUL,70
     Moves = NIGHTCHILL,MOONGLOW,FLAMESPIKES,SWEETSELENE
-    AbilityIndex = 0 # Moonlighter
+    AbilityIndex = 0 # Waning Willpower
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10
