@@ -3599,7 +3599,7 @@ Pokemon = ALTARIA,30
     Item = LEFTOVERS
 Pokemon = KANGASKHAN,30
     Moves = PUMMEL,SUCKERPUNCH,FLAMECHARGE,HEADBUTT
-    AbilityIndex = 0 # Inner Focus
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [TRAINER_Candy,Candy]
 Flags = NoPerfect
@@ -4264,7 +4264,7 @@ Pokemon = STUNFISK,55
     AbilityIndex = 0 # Double Check
 Pokemon = TEAMUJIN,55
     Moves = BODYSLAM,CRUNCH,POWERUPPUNCH,INFERNOIMPACT
-    AbilityIndex = 1 # Parental Bond
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [COOLTRAINER_F,Reina]
 Pokemon = AMBIPOM,55
