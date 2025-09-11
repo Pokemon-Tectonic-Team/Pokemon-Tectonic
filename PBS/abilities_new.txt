@@ -2242,6 +2242,10 @@ Description = Powers up Grass-type moves of itself and its allies by 50%.
 Name = Vicious Cycle
 Description = The Pokemon's Dragon-type attacks become spread and drain 33% HP.
 #-------------------------------
+[HORDETACTICS]
+Name = Horde Tactics
+Description = The Pokemon's Normal-type attacks become spread and drain 33% HP.
+#-------------------------------
 [VICTORYMOLT]
 Name = Victory Molt
 Description = Heals non-volatile status conditions and resets stat changes after knocking out any Pokémon.
