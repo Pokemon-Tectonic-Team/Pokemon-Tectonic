@@ -346,7 +346,7 @@ Pokemon = TYNAMO,20
     EV = 10,20,0,0,20,20
 Pokemon = MMANTYKE,20
     Moves = ICEFANG,POISONTAIL,BULLETCHARGE,CHILL
-    AbilityIndex = 1 # Misty Form
+    AbilityIndex = 1 # Mist Form
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,20,20,0
@@ -2344,7 +2344,7 @@ Pokemon = CROBAT,70
 Pokemon = SWALOT,70
     AbilityIndex = 0 # Thick Fat
 Pokemon = HYDREIGON,70
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
 #-------------------------------
 [SUPERNERD,Agentbla]
 TrainerTypeLabel = DEVELOPER
@@ -2817,7 +2817,7 @@ Pokemon = HYDREIGON,70
     Gender = female
     Shiny = yes
     Moves = TRIPLETHREAT,DARKPULSE,TAILWIND,ROOST
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = CHOPLEBERRY
 #-------------------------------
 [POKEMONBREEDER_M2,Pechapanda]
@@ -3599,7 +3599,7 @@ Pokemon = ALTARIA,30
     Item = LEFTOVERS
 Pokemon = KANGASKHAN,30
     Moves = PUMMEL,SUCKERPUNCH,FLAMECHARGE,HEADBUTT
-    AbilityIndex = 0 # Inner Focus
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [TRAINER_Candy,Candy]
 Flags = NoPerfect
@@ -4039,7 +4039,7 @@ Pokemon = WORMADAM,42
 [SCIENTIST_M3,Gunter]
 Pokemon = HYDREIGON,55
     Moves = MASSDESTRUCTION,TRIPLETHREAT,HEATWAVE,TAILWIND
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = SHELLBELL
 Pokemon = BRELOOM,55
     Moves = DRAINPUNCH,LEAFBLADE,SHORTCIRCUIT,SPORE
@@ -4264,7 +4264,7 @@ Pokemon = STUNFISK,55
     AbilityIndex = 0 # Double Check
 Pokemon = TEAMUJIN,55
     Moves = BODYSLAM,CRUNCH,POWERUPPUNCH,INFERNOIMPACT
-    AbilityIndex = 1 # Parental Bond
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [COOLTRAINER_F,Reina]
 Pokemon = AMBIPOM,55
@@ -4967,7 +4967,7 @@ Pokemon = MMANDIBUZZ,63
     Item = BLACKSLUDGE
 Pokemon = HYDREIGON,63
     Moves = TRIPLETHREAT,DARKPULSE,GIGADRAIN,GUTTURALROAR
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = LEFTOVERS
 Pokemon = METAGROSS,64
     Moves = ELECTROSLASH,OMNISCIENTBLOW,BULLETPUNCH,METEORMASH
@@ -5662,7 +5662,7 @@ Pokemon = GYARADOS,70
 Pokemon = HYDREIGON,70
     Name = Seraph
     Moves = TRIPLETHREAT,FLASHCANNON,EARTHPOWER,ROOST
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10

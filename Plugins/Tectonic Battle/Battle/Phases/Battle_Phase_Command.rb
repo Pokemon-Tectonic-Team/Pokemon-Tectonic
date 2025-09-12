@@ -95,6 +95,7 @@ class PokeBattle_Battle
                 move = @battlers[idxBattler].getMoves[cmd]
                 next false if cmd < 0 || move.nil? || move.id.nil?
                 next false unless pbRegisterMove(idxBattler, cmd)
+                move.calculateUsageOverrides(battler,[]) # only to define calcType
                 target_data = move.pbTarget(battler)
                 next false if (!singleBattle? || target_data.id == :UserOrNearOther) &&
                               !pbChooseTarget(@battlers[idxBattler], move)

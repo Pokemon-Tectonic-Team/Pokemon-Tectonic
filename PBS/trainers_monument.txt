@@ -964,7 +964,7 @@ Pokemon = HZOROARK,70
     EV = 20,0,20,0,0,10
 Pokemon = HYDREIGON,70
     Moves = TRIPLETHREAT,DREAMDANCE,DARKALLURE,EARTHPOWER
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = GROUNDGEM
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
@@ -1270,7 +1270,7 @@ Pokemon = FERROTHORN,70
     EV = 20,10,20,0,10,0
 Pokemon = HYDREIGON,70
     Moves = TRIPLETHREAT,DEFOG,EARTHPOWER,ROOST
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Vicious Cycle
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10
@@ -1783,7 +1783,7 @@ Pokemon = HUNTAIL,70
     EV = 10,20,0,20,20,0
 Pokemon = THIEVUL,70
     Moves = NIGHTCHILL,MOONGLOW,FLAMESPIKES,SWEETSELENE
-    AbilityIndex = 0 # Moonlighter
+    AbilityIndex = 0 # Waning Willpower
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10
