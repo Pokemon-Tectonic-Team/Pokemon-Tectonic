@@ -75,3 +75,25 @@ BattleHandlers::AbilityOnHPDroppedBelowHalf.add(:WIRECUTTER,
       next false
   }
 )
+
+BattleHandlers::AbilityOnHPDroppedBelowHalf.add(:VOIDWARRANTY,
+  proc { |ability, battler, battle, endOfBattle|
+      next if battler.fainted?
+      next unless battler.species == :ROTOM
+      form0Name = GameData::Species.get_species_form(:ROTOM,0).form_name 
+      form1Name = GameData::Species.get_species_form(:ROTOM,1).form_name
+      form2Name = GameData::Species.get_species_form(:ROTOM,2).form_name
+      form3Name = GameData::Species.get_species_form(:ROTOM,3).form_name
+      form4Name = GameData::Species.get_species_form(:ROTOM,4).form_name
+      form5Name = GameData::Species.get_species_form(:ROTOM,5).form_name
+      choices = [form0Name,form1Name,form2Name,form3Name,form4Name,form5Name]
+      if battle.autoTesting
+        choice = rand(5)
+      elsif !battler.pbOwnedByPlayer? # Trainer AI
+        choice = 0
+      else
+        choice = battle.scene.pbShowCommands(_INTL("Which form should it take?"),choices,0)
+      end
+      battler.pbChangeForm(choice, _INTL("{1} takes on a new machine!", battler.pbThis))
+  }
+)

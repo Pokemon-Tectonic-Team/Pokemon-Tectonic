@@ -382,3 +382,12 @@ BattleHandlers::DamageCalcTargetAbility.add(:ROLLINGBLOWS,
     end
   }
 )
+
+BattleHandlers::DamageCalcTargetAbility.add(:MULTIHEADED,
+  proc { |ability, user, target, _move, mults, _baseDmg, type, aiCheck|
+    if user.belowHalfHealth?
+      mults[:final_damage_multiplier] *= 0.77
+      target.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)

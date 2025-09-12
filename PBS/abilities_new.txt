@@ -1314,6 +1314,10 @@ Flags = MoonglowSynergy
 Name = Moth Burglar
 Description = Hits opponent with Thief when switched out.
 #-------------------------------
+[MULTIHEADED]
+Name = Multiheaded
+Description = While the Pokémon is below half health, takes 33% less damage from attacks.
+#-------------------------------
 [MULTITASKER]
 Name = Multitasker
 Description = The Pokemon's Psychic-type attacks become spread and deal 35% more damage.
@@ -2257,6 +2261,10 @@ Description = Takes 40% less damage while using a status move.
 [VITALRHYTHM]
 Name = Vital Rhythm
 Description = At the end of each turn, itself and each ally heals for 1/16th of their HP.
+#-------------------------------
+[VOIDWARRANTY]
+Name = Void Warranty
+Description = Changes into another form of your choosing when its HP is lowered below half.
 #-------------------------------
 [WALLNINJA]
 Name = Wall Ninja
