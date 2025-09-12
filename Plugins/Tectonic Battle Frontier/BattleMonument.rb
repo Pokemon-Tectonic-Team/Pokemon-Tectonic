@@ -120,3 +120,37 @@ end
 def battleMonumentTeamSnapshot
     teamSnapshot(_INTL("Battle Monument Team {1}",Time.now.strftime("[%Y-%m-%d] %H_%M_%S.%L")))  
 end
+
+def lerp_i(int1, int2, factor):
+    return int1 * (1-factor) + int2 * factor
+end
+
+def lerp_col(col1, col2, factor):
+    return Color.new(
+        lerp_i(col1.red, col2.red, factor),
+        lerp_i(col1.green, col2.green, factor),
+        lerp_i(col1.blue, col2.blue, factor),
+        lerp_i(col1.alpha, col2.alpha, factor)
+    )
+end
+
+HOLOGRAM_BASE = Color.new(130, 227, 99)
+HOLOGRAM_LIGHT = Color.new(132, 137, 255)
+
+def hologramize(bitmap, stretch=1.3)
+    copiedBitmap = Bitmap.new(bitmap.width, bitmap.height)
+
+    width = copiedBitmap.width
+    height = copiedBitmap.height
+    for x in 0..width
+        for y in 0..height
+            base_color = bitmap.get_pixel(x,y)
+            color = bitmap.get_pixel((x-width/2)*stretch+(width/2), y) #Sample from enlarged image
+            color.alpha = y % 2 == 1 ? color.alpha : 0 #Interlace
+            color = lerp_col(base_color, color, 0.33) #Mix with original sprite
+            h, s, l = rgb_to_hsl(color.red, color.green, color.blue)
+            color = lerp_col(HOLOGRAM_BASE, HOLOGRAM_LIGHT, s) #Gradientize
+            copiedBitmap.set_pixel(x, y, color)
+        end
+    end
+end
