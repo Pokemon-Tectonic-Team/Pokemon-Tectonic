@@ -315,6 +315,13 @@ LandSparse,20,15
 Special,20
     1,MAREANIE,15
 #-------------------------------
+[081] # East Tunnel
+Puddle,20,20
+    20,CARVANHA,18,20
+    20,MAREANIE,18,20
+    20,REMORAID,18,20
+    20,TENTACOOL,18,20
+#-------------------------------
 [085] # Worried Man's House
 Special,20
     1,FRILLISH,15
