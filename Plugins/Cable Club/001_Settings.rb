@@ -11,7 +11,7 @@ module CableClub
   
   ONLINE_TRAINER_TYPE_LIST = [
     :POKEMONTRAINER_Androgynous,:POKEMONTRAINER_Feminine,:POKEMONTRAINER_Masculine,
-    :AROMALADY,:AROMADAY2,:AROMALADY3,
+    :AROMALADY,:AROMALADY2,:AROMALADY3,
     :ARTIST,:ARTIST2,:ARTIST3,:ARTIST4,
     :BACKPACKER_F,:BACKPACKER_M
     # etc etc... not important to fill out right now

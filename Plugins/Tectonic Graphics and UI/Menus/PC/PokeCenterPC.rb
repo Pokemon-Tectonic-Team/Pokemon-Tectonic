@@ -97,7 +97,7 @@ def pbPokeCenterPC
         elsif omniTutorCommand != -1 && command == omniTutorCommand
             useOmniTutor()
         elsif cableClubCommand != -1 && command == cableClubCommand
-            pbCableClub()
+            pbCableClubPCMenu()
         elsif teamCodeCommand != -1 && command == teamCodeCommand
             load_team_code()
         else
