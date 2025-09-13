@@ -111,8 +111,9 @@ module BattleHandlers
     # Experience and EV gain
     ExpGainModifierItem                 = ItemHandlerHash.new # Lucky Egg
     EVGainModifierItem                  = ItemHandlerHash.new
-    # Weather and terrin
+    # Weather and terrain
     WeatherExtenderItem                 = ItemHandlerHash.new
+    WeatherChangedAbility               = AbilityHandlerHash.new
     # End Of Round
     EORWeatherAbility                   = AbilityHandlerHash.new
     EORHealingAbility                   = AbilityHandlerHash.new
@@ -567,6 +568,10 @@ module BattleHandlers
     def self.triggerWeatherExtenderItem(item, weather, duration, battler, battle)
         ret = WeatherExtenderItem.trigger(item, weather, duration, battler, battle)
         return !ret.nil? ? ret : duration
+    end
+
+    def self.triggerWeatherChangedAbility(ability, oldWeather, battler, battle)
+        WeatherChangedAbility.trigger(ability, oldWeather, battler, battle)
     end
     
     #=============================================================================

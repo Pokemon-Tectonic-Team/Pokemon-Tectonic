@@ -949,6 +949,17 @@ BattleHandlers::AbilityOnSwitchIn.add(:HAUNTED,
   }
 )
 
+BattleHandlers::AbilityOnSwitchIn.add(:IONIZEDALLOY,
+  proc { |ability, battler, battle, aiCheck|
+      next 0 if aiCheck
+      next unless battle.rainy?
+      battle.pbShowAbilitySplash(battler, ability)
+      battle.pbDisplay(_INTL("Ions in the atmosphere react to {1}! (Switch-in)", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+      battle.scene.pbRefresh
+  }
+)
+
 BattleHandlers::AbilityOnSwitchIn.add(:BRUTEFORCE,
   proc { |ability, battler, battle, aiCheck|
       next 0 if aiCheck

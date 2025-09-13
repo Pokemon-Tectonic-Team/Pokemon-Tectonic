@@ -275,6 +275,10 @@ Description = Upon entry, lowers the foe's Attack stat by two steps.
 Name = Intrepid Sword
 Description = Raises Attack upon entry.
 #-------------------------------
+[IONIZEDALLOY]
+Name = Ionized Alloy
+Description = The Pokémon gains the Electric type in a rainstorm.
+#-------------------------------
 [IRONBARBS]
 Name = Iron Barbs
 Description = Physical moves against it inflict 1/8th max HP damage to the foe.
