@@ -967,6 +967,10 @@ Description = Powers up recoil and sound moves by 30%.
 Name = Hopping Mad
 Description = The Pokémon's Speed is doubled while using rampage moves.
 #-------------------------------
+[HORDETACTICS]
+Name = Horde Tactics
+Description = The Pokemon's Normal-type attacks become spread and drain 33% HP.
+#-------------------------------
 [HUBRIS]
 Name = Hubris
 Description = Raises Sp. Atk after knocking out any Pokémon.
@@ -2076,6 +2080,10 @@ Name = Taiga Trekker
 Description = During hail, boosts Speed and Grass-type damage by 50%.
 Flags = HailSynergy
 #-------------------------------
+[TANGLINGVINES]
+Name = Tangling Vines
+Description = When hit, the attacker's Speed is reduced, and this Pokémon's next attack against them is boosted by 30%.
+#-------------------------------
 [TANTALIZING]
 Name = Tantalizing
 Description = Draws in attacks from enemies with below half health.
@@ -2252,6 +2260,10 @@ Description = At the end of each turn, itself and each ally heals for 1/16th of 
 [WALLNINJA]
 Name = Wall Ninja
 Description = The Pokémon's attacks are always critical if there is an active Room.
+#-------------------------------
+[WANINGWILLPOWER]
+Name = Waning Willpower
+Description = During the Full Moon, the Pokémon saps the enemy Pokémon of their vitality, leeching them.
 #-------------------------------
 [WARDING]
 Name = Warding

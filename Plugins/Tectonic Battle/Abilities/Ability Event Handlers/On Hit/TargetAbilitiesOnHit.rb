@@ -917,7 +917,7 @@ BattleHandlers::TargetAbilityOnHit.add(:MULTISCALE,
 BattleHandlers::TargetAbilityOnHit.copy(:MULTISCALE,:DOMINEERING,:SHADOWSHIELD)
 
 BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next if target.fainted?
 
         type = move.calcType
@@ -935,4 +935,16 @@ BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
         battle.scene.pbRefresh
         target.hideMyAbilitySplash
   }
+)
+
+BattleHandlers::TargetAbilityOnHit.add(:TANGLINGVINES,
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next if target.fainted?
+        next -10 * aiNumHits if aiCheck
+        target.showMyAbilitySplash(ability)
+        user.tryLowerStat(:SPEED, target, increment: 1)
+        user.pointAt(:TanglingVines, target)
+        target.hideMyAbilitySplash
+
+    }
 )

@@ -1424,7 +1424,7 @@ Pokemon = GYAMASK,30
 [BACKPACKER_F,Aiyana]
 Pokemon = TANGELA,28
     Moves = KNOCKOFF,RAZORLEAF,BLUNTFORCE,POISONIVY
-    AbilityIndex = 1 # Tangling Hair
+    AbilityIndex = 1 # Tangling Vines
     Item = GRASSGEM
 Pokemon = GOURGEIST,28
     Moves = MYSTICALFIRE,MYSTERYSEED,SEANCE,GRASSKNOT
@@ -3599,7 +3599,7 @@ Pokemon = ALTARIA,30
     Item = LEFTOVERS
 Pokemon = KANGASKHAN,30
     Moves = PUMMEL,SUCKERPUNCH,FLAMECHARGE,HEADBUTT
-    AbilityIndex = 0 # Inner Focus
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [TRAINER_Candy,Candy]
 Flags = NoPerfect
@@ -4264,7 +4264,7 @@ Pokemon = STUNFISK,55
     AbilityIndex = 0 # Double Check
 Pokemon = TEAMUJIN,55
     Moves = BODYSLAM,CRUNCH,POWERUPPUNCH,INFERNOIMPACT
-    AbilityIndex = 1 # Parental Bond
+    AbilityIndex = 0 # Parental Bond
 #-------------------------------
 [COOLTRAINER_F,Reina]
 Pokemon = AMBIPOM,55
