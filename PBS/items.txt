@@ -763,7 +763,7 @@ NamePlural = Strength Herbs
 Pocket = 5
 Price = 4000
 Flags = Herb
-Description = An item to be held by a Pokémon. Boosts the power of a physical move by 33% once per battle.
+Description = A held item. Boosts the power of a special move by 15% and makes it physical, once per battle.
 #-------------------------------
 [INTELLECTHERB]
 Name = Intellect Herb
@@ -771,7 +771,7 @@ NamePlural = Intellect Herbs
 Pocket = 5
 Price = 4000
 Flags = Herb
-Description = An item to be held by a Pokémon. Boosts the power of a special move by 33% once per battle.
+Description = A held item. Boosts the power of a physical move by 15% and makes it special, once per battle.
 #-------------------------------
 [POWERHERB]
 Name = Power Herb
