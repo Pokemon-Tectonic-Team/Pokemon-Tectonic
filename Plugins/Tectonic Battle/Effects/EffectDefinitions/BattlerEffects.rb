@@ -2379,17 +2379,3 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Collecting Colors",
     :type => :Array,
 })
-
-GameData::BattleEffect.register_effect(:Battler, {
-    :id => :WishingWell,
-    :real_name => "Wishing Well",
-    :type => :Integer,
-    :ticks_down => true,
-    :apply_proc => proc do |battle, battler, value|
-        battle.pbDisplay(_INTL("{1} is blessed by the Wishing Well!", battler.pbThis))
-        battle.pbDisplay(_INTL("It'll block random added effects for {1} turns !", value - 1))
-    end,
-    :expire_proc => proc do |battle, battler|
-        battle.pbDisplay(_INTL("{1} is no longer blessed by the Wishing Well.", battler.pbThis))
-    end,
-})

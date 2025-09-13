@@ -375,7 +375,7 @@ showMessages)
             end
             return false
         end
-        if target.effectActive?(:WishingWell)
+        if target.pbOwnSide.effectActive?(:WishingWell)
             if showMessages
                 battle.pbDisplay(_INTL("The Wishing Well protects {1} from a random added effect!", target.pbThis))
             end

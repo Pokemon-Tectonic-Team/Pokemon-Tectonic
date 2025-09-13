@@ -144,7 +144,7 @@ end
 #===============================================================================
 # User is protected from random additional effects for a number of turns, by consuming coins (Wishing Well)
 #===============================================================================
-class PreventAddedEffectsScalesWithMoney < PokeBattle_Move
+class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
     def initialize(battle, move)
         super
         @coinsToConsume = 0
@@ -161,13 +161,11 @@ class PreventAddedEffectsScalesWithMoney < PokeBattle_Move
         actualCoinAmountConsumed = beforeCoins - user.pbOwnSide.effects[:PayDay]
         if actualCoinAmountConsumed > 0
             @battle.pbDisplay(_INTL("{1} coins were thrown in the Wishing Well!", actualCoinAmountConsumed))
-            user.applyEffect(:WishingWell, (actualCoinAmountConsumed / 100).floor)
+            user.pbOwnSide.applyEffect(:WishingWell, (actualCoinAmountConsumed / 100).floor)
         else
             @battle.pbDisplay(_INTL("There were no coins to throw in the Wishing Well..."))
         end
-        
     end
-    
 end
 
 
