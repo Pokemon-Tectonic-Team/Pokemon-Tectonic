@@ -685,7 +685,7 @@ Target = NearOther
 FunctionCode = DisableTargetUsingOffTypeMove4
 Flags = CanProtect,CanMagicCoat
 Description = The target is barred by rules which prevent it from using off-type moves for three more turns.
-Animation = IMPRISON
+Animation = BLOCK
 #-------------------------------
 [BEARHUG]
 Name = Bear Hug
