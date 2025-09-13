@@ -21,14 +21,14 @@ def pbChangeOnlineTrainerType
       msg=_INTL("An {1} is the kind of Trainer you want to be?",trainername)
       if pbConfirmMessage(msg)
         pbMessage(_INTL("You will appear as an {1} in online battles.",trainername))
-        $Trainer.online_trainer_type=new_trainer_type
+        $Trainer.online_trainer_type=new_trainer_type_id
         break
       end
     else
       msg=_INTL("A {1} is the kind of Trainer you want to be?",trainername)
       if pbConfirmMessage(msg)
         pbMessage(_INTL("You will appear as a {1} in online battles.",trainername))
-        $Trainer.online_trainer_type=new_trainer_type
+        $Trainer.online_trainer_type=new_trainer_type_id
         break
       end
     end
