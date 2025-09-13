@@ -293,23 +293,23 @@ BattleHandlers::DamageCalcUserItem.add(:STEELGEM,
 
 BattleHandlers::DamageCalcUserItem.add(:STRENGTHHERB,
   proc { |item, user, target, move, mults, _baseDmg, type, aiCheck|
-      next unless move.physicalMove?
+      next if move.statusMove?
       unless aiCheck
         user.applyEffect(:EmpoweringHerbConsumed, item)
         user.aiLearnsItem(item)
       end
-      mults[:final_damage_multiplier] *= 1.33
+      mults[:final_damage_multiplier] *= 1.15
   }
 )
 
 BattleHandlers::DamageCalcUserItem.add(:INTELLECTHERB,
   proc { |item, user, target, move, mults, _baseDmg, type, aiCheck|
-      next unless move.specialMove?
+      next if move.statusMove?
       unless aiCheck
         user.applyEffect(:EmpoweringHerbConsumed, item)
         user.aiLearnsItem(item)
       end
-      mults[:final_damage_multiplier] *= 1.33
+      mults[:final_damage_multiplier] *= 1.15
   }
 )
 
