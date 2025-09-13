@@ -6,13 +6,13 @@ def pbCableClub
 end
 
 def pbChangeOnlineTrainerType
-  old_trainer_type = $Trainer.online_trainer_type
+  old_trainer_type = GameData::TrainerType.get($Trainer.online_trainer_type)
   if $Trainer.online_trainer_type!=$Trainer.trainer_type
-    trainername=GameData::TrainerType.get($Trainer.online_trainer_type).name
+    trainername=old_trainer_type.real_name
     pbMessage(_INTL("Your current online Trainer Class is {1}.",trainername))
   end
   pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"))
-  index = CableClub::ONLINE_TRAINER_TYPE_LIST.index($Trainer.online_trainer_type)
+  index = CableClub::ONLINE_TRAINER_TYPE_LIST.index(old_trainer_type.id)
   loop do
     new_trainer_type_id = pbListScreen(_INTL("Choose a class"), CCTrainerTypeLister.new(index))
     new_trainer_type = GameData::TrainerType.get(new_trainer_type_id)
@@ -33,7 +33,7 @@ def pbChangeOnlineTrainerType
       end
     end
   end
-  if old_trainer_type != $Trainer.online_trainer_type
+  if old_trainer_type.id != $Trainer.online_trainer_type
     CableClub.onUpdateTrainerType.trigger(nil, $Trainer.online_trainer_type)
   end
 end
