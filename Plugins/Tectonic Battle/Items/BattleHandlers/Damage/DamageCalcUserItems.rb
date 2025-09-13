@@ -293,7 +293,7 @@ BattleHandlers::DamageCalcUserItem.add(:STEELGEM,
 
 BattleHandlers::DamageCalcUserItem.add(:STRENGTHHERB,
   proc { |item, user, target, move, mults, _baseDmg, type, aiCheck|
-      next if move.statusMove?
+      next unless move.category == 1 # Originally special, used instead of specialMove? because of adaptive moves and interloper abilities
       unless aiCheck
         user.applyEffect(:EmpoweringHerbConsumed, item)
         user.aiLearnsItem(item)
@@ -304,7 +304,7 @@ BattleHandlers::DamageCalcUserItem.add(:STRENGTHHERB,
 
 BattleHandlers::DamageCalcUserItem.add(:INTELLECTHERB,
   proc { |item, user, target, move, mults, _baseDmg, type, aiCheck|
-      next if move.statusMove?
+      next unless move.category == 0 # Originally physical, used instead of specialMove? because of adaptive moves and interloper abilities
       unless aiCheck
         user.applyEffect(:EmpoweringHerbConsumed, item)
         user.aiLearnsItem(item)
