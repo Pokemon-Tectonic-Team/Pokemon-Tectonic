@@ -477,6 +477,10 @@ Description = Can hold two items, but drops one when swapping out.
 Name = Klutz
 Description = The Pokémon can't use any held items.
 #-------------------------------
+[LATEBLOOMER]
+Name = Late Bloomer
+Description = Deals 30% more damage when it's slower than the target.
+#-------------------------------
 [LEGSTRENGTH]
 Name = Leg Strength
 Description = Boosts the power of kicking moves by 30%.

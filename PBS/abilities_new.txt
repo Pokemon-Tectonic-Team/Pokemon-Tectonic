@@ -1134,10 +1134,6 @@ Name = Last Gasp
 Description = Cannot take damage or be switched out. Hears Perish Song upon entry, ensuring its demise.
 Flags = Immutable
 #-------------------------------
-[LATEBLOOMER]
-Name = Late Bloomer
-Description = Deals 30% more damage when it's slower than the target.
-#-------------------------------
 [LEVIATHAN]
 Name = Leviathan
 Description = Protected from critical hits. Can't be burned or frostbitten.
