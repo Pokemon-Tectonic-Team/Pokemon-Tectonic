@@ -224,7 +224,7 @@ module GameData
       end
 
       def self.staple_moves
-        return self::DATA.values.filter { |move| move.staple_move? }.map { |move| move.id }
+        return self::DATA.values.filter { |move| move.staple_move? }.map { |move| move.id }.uniq
       end
     end
 end

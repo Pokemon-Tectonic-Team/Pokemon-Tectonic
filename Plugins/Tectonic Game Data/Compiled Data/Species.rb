@@ -479,7 +479,7 @@ module GameData
             inherited_moves.each do |moveID|
                 nonInheritedLineMoves.delete(moveID)
             end
-            GameData::Move.staple_moves do |moveID|
+            GameData::Move.staple_moves.each do |moveID|
                 nonInheritedLineMoves.delete(moveID)
             end
             return nonInheritedLineMoves
