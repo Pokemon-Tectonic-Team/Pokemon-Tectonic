@@ -10,6 +10,7 @@ Name = Ancient Priest
 Gender = Unknown
 BaseMoney = 0
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [ANOTHERPOSSIBLEALESSA]
 Name = Another Possible

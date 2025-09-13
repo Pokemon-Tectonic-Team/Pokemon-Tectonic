@@ -9,14 +9,6 @@ module CableClub
   
   FOLDER_FOR_BATTLE_PRESETS = "OnlinePresets"
   
-  ONLINE_TRAINER_TYPE_LIST = [
-    :POKEMONTRAINER_Androgynous,:POKEMONTRAINER_Feminine,:POKEMONTRAINER_Masculine,
-    :AROMALADY,:AROMALADY2,:AROMALADY3,
-    :ARTIST,:ARTIST2,:ARTIST3,:ARTIST4,
-    :BACKPACKER_F,:BACKPACKER_M
-    # etc etc... not important to fill out right now
-  ]
-  
   ONLINE_WIN_SPEECHES_LIST = [
     _INTL("I won!"),
     _INTL("It's all thanks to my team."),

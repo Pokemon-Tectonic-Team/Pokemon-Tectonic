@@ -12,7 +12,7 @@ def pbChangeOnlineTrainerType
     pbMessage(_INTL("Your current online Trainer Class is {1}.",trainername))
   end
   pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"))
-  index = CableClub::ONLINE_TRAINER_TYPE_LIST.index(old_trainer_type.id)
+  index = GameData::TrainerType.cableClubClasses.index(old_trainer_type.id) || 0
   loop do
     new_trainer_type_id = pbListScreen(_INTL("Choose a class"), CCTrainerTypeLister.new(index))
     new_trainer_type = GameData::TrainerType.get(new_trainer_type_id)

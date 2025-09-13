@@ -648,7 +648,7 @@ class CCTrainerTypeLister
     @commands.clear
     @ids.clear
     cmds = []
-    CableClub::ONLINE_TRAINER_TYPE_LIST.each do |id|
+    GameData::TrainerType.cableClubClasses.each do |id|
       tr_type = GameData::TrainerType.get(id)
       cmds.push([id, tr_type.real_name])
     end
