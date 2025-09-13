@@ -468,12 +468,18 @@ module GameData
             inherited_moves.each do |moveID|
                 nonInheritedTutorMoves.delete(moveID)
             end
+            GameData::Move.staple_moves do |moveID|
+                nonInheritedTutorMoves.delete(moveID)
+            end
             return nonInheritedTutorMoves
         end
 
         def non_inherited_line_moves
             nonInheritedLineMoves = (@line_moves || @egg_moves).clone
             inherited_moves.each do |moveID|
+                nonInheritedLineMoves.delete(moveID)
+            end
+            GameData::Move.staple_moves do |moveID|
                 nonInheritedLineMoves.delete(moveID)
             end
             return nonInheritedLineMoves
@@ -492,6 +498,7 @@ module GameData
         def recalculate_learnable_moves
             @learnableMoves = []
 
+            @learnableMoves.concat(GameData::Move.staple_moves)
             @learnableMoves.concat(inherited_tutor_moves)
             @learnableMoves.concat(@tutor_moves)
             @learnableMoves.concat(@line_moves || @egg_moves)

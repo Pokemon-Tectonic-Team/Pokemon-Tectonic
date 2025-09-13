@@ -606,6 +606,7 @@ TotalPP = 3
 Target = User
 Priority = 4
 FunctionCode = ProtectUser
+Flags = Staple
 Description = It enables the user to evade all attacks. It fails if used in succession.
 #-------------------------------
 [QUICKATTACK]
@@ -5130,7 +5131,7 @@ Accuracy = 0
 TotalPP = 5
 Target = User
 FunctionCode = HealUserFullyAndFallAsleep
-Flags = CanSnatch
+Flags = CanSnatch,Staple
 Description = The user goes to sleep to fully restore their HP and heal any non-volatile status conditions.
 #-------------------------------
 [ROLEPLAY]

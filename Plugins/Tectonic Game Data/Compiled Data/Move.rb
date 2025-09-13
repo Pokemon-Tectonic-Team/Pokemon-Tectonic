@@ -192,6 +192,10 @@ module GameData
         return true
       end
 
+      def staple_move?
+        return @flags.include?("Staple")
+      end
+
       # Yields all data in order of their id_number.
       def self.each
         keys = self::DATA.keys.sort { |a, b|
@@ -217,6 +221,10 @@ module GameData
 
       def self.all_non_signature_moves
         return self::ALL_MOVES_LIST
+      end
+
+      def self.staple_moves
+        return self::DATA.values.filter { |move| move.staple_move? }.map { |move| move.id }
       end
     end
 end
