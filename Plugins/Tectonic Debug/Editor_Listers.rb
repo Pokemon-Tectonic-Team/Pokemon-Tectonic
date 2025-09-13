@@ -622,7 +622,8 @@ end
 
 class CCTrainerTypeLister
   def initialize(selection = 0)
-    @sprite = IconSprite.new(Graphics.width * 3 / 4, (Graphics.height - 64) / 2 + 64)
+    size = 200
+    @sprite = IconWindow.new(Graphics.width * 3 / 4 - size / 2, (Graphics.height - 64) / 2 + 64 - size / 2, size, size)
     @sprite.z = 2
     @selection = selection
     @commands = []
@@ -631,7 +632,7 @@ class CCTrainerTypeLister
   end
 
   def dispose
-    @sprite.bitmap.dispose if @sprite.bitmap
+    @sprite.contents.dispose if @sprite.contents
     @sprite.dispose
   end
 
@@ -667,17 +668,17 @@ class CCTrainerTypeLister
   end
 
   def refresh(index)
-    @sprite.bitmap.dispose if @sprite.bitmap
+    @sprite.contents.dispose if @sprite.contents
     return if index < 0
     begin
       @sprite.setBitmap(GameData::TrainerType.front_sprite_filename(@ids[index]), 0)
     rescue
       @sprite.setBitmap(nil)
     end
-    if @sprite.bitmap
-      @sprite.ox = @sprite.bitmap.width / 2
-      @sprite.oy = @sprite.bitmap.height / 2
-    end
+    # if @sprite.contents
+    #   @sprite.ox = @sprite.contents.width / 2
+    #   @sprite.oy = @sprite.contents.height / 2
+    # end
   end
 end
 
