@@ -2085,6 +2085,10 @@ Name = Taiga Trekker
 Description = During hail, boosts Speed and Grass-type damage by 50%.
 Flags = HailSynergy
 #-------------------------------
+[TANGLINGVINES]
+Name = Tangling Vines
+Description = When hit, the attacker's Speed is reduced, and this Pokémon's next attack against them is boosted by 30%.
+#-------------------------------
 [TANTALIZING]
 Name = Tantalizing
 Description = Draws in attacks from enemies with below half health.

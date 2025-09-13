@@ -1424,7 +1424,7 @@ Pokemon = GYAMASK,30
 [BACKPACKER_F,Aiyana]
 Pokemon = TANGELA,28
     Moves = KNOCKOFF,RAZORLEAF,BLUNTFORCE,POISONIVY
-    AbilityIndex = 1 # Tangling Hair
+    AbilityIndex = 1 # Tangling Vines
     Item = GRASSGEM
 Pokemon = GOURGEIST,28
     Moves = MYSTICALFIRE,MYSTERYSEED,SEANCE,GRASSKNOT

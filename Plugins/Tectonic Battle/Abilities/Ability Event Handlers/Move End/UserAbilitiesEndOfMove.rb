@@ -614,3 +614,15 @@ BattleHandlers::UserAbilityEndOfMove.add(:BLINDING,
       battle.pbHideAbilitySplash(user)
   }
 )
+
+BattleHandlers::UserAbilityEndOfMove.add(:TANGLINGVINES,
+  proc { |ability, user, targets, move, battle, _switchedBattlers|
+    next unless move.damagingMove?
+    targets.each do |b|
+      next if b.fainted?
+      if b.pointsAt?(:TanglingVines, user)
+        b.disableEffect(:TanglingVines)
+      end
+    end
+  }
+)
