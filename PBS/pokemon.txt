@@ -4251,6 +4251,7 @@ Weight = 4.0
 Kind = Transform
 Pokedex = With its astonishing capacity for metamorphosis, it can get along with anything - except for its fellow Ditto.
 Generation = 1
+Flags = NoStaples
 #-------------------------------
 [EEVEE]
 Name = Eevee

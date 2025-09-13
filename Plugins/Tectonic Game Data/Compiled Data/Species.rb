@@ -498,7 +498,9 @@ module GameData
         def recalculate_learnable_moves
             @learnableMoves = []
 
-            @learnableMoves.concat(GameData::Move.staple_moves)
+            if !@flags.include?("NoStaples")
+              @learnableMoves.concat(GameData::Move.staple_moves)
+            end
             @learnableMoves.concat(inherited_tutor_moves)
             @learnableMoves.concat(@tutor_moves)
             @learnableMoves.concat(@line_moves || @egg_moves)
