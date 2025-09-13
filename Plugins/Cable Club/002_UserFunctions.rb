@@ -7,42 +7,30 @@ end
 
 def pbChangeOnlineTrainerType
   old_trainer_type = $Trainer.online_trainer_type
-  if $Trainer.online_trainer_type==$Trainer.trainer_type
-    pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"))
-  else
+  if $Trainer.online_trainer_type!=$Trainer.trainer_type
     trainername=GameData::TrainerType.get($Trainer.online_trainer_type).name
     pbMessage(_INTL("Your current online Trainer Class is {1}.",trainername))
   end
-  commands=[]
-  trainer_types=[]
-  CableClub::ONLINE_TRAINER_TYPE_LIST.each do |type|
-    t=type
-    t=type[$Trainer.gender] if type.is_a?(Array)
-    commands.push(GameData::TrainerType.get(t).name)
-    trainer_types.push(t)
-  end
-  commands.push(_INTL("Cancel"))
+  pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"))
+  index = CableClub::ONLINE_TRAINER_TYPE_LIST.index($Trainer.online_trainer_type)
   loop do
-    cmd=pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"),commands,-1)
-    if cmd>=0 && cmd<commands.length-1
-      trainername=commands[cmd]
-      if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
-        msg=_INTL("An {1} is the kind of Trainer you want to be?",trainername)
-        if pbConfirmMessage(msg)
-          pbMessage(_INTL("You will appear as an {1} in online battles.",trainername))
-          $Trainer.online_trainer_type=trainer_types[cmd]
-          break
-        end
-      else
-        msg=_INTL("A {1} is the kind of Trainer you want to be?",trainername)
-        if pbConfirmMessage(msg)
-          pbMessage(_INTL("You will appear as a {1} in online battles.",trainername))
-          $Trainer.online_trainer_type=trainer_types[cmd]
-          break
-        end
+    new_trainer_type_id = pbListScreen(_INTL("Choose a class"), CCTrainerTypeLister.new(index))
+    new_trainer_type = GameData::TrainerType.get(new_trainer_type_id)
+    trainername=new_trainer_type.real_name
+    if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
+      msg=_INTL("An {1} is the kind of Trainer you want to be?",trainername)
+      if pbConfirmMessage(msg)
+        pbMessage(_INTL("You will appear as an {1} in online battles.",trainername))
+        $Trainer.online_trainer_type=new_trainer_type
+        break
       end
     else
-      break
+      msg=_INTL("A {1} is the kind of Trainer you want to be?",trainername)
+      if pbConfirmMessage(msg)
+        pbMessage(_INTL("You will appear as a {1} in online battles.",trainername))
+        $Trainer.online_trainer_type=new_trainer_type
+        break
+      end
     end
   end
   if old_trainer_type != $Trainer.online_trainer_type

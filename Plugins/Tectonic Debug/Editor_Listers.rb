@@ -617,6 +617,71 @@ class TrainerTypeLister
 end
 
 #===============================================================================
+# Modified TrainerTypeLister for public facing
+#===============================================================================
+
+class CCTrainerTypeLister
+  def initialize(selection = 0)
+    @sprite = IconSprite.new(Graphics.width * 3 / 4, (Graphics.height - 64) / 2 + 64)
+    @sprite.z = 2
+    @selection = selection
+    @commands = []
+    @ids = []
+    @index = 0
+  end
+
+  def dispose
+    @sprite.bitmap.dispose if @sprite.bitmap
+    @sprite.dispose
+  end
+
+  def setViewport(viewport)
+    @sprite.viewport = viewport
+  end
+
+  def startIndex
+    return @index
+  end
+
+  def commands
+    @commands.clear
+    @ids.clear
+    cmds = []
+    CableClub::ONLINE_TRAINER_TYPE_LIST.each do |id|
+      tr_type = GameData::TrainerType.get(id)
+      cmds.push([id, tr_type.real_name])
+    end
+    for t in cmds
+      @commands.push(t[1])
+      @ids.push(t[0])
+    end
+    @index = @selection
+    @index = @commands.length - 1 if @index >= @commands.length
+    @index = 0 if @index < 0
+    return @commands
+  end
+
+  def value(index)
+    return nil if index < 0
+    return @ids[index]
+  end
+
+  def refresh(index)
+    @sprite.bitmap.dispose if @sprite.bitmap
+    return if index < 0
+    begin
+      @sprite.setBitmap(GameData::TrainerType.front_sprite_filename(@ids[index]), 0)
+    rescue
+      @sprite.setBitmap(nil)
+    end
+    if @sprite.bitmap
+      @sprite.ox = @sprite.bitmap.width / 2
+      @sprite.oy = @sprite.bitmap.height / 2
+    end
+  end
+end
+
+#===============================================================================
 #
 #===============================================================================
 class TrainerBattleLister
