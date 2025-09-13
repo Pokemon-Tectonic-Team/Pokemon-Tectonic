@@ -89,7 +89,11 @@ module GameData
       end
 
       def self.cableClubClasses
-          return self::DATA.values.select { |t| t.cable_club }
+          classes = self::DATA.values.select { |t| t.cable_club }
+          # force these to the start of the list
+          # it's kind of a hack but the alternative is a big sort just to move 3 entries around 
+          classes.unshift(:POKEMONTRAINER_Androgynous, :POKEMONTRAINER_Feminine, :POKEMONTRAINER_Masculine)
+          return classes
       end
   
       def initialize(hash)

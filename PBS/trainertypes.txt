@@ -1415,19 +1415,16 @@ IntroBGM = ELITETRAINER
 Name = Androgynous
 Gender = Unknown
 BaseMoney = 60
-CableClub = true
 #-------------------------------
 [POKEMONTRAINER_Feminine]
 Name = Feminine
 Gender = Female
 BaseMoney = 60
-CableClub = true
 #-------------------------------
 [POKEMONTRAINER_Masculine]
 Name = Masculine
 Gender = Male
 BaseMoney = 60
-CableClub = true
 #-------------------------------
 [POKEMONTRAINER_RIVALF]
 Name = Pokémon Trainer
