@@ -150,8 +150,42 @@ class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
         @coinsToConsume = 0
     end
 
+    def pbMoveFailed?(user, _targets, show_message)
+        if user.pbOwnSide.countEffect(:PayDay) < 100 :
+            @battle.pbDisplay(_INTL("But it failed, since there are not enough coins on the field!")) if show_message
+            return true
+        end
+        return false
+    end
+
     def pbOnStartUse(user, targets)
         @coinsToConsume = [user.pbOwnSide.countEffect(:PayDay),1000].min
+    end
+
+    def getEffectScore(user, _target)
+        if user.pbOwnSide.effectActive(:WishingWell)
+            remainingTurns = user.pbOwnSide.countEffect(:WishingWell)
+            if remainingTurns > ([user.pbOwnSide.countEffect(:PayDay),1000].min / 100).floor
+                return 0
+            end
+        end
+
+        worthRatio = 0
+        user.eachOpposing do |b|
+            worthRatioUser = 0
+            b.eachAIKnownMove do |move|
+                if move.randomEffect?
+                    worthRatioUser = [worthRatioUser+5, 10].min
+                end
+            end
+            worthRatio += worthRatioUser
+        end
+
+        user.eachAlly do |b|
+            worthRatio += 5 unless b.fullHealth?
+        end
+
+        return [worthRatio * ([user.pbOwnSide.countEffect(:PayDay),1000].min / 100).floor, 200].min
     end
 
     def pbEffectGeneral(user)
