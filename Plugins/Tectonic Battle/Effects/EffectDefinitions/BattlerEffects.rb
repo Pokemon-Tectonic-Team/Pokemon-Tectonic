@@ -46,13 +46,13 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Condensate,
-    :real_name => "Condensate",
+    :id => :ColdSnap,
+    :real_name => "Cold Snap",
     :resets_battlers_eot => true,
     :resets_battlers_sot => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbCommonAnimation("Shiver", battler)
-        battle.pbDisplay(_INTL("{1} rapidly cooled the air!", battler.pbThis))
+        battle.pbCommonAnimation("Ice Burn charging", battler)
+        battle.pbDisplay(_INTL("Ancient cold crystallizes around {1}!", battler.pbThis))
     end,
 })
 
