@@ -152,6 +152,7 @@ class CableClub_Scene
          (cmdDoubleBattle>=0 && cmd==cmdDoubleBattle) ||
          (cmdTripleBattle>=0 && cmd==cmdTripleBattle)
         rules=PokemonOnlineRules.new
+        rules.setTeamPreview(30)
         rules.setNumberRange(1,6)
         rules.addPokemonRule(NonEggRestriction)
         if cmd == cmdDoubleBattle # double battle
