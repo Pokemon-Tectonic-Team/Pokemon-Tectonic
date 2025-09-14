@@ -365,6 +365,14 @@ def make_party_validator(pbs_dir):
         moves_pbs_.read_file(moves_pbs)
         for internal_id in moves_pbs_.sections():
             move_syms.add(internal_id)
+            
+    with io.open(
+        os.path.join(pbs_dir, r"moves_primeval.txt"), "r", encoding="utf-8-sig"
+    ) as moves_pbs:
+        moves_pbs_ = configparser.ConfigParser()
+        moves_pbs_.read_file(moves_pbs)
+        for internal_id in moves_pbs_.sections():
+            move_syms.add(internal_id)
 
     with io.open(
         os.path.join(pbs_dir, r"items.txt"), "r", encoding="utf-8-sig"

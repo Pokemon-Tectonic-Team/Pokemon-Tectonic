@@ -16,6 +16,7 @@ $PBS_FILES = @(
     "abilities_new.txt",
 	"moves.txt",
 	"moves_new.txt",
+	"moves_primeval.txt",
 	"items.txt",
 	"pokemon_server.txt"
 )
