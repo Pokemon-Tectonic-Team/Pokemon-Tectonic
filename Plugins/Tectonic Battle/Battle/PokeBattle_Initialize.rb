@@ -229,6 +229,8 @@ class PokeBattle_Battle
 
     def aiAutoKnowsMove?(move,pokemon)
         autoKnow = getBattleMoveInstanceFromID(move.id).aiAutoKnows?(pokemon)
+        autoKnowTypes = [:FLEX]
+        return true if autoKnowTypes.include?(move.type)
         return true if !autoKnow.nil? && autoKnow
         return false if !autoKnow.nil? && !autoKnow
         return false unless pokemon.likelyHasSTAB?(move.type) # Don't know off-type moves

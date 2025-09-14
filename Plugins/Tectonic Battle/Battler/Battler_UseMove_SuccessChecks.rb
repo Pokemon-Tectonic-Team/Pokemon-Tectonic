@@ -153,7 +153,7 @@ GameData::Move.get(@effects[:GorillaTactics]).name)
                 return false
             end
         end
-        if hasActiveAbility?(:AURORAPRISM) && pbHasType?(move.type) && move.damagingMove?
+        if hasActiveAbility?(:AURORAPRISM) && (move.damagingMove? && (pbHasType?(move.type) || move.type == :FLEX))
             msg = _INTL("{1} cannot use moves of their own types!", pbThis)
             if showMessages
                 commandPhase ? @battle.pbDisplayPaused(msg) : @battle.pbDisplay(msg)

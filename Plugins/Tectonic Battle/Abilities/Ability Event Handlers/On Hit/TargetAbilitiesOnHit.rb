@@ -735,6 +735,7 @@ BattleHandlers::TargetAbilityOnHit.add(:SEALINGBODY,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next if user.fainted?
         next if user.effectActive?(:Disable)
+        next if move.id == :STRUGGLE
         next -15 if aiCheck
         battle.pbShowAbilitySplash(target, ability)
         user.applyEffect(:Disable, 2) if user.canBeDisabled?(true)

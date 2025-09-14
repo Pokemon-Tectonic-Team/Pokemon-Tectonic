@@ -437,11 +437,17 @@ Special,20
 #-------------------------------
 [135] # Nebula Ruins
 Cloud,20,25
-    20,BLIPBUG,22,24
     20,CLEFFA,22,24
-    20,MINIOR,22,24
-    20,STONJOURNER,22,24
-    20,WOOBAT,22,24
+    15,BLIPBUG,22,24
+    15,STONJOURNER,22,24
+    15,WOOBAT,22,24
+    5,MINIOR_10,22,24
+    5,MINIOR_11,22,24
+    5,MINIOR_12,22,24
+    5,MINIOR_13,22,24
+    5,MINIOR_7,22,24
+    5,MINIOR_8,22,24
+    5,MINIOR_9,22,24
 #-------------------------------
 [136] # Casaba Villa
 Land,20,10
@@ -729,10 +735,16 @@ DarkCave,20,20
 [215] # Tempest Realm
 Cloud,20,60
     20,CASTFORM,64,66
-    20,CRYOGONAL,64,66
-    20,DRIFLOON,64,66
-    20,MINIOR,64,66
-    20,WAILMER,64,66
+    15,CRYOGONAL,64,66
+    15,DRIFLOON,64,66
+    15,WAILMER,64,66
+    5,MINIOR_10,64,66
+    5,MINIOR_11,64,66
+    5,MINIOR_12,64,66
+    5,MINIOR_13,64,66
+    5,MINIOR_7,64,66
+    5,MINIOR_8,64,66
+    5,MINIOR_9,64,66
 #-------------------------------
 [216] # Highland Lake
 Land,20,40

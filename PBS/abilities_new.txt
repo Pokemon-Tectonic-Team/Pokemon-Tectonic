@@ -773,11 +773,6 @@ Name = Frostfanged
 Description = Boosts Attack and Speed by 30% in hail.
 Flags = HailSynergy
 #-------------------------------
-[FROSTPITALITY]
-Name = Frostpitality
-Description = Traps the foe during hail.
-Flags = HailSynergy
-#-------------------------------
 [FROSTSCATTER]
 Name = Frost Scatter
 Description = Summons a hail for four turns when hit by an attack.

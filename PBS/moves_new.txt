@@ -685,7 +685,7 @@ Target = NearOther
 FunctionCode = DisableTargetUsingOffTypeMove4
 Flags = CanProtect,CanMagicCoat
 Description = The target is barred by rules which prevent it from using off-type moves for three more turns.
-Animation = IMPRISON
+Animation = BLOCK
 #-------------------------------
 [BEARHUG]
 Name = Bear Hug
@@ -1082,7 +1082,6 @@ Target = NearOther
 FunctionCode = TwoTurnAttackInvulnerableInSky
 Flags = CanProtect
 Description = The user soars up high, charging and becoming invulnerable, then dive bombs the target on the second turn.
-Animation = FLY
 #-------------------------------
 [DIVININGTALON]
 Name = Divining Talon
@@ -5957,7 +5956,6 @@ Target = NearOther
 FunctionCode = TwoTurnAttackChargeRaiseUserAtk2
 Flags = CanProtect
 Description = Charges with astral power and boosts its Attack by two steps on one turn, then attacks on the second turn.
-Animation = METEORMASH
 #-------------------------------
 [REVERBWARD]
 Name = Reverb Ward

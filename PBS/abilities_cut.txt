@@ -333,6 +333,11 @@ Description = The Pokémon can check a foe's held item. Makes wild Pokémon have
 Name = Frost Heal
 Description = Restores 1/12th HP each turn if frostbitten. Ignores frostbite special damage reduction.
 #-------------------------------
+[FROSTPITALITY]
+Name = Frostpitality
+Description = Traps the foe during hail.
+Flags = HailSynergy
+#-------------------------------
 [FROSTSONG]
 Name = Arctic Ariette
 Description = Sound-based attacks turn Ice-type and are boosted by 30%.
