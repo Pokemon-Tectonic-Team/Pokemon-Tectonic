@@ -924,7 +924,8 @@ class TeamPreview_Scene
       @sprites["party_l#{i}"] = PokemonIconSprite.new(pkmn,@viewport)
       @sprites["party_l#{i}"].x = base_x + 32
       @sprites["party_l#{i}"].y = base_y + 52
-      @sprites["item_l#{i}"] = HeldItemIconSprite.new((base_x+72),(base_y+96),pkmn,@viewport)
+      # TODO: SUPPORT TWO ITEMS
+      @sprites["item_l#{i}"] = HeldItemIconSprite.new((base_x+72),(base_y+96),pkmn.items[0],@viewport)
     end
     right_party.each_with_index do |pkmn, i|
       base_x = ((i%2)*128)
@@ -932,7 +933,7 @@ class TeamPreview_Scene
       @sprites["party_r#{i}"] = PokemonIconSprite.new(pkmn,@viewport)
       @sprites["party_r#{i}"].x = base_x + 288
       @sprites["party_r#{i}"].y = base_y + 52
-      @sprites["item_r#{i}"] = HeldItemIconSprite.new((base_x+328),(base_y+96),pkmn,@viewport)
+      @sprites["item_r#{i}"] = HeldItemIconSprite.new((base_x+328),(base_y+96),pkmn.items[0],@viewport)
     end
     @sprites["timer"] = Window_AdvancedTextPokemon.newWithSize("",0,Graphics.height-64,Graphics.width,64)
     @sprites["timer"].viewport = @viewport
