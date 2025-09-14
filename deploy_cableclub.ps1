@@ -42,8 +42,19 @@ function Send-Files {
         }
     }
     
-    # Upload OnlinePresets folder
-    Write-Host "  Uploading OnlinePresets folder..." -ForegroundColor Yellow
+    # Remove and re-upload OnlinePresets folder
+    Write-Host "  Updating OnlinePresets folder..." -ForegroundColor Yellow
+    
+    # Remove existing OnlinePresets folder
+    Write-Host "    Removing existing OnlinePresets folder..." -ForegroundColor Gray
+    & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "rm -rf ${REMOTE_HOME}/OnlinePresets"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Failed to remove existing OnlinePresets folder!" -ForegroundColor Red
+        exit 1
+    }
+    
+    # Upload fresh OnlinePresets folder
+    Write-Host "    Uploading new OnlinePresets folder..." -ForegroundColor Gray
     & scp -i $SSH_KEY -r ".\OnlinePresets" "${SERVER_USER}@${SERVER_IP}:${REMOTE_HOME}/"
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Failed to upload OnlinePresets folder!" -ForegroundColor Red
