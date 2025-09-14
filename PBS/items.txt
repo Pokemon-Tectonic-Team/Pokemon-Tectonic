@@ -552,7 +552,7 @@ Name = Amulet Coin
 NamePlural = Amulet Coins
 Pocket = 5
 Price = 10000
-Description = A held item. If the wielder enters a battle, money generated in that battle is increased by 50%.
+Description = A held item. If the wielder enters a battle, money and coins generated in that battle are increased by 50%.
 #-------------------------------
 [SOOTHEBELL]
 Name = Soothe Bell

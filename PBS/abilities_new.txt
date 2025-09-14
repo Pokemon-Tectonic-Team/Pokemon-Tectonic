@@ -822,7 +822,7 @@ Description = Pokémon that swap in for this have their Speed raised and their P
 #-------------------------------
 [GILD]
 Name = Gild
-Description = Turns the held item of a Pokémon it hits into gold coins for you to take.
+Description = Turns the held item of a Pokémon it hits into scattered gold coins for you to take.
 #-------------------------------
 [GLASSFIRING]
 Name = Glass Firing

@@ -7,7 +7,7 @@ CHARMER,5,Charmer,"Your team takes 20% less move damage on the turns they enter.
 DECEIVER,5,Deceiver,"Your team deals 15% more move damage with attacks that don't share a type with their species."
 FORTUNE,5,Fortune,"Your team members' moves have a +30% chance to activate their additional effects."
 HARMONIC,5,Harmonic,"Your team take 10% less move damage."
-INDUSTRIOUS,5,Industrious,"You gain 10% more money from battles. If you have more than $100,000, your team gets a boost to Attack, Defense, Sp. Atk, and Sp. Def (before modifiers). This bonus scales with the level cap and is currently {b1}."
+INDUSTRIOUS,5,Industrious,"You gain 10% more money and coins in battles. If you have more than $100,000, your team gets a boost to Attack, Defense, Sp. Atk, and Sp. Def (before modifiers). This bonus scales with the level cap and is currently {b1}."
 LOYAL,5,Loyal,"Your team members gain 10% more EXP in battles. They also get a small boost to Attack, Defense, Sp. Atk, and Sp. Def (before modifiers). This bonus scales with the level cap and is currently {b}."
 MYSTIC,5,Mystic,"Whenever a member of your team uses a status move, they'll deal 25% more move damage next turn."
 NOBLE,5,Noble,"Your team members take 15% less move damage if they're using a status move this turn."
