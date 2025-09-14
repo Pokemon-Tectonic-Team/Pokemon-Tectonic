@@ -21,7 +21,7 @@ RULES_DIR = "./OnlinePresets"
 # Aprox. in seconds
 RULES_REFRESH_RATE = 60
 
-GAME_VERSION = Version("3.3.0")
+GAME_VERSION = Version("3.4.0")
 POKEMON_MAX_NAME_SIZE = 10
 PLAYER_MAX_NAME_SIZE = 10
 MAXIMUM_LEVEL = 70
