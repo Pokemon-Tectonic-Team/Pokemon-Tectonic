@@ -2379,3 +2379,16 @@ GameData::BattleEffect.register_effect(:Battler, {
     :real_name => "Collecting Colors",
     :type => :Array,
 })
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id =>  :TanglingVines,
+    :real_name => "Tangling Vines",
+    :type => :Position,
+    :disable_effects_on_other_exit => [:TanglingVines],
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is bound in {2}'s tangling vines!", battler.pbThis, battle.battlers[_value].pbThis))
+    end,
+    :disable_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} is no longer bound in tangling vines.", battler.pbThis))
+    end,
+})

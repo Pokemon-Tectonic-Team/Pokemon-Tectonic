@@ -1139,10 +1139,6 @@ Name = Last Gasp
 Description = Cannot take damage or be switched out. Hears Perish Song upon entry, ensuring its demise.
 Flags = Immutable
 #-------------------------------
-[LATEBLOOMER]
-Name = Late Bloomer
-Description = Deals 30% more damage when it's slower than the target.
-#-------------------------------
 [LEVIATHAN]
 Name = Leviathan
 Description = Protected from critical hits. Can't be burned or frostbitten.
@@ -2084,6 +2080,10 @@ Description = Boosts the power of blade moves by 30%.
 Name = Taiga Trekker
 Description = During hail, boosts Speed and Grass-type damage by 50%.
 Flags = HailSynergy
+#-------------------------------
+[TANGLINGVINES]
+Name = Tangling Vines
+Description = When hit, the attacker's Speed is reduced, and this Pokémon's next attack against them is boosted by 30%.
 #-------------------------------
 [TANTALIZING]
 Name = Tantalizing
