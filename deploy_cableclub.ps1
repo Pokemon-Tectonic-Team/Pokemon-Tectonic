@@ -20,7 +20,7 @@ $PBS_FILES = @(
 	"pokemon_server.txt"
 )
 
-function Upload-Files {
+function Send-Files {
     Write-Host "Uploading Tectonic Cable Club server files..." -ForegroundColor Green
     
     # Upload main server file
@@ -40,6 +40,14 @@ function Upload-Files {
             Write-Host "Failed to upload PBS/$file!" -ForegroundColor Red
             exit 1
         }
+    }
+    
+    # Upload OnlinePresets folder
+    Write-Host "  Uploading OnlinePresets folder..." -ForegroundColor Yellow
+    & scp -i $SSH_KEY -r ".\OnlinePresets" "${SERVER_USER}@${SERVER_IP}:${REMOTE_HOME}/"
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "Failed to upload OnlinePresets folder!" -ForegroundColor Red
+        exit 1
     }
     
     Write-Host "  All files uploaded successfully!" -ForegroundColor Green
@@ -77,9 +85,9 @@ if ($Status) {
     Restart-Server
     Get-ServerStatus
 } elseif ($UploadOnly) {
-    Upload-Files
+    Send-Files
 } else {
-    Upload-Files
+    Send-Files
     Restart-Server
     Get-ServerStatus
 }

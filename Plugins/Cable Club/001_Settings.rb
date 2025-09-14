@@ -7,7 +7,7 @@ module CableClub
   HOST = PUBLIC_HOST
   PORT = 9999
   
-  FOLDER_FOR_BATTLE_PRESETS = "OnlinePresets"
+  FOLDER_FOR_BATTLE_PRESETS = "LocalPresets"
   
   ONLINE_WIN_SPEECHES_LIST = [
     _INTL("I won!"),
