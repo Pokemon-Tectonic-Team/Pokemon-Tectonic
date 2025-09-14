@@ -1,0 +1,10 @@
+Restricted Singles
+Single battle w/ no legendaries @ Lv 70
+30
+1,6
+FixedLevelAdjustment;int;70
+0
+1
+NoLegendaryRestriction
+0
+0

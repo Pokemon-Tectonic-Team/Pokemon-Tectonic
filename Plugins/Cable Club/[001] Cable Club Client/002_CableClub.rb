@@ -99,14 +99,13 @@ module CableClub
   end
   
   def self.choose_team(ruleset)
-    return (0..$Trainer.party.length - 1).to_a
-    # team_order = nil
-    # pbFadeOutIn(99999) {
-    #   scene = PokemonParty_Scene.new
-    #   screen = PokemonPartyScreen.new(scene, $Trainer.party)
-    #   team_order = screen.pbPokemonMultipleEntryScreenOrder(ruleset)
-    # }
-    # return team_order
+    team_order = nil
+    pbFadeOutIn(99999) {
+      scene = PokemonParty_Scene.new
+      screen = PokemonPartyScreen.new(scene, $Trainer.party)
+      team_order = screen.pbPokemonMultipleEntryScreenOrder(ruleset)
+    }
+    return team_order
   end
   
   def self.check_pokemon(pkmn)
