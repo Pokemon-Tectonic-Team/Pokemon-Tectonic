@@ -87,6 +87,15 @@ end
         pokemon.removeItem(item)
         anyPokemonChanged = true
       end
+      
+      # Check and swap illegal balls
+      ball = GameData::Item.get(pokemon.poke_ball)
+      if !ball.legal?
+        pbMessage(_INTL("\\l[4]Pokemon {1} in {2} is in a {3}. That ball has been cut from the game or is not legal to own. Swapping now.", name, location, ball.name)) unless skipLegalityMessages?
+        pokemon.poke_ball = :POKEBALL
+        anyPokemonChanged = true
+      end
+      
     end
     return anyPokemonChanged
   rescue StandardError
