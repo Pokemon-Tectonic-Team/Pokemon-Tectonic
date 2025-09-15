@@ -15,21 +15,8 @@ jobs:
             - name: Checkout repository
               uses: actions/checkout@v3
 
-            - name: Set up SSH known hosts
-              run: |
-                  # Create .ssh directory
-                  $sshDir = Join-Path -Path $HOME -ChildPath ".ssh"
-                  New-Item -Path $sshDir -ItemType Directory -Force | Out-Null
-
-                  # Create known_hosts file with specific host key from repository variable
-                  $knownHostsPath = Join-Path -Path $sshDir -ChildPath "known_hosts"
-                  echo "${{ vars.SSH_HOST }} ssh-rsa ${{ vars.SSH_HOST_KEY }}" | Out-File -FilePath $knownHostsPath -Encoding ASCII
-              shell: pwsh
-
             - name: Execute deployment script
-              run: |
-                  # Run your deployment script
-                  .\deploy_cableclub.ps1
+              run: .\deploy_cableclub.ps1
               shell: pwsh
               env:
                   SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
