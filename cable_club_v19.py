@@ -14,7 +14,7 @@ from packaging.version import Version
 # This is the v19 version of the server. It is not compatible with earlier versions of the script
 
 HOST = r"0.0.0.0"
-PORT = 9999
+PORT = 9998  # This is the port for dev. Change to 9999 before updating live server
 PBS_DIR = r"./PBS"
 LOG_DIR = r"."
 RULES_DIR = "./OnlinePresets"
@@ -365,7 +365,7 @@ def make_party_validator(pbs_dir):
         moves_pbs_.read_file(moves_pbs)
         for internal_id in moves_pbs_.sections():
             move_syms.add(internal_id)
-            
+
     with io.open(
         os.path.join(pbs_dir, r"moves_primeval.txt"), "r", encoding="utf-8-sig"
     ) as moves_pbs:
@@ -447,7 +447,9 @@ def make_party_validator(pbs_dir):
                     if item2 and item2 not in item_syms:
                         logging.debug("invalid item id: %s", item2)
                         errors.append("invalid item")
-                    item_type = record.str() # don't need to validate but do need to read for data alignment
+                    item_type = (
+                        record.str()
+                    )  # don't need to validate but do need to read for data alignment
                     can_use_sketch = not set(SKETCH_MOVE_IDS).isdisjoint(species_.moves)
                     for _ in range(record.int()):
                         move = record.str()

@@ -2,13 +2,16 @@
 param(
     [switch]$UploadOnly,
     [switch]$RestartOnly,
-    [switch]$Status
+    [switch]$Status,
+    [switch]$Live
 )
 
 $SERVER_IP = "34.61.122.15"
 $SERVER_USER = "deewhydeeecks"
 $SSH_KEY = "$env:USERPROFILE\.ssh\cable_club_key"
-$REMOTE_HOME = "/home/deewhydeeecks"
+$ENV_SUFFIX = if ($Live) { "live" } else { "dev" }
+$REMOTE_HOME = "/home/deewhydeeecks/$ENV_SUFFIX"
+$SERVICE_NAME = "cableclub-$ENV_SUFFIX"
 
 # List of specific PBS files to copy
 $PBS_FILES = @(
@@ -66,8 +69,8 @@ function Send-Files {
 }
 
 function Restart-Server {
-    Write-Host "Restarting Tectonic Cable Club server..." -ForegroundColor Green
-    & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo systemctl restart cableclub"
+    Write-Host "Restarting Tectonic Cable Club server ($ENV_SUFFIX)..." -ForegroundColor Green
+    & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo systemctl restart $SERVICE_NAME"
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Restart failed!" -ForegroundColor Red
         exit 1
@@ -76,8 +79,8 @@ function Restart-Server {
 }
 
 function Get-ServerStatus {
-    Write-Host "Checking Tectonic Cable Club server status..." -ForegroundColor Yellow
-    $status = & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo systemctl is-active cableclub"
+    Write-Host "Checking Tectonic Cable Club server status ($ENV_SUFFIX)..." -ForegroundColor Yellow
+    $status = & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo systemctl is-active $SERVICE_NAME"
     
     if ($status -eq "active") {
         Write-Host "Cable Club server is running" -ForegroundColor Green
@@ -87,7 +90,7 @@ function Get-ServerStatus {
     
     # Show recent logs
     Write-Host "Recent logs:" -ForegroundColor Yellow
-    & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo journalctl -u cableclub --no-pager -n 5"
+    & ssh -i $SSH_KEY "${SERVER_USER}@${SERVER_IP}" "sudo journalctl -u $SERVICE_NAME --no-pager -n 5"
 }
 
 # Main execution

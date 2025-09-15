@@ -3,9 +3,12 @@ module CableClub
   PUBLIC_HOST = "34.61.122.15"
   LOCAL_HOST = "127.0.0.1"
 
+  DEV_PORT = 9998
+  LIVE_PORT = 9999
+
   # Change if testing locally or connecting to 3rd party server
   HOST = PUBLIC_HOST
-  PORT = 9999
+  PORT = Settings::DEV_VERSION ? DEV_PORT : LIVE_PORT
   
   FOLDER_FOR_BATTLE_PRESETS = "LocalPresets"
   
