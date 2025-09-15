@@ -1,0 +1,35 @@
+name: Deploy Cable Club
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - development
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: windows-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up SSH known hosts
+      run: |
+        # Create .ssh directory
+        $sshDir = Join-Path -Path $HOME -ChildPath ".ssh"
+        New-Item -Path $sshDir -ItemType Directory -Force | Out-Null
+        
+        # Create known_hosts file to avoid host verification prompts
+        $knownHostsPath = Join-Path -Path $sshDir -ChildPath "known_hosts"
+        ssh-keyscan -H 34.61.122.15 > $knownHostsPath
+      shell: pwsh
+      
+    - name: Execute deployment script
+      run: |
+        # Run your deployment script
+        .\deploy_cableclub.ps1
+      shell: pwsh
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
