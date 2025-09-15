@@ -167,3 +167,12 @@ DebugMenuCommands.register("addpokemon", {
       load_team_code()
     }
   })
+
+  DebugMenuCommands.register("importcode", {
+    "parent"      => "pokemonmenu",
+    "name"        => _INTL("Import Team Code from File"),
+    "description" => _INTL("Load a tectonic-tools team code from Analysis/teamcode.txt into your current party."),
+    "effect"      => proc {
+      read_team_code()
+    }
+  })

@@ -208,6 +208,7 @@ class PokeBattle_Battle
     end
 
     def initializeKnownMoves(pokemon)
+        return if is_online? # known moves system not necessary for cable club battles and leaks teams
         knownMovesArray = []
         @knownMoves[pokemon.personalID] = knownMovesArray
         pokemon.moves.each do |move|
