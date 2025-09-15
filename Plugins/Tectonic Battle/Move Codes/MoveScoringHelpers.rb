@@ -949,6 +949,10 @@ def getLightScreenEffectScore(user, baseDuration = nil, move = nil)
     return getScreenEffectScore(user, :LightScreen, baseDuration, move)
 end
 
+def getDiamondFieldEffectScore(user, baseDuration = nil, move = nil)
+    return getScreenEffectScore(user, :DiamondField, baseDuration, move)
+end
+
 def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
     score = 0
     # Current turn value
@@ -967,6 +971,7 @@ def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
     user.eachOpposing do |opp|
         next unless opp.hasScreenRemovalMove?
         foeCanBreak = true
+        score /= 2
         break  
     end
     foeIgnoresScreens = false
