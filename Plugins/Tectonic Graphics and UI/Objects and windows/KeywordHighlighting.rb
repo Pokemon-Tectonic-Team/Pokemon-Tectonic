@@ -128,6 +128,9 @@ def battleKeywordsImportantCaseSensitive
         "Speed",
         "Accuracy",
         "Evasion",
+        "Frost Spikes",
+        "Flame Spikes",
+        "Poison Spikes",
         "Spikes",
     ]
 end

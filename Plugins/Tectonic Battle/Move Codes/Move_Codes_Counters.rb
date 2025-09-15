@@ -299,7 +299,7 @@ class PokeBattle_Move_UsedAfterUserTakesPhysicalDamage < PokeBattle_Move
 
     def pbMoveFailedAI?(_user, targets)
         targets.each do |target|
-            return false if target.hasSpecialAttack?
+            return false if target.hasPhysicalAttack?
         end
         return true
     end
