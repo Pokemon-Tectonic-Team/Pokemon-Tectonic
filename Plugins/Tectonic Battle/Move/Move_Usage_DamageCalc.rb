@@ -302,6 +302,19 @@ class PokeBattle_Move
                     multipliers[:final_damage_multiplier] *= 2 / 3.0
                 end
             end
+        else
+            if !checkingForAI &&  
+                (target.pbOwnSide.effectActive?(:Reflect) ||
+                target.pbOwnSide.effectActive?(:LightScreen) ||
+                target.pbOwnSide.effectActive?(:AuroraVeil) ||
+                target.pbOwnSide.effectActive?(:DiamondField))
+                GameData::Ability.each do |ability_data|
+                next unless ability_data.flags&.include?("IgnoreScreens")
+                if user.hasAbility?(ability_data.id)
+                user.aiLearnsAbility(ability_data.id)
+                end
+                end
+            end
 
             # Repulsion Field
             if baseDamage >= 100 && target.pbOwnSide.effectActive?(:RepulsionField)
