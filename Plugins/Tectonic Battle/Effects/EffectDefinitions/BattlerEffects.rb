@@ -2392,3 +2392,8 @@ GameData::BattleEffect.register_effect(:Battler, {
         battle.pbDisplay(_INTL("{1} is no longer bound in tangling vines.", battler.pbThis))
     end,
 })
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :NoTimeSkip,
+    :real_name => "No Time Skip",
+})
