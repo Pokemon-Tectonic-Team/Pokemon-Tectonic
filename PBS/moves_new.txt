@@ -73,7 +73,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = AddMoneyGainedFromBattle
 Flags = CanProtect
-Description = The user attacks with the full force of The Market. Money is earned after the battle.
+Description = The user attacks with the full force of The Market. Scatters coins.
 Animation = PAYDAY
 #-------------------------------
 [CHAOSWHEEL]
@@ -2959,7 +2959,7 @@ TotalPP = 5
 Target = NearOther
 FunctionCode = CurseTargetEarnMoneyFromCurse
 Flags = CanProtect,CanMagicCoat
-Description = The target becomes cursed. Health lost from curse becomes coins for you to earn after battle.
+Description = The target becomes cursed. Scatters coins equal to health lost from the curse.
 Animation = CURSE
 #-------------------------------
 [SEANCE]
@@ -3351,7 +3351,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = IfFaintsTargetAddTonsOfMoneyGainedFromBattle
 Flags = CanProtect,Blade
-Description = The user attacks the target with a sword. If it faints, tons of money is earned after the battle.
+Description = The user attacks the target with a sword. If the target faints, scatters many coins.
 Animation = SACREDSWORD
 #-------------------------------
 [POLARIZEDROOM]
@@ -6720,7 +6720,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = HitTwoToFiveTimesAddMoneyGainedFromBattleEachHit
 Flags = CanProtect
-Description = The user makes an offering, then multi-hits two to five times. Money is earned for each hit.
+Description = The user makes an offering, then multi-hits two to five times. Scatters coins for each hit.
 Animation = PAYDAY
 #-------------------------------
 [SCOUR]
@@ -7239,7 +7239,7 @@ Target = NearOther
 FunctionCode = DoubleDamageMoneyTargetStatused
 Flags = CanProtect
 EffectChance = 100
-Description = The user demands tribute from the target. Money is earned after the battle. This deals double damage and makes double the money if the target has a non-volatile status condition.
+Description = The user demands tribute from the target. Scatters coins. Damage and coins are doubled if the target has a non-volatile status condition.
 Animation = PAYDAY
 #-------------------------------
 [SCAM]

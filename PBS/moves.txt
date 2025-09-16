@@ -583,7 +583,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = AddMoneyGainedFromBattle
 Flags = CanProtect
-Description = Numerous coins are hurled at the target to inflict damage. Money is earned after battle.
+Description = Numerous coins are hurled at the target to inflict damage. Scatters coins.
 #-------------------------------
 [POUND]
 Name = Pound
