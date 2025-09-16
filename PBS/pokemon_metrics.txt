@@ -361,7 +361,7 @@ ShadowX = 0
 ShadowSize = 2
 #-------------------------------
 [ARCHALUDON]
-BackSprite = 0,58
+BackSprite = 0,12
 FrontSprite = 0,10
 ShadowX = 0
 ShadowSize = 3
