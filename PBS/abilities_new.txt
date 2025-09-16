@@ -1635,6 +1635,10 @@ Description = Pokémon that swap in for this have their non-volatile status cond
 Name = Reluctant Blade
 Description = When hit with a physical move, hits back instantly with Leafage.
 #-------------------------------
+[REMANENTVOLTAGE]
+Name = Remanent Voltage
+Description = The Pokémon can use Electric-type moves when recharging from an exhausting move.
+#-------------------------------
 [RENDINGCLAWS]
 Name = Rending Claws
 Description = Critical hits lower all of the victim's stats.

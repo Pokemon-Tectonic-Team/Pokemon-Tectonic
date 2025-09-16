@@ -658,6 +658,21 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
+    :id => :Stuck,
+    :real_name => "Cannot Escape",
+    :type => :Integer,
+    :ticks_down => true,
+    :baton_passed => true,
+    :trapping => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is stuck! It can't be moved!", battler.pbThis))
+    end,
+    :expire_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} is no longer stuck.", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
     :id => :EvilRoots,
     :real_name => "Evil Roots",
     :baton_passed => true,
@@ -1283,6 +1298,28 @@ GameData::BattleEffect.register_effect(:Battler, {
     end,
     :expire_proc => proc do |battle, battler|
         battle.pbDisplay(_INTL("{1} is no longer being barred.", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :TypeRestricted,
+    :real_name => "Type Restricted",
+    :type => :Type,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} can only use {2}-type moves!", battler.pbThis, _value.name.capitalize))
+    end,
+    :disable_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} is no longer being type-restricted.", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :TypeRestrictedTurns,
+    :real_name => "Type Restricted Turns",
+    :type => :Integer,
+    :ticks_down => true,
+    :expire_proc => proc do |battle, battler|
+        battler.disableEffect(:TypeRestricted)
     end,
 })
 

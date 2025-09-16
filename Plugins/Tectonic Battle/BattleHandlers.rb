@@ -108,11 +108,13 @@ module BattleHandlers
     TargetAbilityKnockedBelowHalf       = AbilityHandlerHash.new
     EndOfMoveItem                       = ItemHandlerHash.new   # Leppa Berry
     EndOfMoveStatRestoreItem            = ItemHandlerHash.new   # White Herb
+    UserAbilityEndOfExhaustingMove      = AbilityHandlerHash.new #Remanent Voltage
     # Experience and EV gain
     ExpGainModifierItem                 = ItemHandlerHash.new # Lucky Egg
     EVGainModifierItem                  = ItemHandlerHash.new
-    # Weather and terrin
+    # Weather and terrain
     WeatherExtenderItem                 = ItemHandlerHash.new
+    WeatherChangedAbility               = AbilityHandlerHash.new
     # End Of Round
     EORWeatherAbility                   = AbilityHandlerHash.new
     EORHealingAbility                   = AbilityHandlerHash.new
@@ -549,6 +551,10 @@ module BattleHandlers
         return !ret.nil? ? ret : false
     end
 
+    def self.triggerUserAbilityEndOfExhaustingMove(ability, user, targets, move, battle)
+        UserAbilityEndOfExhaustingMove.trigger(ability, user, targets, move, battle)
+    end
+
     #=============================================================================
 
     def self.triggerExpGainModifierItem(item, battler, exp)
@@ -567,6 +573,10 @@ module BattleHandlers
     def self.triggerWeatherExtenderItem(item, weather, duration, battler, battle)
         ret = WeatherExtenderItem.trigger(item, weather, duration, battler, battle)
         return !ret.nil? ? ret : duration
+    end
+
+    def self.triggerWeatherChangedAbility(ability, oldWeather, battler, battle)
+        WeatherChangedAbility.trigger(ability, oldWeather, battler, battle)
     end
     
     #=============================================================================
