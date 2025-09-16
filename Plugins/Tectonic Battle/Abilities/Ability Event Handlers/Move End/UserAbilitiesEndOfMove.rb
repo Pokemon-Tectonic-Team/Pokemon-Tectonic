@@ -235,8 +235,8 @@ BattleHandlers::UserAbilityEndOfMove.add(:SPACEINTERLOPER,
 BattleHandlers::UserAbilityEndOfMove.add(:SPARESCALES,
   proc { |ability, user, _targets, move, _battle, _switchedBattlers|
       next unless %i[GRASS GROUND STEEL].include?(move.calcType)
-      healingMessage = _INTL("{1} gathered up material.", battler.pbThis)
-      battler.applyFractionalHealing(1.0 / 5.0, ability: ability, customMessage: healingMessage, canOverheal: true)
+      healingMessage = _INTL("{1} gathered up material.", user.pbThis)
+      user.applyFractionalHealing(1.0 / 5.0, ability: ability, customMessage: healingMessage, canOverheal: true)
   }
 )
 
