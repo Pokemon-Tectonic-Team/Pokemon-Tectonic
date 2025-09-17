@@ -1137,6 +1137,13 @@ Price = 300
 FieldUse = OnPokemon
 Description = An item for use on a Pokémon. It slightly increases the base Speed stat of a single Pokémon.
 #-------------------------------
+[NORMALMEMORY]
+Name = Normal Memory
+NamePlural = Normal Memories
+Pocket = 5
+Price = 1000
+Description = A memory disc containing Normal-type data. It changes the holder's type if held by a certain Pokémon.
+#-------------------------------
 [FIREMEMORY]
 Name = Fire Memory
 NamePlural = Fire Memories
