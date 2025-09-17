@@ -264,6 +264,9 @@ class PokemonSummary_Scene
         @sprites["pokemon"].x = 104
         @sprites["pokemon"].y = 206
         @sprites["pokemon"].setPokemonBitmap(@pokemon)
+
+        @sprites["pokemon"].visible = false
+        
         @sprites["pokeicon"] = PokemonIconSprite.new(@pokemon, @viewport)
         @sprites["pokeicon"].setOffset(PictureOrigin::Center)
         @sprites["pokeicon"].x       = 46
@@ -548,6 +551,7 @@ class PokemonSummary_Scene
         when 3 then drawPageThree
         when 4 then drawPageFour
         when 5 then drawPageFive
+        when 6 then drawPageAbilities
         end
     end
 
@@ -803,7 +807,7 @@ class PokemonSummary_Scene
             [format("%d", @pokemon.spdef), statTotalX, 210, 1, stat_value_color_base, stat_value_color_shadow],
             [_INTL("Speed"), 248, 242, 0, base, statshadows[:SPEED]],
             [format("%d", @pokemon.speed), statTotalX, 242, 1, stat_value_color_base, stat_value_color_shadow],
-            [_INTL("Ability"), 16, 278, 0, base, shadow],
+            [_INTL("Ability"), 16, 218, 0, base, shadow],
         ]
         if @pokemon.ev[:HP] != 0
             textpos.push([format("%d", @pokemon.ev[:HP]), evAmountX, 70, 2, ev_color_base,
@@ -832,14 +836,33 @@ class PokemonSummary_Scene
 
         # Draw ability name and description
         ability = @pokemon.ability
+        abilityY = 250
+        abilityNameText = ability.name
+        @sprites["pokemon"].visible = false if @sprites["pokemon"]
+        @sprites["pokeicon"].visible = false
+        ability_base   = MessageConfig.pbDefaultTextMainColor
+        ability_shadow = MessageConfig.pbDefaultTextShadowColor
         if ability
-            ability_base   = MessageConfig.pbDefaultTextMainColor
-            ability_shadow = MessageConfig.pbDefaultTextShadowColor
-            textpos.push([ability.name, 138, 278, 0, ability_base, ability_shadow])
-
+            abilityNameColor = base
+            abilityNameText = ability.name
+            abilityNameShadow = shadow
+            if ability.is_signature?
+                abilityNameText = "<outln2>" + abilityNameText + "</outln2>"
+                abilityNameColor = Color.new(228, 207, 128)
+                abilityNameShadow = darkMode? ? shadow : Color.new(88, 88, 80)
+            end
+            drawFormattedTextEx(overlay, 16, abilityY, 450, abilityNameText, abilityNameColor, abilityNameShadow)
+            #textpos.push([ability.name, 16, abilityY, 0, abilityNameColor, abilityNameShadow, abilityNameText])
             abilityDescription = addBattleKeywordHighlighting(ability.description)
-            drawFormattedTextEx(overlay, 8, 320, Graphics.width, abilityDescription, ability_base, ability_shadow)
+            drawFormattedTextEx(overlay, 30, 288, 450, abilityDescription, ability_base, ability_shadow)
+            # add mutability labels
+            if ability.is_immutable_ability?
+                drawFormattedTextEx(overlay, 16, 198, 450, "Immutable", base, shadow)
+            elsif ability.is_uncopyable_ability?
+                drawFormattedTextEx(overlay, 16, 198, 450, "Uncopyable", base, shadow)
+            end
         end
+
         # Draw all text
         pbDrawTextPositions(overlay, textpos)
         # Draw HP bar
@@ -953,6 +976,52 @@ class PokemonSummary_Scene
             playMoveInfoPanelTutorial
         end
     end
+
+    def drawPageAbilities
+        bg_path = "Graphics/Pictures/Pokedex/bg_abilities"
+        bg_path += "_dark" if darkMode?
+        @sprites["background"].setBitmap(_INTL(bg_path))
+        overlay = @sprites["overlay"].bitmap
+        formname = ""
+        base   = MessageConfig.pbDefaultTextMainColor
+        shadow = MessageConfig.pbDefaultTextShadowColor
+
+        overlay.clear
+        mutabilityLabelsX = Graphics.width/2 - 60
+        @sprites["pokemon"].visible = false
+        @sprites["pokeicon"].visible = false
+        ability = @pokemon.ability
+        if ability
+
+
+            abilityTextX = 30
+            abilityIDLabeX = 380
+            abilityY = 52
+            drawTextEx(overlay, abilityIDLabeX, abilityY, 450, 1, _INTL("Ability"), base, shadow)
+
+            abilityNameColor = base
+            abilityNameShadow = shadow
+            abilityNameText = ability.name
+            if ability.is_signature?
+                abilityNameText = "<outln2>" + abilityNameText + "</outln2>"
+                abilityNameColor = Color.new(228, 207, 128)
+                abilityNameShadow = darkMode? ? shadow : base
+            end
+            drawFormattedTextEx(overlay, abilityTextX, abilityY, 450, abilityNameText, abilityNameColor,
+              abilityNameShadow)
+
+            abilityDescription = addBattleKeywordHighlighting(ability.description)
+            drawFormattedTextEx(overlay, abilityTextX, abilityY + 34, 450, abilityDescription, base, shadow)
+                
+            # add mutability labels
+            if ability.is_immutable_ability?
+                drawFormattedTextEx(overlay, mutabilityLabelsX, abilityY + 134, 450, "Immutable", base, shadow)
+            elsif ability.is_uncopyable_ability?
+                drawFormattedTextEx(overlay, mutabilityLabelsX, abilityY + 134, 450, "Uncopyable", base, shadow)
+            end
+        end
+    end
+
 
     def drawPageFive
         overlay = @sprites["overlay"].bitmap
