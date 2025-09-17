@@ -2123,7 +2123,7 @@ Description = Its attacks have priority, deal 25% less damage and become special
 #-------------------------------
 [TIMESKIP]
 Name = Time Skip
-Description = Between each turn there's another turn where no one moves.
+Description = Every two turns, another turn happens where no one moves.
 #-------------------------------
 [TOILANDTROUBLE]
 Name = Toil and Trouble
