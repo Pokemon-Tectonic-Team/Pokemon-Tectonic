@@ -151,7 +151,7 @@ class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
     end
 
     def pbMoveFailed?(user, _targets, show_message)
-        if user.pbOwnSide.countEffect(:PayDay) < 100 :
+        if user.pbOwnSide.countEffect(:PayDay) < 100
             @battle.pbDisplay(_INTL("But it failed, since there are not enough coins on the field!")) if show_message
             return true
         end
