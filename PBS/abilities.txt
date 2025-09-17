@@ -104,11 +104,11 @@ Description = Raises Attack by four steps when a stat is lowered by a foe.
 #-------------------------------
 [DELTASTREAM]
 Name = Delta Stream
-Description = Changes the weather to Strong Winds, which remove Flying-type's weaknesses. Lingers for 3 turns after leaving.
+Description = Changes the weather to Strong Winds, which remove Flying-type's weaknesses. Lingers for three turns after leaving.
 #-------------------------------
 [DESOLATELAND]
 Name = Desolate Land
-Description = Changes the weather to Harsh Sunlight, which debuffs most attacks and prevents them from critting. Lingers for 3 turns after leaving.
+Description = Changes the weather to Harsh Sunlight, which debuffs most attacks and prevents them from critting. Lingers for three turns after leaving.
 Flags = SunshineSynergy
 #-------------------------------
 [DISGUISE]
@@ -126,17 +126,17 @@ Description = Powers up Dragon-type moves by 50%.
 #-------------------------------
 [DRIZZLE]
 Name = Drizzle
-Description = Summons rainstorm for 4 turns upon entry.
+Description = Summons rainstorm for four turns upon entry.
 Flags = RainstormSynergy
 #-------------------------------
 [DROUGHT]
 Name = Drought
-Description = Turns the weather to sunshine for 4 turns upon entry.
+Description = Turns the weather to sunshine for four turns upon entry.
 Flags = SunshineSynergy
 #-------------------------------
 [DRYSKIN]
 Name = Dry Skin
-Description = Heals 1/8 HP in rainstorm, 1/4 when hit by Water-type moves. Loses 1/8 in sunshine, takes 25% more from Fire-type moves.
+Description = Heals 1/8th HP in rainstorm, 1/4th when hit by Water-type moves. Loses 1/8th in sunshine, takes 25% more from Fire-type moves.
 Flags = RainstormSynergy
 #-------------------------------
 [EMERGENCYEXIT]
@@ -365,7 +365,7 @@ Description = Child attacks after the parent, for 25% of the previous damage.
 #-------------------------------
 [PERISHBODY]
 Name = Perish Body
-Description = When it takes a hit, the Pokémon and the attacker both faint after 3 turns.
+Description = When it takes a hit, the Pokémon and the attacker both faint after three turns.
 Flags = SetupCounterAI
 #-------------------------------
 [POISONPOINT]
@@ -400,7 +400,7 @@ Description = The Pokémon raises the foe's PP usage.
 #-------------------------------
 [PRIMORDIALSEA]
 Name = Primordial Sea
-Description = Changes the weather to Heavy Rain, which debuffs most attacks and prevents their random added effects. Lingers for 3 turns after leaving.
+Description = Changes the weather to Heavy Rain, which debuffs most attacks and prevents their random added effects. Lingers for three turns after leaving.
 Flags = RainstormSynergy
 #-------------------------------
 [PRISMARMOR]
@@ -448,7 +448,7 @@ Flags = SandstormSynergy
 #-------------------------------
 [SANDSTREAM]
 Name = Sand Stream
-Description = Summons a sandstorm for 4 turns upon entry.
+Description = Summons a sandstorm for four turns upon entry.
 Flags = SandstormSynergy
 #-------------------------------
 [SAPSIPPER]
@@ -499,7 +499,7 @@ Description = Maximizes the frequency of "two to five" multi-hit moves.
 #-------------------------------
 [SLOWSTART]
 Name = Slow Start
-Description = Halves Attack and Speed for 3 turns.
+Description = Halves Attack and Speed for three turns.
 #-------------------------------
 [SLUSHRUSH]
 Name = Slush Rush
@@ -512,7 +512,7 @@ Description = Doubles the critical hit chance of random crit moves. Powers up cr
 #-------------------------------
 [SNOWWARNING]
 Name = Snow Warning
-Description = Summons a hailstorm for 4 turns upon entry.
+Description = Summons a hailstorm for four turns upon entry.
 Flags = HailSynergy
 #-------------------------------
 [SOLARPOWER]
