@@ -431,7 +431,7 @@ class PokeBattle_Move
         end
 
         # Scavenger tribe
-        if user.hasTribeBonus?(:DECEIVER)
+        if user.hasTribeBonus?(:SCAVENGER)
             if checkingForAI
                 multipliers[:final_damage_multiplier] *= 1.25 if user.hasGem?
             else
