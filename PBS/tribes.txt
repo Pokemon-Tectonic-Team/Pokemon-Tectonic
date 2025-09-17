@@ -15,7 +15,7 @@ RADIANT,5,Radiant,"Your team has 30% increased Sp. Def. Foes can't lower your te
 SCAVENGER,5,Scavenger,"Your team members berries heal them for 25% more (multiplicative) and their gem-boosted attacks deal 25% more damage (multiplicative)."
 SCOURGE,5,Scourge,"Your able party members and battlers heal for 1/10th HP whenever a foe faints."
 SCRAPPER,5,Scrapper,"Your team has 30% increased Defense. Foes can't lower your team's Defense."
-SERENE,5,Serene,"Enemy Pokemon's chance to activate their additional effects against your team members is halved."
+SERENE,5,Serene,"Effects placed by your Pokemon last 50% longer (rounded down)."
 STAMPEDE,5,Stampede,"Your team has 15% increased Speed."
 TACTICIAN,5,Tactician,"Your Pokemon deal 15% more damage to targets that haven’t moved yet this turn. Your priority attacks and priority status moves have doubled PP."
 TYRANNICAL,5,Tyrannical,"Ignore the first time each battle that one of your team members would flinch or get a non-volatile status condition."

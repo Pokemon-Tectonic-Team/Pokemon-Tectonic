@@ -4,7 +4,7 @@
 class PokeBattle_Move_StartPreventCriticalHitsAgainstUserSide10 < PokeBattle_Move
     def initialize(battle, move)
         super
-        @luckyChantDuration = 10
+        @luckyChantDuration = serene_boosted(10)
     end
 
     def pbEffectGeneral(user)

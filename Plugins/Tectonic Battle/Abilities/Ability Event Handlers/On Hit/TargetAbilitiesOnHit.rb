@@ -54,7 +54,7 @@ BattleHandlers::TargetAbilityOnHit.add(:GRAVITYWELL,
         else
             battle.pbShowAbilitySplash(target, ability)
             battle.pbAnimation(:GRAVITY, target, nil, 0)
-            battle.field.applyEffect(:Gravity, 4)
+            battle.field.applyEffect(:Gravity, serene_boosted(4))
             battle.pbHideAbilitySplash(target)
         end
     }
@@ -339,7 +339,7 @@ BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
         next if user.effectActive?(:Constricted)
         next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
-        user.applyEffect(:Constricted, 3)
+        user.applyEffect(:Constricted, serene_boosted(3, battler))
         user.pointAt(:TrappingUser, target)
         battle.pbHideAbilitySplash(target)
   }
@@ -354,7 +354,7 @@ BattleHandlers::TargetAbilityOnHit.add(:MAGNETTRAP,
         next if user.effectActive?(:Magnetized)
         next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
-        user.applyEffect(:Magnetized, 3)
+        user.applyEffect(:Magnetized, serene_boosted(3, battler))
         user.pointAt(:TrappingUser, target)
         battle.pbHideAbilitySplash(target)
   }

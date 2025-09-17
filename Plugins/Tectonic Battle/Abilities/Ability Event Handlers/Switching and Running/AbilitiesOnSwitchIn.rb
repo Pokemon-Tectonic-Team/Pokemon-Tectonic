@@ -519,7 +519,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:STORMTOTEM,
           next 20 * scoringDuration
       else
           battle.pbShowAbilitySplash(battler, ability)
-          battler.pbOwnSide.applyEffect(:TurbulentSky, 6)
+          battler.pbOwnSide.applyEffect(:TurbulentSky, serene_boosted(6, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -535,7 +535,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:FOGTOTEM,
           next 20 * scoringDuration
       else
           battle.pbShowAbilitySplash(battler, ability)
-          battler.pbOwnSide.applyEffect(:MisdirectingFog, 6)
+          battler.pbOwnSide.applyEffect(:MisdirectingFog, serene_boosted(6, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -551,7 +551,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:WILDTOTEM,
           next 20 * scoringDuration
       else
           battle.pbShowAbilitySplash(battler, ability)
-          battler.pbOwnSide.applyEffect(:PrimalForest, 6)
+          battler.pbOwnSide.applyEffect(:PrimalForest, serene_boosted(6, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -567,7 +567,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:FLUTTERTOTEM,
           next 20 * scoringDuration
       else
           battle.pbShowAbilitySplash(battler, ability)
-          battler.pbOwnSide.applyEffect(:CruelCocoon, 6)
+          battler.pbOwnSide.applyEffect(:CruelCocoon, serene_boosted(6, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -583,7 +583,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:GARLANDGUARDIAN,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:SAFEGUARD, battler, nil, 0)
-          battler.pbOwnSide.applyEffect(:Safeguard, 10)
+          battler.pbOwnSide.applyEffect(:Safeguard, serene_boosted(10, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -596,7 +596,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:CLOVERSONG,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:LUCKYCHANT, battler, nil, 0)
-          battler.pbOwnSide.applyEffect(:LuckyChant, 10)
+          battler.pbOwnSide.applyEffect(:LuckyChant, serene_boosted(10, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -609,7 +609,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:ONTHEWIND,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:TAILWIND, battler, nil, 0)
-          battler.pbOwnSide.applyEffect(:Tailwind, 4)
+          battler.pbOwnSide.applyEffect(:Tailwind, serene_boosted(4, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -622,7 +622,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:GRAVITAS,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:GRAVITY, battler, nil, 0)
-          battle.field.applyEffect(:Gravity, 4)
+          battle.field.applyEffect(:Gravity, serene_boosted(4, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -635,7 +635,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:DRIFTINGMIST,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:GREYMIST, battler, nil, 0)
-          battle.field.applyEffect(:GreyMist, 3)
+          battle.field.applyEffect(:GreyMist, serene_boosted(3, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }
@@ -648,7 +648,7 @@ BattleHandlers::AbilityOnSwitchIn.add(:FITTOSURVIVE,
       else
           battle.pbShowAbilitySplash(battler, ability)
           battle.pbAnimation(:NATURALPROTECTION, battler, nil, 0)
-          battler.pbOwnSide.applyEffect(:NaturalProtection, 4)
+          battler.pbOwnSide.applyEffect(:NaturalProtection, serene_boosted(4, battler))
           battle.pbHideAbilitySplash(battler)
       end
   }

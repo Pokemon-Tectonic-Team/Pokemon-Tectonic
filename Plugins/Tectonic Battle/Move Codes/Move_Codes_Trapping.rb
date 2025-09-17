@@ -9,6 +9,7 @@ class PokeBattle_Move_BindTarget3 < PokeBattle_Move
         # Set trapping effect duration and info
         trappingDuration = 3
         trappingDuration *= 2 if user.hasActiveItem?(:GRIPCLAW)
+        trappingDuration = serene_boosted(trappingDuration, user)
         target.applyEffect(:Trapping, trappingDuration)
         target.applyEffect(:TrappingMove, @id)
         target.pointAt(:TrappingUser, user)
