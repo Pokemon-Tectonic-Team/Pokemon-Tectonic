@@ -6797,6 +6797,7 @@ Target = AllNearFoes
 FunctionCode = LowerTargetAtk2StartEclipse8
 Flags = CanProtect,CanMagicCoat
 Description = The Pokémon blots out the sky, summoning eclipse for eight turns and lowering each opponent's Attack by two steps.
+Animation = ECLIPSE
 #-------------------------------
 [WYRMWOUNDING]
 Name = Wyrmwounding
