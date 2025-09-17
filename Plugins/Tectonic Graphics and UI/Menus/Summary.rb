@@ -1369,6 +1369,34 @@ class PokemonSummary_Scene
                     @ribbonOffset = 0
                     dorefresh = true
                 end
+            elsif Input.pressex?(:NUMBER_1)
+                if @page != 1
+                    @page = 1
+                    pbSEPlay("GUI summary change page")
+                    @ribbonOffset = 0
+                    dorefresh = true
+                end
+            elsif Input.pressex?(:NUMBER_2)
+                if @page != 2
+                    @page = 2
+                    pbSEPlay("GUI summary change page")
+                    @ribbonOffset = 0
+                    dorefresh = true
+                end
+            elsif Input.pressex?(:NUMBER_3)
+                if @page != 3
+                    @page = 3
+                    pbSEPlay("GUI summary change page")
+                    @ribbonOffset = 0
+                    dorefresh = true
+                end
+            elsif Input.pressex?(:NUMBER_4)
+                if @page != 4
+                    @page = 4
+                    pbSEPlay("GUI summary change page")
+                    @ribbonOffset = 0
+                    dorefresh = true
+                end
             end
             drawPage(@page) if dorefresh
         end
