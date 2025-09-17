@@ -79,7 +79,7 @@ class PokeBattle_Move_DisableTargetLastMoveUsed < PokeBattle_Move
     end
 
     def getTargetAffectingEffectScore(_user, target)
-        return getDisableEffectScore(target, serene_boosted(@disableTurns), user)
+        return getDisableEffectScore(target, serene_boosted(@disableTurns), _user)
     end
 end
 
@@ -169,14 +169,14 @@ class PokeBattle_Move_DisableTargetStatusMoves4 < PokeBattle_Move
 
     def pbEffectAgainstTarget(_user, target)
         return if damagingMove?
-        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target)))
+        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target), _user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Taunt)
         return true if pbMoveFailedAromaVeil?(user, target)
-        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target)))
+        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target), user))
     end
 
     def getTargetAffectingEffectScore(user, target)
@@ -285,7 +285,7 @@ class PokeBattle_Move_DisableTargetUsingDifferentMove4 < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(_user, target)
-        target.applyEffect(:Encore, serene_boosted(4, user))
+        target.applyEffect(:Encore, serene_boosted(4, _user))
     end
 
     def getTargetAffectingEffectScore(user, target)
@@ -335,21 +335,21 @@ class PokeBattle_Move_DisableTargetUsingOffTypeMove4 < PokeBattle_Move
 
     def pbEffectAgainstTarget(_user, target)
         return if damagingMove?
-        target.applyEffect(:Barred, serene_boosted(getBarTurns(target)))
+        target.applyEffect(:Barred, serene_boosted(getBarTurns(target), _user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Barred)
         return true if pbMoveFailedAromaVeil?(user, target)
-        target.applyEffect(:Barred, serene_boosted(getBarTurns(target)))
+        target.applyEffect(:Barred, serene_boosted(getBarTurns(target), user))
     end
 
     def getTargetAffectingEffectScore(_user, target)
         return 0 if target.substituted? && statusMove?
         return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
         return 0 unless target.hasOffTypeMove?
-        return 40 + serene_boosted(getBarTurns(target)) * 20
+        return 40 + serene_boosted(getBarTurns(target), _user) * 20
     end
 end
 

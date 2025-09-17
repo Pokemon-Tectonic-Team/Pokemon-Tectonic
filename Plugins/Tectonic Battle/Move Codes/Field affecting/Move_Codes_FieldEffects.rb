@@ -158,7 +158,7 @@ class PokeBattle_Move_StartGreyMist5StartHail5 < PokeBattle_Move_StartGreyMist5
 
     def pbEffectGeneral(user)
         super
-        @battle.pbStartWeather(user, :Hail, serene_boosted(5, user), false) unless @battle.primevalWeatherPresent?
+        @battle.pbStartWeather(user, :Hail, 5, false) unless @battle.primevalWeatherPresent?
     end
 end
 

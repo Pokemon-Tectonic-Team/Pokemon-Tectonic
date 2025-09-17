@@ -54,7 +54,7 @@ BattleHandlers::TargetAbilityOnHit.add(:GRAVITYWELL,
         else
             battle.pbShowAbilitySplash(target, ability)
             battle.pbAnimation(:GRAVITY, target, nil, 0)
-            battle.field.applyEffect(:Gravity, serene_boosted(4))
+            battle.field.applyEffect(:Gravity, serene_boosted(4, battler))
             battle.pbHideAbilitySplash(target)
         end
     }
