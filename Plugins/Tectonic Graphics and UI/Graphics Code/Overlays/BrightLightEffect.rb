@@ -193,10 +193,11 @@ class LightEffect_Totem < LightEffect
       @opacityCounter = 0
       @opacityWavelength = 8.0
       @summonTotem = false
+      @goldenglowDeactivated = false
     end
 
     def update
-      return if !@light || !@event
+      return if !@light || !@event || @goldenglowDeactivated
       super
 
       shouldBeBlue = pbGetSelfSwitch(@event.id,'A') || @event.name.include?("blue")
@@ -213,6 +214,11 @@ class LightEffect_Totem < LightEffect
         @summonTotem = false
         @opacityCounter = 0
         @opacifyWavelength = 8.0
+      elsif pbGetSelfSwitch(@event.id,'D')
+        echoln("Turning this goldenglow off since the #{@event.name}'s D switch is on")
+        @light.opacity = 0
+        @goldenglowDeactivated = true
+        return
       end
 
       @opacityCounter += 1

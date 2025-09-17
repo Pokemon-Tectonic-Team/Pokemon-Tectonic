@@ -510,11 +510,25 @@ class PokeBattle_Battle
             @turnCount += 1
 
             # Extra fake turn
-            stretcher = pbCheckGlobalAbility(:TIMESKIP)
-            if stretcher
-                pbShowAbilitySplash(stretcher, :TIMESKIP)
-                pbDisplay(_INTL("Time is dancing to {1}'s tune! This turn is being skipped!", stretcher.pbThis))
-                pbHideAbilitySplash(stretcher)
+            stretchers = []
+            eachBattler { |b| stretchers.append(b) if b.hasActiveAbility?(:TIMESKIP) }
+
+            timeStretcher = nil
+            if stretchers.length > 0
+                stretchers.each do |stretcher|
+                    unless stretcher.effectActive?(:NoTimeSkip)
+                        timeStretcher = stretcher
+                        stretcher.applyEffect(:NoTimeSkip)
+                    else
+                        stretcher.disableEffect(:NoTimeSkip)
+                    end
+                end
+            end
+
+            unless timeStretcher.nil?
+                pbShowAbilitySplash(timeStretcher, :TIMESKIP)
+                pbDisplay(_INTL("Time is dancing to {1}'s tune! This turn is being skipped!", timeStretcher.pbThis))
+                pbHideAbilitySplash(timeStretcher)
                 # Start of round phase
                 PBDebug.logonerr { pbStartOfRoundPhase }
                 break if @decision > 0
@@ -523,6 +537,7 @@ class PokeBattle_Battle
                 break if @decision > 0
                 @turnCount += 1
             end
+
         end
         pbEndOfBattle
     end

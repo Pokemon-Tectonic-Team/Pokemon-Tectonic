@@ -302,6 +302,19 @@ class PokeBattle_Move
                     multipliers[:final_damage_multiplier] *= 2 / 3.0
                 end
             end
+        else
+            if !checkingForAI &&  
+                (target.pbOwnSide.effectActive?(:Reflect) ||
+                target.pbOwnSide.effectActive?(:LightScreen) ||
+                target.pbOwnSide.effectActive?(:AuroraVeil) ||
+                target.pbOwnSide.effectActive?(:DiamondField))
+                GameData::Ability.each do |ability_data|
+                next unless ability_data.flags&.include?("IgnoreScreens")
+                if user.hasAbility?(ability_data.id)
+                user.aiLearnsAbility(ability_data.id)
+                end
+                end
+            end
 
             # Repulsion Field
             if baseDamage >= 100 && target.pbOwnSide.effectActive?(:RepulsionField)
@@ -418,7 +431,7 @@ class PokeBattle_Move
         end
 
         # Scavenger tribe
-        if user.hasTribeBonus?(:DECEIVER)
+        if user.hasTribeBonus?(:SCAVENGER)
             if checkingForAI
                 multipliers[:final_damage_multiplier] *= 1.25 if user.hasGem?
             else

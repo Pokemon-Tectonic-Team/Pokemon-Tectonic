@@ -1,0 +1,5 @@
+Name      = Cable Club (Tectonic Edit)
+Version   = 2.7
+Optional  = v19.1 Hotfixes
+Website   = https://eeveeexpo.com/resources/640/
+Credits   = mGriffin,Khaikaa,Vendily,LunaFlare

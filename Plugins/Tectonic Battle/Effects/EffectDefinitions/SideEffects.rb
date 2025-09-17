@@ -333,10 +333,11 @@ GameData::BattleEffect.register_effect(:Side, {
     :is_hazard => true,
     :is_spike => true,
     :increment_proc => proc do |battle, _side, teamName, _value, increment|
+        teamName[0] = teamName[0].downcase
         if increment == 1
             battle.pbDisplay(_INTL("Spikes were scattered all around {1}'s feet!", teamName))
         else
-            battle.pbDisplay(_INTL("{1} layers of spikes were scattered all around {2}'s feet!", increment,
+            battle.pbDisplay(_INTL("{1} layers of Spikes were scattered all around {2}'s feet!", increment,
 teamName))
         end
     end,
@@ -367,6 +368,7 @@ GameData::BattleEffect.register_effect(:Side, {
         end,
     },
     :increment_proc => proc do |battle, _side, teamName, _value, increment|
+        teamName[0] = teamName[0].downcase
         if increment == 1
             battle.pbDisplay(_INTL("Poison Spikes were scattered all around {1}'s feet!", teamName))
         else
@@ -393,6 +395,7 @@ GameData::BattleEffect.register_effect(:Side, {
         end,
     },
     :increment_proc => proc do |battle, _side, teamName, _value, increment|
+        teamName[0] = teamName[0].downcase
         if increment == 1
             battle.pbDisplay(_INTL("Flame Spikes were scattered all around {1}'s feet!", teamName))
         else
@@ -420,6 +423,7 @@ GameData::BattleEffect.register_effect(:Side, {
         end,
     },
     :increment_proc => proc do |battle, _side, teamName, _value, increment|
+        teamName[0] = teamName[0].downcase
         if increment == 1
             battle.pbDisplay(_INTL("Frost Spikes were scattered all around {1}'s feet!", teamName))
         else
@@ -438,6 +442,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :real_name => "Stealth Rock",
     :is_hazard => true,
     :apply_proc => proc do |battle, _side, teamName, _value|
+        teamName[0] = teamName[0].downcase
         battle.pbDisplay(_INTL("Pointed stones float in the air around {1}!", teamName))
     end,
     :disable_proc => proc do |battle, _side, teamName|
@@ -451,6 +456,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :real_name => "Feather Ward",
     :is_hazard => true,
     :apply_proc => proc do |battle, _side, teamName, _value|
+        teamName[0] = teamName[0].downcase
         battle.pbDisplay(_INTL("Sharp feathers float in the air around {1}!", teamName))
     end,
     :disable_proc => proc do |battle, _side, teamName|
@@ -464,6 +470,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :real_name => "Live Wire",
     :is_hazard => true,
     :apply_proc => proc do |battle, _side, teamName, _value|
+        teamName[0] = teamName[0].downcase
         battle.pbDisplay(_INTL("A live wire was set on the ground around {1}!", teamName))
     end,
     :disable_proc => proc do |battle, _side, teamName|

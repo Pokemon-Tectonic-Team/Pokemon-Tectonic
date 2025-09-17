@@ -13,8 +13,13 @@ class PokemonEntryScene
       @viewport=Viewport.new(0,0,Graphics.width,Graphics.height)
       @viewport.z=99999
       if USEKEYBOARD
+        width = 400-112
+        if subject==0
+          # no need to reserve space for the icon
+          width = 400
+        end
         @sprites["entry"]=Window_TextEntry_Keyboard.new(initialText,
-           0,0,400-112,96,helptext,true)
+           0,0,width,96,helptext,true)
         Input.text_input = true
       else
         @sprites["entry"]=Window_TextEntry.new(initialText,0,0,400,96,helptext,true)

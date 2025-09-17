@@ -50,7 +50,7 @@ class PokeBattle_Move_EffectDependsOnEnvironment < PokeBattle_Move
         when 9
             target.applyFrostbite(user) if target.canFrostbite?(user, false, self)
         when 5
-            target.applyWaterlog(user) if target.canFrostbite?(user, false, self)
+            target.applyWaterlog(user) if target.canWaterlog?(user, false, self)
         when 4, 6, 12
             target.tryLowerStat(:SPEED, user, move: self, increment: 2)
         when 7, 11, 13

@@ -128,6 +128,9 @@ def battleKeywordsImportantCaseSensitive
         "Speed",
         "Accuracy",
         "Evasion",
+        "Frost Spikes",
+        "Flame Spikes",
+        "Poison Spikes",
         "Spikes",
     ]
 end
@@ -147,11 +150,14 @@ def battleKeywordsUnimportant
         "one quarter",
         "three quarters",
         "one fifth",
+        "1/4th",
+        "1/5th",
         "1/6th",
         "1/8th",
         "1/10th",
         "1/12th",
         "1/16th",
+        "1/20th",
         "all stats",
         "all its stats",
     ]

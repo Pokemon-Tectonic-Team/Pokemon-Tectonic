@@ -32,14 +32,17 @@ class PokeBattle_Move_TypeDependsOnWeather < PokeBattle_Move
         return ret
     end
 
-    # def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
-    #     t = pbBaseType(user)
-    #     hitNum = 1 if t == :FIRE # Type-specific anims
-    #     hitNum = 2 if t == :WATER
-    #     hitNum = 3 if t == :ROCK
-    #     hitNum = 4 if t == :ICE
-    #     super
-    # end
+    def pbShowAnimation(id, user, targets, hitNum = 0, showAnimation = true)
+        t = pbBaseType(user)
+        hitNum = 1 if t == :FIRE # Type-specific anims
+        hitNum = 2 if t == :WATER
+        hitNum = 3 if t == :ROCK
+        hitNum = 4 if t == :ICE
+        hitNum = 5 if t == :PSYCHIC
+        hitNum = 6 if t == :FAIRY
+        hitNum = 7 if t == :FLYING
+        super
+    end
 end
 
 #===============================================================================
@@ -80,10 +83,10 @@ class PokeBattle_Move_TypeDependsOnUserSpecialItem < PokeBattle_Move
         if @id == :TECHNOBLAST # Type-specific anim
             t = pbBaseType(user)
             hitNum = 0
-            hitNum = 1 if t == :ELECTRIC
-            hitNum = 2 if t == :FIRE
-            hitNum = 3 if t == :ICE
-            hitNum = 4 if t == :WATER
+            hitNum = 2 if t == :ELECTRIC
+            hitNum = 4 if t == :FIRE
+            hitNum = 6 if t == :ICE
+            hitNum = 8 if t == :WATER
         end
         super
     end

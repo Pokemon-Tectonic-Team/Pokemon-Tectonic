@@ -46,13 +46,13 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Condensate,
-    :real_name => "Condensate",
+    :id => :ColdSnap,
+    :real_name => "Cold Snap",
     :resets_battlers_eot => true,
     :resets_battlers_sot => true,
     :apply_proc => proc do |battle, battler, _value|
-        battle.pbCommonAnimation("Shiver", battler)
-        battle.pbDisplay(_INTL("{1} rapidly cooled the air!", battler.pbThis))
+        battle.pbCommonAnimation("Ice Burn charging", battler)
+        battle.pbDisplay(_INTL("Ancient cold crystallizes around {1}!", battler.pbThis))
     end,
 })
 
@@ -2378,4 +2378,22 @@ GameData::BattleEffect.register_effect(:Battler, {
     :id => :ColorCollector,
     :real_name => "Collecting Colors",
     :type => :Array,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id =>  :TanglingVines,
+    :real_name => "Tangling Vines",
+    :type => :Position,
+    :disable_effects_on_other_exit => [:TanglingVines],
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("{1} is bound in {2}'s tangling vines!", battler.pbThis, battle.battlers[_value].pbThis))
+    end,
+    :disable_proc => proc do |battle, battler|
+        battle.pbDisplay(_INTL("{1} is no longer bound in tangling vines.", battler.pbThis))
+    end,
+})
+
+GameData::BattleEffect.register_effect(:Battler, {
+    :id => :NoTimeSkip,
+    :real_name => "No Time Skip",
 })

@@ -301,7 +301,8 @@ class PokeBattle_Move_TargetUsesItsLastUsedMoveAgain < PokeBattle_Move
                           targetMove.function == "UsedAfterUserTakesPhysicalDamage" ||   # Shell Trap
                           targetMove.function == "UsedAfterUserTakesSpecialDamage" ||   # Masquerblade
                           targetMove.function == "BurnAttackerBeforeUserActs" ||     # Beak Blast
-                          targetMove.function == "FrostbiteAttackerBeforeUserActs")   # Condensate
+                          targetMove.function == "FrostbiteAttackerBeforeUserActs" ||    # Cold Snap
+                          targetMove.function == "SetupSpikesBeforeUserActs")   # Shard Surge
             @battle.pbDisplay(_INTL("But it failed, since {1} is focusing!", target.pbThis(true))) if show_message
             return true
         end

@@ -832,7 +832,10 @@ class PokeBattle_Battler
             # NOTE: The consume animation and message for Herbs are shown now, but the
             #       actual removal of the item happens in def pbEffectsAfterMove.
             @battle.pbCommonAnimation("UseItem", user)
-            @battle.pbDisplay(_INTL("The {1} supplemented {2}'s power!", getItemName(user.effects[:EmpoweringHerbConsumed]), move.name))
+            @battle.pbDisplay(_INTL("The {1} supplemented {2}'s power and made it {3}!", 
+                getItemName(user.effects[:EmpoweringHerbConsumed]), 
+                move.name, move.physicalMove? ? "special" : "physical" # swapped because the calculatedCategory isn't set yet 
+            ))
             aiLearnsItem(user.effects[:EmpoweringHerbConsumed])
         end
         # Accuracy ensuring Herb consume animation/message

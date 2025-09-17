@@ -66,6 +66,10 @@ class TribalBonus
 
         level = battler.ownerLevelCap
 
+        if battler.battle.is_online?
+            level = MAX_LEVEL_CAP
+        end
+
         if hasTribeBonus?(:LOYAL)
             smallBonus = getSingleStatBonusSmall(level)
             GameData::Stat.each_main_battle do |stat|
@@ -74,7 +78,7 @@ class TribalBonus
             end
         end
 
-        if hasTribeBonus?(:INDUSTRIOUS) && (!@trainer.is_a?(Player) || @trainer.money >= 100_000)
+        if hasTribeBonus?(:INDUSTRIOUS) && (battler.battle.is_online? || !@trainer.is_a?(Player) || @trainer.money >= 100_000)
             mediumBonus = getSingleStatBonusMedium(level)
             GameData::Stat.each_main_battle do |stat|
                 next if stat == :SPEED
