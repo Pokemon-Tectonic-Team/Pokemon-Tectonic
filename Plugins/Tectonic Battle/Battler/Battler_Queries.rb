@@ -907,7 +907,6 @@ class PokeBattle_Battler
                 duration = BattleHandlers.triggerWeatherExtenderItem(item, weatherType, duration, self, @battle)
             end
         end
-        duration = (duration.to_f * 1.5).floor if hasTribeBonus?(:SERENE)
         return duration
     end
 
