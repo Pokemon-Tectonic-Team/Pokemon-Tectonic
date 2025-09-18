@@ -341,7 +341,7 @@ MultipleForms.register(:XERNEAS,{
 
 MultipleForms.register(:ZYGARDE,{
   "getFormOnLeavingBattle" => proc { |pkmn,battle,usedInBattle,endBattle|
-    next pkmn.form-2 if pkmn.form>=2 && (pkmn.fainted? || endBattle)
+    next 3 if pkmn.form==2 && (pkmn.fainted? || endBattle)
   }
 })
 

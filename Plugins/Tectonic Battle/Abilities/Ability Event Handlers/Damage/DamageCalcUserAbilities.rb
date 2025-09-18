@@ -884,6 +884,16 @@ BattleHandlers::DamageCalcUserAbility.add(:RELUCTANTWARRIOR,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if user.belowHalfHealth?
       mults[:attack_multiplier] *= 1.3
+	  user.aiLearnsAbility(ability) unless aiCheck
+    end
+  }
+)
+	  
+BattleHandlers::DamageCalcUserAbility.add(:TANGLINGVINES,
+  proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
+    if target.pointsAt?(:TanglingVines, user)
+      mults[:base_damage_multiplier] *= 1.3
+      user.battle.pbDisplay(_INTL("The tangling vines strengthened the hit!"))
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }

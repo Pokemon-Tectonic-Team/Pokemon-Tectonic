@@ -56,6 +56,12 @@ def get_held_item_index(symbol)
   return index
 end
 
+def get_held_item_from_index(index)
+  symbols = GameData::Item.keys.filter{ |key| !key.is_a?(Numeric) && key.is_a?(Symbol) && GameData::Item.get(key).pocket == 5 }
+  symbol = symbols[index]
+  return symbol
+end
+
 def get_type_index(symbol)
   symbols = GameData::Type.keys.filter{ |key| !key.is_a?(Numeric) && key.is_a?(Symbol) }
   index = symbols.find_index(symbol)
@@ -188,10 +194,125 @@ def encode_team(party)
   return code
 end
 
+def decode_chunk(buffer, offset, party)
+  mon = {}
+
+  # Read first u32: Pokemon, ability, moves 1-2
+  first_u32 = buffer.read(4).unpack('N')[0]
+  pokemon_dex_num = (first_u32 & POKEMON_MASK) >> POKEMON_SHIFT
+  ability_index = (first_u32 & ABILITY_MASK) >> ABILITY_SHIFT
+  move1_index = (first_u32 & MOVE1_MASK) >> MOVE1_SHIFT
+  move2_index = (first_u32 & MOVE2_MASK) >> MOVE2_SHIFT
+
+  # Read second u32: Style points and level
+  second_u32 = buffer.read(4).unpack('N')[0]
+  style_hp = (second_u32 & STYLE_HP_MASK) >> STYLE_HP_SHIFT
+  style_atk = (second_u32 & STYLE_ATK_MASK) >> STYLE_ATK_SHIFT
+  style_def = (second_u32 & STYLE_DEF_MASK) >> STYLE_DEF_SHIFT
+  style_sdef = (second_u32 & STYLE_SDEF_MASK) >> STYLE_SDEF_SHIFT
+  style_speed = (second_u32 & STYLE_SPEED_MASK) >> STYLE_SPEED_SHIFT
+  level = (second_u32 & LEVEL_MASK) >> LEVEL_SHIFT
+
+  # Read third u32: Moves 3-4, item1, flags
+  third_u32 = buffer.read(4).unpack('N')[0]
+  move3_index = (third_u32 & MOVE3_MASK) >> MOVE3_SHIFT
+  move4_index = (third_u32 & MOVE4_MASK) >> MOVE4_SHIFT
+  item1_index = (third_u32 & ITEM1_MASK) >> ITEM1_SHIFT
+  has_item2 = (third_u32 & FLAG_HAS_2_ITEM_MASK) > 0
+  has_item_type = (third_u32 & FLAG_HAS_ITEM1_TYPE_MASK) > 0
+  has_form = (third_u32 & FLAG_HAS_FORM_MASK) > 0
+
+  # Read optional data
+  item2_index = has_item2 ? buffer.read(1).unpack('C')[0] : -1
+  item_type = has_item_type ? buffer.read(1).unpack('C')[0] : -1
+  form = has_form ? buffer.read(1).unpack('C')[0] : 0
+
+  # Create Pokemon
+  species = GameData::Species.get_species_form(pokemon_dex_num, form)
+  mon = Pokemon.new(species, level)
+  mon.ability_index = ability_index
+
+  # Set moves
+  move_indices = [move1_index, move2_index, move3_index, move4_index]
+  moves = species.learnable_moves.values_at(*move_indices)
+  moves.each_with_index { |move, i| mon.moves[i] = GameData::Move.get(move) if move }
+
+  # Set items
+  mon.items[0] = item1_index >= 0 ? GameData::Item.get(get_held_item_from_index(item1_index)) : nil
+  mon.items[1] = item2_index >= 0 ? GameData::Item.get(get_held_item_from_index(item2_index)) : nil
+
+  # Set style points
+  mon.ev[:HP] = style_hp
+  mon.ev[:ATTACK] = style_atk
+  mon.ev[:DEFENSE] = style_def
+  mon.ev[:SPECIAL_DEFENSE] = style_sdef
+  mon.ev[:SPEED] = style_speed
+
+  # Set item type
+  mon.itemTypeChosen = GameData::Type.get(item_type).id if item_type >= 0
+
+  party.push(mon)
+  return buffer.pos
+end
+
+def decode_team(code)
+  # Convert from URL-safe base64
+  code.gsub!("-","+")
+  code.gsub!("_","/")
+  code += "=" * ((4 - code.length % 4) % 4)
+  
+  buffer = StringIO.new(code.unpack('m')[0])
+  party = []
+
+  # Read version info
+  version_u16 = buffer.read(2).unpack('n')[0]
+  version_major = (version_u16 & VERSION_MAJOR_MASK) >> VERSION_MAJOR_SHIFT
+  version_minor = (version_u16 & VERSION_MINOR_MASK) >> VERSION_MINOR_SHIFT
+  version_patch = (version_u16 & VERSION_PATCH_MASK) >> VERSION_PATCH_SHIFT
+  version_dev = (version_u16 & VERSION_DEV_MASK) > 0
+
+  version_concat = [version_major,version_minor,version_patch].join(".")
+  if version_concat != Settings::GAME_VERSION || version_dev != Settings::DEV_VERSION
+    pbMessage(_INTL("Version mismatch with team code."))
+    return nil
+  end
+
+  # Decode each Pokemon
+  while buffer.pos < buffer.size - 1
+    decode_chunk(buffer, buffer.pos, party)
+  end
+
+  return party
+end
+
 def load_team_code()
   mon_indices = $Trainer.party.map { |mon| pokemon_to_indices(mon) }
   code = encode_team(mon_indices)
   domain = Settings::DEV_VERSION ? "tectonic-dev" : "tectonic"
   System.launch("https://#{domain}.alphakretin.com/teambuilder?team=#{code}")
   pbMessage(_INTL("Pokémon team opened in team builder website."))
+end
+
+def read_team_code()
+  filename = "Analysis/teamcode.txt"
+  code = IO.read(filename)
+  if code.nil?
+    pbMessage(_INTL("Could not read team code from file."))
+    return
+  end
+  pokemon = decode_team(code)
+  if pokemon.nil? 
+    return
+  end
+  # Store current party in PC
+  $Trainer.party.each do |mon|
+    $PokemonStorage.pbStoreCaught(mon)
+  end
+  $Trainer.party.clear
+
+  # Add new pokemon to party
+  pokemon.each do |mon|
+    $Trainer.party.push(mon)
+  end
+  pbMessage(_INTL("Team code loaded into party."))
 end

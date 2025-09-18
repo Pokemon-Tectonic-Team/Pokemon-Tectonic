@@ -54,9 +54,9 @@ class PokeBattle_Battler
                 PBDebug.log("[Lingering effect] #{target.pbThis}'s Beak Blast")
                 user.applyBurn(target) if move.physicalMove? && user.canBurn?(target, true, move)
             end
-            # Condensate
-            if target.effectActive?(:Condensate, true)
-                PBDebug.log("[Lingering effect] #{target.pbThis}'s Condensate")
+            # Cold Snap
+            if target.effectActive?(:ColdSnap, true)
+                PBDebug.log("[Lingering effect] #{target.pbThis}'s Cold Snap")
                 user.applyFrostbite(target) if move.specialMove? && user.canFrostbite?(target, true, move)
             end
             # Shard Surge

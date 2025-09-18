@@ -109,6 +109,8 @@ class PokemonGlobalMetadata
     # Time travel
     attr_writer :timeModifiedEvents
     attr_writer :futureFilledHoles
+    # Online connection data
+    attr_accessor :last_partner_id
 	
 	def initialize
         # Movement
@@ -200,6 +202,8 @@ class PokemonGlobalMetadata
         @dragonFlamesCount = 0
         @puzzlesCompleted = []
         @timeModifiedEvents = []
+
+        @last_partner_id = ""
     end
 
     ####################################################

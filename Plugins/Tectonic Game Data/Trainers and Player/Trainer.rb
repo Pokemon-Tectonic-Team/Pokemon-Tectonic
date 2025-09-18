@@ -22,6 +22,14 @@ class Trainer
     def full_name
       return _INTL("{1} {2}", trainer_type_name, @name)
     end
+
+    # avoid problematic characters for online communication
+    def safe_name
+      if !@name.include?("\\")
+        return @name
+      end
+      return "Val"
+    end
   
     #=============================================================================
   

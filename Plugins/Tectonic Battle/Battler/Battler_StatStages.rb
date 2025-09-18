@@ -19,9 +19,9 @@ class PokeBattle_Battler
     #=============================================================================
     # Calculate stats based on stat steps.
     #=============================================================================
-    STAT_STEP_BOUND = 12
-    STEP_MULTIPLIERS = [2, 2,   2, 2,   2, 2,   2, 2,   2, 2,   2, 2,   2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6, 6.5, 7, 7.5, 8].freeze
-    STEP_DIVISORS    = [8, 7.5, 7, 6.5, 6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 2,   2, 2,   2, 2,   2, 2,   2, 2,   2, 2,   2].freeze
+    STAT_STEP_BOUND = 8
+    STEP_MULTIPLIERS = [2, 2,   2, 2,   2, 2,   2, 2,   2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5, 6].freeze
+    STEP_DIVISORS    = [6, 5.5, 5, 4.5, 4, 3.5, 3, 2.5, 2, 2,   2, 2,   2, 2,   2, 2,   2].freeze
 
     def statMultiplierAtStep(step)
         if step < -STAT_STEP_BOUND || step > STAT_STEP_BOUND

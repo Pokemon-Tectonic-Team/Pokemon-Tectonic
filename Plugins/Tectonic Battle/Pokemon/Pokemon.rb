@@ -1100,6 +1100,14 @@ class Pokemon
         return nicknamed? ? @name : speciesName
     end
 
+    # avoid problematic characters for online communication
+    def safe_name
+      if !name.include?("\\")
+        return name
+      end
+      return speciesName
+    end
+
     # @param value [String] the nickname of this Pokémon
     def name=(value)
         if !value || value.empty? || value == speciesName

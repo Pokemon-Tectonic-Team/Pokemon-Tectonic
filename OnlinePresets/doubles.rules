@@ -1,0 +1,11 @@
+Restricted Doubles
+Double battle w/ one legendary @ Lv 70
+30
+1,6
+FixedLevelAdjustment;int;70
+1
+DoubleBattle
+0
+0
+1
+RestrictedLegendsRestriction;int;1

@@ -949,15 +949,20 @@ def getLightScreenEffectScore(user, baseDuration = nil, move = nil)
     return getScreenEffectScore(user, :LightScreen, baseDuration, move)
 end
 
+def getDiamondFieldEffectScore(user, baseDuration = nil, move = nil)
+    return getScreenEffectScore(user, :DiamondField, baseDuration, move)
+end
+
 def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
     score = 0
     # Current turn value
-    unless user.pbOwnSide.effectActive?(:LightScreen)
+    unless user.pbOwnSide.effectActive?(effect)
         user.eachOpposing do |b|
             next if b.ignoreScreens?(true)
             next if effect == :Reflect && !b.hasSpecialAttack?
             next if effect == :LightScreen && !b.hasSpecialAttack?
             next if effect == :AuroraVeil && !b.hasDamagingAttack?
+            next if effect == :DiamondField && !b.hasDamagingAttack?
 
             score += 60 if !move || user.battle.battleAI.userMovesFirst?(move, user, b)
         end
@@ -966,7 +971,14 @@ def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
     user.eachOpposing do |opp|
         next unless opp.hasScreenRemovalMove?
         foeCanBreak = true
+        score /= 2
         break  
+    end
+    foeIgnoresScreens = false
+    user.eachOpposing do |opp|
+        next unless opp.ignoreScreens?(true)
+        foeIgnoresScreens = true
+        break
     end
     unless foeCanBreak
         duration = baseDuration ? user.getScreenDuration(baseDuration,aiCheck: true) : user.getScreenDuration(aiCheck: true)
@@ -977,6 +989,9 @@ def getScreenEffectScore(user, effect, baseDuration = nil, move = nil)
             score += 10 * duration  
         end
         score = (score * 1.3).ceil if user.fullHealth?
+    end
+    if foeIgnoresScreens
+        score = (score * 0.7).floor
     end
     return score  
 end

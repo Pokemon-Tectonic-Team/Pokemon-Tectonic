@@ -36,6 +36,10 @@ Description = Rather than take recoil damage, it swaps out, and its replacement 
 Name = Aloof
 Description = Reduces move damage taken by 50% when HP is full. Can't be dizzied.
 #-------------------------------
+[ANCESTRALDANCE]
+Name = Ancestral Dance
+Description = Raises Defense and Sp. Def whenever any Pokémon uses a dance move. Caps out at +4.
+#-------------------------------
 [ANGERPOINT]
 Name = Anger Point
 Description = The Pokémon is angered when it takes a critical hit, and that maxes its Attack stat.
@@ -158,6 +162,10 @@ Description = Ignores screens, Substitute, and Abilities that would affect its m
 [CLOUDNINE]
 Name = Cloud Nine
 Description = Eliminates the effects of weather.
+#-------------------------------
+[CLOVERSONG]
+Name = Clover Song
+Description = Sets a Lucky Chant upon entry, protecting from critical hits for 10 turns.
 #-------------------------------
 [COLDPROOF]
 Name = Cold Proof
@@ -333,6 +341,11 @@ Description = The Pokémon can check a foe's held item. Makes wild Pokémon have
 Name = Frost Heal
 Description = Restores 1/12th HP each turn if frostbitten. Ignores frostbite special damage reduction.
 #-------------------------------
+[FROSTPITALITY]
+Name = Frostpitality
+Description = Traps the foe during hail.
+Flags = HailSynergy
+#-------------------------------
 [FROSTSONG]
 Name = Arctic Ariette
 Description = Sound-based attacks turn Ice-type and are boosted by 30%.
@@ -471,6 +484,10 @@ Description = Can hold two items, but drops one when swapping out.
 [KLUTZ]
 Name = Klutz
 Description = The Pokémon can't use any held items.
+#-------------------------------
+[LATEBLOOMER]
+Name = Late Bloomer
+Description = Deals 30% more damage when it's slower than the target.
 #-------------------------------
 [LEGSTRENGTH]
 Name = Leg Strength

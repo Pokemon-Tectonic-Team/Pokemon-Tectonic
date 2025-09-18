@@ -52,10 +52,6 @@ Name = Anarchic
 Description = Doubles Speed in eclipse.
 Flags = EclipseSynergy
 #-------------------------------
-[ANCESTRALDANCE]
-Name = Ancestral Dance
-Description = Raises Defense and Sp. Def whenever any Pokémon uses a dance move. Caps out at +4.
-#-------------------------------
 [APPREHENSIVE]
 Name = Apprehensive
 Description = Takes 35% less damage in eclipse, except in total eclipse.
@@ -150,7 +146,7 @@ Description = Your Poké Balls are 50% more effective.
 #-------------------------------
 [BARRIERMAKER]
 Name = Barrier Maker
-Description = Sets a Reflect for 4 turns upon entry.
+Description = Sets a Reflect for four turns upon entry.
 #-------------------------------
 [BATTLEHARDENED]
 Name = Battle-Hardened
@@ -318,10 +314,6 @@ Description = It changes form to match the move it selected.
 Name = Cloudburst
 Description = Boosts Sp. Atk and Speed by 30% in rainstorm.
 Flags = RainstormSynergy
-#-------------------------------
-[CLOVERSONG]
-Name = Clover Song
-Description = Sets a Lucky Chant upon entry, protecting from critical hits for 10 turns.
 #-------------------------------
 [CLUMSYKINESIS]
 Name = Clumsy Kinesis
@@ -549,7 +541,7 @@ Description = Uses Lightning Dance if an attack lowers its HP to half or below.
 #-------------------------------
 [EMOTIONAURA]
 Name = Emotion Aura
-Description = Upon entry, creates an Emotion Room for four turns, switching Abilities every turn.
+Description = Upon entry, creates an Emotion Room for four turns, which swaps each Pokemon's ability to its other ability each turn.
 #-------------------------------
 [ENERGETIC]
 Name = Energetic
@@ -573,7 +565,7 @@ Description = The Pokemon's Fighting-type attacks become spread and deal 35% mor
 #-------------------------------
 [EVENTHORIZON]
 Name = Event Horizon
-Description = Changes the weather to star storm, which increases its damage over time. Lingers for 3 turns after leaving.
+Description = Changes the weather to star storm, which increases its damage over time. Lingers for three turns after leaving.
 Flags = SandstormSynergy
 #-------------------------------
 [EXCAVATOR]
@@ -679,7 +671,7 @@ Description = Immune to Poison-type moves, and boosts Defense and Sp. Def when h
 #-------------------------------
 [FINESUGAR]
 Name = Fine Sugar
-Description = Restores 1/8 HP in sunshine, 1/4 when hit by Fire-type moves. Loses 1/8 in rainstorm, takes 25% more from Water-type moves.
+Description = Restores 1/8th HP in sunshine, 1/4th when hit by Fire-type moves. Loses 1/8th in rainstorm, takes 25% more from Water-type moves.
 Flags = SunshineSynergy
 #-------------------------------
 [FIREFESTIVAL]
@@ -696,7 +688,7 @@ Description = Powers up priority moves by 30%.
 #-------------------------------
 [FITTOSURVIVE]
 Name = Fit to Survive
-Description = Upon entry, summons Natural Protection for 4 turns.
+Description = Upon entry, summons Natural Protection for four turns.
 #-------------------------------
 [FLAMEWINGS]
 Name = Flame Wings
@@ -721,7 +713,7 @@ Description = Doubles Attack, but the Pokémon becomes dizzy after attacking.
 #-------------------------------
 [FLUTTERTOTEM]
 Name = Flutter Totem
-Description = Upon entry, summons a Cruel Cocoon on the Pokémon's side for 6 turns.
+Description = Upon entry, summons a Cruel Cocoon on the Pokémon's side for six turns.
 #-------------------------------
 [FLYBY]
 Name = Fly By
@@ -733,7 +725,7 @@ Description = Grants immunity to Bug-type moves, and raises Attack and Sp. Atk w
 #-------------------------------
 [FOGTOTEM]
 Name = Fog Totem
-Description = Upon entry, summons a Misdirecting Fog on the Pokémon's side for 6 turns.
+Description = Upon entry, summons a Misdirecting Fog on the Pokémon's side for six turns.
 #-------------------------------
 [FOLLOWTHROUGH]
 Name = Follow Through
@@ -771,11 +763,6 @@ Description = When hit with a special move, hits back instantly with that same m
 [FROSTFANGED]
 Name = Frostfanged
 Description = Boosts Attack and Speed by 30% in hail.
-Flags = HailSynergy
-#-------------------------------
-[FROSTPITALITY]
-Name = Frostpitality
-Description = Traps the foe during hail.
 Flags = HailSynergy
 #-------------------------------
 [FROSTSCATTER]
@@ -822,7 +809,7 @@ Description = Pokémon that swap in for this have their Speed raised and their P
 #-------------------------------
 [GILD]
 Name = Gild
-Description = Turns the held item of a Pokémon it hits into gold coins for you to take.
+Description = Turns the held item of a Pokémon it hits into scattered gold coins for you to take.
 #-------------------------------
 [GLASSFIRING]
 Name = Glass Firing
@@ -907,7 +894,7 @@ Description = Immune to Dark-type moves, and boosts Attack and Sp. Atk when hit 
 #-------------------------------
 [HEATDEATH]
 Name = Heat Death
-Description = Changes the weather to ice age, which damages and prevents healing. Lingers for 3 turns after leaving.
+Description = Changes the weather to ice age, which damages and prevents healing. Lingers for three turns after leaving.
 Flags = HailSynergy
 #-------------------------------
 [HEATSAVOR]
@@ -971,6 +958,10 @@ Description = Powers up recoil and sound moves by 30%.
 [HOPPINGMAD]
 Name = Hopping Mad
 Description = The Pokémon's Speed is doubled while using rampage moves.
+#-------------------------------
+[HORDETACTICS]
+Name = Horde Tactics
+Description = The Pokemon's Normal-type attacks become spread and drain 33% HP.
 #-------------------------------
 [HUBRIS]
 Name = Hubris
@@ -1135,10 +1126,6 @@ Name = Last Gasp
 Description = Cannot take damage or be switched out. Hears Perish Song upon entry, ensuring its demise.
 Flags = Immutable
 #-------------------------------
-[LATEBLOOMER]
-Name = Late Bloomer
-Description = Deals 30% more damage when it's slower than the target.
-#-------------------------------
 [LEVIATHAN]
 Name = Leviathan
 Description = Protected from critical hits. Can't be burned or frostbitten.
@@ -1146,7 +1133,7 @@ Flags = CritImmunity
 #-------------------------------
 [LIFELINE]
 Name = Lifeline
-Description = At the end of each turn, heals self by 1/20 and a party member by the amount the Pokémon was healed.
+Description = At the end of each turn, heals self by 1/20th and a party member by the amount the Pokémon was healed.
 #-------------------------------
 [LIGHTTRICK]
 Name = Light Trick
@@ -1743,7 +1730,7 @@ Description = Special moves have a 30% chance to waterlog targets.
 #-------------------------------
 [SATURNALSKY]
 Name = Saturnal Sky
-Description = Changes the weather to ring eclipse, which heralds the total ring eclipse. Lingers for 3 turns after leaving.
+Description = Changes the weather to ring eclipse, which heralds the total ring eclipse. Lingers for three turns after leaving.
 Flags = EclipseSynergy
 #-------------------------------
 [SCALDINGSMOKE]
@@ -1937,7 +1924,7 @@ Flags = EnablesRandomCrits
 #-------------------------------
 [STARGUARDIAN]
 Name = Star Guardian
-Description = Sets a Light Screen for 4 turns upon entry.
+Description = Sets a Light Screen for four turns upon entry.
 #-------------------------------
 [STARSALIGN]
 Name = Stars Align
@@ -1980,7 +1967,7 @@ Flags = RainstormSynergy
 #-------------------------------
 [STORMTOTEM]
 Name = Storm Totem
-Description = Upon entry, summons a Turbulent Sky on the Pokémon's side for 6 turns.
+Description = Upon entry, summons a Turbulent Sky on the Pokémon's side for six turns.
 #-------------------------------
 [STORMTRAIL]
 Name = Storm Trail
@@ -2015,7 +2002,7 @@ Flags = MoldBreaking
 #-------------------------------
 [STYGIANNIGHT]
 Name = Stygian Night
-Description = Changes the weather to Blood Moon, which heralds the Full Blood Moon. Lingers for 3 turns after leaving.
+Description = Changes the weather to Blood Moon, which heralds the Full Blood Moon. Lingers for three turns after leaving.
 Flags = MoonglowSynergy
 #-------------------------------
 [STYLISH]
@@ -2081,6 +2068,10 @@ Name = Taiga Trekker
 Description = During hail, boosts Speed and Grass-type damage by 50%.
 Flags = HailSynergy
 #-------------------------------
+[TANGLINGVINES]
+Name = Tangling Vines
+Description = When hit, the attacker's Speed is reduced, and this Pokémon's next attack against them is boosted by 30%.
+#-------------------------------
 [TANTALIZING]
 Name = Tantalizing
 Description = Draws in attacks from enemies with below half health.
@@ -2091,7 +2082,7 @@ Description = Deals 25% more move damage for each ally in battle.
 #-------------------------------
 [TEMPORALDISTORTION]
 Name = Temporal Distortion
-Description = Every 3 turns it gets to move twice.
+Description = Every three turns it gets to move twice.
 #-------------------------------
 [TENDERIZE]
 Name = Tenderize
@@ -2124,7 +2115,7 @@ Description = Its attacks have priority, deal 25% less damage and become special
 #-------------------------------
 [TIMESKIP]
 Name = Time Skip
-Description = Between each turn there's another turn where no one moves.
+Description = Every two turns, another turn happens where no one moves.
 #-------------------------------
 [TOILANDTROUBLE]
 Name = Toil and Trouble
@@ -2224,7 +2215,7 @@ Description = Deals 30% more damage to targets that have an item. After attackin
 #-------------------------------
 [VENGEANCE]
 Name = Vengeance
-Description = After an attack reduces its HP to half or less, deals 1/4 of the attacker's HP back to the attacker.
+Description = After an attack reduces its HP to half or less, deals 1/4th of the attacker's HP back to the attacker.
 #-------------------------------
 [VENOMDETTA]
 Name = Venomdetta
@@ -2237,6 +2228,10 @@ Description = Whenever a foe's poison worsens, the Pokémon heals for 25% max HP
 [VERDANT]
 Name = Verdant
 Description = Powers up Grass-type moves of itself and its allies by 50%.
+#-------------------------------
+[VICIOUSCYCLE]
+Name = Vicious Cycle
+Description = The Pokemon's Dragon-type attacks become spread and drain 33% HP.
 #-------------------------------
 [VICTORYMOLT]
 Name = Victory Molt
@@ -2253,6 +2248,10 @@ Description = At the end of each turn, itself and each ally heals for 1/16th of 
 [WALLNINJA]
 Name = Wall Ninja
 Description = The Pokémon's attacks are always critical if there is an active Room.
+#-------------------------------
+[WANINGWILLPOWER]
+Name = Waning Willpower
+Description = During the Full Moon, the Pokémon saps the enemy Pokémon of their vitality, leeching them.
 #-------------------------------
 [WARDING]
 Name = Warding
@@ -2291,7 +2290,7 @@ Description = Uses Power Split upon entry or when hit by a move.
 #-------------------------------
 [WILDTOTEM]
 Name = Wild Totem
-Description = Upon entry, summons a Primal Forest on the Pokémon's side for 6 turns.
+Description = Upon entry, summons a Primal Forest on the Pokémon's side for six turns.
 #-------------------------------
 [WILLAURA]
 Name = Will Aura

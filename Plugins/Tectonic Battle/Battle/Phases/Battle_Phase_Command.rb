@@ -95,6 +95,7 @@ class PokeBattle_Battle
                 move = @battlers[idxBattler].getMoves[cmd]
                 next false if cmd < 0 || move.nil? || move.id.nil?
                 next false unless pbRegisterMove(idxBattler, cmd)
+                move.calculateUsageOverrides(battler,[]) # only to define calcType
                 target_data = move.pbTarget(battler)
                 next false if (!singleBattle? || target_data.id == :UserOrNearOther) &&
                               !pbChooseTarget(@battlers[idxBattler], move)
@@ -438,7 +439,12 @@ class PokeBattle_Battle
             battler = @battlers[idxBattler]
             next if battler.nil?
             next if pbOwnedByPlayer?(idxBattler) != isPlayer
-            next if @commandPhasesThisRound > battler.extraMovesPerTurn
+            # Allow command selection in multiplayer even during extra command phases
+            skipBattlerBecauseExtraTurn = false
+            if @commandPhasesThisRound > battler.extraMovesPerTurn
+                skipBattlerBecauseExtraTurn = true
+            end
+            next if !is_online? && skipBattlerBecauseExtraTurn
             next if @choices[idxBattler][0] != :None # Action is forced, can't choose one
             next unless pbCanShowCommands?(idxBattler) # Action is forced, can't choose one
             # AI controls this battler
@@ -459,11 +465,16 @@ class PokeBattle_Battle
                 end
 
                 # Have the AI choose an action
+                # For Cable Club reasons, this happens even on an extra turn if the AI can't move
+                # But it will make sure communication still happens and shouldn't have ill effects
                 @battleAI.pbDefaultChooseEnemyCommand(idxBattler)
 
                 # Go to the next battler
                 next
             end
+
+            # now that we've handled the AI/communication processing, even if online, skip if we can't take an action
+            next if skipBattlerBecauseExtraTurn
 
             # Player chooses an action
             actioned.push(idxBattler)

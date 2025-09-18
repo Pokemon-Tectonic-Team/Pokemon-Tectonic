@@ -75,10 +75,13 @@ class PokeBattle_Move
         targetData = GameData::Target.get(@target)
         # Effects that make things spread
         if damagingMove? && targetData.can_target_one_foe?
-          return GameData::Target.get(:AllNearFoes) if user.effectActive?(:FlareWitch)
-          return GameData::Target.get(:AllNearFoes) if @calcType == :PSYCHIC && user.hasActiveAbility?(:MULTITASKER)
-          return GameData::Target.get(:AllNearFoes) if @calcType == :FIGHTING && user.hasActiveAbility?(:EVENHANDED)
-          return GameData::Target.get(:AllNearFoes) if user.hasActiveAbility?(:SPACIALDISTORTION)
+          allNearFoesData = GameData::Target.get(:AllNearFoes)
+          return allNearFoesData if user.effectActive?(:FlareWitch)
+          return allNearFoesData if @calcType == :PSYCHIC && user.hasActiveAbility?(:MULTITASKER)
+          return allNearFoesData if @calcType == :FIGHTING && user.hasActiveAbility?(:EVENHANDED)
+          return allNearFoesData if user.hasActiveAbility?(:SPACIALDISTORTION)
+          return allNearFoesData if @calcType == :DRAGON && user.hasActiveAbility?(:VICIOUSCYCLE)
+          return allNearFoesData if @calcType == :NORMAL && user.hasActiveAbility?(:HORDETACTICS)
         end
         return targetData
     end

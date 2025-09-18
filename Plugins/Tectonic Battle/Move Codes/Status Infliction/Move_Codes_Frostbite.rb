@@ -47,11 +47,11 @@ end
 
 #===============================================================================
 # If a Pokémon attacks the user with a special move before it uses this move, the
-# attacker is frostbitten. (Condensate)
+# attacker is frostbitten. (Cold Snap)
 #===============================================================================
 class PokeBattle_Move_FrostbiteAttackerBeforeUserActs < PokeBattle_Move
     def pbDisplayChargeMessage(user)
-        user.applyEffect(:Condensate)
+        user.applyEffect(:ColdSnap)
     end
 
     def getTargetAffectingEffectScore(user, target)
