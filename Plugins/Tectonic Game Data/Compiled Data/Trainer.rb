@@ -586,6 +586,7 @@ module Compiler
     GameData::Trainer.save
     MessageTypes.setMessagesAsHash(MessageTypes::TrainerNames, trainer_names)
     MessageTypes.setMessagesAsHash(MessageTypes::TrainerLoseText, trainer_lose_texts)
+    hologramizeAllBattleSprites(false)
     Graphics.update
   end
 
