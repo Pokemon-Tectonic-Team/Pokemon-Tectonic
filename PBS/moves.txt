@@ -583,7 +583,7 @@ TotalPP = 15
 Target = NearOther
 FunctionCode = AddMoneyGainedFromBattle
 Flags = CanProtect
-Description = Numerous coins are hurled at the target to inflict damage. Money is earned after battle.
+Description = Numerous coins are hurled at the target to inflict damage. Scatters coins.
 #-------------------------------
 [POUND]
 Name = Pound
@@ -606,6 +606,7 @@ TotalPP = 3
 Target = User
 Priority = 4
 FunctionCode = ProtectUser
+Flags = Staple
 Description = It enables the user to evade all attacks. It fails if used in succession.
 #-------------------------------
 [QUICKATTACK]
@@ -3343,7 +3344,7 @@ Name = Swords Dance
 Type = STEEL
 Category = Status
 Accuracy = 0
-TotalPP = 10
+TotalPP = 6
 Target = User
 FunctionCode = RaiseUserAtk4
 Flags = CanSnatch,Dance
@@ -4527,7 +4528,7 @@ Name = Eerie Impulse
 Type = ELECTRIC
 Category = Status
 Accuracy = 100
-TotalPP = 12
+TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetSpAtk4
 Flags = CanProtect,CanMagicCoat
@@ -5130,7 +5131,7 @@ Accuracy = 0
 TotalPP = 5
 Target = User
 FunctionCode = HealUserFullyAndFallAsleep
-Flags = CanSnatch
+Flags = CanSnatch,Staple
 Description = The user goes to sleep to fully restore their HP and heal any non-volatile status conditions.
 #-------------------------------
 [ROLEPLAY]
@@ -5153,17 +5154,6 @@ Target = NearOther
 FunctionCode = UserTargetSwapAbilities
 Flags = CanProtect
 Description = The user employs its psychic power to exchange Abilities with the target.
-#-------------------------------
-[TRICK]
-Name = Trick
-Type = PSYCHIC
-Category = Status
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = SwapItems
-Flags = CanProtect
-Description = The user catches the target off guard and swaps its held item with its own.
 #-------------------------------
 [TRICKROOM]
 Name = Trick Room
@@ -6154,7 +6144,7 @@ Name = Charm
 Type = FAIRY
 Category = Status
 Accuracy = 100
-TotalPP = 15
+TotalPP = 10
 Target = NearOther
 FunctionCode = LowerTargetAtk4
 Flags = CanProtect,CanMagicCoat

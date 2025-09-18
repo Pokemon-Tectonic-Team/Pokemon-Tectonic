@@ -328,7 +328,7 @@ class PokeBattle_Move_LiveWire < PokeBattle_Move
 end
 
 #===============================================================================
-# If a Pokémon attacks the user before it uses this move, set up Spikes (Shard Surge)
+# If a Pokémon attacks the user with a special move before it uses this move, set up Spikes (Shard Surge)
 #===============================================================================
 class PokeBattle_Move_SetupSpikesBeforeUserActs < PokeBattle_Move
     def pbDisplayChargeMessage(user)

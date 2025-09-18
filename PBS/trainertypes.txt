@@ -10,6 +10,7 @@ Name = Ancient Priest
 Gender = Unknown
 BaseMoney = 0
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [ANOTHERPOSSIBLEALESSA]
 Name = Another Possible
@@ -40,18 +41,21 @@ Name = Aroma Lady
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [AROMALADY2]
 Name = Aroma Lady
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [AROMALADY3]
 Name = Aroma Lady
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [ARTIFICIALTRAINER]
 Name = Artificial Trainer
@@ -63,24 +67,28 @@ Name = Artist
 Gender = Male
 BaseMoney = 48
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [ARTIST2]
 Name = Artist
 Gender = Male
 BaseMoney = 48
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [ARTIST3]
 Name = Artist
 Gender = Female
 BaseMoney = 32
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [ARTIST4]
 Name = Artist
 Gender = Male
 BaseMoney = 32
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [BACKERS_F]
 Name = Backers
@@ -99,78 +107,91 @@ Name = Backpacker
 Gender = Female
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [BACKPACKER_M]
 Name = Backpacker
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [BAKER]
 Name = Baker
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [BATTLEGIRL]
 Name = Battle Girl
 Gender = Female
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BATTLEGIRL2]
 Name = Battle Girl
 Gender = Female
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BATTLEGIRL3]
 Name = Battle Girl
 Gender = Female
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BATTLEGIRL4]
 Name = Battle Girl
 Gender = Female
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BEAUTY]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BEAUTY2]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BEAUTY3]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BEAUTY4]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BEAUTY5]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BEAUTY6]
 Name = Beauty
 Gender = Female
 BaseMoney = 56
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [BELLEANDPA]
 Name = Belle & Pa
@@ -183,126 +204,147 @@ Name = Biker
 Gender = Male
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BIKER2]
 Name = Biker
 Gender = Male
 BaseMoney = 16
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BIRDKEEPER_F]
 Name = Bird Keeper
 Gender = Female
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [BIRDKEEPER_M]
 Name = Bird Keeper
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [BIRDKEEPER_M2]
 Name = Bird Keeper
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [BLACKBELT]
 Name = Black Belt
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BLACKBELT2]
 Name = Black Belt
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BLACKBELT3]
 Name = Black Belt
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BLACKBELT4]
 Name = Black Belt
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BOARDER]
 Name = Boarder
 Gender = Male
 BaseMoney = 32
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [BUGCATCHER]
 Name = Bug Catcher
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [BUGCATCHER2]
 Name = Bug Catcher
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [BUGCATCHER_F]
 Name = Bug Catcher
 Gender = Female
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [BURGLAR]
 Name = Burglar
 Gender = Male
 BaseMoney = 32
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [BUTLER]
 Name = Butler
 Gender = Male
 BaseMoney = 40
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [CAMERAMAN]
 Name = Cameraman
 Gender = Male
 BaseMoney = 32
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [CAMERAMAN2]
 Name = Cameraman
 Gender = Male
 BaseMoney = 32
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [CAMPER]
 Name = Camper
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [CAMPER_F]
 Name = Camper
 Gender = Female
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [CAMPER_M]
 Name = Camper
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [CEO]
 Name = CEO
 Gender = Female
 BaseMoney = 100
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [CHALLENGER_Vanya]
 Name = Challenger
@@ -325,36 +367,42 @@ Name = Chef
 Gender = Male
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [CLERK_F]
 Name = Clerk
 Gender = Female
 BaseMoney = 24
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [CLERK_M]
 Name = Clerk
 Gender = Male
 BaseMoney = 24
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [CLERK_M2]
 Name = Clerk
 Gender = Male
 BaseMoney = 24
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [CLOWN]
 Name = Clown
 Gender = Male
 BaseMoney = 24
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [COLLECTOR]
 Name = Collector
 Gender = Male
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [COOLTRAINERSQUAD_2]
 Name = Cool Squad
@@ -367,24 +415,28 @@ Name = Cooltrainer
 Gender = Female
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_F2]
 Name = Cooltrainer
 Gender = Female
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_F3]
 Name = Cooltrainer
 Gender = Female
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_F4]
 Name = Cooltrainer
 Gender = Female
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_F7]
 Name = Pro Trainer
@@ -393,30 +445,35 @@ BaseMoney = 60
 Policies = PROACTIVE_MATCHUP_SWAPPER
 IntroBGM = ELITETRAINER
 BattleBGM = Battle pro
+CableClub = true
 #-------------------------------
 [COOLTRAINER_M]
 Name = Cooltrainer
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_M2]
 Name = Cooltrainer
 Gender = Male
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_M3]
 Name = Cooltrainer
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_M4]
 Name = Cooltrainer
 Gender = Male
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [COOLTRAINER_M7]
 Name = Pro Trainer
@@ -425,12 +482,14 @@ BaseMoney = 60
 Policies = PROACTIVE_MATCHUP_SWAPPER
 IntroBGM = ELITETRAINER
 BattleBGM = Battle pro
+CableClub = true
 #-------------------------------
 [COWGIRL]
 Name = Cowgirl
 Gender = Female
 BaseMoney = 30
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [CRIMINALTEAM]
 Name = Criminal Team
@@ -443,48 +502,56 @@ Name = Cyclist
 Gender = Female
 BaseMoney = 32
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [CYCLIST_F2]
 Name = Cyclist
 Gender = Female
 BaseMoney = 32
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [CYCLIST_M]
 Name = Cyclist
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [CYCLIST_M2]
 Name = Cyclist
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [DANCER]
 Name = Dancer
 Gender = Male
 BaseMoney = 24
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [DANDY]
 Name = Dandy
 Gender = Male
 BaseMoney = 160
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [DELINQUENT]
 Name = Delinquent
 Gender = Male
 BaseMoney = 32
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [DEPOTAGENT]
 Name = Depot Agent
 Gender = Male
 BaseMoney = 32
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [DEVELOPER]
 Name = Developer
@@ -528,6 +595,7 @@ Name = Doctor
 Gender = Male
 BaseMoney = 60
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [DOUBLETEAM]
 Name = Double Team
@@ -546,54 +614,63 @@ Name = Dragon Tamer
 Gender = Male
 BaseMoney = 32
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [DRAGONTAMER2]
 Name = Dragon Tamer
 Gender = Male
 BaseMoney = 32
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [ELDER]
 Name = Elder
 Gender = Male
 BaseMoney = 120
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [EXPERTF]
 Name = Expert
 Gender = Female
 BaseMoney = 80
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [EXPERTM]
 Name = Expert
 Gender = Male
 BaseMoney = 80
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [FAIRYTALEGIRL]
 Name = Fairy Tale Girl
 Gender = Female
 BaseMoney = 8
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [FIREBREATHER]
 Name = Firebreather
 Gender = Male
 BaseMoney = 32
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [FISHERMAN]
 Name = Fisherman
 Gender = Male
 BaseMoney = 32
 IntroBGM = SAILOR
+CableClub = true
 #-------------------------------
 [FISHERMAN2]
 Name = Fisherman
 Gender = Male
 BaseMoney = 32
 IntroBGM = SAILOR
+CableClub = true
 #-------------------------------
 [FORMERCHAMP_Ansel]
 Name = Former Champion
@@ -642,84 +719,98 @@ Name = Gambler
 Gender = Male
 BaseMoney = 120
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [GARDENER]
 Name = Gardener
 Gender = Male
 BaseMoney = 32
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [GENTLEMAN]
 Name = Gentleman
 Gender = Male
 BaseMoney = 200
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [GENTLEMAN2]
 Name = Gentleman
 Gender = Male
 BaseMoney = 200
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [GENTLEMAN3]
 Name = Gentleman
 Gender = Male
 BaseMoney = 200
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [GUITARIST]
 Name = Guitarist
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [GUITARIST2]
 Name = Guitarist
 Gender = Male
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [GUITARIST3]
 Name = Guitarist
 Gender = Female
 BaseMoney = 24
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [HARLEQUIN]
 Name = Harlequin
 Gender = Male
 BaseMoney = 32
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [HEXMANIAC]
 Name = Hex Maniac
 Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [HEXMANIAC_1]
 Name = Hex Maniac
 Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [HIKER]
 Name = Hiker
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [HIKER2]
 Name = Hiker
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [HIKER3]
 Name = Hiker
 Gender = Male
 BaseMoney = 32
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [HOOLIGANS]
 Name = Hooligans
@@ -732,6 +823,7 @@ Name = Hoopster
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [IDEALTRAINER]
 Name = Ideal Trainer
@@ -743,12 +835,14 @@ Name = Idol
 Gender = Female
 BaseMoney = 72
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [INFIELDER]
 Name = Infielder
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [INTERVIEWERS]
 Name = Interviewers
@@ -767,84 +861,98 @@ Name = Janitor
 Gender = Male
 BaseMoney = 24
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [JOGGER]
 Name = Jogger
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [JUGGLER]
 Name = Juggler
 Gender = Male
 BaseMoney = 32
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [KIMONOGIRL]
 Name = Kimono Girl
 Gender = Female
 BaseMoney = 120
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [LADY]
 Name = Lady
 Gender = Female
 BaseMoney = 160
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [LADY2]
 Name = Lady
 Gender = Female
 BaseMoney = 160
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [LADY3]
 Name = Lady
 Gender = Female
 BaseMoney = 160
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [LADY4]
 Name = Lady
 Gender = Female
 BaseMoney = 160
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [LASS]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LASS2]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LASS3]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LASS4]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LASS5]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LASS6]
 Name = Lass
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [LEADER_Bence]
 Name = Gym Leader
@@ -959,6 +1067,7 @@ Name = Linebacker
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [LOST_RANGER_BLUE]
 Name = Pokémon Ranger
@@ -983,12 +1092,14 @@ Name = Maid
 Gender = Female
 BaseMoney = 40
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [MAID2]
 Name = Maid
 Gender = Female
 BaseMoney = 40
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [MASKEDVILLAIN]
 Name = Masked Villain
@@ -1025,12 +1136,14 @@ Name = Medium
 Gender = Female
 BaseMoney = 48
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [NECKBEARD]
 Name = Neckbeard
 Gender = Male
 BaseMoney = 40
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [NIGHTMAREQUEEN_Elise]
 Name = Nightmare Queen
@@ -1050,142 +1163,166 @@ Name = Ninja Boy
 Gender = Male
 BaseMoney = 8
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [NURSE]
 Name = Nurse
 Gender = Female
 BaseMoney = 60
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [NURSERYAIDE]
 Name = Nursery Aide
 Gender = Female
 BaseMoney = 48
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [OFFICEWORKER_F]
 Name = Office Worker
 Gender = Female
 BaseMoney = 40
+CableClub = true
 #-------------------------------
 [OFFICEWORKER_M]
 Name = Office Worker
 Gender = Male
 BaseMoney = 40
+CableClub = true
 #-------------------------------
 [PARASOLLADY]
 Name = Parasol Lady
 Gender = Female
 BaseMoney = 32
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [PARASOLLADY2]
 Name = Parasol Lady
 Gender = Female
 BaseMoney = 32
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [PICNICKER]
 Name = Picnicker
 Gender = Female
 BaseMoney = 16
 IntroBGM = LASS
+CableClub = true
 #-------------------------------
 [PILOT]
 Name = Pilot
 Gender = Male
 BaseMoney = 40
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [POKEFAN_F]
 Name = Poké Fan
 Gender = Female
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEFAN_F2]
 Name = Poké Fan
 Gender = Female
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEFAN_F3]
 Name = Poké Fan
 Gender = Female
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEFAN_M]
 Name = Poké Fan
 Gender = Male
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEFAN_M2]
 Name = Poké Fan
 Gender = Male
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEKID]
 Name = Poké Kid
 Gender = Female
 BaseMoney = 8
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [POKEMANIAC]
 Name = Poké Maniac
 Gender = Male
 BaseMoney = 64
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_F]
 Name = Pokémon Breeder
 Gender = Female
 BaseMoney = 16
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_F2]
 Name = Pokémon Breeder
 Gender = Female
 BaseMoney = 16
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_F3]
 Name = Pokémon Breeder
 Gender = Female
 BaseMoney = 16
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_F4]
 Name = Pokémon Breeder
 Gender = Female
 BaseMoney = 16
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_M]
 Name = Pokémon Breeder
 Gender = Male
 BaseMoney = 16
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_M2]
 Name = Pokémon Breeder
 Gender = Male
 BaseMoney = 16
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_M3]
 Name = Pokémon Breeder
 Gender = Male
 BaseMoney = 16
 IntroBGM = PARASOL
+CableClub = true
 #-------------------------------
 [POKEMONBREEDER_M4]
 Name = Pokémon Breeder
 Gender = Male
 BaseMoney = 16
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [POKEMONMASTER_Vanya]
 Name = Pokémon Master
@@ -1199,12 +1336,14 @@ Name = Pokémon Ranger
 Gender = Female
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_F2]
 Name = Pokémon Ranger
 Gender = Female
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_F2_GANG]
 Name = Driller
@@ -1217,12 +1356,14 @@ Name = Pokémon Ranger
 Gender = Female
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_F4]
 Name = Pokémon Ranger
 Gender = Female
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_F_GANG]
 Name = Driller
@@ -1235,12 +1376,14 @@ Name = Pokémon Ranger
 Gender = Male
 BaseMoney = 60
 IntroBGM = ACETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_M2]
 Name = Pokémon Ranger
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_M2_GANG]
 Name = Driller
@@ -1253,12 +1396,14 @@ Name = Pokémon Ranger
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_M4]
 Name = Pokémon Ranger
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [POKEMONRANGER_M4_GANG]
 Name = Driller
@@ -1302,24 +1447,28 @@ Name = Policeman
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [POLICEMAN2]
 Name = Policeman
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [PRESCHOOLER_F]
 Name = Preschooler
 Gender = Female
 BaseMoney = 20
 IntroBGM = TWINS2
+CableClub = true
 #-------------------------------
 [PRESCHOOLER_M]
 Name = Preschooler
 Gender = Male
 BaseMoney = 20
 IntroBGM = TWINS2
+CableClub = true
 #-------------------------------
 [PROFESSOR_Tamarind]
 Name = Professor
@@ -1332,42 +1481,49 @@ Name = Psychic
 Gender = Male
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_F]
 Name = Psychic
 Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_F2]
 Name = Psychic
 Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_F3]
 Name = Psychic
 Gender = Female
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_M]
 Name = Psychic
 Gender = Male
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_M2]
 Name = Psychic
 Gender = Male
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PSYCHIC_M3]
 Name = Psychic
 Gender = Male
 BaseMoney = 32
 IntroBGM = PSYCHIC
+CableClub = true
 #-------------------------------
 [PUNKF]
 Name = Punk
@@ -1380,48 +1536,56 @@ Name = Punk
 Gender = Male
 BaseMoney = 20
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [RANCHER]
 Name = Rancher
 Gender = Male
 BaseMoney = 40
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [REPORTER]
 Name = Reporter
 Gender = Female
 BaseMoney = 40
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [REPORTER2]
 Name = Reporter
 Gender = Female
 BaseMoney = 40
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [RICHBOY]
 Name = Rich Boy
 Gender = Male
 BaseMoney = 160
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [RICHBOY2]
 Name = Rich Boy
 Gender = Male
 BaseMoney = 160
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [RICHBOY3]
 Name = Rich Boy
 Gender = Male
 BaseMoney = 160
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [RICHBOY4]
 Name = Rich Boy
 Gender = Male
 BaseMoney = 160
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [RICHCOUPLE]
 Name = Rich Couple
@@ -1434,162 +1598,189 @@ Name = Rising Star
 Gender = Female
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [RISINGSTAR_F2]
 Name = Rising Star
 Gender = Female
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [RISINGSTAR_M]
 Name = Rising Star
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [RISINGSTAR_M2]
 Name = Rising Star
 Gender = Male
 BaseMoney = 60
 IntroBGM = ELITETRAINER
+CableClub = true
 #-------------------------------
 [ROLLERSKATER_F]
 Name = Roller Skater
 Gender = Female
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [ROLLERSKATER_M]
 Name = Roller Skater
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [ROUGHNECK]
 Name = Roughneck
 Gender = Male
 BaseMoney = 24
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [ROUGHNECK2]
 Name = Roughneck
 Gender = Male
 BaseMoney = 24
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [RUINMANIAC]
 Name = Ruin Maniac
 Gender = Male
 BaseMoney = 48
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [RUINMANIAC2]
 Name = Ruin Maniac
 Gender = Male
 BaseMoney = 48
 IntroBGM = BACKPACKER
+CableClub = true
 #-------------------------------
 [SAGE]
 Name = Sage
 Gender = Male
 BaseMoney = 48
 IntroBGM = MONK
+CableClub = true
 #-------------------------------
 [SAILOR]
 Name = Sailor
 Gender = Male
 BaseMoney = 32
 IntroBGM = SAILOR
+CableClub = true
 #-------------------------------
 [SAILOR2]
 Name = Sailor
 Gender = Male
 BaseMoney = 32
 IntroBGM = SAILOR
+CableClub = true
 #-------------------------------
 [SCHOOLKID_F]
 Name = School Kid
 Gender = Female
 BaseMoney = 20
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_F2]
 Name = School Kid
 Gender = Female
 BaseMoney = 20
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_F3]
 Name = School Kid
 Gender = Female
 BaseMoney = 20
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_F4]
 Name = School Kid
 Gender = Female
 BaseMoney = 20
 IntroBGM = LASS2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_M]
 Name = School Kid
 Gender = Male
 BaseMoney = 20
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_M2]
 Name = School Kid
 Gender = Male
 BaseMoney = 20
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [SCHOOLKID_M3]
 Name = School Kid
 Gender = Male
 BaseMoney = 20
 IntroBGM = YOUNGSTER2
+CableClub = true
 #-------------------------------
 [SCIENTIST_F]
 Name = Scientist
 Gender = Female
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_F3]
 Name = Scientist
 Gender = Female
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_M]
 Name = Scientist
 Gender = Male
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_M2]
 Name = Scientist
 Gender = Male
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_M3]
 Name = Scientist
 Gender = Male
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_M4]
 Name = Scientist
 Gender = Male
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SCIENTIST_M5]
 Name = Scientist
 Gender = Male
 BaseMoney = 32
 IntroBGM = SCIENTIST
+CableClub = true
 #-------------------------------
 [SEEKER_Nora]
 Name = Seeker
@@ -1608,12 +1799,14 @@ Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SIGHTSEER_M]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SISANDBRO]
 Name = Sis and Bro
@@ -1626,36 +1819,42 @@ Name = Skier
 Gender = Female
 BaseMoney = 32
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [SKIER_F2]
 Name = Skier
 Gender = Female
 BaseMoney = 32
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [SKIER_M]
 Name = Skier
 Gender = Male
 BaseMoney = 32
 IntroBGM = BLACKBELT
+CableClub = true
 #-------------------------------
 [SMASHER]
 Name = Smasher
 Gender = Female
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SOCIALITE]
 Name = Socialite
 Gender = Female
 BaseMoney = 200
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [SOCIALITE2]
 Name = Socialite
 Gender = Female
 BaseMoney = 200
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [SPIRITGUARDIAN]
 Name = Spirit Guardian
@@ -1686,18 +1885,21 @@ Name = Striker
 Gender = Male
 BaseMoney = 32
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SUPERNERD]
 Name = Super Nerd
 Gender = Male
 BaseMoney = 24
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [SURFER]
 Name = Surfer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SUSPICIOUSMAN]
 Name = Suspicious Man
@@ -1710,72 +1912,84 @@ Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SWIMMER_F2]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_F3]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SWIMMER_F4]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_F5]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SWIMMER_F6]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_F7]
 Name = Swimmer
 Gender = Female
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SWIMMER_M]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_M2]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [SWIMMER_M3]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_M4]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING2
+CableClub = true
 #-------------------------------
 [SWIMMER_M5]
 Name = Swimmer
 Gender = Male
 BaseMoney = 16
 IntroBGM = CYCLING
+CableClub = true
 #-------------------------------
 [TAPU_BULU]
 Name = Guardian Deity
@@ -1802,6 +2016,7 @@ Name = Teacher
 Gender = Female
 BaseMoney = 48
 IntroBGM = ARTIST
+CableClub = true
 #-------------------------------
 [TECHWIZARD_JOVAN]
 Name = Tech Wizard
@@ -1814,30 +2029,35 @@ Name = Teenager
 Gender = Female
 BaseMoney = 20
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [TEENAGERM]
 Name = Teenager
 Gender = Male
 BaseMoney = 20
 IntroBGM = ROUGHNECK
+CableClub = true
 #-------------------------------
 [THIEF]
 Name = Thief
 Gender = Female
 BaseMoney = 32
 IntroBGM = POKEFAN
+CableClub = true
 #-------------------------------
 [TOURISTF]
 Name = Tourist
 Gender = Male
 BaseMoney = 16
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [TOURISTM]
 Name = Tourist
 Gender = Male
 BaseMoney = 16
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [TRAINER_Alessa]
 Name = Pokémon Trainer
@@ -1908,24 +2128,28 @@ Name = Tuber
 Gender = Female
 BaseMoney = 4
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [TUBER_F2]
 Name = Tuber
 Gender = Female
 BaseMoney = 4
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [TUBER_M]
 Name = Tuber
 Gender = Male
 BaseMoney = 4
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [TUBER_M2]
 Name = Tuber
 Gender = Male
 BaseMoney = 4
 IntroBGM = TWINS
+CableClub = true
 #-------------------------------
 [TWINS]
 Name = Twins
@@ -1956,30 +2180,35 @@ Name = Veteran
 Gender = Male
 BaseMoney = 80
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [VETERANM_2]
 Name = Veteran
 Gender = Male
 BaseMoney = 80
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [VETERANM_3]
 Name = Veteran
 Gender = Male
 BaseMoney = 80
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [VETERANM_4]
 Name = Veteran
 Gender = Male
 BaseMoney = 80
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [VETERAN_F]
 Name = Veteran
 Gender = Female
 BaseMoney = 80
 IntroBGM = GAMBLER
+CableClub = true
 #-------------------------------
 [VOLCANION]
 Name = Wild
@@ -1991,36 +2220,42 @@ Name = Waiter
 Gender = Male
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WAITER2]
 Name = Waiter
 Gender = Male
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WAITER3]
 Name = Waiter
 Gender = Male
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WAITRESS]
 Name = Waitress
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WAITRESS2]
 Name = Waitress
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WAITRESS3]
 Name = Waitress
 Gender = Female
 BaseMoney = 32
 IntroBGM = AROMALADY
+CableClub = true
 #-------------------------------
 [WILDPACK]
 Name = Wild Pack
@@ -2052,36 +2287,42 @@ Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [WORKER2]
 Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [WORKER3]
 Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [WORKER4]
 Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [WORKER5]
 Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [WORKER6]
 Name = Worker
 Gender = Male
 BaseMoney = 40
 IntroBGM = BUSINESSMAN
+CableClub = true
 #-------------------------------
 [YOUNGCOUPLE]
 Name = Young Couple
@@ -2100,15 +2341,18 @@ Name = Youngster
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [YOUNGSTER2]
 Name = Youngster
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true
 #-------------------------------
 [YOUNGSTER3]
 Name = Youngster
 Gender = Male
 BaseMoney = 16
 IntroBGM = YOUNGSTER
+CableClub = true

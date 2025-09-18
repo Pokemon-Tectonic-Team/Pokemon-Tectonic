@@ -689,12 +689,12 @@ Pokemon = KINGDRA,70
 #-------------------------------
 [WORKER,Rob]
 Policies = HAIL_TEAM
-Pokemon = AURORUS,70
-    Moves = AURORAVEIL,CHILL,BLIZZARD,DIAMONDFORCE
-    AbilityIndex = 1 # Snow Warning
+Pokemon = CRYOGONAL,70
+    Moves = AURORAVEIL,CHILL,BLIZZARD,FLASHCANNON
+    AbilityIndex = 0 # Snow Warning
     Item = ICYROCK
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
-    EV = 10,0,20,0,0,20
+    EV = 10,0,0,20,0,20
 Pokemon = MAMOSWINE,70
     Moves = EARTHQUAKE,POWDERBOMB,ICESHARD,GLACIALRAM
     AbilityIndex = 1 # Ice Mirror
