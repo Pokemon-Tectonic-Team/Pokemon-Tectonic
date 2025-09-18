@@ -18,7 +18,7 @@ class PokemonSaveScreen
         return @scene.pbConfirm(text)
     end
 
-    # Returns whether the player decided to quit the game
+    # Returns 1 if the player decides to quit to menu, 2 if they quit to desktop, false otherwise
     def pbSaveScreen(quitting = false, deleting = true)
         unless savingAllowed?
             showSaveBlockMessage
@@ -30,18 +30,26 @@ class PokemonSaveScreen
         count = FileSave.count
         # Start
         saveCommand = -1
+        mainMenuCommand = -1
         deleteCommand = -1
         quitCommand = -1
         cancelCommand = -1
         cmds = []
         cmds[saveCommand = cmds.length] = _INTL("Just Save")
-        cmds[quitCommand = cmds.length] = _INTL("Save Quit") if quitting
+        cmds[mainMenuCommand = cmds.length] = _INTL("Save & Quit to Menu") if quitting
+        cmds[quitCommand = cmds.length] = _INTL("Save & Quit to Desktop") if quitting
         cmds[deleteCommand = cmds.length] = _INTL("Delete") if deleting
         cmds[cancelCommand = cmds.length] = _INTL("Cancel")
         saveChoice = pbCustomMessageForSave(_INTL("What do you want to do?"), cmds, cmds.length)
-        return inGameSaveScreen(count) if quitCommand >= 0 && saveChoice == quitCommand
-        inGameSaveScreen(count) if saveCommand >= 0 && saveChoice == saveCommand
-        inGameDeleteScreen(count) if deleteCommand >= 0 && saveChoice == deleteCommand
+        if mainMenuCommand >= 0 && saveChoice == mainMenuCommand
+          return 1 if inGameSaveScreen(count)
+        elsif quitCommand >= 0 && saveChoice == quitCommand
+          return 2 if inGameSaveScreen(count)
+        elsif saveCommand >= 0 && saveChoice == saveCommand
+          inGameSaveScreen(count)
+        elsif deleteCommand >= 0 && saveChoice == deleteCommand
+          inGameDeleteScreen(count)
+        end
         return false
     end
 

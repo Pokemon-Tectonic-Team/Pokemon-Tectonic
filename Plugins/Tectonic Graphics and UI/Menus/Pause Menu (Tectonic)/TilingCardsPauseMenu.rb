@@ -121,7 +121,15 @@ class TilingCardsPauseMenu_Scene < TilingCardsMenu_Scene
 					scene.pbHideMenu
 					saveScene = PokemonSave_Scene.new
 					screen = PokemonSaveScreen.new(saveScene)
-					if screen.pbSaveScreen(true)
+          quitResult = screen.pbSaveScreen(true)
+          if quitResult == 1 # Quit to menu
+            $scene.disposeSpritesets if $scene.is_a?(Scene_Map)
+            scene.pbEndScene
+            loadScene = PokemonLoad_Scene.new
+            loadScreen = PokemonLoadScreen.new(loadScene)
+            loadScreen.pbStartLoadScreen
+            next true
+          elsif quitResult == 2 # Quit to desktop
 						scene.pbEndScene
 						$scene = nil
 						next true

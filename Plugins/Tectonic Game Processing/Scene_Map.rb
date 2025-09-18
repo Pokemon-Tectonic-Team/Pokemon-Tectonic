@@ -42,7 +42,7 @@ class Scene_Map
         end
         @spritesets.clear
         @spritesets = {}
-        @spritesetGlobal.dispose
+        @spritesetGlobal.dispose if @spritesetGlobal
         @spritesetGlobal = nil
     end
 
