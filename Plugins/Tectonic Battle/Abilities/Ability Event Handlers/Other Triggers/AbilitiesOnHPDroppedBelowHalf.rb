@@ -75,3 +75,37 @@ BattleHandlers::AbilityOnHPDroppedBelowHalf.add(:WIRECUTTER,
       next false
   }
 )
+
+BattleHandlers::AbilityOnHPDroppedBelowHalf.add(:VOIDWARRANTY,
+  proc { |ability, battler, battle, endOfBattle|
+      next if battler.fainted?
+      next unless battler.species == :ROTOM
+      
+      formChoices = []
+      choiceNames = []
+
+      formIndex = -1
+      loop do
+        formIndex += 1
+        data = GameData::Species.get_species_form(:ROTOM,formIndex)
+        break if data.nil? || data.form != formIndex
+        next if formIndex == battler.form
+        formChoices.push(formIndex)
+        choiceNames.push(data.form_name)
+        echoln("Adding form #{formIndex}")
+      end
+
+      next unless formChoices.length > 0
+      
+      battle.pbShowAbilitySplash(battler, ability)
+      if battle.autoTesting
+        choiceIndex = rand(formChoices.length)
+      elsif !battler.pbOwnedByPlayer? # Trainer AI
+        choiceIndex = 0
+      else
+        choiceIndex = battle.scene.pbShowCommands(_INTL("Which form should {1} take?",battler.name),choiceNames,0)
+      end
+      battler.pbChangeForm(formChoices[choiceIndex], _INTL("{1} takes on a new machine!", battler.pbThis))
+      battle.pbHideAbilitySplash(battler)
+  }
+)
