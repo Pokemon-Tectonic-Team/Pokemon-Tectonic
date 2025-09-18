@@ -244,7 +244,7 @@ GameData::BattleEffect.register_effect(:Side, {
     :resets_eor => true,
     :protection_info => {
         :hit_proc => proc do |user, target, move, battle|
-            user.applyEffect(:Disable,3) if user.canBeDisabled?(true,move)
+            user.applyEffect(:Disable,applyEffectDurationModifiers(3, user)) if user.canBeDisabled?(true,move)
         end,
         :does_negate_proc => proc do |_user, _target, move, _battle|
             move.statusMove?
