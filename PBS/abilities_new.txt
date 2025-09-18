@@ -1626,9 +1626,9 @@ Flags = SunshineSynergy
 Name = Refuge
 Description = Pokémon that swap in for this have their non-volatile status conditions healed, and take 30% less damage that turn.
 #-------------------------------
-[RELUCTANTBLADE]
-Name = Reluctant Blade
-Description = When hit with a physical move, hits back instantly with Leafage.
+[RELUCTANTWARRIOR]
+Name = Reluctant Warrior
+Description = Below half health, it has a doubled crit chance and has +30% attack.
 #-------------------------------
 [RENDINGCLAWS]
 Name = Rending Claws
