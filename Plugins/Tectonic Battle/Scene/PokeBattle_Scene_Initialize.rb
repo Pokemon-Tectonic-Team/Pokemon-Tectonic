@@ -253,7 +253,16 @@ class PokeBattle_Scene
     end
   
     def pbCreateTrainerFrontSprite(idxTrainer,trainerType,numTrainers=1)
-      trainerFile = GameData::TrainerType.front_sprite_filename(trainerType)
+      
+      monumTrainers = GameData::Trainer.getMonumentTrainers
+      tNames = monumTrainers.map { |t| t.name}
+      tClasses = monumTrainers.map { |t| t.trainer_type }
+            
+      if tNames.find_index(@battle.opponent[0].name) == tClasses.find_index(@battle.opponent[0].trainer_type) && !tNames.find_index(@battle.opponent[0].name).nil?
+        trainerFile = GameData::TrainerType.front_sprite_filename_hologram(trainerType)
+      else
+        trainerFile = GameData::TrainerType.front_sprite_filename(trainerType)
+      end
       spriteX, spriteY = PokeBattle_SceneConstants.pbTrainerPosition(1,idxTrainer,numTrainers)
       trainer = pbAddSprite("trainer_#{idxTrainer+1}",spriteX,spriteY,trainerFile,@viewport)
       return if !trainer.bitmap
