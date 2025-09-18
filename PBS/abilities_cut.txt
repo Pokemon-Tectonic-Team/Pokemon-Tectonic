@@ -807,6 +807,10 @@ Flags = Uncopyable
 Name = Refrigerate
 Description = Normal-type moves become Ice-type and power up by 30%.
 #-------------------------------
+[RELUCTANTBLADE]
+Name = Reluctant Blade
+Description = When hit with a physical move, hits back instantly with Leafage.
+#-------------------------------
 [RESONANCE]
 Name = Planar Veil
 Description = Sets screens for twice as long during eclipse.

@@ -162,7 +162,7 @@ FormName = East Sea
 FormName = Heat
 Type1 = ELECTRIC
 Type2 = FIRE
-Abilities = LEVITATE,HAUNTED
+Abilities = VOIDWARRANTY,HAUNTED
 FormMove = OVERHEAT
 Pokedex = This Rotom has possessed a convection microwave oven that uses a special motor. It also has a flair for manipulating flames.
 #-------------------------------
@@ -170,7 +170,7 @@ Pokedex = This Rotom has possessed a convection microwave oven that uses a speci
 FormName = Wash
 Type1 = ELECTRIC
 Type2 = WATER
-Abilities = LEVITATE,HAUNTED
+Abilities = VOIDWARRANTY,HAUNTED
 FormMove = HYDROPUMP
 Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be careful with it if you don't want your room flooded.
 #-------------------------------
@@ -178,7 +178,7 @@ Pokedex = This form of Rotom enjoys coming up with water-based pranks. Be carefu
 FormName = Frost
 Type1 = ELECTRIC
 Type2 = ICE
-Abilities = LEVITATE,HAUNTED
+Abilities = VOIDWARRANTY,HAUNTED
 FormMove = BLIZZARD
 Pokedex = Rotom assumes this form when it takes over a refrigerator powered by a special motor. It battles by spewing cold air.
 #-------------------------------
@@ -186,7 +186,7 @@ Pokedex = Rotom assumes this form when it takes over a refrigerator powered by a
 FormName = Fan
 Type1 = ELECTRIC
 Type2 = FLYING
-Abilities = MOTORDRIVE,HAUNTED
+Abilities = VOIDWARRANTY,HAUNTED
 FormMove = AIRSLASH
 Pokedex = In this form, Rotom applies its new power over wind to its love of pranks. It will happily blow away any important documents it can find.
 #-------------------------------
@@ -194,7 +194,7 @@ Pokedex = In this form, Rotom applies its new power over wind to its love of pra
 FormName = Mow
 Type1 = ELECTRIC
 Type2 = GRASS
-Abilities = LEVITATE,HAUNTED
+Abilities = VOIDWARRANTY,HAUNTED
 FormMove = LEAFSTORM
 Pokedex = This is Rotom after it's seized control of a lawn mower that has a special motor. As it mows down grass, it scatters the clippings everywhere.
 #-------------------------------
@@ -638,7 +638,7 @@ Type2 = DARK
 BaseStats = 70,140,55,70,150,115
 # Total = 600
 Abilities = BREAKTHROUGH,JUGGERNAUT
-Moves = 1,HELPINGHAND,1,MINDWAVES,4,ASTONISH,8,MAGICCOAT,12,LIGHTSCREEN,16,PSYBEAM,20,SKILLSWAP,24,POWERSPLIT,28,GUARDSPLIT,32,PHANTOMFORCE,36,ZENHEADBUTT,40,SHADOWBALL,44,TRICK,48,DESTINYBOND,52,DREAMDANCE,56,PSYCHIC,60,HYPERSPACEFURY,70,TRICKROOM
+Moves = 1,HELPINGHAND,1,MINDWAVES,4,ASTONISH,8,MAGICCOAT,12,LIGHTSCREEN,16,PSYBEAM,20,SKILLSWAP,24,POWERSPLIT,28,GUARDSPLIT,32,PHANTOMFORCE,36,ZENHEADBUTT,40,SHADOWBALL,44,SWITCHEROO,48,DESTINYBOND,52,DREAMDANCE,56,PSYCHIC,60,HYPERSPACEFURY,70,TRICKROOM
 Height = 6.5
 Weight = 490.0
 #-------------------------------

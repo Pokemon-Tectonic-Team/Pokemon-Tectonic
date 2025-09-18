@@ -950,7 +950,7 @@ Pokemon = GARDEVOIR,70
 Pokemon = ROTOM,70
     Form = 4 # Fan Form
     Moves = MACHINATE,VOLTSWITCH,DEFOG,WILLOWISP
-    AbilityIndex = 0 # Motor Drive
+    AbilityIndex = 1 # Haunted
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,20,10,0,0
@@ -1423,7 +1423,7 @@ Pokemon = FALINKS,70
 Pokemon = ROTOM,70
     Form = 2 # Wash Form
     Moves = MACHINATE,VOLTSWITCH,NUMB,DEFOG
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 1 # Haunted
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,0,15,0,0,15

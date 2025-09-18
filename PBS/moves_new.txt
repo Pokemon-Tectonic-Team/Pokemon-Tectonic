@@ -609,6 +609,17 @@ Flags = CanProtect
 Description = The user causes the air around the target to explode. The move's type is changed based on the active weather.
 Animation = WEATHERBALL
 #-------------------------------
+[WISHINGWELL]
+Name = Wishing Well
+Type = NORMAL
+Category = Status
+Accuracy = 0
+TotalPP = 10
+Target = UserSide
+FunctionCode = WishingWellScalesWithMoney
+Description = The user throws away up to 1000 scattered coins to bless its side, blocking random added effects and healing for 1/16th HP each turn. Lasts one turn per 100 coins.
+Animation = PAYDAY
+#-------------------------------
 [YOUNGAGAIN]
 Name = Young Again
 Type = NORMAL

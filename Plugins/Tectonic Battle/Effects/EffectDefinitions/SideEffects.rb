@@ -731,3 +731,23 @@ GameData::BattleEffect.register_effect(:Side, {
         battle.pbDisplay(_INTL("{1} coins were scattered to the ground!", increment))
     end,
 })
+
+GameData::BattleEffect.register_effect(:Side, {
+    :id => :WishingWell,
+    :real_name => "Wishing Well",
+    :type => :Integer,
+    :ticks_down => true,
+    :apply_proc => proc do |battle, _side, teamName, _value|
+        battle.pbDisplay(_INTL("{1} is blessed by the Wishing Well!", teamName))
+        battle.pbDisplay(_INTL("It'll block random added effects for {1} turns !", _value - 1))
+    end,
+    :eor_proc => proc do |battle, side, _teamName, value|
+        battle.eachSameSideBattler(side.index) do |b|
+            next unless b.canHeal?
+            b.applyFractionalHealing(1.0/16.0, customMessage: _INTL("{1} was healed by the Wishing Well!",b.pbThis))
+        end
+    end,
+    :expire_proc => proc do |battle, _side, teamName|
+        battle.pbDisplay(_INTL("{1} is no longer blessed by the Wishing Well.", teamName))
+    end,
+})
