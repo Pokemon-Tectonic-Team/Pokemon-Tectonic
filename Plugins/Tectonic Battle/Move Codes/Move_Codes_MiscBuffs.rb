@@ -165,7 +165,7 @@ class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
     def getEffectScore(user, _target)
         if user.pbOwnSide.effectActive(:WishingWell)
             remainingTurns = user.pbOwnSide.countEffect(:WishingWell)
-            if remainingTurns > ([user.pbOwnSide.countEffect(:PayDay),1000].min / 100).floor
+            if remainingTurns > (applyEffectDurationModifiers([user.pbOwnSide.countEffect(:PayDay),1000].min )/ 100).floor
                 return 0
             end
         end
@@ -185,7 +185,7 @@ class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
             worthRatio += 5 unless b.fullHealth?
         end
 
-        return [worthRatio * ([user.pbOwnSide.countEffect(:PayDay),1000].min / 100).floor, 200].min
+        return [worthRatio * (applyEffectDurationModifiers([user.pbOwnSide.countEffect(:PayDay),1000].min) / 100).floor, 200].min
     end
 
     def pbEffectGeneral(user)
@@ -195,7 +195,7 @@ class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
         actualCoinAmountConsumed = beforeCoins - user.pbOwnSide.effects[:PayDay]
         if actualCoinAmountConsumed > 0
             @battle.pbDisplay(_INTL("{1} coins were thrown in the Wishing Well!", actualCoinAmountConsumed))
-            user.pbOwnSide.applyEffect(:WishingWell, (actualCoinAmountConsumed / 100).floor)
+            user.pbOwnSide.applyEffect(:WishingWell, applyEffectDurationModifiers((actualCoinAmountConsumed / 100).floor))
         else
             @battle.pbDisplay(_INTL("There were no coins to throw in the Wishing Well..."))
         end
