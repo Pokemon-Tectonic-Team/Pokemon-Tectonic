@@ -626,3 +626,20 @@ BattleHandlers::UserAbilityEndOfMove.add(:TANGLINGVINES,
     end
   }
 )
+
+BattleHandlers::UserAbilityEndOfMove.add(:FRIGHTENINGFANGS,
+  proc { |ability, user, targets, move, battle, _switchedBattlers|
+      next if battle.futureSight
+      next unless move.bitingMove?
+      targets.each do |b|
+          next if b.fainted?
+          battle.pbShowAbilitySplash(user, ability)
+          if b.pbAttack > b.pbSpAtk
+          b.pbLowerMultipleStatSteps([:ATTACK,2], user, move: self)
+          else
+          b.pbLowerMultipleStatSteps([:SPECIAL_ATTACK,2], user, move: self)
+          end
+      battle.pbHideAbilitySplash(user)
+      end
+  }
+)

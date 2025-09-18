@@ -341,7 +341,7 @@ Pokemon = TENTACOOL,20
     EV = 20,20,10,0,20,0
 Pokemon = TYNAMO,20
     Moves = ENVENOM,CURRENTCRASH,POISONFANG,BULLETCHARGE
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Frightening Fangs
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,0,0,20,20
 Pokemon = MMANTYKE,20
@@ -846,7 +846,7 @@ Pokemon = WEAVILE,45
     EV = 9,20,0,20,20,1
 Pokemon = EELEKTROSS,45
     Moves = TOXICTASTE,ELECTROSLASH,NUMB,PROTECT
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Frightening Fangs
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,10,0,10,10
@@ -1322,7 +1322,7 @@ Pokemon = COMFEY,26
     AbilityIndex = 1 # Triage
 Pokemon = EELEKTRIK,27
     Moves = THUNDERFANG,TOXICTASTE,NUMB,BITE
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 0 # Frightening Fangs
     Item = BIGROOT
 Pokemon = BEAUTIFLY,26
     Moves = SUCKBLOOD,DRAININGKISS,ENVENOM,AERIALACE
@@ -3102,8 +3102,8 @@ Pokemon = GARCHOMP,48
     Moves = REND,EARTHQUAKE,STRAFE,GLARE
     AbilityIndex = 0 # Rough Skin
 Pokemon = EELEKTROSS,47
-    Moves = COIL,CRUNCH,ELECTROSLASH,POISONJAB
-    AbilityIndex = 0 # Levitate
+    Moves = COIL,CRUNCH,ELECTROSLASH,TOXICTASTE
+    AbilityIndex = 0 # Frightening Fangs
     Item = BLACKSLUDGE
 #-------------------------------
 [CAMPER,Liam]
@@ -5891,7 +5891,7 @@ Pokemon = TALONFLAME,70
     EV = 0,20,10,20,20,0
 Pokemon = EELEKTROSS,70
     Moves = SUPERPOWER,ELECTROSLASH,POISONJAB,ACROBATICS
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 1 # Frustrate
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 18,20,6,0,20,6
 Pokemon = SCOLIPEDE,70

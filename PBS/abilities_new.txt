@@ -756,6 +756,10 @@ Name = Friend to All
 Description = Counts as every tribe.
 Flags = Immutable
 #-------------------------------
+[FRIGHTENINGFANGS]
+Name = Frightening Fangs
+Description = After using a Bite move, lowers the target's highest attacking stat by 2 steps.
+#-------------------------------
 [FRIGIDREFLECTION]
 Name = Frigid Reflection
 Description = When hit with a special move, hits back instantly with that same move.

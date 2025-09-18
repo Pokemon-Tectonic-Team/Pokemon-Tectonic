@@ -1756,7 +1756,7 @@ Pokemon = CRADILY,70
     EV = 20,20,10,0,20,0
 Pokemon = EELEKTROSS,70
     Moves = POISONJAB,ELECTROSLASH,NUMB,BRICKBREAK
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 1 # Frustrate
     Item = UTILITYUMBRELLA
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
@@ -2374,7 +2374,7 @@ Pokemon = MGIGALITH,70
     EV = 20,20,0,0,20,10
 Pokemon = EELEKTROSS,70
     Moves = WATERFALL,POISONJAB,ELECTROSLASH,KNOCKOFF
-    AbilityIndex = 0 # Levitate
+    AbilityIndex = 1 # Frustrate
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,20,10,0,20,10
