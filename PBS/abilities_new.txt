@@ -2265,6 +2265,7 @@ Description = At the end of each turn, itself and each ally heals for 1/16th of 
 [VOIDWARRANTY]
 Name = Void Warranty
 Description = Changes into another form of your choosing when its HP is lowered below half.
+Flags = Uncopyable
 #-------------------------------
 [WALLNINJA]
 Name = Wall Ninja
