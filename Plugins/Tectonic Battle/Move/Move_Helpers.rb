@@ -368,11 +368,5 @@ class PokeBattle_Move
             user.pbHeldItemTriggerCheck
             target.pbHeldItemTriggerCheck
         end  
-    end
-
-    def serene_boosted(value, user)
-        return (value.to_f * 1.5).floor if user.hasTribeBonus?(:SERENE)
-        return value
-    end
-    
+    end  
 end

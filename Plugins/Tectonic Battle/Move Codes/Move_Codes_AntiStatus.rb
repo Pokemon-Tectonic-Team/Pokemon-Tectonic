@@ -155,11 +155,11 @@ class PokeBattle_Move_StartUserSideImmunityToInflictedStatus < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.pbOwnSide.applyEffect(:Safeguard, serene_boosted(@safeguardDuration, user))
+        user.pbOwnSide.applyEffect(:Safeguard, applyEffectDurationModifiers(@safeguardDuration, user))
     end
 
     def getEffectScore(user, _target)
-        return getSafeguardEffectScore(user, serene_boosted(@safeguardDuration, user))
+        return getSafeguardEffectScore(user, applyEffectDurationModifiers(@safeguardDuration, user))
     end
 end
 

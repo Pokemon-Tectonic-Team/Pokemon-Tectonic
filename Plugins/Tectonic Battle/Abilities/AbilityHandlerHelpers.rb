@@ -13,7 +13,7 @@ move.name))
     return true
 end
 
-def serene_boosted(value, user)
+def applyEffectDurationModifiers(value, user)
     return (value.to_f * 1.5).floor if user.hasTribeBonus?(:SERENE)
     return value
 end
@@ -48,7 +48,7 @@ def pbBattleWeatherAbility(ability, weather, battler, battle, ignorePrimal = fal
         end
         return getWeatherSettingEffectScore(weather, battler, battle, duration, false)
     else
-        baseDuration = serene_boosted(baseDuration, battler)
+        baseDuration = applyEffectDurationModifiers(baseDuration, battler)
         battle.pbStartWeather(battler, weather, baseDuration, true, ignoreFainted, ability)
     end
 end

@@ -69,17 +69,17 @@ class PokeBattle_Move_DisableTargetLastMoveUsed < PokeBattle_Move
 
     def pbEffectAgainstTarget(_user, target)
         return if damagingMove?
-        target.applyEffect(:Disable, serene_boosted(getDisableTurns(target), _user))
+        target.applyEffect(:Disable, applyEffectDurationModifiers(getDisableTurns(target), _user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return unless target.canBeDisabled?(true, self)
-        target.applyEffect(:Disable, serene_boosted(getDisableTurns(target), user))
+        target.applyEffect(:Disable, applyEffectDurationModifiers(getDisableTurns(target), user))
     end
 
     def getTargetAffectingEffectScore(_user, target)
-        return getDisableEffectScore(target, serene_boosted(@disableTurns), _user)
+        return getDisableEffectScore(target, applyEffectDurationModifiers(@disableTurns), _user)
     end
 end
 
@@ -169,14 +169,14 @@ class PokeBattle_Move_DisableTargetStatusMoves4 < PokeBattle_Move
 
     def pbEffectAgainstTarget(_user, target)
         return if damagingMove?
-        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target), _user))
+        target.applyEffect(:Taunt, applyEffectDurationModifiers(getTauntTurns(target), _user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Taunt)
         return true if pbMoveFailedAromaVeil?(user, target)
-        target.applyEffect(:Taunt, serene_boosted(getTauntTurns(target), user))
+        target.applyEffect(:Taunt, applyEffectDurationModifiers(getTauntTurns(target), user))
     end
 
     def getTargetAffectingEffectScore(user, target)
@@ -223,7 +223,7 @@ class PokeBattle_Move_DisableTargetStatusMoves4 < PokeBattle_Move
             firstTurnScore *= 1.3 if user.firstTurn? # Prevent hazards over setting them on lead
         end
         
-        lastingScore *= (serene_boosted(getTauntTurns(target)) - 1)
+        lastingScore *= (applyEffectDurationModifiers(getTauntTurns(target)) - 1)
         score = firstTurnScore + lastingScore
         score = 220 if score >= 220 # AI shouldnt taunt over kills
         return score
@@ -285,7 +285,7 @@ class PokeBattle_Move_DisableTargetUsingDifferentMove4 < PokeBattle_Move
     end
 
     def pbEffectAgainstTarget(_user, target)
-        target.applyEffect(:Encore, serene_boosted(4, _user))
+        target.applyEffect(:Encore, applyEffectDurationModifiers(4, _user))
     end
 
     def getTargetAffectingEffectScore(user, target)
@@ -335,21 +335,21 @@ class PokeBattle_Move_DisableTargetUsingOffTypeMove4 < PokeBattle_Move
 
     def pbEffectAgainstTarget(_user, target)
         return if damagingMove?
-        target.applyEffect(:Barred, serene_boosted(getBarTurns(target), _user))
+        target.applyEffect(:Barred, applyEffectDurationModifiers(getBarTurns(target), _user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Barred)
         return true if pbMoveFailedAromaVeil?(user, target)
-        target.applyEffect(:Barred, serene_boosted(getBarTurns(target), user))
+        target.applyEffect(:Barred, applyEffectDurationModifiers(getBarTurns(target), user))
     end
 
     def getTargetAffectingEffectScore(_user, target)
         return 0 if target.substituted? && statusMove?
         return 0 if target.hasActiveAbilityAI?(:MENTALBLOCK)
         return 0 unless target.hasOffTypeMove?
-        return 40 + serene_boosted(getBarTurns(target), _user) * 20
+        return 40 + applyEffectDurationModifiers(getBarTurns(target), _user) * 20
     end
 end
 
@@ -559,7 +559,7 @@ end
 class PokeBattle_Move_DisableTargetSoundMoves3 < PokeBattle_Move
     def pbAdditionalEffect(_user, target)
         return if target.fainted? || target.damageState.substitute
-        target.applyEffect(:ThroatChop, serene_boosted(3, _user))
+        target.applyEffect(:ThroatChop, applyEffectDurationModifiers(3, _user))
     end
 
     def getTargetAffectingEffectScore(_user, target)
@@ -574,7 +574,7 @@ end
 class PokeBattle_Move_DisableTargetBladeMoves3 < PokeBattle_Move
     def pbAdditionalEffect(_user, target)
         return if target.fainted? || target.damageState.substitute
-        target.applyEffect(:DisarmingShot, serene_boosted(3, _user))
+        target.applyEffect(:DisarmingShot, applyEffectDurationModifiers(3, _user))
     end
 
     def getTargetAffectingEffectScore(_user, target)
@@ -741,13 +741,13 @@ class PokeBattle_Move_FractureTarget < PokeBattle_Move
 
     def pbEffectAgainstTarget(user, target)
         return if damagingMove?
-        target.applyEffect(:Fracture, serene_boosted(DEFAULT_FRACTURE_DURATION, user))
+        target.applyEffect(:Fracture, applyEffectDurationModifiers(DEFAULT_FRACTURE_DURATION, user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Fracture)
-        target.applyEffect(:Fracture, serene_boosted(DEFAULT_FRACTURE_DURATION, user))
+        target.applyEffect(:Fracture, applyEffectDurationModifiers(DEFAULT_FRACTURE_DURATION, user))
     end
 
     def getEffectScore(user, target)
@@ -770,13 +770,13 @@ class PokeBattle_Move_JinxTarget < PokeBattle_Move
 
     def pbEffectAgainstTarget(user, target)
         return if damagingMove?
-        target.applyEffect(:Jinxed, serene_boosted(DEFAULT_JINX_DURATION, user))
+        target.applyEffect(:Jinxed, applyEffectDurationModifiers(DEFAULT_JINX_DURATION, user))
     end
 
     def pbAdditionalEffect(user, target)
         return if target.damageState.substitute
         return if target.effectActive?(:Jinxed)
-        target.applyEffect(:Jinxed, serene_boosted(DEFAULT_JINX_DURATION, user))
+        target.applyEffect(:Jinxed, applyEffectDurationModifiers(DEFAULT_JINX_DURATION, user))
     end
 
     def getEffectScore(user, target)
