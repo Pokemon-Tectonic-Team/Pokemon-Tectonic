@@ -235,8 +235,8 @@ BattleHandlers::UserAbilityEndOfMove.add(:SPACEINTERLOPER,
 BattleHandlers::UserAbilityEndOfMove.add(:SPARESCALES,
   proc { |ability, user, _targets, move, _battle, _switchedBattlers|
       next unless %i[GRASS GROUND STEEL].include?(move.calcType)
-      healingMessage = _INTL("{1} gathered up material.", battler.pbThis)
-      battler.applyFractionalHealing(1.0 / 5.0, ability: ability, customMessage: healingMessage, canOverheal: true)
+      healingMessage = _INTL("{1} gathered up material.", user.pbThis)
+      user.applyFractionalHealing(1.0 / 5.0, ability: ability, customMessage: healingMessage, canOverheal: true)
   }
 )
 
@@ -612,5 +612,17 @@ BattleHandlers::UserAbilityEndOfMove.add(:BLINDING,
         b.tryLowerStat(:SPECIAL_DEFENSE, user, increment: 1, showFailMsg: true)
       end
       battle.pbHideAbilitySplash(user)
+  }
+)
+
+BattleHandlers::UserAbilityEndOfMove.add(:TANGLINGVINES,
+  proc { |ability, user, targets, move, battle, _switchedBattlers|
+    next unless move.damagingMove?
+    targets.each do |b|
+      next if b.fainted?
+      if b.pointsAt?(:TanglingVines, user)
+        b.disableEffect(:TanglingVines)
+      end
+    end
   }
 )

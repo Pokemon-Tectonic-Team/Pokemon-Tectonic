@@ -64,3 +64,10 @@ BattleHandlers::CriticalCalcUserAbility.add(:CAFFEINERUSH,
       next c + 1 if user.battle.icy?
   }
 )
+
+BattleHandlers::CriticalCalcUserAbility.add(:RELUCTANTWARRIOR,
+  proc { |ability, user, _target, _move, c|
+      next c + 1 if user.belowHalfHealth?
+      next c
+  }
+)

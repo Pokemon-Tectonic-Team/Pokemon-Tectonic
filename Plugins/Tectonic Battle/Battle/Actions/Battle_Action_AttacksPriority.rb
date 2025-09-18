@@ -151,15 +151,18 @@ class PokeBattle_Battle
     #=============================================================================
     # Turn order calculation (priority)
     #=============================================================================
-    def pbCalculatePriority(fullCalc = false, indexArray = nil)
+    def pbCalculatePriority(fullCalc = false, indexArray = nil, randomizeOrder = true)
         needRearranging = false
         if fullCalc
             @priorityTrickRoom = @field.effectActive?(:TrickRoom)
             # Recalculate everything from scratch
             randomOrder = Array.new(maxBattlerIndex + 1) { |i| i }
-            (randomOrder.length - 1).times do |i| # Can't use shuffle! here
-                r = i + pbRandom(randomOrder.length - i)
-                randomOrder[i], randomOrder[r] = randomOrder[r], randomOrder[i]
+            # don't do extra random calls if recalculating for info screen, to ensure cable club sync
+            if randomizeOrder
+                (randomOrder.length - 1).times do |i| # Can't use shuffle! here
+                    r = i + pbRandom(randomOrder.length - i)
+                    randomOrder[i], randomOrder[r] = randomOrder[r], randomOrder[i]
+                end
             end
             @priority.clear
             for i in 0..maxBattlerIndex
@@ -175,7 +178,11 @@ class PokeBattle_Battle
                     # Calculate move's priority
                     if @choices[b.index][0] == :UseMove
                         move = @choices[b.index][2]
-                        targets = b.pbFindTargets(@choices[b.index][3], move, b)
+                        target_index = @choices[b.index][3]
+                        if @client_id == 1
+                            target_index = CableClub::pokemon_target_order(@client_id)[target_index]                          
+                        end
+                        targets = b.pbFindTargets(target_index, move, b)
                         pri = getMovePriority(move, b, targets)
                         bArray[3] = pri
                         @choices[b.index][4] = pri
@@ -285,7 +292,8 @@ class PokeBattle_Battle
     # are expected to move this turn, accounting for only speed and trick room
     # Pokemon with speed ties are assigned the same number
     def pbTurnOrderDisplayed
-        pbCalculatePriority(true)
+        # don't do extra random calls if recalculating for info screen, to ensure cable club sync
+        pbCalculatePriority(true,nil,false)
         
         speedHash = {}
 

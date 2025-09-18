@@ -302,6 +302,19 @@ class PokeBattle_Move
                     multipliers[:final_damage_multiplier] *= 2 / 3.0
                 end
             end
+        else
+            if !checkingForAI &&  
+                (target.pbOwnSide.effectActive?(:Reflect) ||
+                target.pbOwnSide.effectActive?(:LightScreen) ||
+                target.pbOwnSide.effectActive?(:AuroraVeil) ||
+                target.pbOwnSide.effectActive?(:DiamondField))
+                GameData::Ability.each do |ability_data|
+                next unless ability_data.flags&.include?("IgnoreScreens")
+                if user.hasAbility?(ability_data.id)
+                user.aiLearnsAbility(ability_data.id)
+                end
+                end
+            end
 
             # Repulsion Field
             if baseDamage >= 100 && target.pbOwnSide.effectActive?(:RepulsionField)
@@ -418,7 +431,7 @@ class PokeBattle_Move
         end
 
         # Scavenger tribe
-        if user.hasTribeBonus?(:DECEIVER)
+        if user.hasTribeBonus?(:SCAVENGER)
             if checkingForAI
                 multipliers[:final_damage_multiplier] *= 1.25 if user.hasGem?
             else
@@ -463,7 +476,6 @@ class PokeBattle_Move
         pbCalcStatusesDamageMultipliers(user,target,multipliers,aiCheck)
         pbCalcProtectionsDamageMultipliers(user,target,multipliers,aiCheck)
         pbCalcTypeBasedDamageMultipliers(user,target,type,multipliers,aiCheck)
-        pbCalcTribeBasedDamageMultipliers(user,target,type,multipliers,aiCheck)
 
         # Item effects that alter damage
         user.eachItemShouldApply(aiCheck) do |item|
@@ -472,6 +484,8 @@ class PokeBattle_Move
         target.eachItemShouldApply(aiCheck) do |item|
             BattleHandlers.triggerDamageCalcTargetItem(item,user,target,self,multipliers,baseDmg,type,aiCheck)
         end
+
+        pbCalcTribeBasedDamageMultipliers(user,target,type,multipliers,aiCheck)
 
         if target.effectActive?(:DeathMark)
             multipliers[:final_damage_multiplier] *= 1.5

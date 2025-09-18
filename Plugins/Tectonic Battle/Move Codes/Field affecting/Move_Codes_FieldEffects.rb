@@ -8,11 +8,11 @@ class PokeBattle_Move_StartUserSideDoubleSpeed4 < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.pbOwnSide.applyEffect(:Tailwind, @tailwindDuration)
+        user.pbOwnSide.applyEffect(:Tailwind, applyEffectDurationModifiers(@tailwindDuration, user))
     end
 
     def getEffectScore(user, _target)
-        return getTailwindEffectScore(user, @tailwindDuration, self)
+        return getTailwindEffectScore(user, applyEffectDurationModifiers(@tailwindDuration, user), self)
     end
 end
 
@@ -26,12 +26,12 @@ class PokeBattle_Move_EmpoweredTailwind < PokeBattle_Move_StartUserSideDoubleSpe
     end
 
     def pbEffectGeneral(user)
-        user.pbOwnSide.applyEffect(:EmpoweredTailwind, @tailwindDuration)
+        user.pbOwnSide.applyEffect(:EmpoweredTailwind, applyEffectDurationModifiers(@tailwindDuration, user))
         transformType(user, :FLYING)
     end
 
     def getEffectScore(user, _target)
-        score = getTailwindEffectScore(user, @tailwindDuration, self)
+        score = getTailwindEffectScore(user, applyEffectDurationModifiers(@tailwindDuration, user), self)
         score *= 1.5
         return score
     end
@@ -58,11 +58,11 @@ class PokeBattle_Move_StartGravity5 < PokeBattle_Move
     end
 
     def pbEffectGeneral(_user)
-        @battle.field.applyEffect(:Gravity, @gravityDuration)
+        @battle.field.applyEffect(:Gravity, applyEffectDurationModifiers(@gravityDuration, _user))
     end
 
     def getEffectScore(user, _target)
-        return getGravityEffectScore(user, @gravityDuration)
+        return getGravityEffectScore(user, applyEffectDurationModifiers(@gravityDuration, user))
     end
 end
 
@@ -82,7 +82,7 @@ end
 #===============================================================================
 class PokeBattle_Move_StartAllBattlersHealEightOfMaxHPEachTurn5 < PokeBattle_Move
     def pbEffectGeneral(_user)
-        @battle.field.applyEffect(:FloralGramarye, 5) unless @battle.field.effectActive?(:FloralGramarye)
+        @battle.field.applyEffect(:FloralGramarye, applyEffectDurationModifiers(5, _user)) unless @battle.field.effectActive?(:FloralGramarye)
     end
 
     def pbMoveFailed?(_user, _targets, show_message)
@@ -113,7 +113,7 @@ class PokeBattle_Move_StartGreyMist5 < PokeBattle_Move
     end
 
     def pbEffectGeneral(_user)
-        @battle.field.applyEffect(:GreyMist, @greyMistDuration) unless @battle.field.effectActive?(:GreyMist)
+        @battle.field.applyEffect(:GreyMist, applyEffectDurationModifiers(@greyMistDuration, _user)) unless @battle.field.effectActive?(:GreyMist)
     end
 
     def pbMoveFailed?(_user, _targets, show_message)
@@ -128,7 +128,7 @@ class PokeBattle_Move_StartGreyMist5 < PokeBattle_Move
     end
 
     def getEffectScore(user, _target)
-        return getGreyMistSettingEffectScore(user,@greyMistDuration)
+        return getGreyMistSettingEffectScore(user, applyEffectDurationModifiers(@greyMistDuration, user))
     end
 end
 
@@ -174,10 +174,10 @@ class PokeBattle_Move_StartUserSideLessDamageFromNonAttackDamage < PokeBattle_Mo
     end
 
     def pbEffectGeneral(user)
-        user.pbOwnSide.applyEffect(:NaturalProtection, @enchantmentDuration)
+        user.pbOwnSide.applyEffect(:NaturalProtection, applyEffectDurationModifiers(@enchantmentDuration, user))
     end
 
     def getEffectScore(user, _target)
-        return getNaturalProtectionEffectScore(user, @enchantmentDuration)
+        return getNaturalProtectionEffectScore(user, applyEffectDurationModifiers(@enchantmentDuration, user))
     end
 end

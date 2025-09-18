@@ -150,6 +150,7 @@ class ItemIconSprite < SpriteWrapper
 end
 
 MEMORIES_BY_TYPE_ID = {
+  0  => :NORMALMEMORY,
   1  => :FIGHTINGMEMORY,
   2  => :FLYINGMEMORY,
   3  => :POISONMEMORY,
@@ -170,6 +171,7 @@ MEMORIES_BY_TYPE_ID = {
   }
 
 PLATES_BY_TYPE_ID = {
+  0  => :PRISMATICPLATE,
   1  => :FISTPLATE,
   2  => :SKYPLATE,
   3  => :TOXICPLATE,

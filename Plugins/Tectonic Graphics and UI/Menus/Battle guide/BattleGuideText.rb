@@ -102,7 +102,7 @@ def battleGuideStatsHash
         _INTL("Leveling and Evolution") => _INTL("Your Pokémon's stats will increase every time they level up. When Pokémon evolve, their stats change (almost always they increase)."),
         _INTL("Accuracy and Evasion") => _INTL("Accuracy and Evasion are two stats which are only active in battle, starting at 100% each. They are only modified by in-battle changing effects."),
         _INTL("Stat Steps") => _INTL("Effects can modify a Pokémon's stats during battle. These are called 'stat steps'. Stat steps multiply or divide the Pokémon's listed stat value."),
-        _INTL("Bounds of Stat Steps") => _INTL("Stat steps start at 0, and can increase up to +12 (4x) and down to -12 (.25x). Stat steps are reset if you swap the Pokémon out or it faints."),
+        _INTL("Bounds of Stat Steps") => _INTL("Stat steps start at 0, and can increase up to +8 (3x) and down to -8 (.33x). Stat steps are reset if you swap the Pokémon out or it faints."),
         _INTL("Checking Stat Steps") => _INTL("You can check the current stat steps of each Pokémon on the battlefield using the Info button. It lists the numerical step as well as resultant multiplier."),
     }
 end

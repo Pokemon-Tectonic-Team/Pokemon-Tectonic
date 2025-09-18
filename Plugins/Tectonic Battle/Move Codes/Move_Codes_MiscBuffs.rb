@@ -27,7 +27,7 @@ class PokeBattle_Move_StartUserAirborne5 < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.applyEffect(:MagnetRise, 5)
+        user.applyEffect(:MagnetRise, applyEffectDurationModifiers(5))
     end
 
     def getEffectScore(user, _target)
@@ -96,7 +96,7 @@ end
 #===============================================================================
 class PokeBattle_Move_EnsureCriticalHits3 < PokeBattle_Move
     def pbEffectGeneral(user)
-        user.applyEffect(:LaserFocus, 4)
+        user.applyEffect(:LaserFocus, applyEffectDurationModifiers(4))
         @battle.pbDisplay(_INTL("{1} concentrated intensely!", user.pbThis))
     end
 
@@ -140,6 +140,69 @@ class PokeBattle_Move_StartUserShedTypeWeaknesses < PokeBattle_Move
         end
     end
 end
+
+#===============================================================================
+# User is protected from random additional effects for a number of turns, by consuming coins (Wishing Well)
+#===============================================================================
+class PokeBattle_Move_WishingWellScalesWithMoney < PokeBattle_Move
+    def initialize(battle, move)
+        super
+        @coinsToConsume = 0
+    end
+
+    def pbMoveFailed?(user, _targets, show_message)
+        if user.pbOwnSide.countEffect(:PayDay) < 100
+            @battle.pbDisplay(_INTL("But it failed, since there are not enough coins on the field!")) if show_message
+            return true
+        end
+        return false
+    end
+
+    def pbOnStartUse(user, targets)
+        @coinsToConsume = [user.pbOwnSide.countEffect(:PayDay),1000].min
+    end
+
+    def getEffectScore(user, _target)
+        if user.pbOwnSide.effectActive(:WishingWell)
+            remainingTurns = user.pbOwnSide.countEffect(:WishingWell)
+            if remainingTurns > (applyEffectDurationModifiers([user.pbOwnSide.countEffect(:PayDay),1000].min )/ 100).floor
+                return 0
+            end
+        end
+
+        worthRatio = 0
+        user.eachOpposing do |b|
+            worthRatioUser = 0
+            b.eachAIKnownMove do |move|
+                if move.randomEffect?
+                    worthRatioUser = [worthRatioUser+5, 10].min
+                end
+            end
+            worthRatio += worthRatioUser
+        end
+
+        user.eachAlly do |b|
+            worthRatio += 5 unless b.fullHealth?
+        end
+
+        return [worthRatio * (applyEffectDurationModifiers([user.pbOwnSide.countEffect(:PayDay),1000].min) / 100).floor, 200].min
+    end
+
+    def pbEffectGeneral(user)
+        beforeCoins = user.pbOwnSide.effects[:PayDay]
+        user.pbOwnSide.effects[:PayDay] -= @coinsToConsume
+        user.pbOwnSide.effects[:PayDay] = 0 if user.pbOwnSide.effects[:PayDay] < 0
+        actualCoinAmountConsumed = beforeCoins - user.pbOwnSide.effects[:PayDay]
+        if actualCoinAmountConsumed > 0
+            @battle.pbDisplay(_INTL("{1} coins were thrown in the Wishing Well!", actualCoinAmountConsumed))
+            user.pbOwnSide.applyEffect(:WishingWell, applyEffectDurationModifiers((actualCoinAmountConsumed / 100).floor))
+        else
+            @battle.pbDisplay(_INTL("There were no coins to throw in the Wishing Well..."))
+        end
+    end
+end
+
+
 
 # User gains an extra move per turn. (Empowered Work Up)
 class PokeBattle_Move_EmpoweredWorkUp < PokeBattle_Move

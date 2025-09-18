@@ -375,6 +375,12 @@ showMessages)
             end
             return false
         end
+        if target.pbOwnSide.effectActive?(:WishingWell)
+            if showMessages
+                battle.pbDisplay(_INTL("The Wishing Well protects {1} from a random added effect!", target.pbThis))
+            end
+            return false
+        end
         if target.shouldItemApply?(:COVERTCLOAK, aiCheck) && user.opposes?(target)
             if showMessages
                 battle.pbDisplay(_INTL("{1}'s {2} protects it from a random added effect!", target.pbThis, getItemName(:COVERTCLOAK)))
@@ -416,7 +422,6 @@ showMessages)
         end
 
         ret *= 2 if user.pbOwnSide.effectActive?(:Rainbow)
-        ret /= 2 if target.hasTribeBonus?(:SERENE)
         if ret < 100 && user.shouldItemApply?(:LUCKHERB, aiCheck)
             ret = 100
             user.applyEffect(:LuckHerbConsumed) unless aiCheck

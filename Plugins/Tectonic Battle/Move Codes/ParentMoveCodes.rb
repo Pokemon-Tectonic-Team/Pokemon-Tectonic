@@ -829,11 +829,11 @@ class PokeBattle_WeatherMove < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        @battle.pbStartWeather(user, @weatherType, @durationSet, false) unless @battle.primevalWeatherPresent?
+        @battle.pbStartWeather(user, @weatherType, applyEffectDurationModifiers(@durationSet, user), false) unless @battle.primevalWeatherPresent?
     end
 
     def getEffectScore(user, _target)
-        return getWeatherSettingEffectScore(@weatherType, user, @battle, @durationSet)
+        return getWeatherSettingEffectScore(@weatherType, user, @battle, applyEffectDurationModifiers(@durationSet, user))
     end
 end
 
@@ -911,17 +911,17 @@ class PokeBattle_PledgeMove < PokeBattle_Move
         case @comboEffect
         when :SeaOfFire # Grass + Fire
             unless user.pbOpposingSide.effectActive?(:SeaOfFire)
-                user.pbOpposingSide.applyEffect(:SeaOfFire, 4)
+                user.pbOpposingSide.applyEffect(:SeaOfFire, applyEffectDurationModifiers(4, user))
                 animName = user.opposes? ? "SeaOfFire" : "SeaOfFireOpp"
             end
         when :Rainbow # Fire + Water
             unless user.pbOpposingSide.effectActive?(:Rainbow)
-                user.pbOpposingSide.applyEffect(:Rainbow, 4)
+                user.pbOpposingSide.applyEffect(:Rainbow, applyEffectDurationModifiers(4, user))
                 animName = user.opposes? ? "RainbowOpp" : "Rainbow"
             end
         when :Swamp # Water + Grass
             unless user.pbOpposingSide.effectActive?(:Swamp)
-                user.pbOpposingSide.applyEffect(:Swamp, 4)
+                user.pbOpposingSide.applyEffect(:Swamp, applyEffectDurationModifiers(4, user))
                 animName = user.opposes? ? "Swamp" : "SwampOpp"
             end
         end
@@ -1031,7 +1031,7 @@ class PokeBattle_RoomMove < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        @battle.pbStartRoom(@roomEffect, user, duration: @duration)
+        @battle.pbStartRoom(@roomEffect, user, duration: applyEffectDurationModifiers(@duration, user))
     end
 
     def getEffectScore(user, _target)
@@ -1078,20 +1078,18 @@ class PokeBattle_InviteMove < PokeBattle_Move
     end
 
     def pbFailsAgainstTarget?(user, target, show_message)
-        if @battle.primevalWeatherPresent?(false) && target.pbCanInflictStatus?(@statusToApply, user, false,
-self) && show_message
+        if @battle.primevalWeatherPresent?(false) && target.pbCanInflictStatus?(@statusToApply, user, false, self) && show_message
             @battle.pbDisplay(_INTL("But it failed, since {1} can't gain the status and the weather can't be set!", target.pbThis(true)))
         end
     end
 
     def pbEffectAgainstTarget(user, target)
-        target.pbInflictStatus(@statusToApply, 0, nil, user) if target.pbCanInflictStatus?(@statusToApply, user,
-true, self)
-        @battle.pbStartWeather(user, @weatherType, @durationSet, false) unless @battle.primevalWeatherPresent?
+        target.pbInflictStatus(@statusToApply, 0, nil, user) if target.pbCanInflictStatus?(@statusToApply, user, true, self)
+        @battle.pbStartWeather(user, @weatherType, applyEffectDurationModifiers(@durationSet, user), false) unless @battle.primevalWeatherPresent?
     end
 
     def getEffectScore(user, target)
-        weatherScore = getWeatherSettingEffectScore(@weatherType, user, @battle, @durationSet)
+        weatherScore = getWeatherSettingEffectScore(@weatherType, user, @battle, applyEffectDurationModifiers(@durationSet, user))
         statusScore = getStatusSettingEffectScore(@statusToApply, user, target)
         return weatherScore + statusScore
     end
@@ -1118,7 +1116,7 @@ class PokeBattle_StatusSpikeMove < PokeBattle_Move
         if user.pbOpposingSide.effectAtMax?(@spikeEffect)
             maximum = @spikeData.maximum
             if show_message
-                @battle.pbDisplay(_INTL("But it failed, since the opposing side already has {1} layers of {2} spikes!", maximum, @spikeData.name))
+                @battle.pbDisplay(_INTL("But it failed, since the opposing side already has {1} layers of {2}!", maximum, @spikeData.name))
             end
             return true
         end

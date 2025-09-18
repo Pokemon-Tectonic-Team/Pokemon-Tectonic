@@ -54,7 +54,7 @@ BattleHandlers::TargetAbilityOnHit.add(:GRAVITYWELL,
         else
             battle.pbShowAbilitySplash(target, ability)
             battle.pbAnimation(:GRAVITY, target, nil, 0)
-            battle.field.applyEffect(:Gravity, 4)
+            battle.field.applyEffect(:Gravity, applyEffectDurationModifiers(4, battler))
             battle.pbHideAbilitySplash(target)
         end
     }
@@ -339,7 +339,7 @@ BattleHandlers::TargetAbilityOnHit.add(:CONSTRICTOR,
         next if user.effectActive?(:Constricted)
         next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
-        user.applyEffect(:Constricted, 3)
+        user.applyEffect(:Constricted, applyEffectDurationModifiers(3, battler))
         user.pointAt(:TrappingUser, target)
         battle.pbHideAbilitySplash(target)
   }
@@ -354,7 +354,7 @@ BattleHandlers::TargetAbilityOnHit.add(:MAGNETTRAP,
         next if user.effectActive?(:Magnetized)
         next if target.effectActive?(:SwitchedIn)
         battle.pbShowAbilitySplash(target, ability)
-        user.applyEffect(:Magnetized, 3)
+        user.applyEffect(:Magnetized, applyEffectDurationModifiers(3, battler))
         user.pointAt(:TrappingUser, target)
         battle.pbHideAbilitySplash(target)
   }
@@ -735,6 +735,7 @@ BattleHandlers::TargetAbilityOnHit.add(:SEALINGBODY,
     proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next if user.fainted?
         next if user.effectActive?(:Disable)
+        next if move.id == :STRUGGLE
         next -15 if aiCheck
         battle.pbShowAbilitySplash(target, ability)
         user.applyEffect(:Disable, 2) if user.canBeDisabled?(true)
@@ -916,7 +917,7 @@ BattleHandlers::TargetAbilityOnHit.add(:MULTISCALE,
 BattleHandlers::TargetAbilityOnHit.copy(:MULTISCALE,:DOMINEERING,:SHADOWSHIELD)
 
 BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
-  proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
         next if target.fainted?
 
         type = move.calcType
@@ -934,4 +935,16 @@ BattleHandlers::TargetAbilityOnHit.add(:COLORCOLLECTOR,
         battle.scene.pbRefresh
         target.hideMyAbilitySplash
   }
+)
+
+BattleHandlers::TargetAbilityOnHit.add(:TANGLINGVINES,
+    proc { |ability, user, target, move, battle, aiCheck, aiNumHits|
+        next if target.fainted?
+        next -10 * aiNumHits if aiCheck
+        target.showMyAbilitySplash(ability)
+        user.tryLowerStat(:SPEED, target, increment: 1)
+        user.pointAt(:TanglingVines, target)
+        target.hideMyAbilitySplash
+
+    }
 )

@@ -574,12 +574,11 @@ class PokeBattle_Battler
             end
         end
         # Zygarde - Power Construct
-        if isSpecies?(:ZYGARDE) && hasAbility?(:POWERCONSTRUCT) && endOfRound && (@hp <= @totalhp / 2 && @form < 2) # Turn into Complete Forme
-            newForm = @form + 2
+        if isSpecies?(:ZYGARDE) && hasAbility?(:POWERCONSTRUCT) && endOfRound && (@hp <= @totalhp / 2 && @form == 3) # Turn into Complete Forme
             @battle.pbDisplay(_INTL("You sense the presence of many!"))
             showMyAbilitySplash(:POWERCONSTRUCT, true)
             hideMyAbilitySplash
-            pbChangeForm(newForm, _INTL("{1} transformed into its Complete Forme!", pbThis))
+            pbChangeForm(2, _INTL("{1} transformed into its Complete Forme!", pbThis))
         end
     end
 

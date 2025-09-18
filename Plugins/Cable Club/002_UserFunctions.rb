@@ -1,0 +1,82 @@
+# Returns false if an error occurred.
+def pbCableClub
+  scene = CableClub_Scene.new
+  screen = CableClubScreen.new(scene)
+  return screen.pbStartScreen
+end
+
+def pbChangeOnlineTrainerType
+  old_trainer_type = GameData::TrainerType.get($Trainer.online_trainer_type)
+  if $Trainer.online_trainer_type!=$Trainer.trainer_type
+    trainername=old_trainer_type.real_name
+    pbMessage(_INTL("Your current online Trainer Class is {1}.",trainername))
+  end
+  pbMessage(_INTL("What Trainer Class do you want to present to your opponents?"))
+  index = GameData::TrainerType.cableClubClasses.index(old_trainer_type.id) || 0
+  loop do
+    new_trainer_type_selection = pbListScreen(_INTL("Choose a class"), CCTrainerTypeLister.new(index)) || old_trainer_type
+    new_trainer_type = GameData::TrainerType.get(new_trainer_type_selection)
+    new_trainer_type_id = new_trainer_type.id
+    trainername=new_trainer_type.real_name
+    if ['a','e','i','o','u'].include?(trainername[0,1].downcase)
+      msg=_INTL("An {1} is the kind of Trainer you want to be?",trainername)
+      if pbConfirmMessage(msg)
+        pbMessage(_INTL("You will appear as an {1} in online battles.",trainername))
+        $Trainer.online_trainer_type=new_trainer_type_id
+        break
+      end
+    else
+      msg=_INTL("A {1} is the kind of Trainer you want to be?",trainername)
+      if pbConfirmMessage(msg)
+        pbMessage(_INTL("You will appear as a {1} in online battles.",trainername))
+        $Trainer.online_trainer_type=new_trainer_type_id
+        break
+      end
+    end
+  end
+  if old_trainer_type.id != $Trainer.online_trainer_type
+    CableClub.onUpdateTrainerType.trigger(nil, $Trainer.online_trainer_type)
+  end
+end
+
+def pbChangeOnlineWinText
+  commands = []
+  CableClub::ONLINE_WIN_SPEECHES_LIST.each do |text|
+    commands.push(_INTL(text))
+  end
+  commands.push(_INTL("Cancel"))
+  loop do
+    cmd=pbMessage(_INTL("What do you want to say when you win?"),commands,-1)
+    if cmd>=0 && cmd<CableClub::ONLINE_WIN_SPEECHES_LIST.length-1
+      win_text=commands[cmd]
+      if pbConfirmMessage(_INTL("\"{1}\"\\nThis is what you wish to say?",win_text))
+        pbMessage(_INTL("\"{1}\"\\nThis is what you will say when you win.",win_text))
+        $Trainer.online_win_text=cmd
+        break
+      end
+    else
+      break
+    end
+  end
+end
+
+def pbChangeOnlineLoseText
+  commands = []
+  CableClub::ONLINE_LOSE_SPEECHES_LIST.each do |text|
+    commands.push(_INTL(text))
+  end
+  commands.push(_INTL("Cancel"))
+  loop do
+    cmd=pbMessage(_INTL("What do you want to say when you lose?"),commands,-1)
+    if cmd>=0 && cmd<CableClub::ONLINE_LOSE_SPEECHES_LIST.length-1
+      lose_text=commands[cmd]
+      if pbConfirmMessage(_INTL("\"{1}\"\\nThis is what you wish to say?",lose_text))
+        pbMessage(_INTL("\"{1}\"\\nThis is what you will say when you lose.",lose_text))
+        $Trainer.online_lose_text=cmd
+        break
+      end
+    else
+      break
+    end
+  end
+end

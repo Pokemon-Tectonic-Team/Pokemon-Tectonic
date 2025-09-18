@@ -4,7 +4,7 @@
 class PokeBattle_Move_StartPreventCriticalHitsAgainstUserSide10 < PokeBattle_Move
     def initialize(battle, move)
         super
-        @luckyChantDuration = 10
+        @luckyChantDuration = applyEffectDurationModifiers(10)
     end
 
     def pbEffectGeneral(user)
@@ -33,12 +33,7 @@ class PokeBattle_Move_StartPreventCriticalHitsAndRandomEffectsAgainstUserSide10 
     end
 
     def getEffectScore(user, _target)
-        score = 0
-        @battle.eachSameSideBattler(user.index) do |b|
-            score += 40
-            score += 40 if b.aboveHalfHealth?
-        end
-        return score
+        return getDiamondFieldEffectScore(user, nil, self)
     end
 end
 
