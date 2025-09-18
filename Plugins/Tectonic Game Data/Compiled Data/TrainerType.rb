@@ -62,6 +62,10 @@ module GameData
       def self.front_sprite_filename(tr_type)
         return self.check_file(tr_type, "Graphics/Trainers/")
       end
+
+      def self.front_sprite_filename_hologram(tr_type)
+        return self.check_file(tr_type, "Graphics/Trainers/Holograms/")
+      end
   
       def self.player_front_sprite_filename(tr_type)
         outfit = ($Trainer) ? $Trainer.outfit : 0
