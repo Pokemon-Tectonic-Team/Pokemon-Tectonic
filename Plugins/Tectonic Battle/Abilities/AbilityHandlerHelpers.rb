@@ -48,7 +48,6 @@ def pbBattleWeatherAbility(ability, weather, battler, battle, ignorePrimal = fal
         end
         return getWeatherSettingEffectScore(weather, battler, battle, duration, false)
     else
-        baseDuration = applyEffectDurationModifiers(baseDuration, battler)
         battle.pbStartWeather(battler, weather, baseDuration, true, ignoreFainted, ability)
     end
 end
