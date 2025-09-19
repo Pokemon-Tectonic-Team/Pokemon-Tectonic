@@ -1634,6 +1634,10 @@ Description = Pokémon that swap in for this have their non-volatile status cond
 Name = Reluctant Warrior
 Description = Below half health, it has a doubled crit chance and has +30% attack.
 #-------------------------------
+[REMANENTVOLTAGE]
+Name = Remanent Voltage
+Description = The Pokémon can use Electric-type moves when recharging from an exhausting move, but cannot switch out during them.
+#-------------------------------
 [RENDINGCLAWS]
 Name = Rending Claws
 Description = Critical hits lower all of the victim's stats.

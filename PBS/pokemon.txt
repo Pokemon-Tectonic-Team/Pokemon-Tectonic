@@ -20892,7 +20892,7 @@ Weight = 40.0
 Kind = Alloy
 Pokedex = The special metal that composes its body is very light, so this Pokémon has considerable agility. It lives in caves because it dislikes the rain.
 Generation = 8
-Evolutions = TOWERPODA,Level,34
+Evolutions = TOWERPODA,Level,34,ARCHALUDON,Item,SHINYSTONE
 #-------------------------------
 [TOWERPODA]
 Name = Towerpoda
@@ -20911,6 +20911,25 @@ Height = 80.8
 Weight = 728.0
 Kind = Skyscraper
 Pokedex = Nostalgic for the cavern home it has outgrown, it will weep molten glass. Those without trainers may find company serving as rookeries for bird Pokémon.
+#-------------------------------
+[ARCHALUDON]
+Name = Archaludon
+Type1 = STEEL
+Type2 = DRAGON
+# HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
+BaseStats = 90,110,100,75,110,85
+# Total = 570
+BaseEXP = 240
+Rareness = 50
+Happiness = 50
+Abilities = REMANENTVOLTAGE,IONIZEDALLOY
+Moves = 0,THUNDERBOLT,64,DIELECTRICBREAKDOWN
+LineMoves = CHARGE,EERIEIMPULSE,HYDROCANNON,LIVEWIRE,ROCKWRECKER
+StepsToHatch = 7966
+Height = 3.0
+Weight = 220.0
+Kind = Alloy
+Pokedex = It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.
 #-------------------------------
 [DREEPY]
 Name = Dreepy

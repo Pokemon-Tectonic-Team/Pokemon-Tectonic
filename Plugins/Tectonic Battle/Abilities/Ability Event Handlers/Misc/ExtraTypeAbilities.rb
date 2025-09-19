@@ -47,6 +47,14 @@ BattleHandlers::TypeCalcAbility.add(:OTHERWORLDLY,
     }
 )
 
+BattleHandlers::TypeCalcAbility.add(:IONIZEDALLOY,
+    proc { |ability, battler, types|
+        next types unless battler.battle.rainy?
+        types.push(:ELECTRIC)
+        next types
+    }
+)
+
 BattleHandlers::TypeCalcAbility.add(:COLORCOLLECTOR,
     proc { |ability, battler, types|
         if battler.effectActive?(:ColorCollector)

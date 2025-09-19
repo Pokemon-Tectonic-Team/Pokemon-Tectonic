@@ -360,6 +360,12 @@ FrontSprite = 0,16
 ShadowX = 0
 ShadowSize = 2
 #-------------------------------
+[ARCHALUDON]
+BackSprite = 0,12
+FrontSprite = 0,10
+ShadowX = 0
+ShadowSize = 3
+#-------------------------------
 [ARCHEN]
 BackSprite = 0,30
 FrontSprite = 0,32
