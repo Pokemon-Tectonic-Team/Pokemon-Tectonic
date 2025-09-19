@@ -500,3 +500,21 @@ class PokeBattle_Move_GrantUserPearlOfWisdom < PokeBattle_Move
         return 150
     end
 end
+
+#===============================================================================
+# The user equips a Crystal Caliburn. (Gemforged Oath)
+#===============================================================================
+class PokeBattle_Move_GrantUserCrystalCaliburn < PokeBattle_Move
+    def pbMoveFailed?(user, _targets, show_message)
+        return !user.canAddItem?(:CRYSTALCALIBURN)
+    end
+
+    def pbEffectGeneral(user)
+        user.giveItem(:CRYSTALCALIBURN)
+        @battle.pbDisplay(_INTL("{1} draws a {2} from the stone!", user.pbThis, getItemName(:CRYSTALCALIBURN)))
+    end
+
+    def getEffectScore(_user, _target)
+        return 150
+    end
+end

@@ -558,3 +558,9 @@ MultipleForms.register(:INDEEDEE,{
     next pkmn.gender
   },
 })
+
+MultipleForms.register(:DIANCIE, {
+    "getFormOnLeavingBattle" => proc { |pkmn, _battle, _usedInBattle, endBattle|
+        next 0 if pkmn.form == 1 && (pkmn.fainted? || endBattle)
+    },
+})
