@@ -2915,17 +2915,6 @@ FunctionCode = StartPerishCountsForAllBattlers
 Flags = Sound
 Description = Any Pokémon that hears this song faints in three turns, unless it switches out of battle.
 #-------------------------------
-[PHANTOMFORCE]
-Name = Phantom Force
-Type = GHOST
-Category = Physical
-Power = 90
-Accuracy = 100
-TotalPP = 10
-Target = NearOther
-FunctionCode = TwoTurnAttackInvulnerableRemoveProtections
-Description = The user vanishes somewhere, charging and becoming invulnerable, then strikes on the second turn. Skips and destroys protections.
-#-------------------------------
 [SCARYFACE]
 Name = Scary Face
 Type = GHOST

@@ -2908,6 +2908,18 @@ Flags = CanProtect
 Description = Spectral hands reach from the ground to trip the target. The heavier the target, the greater the damage.
 Animation = CRUSHGRIP
 #-------------------------------
+[GHOSTLYTALE]
+Name = Ghostly Tale
+Type = GHOST
+Category = Special
+Power = 140
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = AttackTwoTurnsLater
+Flags = Foretold,Light
+Description = Two turns after this move is used, the user scares the target with a terrifying tale.
+#-------------------------------
 [MACHINATE]
 Name = Machinate
 Type = GHOST

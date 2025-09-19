@@ -1865,6 +1865,17 @@ FunctionCode = Invalid
 Flags = CanProtect
 Description = The user makes the foe see a frightening mirage. It inflicts damage matching the user's level.
 #-------------------------------
+[PHANTOMFORCE]
+Name = Phantom Force
+Type = GHOST
+Category = Physical
+Power = 90
+Accuracy = 100
+TotalPP = 10
+Target = NearOther
+FunctionCode = TwoTurnAttackInvulnerableRemoveProtections
+Description = The user vanishes somewhere, charging and becoming invulnerable, then strikes on the second turn. Skips and destroys protections.
+#-------------------------------
 [POLTERGEIST]
 Name = Poltergeist
 Type = GHOST
