@@ -410,4 +410,4 @@ Name = Crystal Caliburn
 NamePlural = Crystal Caliburns
 Pocket = 5
 Price = 0
-Description = Boosts the power of Light and Blade moves by 50%. Transforms Diancie into Royal form.
+Description = Boosts the power of Light and Blade moves by 50%.
