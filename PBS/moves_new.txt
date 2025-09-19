@@ -5322,6 +5322,18 @@ EffectChance = 100
 Description = Cloaking itself in light energy, the user shocks the target, raising the user's Sp. Def by two steps.
 Animation = DISCHARGE
 #-------------------------------
+[MAGNETICCOIL]
+Name = Magnetic Coil
+Type = ELECTRIC
+Category = Status
+Accuracy = 0
+TotalPP = 6
+Target = User
+FunctionCode = RaiseUserAtkSpDef2MagnetRise
+Flags = CanSnatch
+Description = The user coils its body to generate an electric field, levitating for five turns and raising its Attack and Sp. Def by two steps.
+Animation = COIL
+#-------------------------------
 [METAFORM]
 Name = Metaform
 Type = ELECTRIC

@@ -647,3 +647,32 @@ end
 class PokeBattle_Move_EmpoweredDeepBreathing < PokeBattle_Move_RaiseUserSpd2CriticalHitRate2
     include EmpoweredMove
 end
+
+#===============================================================================
+# Increases Atk and Sp. Def by 2 steps, and applies Magnet Rise unless in Gravity.
+# (Magnetic Coil)
+#===============================================================================
+class PokeBattle_Move_RaiseUserAtkSpDef2MagnetRise < PokeBattle_MultiStatUpMove
+    def initialize(battle, move)
+        super
+        @statUp = [:ATTACK, 2, :SPECIAL_DEFENSE, 2]
+	end
+
+	def pbEffectGeneral(user)
+		super
+		user.applyEffect(:MagnetRise, applyEffectDurationModifiers(5,user))
+    end
+
+    def getEffectScore(user, target)
+        score = super
+        score += 20 if user.firstTurn?
+        score -= 20 if battle.gravityIntensified?
+        user.eachOpposing(true) do |b|
+            if b.pbHasAttackingType?(:GROUND)
+                score += 50
+                score += 25 if b.pbHasType?(:GROUND)
+            end
+        end
+        return score
+    end
+end

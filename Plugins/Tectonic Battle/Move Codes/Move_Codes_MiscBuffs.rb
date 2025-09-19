@@ -27,7 +27,7 @@ class PokeBattle_Move_StartUserAirborne5 < PokeBattle_Move
     end
 
     def pbEffectGeneral(user)
-        user.applyEffect(:MagnetRise, applyEffectDurationModifiers(5))
+        user.applyEffect(:MagnetRise, applyEffectDurationModifiers(5,user))
     end
 
     def getEffectScore(user, _target)
