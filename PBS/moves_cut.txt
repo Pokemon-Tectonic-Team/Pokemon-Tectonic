@@ -1232,6 +1232,18 @@ Target = AllNearOthers
 FunctionCode = Invalid
 Description = The user surrounds everything around it with highly acidic gas and melts away items they hold.
 #-------------------------------
+[DEVOURWHOLE]
+Name = Devour Whole
+Type = POISON
+Category = Physical
+Power = 130
+Accuracy = 100
+TotalPP = 5
+Target = NearOther
+FunctionCode = Invalid
+Flags = CanProtect,Biting,Uninvocable
+Description = Grips the target with its entire mouth. The user is exhausted on the next turn unless the target faints or switches out.
+#-------------------------------
 [DIRECLAW]
 Name = Dire Claw
 Type = POISON

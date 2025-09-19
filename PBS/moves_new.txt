@@ -1366,18 +1366,6 @@ FunctionCode = DestroysBerriesGems
 Flags = CanProtect,Punch
 Description = The user strikes with an acidic punch that destroys Gems and Berries.
 #-------------------------------
-[DEVOURWHOLE]
-Name = Devour Whole
-Type = POISON
-Category = Physical
-Power = 130
-Accuracy = 100
-TotalPP = 5
-Target = NearOther
-FunctionCode = TwoTurnAttackRechargeSkippedIfTargetLeaves
-Flags = CanProtect,Biting,Uninvocable
-Description = Grips the target with its entire mouth. The user is exhausted on the next turn unless the target faints or switches out.
-#-------------------------------
 [DISSOLUTION]
 Name = Dissolution
 Type = POISON
