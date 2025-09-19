@@ -1059,6 +1059,10 @@ Name = Inner Light
 Description = Summons sunshine for four turns when hit by an attack.
 Flags = SunshineSynergy
 #-------------------------------
+[INSECTCOLLECTOR]
+Name = Insect Collector
+Description = Hits opponent with Covet when switched out.
+#-------------------------------
 [INSIGHTAURA]
 Name = Insight Aura
 Description = Upon entry, creates an Insight Room for four turns, giving everyone a fifth move.
@@ -1296,10 +1300,6 @@ Flags = MoonglowSynergy
 Name = Moonlighter
 Description = When hit in moonglow, steals the attacker's item, or knocks it away.
 Flags = MoonglowSynergy
-#-------------------------------
-[MOTHBURGLAR]
-Name = Moth Burglar
-Description = Hits opponent with Thief when switched out.
 #-------------------------------
 [MULTIHEADED]
 Name = Multiheaded

@@ -72,10 +72,10 @@ BattleHandlers::AbilityOnSwitchOut.add(:MAGMATRAIL,
   }
 )
 
-BattleHandlers::AbilityOnSwitchOut.add(:MOTHBURGLAR,
+BattleHandlers::AbilityOnSwitchOut.add(:INSECTCOLLECTOR,
   proc { |ability, battler, battle, endOfBattle|
       next if endOfBattle
-      battle.forceUseMove(battler, :THIEF, ability: ability)
+      battle.forceUseMove(battler, :COVET, ability: ability)
   }
 )
 
