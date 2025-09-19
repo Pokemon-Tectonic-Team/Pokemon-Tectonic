@@ -182,10 +182,10 @@ end
 
 def hologramizeAllBattleSprites(overwriteExisting=true)
     monument_trainers = GameData::Trainer.getMonumentTrainers
-    monument_trainers.map! { |t| t.trainer_type.to_s }
-    monument_trainers.uniq!
+    trainer_ids = monument_trainers.map { |t| t.trainer_type.to_s }
+    trainer_ids.uniq!
     
-    monument_trainers.each do |t|
+    trainer_ids.each do |t|
         hologramizeBattleSprite(t, overwriteExisting)
     end
 end
