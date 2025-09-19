@@ -1,8 +1,8 @@
 BattleHandlers::WeatherChangedAbility.add(:IONIZEDALLOY,
   proc { |ability, oldWeather, battler, battle| 
-    if battle.rainy?
+    if battle.rainy? && !(%i[Rainstorm HeavyRain].include?(oldWeather)) # If it started to rain
       battle.pbShowAbilitySplash(battler, ability)
-      battle.pbDisplay(_INTL("Ions in the atmosphere react to {1} (Weather)!", battler.pbThis))
+      battle.pbDisplay(_INTL("Ions in the atmosphere react to {1}!", battler.pbThis))
       battle.pbHideAbilitySplash(battler)
       battle.scene.pbRefresh
     elsif %i[Rainstorm HeavyRain].include?(oldWeather) #If changed from rain to something else
