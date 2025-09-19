@@ -169,6 +169,11 @@ Name = Berry Bunch
 Description = Can hold two different items, if both are Berries.
 Flags = MultipleItems
 #-------------------------------
+[BIGBAD]
+Name = Big Bad
+Description = Foretold moves take one turn longer to attack but deal double damage.
+Flags = HailSynergy
+#-------------------------------
 [BITTERCOLD]
 Name = Bitter Cold
 Description = Causes hail to deal double damage and increase Defense of Ice-types by 2.0x instead of 1.5x.

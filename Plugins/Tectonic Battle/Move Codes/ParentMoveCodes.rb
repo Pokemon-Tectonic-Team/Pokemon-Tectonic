@@ -1370,6 +1370,7 @@ class PokeBattle_ForetoldMove < PokeBattle_Move
         return if @battle.futureSight # Attack is hitting
         count = @turnCount
         count -= 2 if user.hasActiveAbility?([:BADOMEN])
+        count += 1 if user.hasActiveAbility?([:BIGBAD])
         count = 1 if count < 1
         target.position.applyEffect(:FutureSightCounter, count)
         target.position.applyEffect(:FutureSightMove, @id)
