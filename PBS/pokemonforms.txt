@@ -609,8 +609,8 @@ Pokedex = Supersized Gourgeist aren't picky. They will forcefully drag anyone of
 #-------------------------------
 [DIANCIE,1]
 FormName = Royal
-BaseStats = 50,160,110,110,160,110
-# Total = 700
+BaseStats = 75,120,100,95,120,100
+# Total = 610
 Abilities = MAGICBOUNCE
 #-------------------------------
 [XERNEAS,1]
