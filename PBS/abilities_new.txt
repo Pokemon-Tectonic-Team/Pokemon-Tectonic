@@ -1079,6 +1079,10 @@ Description = Takes 30% less damage until the first time it uses an attacking mo
 Name = Investigator
 Description = At the beginning of each turn, gives clues about a foe's plan.
 #-------------------------------
+[IONIZEDALLOY]
+Name = Ionized Alloy
+Description = The Pokémon gains the Electric type in a rainstorm.
+#-------------------------------
 [IRONHEEL]
 Name = Iron Heel
 Description = Boosts the power of kicking moves by 30%.
