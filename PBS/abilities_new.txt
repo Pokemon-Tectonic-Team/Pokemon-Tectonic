@@ -1637,7 +1637,7 @@ Description = When hit with a physical move, hits back instantly with Leafage.
 #-------------------------------
 [REMANENTVOLTAGE]
 Name = Remanent Voltage
-Description = The Pokémon can use Electric-type moves when recharging from an exhausting move.
+Description = The Pokémon can use Electric-type moves when recharging from an exhausting move, but cannot switch out during them.
 #-------------------------------
 [RENDINGCLAWS]
 Name = Rending Claws
