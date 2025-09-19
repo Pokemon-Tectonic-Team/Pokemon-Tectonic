@@ -278,7 +278,7 @@ BattleHandlers::DamageCalcUserAbility.add(:BADOMEN,
 BattleHandlers::DamageCalcUserAbility.add(:BIGBAD,
   proc { |ability, user, target, move, mults, _baseDmg, type, aiCheck|
     if move.foretoldMove?
-      mults[:base_damage_multiplier] *= 2.0
+      mults[:base_damage_multiplier] *= 1.5
       user.aiLearnsAbility(ability) unless aiCheck
     end
   }
