@@ -607,6 +607,12 @@ Height = 1.7
 Weight = 39.0
 Pokedex = Supersized Gourgeist aren't picky. They will forcefully drag anyone off to the afterlife.
 #-------------------------------
+[DIANCIE,1]
+FormName = Royal
+BaseStats = 75,120,100,95,120,100
+# Total = 610
+Abilities = MAGICBOUNCE
+#-------------------------------
 [XERNEAS,1]
 FormName = Active Mode
 #-------------------------------

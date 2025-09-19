@@ -558,3 +558,13 @@ MultipleForms.register(:INDEEDEE,{
     next pkmn.gender
   },
 })
+
+MultipleForms.register(:DIANCIE, {
+    "getForm" => proc { |pkmn|
+      next 1 if pkmn.hasItem?(:CRYSTALCALIBURN)
+      next 0
+    },
+    "getFormOnLeavingBattle" => proc { |pkmn, _battle, _usedInBattle, endBattle|
+        next 0 if pkmn.form == 1 && (pkmn.fainted? || endBattle)
+    },
+})

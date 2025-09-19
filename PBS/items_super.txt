@@ -404,3 +404,10 @@ Pocket = 5
 Price = 0
 Flags = Leftovers
 Description = User heals 1/16th HP every turn. Will sacrifice itself to cure the user of status.
+#-------------------------------
+[CRYSTALCALIBURN]
+Name = Crystal Caliburn
+NamePlural = Crystal Caliburns
+Pocket = 5
+Price = 0
+Description = Boosts the power of Light and Blade moves by 50%.

@@ -356,3 +356,12 @@ BattleHandlers::DamageCalcUserItem.add(:PRISMATICPLATE,
     end
   }
 )
+
+BattleHandlers::DamageCalcUserItem.add(:CRYSTALCALIBURN,
+  proc { |item, user, _target, move, mults, _baseDmg, _type, aiCheck|
+    if move.bladeMove? or move.lightMove?
+      mults[:final_damage_multiplier] *= 1.5
+      user.aiLearnsItem(item) unless aiCheck
+    end
+  }
+)

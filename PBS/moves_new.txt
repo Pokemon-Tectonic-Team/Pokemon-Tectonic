@@ -7579,6 +7579,19 @@ EffectChance = 50
 Description = The user plays with the target with unneccessary force. It has a 50% chance to lower Attack.
 Animation = PLAYROUGH
 #-------------------------------
+[GEMFORGEDOATH]
+Name = Gemforged Oath
+Type = FAIRY
+Category = Status
+Accuracy = 0
+TotalPP = 1
+Target = User
+Priority = 6
+FunctionCode = GrantUserCrystalCaliburnChangeUserDiancieForm
+Flags = CanProtect,Blade
+Description = The user draws the Crystal Caliburn, which empowers Light and Blade moves and transforms the holder into Royal form.
+Animation = DAZZLINGGLEAM
+#-------------------------------
 [GLAMOURFLASH]
 Name = Glamour Flash
 Type = FAIRY
