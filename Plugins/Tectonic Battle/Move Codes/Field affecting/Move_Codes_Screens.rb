@@ -8,13 +8,13 @@ class PokeBattle_Move_StartPreventCriticalHitsAgainstUserSide10 < PokeBattle_Mov
     end
 
     def pbEffectGeneral(user)
-        duration = applyEffectDurationModifiers(@luckyChanceDuration, user)
+        duration = applyEffectDurationModifiers(@luckyChantDuration, user)
         user.pbOwnSide.applyEffect(:LuckyChant, duration)
     end
 
     def getEffectScore(user, _target)
-        duration = applyEffectDurationModifiers(@luckyChanceDuration, user)
-        return getLuckyChantEffectScore(user, durationn)
+        duration = applyEffectDurationModifiers(@luckyChantDuration, user)
+        return getLuckyChantEffectScore(user, duration)
     end
 end
 
