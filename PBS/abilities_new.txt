@@ -171,7 +171,7 @@ Flags = MultipleItems
 #-------------------------------
 [BIGBAD]
 Name = Big Bad
-Description = Foretold moves take one turn longer to attack but deal double damage.
+Description = Foretold moves take one turn longer to attack but deal 50% more damage.
 Flags = HailSynergy
 #-------------------------------
 [BITTERCOLD]

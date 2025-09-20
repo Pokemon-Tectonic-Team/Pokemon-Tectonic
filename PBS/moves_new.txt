@@ -2911,7 +2911,7 @@ Animation = CRUSHGRIP
 [GHOSTLYTALE]
 Name = Ghostly Tale
 Type = GHOST
-Category = Special
+Category = Physical
 Power = 140
 Accuracy = 100
 TotalPP = 10
