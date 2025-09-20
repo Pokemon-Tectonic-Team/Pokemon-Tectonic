@@ -49,8 +49,7 @@ BattleHandlers::TypeCalcAbility.add(:OTHERWORLDLY,
 
 BattleHandlers::TypeCalcAbility.add(:IONIZEDALLOY,
     proc { |ability, battler, types|
-        next types unless battler.battle.rainy?
-        types.push(:ELECTRIC)
+        types.push(:ELECTRIC) if battler.battle.rainy?
         next types
     }
 )
