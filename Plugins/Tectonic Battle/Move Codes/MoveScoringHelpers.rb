@@ -515,9 +515,9 @@ def getMultiStatUpEffectScore(statUpArray, user, target, fakeStepModifier: 0, ev
     if target.hasActiveAbilityAI?(:CONTRARY)
         score *= -1
         echoln("\t\t[EFFECT SCORING] The target has Contrary! Inverting the score.")
-    elsif target.hasActiveAbilityAI?(:ECCENTRIC)
+    elsif target.hasActiveAbilityAI?(:INVERSION)
         score *= -0.5
-        echoln("\t\t[EFFECT SCORING] The target has Eccentric! Inverting and halving the score.")
+        echoln("\t\t[EFFECT SCORING] The target has INVERSION! Inverting and halving the score.")
     end
 
     if user.opposes?(target)
@@ -604,7 +604,7 @@ def getMultiStatDownEffectScore(statDownArray, user, target, fakeStepModifier: 0
     if target.hasActiveAbilityAI?(:CONTRARY)
         score *= -1
         echoln("\t\t[EFFECT SCORING] The target has Contrary! Inverting the score.")
-    elsif target.hasActiveAbilityAI?(:ECCENTRIC)
+    elsif target.hasActiveAbilityAI?(:INVERSION)
         score *= -0.5
     end
 

@@ -2972,7 +2972,7 @@ Pokemon = DONPHAN,45
     EV = 0,20,20,0,20,10
 Pokemon = SERPERIOR,45
     Moves = GALLINGSPIT,AUTUMNBLAST,SYNTHESIS,PETRIFY
-    AbilityIndex = 1 # Eccentric
+    AbilityIndex = 1 # Victory Molt
     Item = LEFTOVERS
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 20,10,0,20,10,0
@@ -6262,7 +6262,7 @@ Pokemon = SENSIBELLE,70
     EV = 20,0,10,0,0,20
 Pokemon = SERPERIOR,70
     Moves = LEAFSTORM,DRACOMETEOR,THUNDERBOLT,PETRIFY
-    AbilityIndex = 1 # Eccentric
+    AbilityIndex = 1 # Victory Molt
     Item = SITRUSBERRY
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 10,10,10,20,10,0
@@ -6371,7 +6371,7 @@ Pokemon = HYMNUS,70
     Item = LEFTOVERS
 Pokemon = SERPERIOR,70
     Moves = AUTUMNBLAST,SYNTHESIS,THUNDERBOLT,PETRIFY
-    AbilityIndex = 1 # Eccentric
+    AbilityIndex = 1 # Victory Molt
     Item = YACHEBERRY
 #-------------------------------
 [ANOTHERPOSSIBLEZAIN,Zain,1]
@@ -7623,7 +7623,7 @@ Pokemon = MILOTIC,59
 Policies = ECLIPSE_TEAM
 Pokemon = LURANTIS,59
     Moves = SCALESTORM,LEAFSTORM,WEATHERBURST,ECLIPSE
-    AbilityIndex = 0 # Contrary
+    AbilityIndex = 0 # Inversion
 Pokemon = TOUCANNON,59
     Moves = BEAKBLAST,ROOST,FLAREUP,WEATHERBURST
     AbilityIndex = 0 # Nesting
@@ -8107,7 +8107,7 @@ Flags = NoPerfect,PlayerTeam:SpeedyTurtle496
 Pokemon = TOGEKISS,70
     AbilityIndex = 1 # Serene Grace
 Pokemon = SERPERIOR,70
-    AbilityIndex = 1 # Eccentric
+    AbilityIndex = 1 # Victory Molt
 Pokemon = DRAGONITE,70
     AbilityIndex = 1 # Multiscale
 Pokemon = CINDERACE,70

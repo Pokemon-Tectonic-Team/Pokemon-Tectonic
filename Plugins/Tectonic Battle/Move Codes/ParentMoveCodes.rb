@@ -1440,7 +1440,7 @@ class PokeBattle_StatDrainHealingMove < PokeBattle_Move
         #       works even if the stat step cannot be changed due to an ability or
         #       other effect.
         statName = GameData::Stat.get(@statToReduce).name
-        if !@battle.moldBreaker && target.hasActiveAbility?(%i[CONTRARY ECCENTRIC]) &&
+        if !@battle.moldBreaker && target.hasActiveAbility?(%i[CONTRARY INVERSION]) &&
            target.statStepAtMax?(@statToReduce)
             if show_message
                 @battle.pbDisplay(_INTL("But it failed, since {1}'s {2} can't go any higher!", target.pbThis(true), statName))
