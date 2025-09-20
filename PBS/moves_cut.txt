@@ -3582,6 +3582,18 @@ FunctionCode = Invalid
 Flags = CanProtect,CanMagicCoat
 Description = Targets are dragged into a world of total darkness that makes them sleep. This move always goes last.
 #-------------------------------
+[DIVINATION]
+Name = Divination
+Type = DARK
+Category = Status
+Accuracy = 0
+TotalPP = 5
+Target = User
+FunctionCode = Invalid
+Flags = CanSnatch
+Description = The user heals itself by half of its max HP and raises their Defense, Sp. Def, and critical hit chance by two steps.
+Animation = COSMICPOWER
+#-------------------------------
 [EMBARGO]
 Name = Embargo
 Type = DARK

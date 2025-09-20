@@ -686,7 +686,7 @@ Pokemon = BRAIXEN,26
     Moves = FIRESPIN,PSYBEAM,EERIEIMPULSE,WILLOWISP
     AbilityIndex = 1 # Fascinate
 Pokemon = QUILLADIN,26
-    Moves = BULKUP,FORCEPALM,RAZORLEAF,LEECHSEED
+    Moves = SPIKYSHIELD,FORCEPALM,RAZORLEAF,LEECHSEED
     AbilityIndex = 1 # Aggravate
     Item = SITRUSBERRY
 #-------------------------------
@@ -1227,7 +1227,7 @@ Pokemon = KLEAVOR,70
     AbilityIndex = 0 # Swordplay
     Item = CHOICESCARF
 Pokemon = ABSOLUS,70
-    Moves = DIVINATION,PLANTDOUBT,INFINITEFORCE,FLAMETHROWER
+    Moves = MINDSAP,PLANTDOUBT,INFINITEFORCE,FLAMETHROWER
     AbilityIndex = 1 # Vengeance
     Item = LEFTOVERS
 Pokemon = ALAKAZAM,70
@@ -3203,7 +3203,7 @@ Pokemon = SWANNA,56
 #-------------------------------
 [HIKER2,Rhys]
 Pokemon = CHESNAUGHT,57
-    Moves = BULKUP,SYNTHESIS,LEAFBLADE,SACREDSWORD
+    Moves = SPIKYSHIELD,SYNTHESIS,LEAFBLADE,SACREDSWORD
     AbilityIndex = 0 # Intimidate
     Item = LEFTOVERS
 Pokemon = NOCTOWL,57
