@@ -71,7 +71,7 @@ class PokeBattle_Battle
 
         triggerWeatherChangeDialogue(oldWeather, @field.weather) unless resetExisting
 
-        battlers.each do |b|
+        eachBattler do |b|
             b.eachActiveAbility do |ability|
                 BattleHandlers.triggerWeatherChangedAbility(ability, oldWeather, b, self)
             end
