@@ -143,7 +143,7 @@ GameData::BattleEffect.register_effect(:Battler, {
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
-    :id => :Warned,
+    :id => :PhysCurseWarned,
     :real_name => "Curse-Warned",
     :avatars_purge => true,
     :apply_proc => proc do |battle, battler, _value|
@@ -155,84 +155,126 @@ GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysNumbWarned,
     :real_name => "Numb-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will numb.", battler.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecNumbWarned,
     :real_name => "Numb-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will numb.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysPoisonWarned,
     :real_name => "Poison-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will poison.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecPoisonWarned,
     :real_name => "Poison-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will poison.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysBurnWarned,
     :real_name => "Burn-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will burn.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecBurnWarned,
     :real_name => "Burn-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will burn.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysFrostWarned,
     :real_name => "Frost-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will frostbite.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecFrostWarned,
     :real_name => "Frost-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will frostbite.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysDizzyWarned,
     :real_name => "Dizzy-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will dizzy.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecDizzyWarned,
     :real_name => "Dizzy-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will dizzy.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysLeechWarned,
     :real_name => "Leech-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will leech.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecLeechWarned,
     :real_name => "Leech-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will leech.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :PhysWaterlogWarned,
     :real_name => "Waterlog-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next physical hit from {1} will waterlog.", user.pbThis))
+    end,
 })
 
 GameData::BattleEffect.register_effect(:Battler, {
     :id => :SpecWaterlogWarned,
     :real_name => "Waterlog-Warned",
     :avatars_purge => true,
+    :apply_proc => proc do |battle, battler, _value|
+        battle.pbDisplay(_INTL("The next special hit from {1} will waterlog.", user.pbThis))
+    end,
 })
 
 CURSE_DAMAGE_FRACTION = 0.25
