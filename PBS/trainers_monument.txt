@@ -1210,7 +1210,7 @@ Pokemon = INFERNAPE,70
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def
     EV = 0,20,10,20,20,0
 Pokemon = NIDOKING,70
-    Moves = POISONJAB,EARTHSPLITTER,BEDROCKBREAKER,BRICKBREAK
+    Moves = POISONJAB,EARTHSPLITTER,SUCKERPUNCH,REND
     AbilityIndex = 1 # Stressful
     Item = STRIKEVEST
     # HP, Attack, Defense, Speed, Sp. Atk, Sp. Def

@@ -1104,6 +1104,11 @@ Name = Trace
 Description = The Pokémon copies a foe's Ability.
 Flags = Uncopyable
 #-------------------------------
+[TRACTORBEAM]
+Name = Tractor Beam
+Description = Traps the foe during eclipse.
+Flags = EclipseSynergy
+#-------------------------------
 [TRICKSTER]
 Name = Trickster
 Description = Creates a Trick Room for five turns when its HP is lowered below half.

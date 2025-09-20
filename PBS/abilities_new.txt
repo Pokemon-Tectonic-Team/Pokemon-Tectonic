@@ -2158,11 +2158,6 @@ Description = Powers up Poison-type moves of itself and its allies by 50%.
 Name = Toxin Tax
 Description = Heals based on the damage other battlers take from being poisoned.
 #-------------------------------
-[TRACTORBEAM]
-Name = Tractor Beam
-Description = Traps the foe during eclipse.
-Flags = EclipseSynergy
-#-------------------------------
 [TRAPPER]
 Name = Trapper
 Description = Takes 30% less damage from Pokémon that are trapped.
