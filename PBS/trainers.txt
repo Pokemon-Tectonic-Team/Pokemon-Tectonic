@@ -5587,7 +5587,7 @@ Pokemon = GOLURK,65
     Item = GROUNDGEM
 #-------------------------------
 [FORMERCHAMP_Elise,Elise]
-Policies = PRESERVE_LAST_POKEMON,HAIL_TEAM
+Policies = HAIL_TEAM
 Flags = NoPerfect
 Pokemon = FROSLASS,70
     Moves = SNOWYSORROWS,AURORAVEIL,HAIL,FRIGIDJEALOUSY
@@ -5973,7 +5973,7 @@ Pokemon = GARDEVOIR,70
     Item = DEATHORB
 #-------------------------------
 [FORMERCHAMP_Elise,Elise,1]
-Policies = PRESERVE_LAST_POKEMON,HAIL_TEAM
+Policies = HAIL_TEAM
 Flags = NoPerfect
 Pokemon = FROSLASS,70
     Moves = SNOWYSORROWS,AURORAVEIL,HAIL,DESTINYBOND
