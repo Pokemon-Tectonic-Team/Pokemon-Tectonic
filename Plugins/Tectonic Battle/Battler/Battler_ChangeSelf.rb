@@ -81,7 +81,7 @@ class PokeBattle_Battler
     def getFractionalDamageAmount(fraction,basedOnCurrentHP=false,aggravate: false,struggle: false)
         return 0 unless takesIndirectDamage? || struggle
         fraction *= hpBasedEffectResistance if boss?
-        fraction *= 1.5 if aggravate
+        fraction *= 1.35 if aggravate
         if basedOnCurrentHP
             damageAmount = @hp * fraction
         else

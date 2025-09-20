@@ -36,7 +36,7 @@ Description = Slips past all types of Spikes hazards. Deals 50% more damage to t
 #-------------------------------
 [AGGRAVATE]
 Name = Aggravate
-Description = HP-fraction-based damage effects deal 50% more damage to opponents.
+Description = HP-fraction-based damage effects deal 35% more damage to opponents.
 #-------------------------------
 [ALLCONSUMING]
 Name = All-Consuming
