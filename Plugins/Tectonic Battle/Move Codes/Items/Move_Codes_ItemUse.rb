@@ -506,11 +506,6 @@ end
 #===============================================================================
 class PokeBattle_Move_GrantUserCrystalCaliburnChangeUserDiancieForm < PokeBattle_Move
     def pbMoveFailed?(user, _targets, show_message)
-        return 
-        
-    end
-
-    def pbMoveFailed?(user, _targets, show_message)
         if !user.countsAs?(:DIANCIE)
             @battle.pbDisplay(_INTL("But {1} can't use the move!", user.pbThis(true))) if show_message
             return true
